@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { useParams } from "react-router-dom";
-import routes from "@labyrinth/notes";
+import routes from "../notes/routes";
 import NotFound from "./404";
 
 export default function SlugPage() {

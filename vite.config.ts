@@ -13,8 +13,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      // "@": path.resolve(__dirname, "./src"),
-      '@labyrinth/notes': path.resolve(__dirname, '../notes/dist')
+      "@": path.resolve(__dirname, "./src"),
     },
   },
 });
