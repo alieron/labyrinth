@@ -1,0 +1,13 @@
+{
+  "name": "labyrinth",
+  "private": true,
+  "workspaces": [
+    "packages/notes",
+    "packages/site"
+  ],
+  "scripts": {
+    "generate-notes": "npm run --workspace=@labyrinth/notes generate",
+    "build-notes": "npm run --workspace=@labyrinth/notes build",
+    "dev": "npm run --workspace=@labyrinth/site dev"
+  }
+}
