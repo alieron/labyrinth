@@ -10,7 +10,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="*" element={<SlugPage />} />
+        <Route path="notes/*" element={<SlugPage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
