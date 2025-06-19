@@ -149,7 +149,7 @@ ${parsed}
       (n) => `<li><a className="text-blue-600 underline" href="/notes/${n}">${n.split('/').pop()}</a></li>`
     );
     const subdirLinks = [...subdirs].map(
-      (d) => `<li><a className="font-semibold text-gray-700" href="/notes/${d}/">${path.basename(d)}</a></li>`
+      (d) => `<li><a className="text-blue-600 underline" href="/notes/${d}/">${path.basename(d)}</a></li>`
     );
 
     fs.writeFileSync(
