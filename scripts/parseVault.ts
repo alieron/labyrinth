@@ -1,6 +1,13 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { unified } from 'unified';
+import remarkParse from 'remark-parse';
+import remarkGfm from 'remark-gfm';
+import remarkDirective from 'remark-directive';
+import { visit } from 'unist-util-visit';
+import { toJsx } from './mdastToJsx';
+import { parseWikilink } from './parseWikilink';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -78,21 +85,59 @@ function resolveWikilinkSlug(rawLink: string): string | null {
   return null; // not found
 }
 
+function normalizeSlug(p: string): string {
+  return p.replace(/\\/g, '/').replace(/\.md$/, '').replace(/ /g, '-');
+}
+
+function findInVault(name: string): string {
+  for (const key of fileMap.keys()) {
+    if (key.endsWith(`/${name}`) || key === name) return key;
+  }
+  return name; // fallback
+}
+
 function parseMarkdown(content: string) {
-  return content
-    .replace(/^# (.*$)/gim, '<h1 className="text-3xl">$1</h1>')
-    .replace(/^## (.*$)/gim, '<h2>$1</h2>')
-    .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>')
-    .replace(/\[\[([^\|\]]+)(\|([^\]]+))?\]\]/g, (_, rawTarget: string, _pipe, displayText?: string) => {
-      const target = rawTarget.trim();
-      const display = (displayText || path.basename(target)).trim();
-      const linkSlug = resolveWikilinkSlug(target);
-      if (linkSlug) {
-        return `<a className="text-blue-600 underline" href="/notes/${linkSlug}">${display}</a>`;
-      } else {
-        return `<span className="text-red-500">[[${rawTarget}${_pipe || ''}]]</span>`;
-      }
+  const processor = unified()
+    .use(remarkParse)
+    .use(remarkGfm)
+    .use(remarkDirective)
+    .use(parseWikilink, {
+      resolveLink: (target) => {
+        const norm = target.includes('/') ? target : findInVault(target);
+        return `/notes/${resolveWikilinkSlug(norm)}`;
+      },
     });
+
+  const tree = processor.parse(content);
+  const transformed = processor.runSync(tree);
+  return toJsx(transformed);
+
+  // return content
+  // .replace(/^# (.*$)/gim, '<h1 className="text-3xl">$1</h1>')
+  // .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+  // .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>')
+  // .replace(/\[\[([^\|\]]+)(\|([^\]]+))?\]\]/g, (_, rawTarget: string, _pipe, displayText?: string) => {
+  //   const target = rawTarget.trim();
+  //   const display = (displayText || path.basename(target)).trim();
+  //   const linkSlug = resolveWikilinkSlug(target);
+  //   if (linkSlug) {
+  //     return `<a className="text-blue-600 underline" href="/notes/${linkSlug}">${display}</a>`;
+  //   } else {
+  //     return `<span className="text-red-500">[[${rawTarget}${_pipe || ''}]]</span>`;
+  //   }
+  // });
+
+  // visit(tree, 'text', (node: any) => {
+  //   if (typeof node.value === 'string' && node.value.includes('[[')) {
+  //     node.value = node.value.replace(/\[\[(.*?)\]\]/g, (_, link: string) => {
+  //       const [target, label] = link.split('|');
+  //       const cleaned = target.trim().replace(/\.md$/, '');
+  //       const norm = cleaned.includes('/') ? cleaned : findInVault(cleaned);
+  //       const slug = `/notes/${normalizeSlug(norm)}`;
+  //       return `<NoteComponents.Wikilink to=\"${slug}\">${label?.trim() || cleaned}</NoteComponents.Wikilink>`;
+  //     });
+  //   }
+  // });
 }
 
 function generate() {
@@ -169,7 +214,7 @@ export default function FolderIndex() {
 
     const slugPath = dir === '.' ? '' : `${dir.replace(/ /g, '-')}/`;
     const routeSlug = `${slugPath}`;
-    
+
     routeEntries.push(
       `{ slug: "${routeSlug}", component: React.lazy(() => import("@/notes/${slugPath}")) }`
     );
