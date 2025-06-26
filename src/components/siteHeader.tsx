@@ -14,7 +14,7 @@ export default function SiteHeader() {
   };
 
   return (
-    <header className="w-full border-b border-border px-4 py-2 flex items-center justify-between">
+    <header className="bg-background sticky w-full border-b border-border px-4 py-2 z-50 top-0 flex items-center justify-between">
       <div>
         <Link to="/" className="flex gap-2 items-center">
           <SvgIcons.logo className="size-8" />
