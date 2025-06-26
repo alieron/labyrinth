@@ -5,6 +5,7 @@ import { unified } from 'unified';
 import remarkParse from 'remark-parse';
 import remarkGfm from 'remark-gfm';
 import remarkDirective from 'remark-directive';
+import matter from 'gray-matter';
 import { toHTML } from './mdastToJsx';
 import { parseWikilink } from './parseWikilink';
 
@@ -145,7 +146,8 @@ function generate() {
   const folders = new Map<string, { notes: string[]; subdirs: Set<string> }>();
 
   for (const mdPath of files) {
-    const content = fs.readFileSync(mdPath, 'utf-8');
+    const raw = fs.readFileSync(mdPath, 'utf-8');
+    const { data: frontmatter, content } = matter(raw);
     const parsed = parseMarkdown(content);
     const slug = mdFileToSlug(mdPath);
     const outPath = path.join(OUTPUT_PATH, `${slug}.tsx`);
@@ -168,7 +170,7 @@ export default function Page() {
     );
 
     routeEntries.push(
-      `{ slug: "${slug}", component: React.lazy(() => import("@/notes/${slug}")) }`
+      `{ slug: "${slug}", component: React.lazy(() => import("@/notes/${slug}")), meta: ${JSON.stringify(frontmatter)} }`
     );
 
     if (!folders.has(parentDir)) {
