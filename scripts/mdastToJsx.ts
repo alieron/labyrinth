@@ -1,10 +1,46 @@
+import React, { createElement } from 'react';
 import { Root, RootContent } from 'mdast';
 
 function escapeHtml(str: string) {
   return str.replace(/`/g, '\\`').replace(/\$/g, '\\$');
 }
 
-function renderNode(node: RootContent): string {
+function toJsxSource(node: React.ReactNode): string {
+  if (typeof node === 'string' || typeof node === 'number') {
+    return node.toString();
+  }
+  if (!React.isValidElement(node)) return '';
+
+  const { type, props } = node;
+  const children = React.Children.toArray(props.children || []).map(child =>
+    toJsxSource(child)
+  );
+  const childrenStr = children.join('');
+
+  if (type === React.Fragment) return childrenStr;
+
+  const tag = typeof type === 'string' ? type : (type as any).name || 'Component';
+
+  const propsString = Object.entries(props)
+    .filter(([key]) => key !== 'children')
+    .map(([key, value]) => {
+      if (typeof value === 'string') return `${key}="${value}"`;
+      if (typeof value === 'boolean') return value ? key : '';
+      return `${key}={${JSON.stringify(value)}}`;
+    })
+    .filter(Boolean)
+    .join(' ');
+
+  const propsPart = propsString ? ' ' + propsString : '';
+
+  if (children.length === 0) {
+    return `<${tag}${propsPart} />`;
+  }
+
+  return `<${tag}${propsPart}>${childrenStr}</${tag}>`;
+}
+
+function renderNode(node: RootContent): React.ReactNode {
   switch (node.type) {
     case 'heading': {
       const level = node.depth;
@@ -17,55 +53,87 @@ function renderNode(node: RootContent): string {
         6: 'text-base font-medium',
       }[level] ?? 'text-base';
 
-      return `<h${level} className="${sizeClass}">${node.children.map(renderNode).join('')}</h${level}>`;
+      return createElement(`h${level}`, { className: `${sizeClass} text-foreground` }, ...node.children.map(renderNode));
     }
 
     case 'paragraph':
-      return `<p>${node.children.map(renderNode).join('')}</p>`;
+      return createElement('p', { className: 'leading-relaxed text-foreground' }, ...node.children.map(renderNode));
 
     case 'strong':
-      return `<strong>${node.children.map(renderNode).join('')}</strong>`;
+      return createElement('strong', { className: 'font-semibold text-foreground' }, ...node.children.map(renderNode));
 
     case 'emphasis':
-      return `<em>${node.children.map(renderNode).join('')}</em>`;
+      return createElement('em', { className: 'italic text-foreground' }, ...node.children.map(renderNode));
 
     case 'inlineCode':
-      return `<code>${escapeHtml(node.value)}</code>`;
+      return createElement(
+        'code',
+        { className: 'bg-muted px-1 py-0.5 rounded text-sm font-mono text-accent-foreground' },
+        node.value
+      );
 
     case 'code':
-      return `<pre><code>${escapeHtml(node.value)}</code></pre>`;
+      return createElement(
+        'pre',
+        { className: 'bg-muted p-4 rounded-md overflow-x-auto mb-4' },
+        createElement('code', { className: 'text-sm font-mono text-foreground' }, node.value)
+      );
 
     case 'blockquote':
-      return `<blockquote>${node.children.map(renderNode).join('')}</blockquote>`;
+      return createElement(
+        'blockquote',
+        { className: 'border-l-4 border-border pl-4 italic text-muted-foreground mb-4' },
+        ...node.children.map(renderNode)
+      );
 
     case 'list':
-      const ListTag = node.ordered ? 'ol' : 'ul';
-      return `<${ListTag}>${node.children.map(renderNode).join('')}</${ListTag}>`;
+      const listTag = node.ordered ? 'ol' : 'ul';
+      return createElement(
+        listTag,
+        {
+          className: `${node.ordered ? 'list-decimal' : 'list-disc'
+            } pl-8 my-3 space-y-1 text-foreground marker:text-muted-foreground`,
+        },
+        ...node.children.map(renderNode)
+      );
 
     case 'listItem':
-      return `<li>${node.children.map(renderNode).join('')}</li>`;
+      return createElement('li', { className: 'leading-snug' }, ...node.children.map(renderNode));
 
     case 'link':
-      return `<a className="text-blue-600 underline" href="${node.url}">${node.children.map(renderNode).join('')}</a>`;
+      return createElement(
+        'a',
+        { className: 'text-primary underline hover:text-primary/80', href: node.url },
+        ...node.children.map(renderNode)
+      );
 
     case 'text':
-      return escapeHtml(node.value);
-
-    case 'html':
       return node.value;
 
+    case 'html':
+      return node.value; // use with caution — unsafe HTML
+
     case 'thematicBreak':
-      return `<hr />`;
+      return createElement('hr', { className: 'my-6 border-border' });
 
     case 'break':
-      return `<br />`;
+      return createElement('br');
 
     default:
       console.warn(`Unhandled node type: ${node.type}`);
-      return '';
+      return null;
   }
 }
 
-export function toJsx(tree: Root): string {
-  return tree.children.map(renderNode).join('\n');
+function renderNodes(nodes: RootContent[]): React.ReactNode {
+  const children = nodes
+    .flatMap(renderNode)
+    .filter(x => x != null);
+
+  return React.createElement(React.Fragment, null, ...children);
+}
+
+export function toHTML(tree: Root): string {
+  const jsx = renderNodes(tree.children);
+  return toJsxSource(jsx);
 }

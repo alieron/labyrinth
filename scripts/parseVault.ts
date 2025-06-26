@@ -5,8 +5,7 @@ import { unified } from 'unified';
 import remarkParse from 'remark-parse';
 import remarkGfm from 'remark-gfm';
 import remarkDirective from 'remark-directive';
-import { visit } from 'unist-util-visit';
-import { toJsx } from './mdastToJsx';
+import { toHTML } from './mdastToJsx';
 import { parseWikilink } from './parseWikilink';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -110,7 +109,7 @@ function parseMarkdown(content: string) {
 
   const tree = processor.parse(content);
   const transformed = processor.runSync(tree);
-  return toJsx(transformed);
+  return toHTML(transformed);
 
   // return content
   // .replace(/^# (.*$)/gim, '<h1 className="text-3xl">$1</h1>')
@@ -160,9 +159,9 @@ function generate() {
       `
 export default function Page() {
   return (
-    <>
-${parsed}
-    </>
+    <div className="flex flex-col wrap-break-word gap-3 p-6">
+      ${parsed}
+    </div>
   );
 }
 `.trim()

@@ -6,7 +6,7 @@ export default function SiteLayout() {
   return (
     <div className="container flex flex-col max-w-300 mx-auto">
       <SiteHeader />
-      <div className="flex flex-1 overflow-hidden gap-4 py-6 px-4">
+      <div className="flex flex-1 overflow-hidden gap-2 my-0 text-base">
         {/* Left Sidebar */}
         <div className="w-64 overflow-y-auto">
 
