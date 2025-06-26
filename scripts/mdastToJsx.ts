@@ -1,4 +1,5 @@
 import React, { createElement } from 'react';
+import { LinkProps } from 'react-router-dom';
 import { Root, RootContent } from 'mdast';
 
 function escapeHtml(str: string) {
@@ -101,9 +102,9 @@ function renderNode(node: RootContent): React.ReactNode {
       return createElement('li', { className: 'leading-snug' }, ...node.children.map(renderNode));
 
     case 'link':
-      return createElement(
-        'a',
-        { className: 'text-primary underline hover:text-primary/80', href: node.url },
+      return createElement<LinkProps, HTMLElement>(
+        "NoteComponents.GenericLink",
+        { className: 'text-primary underline hover:text-primary/80', to: node.url },
         ...node.children.map(renderNode)
       );
 
