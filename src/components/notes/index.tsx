@@ -1,1 +1,1 @@
-export { GenericLink } from "./externalLink";
+export { GenericLink } from "./genericLink";
