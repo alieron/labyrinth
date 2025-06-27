@@ -32,6 +32,42 @@ example:
 npm run build-notes
 ```
 
+### Progress checklist
+
+#### Obsidian markdown syntax support
+
+- [x] Headings
+- [x] Horizontal Rule
+- [x] Bold
+- [x] Italic
+- [ ] Strikethrough
+- [x] Blockquote
+- [x] Numbered List
+- [x] Bullet List
+- [x] External Link
+- [ ] Internal Link(wikilinks)
+- [ ] Jump Point
+- [x] Inline Code
+- [ ] Code Block
+- [ ] Table
+- [ ] Footnotes
+- [ ] Latex/Mathjax
+- [ ] Embedded Images
+
+#### UI
+
+- [x] Header Bar
+- [ ] Filesystem Breadcrumbs
+- [ ] Properties View
+- [ ] Table of Contents
+
+#### Code
+
+- [x] Folder Structure
+- [ ] Folder Pages
+- [ ] Tags/Nested Tags
+- [ ] Note Indexing
+
 ### Planned route structure
 
 ##### In your vault
