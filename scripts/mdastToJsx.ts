@@ -108,6 +108,39 @@ function renderNode(node: RootContent): React.ReactNode {
         ...node.children.map(renderNode)
       );
 
+    case 'table':
+      return createElement(
+        'table',
+        { className: 'table-auto border-collapse w-full my-4' },
+        createElement(
+          'thead',
+          { className: 'font-bold' },
+          renderNode(node.children[0])
+        ),
+        createElement(
+          'tbody',
+          null,
+          ...node.children.slice(1).map(renderNode)
+        )
+      );
+
+    case 'tableRow':
+      return createElement(
+        'tr',
+        { className: 'border-b border-muted-foreground' },
+        ...node.children.map(renderNode)
+      );
+
+
+    case 'tableCell':
+      return createElement(
+        'td',
+        {
+          className: 'border px-4 py-2 text-left align-top',
+        },
+        ...node.children.map(renderNode)
+      );
+
     case 'text':
       return node.value;
 
