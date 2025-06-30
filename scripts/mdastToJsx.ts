@@ -61,7 +61,7 @@ function renderNode(node: RootContent): React.ReactNode {
       return createElement('p', { className: 'leading-relaxed text-foreground' }, ...node.children.map(renderNode));
 
     case 'strong':
-      return createElement('strong', { className: 'font-semibold text-foreground' }, ...node.children.map(renderNode));
+      return createElement('strong', { className: 'font-bold text-foreground' }, ...node.children.map(renderNode));
 
     case 'emphasis':
       return createElement('em', { className: 'italic text-foreground' }, ...node.children.map(renderNode));
