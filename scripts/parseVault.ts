@@ -163,7 +163,7 @@ import * as NoteComponents from '@/components/notes';
 
 export default function Page() {
   return (
-    <div className="flex flex-col wrap-break-word gap-3 p-6">
+    <div className="flex flex-col wrap-break-word gap-3 px-6">
       ${parsed}
     </div>
   );
