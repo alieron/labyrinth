@@ -9,7 +9,12 @@ const highlighter = await createHighlighter({
 });
 
 function escapeHtml(str: string) {
-  return str.replace(/`/g, '\\`').replace(/\$/g, '\\$');
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
 }
 
 function toJsxSource(node: React.ReactNode): string {
@@ -80,14 +85,20 @@ function renderNode(node: RootContent): React.ReactNode {
       );
 
     case 'code':
-      const code = highlighter.codeToHtml(
-          node.value,
-          { lang: node.lang || 'plaintext', theme: 'one-dark-pro' }
+      const html = highlighter.codeToHtml(
+        node.value,
+        {
+          lang: node.lang || 'plaintext',
+          theme: 'one-dark-pro',
+          colorReplacements: {
+            '#282c34': '#1d1d1d'
+          }
+        }
       );
 
       return createElement(
-        'div',
-        { className: 'shiki-code-block', dangerouslySetInnerHTML: { __html: code } },
+        'NoteComponents.CodeBlock',
+        { html: escapeHtml(html), lang: node.lang, code: escapeHtml(node.value) }
       );
 
     case 'blockquote':
