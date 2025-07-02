@@ -32,7 +32,7 @@ export function CodeBlock({ html, lang, code, className, ...props }: CodeBlockPr
       <Button
         variant="outline"
         size="icon"
-        className="disabled:opacity-100 absolute top-2 right-2"
+        className="opacity-0 group-hover:opacity-100 absolute top-2 right-2"
         onClick={handleCopy}
         aria-label={copied ? "Copied" : "Copy to clipboard"}
         disabled={copied}
