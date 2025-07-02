@@ -48,7 +48,7 @@ npm run build-notes
 - [ ] Internal Link(wikilinks)
 - [ ] Jump Point
 - [x] Inline Code
-- [ ] Code Block
+- [x] Code Block
 - [ ] Table
 - [ ] Footnotes
 - [ ] Latex/Mathjax
