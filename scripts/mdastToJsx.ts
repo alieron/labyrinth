@@ -1,6 +1,12 @@
 import React, { createElement } from 'react';
 import { LinkProps } from 'react-router-dom';
 import { Root, RootContent } from 'mdast';
+import { createHighlighter } from 'shiki';
+
+const highlighter = await createHighlighter({
+  themes: ['one-dark-pro'],
+  langs: ['js', 'ts', 'java', 'matlab', 'cpp', 'python', 'latex']
+});
 
 function escapeHtml(str: string) {
   return str.replace(/`/g, '\\`').replace(/\$/g, '\\$');
@@ -74,10 +80,14 @@ function renderNode(node: RootContent): React.ReactNode {
       );
 
     case 'code':
+      const code = highlighter.codeToHtml(
+          node.value,
+          { lang: node.lang || 'plaintext', theme: 'one-dark-pro' }
+      );
+
       return createElement(
-        'pre',
-        { className: 'bg-muted p-4 rounded-md overflow-x-auto mb-4' },
-        createElement('code', { className: 'text-sm font-mono text-foreground' }, node.value)
+        'div',
+        { className: 'shiki-code-block', dangerouslySetInnerHTML: { __html: code } },
       );
 
     case 'blockquote':
