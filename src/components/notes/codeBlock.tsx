@@ -24,7 +24,13 @@ export function CodeBlock({ html, lang, code, className, ...props }: CodeBlockPr
   };
 
   return (
-    <div className="group relative my-4 rounded-md overflow-hidden bg-[#1d1d1d] text-sm font-mono">
+    <div
+      className={cn(
+        "group relative my-4 rounded-md overflow-hidden bg-[#1d1d1d] text-sm font-mono",
+        className
+      )}
+      {...props}
+    >
       {/* Language Label */}
       <span className="absolute top-2 left-2 text-[#e5e5e5]">{lang}</span>
 
