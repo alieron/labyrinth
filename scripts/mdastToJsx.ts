@@ -85,10 +85,12 @@ function renderNode(node: RootContent): React.ReactNode {
       );
 
     case 'code':
+      const lang = node.lang === "octave" ? "matlab" : node.lang
+
       const html = highlighter.codeToHtml(
         node.value,
         {
-          lang: node.lang || 'plaintext',
+          lang: lang || 'plaintext',
           theme: 'one-dark-pro',
           colorReplacements: {
             '#282c34': '#1d1d1d'
