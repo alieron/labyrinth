@@ -12,7 +12,7 @@ export default function SiteHeader() {
   };
 
   return (
-    <header className="bg-gradient-to-b from-background from-30% to-transparent sticky top-0 z-50 px-6 pt-10 pb-20 flex items-center justify-between">
+    <header className="bg-gradient-to-b from-background from-30% to-transparent sticky top-0 z-50 px-6 py-10 mb-10 flex items-center justify-between">
       {/* Logo: backlink to homepage */}
       <Link to="/" className="flex items-center gap-2 h-8">
         <SvgIcons.logo className="size-8 text-muted-foreground" />

@@ -14,9 +14,9 @@ export default function SlugPage() {
 
   const Page = route.component;
   return (
-    <div className="flex flex-1 gap-8 my-0">
+    <div className="flex flex-1 gap-4 my-0">
       {/* Left Sidebar */}
-      <div className="sticky flex-none top-44 h-fit px-6 self-start">
+      <div className="sticky flex-none top-32 h-fit px-6 mt-4 mr-auto">
         <Button asChild variant="outline" size="icon">
           <Link to="#">
             <ChevronLeft />
@@ -24,13 +24,15 @@ export default function SlugPage() {
         </Button>
       </div>
 
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 max-w-5xl overflow-y-auto">
         {/* Title */}
-        <h1 className="text-3xl font-bold tracking-tight">
-          Title Here
-        </h1>
-        <div className="mt-2 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-          <span>Tags · Completion</span>
+        <div className="px-6 mb-10">
+          <h1 className="text-3xl font-bold tracking-tight">
+            Title Here
+          </h1>
+          <div className="mt-2 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+            <span>Tags · Completion</span>
+          </div>
         </div>
 
         {/* Main Content */}
@@ -40,7 +42,7 @@ export default function SlugPage() {
       </div>
 
       {/* Right Sidebar */}
-      <div className="sticky flex-none top-44 h-fit px-6">
+      <div className="sticky flex-none top-32 h-fit px-6 mt-4 ml-auto">
         <Button asChild variant="outline" size="icon">
           <Link to="#">
             <ChevronRight />
