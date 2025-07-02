@@ -24,9 +24,9 @@ export function CodeBlock({ html, lang, code, className, ...props }: CodeBlockPr
   };
 
   return (
-    <div className="group relative my-4 rounded-md overflow-hidden bg-muted text-sm font-mono">
+    <div className="group relative my-4 rounded-md overflow-hidden bg-[#1d1d1d] text-sm font-mono">
       {/* Language Label */}
-      <span className="absolute top-2 left-2">{lang}</span>
+      <span className="absolute top-2 left-2 text-[#e5e5e5]">{lang}</span>
 
       {/* Copy Button */}
       <Button
