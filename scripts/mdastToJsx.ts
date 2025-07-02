@@ -104,7 +104,7 @@ function renderNode(node: RootContent): React.ReactNode {
     case 'link':
       return createElement<LinkProps, HTMLElement>(
         "NoteComponents.GenericLink",
-        { className: 'text-primary underline hover:text-primary/80', to: node.url },
+        { to: node.url },
         ...node.children.map(renderNode)
       );
 
