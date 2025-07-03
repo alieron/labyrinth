@@ -111,7 +111,7 @@ function renderNode(node: RootContent): React.ReactNode {
     case 'table':
       return createElement(
         'table',
-        { className: 'table-auto border-collapse w-full my-4' },
+        { className: 'table-auto border-collapse w-fit my-4' },
         createElement(
           'thead',
           { className: 'font-bold' },
