@@ -134,6 +134,67 @@ function renderNode(node: RootContent): React.ReactNode {
         ...node.children.map(renderNode)
       );
 
+    case 'table':
+      return createElement(
+        'div',
+        { className: 'overflow-x-auto' },
+        createElement(
+          'table',
+          { className: 'table-auto border-collapse w-fit my-4' },
+          // Header Row
+          createElement(
+            'thead',
+            { className: 'font-bold' },
+            createElement(
+              'tr',
+              null,
+              ...node.children[0].children.map((cell, idx) =>
+                createElement(
+                  'td',
+                  { className: `border px-4 py-2 text-${node.align?.at(idx) || 'left'} align-top` },
+                  ...cell.children.map(renderNode)
+                )
+              )
+            )
+          ),
+          // Remaining Rows
+          createElement(
+            'tbody',
+            null,
+            ...node.children.slice(1).map((row) =>
+              createElement(
+                'tr',
+                null,
+                ...row.children.map((cell, idx) =>
+                  createElement(
+                    'td',
+                    { className: `border px-4 py-2 text-${node.align?.at(idx) || 'left'} align-top` },
+                    ...cell.children.map(renderNode)
+                  )
+                )
+              )
+            )
+          )
+        )
+      );
+
+    // case 'tableRow':
+    //   return createElement(
+    //     'tr',
+    //     { className: 'border-b border-muted-foreground' },
+    //     ...node.children.map(renderNode)
+    //   );
+
+
+    // case 'tableCell':
+    //   return createElement(
+    //     'td',
+    //     {
+    //       className: 'border px-4 py-2 text-left align-top',
+    //     },
+    //     ...node.children.map(renderNode)
+    //   );
+
     case 'text':
       return escapeHtml(node.value);
 
