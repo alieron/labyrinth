@@ -110,35 +110,46 @@ function renderNode(node: RootContent): React.ReactNode {
 
     case 'table':
       return createElement(
-        'table',
-        { className: 'table-auto border-collapse w-fit my-4' },
+        'div',
+        { className: 'overflow-x-auto' },
         createElement(
-          'thead',
-          { className: 'font-bold' },
-          renderNode(node.children[0])
-        ),
-        createElement(
-          'tbody',
-          null,
-          ...node.children.slice(1).map(renderNode)
+          'table',
+          { className: 'table-auto border-collapse w-fit my-4' },
+          // Header Row
+          createElement(
+            'thead',
+            { className: 'font-bold' },
+            createElement(
+              'tr',
+              null,
+              ...node.children[0].children.map((cell) =>
+                createElement(
+                  'td',
+                  { className: `border px-4 py-2 text-left align-top` },
+                  ...cell.children.map(renderNode)
+                )
+              )
+            )
+          ),
+          // Remaining Rows
+          createElement(
+            'tbody',
+            null,
+            ...node.children.slice(1).map((row) =>
+              createElement(
+                'tr',
+                null,
+                ...row.children.map((cell) =>
+                  createElement(
+                    'td',
+                    { className: `border px-4 py-2 text- align-top` },
+                    ...cell.children.map(renderNode)
+                  )
+                )
+              )
+            )
+          )
         )
-      );
-
-    case 'tableRow':
-      return createElement(
-        'tr',
-        { className: 'border-b border-muted-foreground' },
-        ...node.children.map(renderNode)
-      );
-
-
-    case 'tableCell':
-      return createElement(
-        'td',
-        {
-          className: 'border px-4 py-2 text-left align-top',
-        },
-        ...node.children.map(renderNode)
       );
 
     case 'text':
