@@ -91,7 +91,7 @@ function renderNode(node: RootContent): React.ReactNode {
     case 'blockquote':
       return createElement(
         'blockquote',
-        { className: 'border-l-4 border-border pl-4 italic text-muted-foreground mb-4' },
+        { className: 'border-l-4 border-primary bg-muted pl-4 pr-2 py-2 italic text-muted-foreground mb-4' },
         ...node.children.map(renderNode)
       );
 
