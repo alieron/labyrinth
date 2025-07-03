@@ -40,7 +40,7 @@ npm run build-notes
 - [x] Horizontal Rule
 - [x] Bold
 - [x] Italic
-- [ ] Strikethrough
+- [x] Strikethrough
 - [x] Blockquote
 - [x] Numbered List
 - [x] Bullet List
