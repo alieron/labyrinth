@@ -122,10 +122,10 @@ function renderNode(node: RootContent): React.ReactNode {
             createElement(
               'tr',
               null,
-              ...node.children[0].children.map((cell) =>
+              ...node.children[0].children.map((cell, idx) =>
                 createElement(
                   'td',
-                  { className: `border px-4 py-2 text-left align-top` },
+                  { className: `border px-4 py-2 text-${node.align?.at(idx) || 'left'} align-top` },
                   ...cell.children.map(renderNode)
                 )
               )
@@ -139,10 +139,10 @@ function renderNode(node: RootContent): React.ReactNode {
               createElement(
                 'tr',
                 null,
-                ...row.children.map((cell) =>
+                ...row.children.map((cell, idx) =>
                   createElement(
                     'td',
-                    { className: `border px-4 py-2 text- align-top` },
+                    { className: `border px-4 py-2 text-${node.align?.at(idx) || 'left'} align-top` },
                     ...cell.children.map(renderNode)
                   )
                 )
@@ -151,6 +151,23 @@ function renderNode(node: RootContent): React.ReactNode {
           )
         )
       );
+
+    // case 'tableRow':
+    //   return createElement(
+    //     'tr',
+    //     { className: 'border-b border-muted-foreground' },
+    //     ...node.children.map(renderNode)
+    //   );
+
+
+    // case 'tableCell':
+    //   return createElement(
+    //     'td',
+    //     {
+    //       className: 'border px-4 py-2 text-left align-top',
+    //     },
+    //     ...node.children.map(renderNode)
+    //   );
 
     case 'text':
       return node.value;
