@@ -3,7 +3,12 @@ import { LinkProps } from 'react-router-dom';
 import { Root, RootContent } from 'mdast';
 
 function escapeHtml(str: string) {
-  return str.replace(/`/g, '\\`').replace(/\$/g, '\\$');
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
 }
 
 function toJsxSource(node: React.ReactNode): string {
@@ -112,7 +117,7 @@ function renderNode(node: RootContent): React.ReactNode {
       );
 
     case 'text':
-      return node.value;
+      return escapeHtml(node.value);
 
     case 'html':
       return node.value; // use with caution — unsafe HTML
