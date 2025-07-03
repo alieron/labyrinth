@@ -66,6 +66,9 @@ function renderNode(node: RootContent): React.ReactNode {
     case 'emphasis':
       return createElement('em', { className: 'italic text-foreground' }, ...node.children.map(renderNode));
 
+    case 'delete':
+      return createElement('del', null, ...node.children.map(renderNode));
+
     case 'inlineCode':
       return createElement(
         'code',
