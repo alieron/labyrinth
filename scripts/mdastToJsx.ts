@@ -72,10 +72,13 @@ function renderNode(node: RootContent): React.ReactNode {
       return createElement('p', { className: 'leading-relaxed text-foreground' }, ...node.children.map(renderNode));
 
     case 'strong':
-      return createElement('strong', { className: 'font-semibold text-foreground' }, ...node.children.map(renderNode));
+      return createElement('strong', { className: 'font-bold text-foreground' }, ...node.children.map(renderNode));
 
     case 'emphasis':
       return createElement('em', { className: 'italic text-foreground' }, ...node.children.map(renderNode));
+
+    case 'delete':
+      return createElement('del', null, ...node.children.map(renderNode));
 
     case 'inlineCode':
       return createElement(
@@ -106,7 +109,7 @@ function renderNode(node: RootContent): React.ReactNode {
     case 'blockquote':
       return createElement(
         'blockquote',
-        { className: 'border-l-4 border-border pl-4 italic text-muted-foreground mb-4' },
+        { className: 'border-l-4 border-primary bg-muted pl-4 pr-2 py-2 italic text-muted-foreground mb-4' },
         ...node.children.map(renderNode)
       );
 
@@ -127,12 +130,12 @@ function renderNode(node: RootContent): React.ReactNode {
     case 'link':
       return createElement<LinkProps, HTMLElement>(
         "NoteComponents.GenericLink",
-        { className: 'text-primary underline hover:text-primary/80', to: node.url },
+        { to: node.url },
         ...node.children.map(renderNode)
       );
 
     case 'text':
-      return node.value;
+      return escapeHtml(node.value);
 
     case 'html':
       return node.value; // use with caution — unsafe HTML
