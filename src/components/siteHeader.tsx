@@ -15,7 +15,7 @@ export default function SiteHeader() {
     <header className="bg-gradient-to-b from-background from-30% to-transparent sticky top-0 z-50 px-6 py-10 mb-10 flex items-center justify-between">
       {/* Logo: backlink to homepage */}
       <Link to="/" className="flex items-center gap-2 h-8">
-        <SvgIcons.logo className="size-8 text-muted-foreground" />
+        <SvgIcons.logo className="size-8 text-foreground" />
       </Link>
       {/* Theme Switcher */}
       <div className="flex gap-2">

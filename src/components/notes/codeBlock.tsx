@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Check, Copy } from "lucide-react";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 
 import { cn } from "@/lib/utils";
 
@@ -26,7 +26,7 @@ export function CodeBlock({ html, lang, code, className, ...props }: CodeBlockPr
   return (
     <div
       className={cn(
-        "group relative my-4 rounded-md overflow-hidden bg-[#1d1d1d] text-sm font-mono",
+        "group relative my-2 rounded-md overflow-hidden bg-[#1d1d1d] text-sm font-mono",
         className
       )}
       {...props}

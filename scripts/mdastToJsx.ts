@@ -140,7 +140,7 @@ function renderNode(node: RootContent): React.ReactNode {
         { className: 'overflow-x-auto' },
         createElement(
           'table',
-          { className: 'table-auto border-collapse w-fit my-4' },
+          { className: 'table-auto border-collapse w-fit my-2' },
           // Header Row
           createElement(
             'thead',
