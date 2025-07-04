@@ -1,0 +1,34 @@
+---
+import { Separator } from "@/components/ui/separator";
+import GitHub from "@/icons/GitHub.astro";
+---
+
+<footer
+  class="border-t border-border relative bottom-0 flex flex-none items-center justify-between p-4 mt-10 w-full max-w-5xl mx-auto"
+>
+  <div class="flex h-4 text-center items-center space-x-2 text-sm">
+    <a
+      href="/"
+      class="grow-1 text-foreground underline hover:text-foreground/80"
+    >
+      Home
+    </a>
+    <Separator orientation="vertical" />
+    <a
+      href="/notes"
+      class="grow-1 text-foreground underline hover:text-foreground/80"
+    >
+      Notes
+    </a>
+  </div>
+  <div class="flex">
+    <a
+      href="https://github.com/alieron/labyrinth"
+      class="text-foreground hover:text-foreground/80"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <GitHub class="size-5" />
+    </a>
+  </div>
+</footer>

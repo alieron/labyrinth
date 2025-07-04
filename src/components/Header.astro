@@ -1,0 +1,17 @@
+---
+import ThemeToggle from "@/components/ThemeToggle";
+import Logo from "@/icons/Logo.astro";
+---
+
+<header
+  class="bg-gradient-to-b from-background from-30% to-transparent sticky top-0 z-50 px-6 py-10 mb-10 flex items-center justify-between"
+>
+  {/* Logo: backlink to homepage */}
+  <a href="/" class="flex items-center gap-2 h-8">
+    <Logo class="size-8 text-foreground" />
+  </a>
+  {/* Theme Switcher */}
+  <div class="flex gap-2">
+    <ThemeToggle client:load />
+  </div>
+</header>

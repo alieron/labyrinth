@@ -2,7 +2,10 @@
 vault
 whitelist.config.json
 # comment this out when publishing
-src/notes
+content
+
+# Astro
+.astro/
 
 # Logs
 logs
