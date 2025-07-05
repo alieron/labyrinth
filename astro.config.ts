@@ -3,6 +3,7 @@ import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 // Custom plugins
 import { rehypeTypography } from './src/plugins/typography';
+import { rehypeMdTable } from './src/plugins/table';
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,6 +11,7 @@ export default defineConfig({
   markdown: {
     rehypePlugins: [
       rehypeTypography,
+      rehypeMdTable,
     ]
   },
   server: {
