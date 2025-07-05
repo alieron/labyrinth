@@ -3,6 +3,7 @@ import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 // Custom plugins
 import { remarkHighlight } from './src/plugins/highlight';
+import { remarkRemoveComments } from './src/plugins/comment';
 import { rehypeTypography } from './src/plugins/typography';
 import { rehypeMdTable } from './src/plugins/table';
 
@@ -12,6 +13,7 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [
       remarkHighlight,
+      remarkRemoveComments,
     ],
     rehypePlugins: [
       rehypeTypography,
