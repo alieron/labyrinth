@@ -27,7 +27,9 @@ import { Button } from "@/components/ui/button";
       </div>
 
       {/* Main Content */}
-      <slot />
+      <div class="flex flex-col wrap-break-word gap-3 px-6">
+        <slot />
+      </div>
     </div>
 
     {/* Right Sidebar */}
