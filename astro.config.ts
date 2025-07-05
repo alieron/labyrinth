@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 // Custom plugins
+import { remarkHighlight } from './src/plugins/highlight';
 import { rehypeTypography } from './src/plugins/typography';
 import { rehypeMdTable } from './src/plugins/table';
 
@@ -9,6 +10,9 @@ import { rehypeMdTable } from './src/plugins/table';
 export default defineConfig({
   integrations: [react()],
   markdown: {
+    remarkPlugins: [
+      remarkHighlight,
+    ],
     rehypePlugins: [
       rehypeTypography,
       rehypeMdTable,

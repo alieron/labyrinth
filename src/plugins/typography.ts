@@ -15,6 +15,7 @@ const classNameMap = {
   strong: 'font-extrabold',
   em: 'italic',
   del: '',
+  mark: 'bg-yellow-300/30 px-1 text-foreground rounded-xs',
   // Links
   a: 'text-primary underline hover:text-primary/80',
   // Lists
