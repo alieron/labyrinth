@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 // Custom plugins
+import { remarkTitle } from './src/plugins/title';
 import { remarkHighlight } from './src/plugins/highlight';
 import { remarkRemoveComments } from './src/plugins/comment';
 import { remarkCodeBlocks, rehypeCodeBlocks } from './src/plugins/codeblock';
@@ -14,6 +15,7 @@ export default defineConfig({
   markdown: {
     syntaxHighlight: false,
     remarkPlugins: [
+      remarkTitle,
       remarkHighlight,
       remarkRemoveComments,
       remarkCodeBlocks,
