@@ -68,7 +68,7 @@ export function rehypeHeadings() {
         id: slug, // only unique if the heading text is unique, same behaviour in obsidian
       };
 
-      classnames(node, 'scroll-mt-33')
+      classnames(node, 'scroll-mt-32');
     });
   };
 }

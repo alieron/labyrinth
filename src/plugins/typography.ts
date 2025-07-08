@@ -4,12 +4,12 @@ import { classnames } from 'hast-util-classnames';
 
 const classNameMap = {
   // Typography
-  h1: 'text-foreground text-4xl font-bold mt-6 mb-4',
-  h2: 'text-foreground text-3xl font-bold mt-5 mb-3',
-  h3: 'text-foreground text-2xl font-semibold mt-4 mb-2',
-  h4: 'text-foreground text-xl font-semibold mt-3 mb-2',
-  h5: 'text-foreground text-lg font-medium mt-2 mb-1',
-  h6: 'text-foreground text-base font-medium',
+  h1: 'text-foreground text-4xl font-bold mt-3',
+  h2: 'text-foreground text-3xl font-bold mt-3',
+  h3: 'text-foreground text-2xl font-semibold mt-3',
+  h4: 'text-foreground text-xl font-semibold mt-3',
+  h5: 'text-foreground text-lg font-medium mt-3',
+  h6: 'text-foreground font-medium mt-3',
   p: 'leading-relaxed text-foreground',
   // Formatting
   strong: 'font-extrabold',
