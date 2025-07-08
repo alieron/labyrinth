@@ -8,6 +8,7 @@ import { remarkRemoveComments } from './src/plugins/comment';
 import { remarkCodeBlocks, rehypeCodeBlocks } from './src/plugins/codeblock';
 import { rehypeTypography } from './src/plugins/typography';
 import { rehypeMdTable } from './src/plugins/table';
+import { rehypeHeadings } from './src/plugins/heading';
 
 // https://astro.build/config
 export default defineConfig({
@@ -24,6 +25,7 @@ export default defineConfig({
       rehypeTypography,
       rehypeMdTable,
       rehypeCodeBlocks,
+      rehypeHeadings,
     ]
   },
   server: {
