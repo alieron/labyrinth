@@ -1,6 +1,31 @@
-import type { Root } from 'hast';
+import { visit } from 'unist-util-visit';
+import type { Root as MDRoot, PhrasingContent } from 'mdast';
+import { u } from 'unist-builder';
+import type { Root as HRoot } from 'hast';
 import { selectAll } from 'hast-util-select';
 import { classnames } from 'hast-util-classnames';
+
+export function remarkSplitParagraphs() {
+  return (tree: MDRoot) => {
+    visit(tree, 'paragraph', (node, index, parent) => {
+      const newChildren: PhrasingContent[] = [];
+      node.children.forEach((child) => {
+        if (child.type === 'text') {
+          const parts = child.value.split('\n');
+          parts.forEach((part, i) => {
+            if (i > 0) {
+              newChildren.push(u('break'));
+            }
+            newChildren.push(u('text', part));
+          });
+        } else {
+          newChildren.push(child);
+        }
+      });
+      node.children = newChildren;
+    });
+  };
+}
 
 const classNameMap = {
   // Typography
@@ -30,7 +55,7 @@ const classNameMap = {
 };
 
 export function rehypeTypography() {
-  return (tree: Root) => {
+  return (tree: HRoot) => {
     for (const [selector, className] of Object.entries(classNameMap)) {
       const elements = selectAll(selector, tree);
       for (const element of elements) {
