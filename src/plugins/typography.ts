@@ -4,6 +4,7 @@ import { u } from 'unist-builder';
 import type { Root as HRoot } from 'hast';
 import { selectAll } from 'hast-util-select';
 import { classnames } from 'hast-util-classnames';
+import { h } from 'hastscript';
 
 export function remarkSplitParagraphs() {
   return (tree: MDRoot) => {
@@ -62,5 +63,42 @@ export function rehypeTypography() {
         classnames(element, className);
       }
     }
+  };
+};
+
+export function rehypeCheckboxes() {
+  return (tree: HRoot) => {
+    visit(tree, 'element', (node, index, parent) => {
+      if (node.tagName === 'input' && node.properties?.type === 'checkbox') {
+        const checked = !!node.properties.checked;
+
+        // Create custom styled checkbox wrapper
+        const styledCheckbox = h('div', {
+          class: 'h-4 w-4 inline-flex items-center justify-center align-middle rounded border translate-y-[-2px] ' +
+          (checked ? 'border-primary bg-primary' : 'border-border bg-input'),
+        }, checked ? [
+          // Check icon https://lucide.dev/icons/check
+          h('svg', {
+            class: 'lucide lucide-check-icon lucide-check transition-all stroke-background',
+            xmlns: 'http://www.w3.org/2000/svg',
+            width: '24',
+            height: '24',
+            fill: 'none',
+            // stroke: "currentColor",
+            'stroke-width': "2",
+            'stroke-linecap': "round",
+            'stroke-linejoin': "round",
+            viewBox: '0 0 24 24',
+          }, [
+            h('path', {
+              d: "M20 6 9 17l-5-5",
+            }),
+          ])
+        ] : null
+        );
+
+        parent!.children[index!] = styledCheckbox;
+      }
+    });
   };
 };
