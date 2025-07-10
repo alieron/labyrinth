@@ -17,11 +17,11 @@ export default defineConfig({
     syntaxHighlight: false,
     remarkPlugins: [
       remarkTitle,
+      remarkSplitParagraphs,
       remarkHighlight,
       remarkRemoveComments,
       remarkCodeBlocks,
       remarkJumpPoints,
-      remarkSplitParagraphs,
     ],
     rehypePlugins: [
       rehypeTypography,
