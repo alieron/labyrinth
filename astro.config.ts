@@ -1,6 +1,8 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
+// Math
+import remarkMath from 'remark-math';
 // Custom plugins
 import { remarkTitle } from './src/plugins/title';
 import { remarkHighlight } from './src/plugins/highlight';
@@ -9,6 +11,7 @@ import { remarkCodeBlocks, rehypeCodeBlocks } from './src/plugins/codeblock';
 import { remarkJumpPoints, rehypeHeadings } from './src/plugins/heading';
 import { remarkSplitParagraphs, rehypeTypography, rehypeCheckboxes } from './src/plugins/typography';
 import { rehypeMdTable } from './src/plugins/table';
+import {rehypeStaticMath} from './src/plugins/math';
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,12 +23,14 @@ export default defineConfig({
       remarkSplitParagraphs,
       remarkHighlight,
       remarkRemoveComments,
+      remarkMath,
       remarkCodeBlocks,
       remarkJumpPoints,
     ],
     rehypePlugins: [
       rehypeTypography,
       rehypeMdTable,
+      rehypeStaticMath,
       rehypeCodeBlocks,
       rehypeHeadings,
       rehypeCheckboxes,
