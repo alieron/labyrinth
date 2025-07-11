@@ -45,8 +45,8 @@ const classNameMap = {
   // Links
   a: 'text-primary underline hover:text-primary/80',
   // Lists
-  ol: 'list-decimal pl-8 my-3 space-y-1 text-foreground marker:text-muted-foreground',
-  ul: 'list-disc pl-8 my-3 space-y-1 text-foreground marker:text-muted-foreground',
+  ol: 'list-decimal pl-8 text-foreground marker:text-muted-foreground',
+  ul: 'list-disc pl-8 text-foreground marker:text-muted-foreground',
   li: 'leading-snug',
   // Blockquotes
   blockquote: 'border-l-4 border-primary bg-muted pl-4 pr-2 py-2 italic text-muted-foreground mb-4',
