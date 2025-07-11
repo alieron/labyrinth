@@ -45,14 +45,15 @@ npm run build-notes
 - [x] Numbered List
 - [x] Bullet List
 - [x] External Link
-- [ ] Internal Link(wikilinks)
-- [ ] Jump Point
+- [x] Internal Link(wikilinks)
+- [x] Jump Point
 - [x] Inline Code
 - [x] Code Block
-- [ ] Table
+- [x] Table
+- [x] Latex/Mathjax
+- [x] Embedded Images
 - [ ] Footnotes
-- [ ] Latex/Mathjax
-- [ ] Embedded Images
+- [ ] Embedded Notes
 
 #### UI
 
