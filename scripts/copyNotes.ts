@@ -7,16 +7,20 @@ const __dirname = path.dirname(__filename);
 
 const VAULT_PATH = path.resolve(__dirname, '../vault'); // symlinked vault
 const OUTPUT_PATH = path.resolve(__dirname, '../content'); // output directory for astro content
+const ASSET_OUTPUT_PATH = path.resolve(__dirname, '../public/assets'); // output directory for embedded images
 const WHITELIST_FILE = path.resolve(__dirname, '../whitelist.config.json');
 
 // Read whitelist
 const WHITELIST: string[] = JSON.parse(fs.readFileSync(WHITELIST_FILE, 'utf-8'));
 const NOTE_MAP: Map<string, string> = new Map(); // vaultTitle => relative output path
 const FILE_LIST: { full: string, relative: string, dest: string }[] = [];
+const ASSET_EXTENSIONS = ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp'];
 
 // Ensure output directory exists
 fs.rmSync(OUTPUT_PATH, { recursive: true, force: true });
 fs.mkdirSync(OUTPUT_PATH, { recursive: true });
+fs.rmSync(ASSET_OUTPUT_PATH, { recursive: true, force: true });
+fs.mkdirSync(ASSET_OUTPUT_PATH, { recursive: true });
 
 // Recursively walk directories and collect `.md` files
 function walkVault(src: string, base: string) {
@@ -45,9 +49,40 @@ function toResolvedLink(filePath: string, alias?: string, heading?: string) {
   return `[${displayText}](${href})`;
 }
 
+function copyAssetIfExists(filename: string) {
+  let found = false;
+
+  function walkAndCopyAsset(dir: string) {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const fullPath = path.join(dir, entry.name);
+
+      if (entry.isDirectory()) {
+        walkAndCopyAsset(fullPath);
+      } else if (
+        entry.isFile() &&
+        path.basename(entry.name) === filename &&
+        ASSET_EXTENSIONS.includes(path.extname(filename).toLowerCase())
+      ) {
+        const dest = path.join(ASSET_OUTPUT_PATH, filename);
+        fs.copyFileSync(fullPath, dest);
+        console.log(`🖼️ Copied asset: ${filename}`);
+        found = true;
+        return;
+      }
+    }
+  }
+
+  walkAndCopyAsset(VAULT_PATH);
+
+  if (!found) {
+    console.warn(`⚠️  Asset not found: ${filename}`);
+  }
+}
+
 function resolveLinks(content: string): string {
-  const wikilinkRegex = /\[\[([^\]|#]+?)(?:\.md)?(?:#([^\]|]+))?(?:\|([^\]]+))?\]\]/g;
+  const wikilinkRegex = /(?<!\!)\[\[([^\]|#]+?)(?:\.md)?(?:#([^\]|]+))?(?:\|([^\]]+))?\]\]/g;
   const standardLinkRegex = /\[(.+?)\]\(([^)#]+?)(?:\.md)?(?:#([^\)]+))?\)/g;
+  const imageEmbedRegex = /!\[\[([^|\]]+)(?:\|(\d*)(?:x(\d*))?)?\]\]/g;
 
   // Convert wikilinks
   content = content.replace(wikilinkRegex, (_, filePath, heading, alias) => toResolvedLink(filePath, alias, heading));
@@ -59,6 +94,14 @@ function resolveLinks(content: string): string {
     } else {
       return match;
     }
+  });
+
+  // Convert image embeds
+  content = content.replace(imageEmbedRegex, (_, name, width, height) => {
+    const assetPath = `/assets/${name}`;
+    let dimensionProps = width ? ` width=\"${width}\"` : '';
+    dimensionProps += height ? `  height=\"${height}\"` : '';
+    return `<img src="${assetPath}" alt="${name}" class="mx-auto ${width ? '' : 'object-none'}" style="${width ? `width:${width}px;` : ''} ${height ? `height:${height}px;` : ''}">`
   });
 
   return content;
@@ -91,6 +134,14 @@ for (const { relative } of FILE_LIST) {
 // Step 3: Copy and transform markdown files
 for (const { full, relative, dest } of FILE_LIST) {
   const content = fs.readFileSync(full, 'utf-8');
+
+  // Detect embedded images and copy assets
+  const imageRegex = /!\[\[([^|\]]+)/g;
+  let match;
+  while ((match = imageRegex.exec(content)) !== null) {
+    copyAssetIfExists(match[1]);
+  }
+
   const processed = resolveLinks(content);
   fs.mkdirSync(path.dirname(dest), { recursive: true });
   fs.writeFileSync(dest, processed, 'utf-8');
