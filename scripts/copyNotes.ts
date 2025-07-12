@@ -12,7 +12,7 @@ const WHITELIST_FILE = path.resolve(__dirname, '../whitelist.config.json');
 
 // Read whitelist
 const WHITELIST: string[] = JSON.parse(fs.readFileSync(WHITELIST_FILE, 'utf-8'));
-const NOTE_MAP: Map<string, string> = new Map(); // vaultTitle => relative output path
+const NOTE_MAP: Map<string, string> = new Map(); // file name => relative path
 const FILE_LIST: { full: string, relative: string, dest: string }[] = [];
 const ASSET_EXTENSIONS = ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp'];
 
@@ -65,7 +65,7 @@ function copyAssetIfExists(filename: string) {
       ) {
         const dest = path.join(ASSET_OUTPUT_PATH, filename);
         fs.copyFileSync(fullPath, dest);
-        console.log(`🖼️ Copied asset: ${filename}`);
+        console.log(`🖼️  Copied asset: ${filename}`);
         found = true;
         return;
       }
@@ -84,9 +84,6 @@ function resolveLinks(content: string): string {
   const standardLinkRegex = /\[(.+?)\]\(([^)#]+?)(?:\.md)?(?:#([^\)]+))?\)/g;
   const imageEmbedRegex = /!\[\[([^|\]]+)(?:\|(\d*)(?:x(\d*))?)?\]\]/g;
 
-  // Convert wikilinks
-  content = content.replace(wikilinkRegex, (_, filePath, heading, alias) => toResolvedLink(filePath, alias, heading));
-
   // Convert standard markdown links
   content = content.replace(standardLinkRegex, (match, alias, filePath, heading) => {
     if (!filePath.includes('http')) {
@@ -96,12 +93,15 @@ function resolveLinks(content: string): string {
     }
   });
 
+  // Convert wikilinks
+  content = content.replace(wikilinkRegex, (_, filePath, heading, alias) => toResolvedLink(filePath, alias, heading));
+
   // Convert image embeds
   content = content.replace(imageEmbedRegex, (_, name, width, height) => {
     const assetPath = `/assets/${name}`;
     let dimensionProps = width ? ` width=\"${width}\"` : '';
     dimensionProps += height ? `  height=\"${height}\"` : '';
-    return `<img src="${assetPath}" alt="${name}" class="mx-auto ${width ? '' : 'object-none'}" style="${width ? `width:${width}px;` : ''} ${height ? `height:${height}px;` : ''}">`
+    return `<img src="${assetPath}" alt="${name}" class="mx-auto${width ? '' : ' object-none'}" style="${width ? `width:${width}px;` : ''}${height ? `height:${height}px;` : ''}">`
   });
 
   return content;
