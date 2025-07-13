@@ -55,6 +55,7 @@ npm run build-notes
 - [x] TikZJax Diagram from [Obsidian TikZJax](https://github.com/artisticat1/obsidian-tikzjax/tree/main)
 - [ ] Footnotes
 - [ ] Embedded Notes
+- [ ] Mermaid Charts
 
 #### UI
 
