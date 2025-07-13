@@ -45,14 +45,17 @@ npm run build-notes
 - [x] Numbered List
 - [x] Bullet List
 - [x] External Link
-- [ ] Internal Link(wikilinks)
-- [ ] Jump Point
+- [x] Internal Link(wikilinks)
+- [x] Jump Point
 - [x] Inline Code
 - [x] Code Block
-- [ ] Table
+- [x] Table
+- [x] Latex/Mathjax
+- [x] Embedded Images
+- [x] TikZJax Diagram from [Obsidian TikZJax](https://github.com/artisticat1/obsidian-tikzjax/tree/main)
 - [ ] Footnotes
-- [ ] Latex/Mathjax
-- [ ] Embedded Images
+- [ ] Embedded Notes
+- [ ] Mermaid Charts
 
 #### UI
 

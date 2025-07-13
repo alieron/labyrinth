@@ -1,0 +1,30 @@
+---
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Layout from "./Layout.astro";
+import { Button } from "@/components/ui/button";
+---
+
+<Layout>
+  <div class="flex flex-1 gap-4 my-0">
+    {/* Left Sidebar */}
+    <div class="sticky flex-none top-32 h-fit px-6 mt-4 mr-auto">
+      <Button variant="outline" size="icon">
+        <a href="#">
+          <ChevronLeft />
+        </a>
+      </Button>
+    </div>
+
+    {/* Main Content */}
+    <slot />
+
+    {/* Right Sidebar */}
+    <div class="sticky flex-none top-32 h-fit px-6 mt-4 ml-auto">
+      <Button variant="outline" size="icon">
+        <a href="#">
+          <ChevronRight />
+        </a>
+      </Button>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,14 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+type Props = HTMLAttributes<'svg'>;
+
+const { class: className, ...props } = Astro.props;
+---
+
+<svg viewBox="0 0 150 150" class={className} {...props}>
+  <g transform="translate(0,160) scale(1,-1)">
+    <path
+      d="m0 85v-75h65 65v15 15h-5-5v-10-10h-35-35v20 20h-5-5v-20-20h-15-15v65 65h5 5v-20-20h10 10v-10-10h25 25v5 5h-20-20v5 5h25 25v-15-15h-10-10v-10-10h-5-5v10 10h-20-20v10 10h-5-5v-35-35h5 5v20 20h15 15v-20-20h5 5v10 10h10 10v10 10h20 20v5 5h-10-10v25 25h10 10v5 5h-15-15v-10-10h-15-15v10 10h-5-5v-10-10h-15-15v15 15h5 5v-10-10h5 5v10 10h15 15v-10-10h5 5v15 15h-45-45v-75zm100 70v-5h20 20v-15-15h-10-10v-15-15h5 5v10 10h5 5v-25-25h-20-20v-10-10h-10-10v-5-5h15 15v10 10h15 15v-20-20h5 5v75 75h-25-25v-5z" fill="currentColor" />
+  </g>
+</svg>
