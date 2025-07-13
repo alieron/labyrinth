@@ -52,6 +52,7 @@ npm run build-notes
 - [x] Table
 - [x] Latex/Mathjax
 - [x] Embedded Images
+- [x] TikZJax Diagram from [Obsidian TikZJax](https://github.com/artisticat1/obsidian-tikzjax/tree/main)
 - [ ] Footnotes
 - [ ] Embedded Notes
 

@@ -11,7 +11,8 @@ import { remarkCodeBlocks, rehypeCodeBlocks } from './src/plugins/codeblock';
 import { remarkJumpPoints, rehypeHeadings } from './src/plugins/heading';
 import { remarkSplitParagraphs, rehypeTypography, rehypeCheckboxes } from './src/plugins/typography';
 import { rehypeMdTable } from './src/plugins/table';
-import {rehypeStaticMath} from './src/plugins/math';
+import { rehypeStaticMath } from './src/plugins/math';
+import { rehypeTikzDiag } from './src/plugins/tikz';
 
 // https://astro.build/config
 export default defineConfig({
@@ -31,6 +32,7 @@ export default defineConfig({
       rehypeTypography,
       rehypeMdTable,
       rehypeStaticMath,
+      rehypeTikzDiag,
       rehypeCodeBlocks,
       rehypeHeadings,
       rehypeCheckboxes,

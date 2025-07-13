@@ -29,7 +29,7 @@ export function rehypeStaticMath() {
         hasMath = true;
 
         const latexHast = renderer.renderTexToHast(latexText, true);
-        classnames(latexHast, 'text-[140%]');
+        classnames(latexHast, 'text-[140%] my-2');
 
         const wrapper = h('div', {
           class: 'group relative my-2 rounded-md overflow-hidden bg-muted text-sm font-mono',
