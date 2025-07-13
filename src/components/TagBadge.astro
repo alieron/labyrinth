@@ -1,0 +1,23 @@
+---
+import { Badge } from "@/components/ui/badge";
+import { Hash } from "lucide-react";
+
+type Props = {
+  tag: string;
+};
+
+const { tag } = Astro.props;
+const splitTag = tag.split("/");
+---
+
+<Badge className="bg-primary/10 text-primary dark:bg-primary/20">
+  <Hash />
+  {
+    splitTag.map((part, index) => (
+      <>
+        {(index !== 0 && index !== splitTag.length) ? " / " : ""}
+        <a href={`tags/${splitTag.slice(0, index + 1).join('/')}`}>{part}</a>
+      </>
+    ))
+  }
+</Badge>
