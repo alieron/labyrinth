@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import { File, Folder } from "lucide-react";
+import { File, Folder, Minus } from "lucide-react";
 import Layout from "@/layouts/Layout.astro";
 import CompletionBadge from "@/components/CompletionBadge.astro";
 import TagBadge from "@/components/TagBadge.astro";
@@ -106,7 +106,11 @@ const items: (folderEntry | noteEntry)[] = [
               <tr class="border-t">
                 <td class="py-2 px-4">
                   <div class="flex flex-row items-center gap-2">
-                    {item.type === "folder" ? <Folder className="w-4" /> : <File className="w-4" />}
+                    {item.type === "folder" ? (
+                      <Folder className="w-4" />
+                    ) : (
+                      <File className="w-4" />
+                    )}
                     <a
                       href={item.href}
                       class="hover:text-primary hover:underline"
@@ -118,9 +122,11 @@ const items: (folderEntry | noteEntry)[] = [
                 <td class="pt-2 px-4 overflow-hidden">
                   {item.type === "note" && (
                     <div class="flex flex-nowrap gap-1 pb-2 overflow-x-auto">
-                      {item.tags.length > 0
-                        ? item.tags.map((tag) => <TagBadge tag={tag} />)
-                        : "-"}
+                      {item.tags.length > 0 ? (
+                        item.tags.map((tag) => <TagBadge tag={tag} />)
+                      ) : (
+                        <Minus className="w-4" />
+                      )}
                     </div>
                   )}
                 </td>
