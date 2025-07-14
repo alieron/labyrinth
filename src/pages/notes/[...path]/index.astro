@@ -4,6 +4,7 @@ import { File, Folder, Minus } from "lucide-react";
 import Layout from "@/layouts/Layout.astro";
 import CompletionBadge from "@/components/CompletionBadge.astro";
 import TagBadge from "@/components/TagBadge.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
 
 export async function getStaticPaths() {
   const notes = await getCollection("notes");
@@ -90,7 +91,7 @@ const items: (folderEntry | noteEntry)[] = [
 
 <Layout>
   <div class="flex-1 max-w-5xl overflow-y-auto mx-auto">
-    <h1 class="text-3xl font-bold mb-4">{path || "Notes"}</h1>
+    <Breadcrumbs path={path} isFolder={true} />
     <div class="rounded-md border">
       <table class="table-fixed border-collapse w-full">
         <thead>

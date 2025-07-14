@@ -1,0 +1,48 @@
+---
+import { BookOpen } from "lucide-react";
+
+type Props = {
+  path: string,
+  isFolder: boolean,
+};
+
+const { path, isFolder } = Astro.props;
+const splitPath = path === "" ? [] : path?.split("/");
+let partialPath = "/notes";
+---
+
+<nav class="text-lg text-muted-foreground items-center mb-6">
+  <ul class="flex flex-wrap items-center gap-2">
+    <li>
+      <a href="/notes/" class="hover:text-primary">
+        <BookOpen />
+      </a>
+    </li>
+    <li>/</li>
+    {
+      splitPath.map((part, idx) => {
+        partialPath += `/${part}`;
+        const isLast = idx === splitPath.length - 1;
+        return isLast ? (
+          <>
+            <li>
+              <span class="text-foreground font-medium">
+                {decodeURIComponent(part)}
+              </span>
+            </li>
+            {isFolder && <li>/</li>}
+          </>
+        ) : (
+          <>
+            <li>
+              <a href={`${partialPath}/`} class="hover:text-primary">
+                {decodeURIComponent(part)}
+              </a>
+            </li>
+            <li>/</li>
+          </>
+        );
+      })
+    }
+  </ul>
+</nav>
