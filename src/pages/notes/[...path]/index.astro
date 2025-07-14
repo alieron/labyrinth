@@ -1,0 +1,104 @@
+---
+import { getCollection } from "astro:content";
+import { File, Folder } from "lucide-react";
+import Layout from "@/layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const notes = await getCollection("notes");
+  const folders = new Set<string>();
+
+  for (const note of notes) {
+    const parts = note.id.split("/");
+    for (let i = 0; i < parts.length; i++) {
+      const folder = parts.slice(0, i).join("/");
+      folders.add(folder);
+    }
+  }
+
+  return Array.from(folders).map((folderPath) => ({
+    params: { path: folderPath + "/" },
+  }));
+}
+
+const { path = "" } = Astro.params;
+const splitPath = path === "" ? [] : path?.split("/");
+
+const notes = await getCollection("notes");
+
+// Notes directly inside the current folder
+const currentNotes = notes.filter((note) => {
+  const parts = note.id.split("/");
+  return parts.slice(0, -1).join("/") === path;
+});
+
+// Immediate subfolders inside the current folder
+const subfolders = new Set<string>();
+for (const note of notes) {
+  const parts = note.id.split("/");
+  if (
+    parts.length > splitPath.length + 1 &&
+    parts.slice(0, splitPath.length).join("/") === path
+  ) {
+    subfolders.add(parts[splitPath.length]);
+  }
+}
+---
+
+<Layout>
+  <div class="flex-1 max-w-5xl overflow-y-auto mx-auto">
+    <h1 class="text-3xl font-bold mb-4">{path || "Notes"}</h1>
+    {
+      subfolders.size > 0 && (
+        <>
+          <div class="flex flex-row items-center gap-2 mb-2">
+            <Folder />
+            <h2 class="text-xl font-semibold">Folders</h2>
+          </div>
+          <ul class="list-disc ml-5 space-y-1">
+            {Array.from(subfolders)
+              .sort()
+              .map((name) => (
+                <li>
+                  <a
+                    href={`/notes/${[...splitPath, name].join("/")}/`}
+                    class="text-blue-600 hover:underline"
+                  >
+                    {name}
+                  </a>
+                </li>
+              ))}
+          </ul>
+        </>
+      )
+    }
+    {
+      currentNotes.length > 0 && (
+        <>
+          <div class="flex flex-row items-center gap-2 mb-2 mt-4">
+            <File />
+            <h2 class="text-xl font-semibold">Notes</h2>
+          </div>
+          <ul class="list-disc ml-5 space-y-1">
+            {currentNotes.map((note) => (
+              <li>
+                <a
+                  href={`/notes/${note.id}`}
+                  class="text-blue-600 hover:underline"
+                >
+                  {note.filePath?.split("/").pop()}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )
+    }
+    {
+      subfolders.size === 0 && currentNotes.length === 0 && (
+        <p class="mt-6 text-muted-foreground">
+          No notes or folders in this directory.
+        </p>
+      )
+    }
+  </div>
+</Layout>
