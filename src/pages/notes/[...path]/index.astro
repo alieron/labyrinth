@@ -2,6 +2,8 @@
 import { getCollection } from "astro:content";
 import { File, Folder } from "lucide-react";
 import Layout from "@/layouts/Layout.astro";
+import CompletionBadge from "@/components/CompletionBadge.astro";
+import TagBadge from "@/components/TagBadge.astro";
 
 export async function getStaticPaths() {
   const notes = await getCollection("notes");
@@ -42,63 +44,89 @@ for (const note of notes) {
     subfolders.add(parts[splitPath.length]);
   }
 }
+
+type folderEntry = {
+  type: "folder";
+  name: string;
+  href: string;
+};
+type noteEntry = {
+  type: "note";
+  name: string;
+  href: string;
+  tags: string[];
+  complete: boolean;
+};
+
+// Notes in current or nested folders
+const items: (folderEntry | noteEntry)[] = [
+  ...Array.from(subfolders).map(
+    (name) =>
+      ({
+        type: "folder",
+        name,
+        href: `/notes/${[...splitPath, name].join("/")}/`,
+      }) as folderEntry,
+  ),
+  ...currentNotes.map(
+    (note) =>
+      ({
+        type: "note",
+        name: note.filePath?.split("/").pop()?.replace('.md', '') ?? note.id.split("/").pop() ?? "",
+        href: `/notes/${note.id}/`,
+        tags: note.data.tags || [],
+        complete: note.data.complete,
+      }) as noteEntry,
+  ),
+];
 ---
 
 <Layout>
   <div class="flex-1 max-w-5xl overflow-y-auto mx-auto">
     <h1 class="text-3xl font-bold mb-4">{path || "Notes"}</h1>
-    {
-      subfolders.size > 0 && (
-        <>
-          <div class="flex flex-row items-center gap-2 mb-2">
-            <Folder />
-            <h2 class="text-xl font-semibold">Folders</h2>
-          </div>
-          <ul class="list-disc ml-5 space-y-1">
-            {Array.from(subfolders)
-              .sort()
-              .map((name) => (
-                <li>
-                  <a
-                    href={`/notes/${[...splitPath, name].join("/")}/`}
-                    class="text-blue-600 hover:underline"
-                  >
-                    {name}
-                  </a>
-                </li>
-              ))}
-          </ul>
-        </>
-      )
-    }
-    {
-      currentNotes.length > 0 && (
-        <>
-          <div class="flex flex-row items-center gap-2 mb-2 mt-4">
-            <File />
-            <h2 class="text-xl font-semibold">Notes</h2>
-          </div>
-          <ul class="list-disc ml-5 space-y-1">
-            {currentNotes.map((note) => (
-              <li>
-                <a
-                  href={`/notes/${note.id}`}
-                  class="text-blue-600 hover:underline"
-                >
-                  {note.filePath?.split("/").pop()}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </>
-      )
-    }
-    {
-      subfolders.size === 0 && currentNotes.length === 0 && (
-        <p class="mt-6 text-muted-foreground">
-          No notes or folders in this directory.
-        </p>
-      )
-    }
+    <div class="rounded-md border">
+      <table class="table-auto border-collapse w-full">
+        <thead>
+          <tr class="text-left">
+            <th class="py-2 px-4 w-1/4">Name</th>
+            <th class="py-2 px-4 w-14/24">Tags</th>
+            <th class="py-2 px-4 w-1/6">Complete</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            items.map((item) => (
+              <tr class="border-t">
+                <td class="py-2 px-4">
+                  <div class="flex flex-row items-center gap-2">
+                    {item.type === "folder" ? <Folder className="w-4" /> : <File className="w-4" />}
+                    <a
+                      href={item.href}
+                      class="hover:text-primary hover:underline"
+                    >
+                      {item.name}
+                    </a>
+                  </div>
+                </td>
+                <td class="py-2 px-4">
+                  {item.type === "note" && (
+                    <div class="flex flex-wrap gap-1 overflow-x-auto">
+                      {item.tags.length > 0
+                        ? item.tags.map((tag) => <TagBadge tag={tag} />)
+                        : "-"}
+                    </div>
+                  )}
+                </td>
+                <td class="py-2 px-4">
+                  {item.type === "note" && (
+                    <CompletionBadge completion={item.complete} />
+                  )}
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
   </div>
 </Layout>
