@@ -3,7 +3,6 @@ import { type CollectionEntry, getCollection, render } from "astro:content";
 import NoteLayout from "@/layouts/NoteLayout.astro";
 import CompletionBadge from "@/components/CompletionBadge.astro";
 import TagBadge from "@/components/TagBadge.astro";
-import { Separator } from "@/components/ui/separator";
 
 export async function getStaticPaths() {
   const entries = await getCollection("notes");
@@ -25,24 +24,21 @@ const { Content, remarkPluginFrontmatter } = await render(note);
 <NoteLayout>
   <div class="flex-1 max-w-5xl overflow-y-auto mb-150">
     {/* Title */}
-    <div class="px-6 mb-6">
+    <div class="px-6 mb-4">
       <h1 class="text-4xl font-bold tracking-tight">
         {remarkPluginFrontmatter.title}
       </h1>
-      <div
-        class="mt-2 flex flex-wrap items-center gap-4 text-sm text-muted-foreground"
-      >
-        <div class="flex w-full gap-2">
-          {note.data.tags.map((tag) => <TagBadge tag={tag} />)}
-          {
-            note.data.tags.length > 0 && (
-              <span>
-                <Separator orientation="vertical" />
-              </span>
-            )
-          }
-          <CompletionBadge completion={note.data.complete} />
-        </div>
+      <div class="mt-2 flex flex-col gap-4 text-sm text-muted-foreground">
+        <CompletionBadge completion={note.data.complete} />
+        {
+          note.data.tags.length > 0 && (
+            <div class="flex flex-wrap items-center gap-2">
+              {note.data.tags.map((tag) => (
+                <TagBadge tag={tag} />
+              ))}
+            </div>
+          )
+        }
       </div>
     </div>
     <hr />
