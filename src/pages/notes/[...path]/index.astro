@@ -60,24 +60,31 @@ type noteEntry = {
 
 // Notes in current or nested folders
 const items: (folderEntry | noteEntry)[] = [
-  ...Array.from(subfolders).map(
-    (name) =>
-      ({
-        type: "folder",
-        name,
-        href: `/notes/${[...splitPath, name].join("/")}/`,
-      }) as folderEntry,
-  ),
-  ...currentNotes.map(
-    (note) =>
-      ({
-        type: "note",
-        name: note.filePath?.split("/").pop()?.replace('.md', '') ?? note.id.split("/").pop() ?? "",
-        href: `/notes/${note.id}/`,
-        tags: note.data.tags || [],
-        complete: note.data.complete,
-      }) as noteEntry,
-  ),
+  ...Array.from(subfolders)
+    .map(
+      (name) =>
+        ({
+          type: "folder",
+          name,
+          href: `/notes/${[...splitPath, name].join("/")}/`,
+        }) as folderEntry,
+    )
+    .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase())),
+  ...currentNotes
+    .map(
+      (note) =>
+        ({
+          type: "note",
+          name:
+            note.filePath?.split("/").pop()?.replace(".md", "") ??
+            note.id.split("/").pop() ??
+            "",
+          href: `/notes/${note.id}/`,
+          tags: note.data.tags || [],
+          complete: note.data.complete,
+        }) as noteEntry,
+    )
+    .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase())),
 ];
 ---
 
