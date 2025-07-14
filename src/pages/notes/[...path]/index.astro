@@ -92,12 +92,12 @@ const items: (folderEntry | noteEntry)[] = [
   <div class="flex-1 max-w-5xl overflow-y-auto mx-auto">
     <h1 class="text-3xl font-bold mb-4">{path || "Notes"}</h1>
     <div class="rounded-md border">
-      <table class="table-auto border-collapse w-full">
+      <table class="table-fixed border-collapse w-full">
         <thead>
           <tr class="text-left">
-            <th class="py-2 px-4 w-1/4">Name</th>
-            <th class="py-2 px-4 w-14/24">Tags</th>
-            <th class="py-2 px-4 w-1/6">Complete</th>
+            <th class="py-2 px-4 w-1/5">Name</th>
+            <th class="py-2 px-4 w-3/5">Tags</th>
+            <th class="py-2 px-4 w-1/5">Complete</th>
           </tr>
         </thead>
         <tbody>
@@ -115,9 +115,9 @@ const items: (folderEntry | noteEntry)[] = [
                     </a>
                   </div>
                 </td>
-                <td class="py-2 px-4">
+                <td class="pt-2 px-4 overflow-hidden">
                   {item.type === "note" && (
-                    <div class="flex flex-wrap gap-1 overflow-x-auto">
+                    <div class="flex flex-nowrap gap-1 pb-2 overflow-x-auto">
                       {item.tags.length > 0
                         ? item.tags.map((tag) => <TagBadge tag={tag} />)
                         : "-"}
