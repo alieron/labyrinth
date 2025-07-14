@@ -79,7 +79,7 @@ const items: (folderEntry | noteEntry)[] = [
             note.filePath?.split("/").pop()?.replace(".md", "") ??
             note.id.split("/").pop() ??
             "",
-          href: `/notes/${note.id}/`,
+          href: `/notes/${note.id}`,
           tags: note.data.tags || [],
           complete: note.data.complete,
         }) as noteEntry,
