@@ -1,6 +1,7 @@
 ---
 import { BookOpen } from "lucide-react";
 import { toSlug } from "@/utils/slug";
+import { resolveBase } from "@/utils/resolve";
 
 type Props = {
   path: string;
@@ -9,7 +10,7 @@ type Props = {
 
 const { path, isFolder = false } = Astro.props;
 const splitPath = path ? path?.split("/") : [];
-let partialPath = "/notes";
+let partialPath = resolveBase("/notes");
 ---
 
 <nav class="text-lg text-foreground items-center mb-6">
@@ -20,7 +21,7 @@ let partialPath = "/notes";
           <BookOpen />
         ) : (
           <a
-            href="/notes/"
+            href={resolveBase("/notes/")}
             class="text-muted-foreground hover:text-primary"
             aria-label="notes"
           >
@@ -41,7 +42,7 @@ let partialPath = "/notes";
         return isLast ? (
           <>
             <li>
-              <span>{decodeURIComponent(part)}</span>
+              <span>{part}</span>
             </li>
             {isFolder && <li class="cursor-default">/</li>}
           </>
@@ -52,7 +53,7 @@ let partialPath = "/notes";
                 href={`${toSlug(partialPath)}/`}
                 class="text-muted-foreground hover:text-primary"
               >
-                {decodeURIComponent(part)}
+                {part}
               </a>
             </li>
             <li class="cursor-default">/</li>

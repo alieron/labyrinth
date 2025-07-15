@@ -1,6 +1,7 @@
 ---
-import { Badge } from "@/components/ui/badge";
 import { Hash } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { resolveBase } from "@/utils/resolve";
 
 type Props = {
   tag: string;
@@ -8,6 +9,7 @@ type Props = {
 
 const { tag } = Astro.props;
 const splitTag = tag.split("/");
+let partialTag = resolveBase("/tags");
 ---
 
 <Badge className="bg-primary/10 text-primary dark:bg-primary/20">
@@ -15,13 +17,14 @@ const splitTag = tag.split("/");
   <ul class="flex flex-wrap items-center gap-1">
     {
       splitTag.map((part, index) => {
+        partialTag += `/${part}`;
         const notLast = index !== splitTag.length - 1;
         return (
           <>
             <li>
               <a
+                href={partialTag}
                 class="hover:text-foreground hover:underline"
-                href={`/tags/${splitTag.slice(0, index + 1).join("/")}`}
               >
                 {part}
               </a>

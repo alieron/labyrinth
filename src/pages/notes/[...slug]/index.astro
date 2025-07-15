@@ -6,6 +6,7 @@ import CompletionBadge from "@/components/CompletionBadge.astro";
 import TagBadge from "@/components/TagBadge.astro";
 import NoteBreadcrumbs from "@/components/NoteBreadcrumbs.astro";
 import { trimRelPath, toSlug } from "@/utils/slug";
+import { resolveBase } from "@/utils/resolve";
 
 export async function getStaticPaths() {
   const notes = await getCollection("notes");
@@ -117,7 +118,7 @@ const items: (folderEntry | noteEntry)[] = [
                         <File className="flex-none w-4" />
                       )}
                       <a
-                        href={item.href}
+                        href={resolveBase(item.href)}
                         class="text-nowrap overflow-hidden text-ellipsis text-ellipsis hover:text-primary"
                       >
                         {item.name}
