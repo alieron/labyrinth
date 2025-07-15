@@ -1,0 +1,51 @@
+---
+import { Tag } from "lucide-react";
+
+type Props = {
+  path: string;
+  isFolder?: boolean;
+};
+
+const { path, isFolder = false } = Astro.props;
+const splitPath = path ? path?.split("/") : [];
+let partialPath = "/notes";
+---
+
+<nav class="text-lg text-muted-foreground items-center mb-6">
+  <ul class="flex flex-wrap items-center gap-2">
+    <li>
+      <a
+        href="/tags/"
+        class=`${path.length === 0 ? 'text-foreground' : 'hover:text-primary'}`
+      >
+        <Tag />
+      </a>
+    </li>
+    <li class=`${path.length === 0 ? 'text-foreground' : ''}`>/</li>
+    {
+      splitPath.map((part, idx) => {
+        partialPath += `/${part}`;
+        const isLast = idx === splitPath.length - 1;
+        return isLast ? (
+          <>
+            <li>
+              <span class="text-foreground font-medium">
+                {decodeURIComponent(part)}
+              </span>
+            </li>
+            {isFolder && <li class="text-foreground">/</li>}
+          </>
+        ) : (
+          <>
+            <li>
+              <a href={partialPath} class="hover:text-primary">
+                {decodeURIComponent(part)}
+              </a>
+            </li>
+            <li>/</li>
+          </>
+        );
+      })
+    }
+  </ul>
+</nav>
