@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { toSlug } from '../src/utils/slug';
+import { resolveBase } from '../src/utils/resolve';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -40,7 +41,7 @@ function walkVault(src: string, base: string) {
 
 function toResolvedLink(filePath: string, alias?: string, heading?: string) {
   const pageName = path.basename(filePath);
-  let href = `/notes/${NOTE_MAP.get(filePath) ?? NOTE_MAP.get(pageName)}`;
+  let href = resolveBase(`/notes/${NOTE_MAP.get(filePath) ?? NOTE_MAP.get(pageName)}`);
   let displayText = alias ?? `${pageName}${heading ? ` > ${heading}` : ''}`;
   if (heading) href += `#${toSlug(heading)}`;
   return `[${displayText}](${href})`;
@@ -95,7 +96,7 @@ function resolveLinks(content: string): string {
 
   // Convert image embeds
   content = content.replace(imageEmbedRegex, (_, name, width, height) => {
-    const assetPath = `/assets/${name}`;
+    const assetPath = resolveBase(`/assets/${name}`);
     let dimensionProps = width ? ` width=\"${width}\"` : '';
     dimensionProps += height ? `  height=\"${height}\"` : '';
     return `<img src="${assetPath}" alt="${name}" class="mx-auto${width ? '' : ' object-none'}" style="${width ? `width:${width}px;` : ''}${height ? `height:${height}px;` : ''}">`

@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
+import { BASE } from './src/utils/resolve';
 // Math
 import remarkMath from 'remark-math';
 // Custom plugins
@@ -17,6 +18,7 @@ import { rehypeTikzDiag } from './src/plugins/tikz';
 
 // https://astro.build/config
 export default defineConfig({
+  base: BASE,
   integrations: [react()],
   markdown: {
     syntaxHighlight: false,
