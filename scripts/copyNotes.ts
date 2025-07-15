@@ -33,7 +33,7 @@ function walkVault(src: string, base: string) {
 
     if (fs.statSync(full).isDirectory()) {
       walkVault(full, base);
-    } else if (file.endsWith('.md')) {
+    } else if (file.endsWith('.md') && !(/^[~_]/.test(file))) {
       FILE_LIST.push({ full, relative, dest });
     }
   }
