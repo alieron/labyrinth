@@ -1,0 +1,153 @@
+---
+import { getCollection } from "astro:content";
+import { File, Tag, Minus } from "lucide-react";
+import Layout from "@/layouts/Layout.astro";
+import CompletionBadge from "@/components/CompletionBadge.astro";
+import TagBadge from "@/components/TagBadge.astro";
+import TagBreadcrumbs from "@/components/TagBreadcrumbs.astro";
+import { trimRelPath, toSlug } from "@/utils/slug";
+
+export async function getStaticPaths() {
+  const notes = await getCollection("notes");
+  const tagSet = new Set<string>([""]);
+
+  for (const note of notes) {
+    for (const tag of note.data.tags ?? []) {
+      const parts = tag.split("/");
+      for (let i = 1; i <= parts.length; i++) {
+        const nested = parts.slice(0, i).join("/");
+        tagSet.add(nested);
+      }
+    }
+  }
+
+  return Array.from(tagSet).map((tag) => ({
+    params: { tag }, // Obsidian tags are already slugified
+  }));
+}
+
+type Props = {
+  tag: string;
+};
+
+const { tag = "" } = Astro.params;
+const splitTag = tag === "" ? [] : tag?.split("/");
+
+const notes = await getCollection("notes");
+
+// Notes that have the current tag
+const matchingNotes = notes.filter((note) =>
+  note.data.tags?.some((tag) => tag === tag),
+);
+
+// Tags nested immediately under the current tag
+const nestedTags = new Set<string>();
+for (const note of matchingNotes) {
+  for (const noteTag of note.data.tags ?? []) {
+    if (noteTag.slice(0, tag.length) === tag) {
+      const parts = noteTag.slice(tag.length).replace(/^\//,'').split("/");
+      if (parts.length > 0 && parts[0] !== "") {
+        nestedTags.add(parts[0]);
+      }
+    }
+  }
+}
+
+type tagEntry = {
+  type: "tag";
+  name: string;
+  href: string;
+};
+type noteEntry = {
+  type: "note";
+  name: string;
+  href: string;
+  tags: string[];
+  complete: boolean;
+};
+
+// Notes or nested tags
+const items: (tagEntry | noteEntry)[] = [
+  ...Array.from(nestedTags)
+    .map(
+      (name) =>
+        ({
+          type: "tag",
+          name,
+          href: `/tags/${[...splitTag, name].join("/")}`,
+        }) as tagEntry,
+    )
+    .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase())),
+  ...matchingNotes
+    .filter((note) => note.data.tags?.includes(tag))
+    .map((note) => {
+      const path = trimRelPath(note.filePath) ?? note.id;
+      return {
+        type: "note",
+        name: path.split("/").pop(),
+        href: `/notes/${toSlug(path)}`,
+        tags: note.data.tags || [],
+        complete: note.data.complete,
+      } as noteEntry;
+    })
+    .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase())),
+];
+---
+
+<Layout>
+  <div class="flex-1 max-w-5xl overflow-y-auto mx-auto">
+    <div class="px-6 mb-4">
+      <TagBreadcrumbs path={tag} />
+      <div class="rounded-md border">
+        <table class="table-fixed border-collapse w-full">
+          <thead>
+            <tr class="text-left">
+              <th class="py-2 px-4 w-1/5">Name</th>
+              <th class="py-2 px-4 w-3/5">Tags</th>
+              <th class="py-2 px-4 w-1/5">Complete</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              items.map((item) => (
+                <tr class="border-t">
+                  <td class="py-2 px-4">
+                    <div class="flex flex-row items-center gap-2">
+                      {item.type === "tag" ? (
+                        <Tag className="flex-none w-4" />
+                      ) : (
+                        <File className="flex-none w-4" />
+                      )}
+                      <a
+                        href={item.href}
+                        class="text-nowrap overflow-hidden text-ellipsis text-ellipsis hover:text-primary hover:underline"
+                      >
+                        {item.name}
+                      </a>
+                    </div>
+                  </td>
+                  <td class="pt-2 px-4 overflow-hidden">
+                    {item.type === "note" && (
+                      <div class="flex flex-nowrap gap-1 pb-2 overflow-x-auto">
+                        {item.tags.length > 0 ? (
+                          item.tags.map((tag) => <TagBadge tag={tag} />)
+                        ) : (
+                          <Minus className="w-4" />
+                        )}
+                      </div>
+                    )}
+                  </td>
+                  <td class="py-2 px-4">
+                    {item.type === "note" && (
+                      <CompletionBadge completion={item.complete} />
+                    )}
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</Layout>
