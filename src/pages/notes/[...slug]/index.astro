@@ -9,11 +9,11 @@ import { trimRelPath, toSlug } from "@/utils/slug";
 
 export async function getStaticPaths() {
   const notes = await getCollection("notes");
-  const folders = new Set<string>();
+  const folders = new Set<string>([""]); // add the root page
 
   for (const note of notes) {
     const parts = (trimRelPath(note.filePath) ?? note.id).split("/");
-    for (let i = 0; i < parts.length; i++) {
+    for (let i = 1; i < parts.length; i++) {
       const folder = parts.slice(0, i).join("/");
       folders.add(folder);
     }
