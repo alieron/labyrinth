@@ -12,12 +12,24 @@ const splitTag = tag.split("/");
 
 <Badge className="bg-primary/10 text-primary dark:bg-primary/20">
   <Hash />
-  {
-    splitTag.map((part, index) => (
-      <>
-        {(index !== 0 && index !== splitTag.length) ? " / " : ""}
-        <a class="hover:text-foreground hover:underline" href={`/tags/${splitTag.slice(0, index + 1).join('/')}`}>{part}</a>
-      </>
-    ))
-  }
+  <ul class="flex flex-wrap items-center gap-1">
+    {
+      splitTag.map((part, index) => {
+        const notLast = index !== splitTag.length - 1;
+        return (
+          <>
+            <li>
+              <a
+                class="hover:text-foreground hover:underline"
+                href={`/tags/${splitTag.slice(0, index + 1).join("/")}`}
+              >
+                {part}
+              </a>
+            </li>
+            {notLast && <li class="cursor-default">/</li>}
+          </>
+        );
+      })
+    }
+  </ul>
 </Badge>
