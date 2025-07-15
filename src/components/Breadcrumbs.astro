@@ -14,11 +14,11 @@ let partialPath = "/notes";
 <nav class="text-lg text-muted-foreground items-center mb-6">
   <ul class="flex flex-wrap items-center gap-2">
     <li>
-      <a href="/notes/" class="hover:text-primary">
+      <a href="/notes/" class=`${splitPath.length === 0 && 'text-foreground '}hover:text-primary`>
         <BookOpen />
       </a>
     </li>
-    <li>/</li>
+    <li class=`${splitPath.length === 0 && 'text-foreground'}`>/</li>
     {
       splitPath.map((part, idx) => {
         partialPath += `/${part}`;
@@ -30,7 +30,7 @@ let partialPath = "/notes";
                 {decodeURIComponent(part)}
               </span>
             </li>
-            {isFolder && <li>/</li>}
+            {isFolder && <li class="text-foreground">/</li>}
           </>
         ) : (
           <>
