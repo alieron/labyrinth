@@ -16,12 +16,12 @@ let partialPath = "/notes";
     <li>
       <a
         href="/tags/"
-        class=`${path.length === 0 ? 'text-foreground' : 'hover:text-primary'}`
+        class={path.length === 0 ? 'text-foreground' : 'hover:text-primary'}
       >
         <Tag />
       </a>
     </li>
-    <li class=`${path.length === 0 ? 'text-foreground' : ''}`>/</li>
+    <li class=`${path.length === 0 ? 'text-foreground ' : ''}cursor-default`>/</li>
     {
       splitPath.map((part, idx) => {
         partialPath += `/${part}`;
@@ -33,7 +33,7 @@ let partialPath = "/notes";
                 {decodeURIComponent(part)}
               </span>
             </li>
-            {isFolder && <li class="text-foreground">/</li>}
+            {isFolder && <li class="text-foreground cursor-default">/</li>}
           </>
         ) : (
           <>
@@ -42,7 +42,7 @@ let partialPath = "/notes";
                 {decodeURIComponent(part)}
               </a>
             </li>
-            <li>/</li>
+            <li class="cursor-default">/</li>
           </>
         );
       })
