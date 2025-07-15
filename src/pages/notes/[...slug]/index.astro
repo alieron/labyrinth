@@ -112,13 +112,13 @@ const items: (folderEntry | noteEntry)[] = [
                   <td class="py-2 px-4">
                     <div class="flex flex-row items-center gap-2">
                       {item.type === "folder" ? (
-                        <Folder className="w-4" />
+                        <Folder className="flex-none w-4" />
                       ) : (
-                        <File className="w-4" />
+                        <File className="flex-none w-4" />
                       )}
                       <a
                         href={item.href}
-                        class="hover:text-primary hover:underline"
+                        class="text-nowrap overflow-hidden text-ellipsis text-ellipsis hover:text-primary hover:underline"
                       >
                         {item.name}
                       </a>
