@@ -1,20 +1,24 @@
 ---
 import { BookOpen } from "lucide-react";
+import { toSlug } from "@/utils/slug";
 
 type Props = {
-  path: string,
-  isFolder: boolean,
+  path: string;
+  isFolder: boolean;
 };
 
 const { path, isFolder } = Astro.props;
-const splitPath = path === "" ? [] : path?.split("/");
+const splitPath = path ? path?.split("/") : [];
 let partialPath = "/notes";
 ---
 
 <nav class="text-lg text-muted-foreground items-center mb-6">
   <ul class="flex flex-wrap items-center gap-2">
     <li>
-      <a href="/notes/" class=`${splitPath.length === 0 && 'text-foreground '}hover:text-primary`>
+      <a
+        href="/notes/"
+        class=`${splitPath.length === 0 && 'text-foreground '}hover:text-primary`
+      >
         <BookOpen />
       </a>
     </li>
@@ -35,7 +39,7 @@ let partialPath = "/notes";
         ) : (
           <>
             <li>
-              <a href={`${partialPath}/`} class="hover:text-primary">
+              <a href={toSlug(`${partialPath}/`)} class="hover:text-primary">
                 {decodeURIComponent(part)}
               </a>
             </li>

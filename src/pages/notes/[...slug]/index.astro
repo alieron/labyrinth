@@ -5,13 +5,14 @@ import Layout from "@/layouts/Layout.astro";
 import CompletionBadge from "@/components/CompletionBadge.astro";
 import TagBadge from "@/components/TagBadge.astro";
 import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import { trimRelPath, toSlug } from "@/utils/slug";
 
 export async function getStaticPaths() {
   const notes = await getCollection("notes");
   const folders = new Set<string>();
 
   for (const note of notes) {
-    const parts = note.id.split("/");
+    const parts = (trimRelPath(note.filePath) ?? note.id).split("/");
     for (let i = 0; i < parts.length; i++) {
       const folder = parts.slice(0, i).join("/");
       folders.add(folder);
@@ -19,25 +20,30 @@ export async function getStaticPaths() {
   }
 
   return Array.from(folders).map((folderPath) => ({
-    params: { path: folderPath + "/" },
+    params: { slug: toSlug(`${folderPath}/`) },
+    props: { path: folderPath },
   }));
 }
 
-const { path = "" } = Astro.params;
+type Props = {
+  path: string;
+};
+
+const { path } = Astro.props;
 const splitPath = path === "" ? [] : path?.split("/");
 
 const notes = await getCollection("notes");
 
 // Notes directly inside the current folder
 const currentNotes = notes.filter((note) => {
-  const parts = note.id.split("/");
+  const parts = (trimRelPath(note.filePath) ?? note.id).split("/");
   return parts.slice(0, -1).join("/") === path;
 });
 
 // Immediate subfolders inside the current folder
 const subfolders = new Set<string>();
 for (const note of notes) {
-  const parts = note.id.split("/");
+  const parts = (trimRelPath(note.filePath) ?? note.id).split("/");
   if (
     parts.length > splitPath.length + 1 &&
     parts.slice(0, splitPath.length).join("/") === path
@@ -67,24 +73,21 @@ const items: (folderEntry | noteEntry)[] = [
         ({
           type: "folder",
           name,
-          href: `/notes/${[...splitPath, name].join("/")}/`,
+          href: toSlug(`/notes/${[...splitPath, name].join("/")}/`),
         }) as folderEntry,
     )
     .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase())),
   ...currentNotes
-    .map(
-      (note) =>
-        ({
-          type: "note",
-          name:
-            note.filePath?.split("/").pop()?.replace(".md", "") ??
-            note.id.split("/").pop() ??
-            "",
-          href: `/notes/${note.id}`,
-          tags: note.data.tags || [],
-          complete: note.data.complete,
-        }) as noteEntry,
-    )
+    .map((note) => {
+      const path = trimRelPath(note.filePath) ?? note.id;
+      return {
+        type: "note",
+        name: path.split("/").pop(),
+        href: `/notes/${toSlug(path)}`,
+        tags: note.data.tags || [],
+        complete: note.data.complete,
+      } as noteEntry;
+    })
     .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase())),
 ];
 ---
