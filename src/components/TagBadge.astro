@@ -16,7 +16,7 @@ const splitTag = tag.split("/");
     splitTag.map((part, index) => (
       <>
         {(index !== 0 && index !== splitTag.length) ? " / " : ""}
-        <a class="hover:text-foreground hover:underline" href={`tags/${splitTag.slice(0, index + 1).join('/')}`}>{part}</a>
+        <a class="hover:text-foreground hover:underline" href={`/tags/${splitTag.slice(0, index + 1).join('/')}`}>{part}</a>
       </>
     ))
   }

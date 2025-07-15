@@ -1,59 +1,60 @@
 ---
 import { getCollection } from "astro:content";
-import { File, Folder, Minus } from "lucide-react";
+import { File, Tag, Minus } from "lucide-react";
 import Layout from "@/layouts/Layout.astro";
 import CompletionBadge from "@/components/CompletionBadge.astro";
 import TagBadge from "@/components/TagBadge.astro";
-import NoteBreadcrumbs from "@/components/NoteBreadcrumbs.astro";
+import TagBreadcrumbs from "@/components/TagBreadcrumbs.astro";
 import { trimRelPath, toSlug } from "@/utils/slug";
 
 export async function getStaticPaths() {
   const notes = await getCollection("notes");
-  const folders = new Set<string>([""]); // add the root page
+  const tagSet = new Set<string>([""]);
 
   for (const note of notes) {
-    const parts = (trimRelPath(note.filePath) ?? note.id).split("/");
-    for (let i = 1; i < parts.length; i++) {
-      const folder = parts.slice(0, i).join("/");
-      folders.add(folder);
+    for (const tag of note.data.tags ?? []) {
+      const parts = tag.split("/");
+      for (let i = 1; i <= parts.length; i++) {
+        const nested = parts.slice(0, i).join("/");
+        tagSet.add(nested);
+      }
     }
   }
 
-  return Array.from(folders).map((folderPath) => ({
-    params: { slug: toSlug(`${folderPath}/`) },
-    props: { path: folderPath },
+  return Array.from(tagSet).map((tag) => ({
+    params: { tag }, // Obsidian tags are already slugified
   }));
 }
 
 type Props = {
-  path: string;
+  tag: string;
 };
 
-const { path } = Astro.props;
-const splitPath = path === "" ? [] : path?.split("/");
+const { tag = "" } = Astro.params;
+const splitTag = tag === "" ? [] : tag?.split("/");
 
 const notes = await getCollection("notes");
 
-// Notes directly inside the current folder
-const currentNotes = notes.filter((note) => {
-  const parts = (trimRelPath(note.filePath) ?? note.id).split("/");
-  return parts.slice(0, -1).join("/") === path;
-});
+// Notes that have the current tag
+const matchingNotes = notes.filter((note) =>
+  note.data.tags?.some((tag) => tag === tag),
+);
 
-// Immediate subfolders inside the current folder
-const subfolders = new Set<string>();
-for (const note of notes) {
-  const parts = (trimRelPath(note.filePath) ?? note.id).split("/");
-  if (
-    parts.length > splitPath.length + 1 &&
-    parts.slice(0, splitPath.length).join("/") === path
-  ) {
-    subfolders.add(parts[splitPath.length]);
+// Tags nested immediately under the current tag
+const nestedTags = new Set<string>();
+for (const note of matchingNotes) {
+  for (const noteTag of note.data.tags ?? []) {
+    if (noteTag.slice(0, tag.length) === tag) {
+      const parts = noteTag.slice(tag.length).replace(/^\//,'').split("/");
+      if (parts.length > 0 && parts[0] !== "") {
+        nestedTags.add(parts[0]);
+      }
+    }
   }
 }
 
-type folderEntry = {
-  type: "folder";
+type tagEntry = {
+  type: "tag";
   name: string;
   href: string;
 };
@@ -65,19 +66,20 @@ type noteEntry = {
   complete: boolean;
 };
 
-// Notes in current or nested folders
-const items: (folderEntry | noteEntry)[] = [
-  ...Array.from(subfolders)
+// Notes or nested tags
+const items: (tagEntry | noteEntry)[] = [
+  ...Array.from(nestedTags)
     .map(
       (name) =>
         ({
-          type: "folder",
+          type: "tag",
           name,
-          href: toSlug(`/notes/${[...splitPath, name].join("/")}/`),
-        }) as folderEntry,
+          href: `/tags/${[...splitTag, name].join("/")}`,
+        }) as tagEntry,
     )
     .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase())),
-  ...currentNotes
+  ...matchingNotes
+    .filter((note) => note.data.tags?.includes(tag))
     .map((note) => {
       const path = trimRelPath(note.filePath) ?? note.id;
       return {
@@ -95,7 +97,7 @@ const items: (folderEntry | noteEntry)[] = [
 <Layout>
   <div class="flex-1 max-w-5xl overflow-y-auto mx-auto">
     <div class="px-6 mb-4">
-      <NoteBreadcrumbs path={path} isFolder={true} />
+      <TagBreadcrumbs path={tag} />
       <div class="rounded-md border">
         <table class="table-fixed border-collapse w-full">
           <thead>
@@ -111,8 +113,8 @@ const items: (folderEntry | noteEntry)[] = [
                 <tr class="border-t">
                   <td class="py-2 px-4">
                     <div class="flex flex-row items-center gap-2">
-                      {item.type === "folder" ? (
-                        <Folder className="flex-none w-4" />
+                      {item.type === "tag" ? (
+                        <Tag className="flex-none w-4" />
                       ) : (
                         <File className="flex-none w-4" />
                       )}
