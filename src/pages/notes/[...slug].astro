@@ -22,7 +22,7 @@ const { note } = Astro.props;
 const { Content, remarkPluginFrontmatter } = await render(note);
 ---
 
-<NoteLayout>
+<NoteLayout prev={remarkPluginFrontmatter.prev} next={remarkPluginFrontmatter.next}>
   <div class="flex-1 max-w-5xl overflow-y-auto mb-150">
     {/* Title */}
     <div class="px-6 mb-6">
