@@ -1,9 +1,9 @@
 # Project
 vault
-whitelist.config.json
 # comment these out when publishing
-content
-public/assets
+# whitelist.config.json
+# content
+# public/assets
 
 # Astro
 .astro/
