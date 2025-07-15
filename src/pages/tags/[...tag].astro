@@ -10,7 +10,7 @@ import { resolveBase } from "@/utils/resolve";
 
 export async function getStaticPaths() {
   const notes = await getCollection("notes");
-  const tagSet = new Set<string>([""]);
+  const tagSet = new Set<string>(["/"]); // add the root page
 
   for (const note of notes) {
     for (const tag of note.data.tags ?? []) {

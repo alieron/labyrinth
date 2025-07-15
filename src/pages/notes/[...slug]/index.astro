@@ -10,7 +10,7 @@ import { resolveBase } from "@/utils/resolve";
 
 export async function getStaticPaths() {
   const notes = await getCollection("notes");
-  const folders = new Set<string>([""]); // add the root page
+  const folders = new Set<string>(["/"]); // add the root page
 
   for (const note of notes) {
     const parts = (trimRelPath(note.filePath) ?? note.id).split("/");
