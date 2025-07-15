@@ -94,56 +94,58 @@ const items: (folderEntry | noteEntry)[] = [
 
 <Layout>
   <div class="flex-1 max-w-5xl overflow-y-auto mx-auto">
-    <Breadcrumbs path={path} isFolder={true} />
-    <div class="rounded-md border">
-      <table class="table-fixed border-collapse w-full">
-        <thead>
-          <tr class="text-left">
-            <th class="py-2 px-4 w-1/5">Name</th>
-            <th class="py-2 px-4 w-3/5">Tags</th>
-            <th class="py-2 px-4 w-1/5">Complete</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            items.map((item) => (
-              <tr class="border-t">
-                <td class="py-2 px-4">
-                  <div class="flex flex-row items-center gap-2">
-                    {item.type === "folder" ? (
-                      <Folder className="w-4" />
-                    ) : (
-                      <File className="w-4" />
-                    )}
-                    <a
-                      href={item.href}
-                      class="hover:text-primary hover:underline"
-                    >
-                      {item.name}
-                    </a>
-                  </div>
-                </td>
-                <td class="pt-2 px-4 overflow-hidden">
-                  {item.type === "note" && (
-                    <div class="flex flex-nowrap gap-1 pb-2 overflow-x-auto">
-                      {item.tags.length > 0 ? (
-                        item.tags.map((tag) => <TagBadge tag={tag} />)
+    <div class="px-6 mb-4">
+      <Breadcrumbs path={path} isFolder={true} />
+      <div class="rounded-md border">
+        <table class="table-fixed border-collapse w-full">
+          <thead>
+            <tr class="text-left">
+              <th class="py-2 px-4 w-1/5">Name</th>
+              <th class="py-2 px-4 w-3/5">Tags</th>
+              <th class="py-2 px-4 w-1/5">Complete</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              items.map((item) => (
+                <tr class="border-t">
+                  <td class="py-2 px-4">
+                    <div class="flex flex-row items-center gap-2">
+                      {item.type === "folder" ? (
+                        <Folder className="w-4" />
                       ) : (
-                        <Minus className="w-4" />
+                        <File className="w-4" />
                       )}
+                      <a
+                        href={item.href}
+                        class="hover:text-primary hover:underline"
+                      >
+                        {item.name}
+                      </a>
                     </div>
-                  )}
-                </td>
-                <td class="py-2 px-4">
-                  {item.type === "note" && (
-                    <CompletionBadge completion={item.complete} />
-                  )}
-                </td>
-              </tr>
-            ))
-          }
-        </tbody>
-      </table>
+                  </td>
+                  <td class="pt-2 px-4 overflow-hidden">
+                    {item.type === "note" && (
+                      <div class="flex flex-nowrap gap-1 pb-2 overflow-x-auto">
+                        {item.tags.length > 0 ? (
+                          item.tags.map((tag) => <TagBadge tag={tag} />)
+                        ) : (
+                          <Minus className="w-4" />
+                        )}
+                      </div>
+                    )}
+                  </td>
+                  <td class="py-2 px-4">
+                    {item.type === "note" && (
+                      <CompletionBadge completion={item.complete} />
+                    )}
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </Layout>
