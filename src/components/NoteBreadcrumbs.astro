@@ -4,10 +4,10 @@ import { toSlug } from "@/utils/slug";
 
 type Props = {
   path: string;
-  isFolder: boolean;
+  isFolder?: boolean;
 };
 
-const { path, isFolder } = Astro.props;
+const { path, isFolder = false } = Astro.props;
 const splitPath = path ? path?.split("/") : [];
 let partialPath = "/notes";
 ---
@@ -17,12 +17,12 @@ let partialPath = "/notes";
     <li>
       <a
         href="/notes/"
-        class=`${splitPath.length === 0 && 'text-foreground '}hover:text-primary`
+        class=`${path.length === 0 ? 'text-foreground' : 'hover:text-primary'}`
       >
         <BookOpen />
       </a>
     </li>
-    <li class=`${splitPath.length === 0 && 'text-foreground'}`>/</li>
+    <li class=`${path.length === 0 ? 'text-foreground' : ''}`>/</li>
     {
       splitPath.map((part, idx) => {
         partialPath += `/${part}`;

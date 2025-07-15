@@ -4,7 +4,7 @@ import { File, Folder, Minus } from "lucide-react";
 import Layout from "@/layouts/Layout.astro";
 import CompletionBadge from "@/components/CompletionBadge.astro";
 import TagBadge from "@/components/TagBadge.astro";
-import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import NoteBreadcrumbs from "@/components/NoteBreadcrumbs.astro";
 import { trimRelPath, toSlug } from "@/utils/slug";
 
 export async function getStaticPaths() {
@@ -95,7 +95,7 @@ const items: (folderEntry | noteEntry)[] = [
 <Layout>
   <div class="flex-1 max-w-5xl overflow-y-auto mx-auto">
     <div class="px-6 mb-4">
-      <Breadcrumbs path={path} isFolder={true} />
+      <NoteBreadcrumbs path={path} isFolder={true} />
       <div class="rounded-md border">
         <table class="table-fixed border-collapse w-full">
           <thead>
