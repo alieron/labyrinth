@@ -18,6 +18,7 @@ import { rehypeTikzDiag } from './src/plugins/tikz';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://alieron.github.io',
   base: BASE,
   integrations: [react()],
   markdown: {
