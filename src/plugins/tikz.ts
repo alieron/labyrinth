@@ -5,10 +5,10 @@ import { fromHtml } from 'hast-util-from-html';
 import { toText } from 'hast-util-to-text';
 import { select } from 'hast-util-select';
 import { h } from 'hastscript';
-import tikzjax from 'node-tikzjax';
 import { createCopyButton } from '../lib/hastCopyButton';
+import { renderTikzToSVG } from '../lib/tikzjax';
 
-const tex2svg = tikzjax.default; // shows an error but works fine
+// const tex2svg = tikzjax.default; // shows an error but works fine
 
 export function rehypeTikzDiag() {
   return async (tree: Root) => {
@@ -36,12 +36,12 @@ export function rehypeTikzDiag() {
 
     for (const { parent, index, newNode: tikzText } of replacements) {
       try {
-        const svg = (await tex2svg(tikzText)).replaceAll(/("#000"|"black")/g, `"currentColor"`);
+            const svg = (await renderTikzToSVG(tikzText)).replaceAll(/("#000"|"black")/g, `"currentColor"`);
         const tikzHast = fromHtml(svg, { fragment: true });
 
         const diagram = select('svg', tikzHast);
         if (diagram) {
-          classnames(diagram, "stroke-foreground fill-foreground mx-auto");
+          classnames(diagram, "stroke-foreground fill-foreground mx-auto overflow-visible");
         }
 
         const wrapper = h('div', {
@@ -54,7 +54,7 @@ export function rehypeTikzDiag() {
             class: 'my-2',
             style: 'zoom:1.4;',
           }, diagram)
-        ),
+          ),
         ]);
 
         parent.children[index] = wrapper;
