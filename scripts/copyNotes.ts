@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { toSlug } from '../src/utils/slug';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -35,10 +36,6 @@ function walkVault(src: string, base: string) {
       FILE_LIST.push({ full, relative, dest });
     }
   }
-}
-
-function toSlug(str: string) {
-  return str.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-\^\/]/g, '');
 }
 
 function toResolvedLink(filePath: string, alias?: string, heading?: string) {

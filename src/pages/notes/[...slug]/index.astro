@@ -1,16 +1,18 @@
 ---
 import { getCollection } from "astro:content";
-import { File, Folder } from "lucide-react";
+import { File, Folder, Minus } from "lucide-react";
 import Layout from "@/layouts/Layout.astro";
 import CompletionBadge from "@/components/CompletionBadge.astro";
 import TagBadge from "@/components/TagBadge.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import { trimRelPath, toSlug } from "@/utils/slug";
 
 export async function getStaticPaths() {
   const notes = await getCollection("notes");
   const folders = new Set<string>();
 
   for (const note of notes) {
-    const parts = note.id.split("/");
+    const parts = (trimRelPath(note.filePath) ?? note.id).split("/");
     for (let i = 0; i < parts.length; i++) {
       const folder = parts.slice(0, i).join("/");
       folders.add(folder);
@@ -18,25 +20,30 @@ export async function getStaticPaths() {
   }
 
   return Array.from(folders).map((folderPath) => ({
-    params: { path: folderPath + "/" },
+    params: { slug: toSlug(`${folderPath}/`) },
+    props: { path: folderPath },
   }));
 }
 
-const { path = "" } = Astro.params;
+type Props = {
+  path: string;
+};
+
+const { path } = Astro.props;
 const splitPath = path === "" ? [] : path?.split("/");
 
 const notes = await getCollection("notes");
 
 // Notes directly inside the current folder
 const currentNotes = notes.filter((note) => {
-  const parts = note.id.split("/");
+  const parts = (trimRelPath(note.filePath) ?? note.id).split("/");
   return parts.slice(0, -1).join("/") === path;
 });
 
 // Immediate subfolders inside the current folder
 const subfolders = new Set<string>();
 for (const note of notes) {
-  const parts = note.id.split("/");
+  const parts = (trimRelPath(note.filePath) ?? note.id).split("/");
   if (
     parts.length > splitPath.length + 1 &&
     parts.slice(0, splitPath.length).join("/") === path
@@ -60,37 +67,41 @@ type noteEntry = {
 
 // Notes in current or nested folders
 const items: (folderEntry | noteEntry)[] = [
-  ...Array.from(subfolders).map(
-    (name) =>
-      ({
-        type: "folder",
-        name,
-        href: `/notes/${[...splitPath, name].join("/")}/`,
-      }) as folderEntry,
-  ),
-  ...currentNotes.map(
-    (note) =>
-      ({
+  ...Array.from(subfolders)
+    .map(
+      (name) =>
+        ({
+          type: "folder",
+          name,
+          href: toSlug(`/notes/${[...splitPath, name].join("/")}/`),
+        }) as folderEntry,
+    )
+    .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase())),
+  ...currentNotes
+    .map((note) => {
+      const path = trimRelPath(note.filePath) ?? note.id;
+      return {
         type: "note",
-        name: note.filePath?.split("/").pop()?.replace('.md', '') ?? note.id.split("/").pop() ?? "",
-        href: `/notes/${note.id}/`,
+        name: path.split("/").pop(),
+        href: `/notes/${toSlug(path)}`,
         tags: note.data.tags || [],
         complete: note.data.complete,
-      }) as noteEntry,
-  ),
+      } as noteEntry;
+    })
+    .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase())),
 ];
 ---
 
 <Layout>
   <div class="flex-1 max-w-5xl overflow-y-auto mx-auto">
-    <h1 class="text-3xl font-bold mb-4">{path || "Notes"}</h1>
+    <Breadcrumbs path={path} isFolder={true} />
     <div class="rounded-md border">
-      <table class="table-auto border-collapse w-full">
+      <table class="table-fixed border-collapse w-full">
         <thead>
           <tr class="text-left">
-            <th class="py-2 px-4 w-1/4">Name</th>
-            <th class="py-2 px-4 w-14/24">Tags</th>
-            <th class="py-2 px-4 w-1/6">Complete</th>
+            <th class="py-2 px-4 w-1/5">Name</th>
+            <th class="py-2 px-4 w-3/5">Tags</th>
+            <th class="py-2 px-4 w-1/5">Complete</th>
           </tr>
         </thead>
         <tbody>
@@ -99,7 +110,11 @@ const items: (folderEntry | noteEntry)[] = [
               <tr class="border-t">
                 <td class="py-2 px-4">
                   <div class="flex flex-row items-center gap-2">
-                    {item.type === "folder" ? <Folder className="w-4" /> : <File className="w-4" />}
+                    {item.type === "folder" ? (
+                      <Folder className="w-4" />
+                    ) : (
+                      <File className="w-4" />
+                    )}
                     <a
                       href={item.href}
                       class="hover:text-primary hover:underline"
@@ -108,12 +123,14 @@ const items: (folderEntry | noteEntry)[] = [
                     </a>
                   </div>
                 </td>
-                <td class="py-2 px-4">
+                <td class="pt-2 px-4 overflow-hidden">
                   {item.type === "note" && (
-                    <div class="flex flex-wrap gap-1 overflow-x-auto">
-                      {item.tags.length > 0
-                        ? item.tags.map((tag) => <TagBadge tag={tag} />)
-                        : "-"}
+                    <div class="flex flex-nowrap gap-1 pb-2 overflow-x-auto">
+                      {item.tags.length > 0 ? (
+                        item.tags.map((tag) => <TagBadge tag={tag} />)
+                      ) : (
+                        <Minus className="w-4" />
+                      )}
                     </div>
                   )}
                 </td>
