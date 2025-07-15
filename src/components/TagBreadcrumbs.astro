@@ -1,5 +1,5 @@
 ---
-import { Tag } from "lucide-react";
+import { Hash } from "lucide-react";
 
 type Props = {
   path: string;
@@ -18,7 +18,7 @@ let partialPath = "/notes";
         href="/tags/"
         class={path.length === 0 ? 'text-foreground' : 'hover:text-primary'}
       >
-        <Tag />
+        <Hash />
       </a>
     </li>
     <li class=`${path.length === 0 ? 'text-foreground ' : ''}cursor-default`>/</li>
