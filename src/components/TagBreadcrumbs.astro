@@ -11,17 +11,28 @@ const splitPath = path ? path?.split("/") : [];
 let partialPath = "/tags";
 ---
 
-<nav class="text-lg text-muted-foreground items-center mb-6">
+<nav class="text-lg text-foreground items-center mb-6">
   <ul class="flex flex-wrap items-center gap-2">
     <li>
-      <a
-        href="/tags/"
-        class={path.length === 0 ? 'text-foreground' : 'hover:text-primary'}
-      >
-        <Hash />
-      </a>
+      {
+        path.length === 0 ? (
+          <Hash />
+        ) : (
+          <a
+            href="/tags/"
+            class="text-muted-foreground hover:text-primary"
+            aria-label="tags"
+          >
+            <Hash />
+          </a>
+        )
+      }
     </li>
-    <li class=`${path.length === 0 ? 'text-foreground ' : ''}cursor-default`>/</li>
+    <li
+      class=`${path.length !== 0 ? 'text-muted-foreground ' : ''}cursor-default`
+    >
+      /
+    </li>
     {
       splitPath.map((part, idx) => {
         partialPath += `/${part}`;
@@ -29,16 +40,17 @@ let partialPath = "/tags";
         return isLast ? (
           <>
             <li>
-              <span class="text-foreground font-medium">
-                {decodeURIComponent(part)}
-              </span>
+              <span>{decodeURIComponent(part)}</span>
             </li>
-            {isFolder && <li class="text-foreground cursor-default">/</li>}
+            {isFolder && <li class="cursor-default">/</li>}
           </>
         ) : (
           <>
             <li>
-              <a href={partialPath} class="hover:text-primary">
+              <a
+                href={partialPath}
+                class="text-muted-foreground hover:text-primary"
+              >
                 {decodeURIComponent(part)}
               </a>
             </li>
