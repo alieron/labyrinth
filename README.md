@@ -2,7 +2,7 @@
 
 Publishing my obsidian notes to the internet.
 
-### Setup
+### Setup and publish your notes
 
 1. setup npm
 
@@ -10,13 +10,13 @@ Publishing my obsidian notes to the internet.
 npm i
 ```
 
-2. creating a symlink to your vault
+2. creating a symlink to your vault into `vault/`
 
 ```bash
 ln -s <path/to/your/vault> vault
 ```
 
-3. create a whitelist.config.json
+3. create a `whitelist.config.json`
 example:
 
 ```json
@@ -26,13 +26,37 @@ example:
 ]
 ```
 
-4. build your notes into tsx files
+4. copy your notes into `contents/` and assets into `public/assets/`
 
 ```bash
-npm run build-notes
+npm run copy-notes
 ```
 
-### Progress checklist
+5. (Optional) do a test build and preview, should host the webpage at http://localhost:3000/labyrinth
+
+```bash
+npm run build
+npm run preview
+```
+
+6. Modify `.gitignore`
+
+```
+# comment these out when publishing
+content
+public/assets
+```
+
+7. commit your content to the `publish` branch
+
+```bash
+git checkout -b publish
+git add .
+git commit -m "Publish content"
+git push -u origin publish
+```
+
+### Features checklist
 
 #### Obsidian markdown syntax support
 
@@ -60,15 +84,16 @@ npm run build-notes
 #### UI
 
 - [x] Header Bar
-- [ ] Filesystem Breadcrumbs
+- [x] Filesystem Breadcrumbs
+- [x] Navigating between previous and next notes
 - [ ] Properties View
 - [ ] Table of Contents
 
 #### Code
 
 - [x] Folder Structure
-- [ ] Folder Pages
-- [ ] Tags/Nested Tags
+- [x] Folder Pages
+- [x] Tags/Nested Tags
 - [ ] Note Indexing
 
 ### Planned route structure
@@ -76,24 +101,33 @@ npm run build-notes
 ##### In your vault
 ```
 vault/
+│
 ├─ folder-1/
 │  ├─ file-1.md       <- Nested notes
 │  └─ file-2.md
+│
 ├─ folder-2/
 │  └─ file-3.md
+│
 └─ file-4.md          <- Notes
 ```
-
-##### Becomes these react components
+##### Resulting site map
 ```
-src/notes/
-    ├─ folder-1/
-    │  ├─ index.tsx   <- Folder page, possibly a summary of nested notes
-    │  ├─ file-1.tsx  <- Notes parsed into tsx
-    │  └─ file-2.tsx
-    ├─ folder-2/
-    │  ├─ index.tsx
-    │  └─ file-3.tsx
-    ├─ index.tsx
-    └─ file-4.tsx
+labyrinth/
+│
+├─ notes/
+│  ├─ folder-1/
+│  │  ├─ file-1       <- Nested notes
+│  │  └─ file-2
+│  ├─ folder-2/
+│  │  └─ file-3
+│  └─ file-4  
+│
+└─ tags/  
+   ├─ tag-1/
+   │  ├─ tag-1.1      <- Nested tags
+   │  └─ tag-1.2
+   ├─ tag-2/
+   │  └─ tag-2.1
+   └─ tag-3
 ```
