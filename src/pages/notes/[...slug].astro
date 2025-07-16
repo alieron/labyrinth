@@ -10,9 +10,7 @@ export async function getStaticPaths() {
   const entries = await getCollection("notes");
 
   return entries.map((note) => {
-    const path =
-      trimRelPath(note.filePath) ??
-      note.id;
+    const path = trimRelPath(note.filePath) ?? note.id;
     return {
       params: { slug: toSlug(path) },
       props: { note, path },
@@ -29,7 +27,10 @@ const { note, path } = Astro.props;
 const { Content, remarkPluginFrontmatter } = await render(note);
 ---
 
-<NoteLayout prev={remarkPluginFrontmatter.prev} next={remarkPluginFrontmatter.next}>
+<NoteLayout
+  prev={remarkPluginFrontmatter.prev}
+  next={remarkPluginFrontmatter.next}
+>
   <div class="flex-1 max-w-5xl overflow-y-auto mb-150">
     {/* Title */}
     <div class="px-6 mb-4">

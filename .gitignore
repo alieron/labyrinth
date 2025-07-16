@@ -7,6 +7,7 @@ vault
 
 # Astro
 .astro/
+dist/
 
 # Logs
 logs

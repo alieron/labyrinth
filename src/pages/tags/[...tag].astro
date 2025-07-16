@@ -46,7 +46,7 @@ const nestedTags = new Set<string>();
 for (const note of matchingNotes) {
   for (const noteTag of note.data.tags ?? []) {
     if (noteTag.slice(0, tag.length) === tag) {
-      const parts = noteTag.slice(tag.length).replace(/^\//,'').split("/");
+      const parts = noteTag.slice(tag.length).replace(/^\//, "").split("/");
       if (parts.length > 0 && parts[0] !== "") {
         nestedTags.add(parts[0]);
       }
