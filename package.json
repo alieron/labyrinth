@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "build-notes": "npx tsx scripts/parseVault.ts",
     "copy-notes": "npx tsx scripts/copyNotes.ts",
     "dev": "astro dev",
     "build": "astro build",
