@@ -41,7 +41,8 @@ function walkVault(src: string, base: string) {
 
 function toResolvedLink(filePath: string, alias?: string, heading?: string) {
   const pageName = path.basename(filePath);
-  let href = resolveBase(`/notes/${NOTE_MAP.get(filePath) ?? NOTE_MAP.get(pageName)}`);
+  const endpoint = NOTE_MAP.get(filePath) ?? NOTE_MAP.get(pageName);
+  let href = endpoint ? resolveBase(`/notes/${endpoint}`) : '#'; // Handle absent notes
   let displayText = alias ?? `${pageName}${heading ? ` > ${heading}` : ''}`;
   if (heading) href += `#${toSlug(heading)}`;
   return `[${displayText}](${href})`;
