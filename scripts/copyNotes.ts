@@ -99,7 +99,7 @@ function resolveLinks(content: string): string {
     const assetPath = resolveBase(`/assets/${name}`);
     let dimensionProps = width ? ` width=\"${width}\"` : '';
     dimensionProps += height ? `  height=\"${height}\"` : '';
-    return `<img src="${assetPath}" alt="${name}" class="mx-auto${width ? '' : ' object-none'}" style="${width ? `width:${width}px;` : ''}${height ? `height:${height}px;` : ''}">`
+    return `<img src="${assetPath}" alt="${name}" class="mx-auto object-fill" style="${width ? `width:${width}px;${height ? `aspect-ratio:${width}/${height}` : '' }` : ''}" />`
   });
 
   return content;
