@@ -99,7 +99,7 @@ function resolveLinks(content: string): string {
     const assetPath = resolveBase(`/assets/${name}`);
     let dimensionProps = width ? ` width=\"${width}\"` : '';
     dimensionProps += height ? `  height=\"${height}\"` : '';
-    return `<img src="${assetPath}" alt="${name}" class="mx-auto object-fill" style="${width ? `width:${width}px;${height ? `aspect-ratio:${width}/${height}` : '' }` : ''}" />`
+    return `<img src="${assetPath}" alt="${name}" class="mx-auto object-fill" style="${width ? `width:${width}px;${height ? `aspect-ratio:${width}/${height}` : ''}` : ''}" />`
   });
 
   return content;
@@ -140,7 +140,8 @@ for (const { full, relative, dest } of FILE_LIST) {
     copyAssetIfExists(match[1]);
   }
 
-  const processed = resolveLinks(content);
+  const processed = resolveLinks(content)
+    .replace(/([^\n])\n?(#{1,6}\s)/gm, '$1\n\n$2'); // Ensure that headings are preceded by a newline
   fs.mkdirSync(path.dirname(dest), { recursive: true });
   fs.writeFileSync(dest, processed, 'utf-8');
   console.log(`📄 Processed and copied: ${relative}`);
