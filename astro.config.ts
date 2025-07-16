@@ -15,6 +15,7 @@ import { remarkSplitParagraphs, rehypeTypography, rehypeCheckboxes } from './src
 import { rehypeMdTable } from './src/plugins/table';
 import { rehypeStaticMath } from './src/plugins/math';
 import { rehypeTikzDiag } from './src/plugins/tikz';
+import { rehypeLinks } from './src/plugins/links';
 
 // https://astro.build/config
 export default defineConfig({
@@ -35,6 +36,7 @@ export default defineConfig({
     ],
     rehypePlugins: [
       rehypeTypography,
+      rehypeLinks,
       rehypeMdTable,
       rehypeStaticMath,
       rehypeTikzDiag,
