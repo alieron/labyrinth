@@ -17,6 +17,9 @@ export function rehypeLinks() {
         return;
       }
 
+      // base link style
+      node.properties.className = 'text-primary underline hover:text-primary-80';
+
       const isExternal = /^https?:\/\//.test(href);
 
       // external links 
