@@ -21,6 +21,9 @@ import { rehypeLinks } from './src/plugins/links';
 export default defineConfig({
   site: 'https://alieron.github.io',
   base: BASE,
+  build: {
+    format: 'preserve',
+  },
   integrations: [react()],
   markdown: {
     syntaxHighlight: false,
