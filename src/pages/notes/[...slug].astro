@@ -28,6 +28,7 @@ const { Content, remarkPluginFrontmatter } = await render(note);
 ---
 
 <NoteLayout
+  title={remarkPluginFrontmatter.title}
   prev={remarkPluginFrontmatter.prev}
   next={remarkPluginFrontmatter.next}
 >
