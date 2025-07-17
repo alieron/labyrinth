@@ -29,15 +29,16 @@ export function rehypeStaticMath() {
         hasMath = true;
 
         const latexHast = renderer.renderTexToHast(latexText, true);
-        classnames(latexHast, 'text-[140%] my-2 w-fit');
+        classnames(latexHast, 'text-[140%] my-0! p-4 overflow-x-auto');
 
         const wrapper = h('div', {
-          class: 'group relative my-2 rounded-md overflow-hidden bg-muted text-sm font-mono',
+          class: 'group relative rounded-md overflow-hidden bg-muted text-sm font-mono',
         }, [
           createCopyButton(latexText),
           h('div', {
-            class: 'overflow-x-auto p-4',
-          }, latexHast),
+            class: 'overflow-hidden',
+          },
+            latexHast),
         ]);
 
         parent!.children.splice(index!, 1, wrapper);
