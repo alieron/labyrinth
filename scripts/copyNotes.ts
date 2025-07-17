@@ -41,7 +41,8 @@ function walkVault(src: string, base: string) {
 
 function toResolvedLink(filePath: string, alias?: string, heading?: string) {
   const pageName = path.basename(filePath);
-  let href = resolveBase(`/notes/${NOTE_MAP.get(filePath) ?? NOTE_MAP.get(pageName)}`);
+  const endpoint = NOTE_MAP.get(filePath) ?? NOTE_MAP.get(pageName);
+  let href = endpoint ? resolveBase(`/notes/${endpoint}`) : '#'; // Handle absent notes
   let displayText = alias ?? `${pageName}${heading ? ` > ${heading}` : ''}`;
   if (heading) href += `#${toSlug(heading)}`;
   return `[${displayText}](${href})`;
@@ -84,10 +85,10 @@ function resolveLinks(content: string): string {
 
   // Convert standard markdown links
   content = content.replace(standardLinkRegex, (match, alias, filePath, heading) => {
-    if (!filePath.includes('http')) {
-      return toResolvedLink(filePath, alias, heading);
-    } else {
+    if (/^https?:\/\//.test(filePath)) {
       return match;
+    } else {
+      return toResolvedLink(filePath, alias, heading);
     }
   });
 
@@ -99,7 +100,7 @@ function resolveLinks(content: string): string {
     const assetPath = resolveBase(`/assets/${name}`);
     let dimensionProps = width ? ` width=\"${width}\"` : '';
     dimensionProps += height ? `  height=\"${height}\"` : '';
-    return `<img src="${assetPath}" alt="${name}" class="mx-auto${width ? '' : ' object-none'}" style="${width ? `width:${width}px;` : ''}${height ? `height:${height}px;` : ''}">`
+    return `<img src="${assetPath}" alt="${name}" class="mx-auto object-fill" style="${width ? `width:${width}px;${height ? `aspect-ratio:${width}/${height}` : ''}` : ''}" />`
   });
 
   return content;
@@ -140,7 +141,8 @@ for (const { full, relative, dest } of FILE_LIST) {
     copyAssetIfExists(match[1]);
   }
 
-  const processed = resolveLinks(content);
+  const processed = resolveLinks(content)
+    .replace(/([^\n])\n?(#{1,6}\s)/gm, '$1\n\n$2'); // Ensure that headings are preceded by a newline
   fs.mkdirSync(path.dirname(dest), { recursive: true });
   fs.writeFileSync(dest, processed, 'utf-8');
   console.log(`📄 Processed and copied: ${relative}`);

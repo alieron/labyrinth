@@ -42,8 +42,6 @@ const classNameMap = {
   em: 'italic',
   del: '',
   mark: 'bg-yellow-300/30 px-1 text-foreground rounded-xs',
-  // Links
-  a: 'text-primary underline hover:text-primary/80',
   // Lists
   ol: 'list-decimal pl-8 text-foreground marker:text-muted-foreground',
   ul: 'list-disc pl-8 text-foreground marker:text-muted-foreground',

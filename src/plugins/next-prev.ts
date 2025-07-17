@@ -9,12 +9,12 @@ export function remarkNextPrev() {
       if (!parent) return;
 
       if (toString(node) === 'Previous') {
-        file.data.astro.frontmatter.prev = node.url;
+        if (!node.url || node.url !== '#') file.data.astro.frontmatter.prev = node.url;
         parent.children.splice(index!, 1);
       }
 
       if (toString(node) === 'Next') {
-        file.data.astro.frontmatter.next = node.url;
+        if (!node.url || node.url !== '#') file.data.astro.frontmatter.next = node.url;
         parent.children.splice(index!, 1);
       }
     });
