@@ -85,10 +85,10 @@ function resolveLinks(content: string): string {
 
   // Convert standard markdown links
   content = content.replace(standardLinkRegex, (match, alias, filePath, heading) => {
-    if (!filePath.includes('http')) {
-      return toResolvedLink(filePath, alias, heading);
-    } else {
+    if (/^https?:\/\//.test(filePath)) {
       return match;
+    } else {
+      return toResolvedLink(filePath, alias, heading);
     }
   });
 
