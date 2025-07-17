@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1522/QR_factorization)   [Next](/labyrinth/notes/math/ma1522/eigenvectors)
+
 ### Summary
 Least square solution
 $$
@@ -45,6 +46,7 @@ $$
 & = {\color{orange} \mathbf{A}(\mathbf{A}^T\mathbf{A})^{-1}\mathbf{A}^T\mathbf{b} } \\
 \end{align*}
 $$
+
 ### Concept
 Least square solution
 - solution that is closer than every other vector
@@ -93,6 +95,7 @@ $$
 \mathbf{Ru}& =\mathbf{Q}^T\mathbf{b} && \text{(}\mathbf{R}\text{ is invertible)}
 \end{align*}
 $$
+
 ### Application
 Linear regression
 $$

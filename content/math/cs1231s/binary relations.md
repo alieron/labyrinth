@@ -6,6 +6,7 @@ complete: false
 index:
 ---
 [Previous](/labyrinth/notes/math/cs1231s/n-ary_relations)   [Next](/labyrinth/notes/math/cs1231s/equivalence_relations)
+
 ### Summary
 Relations as both a set of tuples and an operator
 $$
@@ -44,6 +45,7 @@ $$
 \end{align*}
 $$
 > note the number of variables needed(for proving/disproving)
+
 ### Concept
 Binary relation and its inverse ^713f40
 - same predicate, flipped tuple
@@ -147,6 +149,7 @@ $$
 $$
 
 A relation on a set can be represented by a undirected/directed [graph](/labyrinth/notes/math/cs1231s/graphs_of_relations)
+
 ### Application
 Directed graph for [subsets](/labyrinth/notes/math/cs1231s/sets#^ca7c0d)
 - binary operators can be binary relations
@@ -203,6 +206,7 @@ R_{even}=\{\begin{array}{c|c} (m,n)\in(Z^+)^2 & mn \ is \ even \end{array}\} & {
 \end{array}
 $$
 > the key lies in the predicate
+
 ###### Extra
 Tikz template for arrow diagram between sets
 ```latex

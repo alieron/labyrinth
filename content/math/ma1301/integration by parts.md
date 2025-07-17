@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1301/integration)   [Next](/labyrinth/notes/math/ma1301/definite_integrals)
+
 ### Summary
 Integration by substitution, involes [differentiation](/labyrinth/notes/math/ma1301/differentiation)
 $$
@@ -26,6 +27,7 @@ $$
 \text{choose } u, \ dv\text{ such }& \text{that }du, \ v\text{ are easily found}
 \end{align*}
 $$
+
 ### Concept
 Formula for integration by parts, derived from the product rule
 $$
@@ -47,6 +49,7 @@ Choose $u$ preferably in order of:
 - Algebraic functions (A), eg $x²$.
 - Trigonometric functions (T), eg $sin(x)$.
 - Exponential functions (E), eg $e^x$.
+
 ### Application
 Integration by substitution
 $$

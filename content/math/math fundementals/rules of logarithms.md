@@ -5,6 +5,7 @@ tags:
 complete: true
 index: null
 ---
+
 ### Summary
 Basic Rules
 $$
@@ -40,6 +41,7 @@ $$
 \ln e & = 1
 \end{align*}
 $$
+
 ### Concept
 Related to [rules of indices](/labyrinth/notes/math/math_fundementals/rules_of_indices)
 $$

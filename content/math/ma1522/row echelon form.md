@@ -5,6 +5,7 @@ tags:
 complete: true
 index: null
 ---
+
 ### Summary
 REF(row echelon form) ^17a789
 - nonzero rows are above any all-zero rows

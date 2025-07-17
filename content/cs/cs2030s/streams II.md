@@ -9,6 +9,7 @@ index: null
 [Previous](/labyrinth/notes/cs/cs2030s/monads_and_functors)   [Next](/labyrinth/notes/cs/cs2030s/parallelism)
 
 Succeeds: [streams](/labyrinth/notes/cs/cs1101s/streams)
+
 ### Summary
 Terminal -> triggers the evaluation
 Intermediate -> returns another `Stream`
@@ -38,6 +39,7 @@ Filter
 Map/flatMap
 - lazily applies a function to all entries
 - for flatMap the resulting stream is flattened into the current stream
+
 ### Concept
 Factory methods
 ```java
@@ -80,6 +82,7 @@ Stream::skip
 Stream::sorted 
 Stream::distinct
 ```
+
 ### Application
 isPrime
 ```java

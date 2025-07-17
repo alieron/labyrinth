@@ -8,6 +8,7 @@ complete: true
 index:
 ---
 [Previous](/labyrinth/notes/cs/cs1101s/higher_order_functions)   [Next](/labyrinth/notes/cs/cs1101s/searching)
+
 ### Summary
 Pairs
 ```js
@@ -43,6 +44,7 @@ Box and pointer diagrams
 \end{tikzpicture}
 \end{document}
 ```
+
 ### Concept
 Primitive form of data abstraction using pairs to store 2 values
 Second value can be used to store another pair, into a chain of pairs
@@ -103,6 +105,7 @@ equal(a, c); // -> true
 \end{tikzpicture}
 \end{document}
 ```
+
 ###### Extra
 Tikz template for box and pointer diagrams
 ```latex

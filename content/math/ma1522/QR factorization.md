@@ -7,6 +7,7 @@ complete: false
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1522/orthogonal_projection)   [Next](/labyrinth/notes/math/ma1522/least_square_approximation)
+
 ### Summary
 QR factorization
 $$
@@ -21,6 +22,7 @@ $$
 \end{align*}
 $$
 > $\mathbf{R}$ is an invertible upper triangular matrix with positive diagonal entries, due to Gram-Schmidt
+
 ### Concept
 QR factorization
 $$
@@ -88,11 +90,15 @@ $$
 $$
 > [pre-multiplication with transpose](/labyrinth/notes/math/ma1522/matrix_transpose#^9318d6) is symmetric
 
-###### Octave
+#
+
+##### Octave
 ```octave
+
 # QR factorization of A
 [Q, R] = qr(A)
 ```
+
 ### Application
 $$
 

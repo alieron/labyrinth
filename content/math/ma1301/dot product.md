@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1301/unit_vectors)   [Next](/labyrinth/notes/math/ma1301/cross_product)
+
 ### Summary
 Scalar/dot product, sum of the product of each component
 $$
@@ -43,6 +44,7 @@ $$
 & = \sqrt{ \mathbf{a}\cdot \mathbf{a} + 2(\mathbf{a}\cdot \mathbf{b}) + \mathbf{b}\cdot \mathbf{b} } \qquad \text{(Quadratic Expansion)}
 \end{align*}
 $$
+
 ### Concept
 Expanding the scalar product
 $$
@@ -50,6 +52,7 @@ $$
 \cos \theta & = \frac{\mathbf{a}\cdot \mathbf{b}}{|\mathbf{a}||\mathbf{b}|} = \frac{x_{a}x_{b}+y_{a}y_{b}+z_{a}z_{b}}{\sqrt{{x_{a}}^2+{y_{a}}^2+{z_{a}}^2}\cdot\sqrt{{x_{b}}^2+{y_{b}}^2+{z_{b}}^2}}
 \end{align*}
 $$
+
 ### Application
 Angle between 2 vectors, might involve [special angles](/labyrinth/notes/math/math_fundementals/special_angles)
 $$
@@ -67,7 +70,7 @@ b & = 6\mathbf{i}+3\mathbf{j}+6\mathbf{k} \\
 $$
 
 Deriving the [cosine rule](/labyrinth/notes/math/math_fundementals/triangle_geometry)
-<img src="/labyrinth/assets/deriving_cos_rule.png" alt="deriving_cos_rule.png" class="mx-auto object-none" style="">
+<img src="/labyrinth/assets/deriving_cos_rule.png" alt="deriving_cos_rule.png" class="mx-auto object-fill" style="" />
 $$
 \begin{align*}
 |a-b|^2 & = (a-b)\cdot(a-b)\\

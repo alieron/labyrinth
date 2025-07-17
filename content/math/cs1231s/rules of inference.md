@@ -5,6 +5,7 @@ tags:
 complete: true
 index: null
 ---
+
 ### Summary
 Modus ponens ^c19fcd
 $$

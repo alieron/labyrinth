@@ -6,6 +6,7 @@ complete: false
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1521/series)   [Next](/labyrinth/notes/math/ma1521/geometry_in_R³)
+
 ### Summary
 Power series at a
 $$
@@ -31,7 +32,7 @@ L = 0 \implies R = \infty \land L = \infty \implies R = 0\\
 (a −R, a + R), [a −R, a + R), (a −R, a + R], [a −R, a + R]
 \end{gather*}
 $$
-<img src="/labyrinth/assets/interval_of_convergence.png" alt="interval_of_convergence.png" class="mx-auto" style="width:500px;">
+<img src="/labyrinth/assets/interval_of_convergence.png" alt="interval_of_convergence.png" class="mx-auto object-fill" style="width:500px;" />
 
 Derivative and integral of power series
 $$
@@ -46,6 +47,7 @@ R>0 \implies f(x)\text{ is differentiable on the interval }|x-a| < R \\
 \end{split}\right.\quad, \ |x-a| <R
 \end{gather*}
 $$
+
 ### Concept
 Power series
 - resembles [polynomials](/labyrinth/notes/math/ma1521/polynomials)
@@ -77,6 +79,7 @@ f(x) & = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n && \text{(Taylor Serie
 & = f(0) + \frac{df}{dx}(0)x + \frac{d^2f}{dx^2}(0)\frac{x^{2}}{2!}+\frac{d^{3}f}{dx^{3}}(0)\frac{x^{3}}{3!}+\dots
 \end{align*}
 $$
+
 ### Application
 Convergence of power series
 $$
@@ -162,7 +165,7 @@ $$
 $$
 
 Maclaurin series of cosine
-<img src="/labyrinth/assets/maclaurin_cosine.png" alt="maclaurin_cosine.png" class="mx-auto" style="width:600px;">
+<img src="/labyrinth/assets/maclaurin_cosine.png" alt="maclaurin_cosine.png" class="mx-auto object-fill" style="width:600px;" />
 $$
 \begin{align*}
 & f(x)= \cos x && P(x)=c_{0}+c_{1}x+c_{2}x^2+ c_{3}x^{3} +c_{4}x^4 +\dots &&P\text{ approximates }f\text{ at }0\\

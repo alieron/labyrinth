@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1521/limits_&_continuity)   [Next](/labyrinth/notes/math/ma1521/differentiation_II)
+
 ### Summary
 Shortcut for limits of [rational functions](/labyrinth/notes/math/ma1521/polynomials#^e957d2), at infinity
 $$
@@ -30,11 +31,13 @@ $$
 &\lim_{ x \to \infty } e^{-x}=0
 \end{align*}
 $$
+
 ### Concept
 Horizontal aymptote
 $$
 \lim_{ x \to \infty } f(x)=c\in \mathbb{R} \to y=c\text{ is a horizontal asymptote}
 $$
+
 ### Application
 Solving limits of rational functions
 - divide by highest power

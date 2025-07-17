@@ -8,6 +8,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/cs/cs1101s/substitution_model)   [Next](/labyrinth/notes/cs/cs1101s/orders_of_growth)
+
 ### Summary
 Recursive
 ```js
@@ -60,12 +61,14 @@ iter(24, 5, 4)
 ```
 $O(n)$ time but $O(1)$/constant space,
 since there are no/constant(ie. happen every recurrence) deferred operations
+
 ### Concept
 Functions that calls itself
 - Base case
 - Wish
 - Bridge
 Gives rise to iterative and recursive processes
+
 ### Application
 Fibonacci series(iterative > recursive solution) ^ede420
 1. Recursive solution
@@ -85,7 +88,7 @@ F(n) = \lfloor\frac{\phi^n}{\sqrt{5}}+\frac{1}{2}\rfloor \ , \quad \phi = \frac{
 \end{align}
 $$
 
-<img src="/labyrinth/assets/fib.png" alt="fib.png" class="mx-auto object-none" style="">
+<img src="/labyrinth/assets/fib.png" alt="fib.png" class="mx-auto object-fill" style="" />
 
 2. Iterative solution
 ```js

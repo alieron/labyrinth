@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1301/integration_by_parts)   [Next](/labyrinth/notes/math/ma1301/area_under_curve)
+
 ### Summary
 Basic rules
 $$
@@ -24,6 +25,7 @@ Definite integral of $f(x)$ from $a$ to $b$ ^24e447
 $$
 \int_{a}^b f(x)\ dx = [F(x)]_{a}^b=F(b)-F(a)
 $$
+
 ### Concept
 Integral from first principles, sum of infinite slices of $f(x)\ dx$
 $$

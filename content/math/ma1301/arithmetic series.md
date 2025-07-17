@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Next](/labyrinth/notes/math/ma1301/geometric_series)
+
 ### Summary
 Basic formulae
 $$
@@ -35,6 +36,7 @@ $$
 No. \ of \ terms & = n-m+1
 \end{align*}
 $$
+
 ### Concept
 Arithmetic sequence
 $$

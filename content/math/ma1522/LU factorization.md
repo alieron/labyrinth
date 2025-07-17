@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1522/elementary_matrices)   [Next](/labyrinth/notes/math/ma1522/determinants)
+
 ### Summary
 LU factorizable
 - $\mathbf{L}$ is a unit lower triangular matrix
@@ -32,6 +33,7 @@ $$
 
 No LU factorization
 - if any of its [leading principal minors](/labyrinth/notes/math/ma1522/matrix_minor) are 0 
+
 ### Concept
 Rationale for LU factorization
 $$
@@ -51,6 +53,7 @@ Product of 2 unit lower triangular matrix ^919bbb
 $$
 \mathbf{L}_{1}\mathbf{L}_{2}\text{ is also a unit lower triangular matrix}
 $$
+
 ### Application
 General solution by LU factorization
 $$

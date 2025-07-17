@@ -6,6 +6,7 @@ complete: false
 index: null
 ---
 \[\[special sets|Previous]]   \[\[logical operators|Next]]
+
 ### Summary
 Basic properties
 $$
@@ -23,6 +24,7 @@ $$
 \text{Trichotomy :} &\qquad x=y, \ or \ x<y, \ or \ x>y \qquad \text{(Exactly one is true)}  \\
 \end{align*}
 $$
+
 ### Concept
 Basic Properties
 - Closure -> Product and sum are integers
@@ -32,6 +34,7 @@ Basic Properties
 - Trichotomy -> Two integers are exclusively either equal to, less than or more than each other
 
 > The $\mathbb{Z}$ comes from the German word for numbers "zahlen"
+
 ### Application
 Definition of odd and even integers ^ec72bc
 $$

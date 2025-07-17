@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1522/LU_factorization)   [Next](/labyrinth/notes/math/ma1522/vectors_in_Rⁿ)
+
 ### Summary
 Determinant of 1x1 matrices
 $$
@@ -23,7 +24,7 @@ $$
 $$
 
 Rule of Sarrus for 3x3 matrices
-<img src="/labyrinth/assets/rule_of_sarrus.png" alt="rule_of_sarrus.png" class="mx-auto" style="width:400px;">
+<img src="/labyrinth/assets/rule_of_sarrus.png" alt="rule_of_sarrus.png" class="mx-auto object-fill" style="width:400px;" />
 
 Rules
 $$
@@ -55,6 +56,7 @@ $$
 \end{align*}
 $$
 > if the determinant is 0, the matrix transforms(squishes) space into a lower dimension -> the inverse would not have a unique solution
+
 ### Concept
 Determinant
 - visualise it as the degree to which a unit of space is scaled when undergoing a matrix transformation
@@ -92,6 +94,7 @@ $$
 $$
 
 [Cramer's rule](/labyrinth/notes/math/ma1522/cramer's_rule) to solve linear systems
+
 ### Application
 Determinant of triangular matrices, product of the diagonal entries ^2adce5
 $$

@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1522/singular_value_decomposition)   [Next](/labyrinth/notes/math/ma1522/range_&_kernel)
+
 ### Summary
 Properties of linear transformations
 $$
@@ -25,6 +26,7 @@ Transformation with respect to basis
 $$
 \left(\begin{array}{c|c} S & \mathbf{A} \end{array}\right)\xrightarrow{RREF}\left(\begin{array}{c|c} \mathbf{I} & [T]_{s} \end{array}\right)\\
 $$
+
 ### Concept
 Linear transformations
 - [function relations](/labyrinth/notes/math/cs1231s/function_relations) over multi-dimensional space
@@ -70,6 +72,7 @@ T(\mathbf{v})& = [T]_{S}[\mathbf{v}]_{S} \\
 \end{align*}
 $$
 > follow the order, premultiplication
+
 ### Application
 Identifying the standard matrix
 $$

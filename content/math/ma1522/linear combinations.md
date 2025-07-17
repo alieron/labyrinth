@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1522/vectors_in_Rⁿ)   [Next](/labyrinth/notes/math/ma1522/subspaces)
+
 ### Summary
 Properties of linear span
 $$
@@ -41,6 +42,7 @@ S = \{ \mathbf{u}_{1},\mathbf{u}_{2},\dots,\mathbf{u}_{k} \} \quad T = \{ \mathb
 \end{gather*}
 $$
 > to prove euality, [prove subset in both ways](/labyrinth/notes/math/cs1231s/sets#^ca7c0d)
+
 ### Concept
 Linear combinations are vector equations/linear systems
 $$
@@ -98,6 +100,7 @@ $$
 $$
 > represents the point of higher dimensional space as the number of non-parallel vectors are included
 > dimension is equal to the number of linearly independent vectors in the span
+
 ### Application
 Solving a linear combination
 $$

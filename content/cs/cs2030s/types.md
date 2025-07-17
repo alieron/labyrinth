@@ -7,6 +7,7 @@ complete: true
 index: null
 ---
 [Next](/labyrinth/notes/cs/cs2030s/classes)
+
 ### Summary
 Subtype ^078dcb
 $$
@@ -44,6 +45,7 @@ Object i = new Object();
 Object j = i;
 // both i and j store the same pointer to the intance of object in memory
 ```
+
 ### Concept
 Dynamically typed languages
 - Same variable can hold data of any data type
@@ -68,6 +70,7 @@ $$
 
 Widening and narrowing
 - Java allows for a variable of type T to hold a value fron type S, if S<:T
+
 ### Application
 Java primitive type hierachy
 $$

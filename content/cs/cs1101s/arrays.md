@@ -7,6 +7,7 @@ tags:
 complete: true
 index:
 ---
+
 ### Summary
 Concept of a buffer
 ```js
@@ -58,6 +59,7 @@ array_length(x); // 5
 \end{tikzpicture}
 \end{document}
 ```
+
 ### Concept
 An array is a sequence of elements
 Elements in the array can be initialised, [assigned](/labyrinth/notes/cs/cs1101s/mutable_data) or indexed
@@ -66,6 +68,7 @@ Random access -> constant time read and write, except if writing to an index lar
 $$
 i\geq \text{array\_length(A)}, \ \Theta(i-\text{array\_length(A)})
 $$
+
 ### Application
 Array processing functions
 Main idea:
@@ -112,6 +115,7 @@ const matrix = [[1,  2,  3,  4],
 				[5,  6,  7,  8],
 				[9, 10, 11, 12]]
 ```
+
 ###### Note
 Some programming languages, ie. Python, do not allow assignment to indexes out of the range of the array
 In Source/JS, the value is assigned regardless if the index is already initialised, any in-between indices are left as undefined

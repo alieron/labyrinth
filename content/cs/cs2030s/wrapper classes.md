@@ -7,6 +7,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/cs/cs2030s/class_abstraction)   [Next](/labyrinth/notes/cs/cs2030s/exceptions)
+
 ### Summary
 Reference types for primitives
 - using primitive types as reference types
@@ -22,6 +23,7 @@ Auto-boxing/unboxing
 Integer i = 4; // boxed into -> Integer.valueOf(4)
 int j = i;     // unboxed from -> i.intValue()
 ```
+
 ### Concept
 A [reference type](/labyrinth/notes/cs/cs2030s/types#^e9a435) equivalent of the java primitive types
 - primitive wrapper classes are final
@@ -53,6 +55,7 @@ Dangers of covariance of arrays
 Object[] objs = new Integer[] { 1, 2 }; // CTT(objs) -> Object[], RTT(objs) -> Integer[]
 objs[0] = "String"; // compiler allows String to be added to Object[], type mismatch occurs in runtime
 ```
+
 ### Application
 Iterating with wrapper classes
 ```java

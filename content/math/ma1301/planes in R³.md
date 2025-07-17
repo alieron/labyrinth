@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1301/lines_in_R³)
+
 ### Summary
 Vector equation of a plane
 - $\mathbf{r}$ represents any point on the plane
@@ -34,6 +35,7 @@ ax+by&+cz=d \\
 \mathbf{n} = a\mathbf{i}+b\mathbf{j}+c\mathbf{k} \ &, \ \mathbf{r} = x\mathbf{i}+y\mathbf{j}+z\mathbf{k}
 \end{align*}
 $$
+
 ### Concept
 Normal is perpendicular to the plane, [perpendicular rule of dot product](/labyrinth/notes/math/ma1301/dot_product)
 $$
@@ -62,12 +64,13 @@ $$
 $$
 
 Line of intersection of 2 planes
-<img src="/labyrinth/assets/intersection_of_planes.png" alt="intersection_of_planes.png" class="mx-auto object-none" style="">
+<img src="/labyrinth/assets/intersection_of_planes.png" alt="intersection_of_planes.png" class="mx-auto object-fill" style="" />
 
 Direction vector is perpendicular to both normals
 $$
 \mathbf{r} = \mathbf{a} + t(\mathbf{n_{1}}\times \mathbf{n_{2}})
 $$
+
 ### Application
 Equation of plane from 2 parallel vectors and a point
 $$
@@ -139,6 +142,7 @@ set \ one \ & variable \ to \ 0: \\
 line \ of \ intersection: \quad & \ r = (3\mathbf{i}+\mathbf{k}) + t(-\mathbf{i}-\mathbf{j}+\mathbf{k})
 \end{align*} 
 $$
+
 ###### Extra
 $$
 \begin{align*}

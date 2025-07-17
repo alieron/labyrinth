@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1301/tangent_and_normal)   [Next](/labyrinth/notes/math/ma1301/integration)
+
 ### Summary
 Minimise/maximise one variable wrt to another, applying [first derivative test](/labyrinth/notes/math/ma1301/derivative_tests)
 $$
@@ -13,6 +14,7 @@ $$
 find \ \frac{dy}{dx}=0
 \end{align*}
 $$
+
 ### Application
 Commonly involves [quadratic equations](/labyrinth/notes/math/math_fundementals/quadratic_equations)
 
@@ -28,7 +30,7 @@ For \ a \ sphere: \quad & V=\frac{4}{3}\pi r^3, \ S=4\pi r^2 \\
 $$
 
 Maximum area of a rectangle enclosed by the unit circle
-<img src="/labyrinth/assets/unit_cirlce_rect.png" alt="unit_cirlce_rect.png" class="mx-auto object-none" style="">
+<img src="/labyrinth/assets/unit_cirlce_rect.png" alt="unit_cirlce_rect.png" class="mx-auto object-fill" style="" />
 $$
 \begin{align*}
 Eqn \ of \ Circle: \quad & x^2  +y^2=r^2, \quad r \ is \ constant \\

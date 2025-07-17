@@ -7,6 +7,7 @@ complete: false
 index: null
 ---
 [Previous](/labyrinth/notes/cs/cs2030s/async)
+
 ### Summary
 RecursiveTask
 - [fibonacci](/labyrinth/notes/cs/cs1101s/recursion#^ede420) sequence
@@ -102,6 +103,7 @@ return left.join()   // <---|--+
 return left.compute()   // not even concurrent
 	 + right.compute();
 ```
+
 ### Concept
 Thread pool
 - collection of threads and collection(deque) of tasks
@@ -117,6 +119,7 @@ r.join() // wait for the subtask to complete, invokes r.compute()
 
 abstract T compute() { ... // the method that defines 
 ```
+
 ### Application
 ```java
 class Task extends RecursiveTask<Integer> {

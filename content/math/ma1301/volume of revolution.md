@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1301/area_under_curve)   [Next](/labyrinth/notes/math/ma1301/1st_order_ODE)
+
 ### Summary
 Revolution about the $x$-axis
 $$
@@ -19,6 +20,7 @@ Line: \quad &y = a \\
 	V = \int_{a}^b\pi(y-a)^2 \ dx &= \int_{a}^b\pi(f(x)-a)^2 \ dx
 \end{align*}
 $$
+
 ### Concept
 Deriving the formula using the volume of a [cylinder](/labyrinth/notes/math/math_fundementals/3d_shapes)
 $$
@@ -39,7 +41,9 @@ V & = \int_{a}^b\pi([f(x)]^2 - [g(x)]^2) \ dx \\
 \end{align*}
 $$
 
-### Application
+#
+
+## Application
 Volume of a sphere
 $$
 \begin{align*}
@@ -89,4 +93,4 @@ V = & \int_{-2}^2 \pi((9-x^2)^2-(x^2+1)^2) \ dx \\
 = & 2\pi\left(\frac{320}{3}\right) = \frac{640\pi}{3}
 \end{align*}
 $$
-<img src="/labyrinth/assets/vol_of_revolution_disk.png" alt="vol_of_revolution_disk.png" class="mx-auto" style="width:500px;">
+<img src="/labyrinth/assets/vol_of_revolution_disk.png" alt="vol_of_revolution_disk.png" class="mx-auto object-fill" style="width:500px;" />

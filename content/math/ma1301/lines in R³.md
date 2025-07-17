@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1301/cross_product)   [Next](/labyrinth/notes/math/ma1301/planes_in_R³)
+
 ### Summary
 Vector equation of a line
 - $r$ represents any point on the line
@@ -14,6 +15,7 @@ $$
 \mathbf{r} = \mathbf{a} + t\mathbf{v}, \quad where \ \mathbf{a} \ is \ a \ known \ point \ on \ the \ line \ and \ \mathbf{v} \ is \ the \ direction\ vector
 \end{align*}
 $$
+
 ### Concept
 Parametric equations
 $$
@@ -27,6 +29,7 @@ z=a_{3}+tv_{3}
 \end{cases*}
 \end{align*}
 $$
+
 ### Application
 If point lies on line
 $$
@@ -78,7 +81,7 @@ l_{2}: \quad & \ r = 4\mathbf{i}+\mathbf{j}+10\mathbf{k} + u(\mathbf{i}+3\mathbf
 $$
 
 Foot of a perpendicular from a point to a line/projection of a point on the line
-<img src="/labyrinth/assets/perpendicular_foot.png" alt="perpendicular_foot.png" class="mx-auto object-none" style="">
+<img src="/labyrinth/assets/perpendicular_foot.png" alt="perpendicular_foot.png" class="mx-auto object-fill" style="" />
 $$
 \begin{align*}
 l: \quad & \ r = \mathbf{i}-3\mathbf{j}+2\mathbf{k} + t(-\mathbf{i}-\mathbf{j}+3\mathbf{k})\\

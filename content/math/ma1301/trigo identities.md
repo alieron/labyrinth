@@ -5,6 +5,7 @@ tags:
 complete: true
 index: null
 ---
+
 ### Summary
 $$
 \begin{align*}
@@ -48,6 +49,7 @@ $$
 \sin A\sin B & = \frac{1}{2}[\cos(A-B)-\cos(A+B)] \\
 \end{align*}
 $$
+
 ### Concept
 Relates to [special angles](/labyrinth/notes/math/math_fundementals/special_angles)
-<img src="/labyrinth/assets/trigo_diagram.png" alt="trigo_diagram.png" class="mx-auto" style="width:500px;">
+<img src="/labyrinth/assets/trigo_diagram.png" alt="trigo_diagram.png" class="mx-auto object-fill" style="width:500px;" />

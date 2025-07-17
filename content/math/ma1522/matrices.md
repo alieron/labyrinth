@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1522/gaussian_elimination)   [Next](/labyrinth/notes/math/ma1522/matrix_multiplication)
+
 ### Summary
 $m$ by $n$ matrix, $m$ rows and $n$ columns
 $$
@@ -29,6 +30,7 @@ a(\mathbf{A}+\mathbf{B})=a\mathbf{A}+a\mathbf{B} \\
 (ab)\mathbf{A}=a(b\mathbf{A})
 \end{gather*}
 $$
+
 ### Concept
 Zero matrix -> all entries are 0
 Square matrix -> no. of rows = no. of cols
@@ -44,10 +46,13 @@ $$
 \mathbf{A}\pm \mathbf{B}=\begin{pmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\a_{21}&a_{22}&\cdots&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}&a_{m2}&\cdots&a_{mn}\end{pmatrix}\pm \begin{pmatrix}b_{11}&b_{12}&\cdots&b_{1n}\\b_{21}&b_{22}&\cdots&b_{2n}\\\vdots&\vdots&\ddots&\vdots\\b_{m1}&b_{m2}&\cdots&b_{mn}\end{pmatrix}=\begin{pmatrix}a_{11}\pm b_{11}&a_{12}\pm b_{12}&\cdots&a_{1n}\pm b_{1n}\\a_{21}\pm b_{21}&a_{22}\pm b_{22}&\cdots&a_{2n}\pm b_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}\pm b_{m1}&a_{m2}\pm b_{m2}&\cdots&a_{mn}\pm b_{mn}\end{pmatrix}
 $$
 
-###### Octave
+#
+
+##### Octave
 ```octave
 
 ```
+
 ### Application
 3 by 4 zero matrix, 3 rows and 4 cols
 $$

@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1521/improper_integrals)   [Next](/labyrinth/notes/math/ma1521/sequences)
+
 ### Summary
 [Volume of revolution](/labyrinth/notes/math/ma1301/volume_of_revolution) by disk method
 $$
@@ -18,7 +19,7 @@ Volume of revolution by cylindrical shell
 $$
 V = 2\pi \int_{a}^{b} x|f(x)| \ dx \qquad \text{(About the y-axis)}
 $$
-<img src="/labyrinth/assets/vol_of_revolution_cylindrical_shell.png" alt="vol_of_revolution_cylindrical_shell.png" class="mx-auto" style="width:500px;">
+<img src="/labyrinth/assets/vol_of_revolution_cylindrical_shell.png" alt="vol_of_revolution_cylindrical_shell.png" class="mx-auto object-fill" style="width:500px;" />
 
 Arc length of a curve
 $$
@@ -28,6 +29,7 @@ L & = \int_{a}^b\sqrt{ 1+ \left( \frac{dy}{dx} \right)^2} \ dx, \quad a\leq x\le
 & =\int_{c}^d\sqrt{ 1+ \left( \frac{dx}{dy} \right)^2} \ dy, \quad c\leq y\leq d
 \end{align*}
 $$
+
 ### Concept
 Area bounded by curve
 - and x-axis
@@ -41,6 +43,7 @@ $$
 A = \int_{a}^{b} |f(x)-g(x)| \ dx 
 $$
 > area is +ve
+
 ### Application
 Volume by cylindrical shell
 $$

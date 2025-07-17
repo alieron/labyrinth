@@ -5,6 +5,7 @@ tags:
 complete: true
 index: null
 ---
+
 ### Summary
 $$
 \begin{align*}
@@ -17,6 +18,7 @@ f(x) & = ax^2 + bx + c &&\text{(Normal form)}\\
 \text{Line of symmetry :} \qquad x & = \frac{-b}{2a}
 \end{align*}
 $$
+
 ### Concept
 Completing the square ^c3dbf2
 $$

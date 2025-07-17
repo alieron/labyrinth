@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1521/partial_derivatives)   [Next](/labyrinth/notes/math/ma1521/double_integrals)
+
 ### Summary
 Directional derivative and gradient vector
 $$
@@ -48,6 +49,7 @@ $$
 &(d) && D=0 \text{ inconclusive}\\
 \end{align*}
 $$
+
 ### Concept
 Directional derivative
 - vectorization of [increments](/labyrinth/notes/math/ma1521/partial_derivatives#^9b8f6d)
@@ -117,6 +119,7 @@ $$
 Saddle point
 - is a critical point
 - increases in one direction and decreases in another
+
 ### Application
 Directional derivative
 $$

@@ -7,6 +7,7 @@ complete: false
 index: null
 ---
 [Previous](/labyrinth/notes/cs/cs2030s/monads_and_functors)   [Next](/labyrinth/notes/cs/cs2030s/async)
+
 ### Summary
 Embarrassingly parallel
 - each element/task can be processed independently of the others
@@ -105,6 +106,7 @@ Stream::of
 Stream::generate
 Set::stream // sets are unordered
 ```
+
 ### Concept
 Sequential
 - step by step execution
@@ -112,13 +114,13 @@ Sequential
 Concurrent
 - in order, but switching between tasks very fast
 - different threads
-<img src="/labyrinth/assets/concurrent.png" alt="concurrent.png" class="mx-auto" style="width:600px;">
+<img src="/labyrinth/assets/concurrent.png" alt="concurrent.png" class="mx-auto object-fill" style="width:600px;" />
 
 Parallel
 - multiple processes running simultaneously
 - requires multiple cores/precessors
 - parallel programs are concurrent
-<img src="/labyrinth/assets/parallel.png" alt="parallel.png" class="mx-auto" style="width:600px;">
+<img src="/labyrinth/assets/parallel.png" alt="parallel.png" class="mx-auto object-fill" style="width:600px;" />
 
 Parallel [stream](/labyrinth/notes/cs/cs2030s/streams_II)
 - operations must not interfere with data in the stream
@@ -133,6 +135,7 @@ Stream::sequential
 // lazily converts the stream pipeline into a sequential stream
 ```
 > last call gets the say for parallel/sequential
+
 ### Application
 Measure performance using Instant and Duration
 ```java
@@ -205,6 +208,7 @@ Stream.iterate(0, i -> i - 1)
 	.forEachOrdered(i -> {System.out.print(i + " ");})
 // -19 -18 -17 -16 -15 -14 -13 -12 -11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 
 ```
+
 ###### Extra
 
 $$

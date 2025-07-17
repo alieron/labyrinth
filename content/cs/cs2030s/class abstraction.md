@@ -7,6 +7,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/cs/cs2030s/LSP)   [Next](/labyrinth/notes/cs/cs2030s/wrapper_classes)
+
 ### Summary
 Abstract classes/methods
 - "is-a" relationship - Circle is a Shape
@@ -58,7 +59,8 @@ $$
 $$
 > a type can have multiple direct supertypes
 
-<img src="/labyrinth/assets/abstractclass_interfaces.png" alt="abstractclass_interfaces.png" class="mx-auto object-none" style="">
+<img src="/labyrinth/assets/abstractclass_interfaces.png" alt="abstractclass_interfaces.png" class="mx-auto object-fill" style="" />
+
 ### Concept
 Why?
 - grouping subclasses into categories
@@ -116,6 +118,7 @@ new A().show(); // => "Default"
 new B().show(); // => "Overridden"
 ```
 > java 8+
+
 ### Application
 Compile-time type checking
 ```java

@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1301/cartesian_differentiation)   [Next](/labyrinth/notes/math/ma1301/optimization)
+
 ### Summary
 $$
 \begin{align*}
@@ -19,6 +20,7 @@ in \ general :& \qquad m_{tangent} \times m_{normal} = -1 \\
 &m_{tangent} = \frac{y-y_{0}}{x-x_{0}}
 \end{align*}
 $$
+
 ### Concept
 $$
 \begin{align*}
@@ -32,6 +34,7 @@ Eqn \ of \ normal: \qquad y & = -\frac{1}{f'(x)}(x-a)+f(a)\\
 Linear \ Approximation: \qquad y & \approx f(a)+f'(a)(x-a), \ where \ a \ is \ close \ to \ x
 \end{align*}
 $$
+
 ### Application
 Tangents for $x^2+3xy+y^2+4=0$ which are parallel to $y=x+7$
 $$
@@ -57,7 +60,7 @@ Tangents: \quad y & = 1(x-2)+(-2) = x-4 \\
 y & = 1(x-(-2))+2 = x+4\\
 \end{align*}
 $$
-<img src="/labyrinth/assets/tangents_graph.png" alt="tangents_graph.png" class="mx-auto" style="width:500px;">
+<img src="/labyrinth/assets/tangents_graph.png" alt="tangents_graph.png" class="mx-auto object-fill" style="width:500px;" />
 
 Tangents for $y^2-4xy+8x^2=100$ which are parallel to the y-axis
 $$
@@ -82,7 +85,7 @@ Tangents : \quad x & = 0(y - 10)+5 = 5 \\
 x & = 0(y-(-10))+(-5) = -5\\
 \end{align*}
 $$
-<img src="/labyrinth/assets/tangent_graph2.png" alt="tangent_graph2.png" class="mx-auto" style="width:500px;">
+<img src="/labyrinth/assets/tangent_graph2.png" alt="tangent_graph2.png" class="mx-auto object-fill" style="width:500px;" />
 
 Linear approximation of $101^2$ and $\sqrt{ 101 }$, using tangent
 $$

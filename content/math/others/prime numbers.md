@@ -6,12 +6,14 @@ complete: false
 index: null
 ---
 [[#|Previous]]   [[#|Next]]
+
 ### Summary
 $$
 \begin{align*}
 
 \end{align*}
 $$
+
 ### Concept
 
 $$
@@ -19,6 +21,7 @@ $$
 
 \end{align*}
 $$
+
 ### Application
 Binom coefficient of prime
 $$

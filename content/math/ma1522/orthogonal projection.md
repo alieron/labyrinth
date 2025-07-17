@@ -6,6 +6,7 @@ complete: false
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1522/orthogonal_bases)   [Next](/labyrinth/notes/math/ma1522/QR_factorization)
+
 ### Summary
 Gram-Schmidt orthogonalization
 - convert a basis into an orthogonal/orthonormal basis
@@ -27,6 +28,7 @@ S = \{ \mathbf{u}_{1},\mathbf{u}_{2},\dots,\mathbf{u}_{k} \}\text{ is linearly i
 \end{gather*}
 $$
 > removing the projections of prior vectors from subsequent ones, making them orthogonal
+
 ### Concept
 Orthogonal projection theorem
 - projection/shadow on a subspace
@@ -47,6 +49,7 @@ $$
 \forall \mathbf{v}\in V \ \| \mathbf{w-w}_p\| \leq \| \mathbf{w-v} \|
 $$
 > $\mathbf{w}_{p}$ is the closest vector in $V$ to $\mathbf{w}$
+
 ### Application
 $$
 

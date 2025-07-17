@@ -6,6 +6,7 @@ complete: false
 index: null
 ---
 [Previous](/labyrinth/notes/cs/cs1101s/searching)   [Next](/labyrinth/notes/cs/cs1101s/mutable_data)
+
 ### Summary
 $$
 \begin{align*}
@@ -17,6 +18,7 @@ Quick \ Sort & \Omega(n\log n) & \Theta(n\log n) & O(n^2)
 \end{array}
 \end{align*}
 $$
+
 ### Concept
 Insertion sort
 - Sort tail recursively, insert head into sorted tail
@@ -29,6 +31,7 @@ Merge sort ^98f7dd
 
 Quick sort
 - Choose a random pivot, split into values larger and smaller than pivot, sort each set recursively
+
 ### Application
 $$
 

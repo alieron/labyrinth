@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1522/matrix_equations)   [Next](/labyrinth/notes/math/ma1522/elementary_matrices)
+
 ### Summary
 Inverse of 2x2 matrix, with [2x2 determinant](/labyrinth/notes/math/ma1522/determinants#^2f9027) ^462f96
 $$
@@ -73,6 +74,7 @@ $$
 7) &&& \mathbf{Ax}=\mathbf{b}\text{ has a unique solution}
 \end{align*}
 $$
+
 ### Concept
 All non-square matrices are non-invertible
 - due to the non-commutativity of matrix multiplication
@@ -149,6 +151,7 @@ $$
 \mathbf{I}=\mathbf{C}(\mathbf{AB})=(\mathbf{CA})\mathbf{B} \implies \mathbf{B}\text{ is invertible and } \mathbf{CA}=\mathbf{B}^{-1}
 \end{gather*}
 $$
+
 ### Application
 Homogeneous system with invertible coefficient matrix
 $$
@@ -207,6 +210,7 @@ Method \ 2: \\
 & \mathbf{A}^{-1}=\frac{1}{2(3)-(-5)(-1)}\begin{pmatrix}2&-5 \\-1&3\end{pmatrix}=\begin{pmatrix}2&-5 \\-1&3\end{pmatrix}
 \end{gather*}
 $$
+
 ###### Extra
 Compiled equivalent statements of invertibility
 $$

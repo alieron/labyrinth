@@ -8,6 +8,7 @@ index: null
 [Previous](/labyrinth/notes/math/ma1521/limits_at_∞)   [Next](/labyrinth/notes/math/ma1521/applied_differentiation)
 
 Succeeds: [differentiation](/labyrinth/notes/math/ma1301/differentiation)
+
 ### Summary
 Derivative of inverse formula
 $$
@@ -56,6 +57,7 @@ $$
 \end{split}
 \end{gather*}
 $$
+
 ### Concept
 Derivative as a limit
 $$
@@ -70,7 +72,9 @@ f'(x_{0})\text{ exists}& \implies f\text{ is differentiable at }x_{0}\\
 $$
 > the [rules of differentiation](/labyrinth/notes/math/ma1301/differentiation#^87dfa9), are due to the [rules of limits](/labyrinth/notes/math/ma1521/limits_&_continuity#^c0031f)
 
-### Application
+#
+
+## Application
 Derivative by first principles
 $$
 \begin{align*}

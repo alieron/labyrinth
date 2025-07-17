@@ -5,11 +5,13 @@ complete: false
 index: null
 ---
 [[#|Previous]]   [[#|Next]]
+
 ### Summary
 For the [modulo](/labyrinth/notes/math/others/modulo) of a [prime](/labyrinth/notes/math/others/prime_numbers) $p$
 $$
 a^p\equiv a \pmod p \iff a^p \mod p = a
 $$
+
 ### Concept
 Definition
 $$
@@ -34,6 +36,7 @@ a^{p-2} \times a \times a^{-1}\equiv a^{-1} \pmod p \\
 a^{p-2}\equiv a^{-1} \pmod p \iff a^{p-2} \mod p = a^{-1} \\
 \end{gather*}
 $$
+
 ### Application
 Proof by induction with the [binomial theorem](/labyrinth/notes/math/ma1301/binomial_theorem)
 $$

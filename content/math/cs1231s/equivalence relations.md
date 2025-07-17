@@ -6,6 +6,7 @@ complete: true
 index:
 ---
 [Previous](/labyrinth/notes/math/cs1231s/binary_relations)   [Next](/labyrinth/notes/math/cs1231s/ordering)
+
 ### Summary
 Equivalance relation
 - a relation that is reflexive, symmetric and transitive
@@ -42,6 +43,7 @@ $$
 & \qquad bRc \to [b]_{R}=[c]_{R}
 \end{align*}
 $$
+
 ### Concept
 Partition induced by an equivalence relation (Theorem 2.6)
 $$
@@ -89,6 +91,7 @@ $$
 && \square
 \end{align*}
 $$
+
 ### Application
 Partitions/eqquivalence classes of $R_{4}$
 - undirected graph since its symmetric

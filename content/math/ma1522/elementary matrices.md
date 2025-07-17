@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1522/inverse_of_square_matrices)   [Next](/labyrinth/notes/math/ma1522/LU_factorization)
+
 ### Summary
 Elaboration of [row equivalent](/labyrinth/notes/math/ma1522/gaussian_elimination#^151bcb)
 $$
@@ -30,6 +31,7 @@ $$
 \text{Add multiple: } &&& \mathbf{I}_n\xrightarrow{R_i+cR_j}\mathbf{E}\xrightarrow{R_i-cR_j}\mathbf{I}_n && \Rightarrow\quad \mathbf{E}: R_i+cR_j,\;\mathbf{E}^{-1}: R_i-cR_j\\
 \end{align*}
 $$
+
 ### Concept
 Represents a single [elementary row operation](/labyrinth/notes/math/ma1522/gaussian_elimination#^962797)
 - pre-multiply by elementary matrix
@@ -53,6 +55,7 @@ Step by step
 $$
 \mathbf{A}\xrightarrow{r_1}\mathbf{E}_1\mathbf{A}\xrightarrow{r_2}\mathbf{E}_2\mathbf{E}_1\mathbf{A}\xrightarrow{r_3}\cdots\xrightarrow{r_k}\mathbf{E}_k\cdots\mathbf{E}_2\mathbf{E}_1\mathbf{A}
 $$
+
 ### Application
 Row operations
 $$

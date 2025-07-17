@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1522/determinants)   [Next](/labyrinth/notes/math/ma1522/linear_combinations)
+
 ### Summary
 Rules of vector algebra, same as [vectors in R³](/labyrinth/notes/math/ma1301/vectors_in_R³)
 $$
@@ -50,6 +51,7 @@ d(\mathbf{u},\mathbf{v}) = \| \mathbf{u}-\mathbf{v} \| \\
 \cos\theta= \frac{\mathbf{u}\cdot\mathbf{v}}{\| \mathbf{u} \| \| \mathbf{v} \| }
 \end{gather*}
 $$
+
 ### Concept
 Vector, a n by 1 matrix
 $$

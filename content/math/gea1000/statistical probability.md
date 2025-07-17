@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/gea1000/ecological_correlation)   [Next](/labyrinth/notes/math/gea1000/confidence_intervals)
+
 ### Summary
 $$
 \begin{gather*}
@@ -43,6 +44,7 @@ Sensitivity: & \qquad P(+ve|true) \qquad \text{(True Positive)}\\
 Specificity: & \qquad P(-ve|false) \qquad \text{(True Negative)}
 \end{align*}
 $$
+
 ### Concept
 Base rate/persecutor fallacy
 $$
@@ -82,6 +84,7 @@ $$
 Probability experiment, e.g. fair dice
 - repeatable
 - precise set of outcomes
+
 ### Application
 Sensitivity and Specifivity of a test
 $$

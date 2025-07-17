@@ -6,6 +6,7 @@ tags:
 complete: true
 index:
 ---
+
 ### Summary
 Concept of linked lists, data & ptr to next node
 ```js
@@ -68,6 +69,7 @@ filer(pred, xs) // preserves true only
 accumulate(f, initial, null) => initial
 accumulate(f, initial, list(a)) => f(a, initial)
 ```
+
 ### Concept
 A list is either:
 - _null_ 
@@ -85,6 +87,7 @@ Think of it as a linked list, where each "node" contains the value(any type) of 
 | pair(null, pair(null, null))    | true    |
 Can be created using the list function
 list(1, 2, 3) is the same as 
+
 ### Application
 List Processing Summary Functions
 

@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1522/eigenvectors)   [Next](/labyrinth/notes/math/ma1522/orthogonal_diagonalization)
+
 ### Summary
 Diagonalizable
 $$
@@ -36,6 +37,7 @@ $$
 $$
 \mathbf{A}\text{ is diagonalizable}\land\mathbf{A}\text{ has only one eigenvalue }\lambda \iff \mathbf{A}=\lambda \mathbf{I}
 $$
+
 ### Concept
 Diagonalization
 $$
@@ -77,6 +79,7 @@ $$
 \end{gather*}
 $$
 > akin to changing base, applying the power, then changing back
+
 ### Application
 Diagonal and identity matrix
 $$
@@ -118,6 +121,7 @@ x-1 & 0 & 0 \\
 \therefore \operatorname{dim}(E_{1})=1<r_{1}=2
 \end{gather*}
 $$
+
 ###### Extra
 Theorem for the independence of eigenspaces(formally)
 $$

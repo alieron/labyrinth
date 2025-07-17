@@ -6,6 +6,7 @@ tags:
 complete: true
 index: null
 ---
+
 ### Summary
 Polynomial of degree n
 $$

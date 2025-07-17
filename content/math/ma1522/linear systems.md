@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Next](/labyrinth/notes/math/ma1522/gaussian_elimination)
+
 ### Summary
 Inconsistent
 - No solutions
@@ -13,6 +14,7 @@ Inconsistent
 Consistent ^95b858
 - Exactly one solution
 - Infinitely many solutions
+
 ### Concept
 Linear equation in standard form
 $$
@@ -29,6 +31,7 @@ $$
 
 General solution
 - Needed when there are infinite solutions, the variables are expressed in terms of parameters
+
 ### Application
 Consistent systems (one solution)
 $$

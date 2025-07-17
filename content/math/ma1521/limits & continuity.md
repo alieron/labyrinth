@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1521/functions)   [Next](/labyrinth/notes/math/ma1521/limits_at_∞)
+
 ### Summary
 Rules ^c0031f
 $$
@@ -41,6 +42,7 @@ $$
 \lim_{ x \to 0 } \frac{\tan x}{x} = 1 \\
 \end{align*}
 $$
+
 ### Concept
 Limit exists
 - behaviour around c
@@ -67,7 +69,7 @@ $$
 \lim_{ x \to c } h(x)=\lim_{ x \to c } g(x)=L \implies \lim_{ x \to c } f(x)=L
 \end{gather*}
 $$
-<img src="/labyrinth/assets/squeeze_theorem.png" alt="squeeze_theorem.png" class="mx-auto object-none" style="">
+<img src="/labyrinth/assets/squeeze_theorem.png" alt="squeeze_theorem.png" class="mx-auto object-fill" style="" />
 
 Intermmediate value theorem
 $$
@@ -85,6 +87,7 @@ for \ \lim_{ x \to c } f(x) = L \\
 \forall\delta \in \mathbb{R} \ \exists\epsilon \in \mathbb{R} \ 0< |x-c|<\delta \implies |f(x)-L|<\epsilon
 \end{gather*}
 $$
+
 ### Application
 Limits of reciprocal
 $$
@@ -148,6 +151,7 @@ then \  \lim_{ x \to c } -|f(x)| = 0 \\
 \therefore \lim_{ x \to c } |f(x)| =  \lim_{ x \to c } -|f(x)| =0 \implies \lim_{ x \to c } f(x) = 0
 \end{gather*}
 $$
+
 ###### Extra
 Distributes with simple arithmetic
 $$

@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1521/absolute_values)   [Next](/labyrinth/notes/math/ma1521/limits_&_continuity)
+
 ### Summary
 Real-valued function, codomain is the set of real numbers
 $$
@@ -49,6 +50,7 @@ f(x)=\sin x, \ f(x)=\cos x\\
 \text{Domain: }\mathbb{R} \quad \text{Range: }[-1,1]\\
 \end{gather*}
 $$
+
 ### Concept
 Domain, codomain and range
 $$
@@ -93,6 +95,7 @@ $$
 & \quad f(x) = y
 \end{align*}
 $$
+
 ### Application
 Domain and range
 $$

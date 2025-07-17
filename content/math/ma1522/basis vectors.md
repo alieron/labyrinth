@@ -6,6 +6,7 @@ complete: false
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1522/linear_independence)   [Next](/labyrinth/notes/math/ma1522/transition_matrices)
+
 ### Summary
 Standard basis ^709a91
 $$
@@ -50,6 +51,7 @@ S\mathbf{x}=\mathbf{v} & \mathbf{x}\text{ is a unique solution}\\
 \end{gather*}
 $$
 > note: this is a [transition](/labyrinth/notes/math/ma1522/transition_matrices) from the standard basis
+
 ### Concept
 Basis
 $$
@@ -91,10 +93,13 @@ $$
 &\mathbf{x}=[\mathbf{v}]_{S}\text{ is the unique solution}
 \end{align*}
 $$
+
 ### Application
 $$
 
 $$
 
-###### Extra
+#
+
+##### Extra
 

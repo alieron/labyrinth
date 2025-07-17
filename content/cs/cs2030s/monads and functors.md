@@ -8,6 +8,7 @@ complete: false
 index: null
 ---
 [Previous](/labyrinth/notes/cs/cs2030s/functional_interfaces)   [Next](/labyrinth/notes/cs/cs2030s/streams_II)
+
 ### Summary
 Monad laws
 1. Left identity law
@@ -42,6 +43,7 @@ functor.map(x -> x) <==> functor
 ```java
 functor.map(f).map(g) <==> functor.map(x -> g(f(x)))
 ```
+
 ### Concept
 Monad
 - a box that stores data and its side-effects
@@ -52,6 +54,7 @@ Functor
 - a box that stores data and without side-effects
 - boxing with a factory method `of`
 - data can be modified through `map`
+
 ### Application
 Equivalence of monad/functors statements
 ```java
@@ -460,7 +463,9 @@ public abstract class Maybe<T> {
 }
 ```
 
-###### Extra
+#
+
+##### Extra
 Monad functor laws in latex
 $$
 \verb|Monad.of(x).flatMap(x -> f(x))| \equiv \verb|f(x)|

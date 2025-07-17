@@ -6,12 +6,14 @@ complete: true
 index:
 ---
 [Previous](/labyrinth/notes/cs/cs1101s/memoization)
+
 ### Summary
 1. Symbol initialization - variables are noted, temporarily "unassigned"
 2. Value assignment - values are assigned to the symbols
 
 Frames and environments
 - Nested in lists
+
 ### Concept
 Self-compiling languages
 - Running JS/Source programmes using a programme written in JS/Source itself 

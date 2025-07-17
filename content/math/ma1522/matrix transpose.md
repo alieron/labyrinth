@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1522/matrix_multiplication)   [Next](/labyrinth/notes/math/ma1522/matrix_equations)
+
 ### Summary
 Rules
 $$
@@ -24,6 +25,7 @@ Symmetric along the diagonal ^e47d16
 $$
 \mathbf{A}\text{ is symmetric when: }\mathbf{A} = \mathbf{A}^T
 $$
+
 ### Concept
 Matrix transpose, flipping on diagonal
 $$
@@ -46,6 +48,7 @@ $$
 \end{aligned}
 \end{gather*}
 $$
+
 ### Application
 Finding transpose
 $$

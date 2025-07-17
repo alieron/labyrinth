@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/cs1231s/equivalence_relations)   [Next](/labyrinth/notes/math/cs1231s/function_relations)
+
 ### Summary
 Additional properties of binary relations
 $$
@@ -23,6 +24,7 @@ Partial order
 
 Total order
 - a partial order that is total
+
 ### Concept
 Bounded below
 $$
@@ -51,6 +53,7 @@ $$
 \text{Reflexive:} &&& \forall x \in X \ \forall y \in X && {\color{royalblue}xRy \lor yRx} \to Q(x,y)\lor Q(y,x)\xrightarrow{show} {\color{limegreen}\text{is always true}} \\
 \end{align*}
 $$
+
 ### Application
 Well-ordering does not apply to all sets
 $$

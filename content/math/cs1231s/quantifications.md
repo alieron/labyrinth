@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/cs1231s/conditionals)   [Next](/labyrinth/notes/math/cs1231s/fundemental_methods_of_proof)
+
 ### Summary
 Universal statements
 - true iff $Q(x)$  is true for every $x$ in $D$
@@ -36,6 +37,7 @@ $$
 \sim(\exists x \in D \ Q(x)) \equiv \forall x \in D \ \sim Q(x)\\
 \end{gather*}
 $$
+
 ### Concept
 Universal quantification(for all) -> $\forall$
 Existential quantification(there exists) -> $\exists$
@@ -67,6 +69,7 @@ $$
 \forall x\in P \ Q(x) \ where \ P \ is \ the \ truth \ set \ of \ P(x), \ P = \{ x\in D\ |\ P(x) \}
 \end{gather*}
 $$
+
 ### Application
 Universal statement
 - prove for all values

@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Next](/labyrinth/notes/math/ma1521/functions)
+
 ### Summary
 $$
 \begin{gather*}
@@ -30,6 +31,7 @@ $$
 |x|-|y| \leq |x-y|
 \end{gather*}
 $$
+
 ### Concept
 $$
 |x| = 
@@ -40,6 +42,7 @@ x  & x \geq 0\\
 \end{array}
 \right.
 $$
+
 ### Application
 Sign inequalities
 $$
@@ -115,6 +118,7 @@ Prove: \ ||x| − |y|| &\leq |x − y|, \ for \ x,y \in \mathbb{R}\\
 \therefore ||x|-|y|| & \leq |x-y|
 \end{align*}
 $$
+
 ###### Extra
 1. Identify subject
 2. Expand to both signs

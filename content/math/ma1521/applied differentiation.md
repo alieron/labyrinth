@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1521/differentiation_II)   [Next](/labyrinth/notes/math/ma1521/integration_II)
+
 ### Summary
 Equations of [tangent and normal](/labyrinth/notes/math/ma1301/tangent_and_normal)
 $$
@@ -37,6 +38,7 @@ $$
 \lim_{ x \to c } \frac{f(x)}{g(x)} = \lim_{ x \to c } \frac{f'(x)}{g'(x)}
 $$
 > provided the right limit exists or equals infinity/negative infinity
+
 ### Concept
 Increasing and decreasing
 $$
@@ -81,6 +83,7 @@ Mean value theorem
 $$
 f\text{ is continuous on }[a,b] \land f\text{ is differentiable on }(a,b) \implies \exists c\in(a,b) \ f'(c)=\frac{f(b)-f(a)}{b-a}
 $$
+
 ### Application
 Critical points, minima and maxima of piecewise funtions
 $$

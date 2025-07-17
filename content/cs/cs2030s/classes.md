@@ -7,6 +7,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/cs/cs2030s/types)   [Next](/labyrinth/notes/cs/cs2030s/inheritance)
+
 ### Summary
 Constructor
 ```java
@@ -62,6 +63,7 @@ class Thing {
 	final zero = 0; // immutable field
 }
 ```
+
 ### Concept
 Encapsulation
 - packaging of relevant variables and methods(verbs) in an object(nouns)
@@ -80,7 +82,7 @@ Fields
 
 Methods ^4e342d
 - functions associated with an instance of an object
-<img src="/labyrinth/assets/java_method.png" alt="java_method.png" class="mx-auto object-none" style="">
+<img src="/labyrinth/assets/java_method.png" alt="java_method.png" class="mx-auto object-fill" style="" />
 
 Tell, don't ask
 - avoid _accessors_(getters) and _mutators_(_setters_)
@@ -96,6 +98,7 @@ Abstraction barrier
 - Client -> uses the functions/classes to perform a task
 - the client would not care about the specific imlementation of the function, just that it performs the desired task
 - the implementer has the freedom to change the implementation, as long as the behaviour remains unchanged
+
 ### Application
 Main method, entry point
 ```java

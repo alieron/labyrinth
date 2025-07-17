@@ -8,9 +8,11 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/cs/cs1101s/ternary_operator)   [Next](/labyrinth/notes/cs/cs1101s/recursion)
+
 ### Summary
 Applicative Order -> Evaluate arguments before calling functions
 Normal Order -> Call functions, evaluate once fully expanded
+
 ### Concept
 ```js
 function sq(x) { return x * x ;}

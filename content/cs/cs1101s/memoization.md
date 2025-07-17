@@ -8,6 +8,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/cs/cs1101s/streams)   [Next](/labyrinth/notes/cs/cs1101s/metalinguistic_abstraction)
+
 ### Summary
 Basic memory read and write for binary functions
 ```js
@@ -22,6 +23,7 @@ function write(n, k, value) {
 	mem[n][k] = value;
 }
 ```
+
 ### Concept
 Trading space for time
 - avoid doing repeated computation
@@ -33,6 +35,7 @@ Useful in:
 
 Not useful in:
 - factorial
+
 ### Application
 n-choose-k
 ```js
@@ -60,7 +63,7 @@ function mchoose(n, k) {
 	}
 } 
 ```
-<img src="/labyrinth/assets/memo_choose.png" alt="memo_choose.png" class="mx-auto object-none" style="">
+<img src="/labyrinth/assets/memo_choose.png" alt="memo_choose.png" class="mx-auto object-fill" style="" />
 $\Theta((n-k)k)=\Theta(nk-k^2)\implies O(nk)$ oog in time and space
 
 Unary function memoizer and tribonacci series

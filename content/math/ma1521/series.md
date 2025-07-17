@@ -6,6 +6,7 @@ complete: false
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1521/sequences)   [Next](/labyrinth/notes/math/ma1521/power_series)
+
 ### Summary
 Rules for convergent series
 $$
@@ -46,6 +47,7 @@ Useful [logarithm](/labyrinth/notes/math/math_fundementals/rules_of_logarithms) 
 $$
 \lim_{ n \to \infty } u^n = e^{\lim_{ n \to \infty } \ln u^n} = e^{\lim_{ n \to \infty } n \ln u}
 $$
+
 ### Concept
 Series
 $$
@@ -92,6 +94,7 @@ $$
 \sum_{n=1}^{\infty} |a_{n}|\text{ is convergent}\implies \sum_{n=1}^{\infty} a_{n}\text{ is absolutely convergent}
 $$
 > else it is conditionally convergent
+
 ### Application
 Convergent geometric series
 $$

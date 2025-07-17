@@ -5,12 +5,14 @@ complete: false
 index: null
 ---
 [[#|Previous]]   [[#|Next]]
+
 ### Summary
 $$
 \begin{align*}
 
 \end{align*}
 $$
+
 ### Concept
 Coprime ^449690
 $$
@@ -18,6 +20,7 @@ $$
 
 \end{align*}
 $$
+
 ### Application
 $$
 

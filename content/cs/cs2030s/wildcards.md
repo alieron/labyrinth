@@ -7,6 +7,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/cs/cs2030s/generics)   [Next](/labyrinth/notes/cs/cs2030s/immutable_classes)
+
 ### Summary
 PECS
 - *producer extends; consumer super*
@@ -31,7 +32,7 @@ $$
 & \verb|A<T>| \centernot{<:} \verb|A<? extends S>| & \verb|T|\text{ cannot replace }\verb|?|
 \end{gather*}
 $$
-<img src="/labyrinth/assets/extends.png" alt="extends.png" class="mx-auto object-none" style="">
+<img src="/labyrinth/assets/extends.png" alt="extends.png" class="mx-auto object-fill" style="" />
 
 Lower-bounded wildcard
 - `?` can be substituted for a supertype of `T`
@@ -50,7 +51,8 @@ $$
 & \verb|A<S>| \centernot{<:} \verb|A<? super T>| & \verb|S|\text{ cannot replace }\verb|?|
 \end{gather*}
 $$
-<img src="/labyrinth/assets/super.png" alt="super.png" class="mx-auto object-none" style="">
+<img src="/labyrinth/assets/super.png" alt="super.png" class="mx-auto object-fill" style="" />
+
 ### Concept
 Java generics classes are [invariant](/labyrinth/notes/cs/cs2030s/wrapper_classes#^f8f5bb)
 $$
@@ -82,6 +84,7 @@ A<T> a = new A<>();
 Type inference
 - infer type argument automatically
 - if there are multiple, pick the most [specific](/labyrinth/notes/cs/cs2030s/polymorphism#^cc9566) one
+
 ### Application
 Sequence, copying
 ```java

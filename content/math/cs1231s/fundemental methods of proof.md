@@ -6,6 +6,7 @@ complete: false
 index: null
 ---
 [Previous](/labyrinth/notes/math/cs1231s/quantifications)   [Next](/labyrinth/notes/math/cs1231s/proof_by_induction)
+
 ### Summary
 Proving [implications](/labyrinth/notes/math/cs1231s/conditionals#^8a163c)
 - direct proof using [modus ponens](/labyrinth/notes/math/cs1231s/rules_of_inference#^c19fcd)
@@ -113,6 +114,7 @@ $$
 & \therefore \text{Claim is true}
 \end{align*}
 $$
+
 ### Concept
 Builds upon the [rules of inference](/labyrinth/notes/math/cs1231s/rules_of_inference) 
 
@@ -148,6 +150,7 @@ $$
 \exists x\in D \ Q(x) & \equiv \exists x(x\in D \land Q(x))
 \end{align*}
 $$
+
 ### Application
 Pigeonhole principle, if there are more cards then boxes, then there is a(at least one) box with more than one card ^f49094
 - general

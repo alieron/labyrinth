@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1522/least_square_approximation)   [Next](/labyrinth/notes/math/ma1522/diagonalization)
+
 ### Summary
 Characteristic polynomial
 $$
@@ -53,6 +54,7 @@ Eigenvalues of 2x2 matrices
 $$
 \mathbf{A}=\begin{pmatrix}a&b\\c&d\end{pmatrix}, \quad  \lambda_{1},\lambda_{2}=\left( \frac{ad}{2} \right)\pm \sqrt{ \left( \frac{ad}{2} \right)^{2}-(ad-bc) }
 $$
+
 ### Concept
 Eigenvalues and eigen vectors
 - premultiplying a matrix to a vector has the same effect as scaling it
@@ -137,6 +139,7 @@ d & = \sqrt{ m^{2}-p }\\
 \end{split}
 \end{gather*}
 $$
+
 ### Application
 Eigenvalues and eigenspaces
 $$

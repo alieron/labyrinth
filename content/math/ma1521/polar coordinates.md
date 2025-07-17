@@ -5,9 +5,10 @@ tags:
 complete: true
 index: null
 ---
+
 ### Summary
 Polar coordinate system
-<img src="/labyrinth/assets/polar_coords.png" alt="polar_coords.png" class="mx-auto object-none" style="">
+<img src="/labyrinth/assets/polar_coords.png" alt="polar_coords.png" class="mx-auto object-fill" style="" />
 
 Converting between cartesian and polar
 $$
@@ -24,4 +25,4 @@ Polar rectangle
 $$
 R = \{\begin{array}{c|c} (r,\theta) & a\leq r\leq b \land \alpha \leq \theta \leq\beta \end{array}\}
 $$
-<img src="/labyrinth/assets/polar_rectangle.png" alt="polar_rectangle.png" class="mx-auto" style="width:400px;">
+<img src="/labyrinth/assets/polar_rectangle.png" alt="polar_rectangle.png" class="mx-auto object-fill" style="width:400px;" />

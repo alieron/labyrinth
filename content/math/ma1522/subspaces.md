@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1522/linear_combinations)   [Next](/labyrinth/notes/math/ma1522/linear_independence)
+
 ### Summary
 Properties of a subspace
 $$
@@ -29,6 +30,7 @@ $$
 
 Checking if a vector is in a subspace
 - check if the corresponding x,y,z values correspond to 
+
 ### Concept
 Solution set to a linear system
 $$
@@ -68,6 +70,7 @@ W & =\{\begin{array}{c|c} \mathbf{w} & \mathbf{Aw}=\mathbf{b} \end{array}\}, \qu
 \end{align*}
 $$
 > visualise a plane that doesn't pass through the origin
+
 ### Application
 Converting between implicit and explicit forms
 $$

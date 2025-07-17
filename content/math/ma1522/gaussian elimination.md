@@ -7,6 +7,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1522/linear_systems)   [Next](/labyrinth/notes/math/ma1522/matrices)
+
 ### Summary
 Linear systems as augmented matrices
 $$
@@ -40,6 +41,7 @@ $$
 \end{gather*}
 $$
 > for the matrix in RREF
+
 ### Concept
 Elementary row operations(reversible) ^962797
 - Interchanging, $R_{1}\leftrightarrow R_{2}$
@@ -66,8 +68,10 @@ Unknown constants in system
 
 Intuition for row reduction ^0aa696
 - an expression of columns as <span style="color:rgb(255, 167, 40)">multiples of the first n columns</span>
+
 ###### Octave
 ```octave
+
 # find the rref of a matrix
 rref([1 2 3;
 	  4 5 6;
@@ -79,6 +83,7 @@ rref([1 2 3;
 >   0   1   2
 >   0   0   0
 ```
+
 ### Application
 Row reduction
 $$

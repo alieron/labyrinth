@@ -6,12 +6,14 @@ complete: false
 index: null
 ---
 [[#|Previous]]   [[#|Next]]
+
 ### Summary
 without loss of generality -> WLOG
 
 - Concise -> No irrelevant details
 - Polished -> Final draft
 - Argument -> Follow a logical progression
+
 ### Concept
 Types of proofs
 - Direct proof
@@ -22,6 +24,7 @@ Types of proofs
 - Proof by contraposition
 - Proof by mathematical induction
 - Combinatorial proof
+
 ### Application
 Direct proof
 [Definition of odd and even integers](/labyrinth/notes/math/cs1231s/properties_of_integers#^ec72bc)

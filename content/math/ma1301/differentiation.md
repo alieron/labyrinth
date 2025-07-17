@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1301/telescoping_series)   [Next](/labyrinth/notes/math/ma1301/cartesian_differentiation)
+
 ### Summary
 Basic rules, or in [Lagrange notation](/labyrinth/notes/math/math_fundementals/derivative_notation#^753b98) ^87dfa9
 $$
@@ -127,6 +128,7 @@ $$
   \end{split}
 \end{equation}
 $$
+
 ### Concept
 Derivative from first principles, change in $f(x)$ over a small change in $x$ ^3ed593
 $$
@@ -143,6 +145,7 @@ $$
 \frac{d}{dx}|u| & = \frac{u}{|u|} \cdot \frac{du}{dx} 
 \end{align*}
 $$
+
 ### Application
 Deriving $\frac{d}{dx}\tan x = \sec^2(x)$, with [trigo identities](/labyrinth/notes/math/ma1301/trigo_identities)
 $$

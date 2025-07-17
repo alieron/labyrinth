@@ -6,12 +6,14 @@ complete: false
 index: null
 ---
 [Previous](/labyrinth/notes/math/cs1231s/infinite_sets)   [Next](/labyrinth/notes/math/cs1231s/permutations_&_combinations)
+
 ### Summary
 $$
 \begin{align*}
 
 \end{align*}
 $$
+
 ### Concept
 Addition rule
 $$
@@ -77,10 +79,13 @@ $$
 
 $$
 > applies only to a finite $n$
+
 ### Application
 $$
 
 $$
 
-###### Extra
+#
+
+##### Extra
 

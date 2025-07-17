@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1301/vectors_in_R³)   [Next](/labyrinth/notes/math/ma1301/dot_product)
+
 ### Summary
 Normalising, divide by magnitude ^43f21a
 $$
@@ -20,6 +21,7 @@ $$
 \mathbf{a} // \mathbf{b} \iff \mathbf{a} = \lambda \mathbf{b}, \ for \ \lambda \neq 0
 \end{gather}
 $$
+
 ### Concept
 Collinear points, 3 points form a straight line if
 $$
@@ -32,6 +34,7 @@ Equal magnitude but opposite direction
 $$
 |\mathbf{v}| = |\mathbf{-v}|
 $$
+
 ### Application
 Unit vector of a vector
 $$

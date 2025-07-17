@@ -7,6 +7,7 @@ complete: false
 index: null
 ---
 [Previous](/labyrinth/notes/cs/cs2030s/immutable_classes)   [Next](/labyrinth/notes/cs/cs2030s/functional_interfaces)
+
 ### Summary
 Inner class
 - requires an instance of the outer class
@@ -85,6 +86,7 @@ new X(arguments) { body }
 // arguments are supplied to the constructor, like using super()
 // override methods or implement them in the body, no constructor
 ```
+
 ### Concept
 Fully qualified name
 ```java
@@ -130,6 +132,7 @@ class A {
 }
 ```
  add stack heap diagram
+
 ### Application
 Hiding inner classes
 ```java
@@ -176,7 +179,7 @@ A a = new A();
 a.bo();
 ```
  add diagram
-<img src="/labyrinth/assets/StackHeap.svg" alt="StackHeap.svg" class="mx-auto object-none" style="">
+<img src="/labyrinth/assets/StackHeap.svg" alt="StackHeap.svg" class="mx-auto object-fill" style="" />
 
 Local class only captures variables that are used internally
 ```java
@@ -195,7 +198,7 @@ class A {
 A a = new A();
 a.bo();
 ```
-<img src="/labyrinth/assets/StackHeap2.svg" alt="StackHeap2.svg" class="mx-auto object-none" style="">
+<img src="/labyrinth/assets/StackHeap2.svg" alt="StackHeap2.svg" class="mx-auto object-fill" style="" />
 
 Scope and effectively final
 ```java

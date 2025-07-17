@@ -5,6 +5,7 @@ tags:
 complete: true
 index:
 ---
+
 ### Summary
 Undirected graph
 - no arrows, edges are like arrows in both directions
@@ -86,6 +87,7 @@ $$
 \end{tikzpicture}
 \end{document}
 ```
+
 ###### Extra
 Tikz template for directed/undirected graphs
 ```latex

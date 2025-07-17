@@ -5,6 +5,7 @@ tags:
 complete: true
 index: null
 ---
+
 ### Summary
 Increasing/decreasing
 $$
@@ -20,7 +21,7 @@ f'(x)=0\\
 f''(x)\neq 0
 \end{gather*}
 $$
-<img src="/labyrinth/assets/turning_pt.png" alt="turning_pt.png" class="mx-auto object-none" style="">
+<img src="/labyrinth/assets/turning_pt.png" alt="turning_pt.png" class="mx-auto object-fill" style="" />
 
 Concavity
 $$
@@ -38,7 +39,8 @@ f'(x)=0\\
 f''(x)=0
 \end{gather*}
 $$
-<img src="/labyrinth/assets/stationary_pt.png" alt="stationary_pt.png" class="mx-auto object-none" style="">
+<img src="/labyrinth/assets/stationary_pt.png" alt="stationary_pt.png" class="mx-auto object-fill" style="" />
+
 ### Application
 First [derivative](/labyrinth/notes/math/math_fundementals/derivative_notation) test -> determine turning/stationary points
 Second derivative test -> determine concavity, if turning point is maximum or minimum

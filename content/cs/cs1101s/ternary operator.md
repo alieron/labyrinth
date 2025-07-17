@@ -7,6 +7,7 @@ complete: true
 index: null
 ---
 [Next](/labyrinth/notes/cs/cs1101s/substitution_model)
+
 ### Summary
 $$
 predicate \ ? \ consequent \ : \ alternative
@@ -18,6 +19,7 @@ true ? 1 : 0;
 false ? 1 : 0;
 //output: 0
 ```
+
 ### Concept
 Ternary operator has 3 parameters/operands:
 - Predicate
@@ -25,6 +27,7 @@ Ternary operator has 3 parameters/operands:
 - Alternative
 
 Based on the boolean predicated, either the consequent or alternative is returned
+
 ### Application
 Absolute function
 $$

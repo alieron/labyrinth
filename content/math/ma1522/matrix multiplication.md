@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1522/matrices)   [Next](/labyrinth/notes/math/ma1522/matrix_transpose)
+
 ### Summary
 Non-commutative
 - multiply A by B vs multiply B to A
@@ -47,6 +48,7 @@ $$
 \mathbf{AB}=\begin{pmatrix}-&\mathbf{a}_1&-\\-&\mathbf{a}_2&-\\&\vdots&\\-&\mathbf{a}_m&-\end{pmatrix}\mathbf{B}=\begin{pmatrix}-&\mathbf{a}_1\mathbf{B}&-\\-&\mathbf{a}_2\mathbf{B}&-\\&\vdots&\\-&\mathbf{a}_m\mathbf{B}&-\end{pmatrix}
 \end{gather*}
 $$
+
 ### Concept
 Matrix multiplication
 $$
@@ -55,7 +57,7 @@ $$
 & =\begin{pmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\a_{21}&a_{22}&\cdots&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}&a_{m2}&\cdots&a_{mn}\end{pmatrix}\begin{pmatrix}b_{11}&b_{12}&\cdots&b_{1p}\\b_{21}&b_{22}&\cdots&b_{2p}\\\vdots&\vdots&\ddots&\vdots\\b_{n1}&b_{n2}&\cdots&b_{np}\end{pmatrix}= \begin{pmatrix} a_{11}b_{11}+a_{12}b_{21}+\cdots+a_{1n}b_{n1}&a_{11}b_{12}+a_{12}b_{22}+\cdots+a_{1n}b_{n2}&\cdots&a_{11}b_{1n}+a_{12}b_{2n}+\cdots+a_{1n}b_{np}\\ a_{21}b_{11}+a_{22}b_{21}+\cdots+a_{2n}b_{n1}&a_{21}b_{12}+a_{22}b_{22}+\cdots+a_{2n}b_{n2}&\cdots&a_{21}b_{1n}+a_{22}b_{2n}+\cdots+a_{2n}b_{np}\\ \vdots&\vdots&\ddots&\vdots\\ a_{m1}b_{11}+a_{m2}b_{21}+\cdots+a_{mn}b_{n1}&a_{m1}b_{12}+a_{m2}b_{22}+\cdots+a_{mn}b_{n2}&\cdots&a_{m1}b_{1n}+a_{m2}b_{2n}+\cdots+a_{mn}b_{np} \end{pmatrix}
 \end{align*}
 $$
-<img src="/labyrinth/assets/matrix_mul.png" alt="matrix_mul.png" class="mx-auto object-none" style="">
+<img src="/labyrinth/assets/matrix_mul.png" alt="matrix_mul.png" class="mx-auto object-fill" style="" />
 
 Size of matrices for the product to be well defined
 $$
@@ -75,6 +77,7 @@ $$
 \mathbf{A}^n = \mathbf{AA}^{n-1}, \ n\geq1
 \end{gather*}
 $$
+
 ### Application
 Row vector and column vector
 $$

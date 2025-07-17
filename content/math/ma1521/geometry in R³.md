@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1521/power_series)   [Next](/labyrinth/notes/math/ma1521/vector-valued_functions)
+
 ### Summary
 Rules for [vectors in R³](/labyrinth/notes/math/ma1301/vectors_in_R³)
 - vector addition
@@ -42,6 +43,7 @@ Shortest distance from a point to a plane
 $$
 \frac{| ax_{0}+by_{0}+cz_{0}-d |}{\sqrt{ a^{2}+b^{2}+c^{2} }} 
 $$
+
 ### Concept
 Position vectors
 - horizontal notation
@@ -65,6 +67,7 @@ $$
 $$
 (\mathbf{r}-\mathbf{a})\cdot \mathbf{n} = 0
 $$
+
 ### Application
 Distance from point to planes
 $$

@@ -7,6 +7,7 @@ complete: false
 index: null
 ---
 [Previous](/labyrinth/notes/cs/cs2030s/nested_classes)   [Next](/labyrinth/notes/cs/cs2030s/monads_and_functors)
+
 ### Summary
 Functional interfaces
 - interface with a single method, no ambiguity about which function is being implemented
@@ -84,6 +85,7 @@ add.apply(x).apply(y);
 > useful for lazy evaluation, inner lambda can be evaluated later
 
  add stack and heap
+
 ### Concept
 Pure functions
 1. does not depend on anything extrinsic of the function
@@ -128,6 +130,7 @@ int compare(T o1, T o2) // returns -ve if o1 < o2
 // from List<T>
 list::sort(Comparator<T> cmp) // sorts the list in ascending order wrt to comparator
 ```
+
 ### Application
 Square
 ```java

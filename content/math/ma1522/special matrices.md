@@ -5,6 +5,7 @@ tags:
 complete: true
 index: null
 ---
+
 ### Summary
 Diagonal matrices ^7a3e46
 - stretch matrix

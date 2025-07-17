@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1301/binomial_theorem)   [Next](/labyrinth/notes/math/ma1301/differentiation)
+
 ### Summary
 [Summation](/labyrinth/notes/math/math_fundementals/summation_notation) notation
 $$
@@ -13,6 +14,7 @@ $$
 \sum_{i=1}^{n}a_{i}-a_{i-1}, \ or \ \sum_{i=1}^{n}a_{i}-a_{i+1} \\
 \end{align*}
 $$
+
 ### Concept
 Telescopic sequence
 $$
@@ -29,6 +31,7 @@ u_{n} & = a_{n}-a_{n+1} \\
 & = a_{m} - a_{n+1}
 \end{align*}
 $$
+
 ### Application
 Finite telescopic sequence, with [partial fractions](/labyrinth/notes/math/ma1301/partial_fractions)
 $$

@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1301/differentiation)   [Next](/labyrinth/notes/math/ma1301/tangent_and_normal)
+
 ### Summary
 Implicit differentiation ^a2341c
 $$
@@ -28,6 +29,7 @@ with \ x & = f(t), \ y = g(t), \\
 \frac{d^2y}{dx^2} & = \frac{d}{dx}\left(\frac{dy}{dx}\right) = \frac{\frac{d}{dt}}{\frac{dx}{dt}}\left(\frac{dy}{dx}\right)
 \end{align*}
 $$
+
 ### Concept
 Cartesian, equations involving $x$ and $y$
 $$
@@ -47,6 +49,7 @@ y = r\sin\theta
 && \text{(where \textit{r} is constant)}
 \end{align*}
 $$
+
 ### Application
 [2nd order derivative](/labyrinth/notes/math/math_fundementals/derivative_notation) via chain rule
 $$

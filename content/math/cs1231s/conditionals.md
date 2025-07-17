@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/cs1231s/propositions)   [Next](/labyrinth/notes/math/cs1231s/quantifications)
+
 ### Summary
 Implication(IF...THEN) ^8a163c
 - $p$ implies $q$/if $p$ then $q$
@@ -36,6 +37,7 @@ $$
 | T   | F   | F                         | F        | T        | F                            |
 | F   | T   | F                         | T        | F        | F                            |
 | F   | F   | ==T==                     | T        | T        | ==T==                        |
+
 ### Concept
 Contrapositive
 $$
@@ -90,6 +92,7 @@ $$
 $$
 
 Other [rules of inference](/labyrinth/notes/math/cs1231s/rules_of_inference)
+
 ### Application
 Vacuously true, example
 $$

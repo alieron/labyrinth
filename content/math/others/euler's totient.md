@@ -5,6 +5,7 @@ complete: false
 index: null
 ---
 [[#|Previous]]   [[#|Next]]
+
 ### Summary
 For [prime numbers](/labyrinth/notes/math/others/prime_numbers)
 $$
@@ -19,6 +20,7 @@ a^{\varphi(n)} \equiv 1 \pmod n, \ where \ gcd(a,n) = 1 \\
 k^a\equiv k^b \pmod n \iff a\equiv b \pmod {\varphi(n)} \qquad & \text{(Congruence in Exponentiation)}
 \end{gather*}
 $$
+
 ### Concept
 Number of integers [coprime](/labyrinth/notes/math/others/greatest_common_divisor#^449690) with $n$
 $$
@@ -33,6 +35,7 @@ Multiplicativity
 $$
 \varphi(mn)=\varphi(m)\varphi(n), \ where \ gcd(m, n) = 1
 $$
+
 ### Application
 Application in [RSA](/labyrinth/notes/math/others/RSA)
 $$

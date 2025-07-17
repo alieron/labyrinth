@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1521/applied_partial_differentiation)   [Next](/labyrinth/notes/math/ma1521/1st_order_ODE_II)
+
 ### Summary
 Special case of Fubini's theorem
 $$
@@ -36,7 +37,8 @@ R = \{\begin{array}{c|c} (r,\theta) & a\leq r\leq b \land \alpha \leq \theta \le
 \iint_{R}f(x,y) \ dA = \int_{\alpha}^{\beta} \int_{a}^{b} f(r\cos\theta,r\sin\theta)r \ dr  \ d\theta 
 \end{gather*}
 $$
-<img src="/labyrinth/assets/little_polar_rectangle.png" alt="little_polar_rectangle.png" class="mx-auto" style="width:300px;">
+<img src="/labyrinth/assets/little_polar_rectangle.png" alt="little_polar_rectangle.png" class="mx-auto object-fill" style="width:300px;" />
+
 ### Concept
 Fubini's theorem
 - volume over a rectangle
@@ -87,6 +89,7 @@ dS&=\|  \left\langle dx,0,f_{x}(x,y)dy \right\rangle \times  \left\langle 0,dy, 
 & = \sqrt{ (f_{x})^{2}+(f_{y})^{2}+1 } \ dA
 \end{align*}
 $$
+
 ### Application
 Evaluating iterated integral
 $$

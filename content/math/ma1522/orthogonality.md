@@ -6,6 +6,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/math/ma1522/matrix_spaces)   [Next](/labyrinth/notes/math/ma1522/orthogonal_bases)
+
 ### Summary
 Orthogonal set
 - vectors are pairwise orthogonal
@@ -27,6 +28,7 @@ Algorithm to check for orthogonality to a subspace
 $$
 \mathbf{A}^T\mathbf{v}=\mathbf{0} \implies \mathbf{v}\in \operatorname{Null}(\mathbf{A})
 $$
+
 ### Concept
 Orthogonal vectors
 $$
@@ -61,6 +63,7 @@ V^\perp & =\{\begin{array}{c|c}\mathbf{w}\in\mathbb{R}^n & \forall \mathbf{v}\in
 & = \operatorname{Null}(\mathbf{A}^T)
 \end{align*}
 $$
+
 ### Application
 Normalising an orthogonal set
 $$

@@ -7,6 +7,7 @@ complete: false
 index:
 ---
 [Previous](/labyrinth/notes/math/ma1522/orthogonal_diagonalization)   [Next](/labyrinth/notes/math/ma1522/singular_value_decomposition)
+
 ### Summary
 Algorithm to find the equilibrium vector/eigenvector associated to 1
 $$
@@ -33,6 +34,7 @@ a_{ij}=\begin{cases}
 \end{cases}
 $$
 > convert into a probability transition matrix by scaling each column such that the total is 1
+
 ### Concept
 Probability vector
 - all entries are nonnegative and sum to 1
@@ -105,11 +107,15 @@ $$
 Markov chain with regular stochastic matrix
 - will converge to the <span style="color:rgb(255, 69, 0)">unique</span> equilibrium vector
 
-###### Octave
+#
+
+##### Octave
 ```octave
+
 # Finding the equilibrium vector of a converging markov chain
 rref([P-eye(3), [0; 0; 0]; 1 1 1 1])
 ```
+
 ### Application
 Probability
 - Sheldon only patronizes three stalls in the school canteen, the mixed rice, noodle, and mala hotpot stall for lunch everyday. He never buys from same stall two days in a row. If he buys from the mixed rice stall on a certain day, there is a 40% chance he will patronize the noodles stall the next day. If he buys from the noodle stall on a certain day, there is a 50% chance he will eat mala hotpot the next day. If he eats mala hotpot on a certain day, there is a 60% chance he will patronize the mixed rice the next day. 

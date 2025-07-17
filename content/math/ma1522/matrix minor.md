@@ -5,6 +5,7 @@ tags:
 complete: false
 index: null
 ---
+
 ### Summary
 First minor ^c8b222
 - submatrix formed by deleting the ith row and jth column
@@ -16,6 +17,7 @@ Principal minor
 Leading principal minor
 - submatricies starting from the top left corner
 - and n by n matrix has n leading principal minors
+
 ### Application
 Computing first minor
 $$

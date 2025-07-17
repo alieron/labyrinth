@@ -5,6 +5,7 @@ tags:
 complete: true
 index: null
 ---
+
 ### Summary
 Alphabet
 - finite set of symbols
@@ -14,6 +15,7 @@ String
 
 Language ^f0c868
 - a set of strings over an alphabet
+
 ### Application
 Example
 $$

@@ -6,6 +6,7 @@ tags:
 complete: true
 index: null
 ---
+
 ### Summary
 Linear
 $$
@@ -27,6 +28,7 @@ T(n)&=2T\left(\frac{n}{2}\right)+O(1)\quad&&\implies O(n) \\
 T(n)&=2T\left(\frac{n}{2}\right)+O(n)\quad&&\implies O(n\log n)  
 \end{align*}
 $$
+
 ### Concept
 Fibonacci as a recurrance relation
 $$
@@ -53,6 +55,7 @@ $$
 $$
 T(n) = 2\cdot T\left( \frac{n}{2} \right) + O(n)
 $$
+
 ### Application
 Deriving recurrance relations, using [arithmetic](/labyrinth/notes/math/ma1301/arithmetic_series) and [geometric](/labyrinth/notes/math/ma1301/geometric_series) progression
 Linear
@@ -104,6 +107,7 @@ T(n) & = 2T\left( \frac{n}{2} \right) + O(n) \\
 \therefore \ & O(n) \times \log_{2} n = O(n\log_{2} n) \implies O(n\log n) \\
 \end{align*}
 $$
+
 ###### Math Note
 $$
 2^{\log_{2}n} = n, \ \frac{n}{2^{\log_{2}n}} = 1

@@ -7,6 +7,7 @@ complete: true
 index: null
 ---
 [Previous](/labyrinth/notes/cs/cs2030s/inheritance)   [Next](/labyrinth/notes/cs/cs2030s/LSP)
+
 ### Summary
 Dynamic type checking
 - check if the run-time type of x is a subtype of y
@@ -32,6 +33,7 @@ class Child extends Parent {
 
 Specific ^cc9566
 - method M is more specific than a method N if the arguments to M can be passed to N without compilation error
+
 ### Concept
 Overriding
 - replacing parent methods, <span style="color:red">with the same method signature</span>, in the child class
@@ -63,6 +65,7 @@ class {
 ```
 1. at compile-time, CTT(`curr`) = Object, search for the most specific `Object.equals()` method that accepts CTT(`obj`) = Object, store the method descriptor -> `Object::equals(Object)`
 2. at run-time, determine RTT(`curr`), look for the first accessible method that matches the descriptor, traverse up the class hierachy until found
+
 ### Application
 Object methods that are usually overriden
 `String toString()`
