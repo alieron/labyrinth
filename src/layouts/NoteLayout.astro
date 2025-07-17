@@ -4,14 +4,15 @@ import BaseLayout from "./BaseLayout.astro";
 import { ButtonLink } from "@/components/ui/button-link";
 
 type Props = {
+  title?: string;
   prev?: string;
   next?: string;
 };
 
-const { prev, next } = Astro.props;
+const { title, prev, next } = Astro.props;
 ---
 
-<BaseLayout>
+<BaseLayout {title}>
   <div class="flex flex-1 my-0">
     {/* Left Sidebar */}
     <div class="sticky flex-none top-32 h-fit w-9 ml-6 mr-4 mt-14">
