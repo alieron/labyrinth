@@ -45,13 +45,13 @@ export function rehypeTikzDiag() {
         }
 
         const wrapper = h('div', {
-          class: 'group relative my-2 rounded-md overflow-hidden bg-muted text-sm font-mono h-fit',
+          class: 'group relative rounded-md bg-muted h-fit',
         }, [
           createCopyButton(tikzText),
           h('div', {
-            class: 'overflow-x-auto p-4',
+            class: 'overflow-hidden',
           }, h('div', {
-            class: 'my-2',
+            class: 'p-4 overflow-x-auto',
             style: 'zoom:1.4;',
           }, diagram)
           ),

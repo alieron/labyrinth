@@ -76,17 +76,18 @@ export function rehypeCodeBlocks() {
         const highlighted = select('pre', codeHast) as Element | null;
         if (highlighted && highlighted.properties?.style) {
           delete highlighted.properties.style;
+          classnames(highlighted, 'overflow-x-auto p-4');
         }
 
         const wrapper = h('div', {
-          class: 'group relative my-2 rounded-md overflow-hidden bg-muted text-sm font-mono',
+          class: 'group relative rounded-md overflow-hidden bg-muted text-sm font-mono',
         }, [
           h('span', {
             class: 'absolute top-2 left-2 text-accent-foreground',
           }, lang), // display the user's chosen lang
           createCopyButton(codeText),
           h('div', {
-            class: 'overflow-x-auto mt-6 p-4',
+            class: 'overflow-hidden mt-6'
           }, highlighted),
         ]);
 
