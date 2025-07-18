@@ -6,7 +6,7 @@ import { resolveBase } from "@/utils/resolve";
 ---
 
 <header
-  class="bg-gradient-to-b from-background from-30% to-transparent sticky top-0 z-50 py-10 mb-10 flex items-center justify-between"
+  class="bg-gradient-to-b from-background from-30% to-transparent md:sticky top-0 z-50 py-10 mb-2 md:mb-10 flex items-center justify-between"
 >
   {/* Logo: backlink to homepage */}
   <div class="flex-none w-25 flex justify-center">
@@ -18,7 +18,7 @@ import { resolveBase } from "@/utils/resolve";
       <Logo class="size-8 text-foreground" />
     </a>
   </div>
-  {/* Theme Switcher */}
+  {/* Search + Theme Switcher */}
   <div class="flex-none w-25 flex justify-center gap-2">
     <SearchDialog />
     <ThemeToggle client:load />
