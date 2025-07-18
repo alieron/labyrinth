@@ -40,41 +40,39 @@ const items: tagEntry[] = [
 ---
 
 <Layout>
-  <div class="flex-1 max-w-5xl overflow-y-auto mx-auto">
-    <div class="px-6 mb-4">
-      <TagBreadcrumbs path={""} />
-      <div class="rounded-md border">
-        <table class="table-fixed border-collapse w-full">
-          <thead>
-            <tr class="text-left">
-              <th class="py-2 px-4 w-1/5">Name</th>
-              <th class="py-2 px-4 w-3/5">Tags</th>
-              <th class="py-2 px-4 w-1/5">Complete</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              items.map((item) => (
-                <tr class="border-t">
-                  <td class="py-2 px-4">
-                    <div class="flex flex-row items-center gap-2">
-                      <Tag className="flex-none w-4" />
-                      <a
-                        href={resolveBase(item.href)}
-                        class="text-nowrap overflow-hidden text-ellipsis text-ellipsis hover:text-primary"
-                      >
-                        {item.name}
-                      </a>
-                    </div>
-                  </td>
-                  <td class="pt-2 px-4 overflow-hidden" />
-                  <td class="py-2 px-4" />
-                </tr>
-              ))
-            }
-          </tbody>
-        </table>
-      </div>
+  <div class="px-4 mb-4">
+    <TagBreadcrumbs path={""} />
+    <div class="rounded-md border">
+      <table class="table-fixed border-collapse w-full">
+        <thead>
+          <tr class="text-left">
+            <th class="py-2 px-4 w-1/5">Name</th>
+            <th class="py-2 px-4 w-3/5">Tags</th>
+            <th class="py-2 px-4 w-1/5">Complete</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            items.map((item) => (
+              <tr class="border-t">
+                <td class="py-2 px-4">
+                  <div class="flex flex-row items-center gap-2">
+                    <Tag className="flex-none w-4" />
+                    <a
+                      href={resolveBase(item.href)}
+                      class="text-nowrap overflow-hidden text-ellipsis text-ellipsis hover:text-primary"
+                    >
+                      {item.name}
+                    </a>
+                  </div>
+                </td>
+                <td class="pt-2 px-4 overflow-hidden" />
+                <td class="py-2 px-4" />
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
     </div>
   </div>
 </Layout>
