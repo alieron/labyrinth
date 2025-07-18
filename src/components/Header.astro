@@ -1,18 +1,26 @@
 ---
 import ThemeToggle from "@/components/ThemeToggle";
+import SearchDialog from "@/components/SearchDialog";
 import Logo from "@/icons/Logo.astro";
 import { resolveBase } from "@/utils/resolve";
 ---
 
 <header
-  class="bg-gradient-to-b from-background from-30% to-transparent sticky top-0 z-50 px-6 py-10 mb-10 flex items-center justify-between"
+  class="bg-gradient-to-b from-background from-30% to-transparent sticky top-0 z-50 py-10 mb-10 flex items-center justify-between"
 >
   {/* Logo: backlink to homepage */}
-  <a href={resolveBase("/")} class="flex items-center gap-2 h-8" aria-label="home">
-    <Logo class="size-8 text-foreground" />
-  </a>
+  <div class="flex-none w-25 flex justify-center">
+    <a
+      href={resolveBase("/")}
+      class="flex items-center h-8"
+      aria-label="home"
+    >
+      <Logo class="size-8 text-foreground" />
+    </a>
+  </div>
   {/* Theme Switcher */}
-  <div class="flex gap-2">
+  <div class="flex-none w-25 flex justify-center gap-2">
+    <SearchDialog />
     <ThemeToggle client:load />
   </div>
 </header>
