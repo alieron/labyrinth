@@ -1,9 +1,9 @@
 ---
 tags:
-- cs1231s/chapter1
-- math/logic
-complete: false
-index: null
+  - cs1231s/chapter1
+  - math/logic
+complete: true
+index:
 ---
 [Previous](/labyrinth/notes/math/cs1231s/quantifications)   [Next](/labyrinth/notes/math/cs1231s/proof_by_induction)
 
@@ -182,4 +182,3 @@ C &\leq B
 & \therefore \text{Negation is false, claim is true}\\
 \end{align*}
 $$
-

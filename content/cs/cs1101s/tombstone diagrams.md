@@ -11,10 +11,10 @@ index: null
 Essentially, adjacent blocks must have the same language, you can't jump from one language to another without a compiler/interpreter.
 
 T-diagrams consist of combinations of the following four components:
-- _Programs_ which are implemented in a particular language (i.e. `Java`, `python`, `c/c++`)
-- Language **A** to language **B** _Interpreters_
-- Language **A** to language **B** _Compilers_ which are implemented in a language **C**
-- Physical _Machines_ implementing/running a particular language (i.e. x86-64, ARM-64)
+- **_Programs_** which are implemented in a particular language (i.e. `Java`, `Python`, `C/C++`)
+- Language **A** to language **B** **_Interpreters_**
+- Language **A** to language **B** **_Compilers_** which are implemented in a language **C**
+- Physical **_Machines_** implementing/running a particular language (i.e. `x86-64`, `ARM-64`)
 
 <img src="/labyrinth/assets/tombstone_diag.png" alt="tombstone_diag.png" class="mx-auto object-fill" style="width:500px;" />
 

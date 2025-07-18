@@ -2,6 +2,7 @@
 tags:
   - cs1231s/chapter2
   - math/set_theory
+  - lang/pgf-tikz
 complete: true
 index:
 ---
@@ -26,7 +27,7 @@ $$
 \def\loopsize{6mm}
 \newcommand\round[4][-]%
   {
-	\draw[] ($(.) + {cos()}*(0, {0.71*(\loopsize/2)}) - {sin()}*({0.71*(\loopsize/2)}, 0)$) arc (180+:180+:\loopsize/2) ;
+	\draw[#1] ($(#2.#3) + {cos(#3)}*(0, {0.71*(\loopsize/2)}) - {sin(#3)}*({0.71*(\loopsize/2)}, 0)$) arc (180+#3-45:180+#3-45-270:\loopsize/2) #4;
   }
 \begin{document}
 \begin{tikzpicture}[auto, node distance=2cm]
@@ -54,7 +55,7 @@ Directed graph
 
 $$
 \begin{gather*}
-(V, \ D) \ where \ V \ is \ set \ of \ verticies \ and \ D \ is \ bianry \ relation \ on \ V \\
+(V, \ D) \ where \ V \ is \ set \ of \ verticies \ and \ D \ is \ binary \ relation \ on \ V \\
 \\
 ({\color{royalblue}\{ a,b,c,d \}}, \ {\color{violet} \{ (a, \ a), (a,\ b), (a,\ c), (c, a), (d,\ d) \}})
 \end{gather*}

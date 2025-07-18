@@ -1,9 +1,9 @@
 ---
 tags:
-- ma1521/chapter10
-- math/calculus
-complete: false
-index: null
+  - ma1521/chapter10
+  - math/calculus
+complete: true
+index:
 ---
 [Previous](/labyrinth/notes/math/ma1521/double_integrals)
 

@@ -58,14 +58,10 @@ Functor
 ### Application
 Equivalence of monad/functors statements
 ```java
-m.map(x -> f(x)).map(x -> g(x)) <==> m.flatMap(x -> Monad.of(f(x))).flatMap(x -> Monad.of(g(x)))
-// implementation of map as flatMap(x -> Monad.of(f.transform(x)))
-                                <==> m.flatMap(x -> Monad.of(f(x)).flatMap(x -> Monad.of(g(x))))
-// associative law
-                                <==> m.flatMap(x -> Monad.of(g(f(x)))
-// left identity law
-								<==> m.map(x -> g(f(x)))
-// implementation of map
+m.map(x -> f(x)).map(x -> g(x)) <==> m.flatMap(x -> Monad.of(f(x))).flatMap(x -> Monad.of(g(x))) // implementation of map as flatMap(x -> Monad.of(f.transform(x)))
+                                <==> m.flatMap(x -> Monad.of(f(x)).flatMap(x -> Monad.of(g(x)))) // associative law
+                                <==> m.flatMap(x -> Monad.of(g(f(x))) // left identity law
+                                <==> m.map(x -> g(f(x))) // implementation of map
 ```
 
 Implementations of flatMap

@@ -1,9 +1,9 @@
 ---
 tags:
-- cs1231s/chapter0
-- math/number_theory
+  - cs1231s/chapter0
+  - math/fundamentals
 complete: true
-index: null
+index:
 ---
 [Next](/labyrinth/notes/math/cs1231s/propositions)
 

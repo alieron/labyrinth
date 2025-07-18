@@ -1,9 +1,9 @@
 ---
 tags:
-- ma1522/chapter2
-- math/linear_algebra
-complete: false
-index: null
+  - ma1522/chapter2
+  - math/linear_algebra
+complete: true
+index:
 ---
 
 ### Summary

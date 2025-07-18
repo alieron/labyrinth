@@ -2,6 +2,7 @@
 tags:
   - cs1231s/chapter2
   - math/set_theory
+  - lang/pgf-tikz
 complete: false
 index:
 ---

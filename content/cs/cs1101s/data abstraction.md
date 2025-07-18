@@ -4,6 +4,7 @@ tags:
   - cs/models
   - cs1101s/chapter2
   - lang/js
+  - lang/pgf-tikz
 complete: true
 index:
 ---

@@ -19,17 +19,17 @@ Upper-bounded wildcard
 - `?` can be substituted for a subtype of `T`
 - mimicking covariance
 ```java
-A<? extends T>
+L<? extends A>
 ```
 $$
 \begin{gather*}
-& \verb|A<T>| <: \verb|A<? extends T>| \\
+& \verb|L<A>| <: \verb|L<? extends A>| \\
 \\
-\text{Covariance:} \quad & \verb|S|<:\verb|T| \\
-& \verb|A<S>|<:\verb|A<? extends S>| <: \verb|A<? extends T>| \\
+\text{Covariance:} \quad & \verb|B|<:\verb|A| \\
+& \verb|L<B>|<:\verb|L<? extends B>| <: \verb|L<? extends A>| \\
 \\
-& \verb|A<S>| <: \verb|A<? extends T>| & \verb|S|\text{ can replace }\verb|?|\\
-& \verb|A<T>| \centernot{<:} \verb|A<? extends S>| & \verb|T|\text{ cannot replace }\verb|?|
+& \verb|L<B>| <: \verb|L<? extends A>| & \verb|B|\text{ can replace }\verb|?|\\
+& \verb|L<A>| \centernot{<:} \verb|L<? extends B>| & \verb|A|\text{ cannot replace }\verb|?|
 \end{gather*}
 $$
 <img src="/labyrinth/assets/extends.png" alt="extends.png" class="mx-auto object-fill" style="" />
@@ -42,13 +42,13 @@ A<? super T>
 ```
 $$
 \begin{gather*}
-& \verb|A<T>| <: \verb|A<? super T>| \\
+& \verb|L<A>| <: \verb|A<? super T>| \\
 \\
-\text{Contravariance:} \quad & \verb|S|<:\verb|T| \\
-& \verb|A<T>|<:\verb|A<? super T>| <: \verb|A<? super S>| \\
+\text{Contravariance:} \quad & \verb|B|<:\verb|A| \\
+& \verb|L<T>|<:\verb|L<? super A>| <: \verb|L<? super B>| \\
 \\
-& \verb|A<T>| <: \verb|A<? super S>| & \verb|T|\text{ can replace }\verb|?|\\
-& \verb|A<S>| \centernot{<:} \verb|A<? super T>| & \verb|S|\text{ cannot replace }\verb|?|
+& \verb|L<A>| <: \verb|L<? super B>| & \verb|A|\text{ can replace }\verb|?|\\
+& \verb|L<B>| \centernot{<:} \verb|L<? super A>| & \verb|B|\text{ cannot replace }\verb|?|
 \end{gather*}
 $$
 <img src="/labyrinth/assets/super.png" alt="super.png" class="mx-auto object-fill" style="" />
@@ -56,20 +56,20 @@ $$
 ### Concept
 Java generics classes are [invariant](/labyrinth/notes/cs/cs2030s/wrapper_classes#^f8f5bb)
 $$
-\verb|A<T>| \centernot{<:} \verb|A<S>| \quad \text{and} \quad \verb|A<S>| \centernot{<:} \verb|A<T>|
+\verb|L<A>| \centernot{<:} \verb|L<B>| \quad \text{and} \quad \verb|L<B>| \centernot{<:} \verb|L<A>|
 $$
 
 Unbounded wildcard
 - `?` can be substituted for any type
 ```java
-A<?>
+L<?>
 ```
 $$
 \begin{gather*}
-\verb|A<T>|<:\verb|A<?>| \\
+\verb|L<A>|<:\verb|L<?>| \\
 \\
-\verb|A<? extends T>|<:\verb|A<?>| \\
-\verb|A<? super T>|<:\verb|A<?>| \\
+\verb|L<? extends A>|<:\verb|L<?>| \\
+\verb|L<? super A>|<:\verb|L<?>| \\
 \end{gather*}
 $$
 
@@ -78,7 +78,7 @@ Diamond operator
 - makes code less verbose
 - Java will figure out what types to put in
 ```java
-A<T> a = new A<>();
+L<A> a = new L<>();
 ```
 
 Type inference

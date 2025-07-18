@@ -1,8 +1,8 @@
 ---
 tags:
-  - lang/octave
-  - ma1522/chapter6
   - math/linear_algebra
+  - ma1522/chapter6
+  - lang/octave
 complete: false
 index:
 ---
