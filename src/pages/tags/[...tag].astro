@@ -10,7 +10,7 @@ import { resolveBase } from "@/utils/resolve";
 
 export async function getStaticPaths() {
   const notes = await getCollection("notes");
-  const tagSet = new Set<string>(["/"]); // add the root page
+  const tagSet = new Set<string>();
 
   for (const note of notes) {
     for (const tag of note.data.tags ?? []) {
@@ -45,7 +45,7 @@ const matchingNotes = notes.filter((note) =>
 const nestedTags = new Set<string>();
 for (const note of matchingNotes) {
   for (const noteTag of note.data.tags ?? []) {
-    if (noteTag.slice(0, tag.length + 1) === tag + "/") {
+    if (noteTag.slice(0, tag.length + 1) === tag + "/" || tag === "") {
       const parts = noteTag.slice(tag.length).replace(/^\//, "").split("/");
       if (parts.length > 0 && parts[0] !== "") {
         nestedTags.add(parts[0]);

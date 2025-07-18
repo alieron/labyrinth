@@ -1,0 +1,80 @@
+---
+import { getCollection } from "astro:content";
+import { Tag } from "lucide-react";
+import Layout from "@/layouts/Layout.astro";
+import TagBreadcrumbs from "@/components/TagBreadcrumbs.astro";
+import { resolveBase } from "@/utils/resolve";
+
+const notes = await getCollection("notes");
+
+// Tags nested immediately under the current tag
+const rootTags = new Set<string>();
+for (const note of notes) {
+  for (const noteTag of note.data.tags ?? []) {
+    const parts = noteTag.replace(/^\//, "").split("/");
+    if (parts.length > 0 && parts[0] !== "") {
+      rootTags.add(parts[0]);
+    }
+  }
+}
+
+type tagEntry = {
+  type: "tag";
+  name: string;
+  href: string;
+};
+
+// Only top level tags
+const items: tagEntry[] = [
+  ...Array.from(rootTags)
+    .map(
+      (name) =>
+        ({
+          type: "tag",
+          name,
+          href: `/tags/${name}`,
+        }) as tagEntry,
+    )
+    .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase())),
+];
+---
+
+<Layout>
+  <div class="flex-1 max-w-5xl overflow-y-auto mx-auto">
+    <div class="px-6 mb-4">
+      <TagBreadcrumbs path={""} />
+      <div class="rounded-md border">
+        <table class="table-fixed border-collapse w-full">
+          <thead>
+            <tr class="text-left">
+              <th class="py-2 px-4 w-1/5">Name</th>
+              <th class="py-2 px-4 w-3/5">Tags</th>
+              <th class="py-2 px-4 w-1/5">Complete</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              items.map((item) => (
+                <tr class="border-t">
+                  <td class="py-2 px-4">
+                    <div class="flex flex-row items-center gap-2">
+                      <Tag className="flex-none w-4" />
+                      <a
+                        href={resolveBase(item.href)}
+                        class="text-nowrap overflow-hidden text-ellipsis text-ellipsis hover:text-primary"
+                      >
+                        {item.name}
+                      </a>
+                    </div>
+                  </td>
+                  <td class="pt-2 px-4 overflow-hidden" />
+                  <td class="py-2 px-4" />
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</Layout>
