@@ -35,11 +35,19 @@ const { Content, remarkPluginFrontmatter } = await render(note);
   {/* Title */}
   <div class="px-4 mb-4">
     <NoteBreadcrumbs path={path} isFolder={false} />
-    <h1 class="text-4xl font-bold tracking-tight">
-      {remarkPluginFrontmatter.title}
-    </h1>
-    <div class="mt-2 flex flex-col gap-4 text-sm text-muted-foreground">
-      <CompletionBadge completion={note.data.complete} />
+    <div class="flex items-center gap-4 w-full">
+      <div class="min-w-0 shrink">
+        <h1
+          class="text-4xl font-bold tracking-tight truncate whitespace-nowrap"
+        >
+          {remarkPluginFrontmatter.title}
+        </h1>
+      </div>
+      <div class="flex-none">
+        <CompletionBadge completion={note.data.complete} />
+      </div>
+    </div>
+    <div class="mt-2 text-base text-muted-foreground">
       {
         note.data.tags.length > 0 && (
           <div class="flex flex-wrap items-center gap-2">

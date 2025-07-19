@@ -1,6 +1,6 @@
 ---
 import { Badge } from "@/components/ui/badge";
-import { CircleCheck, Clock } from "lucide-react";
+import { CircleCheck, CircleDashed } from "lucide-react";
 
 type Props = {
   completion: boolean;
@@ -17,7 +17,7 @@ const { completion } = Astro.props;
     </Badge>
   ) : (
     <Badge className="bg-orange-50 text-orange-700 dark:bg-orange-300/20 dark:text-orange-400">
-      <Clock />
+      <CircleDashed />
       Work in Progress
     </Badge>
   )
