@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 import { File, Folder, Minus } from "lucide-react";
 import Layout from "@/layouts/Layout.astro";
 import CompletionBadge from "@/components/CompletionBadge.astro";
@@ -41,6 +41,41 @@ const currentNotes = notes.filter((note) => {
   return parts.slice(0, -1).join("/") === path;
 });
 
+const noteMap = new Map(currentNotes.map((note) => [toSlug(trimRelPath(note.filePath)?.split('/').pop()) ?? note.id, note]));
+
+// Identify notes that are in the nav chain
+const linkedNoteIds = new Set<string>();
+let orderedNotes: typeof currentNotes = [];
+
+// Find the start of the chain
+const firstNote = currentNotes.find(
+  (n) => n.data.prev === undefined && n.data.next !== undefined && noteMap.has(n.data.next.split('/').pop() as string)
+);
+
+if (firstNote) {
+  let current: CollectionEntry<"notes"> | null = firstNote;
+  while (current) {
+    const id = toSlug(trimRelPath(current.filePath)?.split('/').pop()) ?? current.id;
+    if (linkedNoteIds.has(id)) break; // prevent cycles
+    linkedNoteIds.add(id);
+    orderedNotes.push(current);
+    currentNotes.splice(currentNotes.indexOf(current), 1); // remove
+    const nextId = current.data.next?.split('/').pop();
+    current = nextId && noteMap.has(nextId) ? noteMap.get(nextId)! : null;
+  }
+}
+
+// Add unlinked notes alphabetically
+const remainingNotes = currentNotes
+  .filter((note) => !linkedNoteIds.has(trimRelPath(note.filePath) ?? note.id))
+  .sort((a, b) => {
+    const aName = (trimRelPath(a.filePath) ?? a.id).toLowerCase();
+    const bName = (trimRelPath(b.filePath) ?? b.id).toLowerCase();
+    return aName.localeCompare(bName);
+  });
+
+const finalNotes = [...orderedNotes, ...remainingNotes];
+
 // Immediate subfolders inside the current folder
 const subfolders = new Set<string>();
 for (const note of notes) {
@@ -78,18 +113,16 @@ const items: (folderEntry | noteEntry)[] = [
         }) as folderEntry,
     )
     .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase())),
-  ...currentNotes
-    .map((note) => {
-      const path = trimRelPath(note.filePath) ?? note.id;
-      return {
-        type: "note",
-        name: path.split("/").pop(),
-        href: `/notes/${toSlug(path)}`,
-        tags: note.data.tags || [],
-        complete: note.data.complete,
-      } as noteEntry;
-    })
-    .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase())),
+  ...finalNotes.map((note) => {
+    const path = trimRelPath(note.filePath) ?? note.id;
+    return {
+      type: "note",
+      name: path.split("/").pop(),
+      href: `/notes/${toSlug(path)}`,
+      tags: note.data.tags || [],
+      complete: note.data.complete,
+    } as noteEntry;
+  }),
 ];
 ---
 

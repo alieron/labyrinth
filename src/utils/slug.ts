@@ -4,8 +4,8 @@ export function trimRelPath(str: string | undefined): string | undefined {
     .replace(/(\.md)$/, ""); // Trim .md extension
 }
 
-export function toSlug(str: string): string {
-  return str
+export function toSlug(str: string | undefined): string | undefined {
+  return str && str
     .trim()
     .replace(/\s+/g, '_') // Replace spaces with underscores
     .replace(/[\u0000-\u001F\u007F]+/g, '') // Remove control characters

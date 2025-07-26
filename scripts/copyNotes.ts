@@ -64,7 +64,7 @@ function copyAssetIfExists(filename: string) {
       ) {
         const dest = path.join(ASSET_OUTPUT_PATH, filename);
         fs.copyFileSync(fullPath, dest);
-        console.log(`🖼️  Copied asset: ${filename}`);
+        console.log(`🖼️ Copied asset: ${filename}`);
         found = true;
         return;
       }
@@ -74,14 +74,14 @@ function copyAssetIfExists(filename: string) {
   walkAndCopyAsset(VAULT_PATH);
 
   if (!found) {
-    console.warn(`⚠️  Asset not found: ${filename}`);
+    console.warn(`⚠️ Asset not found: ${filename}`);
   }
 }
 
 function resolveLinks(content: string): string {
   const wikilinkRegex = /(?<!\!)\[\[([^\]|#]+?)(?:\.md)?(?:#([^\]|]+))?(?:\|([^\]]+))?\]\]/g;
   const standardLinkRegex = /\[(.+?)\]\(([^)#]+?)(?:\.md)?(?:#([^\)]+))?\)/g;
-  const imageEmbedRegex = /!\[\[([^|\]]+)(?:\|(\d*)(?:x(\d*))?)?\]\]/g;
+  const imageEmbedRegex = /!\[\[([^|\]]+)(?:\|\d*(?:x\d*)?)?\]\]/g;
 
   // Convert standard markdown links
   content = content.replace(standardLinkRegex, (match, alias, filePath, heading) => {
@@ -95,15 +95,24 @@ function resolveLinks(content: string): string {
   // Convert wikilinks
   content = content.replace(wikilinkRegex, (_, filePath, heading, alias) => toResolvedLink(filePath, alias, heading));
 
-  // Convert image embeds
-  content = content.replace(imageEmbedRegex, (_, name, width, height) => {
-    const assetPath = resolveBase(`/assets/${name}`);
-    let dimensionProps = width ? ` width=\"${width}\"` : '';
-    dimensionProps += height ? `  height=\"${height}\"` : '';
-    return `<img src="${assetPath}" alt="${name}" class="mx-auto object-fill" style="${width ? `width:${width}px;${height ? `aspect-ratio:${width}/${height}` : ''}` : ''}" />`
+  return content;
+}
+
+function extractNavLinks(content: string): { rawContent: string; prev?: string; next?: string } {
+  let prev;
+  let next;
+
+  content = content.replace(/\[Previous\]\((.+?)\)/, (_, link) => {
+    if (link && link !== '#') prev = link;
+    return '';
   });
 
-  return content;
+  content = content.replace(/\[Next\]\((.+?)\)/, (_, link) => {
+    if (link && link !== '#') next = link;
+    return '';
+  });
+
+  return { rawContent: content, prev, next };
 }
 
 // Step 1: Walk and collect all markdown files from whitelist
@@ -126,7 +135,7 @@ for (const entry of WHITELIST) {
 // Step 2: Build NOTE_MAP
 for (const { relative } of FILE_LIST) {
   const key = path.basename(relative, '.md');
-  const value = toSlug(relative.replace(/\\/g, '/').replace(/\.md$/, ''));
+  const value = toSlug(relative.replace(/\\/g, '/').replace(/\.md$/, '')) ?? '';
   NOTE_MAP.set(key, value);
 }
 
@@ -141,10 +150,27 @@ for (const { full, relative, dest } of FILE_LIST) {
     copyAssetIfExists(match[1]);
   }
 
-  const processed = resolveLinks(content)
-    .replace(/([^\n])\n?(#{1,6}\s)/gm, '$1\n\n$2'); // Ensure that headings are preceded by a newline
+  const resolvedContent = resolveLinks(content).replace(/([^\n])\n?(#{1,6}\s)/gm, '$1\n\n$2');
+  const { rawContent, prev, next } = extractNavLinks(resolvedContent);
+
+  const frontmatterMatch = resolvedContent.match(/^---\n([\s\S]*?)\n---\n/);
+  let body = rawContent;
+  let newFrontmatter = `${prev ? `prev: ${prev}` : ''}\n${next ? `next: ${next}` : ''}`.trim();
+  if (frontmatterMatch) {
+    const existing = frontmatterMatch[1];
+    const updated = existing
+      .replace(/^prev:.*\n?/m, '')
+      .replace(/^next:.*\n?/m, '')
+      .trim();
+    newFrontmatter = `---\n${updated}\n${newFrontmatter}\n---\n`;
+    body = rawContent.replace(/^---\n[\s\S]*?\n---\n/, '');
+  } else {
+    newFrontmatter = `---\n${newFrontmatter}\n---\n`;
+  }
+
+  const finalContent = newFrontmatter + '\n' + body;
   fs.mkdirSync(path.dirname(dest), { recursive: true });
-  fs.writeFileSync(dest, processed, 'utf-8');
+  fs.writeFileSync(dest, finalContent, 'utf-8');
   console.log(`📄 Processed and copied: ${relative}`);
 }
 
