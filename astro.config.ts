@@ -7,6 +7,7 @@ import remarkMath from 'remark-math';
 // Custom plugins
 import { remarkTitle } from './src/plugins/title';
 import { remarkNextPrev } from './src/plugins/next-prev';
+import { remarkEmbedImages } from './src/plugins/images';
 import { remarkHighlight } from './src/plugins/highlight';
 import { remarkRemoveComments } from './src/plugins/comment';
 import { remarkCodeBlocks, rehypeCodeBlocks } from './src/plugins/codeblock';
@@ -30,6 +31,7 @@ export default defineConfig({
     remarkPlugins: [
       remarkTitle,
       remarkNextPrev,
+      remarkEmbedImages,
       remarkSplitParagraphs,
       remarkHighlight,
       remarkRemoveComments,

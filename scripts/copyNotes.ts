@@ -64,7 +64,7 @@ function copyAssetIfExists(filename: string) {
       ) {
         const dest = path.join(ASSET_OUTPUT_PATH, filename);
         fs.copyFileSync(fullPath, dest);
-        console.log(`🖼️  Copied asset: ${filename}`);
+        console.log(`🖼️ Copied asset: ${filename}`);
         found = true;
         return;
       }
@@ -74,14 +74,14 @@ function copyAssetIfExists(filename: string) {
   walkAndCopyAsset(VAULT_PATH);
 
   if (!found) {
-    console.warn(`⚠️  Asset not found: ${filename}`);
+    console.warn(`⚠️ Asset not found: ${filename}`);
   }
 }
 
 function resolveLinks(content: string): string {
   const wikilinkRegex = /(?<!\!)\[\[([^\]|#]+?)(?:\.md)?(?:#([^\]|]+))?(?:\|([^\]]+))?\]\]/g;
   const standardLinkRegex = /\[(.+?)\]\(([^)#]+?)(?:\.md)?(?:#([^\)]+))?\)/g;
-  const imageEmbedRegex = /!\[\[([^|\]]+)(?:\|(\d*)(?:x(\d*))?)?\]\]/g;
+  const imageEmbedRegex = /!\[\[([^|\]]+)(?:\|\d*(?:x\d*)?)?\]\]/g;
 
   // Convert standard markdown links
   content = content.replace(standardLinkRegex, (match, alias, filePath, heading) => {
@@ -94,14 +94,6 @@ function resolveLinks(content: string): string {
 
   // Convert wikilinks
   content = content.replace(wikilinkRegex, (_, filePath, heading, alias) => toResolvedLink(filePath, alias, heading));
-
-  // Convert image embeds
-  content = content.replace(imageEmbedRegex, (_, name, width, height) => {
-    const assetPath = resolveBase(`/assets/${name}`);
-    let dimensionProps = width ? ` width=\"${width}\"` : '';
-    dimensionProps += height ? `  height=\"${height}\"` : '';
-    return `<img src="${assetPath}" alt="${name}" class="mx-auto object-fill" style="${width ? `width:${width}px;${height ? `aspect-ratio:${width}/${height}` : ''}` : ''}" />`
-  });
 
   return content;
 }

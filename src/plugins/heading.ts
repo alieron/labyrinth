@@ -1,5 +1,5 @@
 import { visit } from 'unist-util-visit';
-import type { Root as MDRoot, Text } from 'mdast';
+import type { Root as MDRoot, PhrasingContent, Text, Html } from 'mdast';
 import type { Root as HRoot, Element } from 'hast';
 import { classnames } from 'hast-util-classnames';
 
@@ -10,7 +10,7 @@ export function remarkJumpPoints() {
     visit(tree, 'text', (node: Text, index, parent) => {
       if (!parent || parent.type !== "paragraph" || !node.value.includes('^')) return;
 
-      const newNodes: any[] = [];
+      const newNodes: PhrasingContent[] = [];
       let lastIndex = 0;
       let match: RegExpExecArray | null;
 
@@ -20,19 +20,19 @@ export function remarkJumpPoints() {
         const end = match.index + fullMatch.length;
 
         if (start > lastIndex) {
-          newNodes.push({ type: 'text', value: node.value.slice(lastIndex, start) });
+          newNodes.push({ type: 'text', value: node.value.slice(lastIndex, start) } satisfies Text);
         }
 
         newNodes.push({
           type: 'html',
           value: `<span id="^${id}" class="scroll-mt-33" aria-hidden="true"/>`,
-        });
+        } satisfies Html);
 
         lastIndex = end;
       }
 
       if (lastIndex < node.value.length) {
-        newNodes.push({ type: 'text', value: node.value.slice(lastIndex) });
+        newNodes.push({ type: 'text', value: node.value.slice(lastIndex) } satisfies Text);
       }
 
       parent.children.splice(index!, 1, ...newNodes);
