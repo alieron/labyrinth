@@ -3,9 +3,11 @@ tags:
 - ma1521/chapter8
 - math/calculus
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1521/partial_derivatives
+next: /labyrinth/notes/math/ma1521/double_integrals
 ---
-[Previous](/labyrinth/notes/math/ma1521/partial_derivatives)   [Next](/labyrinth/notes/math/ma1521/double_integrals)
+
+   
 
 ### Summary
 Directional derivative and gradient vector

@@ -4,9 +4,11 @@ tags:
 - cs2030s/chapter11
 - lang/java
 complete: false
-index: null
+prev: /labyrinth/notes/cs/cs2030s/monads_and_functors
+next: /labyrinth/notes/cs/cs2030s/async
 ---
-[Previous](/labyrinth/notes/cs/cs2030s/monads_and_functors)   [Next](/labyrinth/notes/cs/cs2030s/async)
+
+   
 
 ### Summary
 Embarrassingly parallel
@@ -114,13 +116,13 @@ Sequential
 Concurrent
 - in order, but switching between tasks very fast
 - different threads
-<img src="/labyrinth/assets/concurrent.png" alt="concurrent.png" class="mx-auto object-fill" style="width:600px;" />
+![[concurrent.png|600]]
 
 Parallel
 - multiple processes running simultaneously
 - requires multiple cores/precessors
 - parallel programs are concurrent
-<img src="/labyrinth/assets/parallel.png" alt="parallel.png" class="mx-auto object-fill" style="width:600px;" />
+![[parallel.png|600]]
 
 Parallel [stream](/labyrinth/notes/cs/cs2030s/streams_II)
 - operations must not interfere with data in the stream

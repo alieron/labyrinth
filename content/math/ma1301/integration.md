@@ -3,9 +3,11 @@ tags:
 - ma1301/chapter3
 - math/calculus
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1301/optimization
+next: /labyrinth/notes/math/ma1301/integration_by_parts
 ---
-[Previous](/labyrinth/notes/math/ma1301/optimization)   [Next](/labyrinth/notes/math/ma1301/integration_by_parts)
+
+   
 
 ### Summary
 Standard integrals

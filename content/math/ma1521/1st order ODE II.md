@@ -1,11 +1,12 @@
 ---
 tags:
-  - ma1521/chapter10
-  - math/calculus
+- ma1521/chapter10
+- math/calculus
 complete: true
-index:
+prev: /labyrinth/notes/math/ma1521/double_integrals
 ---
-[Previous](/labyrinth/notes/math/ma1521/double_integrals)
+
+
 
 Succeeds: [1st order ODE](/labyrinth/notes/math/ma1301/1st_order_ODE)
 

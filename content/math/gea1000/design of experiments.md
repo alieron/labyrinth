@@ -3,9 +3,10 @@ tags:
 - gea1000/chapter1
 - math/statistics
 complete: true
-index: null
+next: /labyrinth/notes/math/gea1000/rates
 ---
-[Next](/labyrinth/notes/math/gea1000/rates)
+
+
 
 ### Summary
 Changes of [univariate](/labyrinth/notes/math/gea1000/univariate_analysis) summary statistics, and [bivariate](/labyrinth/notes/math/gea1000/bivariate_analysis) r and m 

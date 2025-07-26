@@ -3,9 +3,11 @@ tags:
 - ma1521/chapter1
 - math/calculus
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1521/functions
+next: /labyrinth/notes/math/ma1521/limits_at_∞
 ---
-[Previous](/labyrinth/notes/math/ma1521/functions)   [Next](/labyrinth/notes/math/ma1521/limits_at_∞)
+
+   
 
 ### Summary
 Rules ^c0031f
@@ -69,7 +71,7 @@ $$
 \lim_{ x \to c } h(x)=\lim_{ x \to c } g(x)=L \implies \lim_{ x \to c } f(x)=L
 \end{gather*}
 $$
-<img src="/labyrinth/assets/squeeze_theorem.png" alt="squeeze_theorem.png" class="mx-auto object-fill" style="" />
+![[squeeze_theorem.png]]
 
 Intermmediate value theorem
 $$

@@ -3,8 +3,9 @@ tags:
 - ma1301/chapter1
 - math/algebra
 complete: true
-index: null
+
 ---
+
 
 ### Summary
 Linear / Quadratic

@@ -3,9 +3,10 @@ tags:
 - ma1522/chapter7
 - math/linear_algebra
 complete: false
-index: null
+prev: /labyrinth/notes/math/ma1522/linear_transformation
 ---
-[Previous](/labyrinth/notes/math/ma1522/linear_transformation)
+
+
 
 ### Summary
 Rank and injectivity/surjectivity

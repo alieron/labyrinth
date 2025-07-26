@@ -3,9 +3,11 @@ tags:
 - ma1522/chapter3
 - math/linear_algebra
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1522/determinants
+next: /labyrinth/notes/math/ma1522/linear_combinations
 ---
-[Previous](/labyrinth/notes/math/ma1522/determinants)   [Next](/labyrinth/notes/math/ma1522/linear_combinations)
+
+   
 
 ### Summary
 Rules of vector algebra, same as [vectors in R³](/labyrinth/notes/math/ma1301/vectors_in_R³)

@@ -3,9 +3,11 @@ tags:
 - ma1301/chapter4
 - math/linear_algebra
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1301/1st_order_ODE
+next: /labyrinth/notes/math/ma1301/unit_vectors
 ---
-[Previous](/labyrinth/notes/math/ma1301/1st_order_ODE)   [Next](/labyrinth/notes/math/ma1301/unit_vectors)
+
+   
 
 ### Summary
 3d vectors

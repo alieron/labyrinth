@@ -3,9 +3,11 @@ tags:
 - ma1301/chapter4
 - math/linear_algebra
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1301/cross_product
+next: /labyrinth/notes/math/ma1301/planes_in_R³
 ---
-[Previous](/labyrinth/notes/math/ma1301/cross_product)   [Next](/labyrinth/notes/math/ma1301/planes_in_R³)
+
+   
 
 ### Summary
 Vector equation of a line
@@ -81,7 +83,7 @@ l_{2}: \quad & \ r = 4\mathbf{i}+\mathbf{j}+10\mathbf{k} + u(\mathbf{i}+3\mathbf
 $$
 
 Foot of a perpendicular from a point to a line/projection of a point on the line
-<img src="/labyrinth/assets/perpendicular_foot.png" alt="perpendicular_foot.png" class="mx-auto object-fill" style="" />
+![[perpendicular_foot.png]]
 $$
 \begin{align*}
 l: \quad & \ r = \mathbf{i}-3\mathbf{j}+2\mathbf{k} + t(-\mathbf{i}-\mathbf{j}+3\mathbf{k})\\

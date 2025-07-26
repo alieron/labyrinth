@@ -3,9 +3,11 @@ tags:
 - ma1522/chapter2
 - math/linear_algebra
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1522/inverse_of_square_matrices
+next: /labyrinth/notes/math/ma1522/LU_factorization
 ---
-[Previous](/labyrinth/notes/math/ma1522/inverse_of_square_matrices)   [Next](/labyrinth/notes/math/ma1522/LU_factorization)
+
+   
 
 ### Summary
 Elaboration of [row equivalent](/labyrinth/notes/math/ma1522/gaussian_elimination#^151bcb)

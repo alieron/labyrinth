@@ -1,11 +1,13 @@
 ---
 tags:
-  - cs1231s/chapter1
-  - math/logic
+- cs1231s/chapter1
+- math/logic
 complete: true
-index:
+prev: /labyrinth/notes/math/cs1231s/quantifications
+next: /labyrinth/notes/math/cs1231s/proof_by_induction
 ---
-[Previous](/labyrinth/notes/math/cs1231s/quantifications)   [Next](/labyrinth/notes/math/cs1231s/proof_by_induction)
+
+   
 
 ### Summary
 Proving [implications](/labyrinth/notes/math/cs1231s/conditionals#^8a163c)

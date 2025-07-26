@@ -3,9 +3,11 @@ tags:
 - ma1521/chapter2
 - math/calculus
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1521/limits_at_∞
+next: /labyrinth/notes/math/ma1521/applied_differentiation
 ---
-[Previous](/labyrinth/notes/math/ma1521/limits_at_∞)   [Next](/labyrinth/notes/math/ma1521/applied_differentiation)
+
+   
 
 Succeeds: [differentiation](/labyrinth/notes/math/ma1301/differentiation)
 

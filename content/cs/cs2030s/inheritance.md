@@ -4,9 +4,11 @@ tags:
 - cs2030s/chapter2
 - lang/java
 complete: true
-index: null
+prev: /labyrinth/notes/cs/cs2030s/classes
+next: /labyrinth/notes/cs/cs2030s/polymorphism
 ---
-[Previous](/labyrinth/notes/cs/cs2030s/classes)   [Next](/labyrinth/notes/cs/cs2030s/polymorphism)
+
+   
 
 ### Summary
 Subtype relationship

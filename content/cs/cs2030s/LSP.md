@@ -5,9 +5,11 @@ tags:
 - cs2030s/chapter3
 - lang/java
 complete: true
-index: null
+prev: /labyrinth/notes/cs/cs2030s/polymorphism
+next: /labyrinth/notes/cs/cs2030s/class_abstraction
 ---
-[Previous](/labyrinth/notes/cs/cs2030s/polymorphism)   [Next](/labyrinth/notes/cs/cs2030s/class_abstraction)
+
+   
 
 ### Summary
 A child class is substitutable for its parent if it does not violate any of the expected properties of its parent

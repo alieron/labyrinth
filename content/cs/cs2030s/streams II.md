@@ -4,9 +4,11 @@ tags:
 - cs2030s/chapter9
 - lang/java
 complete: false
-index: null
+prev: /labyrinth/notes/cs/cs2030s/monads_and_functors
+next: /labyrinth/notes/cs/cs2030s/parallelism
 ---
-[Previous](/labyrinth/notes/cs/cs2030s/monads_and_functors)   [Next](/labyrinth/notes/cs/cs2030s/parallelism)
+
+   
 
 Succeeds: [streams](/labyrinth/notes/cs/cs1101s/streams)
 

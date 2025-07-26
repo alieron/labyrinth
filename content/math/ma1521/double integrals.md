@@ -3,9 +3,11 @@ tags:
 - ma1521/chapter9
 - math/calculus
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1521/applied_partial_differentiation
+next: /labyrinth/notes/math/ma1521/1st_order_ODE_II
 ---
-[Previous](/labyrinth/notes/math/ma1521/applied_partial_differentiation)   [Next](/labyrinth/notes/math/ma1521/1st_order_ODE_II)
+
+   
 
 ### Summary
 Special case of Fubini's theorem
@@ -37,7 +39,7 @@ R = \{\begin{array}{c|c} (r,\theta) & a\leq r\leq b \land \alpha \leq \theta \le
 \iint_{R}f(x,y) \ dA = \int_{\alpha}^{\beta} \int_{a}^{b} f(r\cos\theta,r\sin\theta)r \ dr  \ d\theta 
 \end{gather*}
 $$
-<img src="/labyrinth/assets/little_polar_rectangle.png" alt="little_polar_rectangle.png" class="mx-auto object-fill" style="width:300px;" />
+![[little_polar_rectangle.png|300]]
 
 ### Concept
 Fubini's theorem

@@ -3,9 +3,11 @@ tags:
 - cs/algorithms
 - cs1101s/chapter2
 complete: false
-index: null
+prev: /labyrinth/notes/cs/cs1101s/searching
+next: /labyrinth/notes/cs/cs1101s/mutable_data
 ---
-[Previous](/labyrinth/notes/cs/cs1101s/searching)   [Next](/labyrinth/notes/cs/cs1101s/mutable_data)
+
+   
 
 ### Summary
 $$

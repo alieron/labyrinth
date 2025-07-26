@@ -4,9 +4,10 @@ tags:
 - cs2030s/chapter12
 - lang/java
 complete: false
-index: null
+prev: /labyrinth/notes/cs/cs2030s/async
 ---
-[Previous](/labyrinth/notes/cs/cs2030s/async)
+
+
 
 ### Summary
 RecursiveTask

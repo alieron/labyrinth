@@ -3,9 +3,11 @@ tags:
 - ma1522/chapter4
 - math/linear_algebra
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1522/dimensions
+next: /labyrinth/notes/math/ma1522/orthogonality
 ---
-[Previous](/labyrinth/notes/math/ma1522/dimensions)   [Next](/labyrinth/notes/math/ma1522/orthogonality)
+
+   
 
 ### Summary
 Column space

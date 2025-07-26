@@ -5,9 +5,11 @@ tags:
 - cs1101s/chapter1
 - lang/js
 complete: true
-index: null
+prev: /labyrinth/notes/cs/cs1101s/substitution_model
+next: /labyrinth/notes/cs/cs1101s/orders_of_growth
 ---
-[Previous](/labyrinth/notes/cs/cs1101s/substitution_model)   [Next](/labyrinth/notes/cs/cs1101s/orders_of_growth)
+
+   
 
 ### Summary
 Recursive
@@ -88,7 +90,7 @@ F(n) = \lfloor\frac{\phi^n}{\sqrt{5}}+\frac{1}{2}\rfloor \ , \quad \phi = \frac{
 \end{align}
 $$
 
-<img src="/labyrinth/assets/fib.png" alt="fib.png" class="mx-auto object-fill" style="" />
+![[fib.png]]
 
 2. Iterative solution
 ```js

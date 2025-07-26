@@ -3,9 +3,11 @@ tags:
 - gea1000/chapter2
 - math/statistics
 complete: true
-index: null
+prev: /labyrinth/notes/math/gea1000/design_of_experiments
+next: /labyrinth/notes/math/gea1000/confounders
 ---
-[Previous](/labyrinth/notes/math/gea1000/design_of_experiments)   [Next](/labyrinth/notes/math/gea1000/confounders)
+
+   
 
 ### Summary
 $$

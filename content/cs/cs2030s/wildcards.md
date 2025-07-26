@@ -4,9 +4,11 @@ tags:
 - cs2030s/chapter6
 - lang/java
 complete: true
-index: null
+prev: /labyrinth/notes/cs/cs2030s/generics
+next: /labyrinth/notes/cs/cs2030s/immutable_classes
 ---
-[Previous](/labyrinth/notes/cs/cs2030s/generics)   [Next](/labyrinth/notes/cs/cs2030s/immutable_classes)
+
+   
 
 ### Summary
 PECS
@@ -32,7 +34,7 @@ $$
 & \verb|L<A>| \centernot{<:} \verb|L<? extends B>| & \verb|A|\text{ cannot replace }\verb|?|
 \end{gather*}
 $$
-<img src="/labyrinth/assets/extends.png" alt="extends.png" class="mx-auto object-fill" style="" />
+![[extends.png]]
 
 Lower-bounded wildcard
 - `?` can be substituted for a supertype of `T`
@@ -51,7 +53,7 @@ $$
 & \verb|L<B>| \centernot{<:} \verb|L<? super A>| & \verb|B|\text{ cannot replace }\verb|?|
 \end{gather*}
 $$
-<img src="/labyrinth/assets/super.png" alt="super.png" class="mx-auto object-fill" style="" />
+![[super.png]]
 
 ### Concept
 Java generics classes are [invariant](/labyrinth/notes/cs/cs2030s/wrapper_classes#^f8f5bb)

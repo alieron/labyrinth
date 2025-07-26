@@ -3,9 +3,11 @@ tags:
 - gea1000/chapter2
 - math/statistics
 complete: true
-index: null
+prev: /labyrinth/notes/math/gea1000/rates
+next: /labyrinth/notes/math/gea1000/univariate_analysis
 ---
-[Previous](/labyrinth/notes/math/gea1000/rates)   [Next](/labyrinth/notes/math/gea1000/univariate_analysis)
+
+   
 
 ### Summary
 Third variable C associated with both A and B, A may not actually be associated with B

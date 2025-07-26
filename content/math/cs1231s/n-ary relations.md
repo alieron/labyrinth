@@ -3,9 +3,11 @@ tags:
 - cs1231s/chapter2
 - math/set_theory
 complete: true
-index: null
+prev: /labyrinth/notes/math/cs1231s/sets
+next: /labyrinth/notes/math/cs1231s/binary_relations
 ---
-[Previous](/labyrinth/notes/math/cs1231s/sets)   [Next](/labyrinth/notes/math/cs1231s/binary_relations)
+
+   
 
 ### Summary
 n-ary relation

@@ -3,8 +3,9 @@ tags:
 - math/algebra
 - math/fundamentals
 complete: true
-index: null
+
 ---
+
 
 ### Summary
 Basic Rules

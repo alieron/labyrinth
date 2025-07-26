@@ -3,9 +3,10 @@ tags:
 - cs1231s/chapter4
 - math/graph_theory
 complete: false
-index: null
+prev: /labyrinth/notes/math/cs1231s/graphs
 ---
-[Previous](/labyrinth/notes/math/cs1231s/graphs)   [[#|Next]]
+
+   [[#|Next]]
 
 ### Summary
 $$

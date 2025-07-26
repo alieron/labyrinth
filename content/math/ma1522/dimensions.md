@@ -3,9 +3,11 @@ tags:
 - ma1522/chapter3
 - math/linear_algebra
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1522/transition_matrices
+next: /labyrinth/notes/math/ma1522/matrix_spaces
 ---
-[Previous](/labyrinth/notes/math/ma1522/transition_matrices)   [Next](/labyrinth/notes/math/ma1522/matrix_spaces)
+
+   
 
 ### Summary
 Relations between subspaces

@@ -3,9 +3,11 @@ tags:
 - ma1301/chapter3
 - math/calculus
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1301/integration_by_parts
+next: /labyrinth/notes/math/ma1301/area_under_curve
 ---
-[Previous](/labyrinth/notes/math/ma1301/integration_by_parts)   [Next](/labyrinth/notes/math/ma1301/area_under_curve)
+
+   
 
 ### Summary
 Basic rules

@@ -3,9 +3,11 @@ tags:
 - ma1522/chapter6
 - math/linear_algebra
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1522/least_square_approximation
+next: /labyrinth/notes/math/ma1522/diagonalization
 ---
-[Previous](/labyrinth/notes/math/ma1522/least_square_approximation)   [Next](/labyrinth/notes/math/ma1522/diagonalization)
+
+   
 
 ### Summary
 Characteristic polynomial

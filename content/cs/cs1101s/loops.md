@@ -5,9 +5,11 @@ tags:
 - cs1101s/chapter3
 - lang/js
 complete: true
-index: null
+prev: /labyrinth/notes/cs/cs1101s/mutable_data
+next: /labyrinth/notes/cs/cs1101s/environment_model
 ---
-[Previous](/labyrinth/notes/cs/cs1101s/mutable_data)   [Next](/labyrinth/notes/cs/cs1101s/environment_model)
+
+   
 
 ### Summary
 For loops

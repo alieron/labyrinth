@@ -3,9 +3,11 @@ tags:
 - ma1301/chapter3
 - math/calculus
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1301/volume_of_revolution
+next: /labyrinth/notes/math/ma1301/vectors_in_R³
 ---
-[Previous](/labyrinth/notes/math/ma1301/volume_of_revolution)   [Next](/labyrinth/notes/math/ma1301/vectors_in_R³)
+
+   
 
 ### Summary
 Equations containing $\frac{dy}{dx}$ and $x$ and/or $y$, solve using [integration](/labyrinth/notes/math/ma1301/integration)

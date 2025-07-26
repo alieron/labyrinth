@@ -3,9 +3,11 @@ tags:
 - ma1301/chapter3
 - math/calculus
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1301/integration
+next: /labyrinth/notes/math/ma1301/definite_integrals
 ---
-[Previous](/labyrinth/notes/math/ma1301/integration)   [Next](/labyrinth/notes/math/ma1301/definite_integrals)
+
+   
 
 ### Summary
 Integration by substitution, involes [differentiation](/labyrinth/notes/math/ma1301/differentiation)

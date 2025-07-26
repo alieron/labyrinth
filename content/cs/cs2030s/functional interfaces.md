@@ -4,9 +4,11 @@ tags:
 - cs2030s/chapter8
 - lang/java
 complete: false
-index: null
+prev: /labyrinth/notes/cs/cs2030s/nested_classes
+next: /labyrinth/notes/cs/cs2030s/monads_and_functors
 ---
-[Previous](/labyrinth/notes/cs/cs2030s/nested_classes)   [Next](/labyrinth/notes/cs/cs2030s/monads_and_functors)
+
+   
 
 ### Summary
 Functional interfaces

@@ -3,9 +3,11 @@ tags:
 - cs1231s/chapter3
 - math/set_theory
 complete: false
-index: null
+prev: /labyrinth/notes/math/cs1231s/infinite_sets
+next: /labyrinth/notes/math/cs1231s/permutations_&_combinations
 ---
-[Previous](/labyrinth/notes/math/cs1231s/infinite_sets)   [Next](/labyrinth/notes/math/cs1231s/permutations_&_combinations)
+
+   
 
 ### Summary
 $$

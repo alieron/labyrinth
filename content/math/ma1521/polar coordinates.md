@@ -3,12 +3,13 @@ tags:
 - ma1521/chapter9
 - math/fundamentals
 complete: true
-index: null
+
 ---
+
 
 ### Summary
 Polar coordinate system
-<img src="/labyrinth/assets/polar_coords.png" alt="polar_coords.png" class="mx-auto object-fill" style="" />
+![[polar_coords.png]]
 
 Converting between cartesian and polar
 $$
@@ -25,4 +26,4 @@ Polar rectangle
 $$
 R = \{\begin{array}{c|c} (r,\theta) & a\leq r\leq b \land \alpha \leq \theta \leq\beta \end{array}\}
 $$
-<img src="/labyrinth/assets/polar_rectangle.png" alt="polar_rectangle.png" class="mx-auto object-fill" style="width:400px;" />
+![[polar_rectangle.png|400]]

@@ -3,9 +3,11 @@ tags:
 - ma1301/chapter2
 - math/calculus
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1301/cartesian_differentiation
+next: /labyrinth/notes/math/ma1301/optimization
 ---
-[Previous](/labyrinth/notes/math/ma1301/cartesian_differentiation)   [Next](/labyrinth/notes/math/ma1301/optimization)
+
+   
 
 ### Summary
 $$
@@ -60,7 +62,7 @@ Tangents: \quad y & = 1(x-2)+(-2) = x-4 \\
 y & = 1(x-(-2))+2 = x+4\\
 \end{align*}
 $$
-<img src="/labyrinth/assets/tangents_graph.png" alt="tangents_graph.png" class="mx-auto object-fill" style="width:500px;" />
+![[tangents_graph.png|500]]
 
 Tangents for $y^2-4xy+8x^2=100$ which are parallel to the y-axis
 $$
@@ -85,7 +87,7 @@ Tangents : \quad x & = 0(y - 10)+5 = 5 \\
 x & = 0(y-(-10))+(-5) = -5\\
 \end{align*}
 $$
-<img src="/labyrinth/assets/tangent_graph2.png" alt="tangent_graph2.png" class="mx-auto object-fill" style="width:500px;" />
+![[tangent_graph2.png|500]]
 
 Linear approximation of $101^2$ and $\sqrt{ 101 }$, using tangent
 $$

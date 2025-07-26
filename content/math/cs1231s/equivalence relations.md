@@ -1,11 +1,13 @@
 ---
 tags:
-  - cs1231s/chapter2
-  - math/set_theory
+- cs1231s/chapter2
+- math/set_theory
 complete: true
-index:
+prev: /labyrinth/notes/math/cs1231s/binary_relations
+next: /labyrinth/notes/math/cs1231s/ordering
 ---
-[Previous](/labyrinth/notes/math/cs1231s/binary_relations)   [Next](/labyrinth/notes/math/cs1231s/ordering)
+
+   
 
 ### Summary
 Equivalance relation

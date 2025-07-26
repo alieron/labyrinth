@@ -5,9 +5,11 @@ tags:
 - cs1101s/chapter4
 - lang/js
 complete: true
-index: null
+prev: /labyrinth/notes/cs/cs1101s/streams
+next: /labyrinth/notes/cs/cs1101s/metalinguistic_abstraction
 ---
-[Previous](/labyrinth/notes/cs/cs1101s/streams)   [Next](/labyrinth/notes/cs/cs1101s/metalinguistic_abstraction)
+
+   
 
 ### Summary
 Basic memory read and write for binary functions
@@ -63,7 +65,7 @@ function mchoose(n, k) {
 	}
 } 
 ```
-<img src="/labyrinth/assets/memo_choose.png" alt="memo_choose.png" class="mx-auto object-fill" style="" />
+![[memo_choose.png]]
 $\Theta((n-k)k)=\Theta(nk-k^2)\implies O(nk)$ oog in time and space
 
 Unary function memoizer and tribonacci series

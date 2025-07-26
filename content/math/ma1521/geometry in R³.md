@@ -3,9 +3,11 @@ tags:
 - ma1521/chapter7
 - math/geometry
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1521/power_series
+next: /labyrinth/notes/math/ma1521/vector-valued_functions
 ---
-[Previous](/labyrinth/notes/math/ma1521/power_series)   [Next](/labyrinth/notes/math/ma1521/vector-valued_functions)
+
+   
 
 ### Summary
 Rules for [vectors in R³](/labyrinth/notes/math/ma1301/vectors_in_R³)

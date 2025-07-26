@@ -1,11 +1,12 @@
 ---
 tags:
-  - cs1231s/chapter0
-  - math/fundamentals
+- cs1231s
+- math/fundamentals
 complete: true
-index:
+next: /labyrinth/notes/math/cs1231s/propositions
 ---
-[Next](/labyrinth/notes/math/cs1231s/propositions)
+
+
 
 ### Summary
 Definition

@@ -3,9 +3,11 @@ tags:
 - gea1000/chapter4
 - math/statistics
 complete: true
-index: null
+prev: /labyrinth/notes/math/gea1000/ecological_correlation
+next: /labyrinth/notes/math/gea1000/confidence_intervals
 ---
-[Previous](/labyrinth/notes/math/gea1000/ecological_correlation)   [Next](/labyrinth/notes/math/gea1000/confidence_intervals)
+
+   
 
 ### Summary
 $$

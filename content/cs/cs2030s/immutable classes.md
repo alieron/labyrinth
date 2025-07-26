@@ -4,9 +4,11 @@ tags:
 - cs2030s/chapter7
 - lang/java
 complete: true
-index: null
+prev: /labyrinth/notes/cs/cs2030s/wildcards
+next: /labyrinth/notes/cs/cs2030s/nested_classes
 ---
-[Previous](/labyrinth/notes/cs/cs2030s/wildcards)   [Next](/labyrinth/notes/cs/cs2030s/nested_classes)
+
+   
 
 ### Summary
 Factory methods

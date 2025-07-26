@@ -3,9 +3,11 @@ tags:
 - ma1522/chapter3
 - math/linear_algebra
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1522/subspaces
+next: /labyrinth/notes/math/ma1522/basis_vectors
 ---
-[Previous](/labyrinth/notes/math/ma1522/subspaces)   [Next](/labyrinth/notes/math/ma1522/basis_vectors)
+
+   
 
 ### Summary
 Algorithm to check for linear independence

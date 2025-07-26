@@ -3,9 +3,11 @@ tags:
 - ma1521/chapter3
 - math/calculus
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1521/differentiation_II
+next: /labyrinth/notes/math/ma1521/integration_II
 ---
-[Previous](/labyrinth/notes/math/ma1521/differentiation_II)   [Next](/labyrinth/notes/math/ma1521/integration_II)
+
+   
 
 ### Summary
 Equations of [tangent and normal](/labyrinth/notes/math/ma1301/tangent_and_normal)

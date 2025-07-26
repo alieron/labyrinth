@@ -3,9 +3,10 @@ tags:
 - ma1301/chapter1
 - math/calculus
 complete: true
-index: null
+next: /labyrinth/notes/math/ma1301/geometric_series
 ---
-[Next](/labyrinth/notes/math/ma1301/geometric_series)
+
+
 
 ### Summary
 Basic formulae

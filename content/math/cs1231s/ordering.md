@@ -3,9 +3,11 @@ tags:
 - cs1231s/chapter2
 - math/set_theory
 complete: true
-index: null
+prev: /labyrinth/notes/math/cs1231s/equivalence_relations
+next: /labyrinth/notes/math/cs1231s/function_relations
 ---
-[Previous](/labyrinth/notes/math/cs1231s/equivalence_relations)   [Next](/labyrinth/notes/math/cs1231s/function_relations)
+
+   
 
 ### Summary
 Additional properties of binary relations

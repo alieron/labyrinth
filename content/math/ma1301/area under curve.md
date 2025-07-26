@@ -3,9 +3,11 @@ tags:
 - ma1301/chapter3
 - math/calculus
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1301/definite_integrals
+next: /labyrinth/notes/math/ma1301/volume_of_revolution
 ---
-[Previous](/labyrinth/notes/math/ma1301/definite_integrals)   [Next](/labyrinth/notes/math/ma1301/volume_of_revolution)
+
+   
 
 ### Summary
 Area enclosed/bounded by the curve and x-asix
@@ -35,7 +37,7 @@ if \ f(x) \geq 0 \ &on \ [a, b],\\
 \therefore take \ \left|\int_{a}^b f(x) \ dx \right|, \ if &\ f(x) < 0 \ on \ [a, b]
 \end{align*}
 $$
-<img src="/labyrinth/assets/area_under_curve.png" alt="area_under_curve.png" class="mx-auto object-fill" style="width:500px;" />
+![[area_under_curve.png|500]]
 
 Quadrants of the $xy$ plane
 $$

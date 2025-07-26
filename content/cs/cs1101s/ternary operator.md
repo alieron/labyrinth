@@ -4,9 +4,10 @@ tags:
 - cs1101s/chapter1
 - lang/js
 complete: true
-index: null
+next: /labyrinth/notes/cs/cs1101s/substitution_model
 ---
-[Next](/labyrinth/notes/cs/cs1101s/substitution_model)
+
+
 
 ### Summary
 $$

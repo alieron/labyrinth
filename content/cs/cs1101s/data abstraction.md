@@ -1,14 +1,16 @@
 ---
 tags:
-  - cs/data_structures
-  - cs/models
-  - cs1101s/chapter2
-  - lang/js
-  - lang/pgf-tikz
+- cs/data_structures
+- cs/models
+- cs1101s/chapter2
+- lang/js
+- lang/pgf-tikz
 complete: true
-index:
+prev: /labyrinth/notes/cs/cs1101s/higher_order_functions
+next: /labyrinth/notes/cs/cs1101s/searching
 ---
-[Previous](/labyrinth/notes/cs/cs1101s/higher_order_functions)   [Next](/labyrinth/notes/cs/cs1101s/searching)
+
+   
 
 ### Summary
 Pairs

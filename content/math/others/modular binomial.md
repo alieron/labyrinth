@@ -2,8 +2,9 @@
 tags:
 - math/modular_arithmetic
 complete: false
-index: null
+
 ---
+
 [[#|Previous]]   [[#|Next]]
 
 ### Summary

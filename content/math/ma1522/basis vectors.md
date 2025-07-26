@@ -3,9 +3,11 @@ tags:
 - ma1522/chapter3
 - math/linear_algebra
 complete: false
-index: null
+prev: /labyrinth/notes/math/ma1522/linear_independence
+next: /labyrinth/notes/math/ma1522/transition_matrices
 ---
-[Previous](/labyrinth/notes/math/ma1522/linear_independence)   [Next](/labyrinth/notes/math/ma1522/transition_matrices)
+
+   
 
 ### Summary
 Standard basis ^709a91

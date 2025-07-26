@@ -3,9 +3,11 @@ tags:
 - ma1522/chapter3
 - math/linear_algebra
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1522/linear_combinations
+next: /labyrinth/notes/math/ma1522/linear_independence
 ---
-[Previous](/labyrinth/notes/math/ma1522/linear_combinations)   [Next](/labyrinth/notes/math/ma1522/linear_independence)
+
+   
 
 ### Summary
 Properties of a subspace

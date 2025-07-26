@@ -3,8 +3,9 @@ tags:
 - ma1522/chapter2
 - math/linear_algebra
 complete: true
-index: null
+
 ---
+
 
 ### Summary
 Diagonal matrices ^7a3e46

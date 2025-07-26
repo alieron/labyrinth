@@ -4,9 +4,11 @@ tags:
 - ma1522/chapter6
 - math/linear_algebra
 complete: false
-index: null
+prev: /labyrinth/notes/math/ma1522/markov_chains
+next: /labyrinth/notes/math/ma1522/linear_transformation
 ---
-[Previous](/labyrinth/notes/math/ma1522/markov_chains)   [Next](/labyrinth/notes/math/ma1522/linear_transformation)
+
+   
 
 ### Summary
 SVD

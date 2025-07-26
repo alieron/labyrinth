@@ -4,9 +4,11 @@ tags:
 - cs2030s/chapter3
 - lang/java
 complete: true
-index: null
+prev: /labyrinth/notes/cs/cs2030s/inheritance
+next: /labyrinth/notes/cs/cs2030s/LSP
 ---
-[Previous](/labyrinth/notes/cs/cs2030s/inheritance)   [Next](/labyrinth/notes/cs/cs2030s/LSP)
+
+   
 
 ### Summary
 Dynamic type checking

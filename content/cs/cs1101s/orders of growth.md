@@ -5,9 +5,11 @@ tags:
 - cs1101s/chapter1
 - lang/js
 complete: true
-index: null
+prev: /labyrinth/notes/cs/cs1101s/recursion
+next: /labyrinth/notes/cs/cs1101s/higher_order_functions
 ---
-[Previous](/labyrinth/notes/cs/cs1101s/recursion)   [Next](/labyrinth/notes/cs/cs1101s/higher_order_functions)
+
+   
 
 ### Summary
 Common orders of growth
@@ -51,21 +53,21 @@ describes **BOTH** the upper and lower bound of a function, sometimes referred t
 $$
 k_{1} \cdot g(n) \leq r(n) \leq k_{2} \cdot g(n) \quad for \quad n > n_{0}
 $$
-<img src="/labyrinth/assets/theta_n.png" alt="theta_n.png" class="mx-auto object-fill" style="" />
+![[theta_n.png]]
 
 ##### Big Omega Notation $\Omega(n)$
 describe the **asymptotic lower bound** of an algorithm, or its best-case scenario
 $$
 0 \leq k \cdot g(n) \leq r(n)  \quad for \quad n > n_{0}
 $$
-<img src="/labyrinth/assets/omega_n.png" alt="omega_n.png" class="mx-auto object-fill" style="" />
+![[omega_n.png]]
 
 ##### Big O Notation $O(n)$
 describe the **asymptotic upper bound** of an algorithm, or its worst-case scenario
 $$
 0 \leq r(n) \leq k \cdot g(n) \quad for \quad n > n_{0}
 $$
-<img src="/labyrinth/assets/o_n.png" alt="o_n.png" class="mx-auto object-fill" style="" />
+![[o_n.png]]
 > Also minor terms, ie. in $O(n^2+4n+5)$, $4n$ and $5$ are not relevant since we can choose $n_0$ to overrule them
 
 #

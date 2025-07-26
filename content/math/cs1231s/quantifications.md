@@ -3,9 +3,11 @@ tags:
 - cs1231s/chapter1
 - math/logic
 complete: true
-index: null
+prev: /labyrinth/notes/math/cs1231s/conditionals
+next: /labyrinth/notes/math/cs1231s/fundemental_methods_of_proof
 ---
-[Previous](/labyrinth/notes/math/cs1231s/conditionals)   [Next](/labyrinth/notes/math/cs1231s/fundemental_methods_of_proof)
+
+   
 
 ### Summary
 Universal statements

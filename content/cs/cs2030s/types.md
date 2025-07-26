@@ -4,9 +4,10 @@ tags:
 - cs2030s/chapter1
 - lang/java
 complete: true
-index: null
+next: /labyrinth/notes/cs/cs2030s/classes
 ---
-[Next](/labyrinth/notes/cs/cs2030s/classes)
+
+
 
 ### Summary
 Subtype ^078dcb

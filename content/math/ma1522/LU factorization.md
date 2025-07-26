@@ -3,9 +3,11 @@ tags:
 - ma1522/chapter2
 - math/linear_algebra
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1522/elementary_matrices
+next: /labyrinth/notes/math/ma1522/determinants
 ---
-[Previous](/labyrinth/notes/math/ma1522/elementary_matrices)   [Next](/labyrinth/notes/math/ma1522/determinants)
+
+   
 
 ### Summary
 LU factorizable

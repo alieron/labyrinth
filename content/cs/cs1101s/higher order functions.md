@@ -4,9 +4,11 @@ tags:
 - cs1101s/chapter1
 - lang/js
 complete: true
-index: null
+prev: /labyrinth/notes/cs/cs1101s/orders_of_growth
+next: /labyrinth/notes/cs/cs1101s/data_abstraction
 ---
-[Previous](/labyrinth/notes/cs/cs1101s/orders_of_growth)   [Next](/labyrinth/notes/cs/cs1101s/data_abstraction)
+
+   
 
 ### Summary
 HOFs

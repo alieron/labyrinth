@@ -3,9 +3,11 @@ tags:
 - ma1522/chapter2
 - math/linear_algebra
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1522/matrix_multiplication
+next: /labyrinth/notes/math/ma1522/matrix_equations
 ---
-[Previous](/labyrinth/notes/math/ma1522/matrix_multiplication)   [Next](/labyrinth/notes/math/ma1522/matrix_equations)
+
+   
 
 ### Summary
 Rules

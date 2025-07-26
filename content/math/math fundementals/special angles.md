@@ -3,8 +3,9 @@ tags:
 - math/fundamentals
 - math/geometry
 complete: true
-index: null
+
 ---
+
 
 ### Summary
 $$
@@ -14,7 +15,7 @@ $$
 \tan \theta & = \frac{opp}{adj} \\
 \end{align*}
 $$
-<img src="/labyrinth/assets/special_angles.png" alt="special_angles.png" class="mx-auto object-fill" style="" />
+![[special_angles.png]]
 $$
 \begin{array}{ c | c | c | c}
 \theta & \frac{\pi}{6} & \frac{\pi}{4} & \frac{\pi}{3} \\
@@ -27,4 +28,4 @@ $$
 \end{array}
 $$
 
-<img src="/labyrinth/assets/sin_cos_tan.png" alt="sin_cos_tan.png" class="mx-auto object-fill" style="width:500px;" />
+![[sin_cos_tan.png|500]]

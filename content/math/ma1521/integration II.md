@@ -3,9 +3,11 @@ tags:
 - ma1521/chapter4
 - math/calculus
 complete: false
-index: null
+prev: /labyrinth/notes/math/ma1521/applied_differentiation
+next: /labyrinth/notes/math/ma1521/improper_integrals
 ---
-[Previous](/labyrinth/notes/math/ma1521/applied_differentiation)   [Next](/labyrinth/notes/math/ma1521/improper_integrals)
+
+   
 
 Succeeds: [integration](/labyrinth/notes/math/ma1301/integration)
 

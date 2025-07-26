@@ -1,11 +1,12 @@
 ---
 tags:
-  - cs1231s/chapter2
-  - math/set_theory
-  - lang/pgf-tikz
+- cs1231s/chapter2
+- math/set_theory
+- lang/pgf-tikz
 complete: true
-index:
+
 ---
+
 
 ### Summary
 Undirected graph

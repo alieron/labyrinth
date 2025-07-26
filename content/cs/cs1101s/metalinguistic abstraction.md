@@ -1,11 +1,12 @@
 ---
 tags:
-  - cs/models
-  - cs1101s/chapter4
+- cs/models
+- cs1101s/chapter4
 complete: true
-index:
+prev: /labyrinth/notes/cs/cs1101s/memoization
 ---
-[Previous](/labyrinth/notes/cs/cs1101s/memoization)
+
+
 
 ### Summary
 1. Symbol initialization - variables are noted, temporarily "unassigned"

@@ -1,11 +1,12 @@
 ---
 tags:
-- ma1521/chapter0
+- ma1521
 - math/algebra
 complete: true
-index: null
+next: /labyrinth/notes/math/ma1521/functions
 ---
-[Next](/labyrinth/notes/math/ma1521/functions)
+
+
 
 ### Summary
 $$

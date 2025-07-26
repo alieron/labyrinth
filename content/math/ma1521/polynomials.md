@@ -1,11 +1,12 @@
 ---
 tags:
-- ma1521/chapter0
+- ma1521
 - math/calculus
 - math/fundamentals
 complete: true
-index: null
+
 ---
+
 
 ### Summary
 Polynomial of degree n

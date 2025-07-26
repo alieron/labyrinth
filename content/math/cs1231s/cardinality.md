@@ -1,11 +1,13 @@
 ---
 tags:
-  - cs1231s/chapter3
-  - math/number_theory
+- cs1231s/chapter3
+- math/number_theory
 complete: false
-index:
+prev: /labyrinth/notes/math/cs1231s/function_relations
+next: /labyrinth/notes/math/cs1231s/infinite_sets
 ---
-[Previous](/labyrinth/notes/math/cs1231s/function_relations)   [Next](/labyrinth/notes/math/cs1231s/infinite_sets)
+
+   
 
 ### Summary
 Cardinality ^695995

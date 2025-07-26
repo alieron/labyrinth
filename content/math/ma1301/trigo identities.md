@@ -3,8 +3,9 @@ tags:
 - ma1301/chapter2
 - math/geometry
 complete: true
-index: null
+
 ---
+
 
 ### Summary
 $$
@@ -52,4 +53,4 @@ $$
 
 ### Concept
 Relates to [special angles](/labyrinth/notes/math/math_fundementals/special_angles)
-<img src="/labyrinth/assets/trigo_diagram.png" alt="trigo_diagram.png" class="mx-auto object-fill" style="width:500px;" />
+![[trigo_diagram.png|500]]

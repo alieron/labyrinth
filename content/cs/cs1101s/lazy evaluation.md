@@ -5,8 +5,9 @@ tags:
 - cs1101s/chapter1
 - lang/js
 complete: true
-index: null
+
 ---
+
 
 ### Summary
 Control flow

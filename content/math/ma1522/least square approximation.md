@@ -3,9 +3,11 @@ tags:
 - ma1522/chapter5
 - math/linear_algebra
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1522/QR_factorization
+next: /labyrinth/notes/math/ma1522/eigenvectors
 ---
-[Previous](/labyrinth/notes/math/ma1522/QR_factorization)   [Next](/labyrinth/notes/math/ma1522/eigenvectors)
+
+   
 
 ### Summary
 Least square solution

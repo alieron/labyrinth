@@ -3,9 +3,11 @@ tags:
 - ma1522/chapter6
 - math/linear_algebra
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1522/eigenvectors
+next: /labyrinth/notes/math/ma1522/orthogonal_diagonalization
 ---
-[Previous](/labyrinth/notes/math/ma1522/eigenvectors)   [Next](/labyrinth/notes/math/ma1522/orthogonal_diagonalization)
+
+   
 
 ### Summary
 Diagonalizable

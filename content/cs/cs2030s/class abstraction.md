@@ -4,9 +4,11 @@ tags:
 - cs2030s/chapter3
 - lang/java
 complete: true
-index: null
+prev: /labyrinth/notes/cs/cs2030s/LSP
+next: /labyrinth/notes/cs/cs2030s/wrapper_classes
 ---
-[Previous](/labyrinth/notes/cs/cs2030s/LSP)   [Next](/labyrinth/notes/cs/cs2030s/wrapper_classes)
+
+   
 
 ### Summary
 Abstract classes/methods
@@ -59,7 +61,7 @@ $$
 $$
 > a type can have multiple direct supertypes
 
-<img src="/labyrinth/assets/abstractclass_interfaces.png" alt="abstractclass_interfaces.png" class="mx-auto object-fill" style="" />
+![[abstractclass_interfaces.png]]
 
 ### Concept
 Why?

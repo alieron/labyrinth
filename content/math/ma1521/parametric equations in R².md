@@ -4,8 +4,9 @@ tags:
 - math/algebra
 - math/fundamentals
 complete: true
-index: null
+
 ---
+
 
 ### Summary
 Circles ^fb55c7

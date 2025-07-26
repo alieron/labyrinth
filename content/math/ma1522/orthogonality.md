@@ -3,9 +3,11 @@ tags:
 - ma1522/chapter5
 - math/linear_algebra
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1522/matrix_spaces
+next: /labyrinth/notes/math/ma1522/orthogonal_bases
 ---
-[Previous](/labyrinth/notes/math/ma1522/matrix_spaces)   [Next](/labyrinth/notes/math/ma1522/orthogonal_bases)
+
+   
 
 ### Summary
 Orthogonal set

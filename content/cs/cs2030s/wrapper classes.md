@@ -4,9 +4,11 @@ tags:
 - cs2030s/chapter4
 - lang/java
 complete: true
-index: null
+prev: /labyrinth/notes/cs/cs2030s/class_abstraction
+next: /labyrinth/notes/cs/cs2030s/exceptions
 ---
-[Previous](/labyrinth/notes/cs/cs2030s/class_abstraction)   [Next](/labyrinth/notes/cs/cs2030s/exceptions)
+
+   
 
 ### Summary
 Reference types for primitives

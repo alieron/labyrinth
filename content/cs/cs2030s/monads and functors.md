@@ -5,9 +5,11 @@ tags:
 - cs2030s/chapter10
 - lang/java
 complete: false
-index: null
+prev: /labyrinth/notes/cs/cs2030s/functional_interfaces
+next: /labyrinth/notes/cs/cs2030s/streams_II
 ---
-[Previous](/labyrinth/notes/cs/cs2030s/functional_interfaces)   [Next](/labyrinth/notes/cs/cs2030s/streams_II)
+
+   
 
 ### Summary
 Monad laws

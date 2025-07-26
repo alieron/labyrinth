@@ -3,9 +3,11 @@ tags:
 - cs1231s/chapter1
 - math/logic
 complete: false
-index: null
+prev: /labyrinth/notes/math/cs1231s/fundemental_methods_of_proof
+next: /labyrinth/notes/math/cs1231s/sets
 ---
-[Previous](/labyrinth/notes/math/cs1231s/fundemental_methods_of_proof)   [Next](/labyrinth/notes/math/cs1231s/sets)
+
+   
 
 ### Summary
 First principle of mathematical induction(1PI)

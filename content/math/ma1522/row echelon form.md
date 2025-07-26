@@ -3,8 +3,9 @@ tags:
 - ma1522/chapter1
 - math/linear_algebra
 complete: true
-index: null
+
 ---
+
 
 ### Summary
 REF(row echelon form) ^17a789

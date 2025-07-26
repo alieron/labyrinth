@@ -1,10 +1,11 @@
 ---
 tags:
-- cs1231s/chapter0
+- cs1231s
 - math/number_theory
 complete: false
-index: null
+
 ---
+
 \[\[special sets|Previous]]   \[\[logical operators|Next]]
 
 ### Summary

@@ -3,8 +3,9 @@ tags:
 - math/fundamentals
 - math/geometry
 complete: true
-index: null
+
 ---
+
 
 ### Summary
 $$

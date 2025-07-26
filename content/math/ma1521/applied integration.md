@@ -3,9 +3,11 @@ tags:
 - ma1521/chapter5
 - math/calculus
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1521/improper_integrals
+next: /labyrinth/notes/math/ma1521/sequences
 ---
-[Previous](/labyrinth/notes/math/ma1521/improper_integrals)   [Next](/labyrinth/notes/math/ma1521/sequences)
+
+   
 
 ### Summary
 [Volume of revolution](/labyrinth/notes/math/ma1301/volume_of_revolution) by disk method
@@ -19,7 +21,7 @@ Volume of revolution by cylindrical shell
 $$
 V = 2\pi \int_{a}^{b} x|f(x)| \ dx \qquad \text{(About the y-axis)}
 $$
-<img src="/labyrinth/assets/vol_of_revolution_cylindrical_shell.png" alt="vol_of_revolution_cylindrical_shell.png" class="mx-auto object-fill" style="width:500px;" />
+![[vol_of_revolution_cylindrical_shell.png|500]]
 
 Arc length of a curve
 $$

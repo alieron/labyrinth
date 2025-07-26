@@ -3,9 +3,11 @@ tags:
 - ma1521/chapter1
 - math/calculus
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1521/limits_&_continuity
+next: /labyrinth/notes/math/ma1521/differentiation_II
 ---
-[Previous](/labyrinth/notes/math/ma1521/limits_&_continuity)   [Next](/labyrinth/notes/math/ma1521/differentiation_II)
+
+   
 
 ### Summary
 Shortcut for limits of [rational functions](/labyrinth/notes/math/ma1521/polynomials#^e957d2), at infinity

@@ -3,9 +3,11 @@ tags:
 - ma1521/chapter6
 - math/calculus
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1521/applied_integration
+next: /labyrinth/notes/math/ma1521/series
 ---
-[Previous](/labyrinth/notes/math/ma1521/applied_integration)   [Next](/labyrinth/notes/math/ma1521/series)
+
+   
 
 ### Summary
 Convergence and divergence, limit of a sequence

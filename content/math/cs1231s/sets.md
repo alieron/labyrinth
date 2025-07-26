@@ -1,11 +1,13 @@
 ---
 tags:
-  - cs1231s/chapter2
-  - math/set_theory
+- cs1231s/chapter2
+- math/set_theory
 complete: true
-index:
+prev: /labyrinth/notes/math/cs1231s/proof_by_induction
+next: /labyrinth/notes/math/cs1231s/n-ary_relations
 ---
-[Previous](/labyrinth/notes/math/cs1231s/proof_by_induction)   [Next](/labyrinth/notes/math/cs1231s/n-ary_relations)
+
+   
 
 ### Summary
 Set builder for infinite sets, similar to [quantifications](/labyrinth/notes/math/cs1231s/quantifications)

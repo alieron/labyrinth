@@ -3,9 +3,11 @@ tags:
 - cs1231s/chapter1
 - math/logic
 complete: true
-index: null
+prev: /labyrinth/notes/math/cs1231s/mathematical_terminology
+next: /labyrinth/notes/math/cs1231s/conditionals
 ---
-[Previous](/labyrinth/notes/math/cs1231s/mathematical_terminology)   [Next](/labyrinth/notes/math/cs1231s/conditionals)
+
+   
 
 ### Summary
 Negation(NOT)

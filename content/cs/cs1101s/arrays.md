@@ -1,12 +1,13 @@
 ---
 tags:
-  - cs/data_structures
-  - cs/fundamentals
-  - cs1101s/chapter3
-  - lang/js
+- cs/data_structures
+- cs/fundamentals
+- cs1101s/chapter3
+- lang/js
 complete: true
-index:
+
 ---
+
 
 ### Summary
 Concept of a buffer

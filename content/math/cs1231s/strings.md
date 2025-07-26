@@ -1,10 +1,11 @@
 ---
 tags:
-- cs1231s/chapter0
+- cs1231s
 - math/set_theory
 complete: true
-index: null
+
 ---
+
 
 ### Summary
 Alphabet

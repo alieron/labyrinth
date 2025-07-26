@@ -4,9 +4,11 @@ tags:
 - ma1522/chapter5
 - math/linear_algebra
 complete: false
-index: null
+prev: /labyrinth/notes/math/ma1522/orthogonal_projection
+next: /labyrinth/notes/math/ma1522/least_square_approximation
 ---
-[Previous](/labyrinth/notes/math/ma1522/orthogonal_projection)   [Next](/labyrinth/notes/math/ma1522/least_square_approximation)
+
+   
 
 ### Summary
 QR factorization

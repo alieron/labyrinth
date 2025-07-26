@@ -3,9 +3,11 @@ tags:
 - ma1522/chapter2
 - math/linear_algebra
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1522/matrix_equations
+next: /labyrinth/notes/math/ma1522/elementary_matrices
 ---
-[Previous](/labyrinth/notes/math/ma1522/matrix_equations)   [Next](/labyrinth/notes/math/ma1522/elementary_matrices)
+
+   
 
 ### Summary
 Inverse of 2x2 matrix, with [2x2 determinant](/labyrinth/notes/math/ma1522/determinants#^2f9027) ^462f96

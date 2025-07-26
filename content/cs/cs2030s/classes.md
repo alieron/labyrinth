@@ -4,9 +4,11 @@ tags:
 - cs2030s/chapter1
 - lang/java
 complete: true
-index: null
+prev: /labyrinth/notes/cs/cs2030s/types
+next: /labyrinth/notes/cs/cs2030s/inheritance
 ---
-[Previous](/labyrinth/notes/cs/cs2030s/types)   [Next](/labyrinth/notes/cs/cs2030s/inheritance)
+
+   
 
 ### Summary
 Constructor
@@ -82,7 +84,7 @@ Fields
 
 Methods ^4e342d
 - functions associated with an instance of an object
-<img src="/labyrinth/assets/java_method.png" alt="java_method.png" class="mx-auto object-fill" style="" />
+![[java_method.png]]
 
 Tell, don't ask
 - avoid _accessors_(getters) and _mutators_(_setters_)

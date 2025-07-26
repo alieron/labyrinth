@@ -1,10 +1,11 @@
 ---
 tags:
-- math
+- math/calculus
+- ma1521
 complete: false
-index: null
+
 ---
-\
+
 [[#|Previous]]   [[#|Next]]
 
 ### Summary

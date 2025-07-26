@@ -4,9 +4,11 @@ tags:
 - ma1522/chapter1
 - math/linear_algebra
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1522/linear_systems
+next: /labyrinth/notes/math/ma1522/matrices
 ---
-[Previous](/labyrinth/notes/math/ma1522/linear_systems)   [Next](/labyrinth/notes/math/ma1522/matrices)
+
+   
 
 ### Summary
 Linear systems as augmented matrices

@@ -1,12 +1,14 @@
 ---
 tags:
-  - cs1231s/chapter2
-  - math/set_theory
-  - lang/pgf-tikz
+- cs1231s/chapter2
+- math/set_theory
+- lang/pgf-tikz
 complete: false
-index:
+prev: /labyrinth/notes/math/cs1231s/n-ary_relations
+next: /labyrinth/notes/math/cs1231s/equivalence_relations
 ---
-[Previous](/labyrinth/notes/math/cs1231s/n-ary_relations)   [Next](/labyrinth/notes/math/cs1231s/equivalence_relations)
+
+   
 
 ### Summary
 Relations as both a set of tuples and an operator

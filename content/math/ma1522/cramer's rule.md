@@ -3,8 +3,9 @@ tags:
 - ma1522/chapter2
 - math/linear_algebra
 complete: false
-index: null
+
 ---
+
 
 ### Summary
 Solving a linear system by [determinants](/labyrinth/notes/math/ma1522/determinants)

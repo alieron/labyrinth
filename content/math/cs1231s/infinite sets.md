@@ -3,9 +3,11 @@ tags:
 - cs1231s/chapter3
 - math/set_theory
 complete: false
-index: null
+prev: /labyrinth/notes/math/cs1231s/cardinality
+next: /labyrinth/notes/math/cs1231s/finite_sets
 ---
-[Previous](/labyrinth/notes/math/cs1231s/cardinality)   [Next](/labyrinth/notes/math/cs1231s/finite_sets)
+
+   
 
 ### Summary
 Countable

@@ -3,9 +3,11 @@ tags:
 - ma1301/chapter1
 - math/calculus
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1301/arithmetic_series
+next: /labyrinth/notes/math/ma1301/binomial_theorem
 ---
-[Previous](/labyrinth/notes/math/ma1301/arithmetic_series)   [Next](/labyrinth/notes/math/ma1301/binomial_theorem)
+
+   
 
 ### Summary
 Basic formulae

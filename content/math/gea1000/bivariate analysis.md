@@ -3,9 +3,11 @@ tags:
 - gea1000/chapter3
 - math/statistics
 complete: true
-index: null
+prev: /labyrinth/notes/math/gea1000/univariate_analysis
+next: /labyrinth/notes/math/gea1000/ecological_correlation
 ---
-[Previous](/labyrinth/notes/math/gea1000/univariate_analysis)   [Next](/labyrinth/notes/math/gea1000/ecological_correlation)
+
+   
 
 ### Summary
 **Graph of y on x**

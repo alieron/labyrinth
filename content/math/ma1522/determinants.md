@@ -3,9 +3,11 @@ tags:
 - ma1522/chapter2
 - math/linear_algebra
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1522/LU_factorization
+next: /labyrinth/notes/math/ma1522/vectors_in_Rⁿ
 ---
-[Previous](/labyrinth/notes/math/ma1522/LU_factorization)   [Next](/labyrinth/notes/math/ma1522/vectors_in_Rⁿ)
+
+   
 
 ### Summary
 Determinant of 1x1 matrices
@@ -24,7 +26,7 @@ $$
 $$
 
 Rule of Sarrus for 3x3 matrices
-<img src="/labyrinth/assets/rule_of_sarrus.png" alt="rule_of_sarrus.png" class="mx-auto object-fill" style="width:400px;" />
+![[rule_of_sarrus.png|400]]
 
 Rules
 $$

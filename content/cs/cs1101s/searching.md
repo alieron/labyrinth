@@ -3,9 +3,11 @@ tags:
 - cs/algorithms
 - cs1101s/chapter2
 complete: false
-index: null
+prev: /labyrinth/notes/cs/cs1101s/data_abstraction
+next: /labyrinth/notes/cs/cs1101s/sorting
 ---
-[Previous](/labyrinth/notes/cs/cs1101s/data_abstraction)   [Next](/labyrinth/notes/cs/cs1101s/sorting)
+
+   
 
 ### Summary
 $$

@@ -3,9 +3,11 @@ tags:
 - ma1521/chapter6
 - math/calculus
 complete: false
-index: null
+prev: /labyrinth/notes/math/ma1521/sequences
+next: /labyrinth/notes/math/ma1521/power_series
 ---
-[Previous](/labyrinth/notes/math/ma1521/sequences)   [Next](/labyrinth/notes/math/ma1521/power_series)
+
+   
 
 ### Summary
 Rules for convergent series

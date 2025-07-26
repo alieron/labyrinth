@@ -3,9 +3,11 @@ tags:
 - ma1521/chapter8
 - math/calculus
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1521/geometry_in_R³
+next: /labyrinth/notes/math/ma1521/multivariate_functions
 ---
-[Previous](/labyrinth/notes/math/ma1521/geometry_in_R³)   [Next](/labyrinth/notes/math/ma1521/multivariate_functions)
+
+   
 
 ### Summary
 Derivative rules with dot and cross product

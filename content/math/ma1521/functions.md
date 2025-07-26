@@ -1,11 +1,13 @@
 ---
 tags:
-- ma1521/chapter0
+- ma1521
 - math/calculus
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1521/absolute_values
+next: /labyrinth/notes/math/ma1521/limits_&_continuity
 ---
-[Previous](/labyrinth/notes/math/ma1521/absolute_values)   [Next](/labyrinth/notes/math/ma1521/limits_&_continuity)
+
+   
 
 ### Summary
 Real-valued function, codomain is the set of real numbers

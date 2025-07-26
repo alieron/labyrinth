@@ -3,9 +3,10 @@ tags:
 - ma1522/chapter1
 - math/linear_algebra
 complete: true
-index: null
+next: /labyrinth/notes/math/ma1522/gaussian_elimination
 ---
-[Next](/labyrinth/notes/math/ma1522/gaussian_elimination)
+
+
 
 ### Summary
 Inconsistent

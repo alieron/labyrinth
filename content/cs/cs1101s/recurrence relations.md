@@ -4,8 +4,9 @@ tags:
 - cs/fundamentals
 - cs1101s/chapter1
 complete: true
-index: null
+
 ---
+
 
 ### Summary
 Linear

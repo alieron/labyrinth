@@ -3,9 +3,11 @@ tags:
 - cs1231s/chapter1
 - math/logic
 complete: true
-index: null
+prev: /labyrinth/notes/math/cs1231s/propositions
+next: /labyrinth/notes/math/cs1231s/quantifications
 ---
-[Previous](/labyrinth/notes/math/cs1231s/propositions)   [Next](/labyrinth/notes/math/cs1231s/quantifications)
+
+   
 
 ### Summary
 Implication(IF...THEN) ^8a163c

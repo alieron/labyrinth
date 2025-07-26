@@ -4,9 +4,11 @@ tags:
 - cs2030s/chapter4
 - lang/java
 complete: true
-index: null
+prev: /labyrinth/notes/cs/cs2030s/wrapper_classes
+next: /labyrinth/notes/cs/cs2030s/generics
 ---
-[Previous](/labyrinth/notes/cs/cs2030s/wrapper_classes)   [Next](/labyrinth/notes/cs/cs2030s/generics)
+
+   
 
 ### Summary
 Try-catch-finally

@@ -3,9 +3,11 @@ tags:
 - ma1522/chapter2
 - math/linear_algebra
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1522/gaussian_elimination
+next: /labyrinth/notes/math/ma1522/matrix_multiplication
 ---
-[Previous](/labyrinth/notes/math/ma1522/gaussian_elimination)   [Next](/labyrinth/notes/math/ma1522/matrix_multiplication)
+
+   
 
 ### Summary
 $m$ by $n$ matrix, $m$ rows and $n$ columns

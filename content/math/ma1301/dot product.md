@@ -3,9 +3,11 @@ tags:
 - ma1301/chapter4
 - math/linear_algebra
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1301/unit_vectors
+next: /labyrinth/notes/math/ma1301/cross_product
 ---
-[Previous](/labyrinth/notes/math/ma1301/unit_vectors)   [Next](/labyrinth/notes/math/ma1301/cross_product)
+
+   
 
 ### Summary
 Scalar/dot product, sum of the product of each component
@@ -70,7 +72,7 @@ b & = 6\mathbf{i}+3\mathbf{j}+6\mathbf{k} \\
 $$
 
 Deriving the [cosine rule](/labyrinth/notes/math/math_fundementals/triangle_geometry)
-<img src="/labyrinth/assets/deriving_cos_rule.png" alt="deriving_cos_rule.png" class="mx-auto object-fill" style="" />
+![[deriving_cos_rule.png]]
 $$
 \begin{align*}
 |a-b|^2 & = (a-b)\cdot(a-b)\\

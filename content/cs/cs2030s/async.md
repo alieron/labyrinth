@@ -4,9 +4,11 @@ tags:
 - cs2030s/chapter12
 - lang/java
 complete: true
-index: null
+prev: /labyrinth/notes/cs/cs2030s/parallelism
+next: /labyrinth/notes/cs/cs2030s/fork_and_join
 ---
-[Previous](/labyrinth/notes/cs/cs2030s/parallelism)   [Next](/labyrinth/notes/cs/cs2030s/fork_and_join)
+
+   
 
 ### Summary
 Limitations of Thread

@@ -1,11 +1,13 @@
 ---
 tags:
-  - ma1522/chapter2
-  - math/linear_algebra
+- ma1522/chapter2
+- math/linear_algebra
 complete: true
-index:
+prev: /labyrinth/notes/math/ma1522/matrix_transpose
+next: /labyrinth/notes/math/ma1522/inverse_of_square_matrices
 ---
-[Previous](/labyrinth/notes/math/ma1522/matrix_transpose)   [Next](/labyrinth/notes/math/ma1522/inverse_of_square_matrices)
+
+   
 
 ### Summary
 Alternate representation of [linear systems](/labyrinth/notes/math/ma1522/linear_systems), as the product of a matrix and vector, and as a vector equation ^31d777

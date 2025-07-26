@@ -1,11 +1,12 @@
 ---
 tags:
-  - cs/data_structures
-  - cs1101s/chapter2
-  - lang/js
+- cs/data_structures
+- cs1101s/chapter2
+- lang/js
 complete: true
-index:
+
 ---
+
 
 ### Summary
 Concept of linked lists, data & ptr to next node

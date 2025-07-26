@@ -3,9 +3,11 @@ tags:
 - ma1521/chapter8
 - math/geometry
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1521/vector-valued_functions
+next: /labyrinth/notes/math/ma1521/partial_derivatives
 ---
-[Previous](/labyrinth/notes/math/ma1521/vector-valued_functions)   [Next](/labyrinth/notes/math/ma1521/partial_derivatives)
+
+   
 
 ### Summary
 Level curve ^69f6b8

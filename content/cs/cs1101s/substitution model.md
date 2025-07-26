@@ -5,9 +5,11 @@ tags:
 - cs1101s/chapter1
 - lang/js
 complete: true
-index: null
+prev: /labyrinth/notes/cs/cs1101s/ternary_operator
+next: /labyrinth/notes/cs/cs1101s/recursion
 ---
-[Previous](/labyrinth/notes/cs/cs1101s/ternary_operator)   [Next](/labyrinth/notes/cs/cs1101s/recursion)
+
+   
 
 ### Summary
 Applicative Order -> Evaluate arguments before calling functions

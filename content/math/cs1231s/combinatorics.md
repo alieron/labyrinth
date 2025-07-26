@@ -3,8 +3,9 @@ tags:
 - cs1231s/chapter3
 - math/set_theory
 complete: false
-index: null
+
 ---
+
 [[#|Previous]]   [[#|Next]]
 
 ### Summary

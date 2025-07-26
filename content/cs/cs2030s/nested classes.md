@@ -4,9 +4,11 @@ tags:
 - cs2030s/chapter7
 - lang/java
 complete: false
-index: null
+prev: /labyrinth/notes/cs/cs2030s/immutable_classes
+next: /labyrinth/notes/cs/cs2030s/functional_interfaces
 ---
-[Previous](/labyrinth/notes/cs/cs2030s/immutable_classes)   [Next](/labyrinth/notes/cs/cs2030s/functional_interfaces)
+
+   
 
 ### Summary
 Inner class
@@ -179,7 +181,7 @@ A a = new A();
 a.bo();
 ```
  add diagram
-<img src="/labyrinth/assets/StackHeap.svg" alt="StackHeap.svg" class="mx-auto object-fill" style="" />
+![[StackHeap.svg]]
 
 Local class only captures variables that are used internally
 ```java
@@ -198,7 +200,7 @@ class A {
 A a = new A();
 a.bo();
 ```
-<img src="/labyrinth/assets/StackHeap2.svg" alt="StackHeap2.svg" class="mx-auto object-fill" style="" />
+![[StackHeap2.svg]]
 
 Scope and effectively final
 ```java

@@ -1,11 +1,12 @@
 ---
 tags:
-- math
+  - math/calculus
+  - ma1521
 complete: false
-index: null
+next: /labyrinth/notes/math/ma1521/convergence_tests
 ---
-\
-[[#|Previous]]   [Next](/labyrinth/notes/math/ma1521/convergence_tests)
+
+[[#|Previous]]   
 
 ### Summary
 $$

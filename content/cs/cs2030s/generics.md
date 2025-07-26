@@ -4,9 +4,11 @@ tags:
 - cs2030s/chapter5
 - lang/java
 complete: true
-index: null
+prev: /labyrinth/notes/cs/cs2030s/exceptions
+next: /labyrinth/notes/cs/cs2030s/wildcards
 ---
-[Previous](/labyrinth/notes/cs/cs2030s/exceptions)   [Next](/labyrinth/notes/cs/cs2030s/wildcards)
+
+   
 
 ### Summary
 Type parameters

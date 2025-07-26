@@ -3,9 +3,11 @@ tags:
 - ma1301/chapter4
 - math/linear_algebra
 complete: false
-index: null
+prev: /labyrinth/notes/math/ma1301/dot_product
+next: /labyrinth/notes/math/ma1301/lines_in_R³
 ---
-[Previous](/labyrinth/notes/math/ma1301/dot_product)   [Next](/labyrinth/notes/math/ma1301/lines_in_R³)
+
+   
 
 ### Summary
 Vector/cross product, [determinant](/labyrinth/notes/math/ma1522/determinants#^2f9027) method
@@ -81,7 +83,7 @@ use the **right hand rule**, thumb is the first vector, index is the second and 
 $$
 \mathbf{a}\times \mathbf{b} \perp \mathbf{a} \ and \ \mathbf{b}\\
 $$
-<img src="/labyrinth/assets/cross_product.png" alt="cross_product.png" class="mx-auto object-fill" style="" />
+![[cross_product.png]]
 
 Deriving the formula for the area of triangle ^66cf44
 $$
@@ -102,6 +104,6 @@ $$
 A & = |\mathbf{a}||\mathbf{b}|\sin\theta = |\mathbf{a}\times \mathbf{b}|
 \end{align*}
 $$
-<img src="/labyrinth/assets/area_of_parallelogram.png" alt="area_of_parallelogram.png" class="mx-auto object-fill" style="" /><img src="/labyrinth/assets/cross_product_parallelogram.png" alt="cross_product_parallelogram.png" class="mx-auto object-fill" style="" />
+![[area_of_parallelogram.png]]![[cross_product_parallelogram.png]]
 
 ### Application

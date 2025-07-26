@@ -3,9 +3,10 @@ tags:
 - ma1301/chapter4
 - math/linear_algebra
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1301/lines_in_R³
 ---
-[Previous](/labyrinth/notes/math/ma1301/lines_in_R³)
+
+
 
 ### Summary
 Vector equation of a plane
@@ -64,7 +65,7 @@ $$
 $$
 
 Line of intersection of 2 planes
-<img src="/labyrinth/assets/intersection_of_planes.png" alt="intersection_of_planes.png" class="mx-auto object-fill" style="" />
+![[intersection_of_planes.png]]
 
 Direction vector is perpendicular to both normals
 $$

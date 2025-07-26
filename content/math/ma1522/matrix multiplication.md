@@ -3,9 +3,11 @@ tags:
 - ma1522/chapter2
 - math/linear_algebra
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1522/matrices
+next: /labyrinth/notes/math/ma1522/matrix_transpose
 ---
-[Previous](/labyrinth/notes/math/ma1522/matrices)   [Next](/labyrinth/notes/math/ma1522/matrix_transpose)
+
+   
 
 ### Summary
 Non-commutative
@@ -57,7 +59,7 @@ $$
 & =\begin{pmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\a_{21}&a_{22}&\cdots&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}&a_{m2}&\cdots&a_{mn}\end{pmatrix}\begin{pmatrix}b_{11}&b_{12}&\cdots&b_{1p}\\b_{21}&b_{22}&\cdots&b_{2p}\\\vdots&\vdots&\ddots&\vdots\\b_{n1}&b_{n2}&\cdots&b_{np}\end{pmatrix}= \begin{pmatrix} a_{11}b_{11}+a_{12}b_{21}+\cdots+a_{1n}b_{n1}&a_{11}b_{12}+a_{12}b_{22}+\cdots+a_{1n}b_{n2}&\cdots&a_{11}b_{1n}+a_{12}b_{2n}+\cdots+a_{1n}b_{np}\\ a_{21}b_{11}+a_{22}b_{21}+\cdots+a_{2n}b_{n1}&a_{21}b_{12}+a_{22}b_{22}+\cdots+a_{2n}b_{n2}&\cdots&a_{21}b_{1n}+a_{22}b_{2n}+\cdots+a_{2n}b_{np}\\ \vdots&\vdots&\ddots&\vdots\\ a_{m1}b_{11}+a_{m2}b_{21}+\cdots+a_{mn}b_{n1}&a_{m1}b_{12}+a_{m2}b_{22}+\cdots+a_{mn}b_{n2}&\cdots&a_{m1}b_{1n}+a_{m2}b_{2n}+\cdots+a_{mn}b_{np} \end{pmatrix}
 \end{align*}
 $$
-<img src="/labyrinth/assets/matrix_mul.png" alt="matrix_mul.png" class="mx-auto object-fill" style="" />
+![[matrix_mul.png]]
 
 Size of matrices for the product to be well defined
 $$

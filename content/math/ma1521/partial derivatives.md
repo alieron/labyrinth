@@ -3,9 +3,11 @@ tags:
 - ma1521/chapter8
 - math/calculus
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1521/multivariate_functions
+next: /labyrinth/notes/math/ma1521/applied_partial_differentiation
 ---
-[Previous](/labyrinth/notes/math/ma1521/multivariate_functions)   [Next](/labyrinth/notes/math/ma1521/applied_partial_differentiation)
+
+   
 
 ### Summary
 Higher order partial derivatives
@@ -52,7 +54,7 @@ z = f(x,y), \quad x = g(s,t), \quad y = h(s,t) \\
 \frac{\partial z}{\partial t} = \frac{\partial x}{\partial x} \frac{\partial x}{\partial t} + \frac{\partial x}{\partial y} \frac{\partial y}{\partial t} \\
 \end{gather*}
 $$
-<img src="/labyrinth/assets/chain_rule_partial.png" alt="chain_rule_partial.png" class="mx-auto object-fill" style="width:600px;" />
+![[chain_rule_partial.png|600]]
 
 Implicit differentiation theorem
 $$
@@ -99,7 +101,7 @@ u = f(x_{1},x_{2},\dots,x_{n}), \quad \forall j \in \{ 1,2,\dots,n \} \ x_{j} = 
 \forall i \in \{ 1, 2, \dots, m \} \ \frac{\partial u}{\partial t_{i}} = \frac{\partial u}{\partial x_{1}}\frac{\partial x_{1}}{\partial t_{i}}+\frac{\partial u}{\partial x_{2}}\frac{\partial x_{2}}{\partial t_{i}}+\dots+\frac{\partial u}{\partial x_{n}}\frac{\partial x_{n}}{\partial t_{i}}
 \end{gather*}
 $$
-<img src="/labyrinth/assets/chain_rule_partial_2.png" alt="chain_rule_partial_2.png" class="mx-auto object-fill" style="width:800px;" />
+![[chain_rule_partial_2.png|800]]
 
 Increments ^9b8f6d
 $$

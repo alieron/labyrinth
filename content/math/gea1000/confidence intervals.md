@@ -3,9 +3,11 @@ tags:
 - gea1000/chapter4
 - math/statistics
 complete: true
-index: null
+prev: /labyrinth/notes/math/gea1000/statistical_probability
+next: /labyrinth/notes/math/gea1000/hypothesis_tests
 ---
-[Previous](/labyrinth/notes/math/gea1000/statistical_probability)   [Next](/labyrinth/notes/math/gea1000/hypothesis_tests)
+
+   
 
 ### Summary
 Confidence intervals(CI)

@@ -5,9 +5,11 @@ tags:
 - cs1101s/chapter4
 - lang/js
 complete: true
-index: null
+prev: /labyrinth/notes/cs/cs1101s/environment_model
+next: /labyrinth/notes/cs/cs1101s/memoization
 ---
-[Previous](/labyrinth/notes/cs/cs1101s/environment_model)   [Next](/labyrinth/notes/cs/cs1101s/memoization)
+
+   
 
 ### Summary
 Integer stream

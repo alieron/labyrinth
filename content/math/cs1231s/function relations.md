@@ -1,12 +1,14 @@
 ---
 tags:
-  - cs1231s/chapter2
-  - math/set_theory
-  - lang/pgf-tikz
+- cs1231s/chapter2
+- math/set_theory
+- lang/pgf-tikz
 complete: false
-index:
+prev: /labyrinth/notes/math/cs1231s/ordering
+next: /labyrinth/notes/math/cs1231s/cardinality
 ---
-[Previous](/labyrinth/notes/math/cs1231s/ordering)   [Next](/labyrinth/notes/math/cs1231s/cardinality)
+
+   
 
 ### Summary
 Properties of a function

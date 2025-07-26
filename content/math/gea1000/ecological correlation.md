@@ -3,9 +3,11 @@ tags:
 - gea1000/chapter3
 - math/statistics
 complete: true
-index: null
+prev: /labyrinth/notes/math/gea1000/bivariate_analysis
+next: /labyrinth/notes/math/gea1000/statistical_probability
 ---
-[Previous](/labyrinth/notes/math/gea1000/bivariate_analysis)   [Next](/labyrinth/notes/math/gea1000/statistical_probability)
+
+   
 
 ### Summary
 Ecological fallacy

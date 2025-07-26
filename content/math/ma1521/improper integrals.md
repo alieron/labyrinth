@@ -3,9 +3,11 @@ tags:
 - ma1521/chapter4
 - math/calculus
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1521/integration_II
+next: /labyrinth/notes/math/ma1521/applied_integration
 ---
-[Previous](/labyrinth/notes/math/ma1521/integration_II)   [Next](/labyrinth/notes/math/ma1521/applied_integration)
+
+   
 
 ### Summary
 Type I

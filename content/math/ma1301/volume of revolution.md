@@ -3,9 +3,11 @@ tags:
 - ma1301/chapter3
 - math/calculus
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1301/area_under_curve
+next: /labyrinth/notes/math/ma1301/1st_order_ODE
 ---
-[Previous](/labyrinth/notes/math/ma1301/area_under_curve)   [Next](/labyrinth/notes/math/ma1301/1st_order_ODE)
+
+   
 
 ### Summary
 Revolution about the $x$-axis
@@ -93,4 +95,4 @@ V = & \int_{-2}^2 \pi((9-x^2)^2-(x^2+1)^2) \ dx \\
 = & 2\pi\left(\frac{320}{3}\right) = \frac{640\pi}{3}
 \end{align*}
 $$
-<img src="/labyrinth/assets/vol_of_revolution_disk.png" alt="vol_of_revolution_disk.png" class="mx-auto object-fill" style="width:500px;" />
+![[vol_of_revolution_disk.png|500]]

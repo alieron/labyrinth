@@ -3,9 +3,11 @@ tags:
 - ma1301/chapter2
 - math/calculus
 complete: true
-index: null
+prev: /labyrinth/notes/math/ma1301/differentiation
+next: /labyrinth/notes/math/ma1301/tangent_and_normal
 ---
-[Previous](/labyrinth/notes/math/ma1301/differentiation)   [Next](/labyrinth/notes/math/ma1301/tangent_and_normal)
+
+   
 
 ### Summary
 Implicit differentiation ^a2341c

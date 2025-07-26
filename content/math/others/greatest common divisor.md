@@ -2,8 +2,9 @@
 tags:
 - math/number_theory
 complete: false
-index: null
+
 ---
+
 [[#|Previous]]   [[#|Next]]
 
 ### Summary

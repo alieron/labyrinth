@@ -4,9 +4,11 @@ tags:
 - cs1101s/chapter3
 - lang/js
 complete: true
-index: null
+prev: /labyrinth/notes/cs/cs1101s/sorting
+next: /labyrinth/notes/cs/cs1101s/loops
 ---
-[Previous](/labyrinth/notes/cs/cs1101s/sorting)   [Next](/labyrinth/notes/cs/cs1101s/loops)
+
+   
 
 ### Summary
 Destructive list functions

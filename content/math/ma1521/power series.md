@@ -3,9 +3,11 @@ tags:
 - ma1521/chapter6
 - math/calculus
 complete: false
-index: null
+prev: /labyrinth/notes/math/ma1521/series
+next: /labyrinth/notes/math/ma1521/geometry_in_R³
 ---
-[Previous](/labyrinth/notes/math/ma1521/series)   [Next](/labyrinth/notes/math/ma1521/geometry_in_R³)
+
+   
 
 ### Summary
 Power series at a
@@ -32,7 +34,7 @@ L = 0 \implies R = \infty \land L = \infty \implies R = 0\\
 (a −R, a + R), [a −R, a + R), (a −R, a + R], [a −R, a + R]
 \end{gather*}
 $$
-<img src="/labyrinth/assets/interval_of_convergence.png" alt="interval_of_convergence.png" class="mx-auto object-fill" style="width:500px;" />
+![[interval_of_convergence.png|500]]
 
 Derivative and integral of power series
 $$
@@ -165,7 +167,7 @@ $$
 $$
 
 Maclaurin series of cosine
-<img src="/labyrinth/assets/maclaurin_cosine.png" alt="maclaurin_cosine.png" class="mx-auto object-fill" style="width:600px;" />
+![[maclaurin_cosine.png|600]]
 $$
 \begin{align*}
 & f(x)= \cos x && P(x)=c_{0}+c_{1}x+c_{2}x^2+ c_{3}x^{3} +c_{4}x^4 +\dots &&P\text{ approximates }f\text{ at }0\\

@@ -3,9 +3,11 @@ tags:
 - ma1522/chapter5
 - math/linear_algebra
 complete: false
-index: null
+prev: /labyrinth/notes/math/ma1522/orthogonal_bases
+next: /labyrinth/notes/math/ma1522/QR_factorization
 ---
-[Previous](/labyrinth/notes/math/ma1522/orthogonal_bases)   [Next](/labyrinth/notes/math/ma1522/QR_factorization)
+
+   
 
 ### Summary
 Gram-Schmidt orthogonalization
