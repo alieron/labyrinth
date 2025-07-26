@@ -106,6 +106,23 @@ function resolveLinks(content: string): string {
   return content;
 }
 
+function extractNavLinks(content: string): { rawContent: string; prev?: string; next?: string } {
+  let prev;
+  let next;
+
+  content = content.replace(/\[Previous\]\((.+?)\)/, (_, link) => {
+    if (link && link !== '#') prev = link;
+    return '';
+  });
+
+  content = content.replace(/\[Next\]\((.+?)\)/, (_, link) => {
+    if (link && link !== '#') next = link;
+    return '';
+  });
+
+  return { rawContent: content, prev, next };
+}
+
 // Step 1: Walk and collect all markdown files from whitelist
 for (const entry of WHITELIST) {
   const fullPath = path.join(VAULT_PATH, entry);
@@ -141,10 +158,27 @@ for (const { full, relative, dest } of FILE_LIST) {
     copyAssetIfExists(match[1]);
   }
 
-  const processed = resolveLinks(content)
-    .replace(/([^\n])\n?(#{1,6}\s)/gm, '$1\n\n$2'); // Ensure that headings are preceded by a newline
+  const resolvedContent = resolveLinks(content).replace(/([^\n])\n?(#{1,6}\s)/gm, '$1\n\n$2');
+  const { rawContent, prev, next } = extractNavLinks(resolvedContent);
+
+  const frontmatterMatch = resolvedContent.match(/^---\n([\s\S]*?)\n---\n/);
+  let body = rawContent;
+  let newFrontmatter = `${prev ? `prev: ${prev}` : ''}\n${next ? `next: ${next}` : ''}`.trim();
+  if (frontmatterMatch) {
+    const existing = frontmatterMatch[1];
+    const updated = existing
+      .replace(/^prev:.*\n?/m, '')
+      .replace(/^next:.*\n?/m, '')
+      .trim();
+    newFrontmatter = `---\n${updated}\n${newFrontmatter}\n---\n`;
+    body = rawContent.replace(/^---\n[\s\S]*?\n---\n/, '');
+  } else {
+    newFrontmatter = `---\n${newFrontmatter}\n---\n`;
+  }
+
+  const finalContent = newFrontmatter + '\n' + body;
   fs.mkdirSync(path.dirname(dest), { recursive: true });
-  fs.writeFileSync(dest, processed, 'utf-8');
+  fs.writeFileSync(dest, finalContent, 'utf-8');
   console.log(`📄 Processed and copied: ${relative}`);
 }
 
