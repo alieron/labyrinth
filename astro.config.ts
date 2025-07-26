@@ -6,7 +6,6 @@ import { BASE } from './src/utils/resolve';
 import remarkMath from 'remark-math';
 // Custom plugins
 import { remarkTitle } from './src/plugins/title';
-import { remarkNextPrev } from './src/plugins/next-prev';
 import { remarkHighlight } from './src/plugins/highlight';
 import { remarkRemoveComments } from './src/plugins/comment';
 import { remarkCodeBlocks, rehypeCodeBlocks } from './src/plugins/codeblock';
@@ -29,7 +28,6 @@ export default defineConfig({
     syntaxHighlight: false,
     remarkPlugins: [
       remarkTitle,
-      remarkNextPrev,
       remarkSplitParagraphs,
       remarkHighlight,
       remarkRemoveComments,
