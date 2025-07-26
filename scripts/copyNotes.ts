@@ -143,7 +143,7 @@ for (const entry of WHITELIST) {
 // Step 2: Build NOTE_MAP
 for (const { relative } of FILE_LIST) {
   const key = path.basename(relative, '.md');
-  const value = toSlug(relative.replace(/\\/g, '/').replace(/\.md$/, ''));
+  const value = toSlug(relative.replace(/\\/g, '/').replace(/\.md$/, '')) ?? '';
   NOTE_MAP.set(key, value);
 }
 
