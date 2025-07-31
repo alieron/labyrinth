@@ -99,9 +99,9 @@ function resolveLinks(content: string): string {
   return content;
 }
 
-function extractNavLinks(content: string): { rawContent: string; prev?: string; next?: string } {
-  let prev;
-  let next;
+function extractNavLinks(content: string): string {
+  let prev: string | undefined;
+  let next: string | undefined;
 
   content = content.replace(/\[Previous\]\((.+?)\)/, (_, link) => {
     if (link && link !== '#') prev = link;
@@ -113,7 +113,21 @@ function extractNavLinks(content: string): { rawContent: string; prev?: string; 
     return '';
   });
 
-  return { rawContent: content, prev, next };
+  const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---\n/);
+  let newFrontmatter = `${prev ? `prev: ${prev}` : ''}\n${next ? `next: ${next}` : ''}`.trim();
+  if (frontmatterMatch) {
+    const existing = frontmatterMatch[1];
+    const updated = existing
+      .replace(/^prev:.*\n?/m, '')
+      .replace(/^next:.*\n?/m, '')
+      .trim();
+    newFrontmatter = `---\n${updated}\n${newFrontmatter}\n---\n`;
+    content = content.replace(/^---\n[\s\S]*?\n---\n/, '');
+  } else {
+    newFrontmatter = `---\n${newFrontmatter}\n---\n`;
+  }
+
+  return newFrontmatter + '\n' + content;
 }
 
 // Step 1: Walk and collect all markdown files from whitelist
@@ -152,24 +166,8 @@ for (const { full, relative, dest } of FILE_LIST) {
   }
 
   const resolvedContent = resolveLinks(content);
-  const { rawContent, prev, next } = extractNavLinks(resolvedContent);
+  const finalContent = extractNavLinks(resolvedContent);
 
-  const frontmatterMatch = resolvedContent.match(/^---\n([\s\S]*?)\n---\n/);
-  let body = rawContent;
-  let newFrontmatter = `${prev ? `prev: ${prev}` : ''}\n${next ? `next: ${next}` : ''}`.trim();
-  if (frontmatterMatch) {
-    const existing = frontmatterMatch[1];
-    const updated = existing
-      .replace(/^prev:.*\n?/m, '')
-      .replace(/^next:.*\n?/m, '')
-      .trim();
-    newFrontmatter = `---\n${updated}\n${newFrontmatter}\n---\n`;
-    body = rawContent.replace(/^---\n[\s\S]*?\n---\n/, '');
-  } else {
-    newFrontmatter = `---\n${newFrontmatter}\n---\n`;
-  }
-
-  const finalContent = newFrontmatter + '\n' + body;
   fs.mkdirSync(path.dirname(dest), { recursive: true });
   fs.writeFileSync(dest, finalContent, 'utf-8');
   console.log(`📄 Processed and copied: ${relative}`);
