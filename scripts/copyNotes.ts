@@ -40,6 +40,7 @@ function walkVault(src: string, base: string) {
 }
 
 function toResolvedLink(filePath: string, alias?: string, heading?: string) {
+  if (!filePath) return '';
   const pageName = path.basename(filePath);
   const endpoint = NOTE_MAP.get(filePath) ?? NOTE_MAP.get(pageName);
   let href = endpoint ? resolveBase(`/notes/${endpoint}`) : '#'; // Handle absent notes
@@ -79,7 +80,7 @@ function copyAssetIfExists(filename: string) {
 }
 
 function resolveLinks(content: string): string {
-  const wikilinkRegex = /(?<!\!)\[\[([^\]|#]+?)(?:\.md)?(?:#([^\]|]+))?(?:\|([^\]]+))?\]\]/g;
+  const wikilinkRegex = /(?<!\!)\[\[([^|\]#]*?)(?:#([^\]|]*))?(?:\|([^\]]+))?\]\]/g;
   const standardLinkRegex = /\[(.+?)\]\(([^)#]+?)(?:\.md)?(?:#([^\)]+))?\)/g;
   const imageEmbedRegex = /!\[\[([^|\]]+)(?:\|\d*(?:x\d*)?)?\]\]/g;
 
