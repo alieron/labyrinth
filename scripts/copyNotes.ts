@@ -39,14 +39,17 @@ function walkVault(src: string, base: string) {
   }
 }
 
-function toResolvedLink(filePath: string, alias?: string, heading?: string) {
-  if (!filePath) return '';
-  const pageName = path.basename(filePath);
-  const endpoint = NOTE_MAP.get(filePath) ?? NOTE_MAP.get(pageName);
-  let href = endpoint ? resolveBase(`/notes/${endpoint}`) : '#'; // Handle absent notes
-  let displayText = alias ?? `${pageName}${heading ? ` > ${heading}` : ''}`;
-  if (heading) href += `#${toSlug(heading)}`;
-  return `[${displayText}](${href})`;
+function toResolvedLink(filePath: string | undefined, alias: string | undefined, heading: string | undefined) {
+  if (!filePath) {
+    return `[${alias ?? heading ?? ''}](#${heading})`;
+  } else {
+    const noteName = path.basename(filePath);
+    const endpoint = NOTE_MAP.get(filePath) ?? NOTE_MAP.get(noteName);
+    let href = endpoint ? resolveBase(`/notes/${endpoint}`) : '#'; // Handle absent notes
+    let displayText = alias ?? (filePath ? `${filePath}${heading ? ` > ${heading}` : ''}` : heading);
+    if (heading) href += `#${toSlug(heading)}`;
+    return `[${displayText}](${href})`;
+  }
 }
 
 function copyAssetIfExists(filename: string) {
