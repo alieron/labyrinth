@@ -1,6 +1,6 @@
 {
   "name": "labyrinth",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "type": "module",
   "scripts": {
     "copy-notes": "npx tsx scripts/copyNotes.ts",
