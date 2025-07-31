@@ -151,7 +151,7 @@ for (const { full, relative, dest } of FILE_LIST) {
     copyAssetIfExists(match[1]);
   }
 
-  const resolvedContent = resolveLinks(content).replace(/([^\n])\n?(#{1,6}\s)/gm, '$1\n\n$2');
+  const resolvedContent = resolveLinks(content);
   const { rawContent, prev, next } = extractNavLinks(resolvedContent);
 
   const frontmatterMatch = resolvedContent.match(/^---\n([\s\S]*?)\n---\n/);
