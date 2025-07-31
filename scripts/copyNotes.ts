@@ -117,20 +117,29 @@ function extractNavLinks(content: string): string {
   });
 
   const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---\n/);
-  let newFrontmatter = `${prev ? `prev: ${prev}` : ''}\n${next ? `next: ${next}` : ''}`.trim();
+  let newFrontmatter: string;
   if (frontmatterMatch) {
-    const existing = frontmatterMatch[1];
-    const updated = existing
-      .replace(/^prev:.*\n?/m, '')
-      .replace(/^next:.*\n?/m, '')
-      .trim();
-    newFrontmatter = `---\n${updated}\n${newFrontmatter}\n---\n`;
+    newFrontmatter = frontmatterMatch[1];
+
+    if (newFrontmatter.match("\nprev:")) {
+      newFrontmatter = newFrontmatter.replace(/^prev: "\[.*\]\((.*)\)"\n?/m, 'prev: $1\n');
+    } else if (prev) {
+      newFrontmatter += `\nprev: ${prev}`;
+    }
+
+    if (newFrontmatter.match("\nnext:")) {
+      newFrontmatter = newFrontmatter.replace(/^next: "\[.*\]\((.*)\)"\n?/m, 'next: $1\n');
+    } else if (next) {
+      newFrontmatter += `\nnext: ${next}`;
+    }
+
+    newFrontmatter = newFrontmatter;
     content = content.replace(/^---\n[\s\S]*?\n---\n/, '');
   } else {
-    newFrontmatter = `---\n${newFrontmatter}\n---\n`;
+    newFrontmatter = `${prev ? `prev: ${prev}` : ''}\n${next ? `next: ${next}` : ''}`.trim();
   }
 
-  return newFrontmatter + '\n' + content;
+  return `---\n${newFrontmatter}\n---\n${content}`;
 }
 
 // Step 1: Walk and collect all markdown files from whitelist
