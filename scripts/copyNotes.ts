@@ -39,13 +39,17 @@ function walkVault(src: string, base: string) {
   }
 }
 
-function toResolvedLink(filePath: string, alias?: string, heading?: string) {
-  const pageName = path.basename(filePath);
-  const endpoint = NOTE_MAP.get(filePath) ?? NOTE_MAP.get(pageName);
-  let href = endpoint ? resolveBase(`/notes/${endpoint}`) : '#'; // Handle absent notes
-  let displayText = alias ?? `${pageName}${heading ? ` > ${heading}` : ''}`;
-  if (heading) href += `#${toSlug(heading)}`;
-  return `[${displayText}](${href})`;
+function toResolvedLink(filePath: string | undefined, alias: string | undefined, heading: string | undefined) {
+  if (!filePath) {
+    return `[${alias ?? heading ?? ''}](#${heading})`;
+  } else {
+    const noteName = path.basename(filePath);
+    const endpoint = NOTE_MAP.get(filePath) ?? NOTE_MAP.get(noteName);
+    let href = endpoint ? resolveBase(`/notes/${endpoint}`) : '#'; // Handle absent notes
+    let displayText = alias ?? (filePath ? `${filePath}${heading ? ` > ${heading}` : ''}` : heading);
+    if (heading) href += `#${toSlug(heading)}`;
+    return `[${displayText}](${href})`;
+  }
 }
 
 function copyAssetIfExists(filename: string) {
@@ -79,9 +83,8 @@ function copyAssetIfExists(filename: string) {
 }
 
 function resolveLinks(content: string): string {
-  const wikilinkRegex = /(?<!\!)\[\[([^\]|#]+?)(?:\.md)?(?:#([^\]|]+))?(?:\|([^\]]+))?\]\]/g;
-  const standardLinkRegex = /\[(.+?)\]\(([^)#]+?)(?:\.md)?(?:#([^\)]+))?\)/g;
-  const imageEmbedRegex = /!\[\[([^|\]]+)(?:\|\d*(?:x\d*)?)?\]\]/g;
+  const wikilinkRegex = /(?<!\!)\[\[([^|\]#]*?)(?:#([^\]|\\]*))?(?:\\?)(?:\|([^\]]+))?\]\]/g;
+  const standardLinkRegex = /\[([^\[]+?)\]\(([^)#]+?)(?:\.md)?(?:#([^\)]+))\)/g;
 
   // Convert standard markdown links
   content = content.replace(standardLinkRegex, (match, alias, filePath, heading) => {
@@ -98,9 +101,9 @@ function resolveLinks(content: string): string {
   return content;
 }
 
-function extractNavLinks(content: string): { rawContent: string; prev?: string; next?: string } {
-  let prev;
-  let next;
+function extractNavLinks(content: string): string {
+  let prev: string | undefined;
+  let next: string | undefined;
 
   content = content.replace(/\[Previous\]\((.+?)\)/, (_, link) => {
     if (link && link !== '#') prev = link;
@@ -112,14 +115,37 @@ function extractNavLinks(content: string): { rawContent: string; prev?: string; 
     return '';
   });
 
-  return { rawContent: content, prev, next };
+  const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---\n/);
+  let newFrontmatter: string;
+  if (frontmatterMatch) {
+    newFrontmatter = frontmatterMatch[1];
+
+    if (newFrontmatter.match("\nprev:")) {
+      newFrontmatter = newFrontmatter.replace(/^prev: "\[.*\]\((.*)\)"\n?/m, 'prev: $1\n');
+    } else if (prev) {
+      newFrontmatter += `\nprev: ${prev}`;
+    }
+
+    if (newFrontmatter.match("\nnext:")) {
+      newFrontmatter = newFrontmatter.replace(/^next: "\[.*\]\((.*)\)"\n?/m, 'next: $1\n');
+    } else if (next) {
+      newFrontmatter += `\nnext: ${next}`;
+    }
+
+    newFrontmatter = newFrontmatter;
+    content = content.replace(/^---\n[\s\S]*?\n---\n/, '');
+  } else {
+    newFrontmatter = `${prev ? `prev: ${prev}` : ''}\n${next ? `next: ${next}` : ''}`.trim();
+  }
+
+  return `---\n${newFrontmatter}\n---\n${content}`;
 }
 
 // Step 1: Walk and collect all markdown files from whitelist
 for (const entry of WHITELIST) {
   const fullPath = path.join(VAULT_PATH, entry);
   if (!fs.existsSync(fullPath)) {
-    console.warn(`⚠️  Skipping non-existent: ${entry}`);
+    console.warn(`⚠️ Skipping non-existent: ${entry}`);
     continue;
   }
 
@@ -145,30 +171,14 @@ for (const { full, relative, dest } of FILE_LIST) {
 
   // Detect embedded images and copy assets
   const imageRegex = /!\[\[([^|\]]+)/g;
-  let match;
+  let match: RegExpExecArray | null;
   while ((match = imageRegex.exec(content)) !== null) {
     copyAssetIfExists(match[1]);
   }
 
-  const resolvedContent = resolveLinks(content).replace(/([^\n])\n?(#{1,6}\s)/gm, '$1\n\n$2');
-  const { rawContent, prev, next } = extractNavLinks(resolvedContent);
+  const resolvedContent = resolveLinks(content);
+  const finalContent = extractNavLinks(resolvedContent);
 
-  const frontmatterMatch = resolvedContent.match(/^---\n([\s\S]*?)\n---\n/);
-  let body = rawContent;
-  let newFrontmatter = `${prev ? `prev: ${prev}` : ''}\n${next ? `next: ${next}` : ''}`.trim();
-  if (frontmatterMatch) {
-    const existing = frontmatterMatch[1];
-    const updated = existing
-      .replace(/^prev:.*\n?/m, '')
-      .replace(/^next:.*\n?/m, '')
-      .trim();
-    newFrontmatter = `---\n${updated}\n${newFrontmatter}\n---\n`;
-    body = rawContent.replace(/^---\n[\s\S]*?\n---\n/, '');
-  } else {
-    newFrontmatter = `---\n${newFrontmatter}\n---\n`;
-  }
-
-  const finalContent = newFrontmatter + '\n' + body;
   fs.mkdirSync(path.dirname(dest), { recursive: true });
   fs.writeFileSync(dest, finalContent, 'utf-8');
   console.log(`📄 Processed and copied: ${relative}`);
