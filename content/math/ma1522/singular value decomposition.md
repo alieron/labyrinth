@@ -1,15 +1,13 @@
 ---
 tags:
-- lang/octave
-- ma1522/chapter6
-- math/linear_algebra
-complete: false
+  - ma1522/chapter6
+  - math/linear_algebra
+  - lang/octave
+complete: true
 prev: /labyrinth/notes/math/ma1522/markov_chains
 next: /labyrinth/notes/math/ma1522/linear_transformation
 ---
-
    
-
 ### Summary
 SVD
 $$
@@ -47,7 +45,6 @@ $$
 \end{pmatrix}^T)\text{, orthogonalize after}
 \end{align*}
 $$
-
 ### Concept
 Singular matrices
 - transformation that may add or remove dimensions
@@ -142,16 +139,6 @@ $$
 \end{aligned}
 \end{gather*}
 $$
-
-#
-
-##### Octave
-```octave
-
-# Finding the SVD of matrix A
-[U, S, V] = svd(A)
-```
-
 ### Application
 SVD by transpose product
 $$
@@ -289,5 +276,9 @@ x-80 & -100 & -40 \\
 \end{gather*}
 $$
 > pain
-
-
+### Extra
+Octave
+```octave
+# SVD of a matrix
+[U, S, V] = svd(A)
+```

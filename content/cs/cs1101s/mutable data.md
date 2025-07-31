@@ -1,15 +1,13 @@
 ---
 tags:
-- cs/data_structures
 - cs1101s/chapter3
+- cs/data_structures
 - lang/js
 complete: true
 prev: /labyrinth/notes/cs/cs1101s/sorting
 next: /labyrinth/notes/cs/cs1101s/loops
 ---
-
    
-
 ### Summary
 Destructive list functions
 ```js
@@ -21,7 +19,6 @@ set_tail(p, x);
 ```js
 A[i] = x;
 ```
-
 ### Concept
 Variable
 ```js
@@ -30,7 +27,6 @@ x = 5; // new value
 ```
 
 Reassigning a new value to an already in use symbol
-
 ### Application
 Creation of circular lists
 - set_tail of the pair to the head of the pair

@@ -6,9 +6,7 @@ complete: false
 prev: /labyrinth/notes/math/cs1231s/fundemental_methods_of_proof
 next: /labyrinth/notes/math/cs1231s/sets
 ---
-
    
-
 ### Summary
 First principle of mathematical induction(1PI)
 - for [well-ordered sets](/labyrinth/notes/math/cs1231s/ordering#^deafe6), such as $\mathbb{Z}$
@@ -83,7 +81,7 @@ $$
 & \therefore \text{Claim is true }\forall n, \ n\geq b
 \end{align*}
 $$
-
+> The main idea of induction: a previous iteration of your proof satisfies a smaller version of your problem
 ### Application
 1PI, generalisation of De Morgan's law
 $$
@@ -150,8 +148,3 @@ $$
 $$
 
 2PI, CNF
-
-#
-
-##### Extra
-

@@ -1,14 +1,13 @@
 ---
 tags:
-- ma1522/chapter2
-- math/linear_algebra
+  - ma1522/chapter2
+  - math/linear_algebra
+  - lang/octave
 complete: true
 prev: /labyrinth/notes/math/ma1522/LU_factorization
 next: /labyrinth/notes/math/ma1522/vectors_in_Rⁿ
 ---
-
    
-
 ### Summary
 Determinant of 1x1 matrices
 $$
@@ -58,7 +57,6 @@ $$
 \end{align*}
 $$
 > if the determinant is 0, the matrix transforms(squishes) space into a lower dimension -> the inverse would not have a unique solution
-
 ### Concept
 Determinant
 - visualise it as the degree to which a unit of space is scaled when undergoing a matrix transformation
@@ -96,7 +94,6 @@ $$
 $$
 
 [Cramer's rule](/labyrinth/notes/math/ma1522/cramer's_rule) to solve linear systems
-
 ### Application
 Determinant of triangular matrices, product of the diagonal entries ^2adce5
 $$
@@ -132,3 +129,12 @@ $$
 \therefore \mathbf{A}^{-1}& = \frac{1}{\det(\mathbf{A})}\operatorname{adj}(\mathbf{A})
 \end{align*}
 $$
+### Extra
+Octave
+```octave
+# Determinant of a matrix
+det(A)
+
+# Adjugate matrix
+adjoint(A)
+```

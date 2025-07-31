@@ -1,14 +1,13 @@
 ---
 tags:
-- ma1522/chapter2
-- math/linear_algebra
+  - ma1522/chapter2
+  - math/linear_algebra
+  - lang/octave
 complete: true
 prev: /labyrinth/notes/math/ma1522/matrices
 next: /labyrinth/notes/math/ma1522/matrix_transpose
 ---
-
    
-
 ### Summary
 Non-commutative
 - multiply A by B vs multiply B to A
@@ -17,7 +16,7 @@ Non-commutative
 $$
 \mathbf{AB}\neq \mathbf{BA}
 $$
-> unless they are [[#^3eabd2|diagonal]] matrices
+> unless they are [diagonal](#^3eabd2) matrices
 
 Rules
 $$
@@ -50,7 +49,6 @@ $$
 \mathbf{AB}=\begin{pmatrix}-&\mathbf{a}_1&-\\-&\mathbf{a}_2&-\\&\vdots&\\-&\mathbf{a}_m&-\end{pmatrix}\mathbf{B}=\begin{pmatrix}-&\mathbf{a}_1\mathbf{B}&-\\-&\mathbf{a}_2\mathbf{B}&-\\&\vdots&\\-&\mathbf{a}_m\mathbf{B}&-\end{pmatrix}
 \end{gather*}
 $$
-
 ### Concept
 Matrix multiplication
 $$
@@ -79,7 +77,6 @@ $$
 \mathbf{A}^n = \mathbf{AA}^{n-1}, \ n\geq1
 \end{gather*}
 $$
-
 ### Application
 Row vector and column vector
 $$
@@ -145,3 +142,9 @@ $$
 \therefore \mathbf{b}_{2}=\begin{pmatrix}-3\\ -2\end{pmatrix}
 \end{gather*}
 $$
+### Extra
+Octave
+```octave
+# Matrix multiplication
+A * A
+```

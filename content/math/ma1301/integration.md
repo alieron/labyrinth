@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/ma1301/optimization
 next: /labyrinth/notes/math/ma1301/integration_by_parts
 ---
-
    
-
 ### Summary
 Standard integrals
 $$
@@ -90,7 +88,6 @@ $$
 %\end{split}
 \end{align*}
 $$
-
 ### Concept
 Anti-derivative/indefinite integral
 $$
@@ -102,7 +99,6 @@ F \ is \ an \  anti&{-}derivative \ of \ f, \\ C \ is \ the \ con&stant \ of \ i
 F(x) + C & = \int f(x)\ dx
 \end{align*}
 $$
-
 ### Application
 Solving $\int\frac{6}{(x-1)(x^2-1)} \ dx$, using [partial fractions](/labyrinth/notes/math/ma1301/partial_fractions)
 $$

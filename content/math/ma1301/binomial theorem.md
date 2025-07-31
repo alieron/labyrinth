@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/ma1301/geometric_series
 next: /labyrinth/notes/math/ma1301/telescoping_series
 ---
-
    
-
 ### Summary
 Combinations(recall pascal's triangle)
 $$
@@ -38,7 +36,6 @@ $$
 (1+a)^n & = 1 + na + \frac{n(n-1)}{2!}a^2 + \frac{n(n-1)(n-2)}{3!}a^3 + \frac{n(n-1)(n-2)(n-3)}{4!}a^4 + \dots, \ |a|<1, \ n\ni \mathbb{Z}^+
 \end{align*}
 $$
-
 ### Concept
 Calculation of $nCr$
 $$
@@ -70,7 +67,6 @@ with & \ (a+bx)^n, \\
 T_{k} & = \binom{n}{k}a^{n-k}b^k
 \end{align*}
 $$
-
 ### Application
 Proofs
 $$

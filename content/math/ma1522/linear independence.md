@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/ma1522/subspaces
 next: /labyrinth/notes/math/ma1522/basis_vectors
 ---
-
    
-
 ### Summary
 Algorithm to check for linear independence
 - recall the [intuition](/labyrinth/notes/math/ma1522/gaussian_elimination#^0aa696) for row reduction, expressing columns as multiples of another
@@ -25,7 +23,6 @@ $$
 \end{gather*}
 $$
 > additionally $\mathbf{R}$ tells us how each linearly dependent vector is a multiple of the other vector in the set
-
 ### Concept
 Linear independence
 - no redundant vectors
@@ -60,7 +57,6 @@ $$
 \varnothing\text{ is always linearly independent}
 \end{gather*}
 $$
-
 ### Application
 Deducing original vectors from RREF form
 $$

@@ -7,9 +7,7 @@ prev: /labyrinth/notes/math/ma1521/double_integrals
 ---
 
 
-
 Succeeds: [1st order ODE](/labyrinth/notes/math/ma1301/1st_order_ODE)
-
 ### Summary
 Linear ODE
 $$
@@ -33,7 +31,6 @@ u'+(1-n)P(x)u=(1-n)Q(x) & \text{(First Order Linear ODE)}
 \end{gather*}
 $$
 > reducing the exponent
-
 ### Concept
 Separable ODE
 $$
@@ -78,7 +75,6 @@ y_{n}&=y_{n-1}+f(x_{n-1},y_{n-1})h\\
 \end{aligned}
 \end{gather*}
 $$
-
 ### Application
 Separable ODE
 $$

@@ -2,11 +2,8 @@
 tags:
 - math/modular_arithmetic
 complete: false
-
 ---
-
-[[#|Previous]]   [[#|Next]]
-
+   
 ### Summary
 Legendre symbol, function to check for quadratic residue for [prime](/labyrinth/notes/math/others/prime_numbers) moduli
 $$
@@ -16,7 +13,6 @@ $$
 \left({\frac {a}{p}}\right)={\begin{cases}1&{\text{if }}a{\text{ is a quadratic residue modulo }}p{\text{ and }}a\not \equiv 0{\pmod {p}},\\-1&{\text{if }}a{\text{ is a quadratic nonresidue modulo }}p,\\0&{\text{if }}a\equiv 0{\pmod {p}}.\end{cases}}
 \end{gather*}
 $$
-
 ### Concept
 $a$ is a quadratic residue $n$ if it is congruent to a perfect square
 $$
@@ -27,7 +23,6 @@ Law of quadratic reciprocity
 $$
 \left( \frac{p}{q} \right)\left( \frac{q}{p} \right) = (-1)^{\frac{p-1}{2}\frac{q-1}{2}}
 $$
-
 ### Application
 Deriving the legendre symbol with [fermat's little theorem](/labyrinth/notes/math/others/fermat's_little_theorem)
 $$

@@ -1,16 +1,14 @@
 ---
 tags:
+- cs1101s/chapter4
 - cs/data_structures
 - cs/functional_programming
-- cs1101s/chapter4
 - lang/js
 complete: true
 prev: /labyrinth/notes/cs/cs1101s/environment_model
 next: /labyrinth/notes/cs/cs1101s/memoization
 ---
-
    
-
 ### Summary
 Integer stream
 ```js
@@ -54,14 +52,12 @@ Indexing
 stream_ref(s, n) => elem at index n, processes n+1 elems
 eval_stream => list of index 0 to n: length = n
 ```
-
 ### Concept
 A stream is either:
 - *null*
 - or a pair whose tail is a nullary function that returns a stream
 
 [Lazy evaluation](/labyrinth/notes/cs/cs1101s/lazy_evaluation) -> next element is only evaluated when needed/called upon
-
 ### Application
 Alternate integers
 ```js

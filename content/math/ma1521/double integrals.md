@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/ma1521/applied_partial_differentiation
 next: /labyrinth/notes/math/ma1521/1st_order_ODE_II
 ---
-
    
-
 ### Summary
 Special case of Fubini's theorem
 $$
@@ -40,7 +38,6 @@ R = \{\begin{array}{c|c} (r,\theta) & a\leq r\leq b \land \alpha \leq \theta \le
 \end{gather*}
 $$
 ![[little_polar_rectangle.png|300]]
-
 ### Concept
 Fubini's theorem
 - volume over a rectangle
@@ -91,7 +88,6 @@ dS&=\|  \left\langle dx,0,f_{x}(x,y)dy \right\rangle \times  \left\langle 0,dy, 
 & = \sqrt{ (f_{x})^{2}+(f_{y})^{2}+1 } \ dA
 \end{align*}
 $$
-
 ### Application
 Evaluating iterated integral
 $$

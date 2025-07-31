@@ -6,8 +6,6 @@ complete: true
 next: /labyrinth/notes/math/cs1231s/propositions
 ---
 
-
-
 ### Summary
 Definition
 - precise and unambiquous description of the meaning of a mathematical term

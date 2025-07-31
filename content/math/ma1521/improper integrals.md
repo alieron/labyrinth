@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/ma1521/integration_II
 next: /labyrinth/notes/math/ma1521/applied_integration
 ---
-
    
-
 ### Summary
 Type I
 - infinite limits of integration/bounds
@@ -35,12 +33,10 @@ $$
 \text{Discontinuous at }c, \ a<c<b: &&\int_{a}^b f(x)\ dx&= \int_{a}^c f(x)\ dx +  \int_{c}^b f(x)\ dx
 \end{align*}
 $$
-
 ### Concept
 Improper integrals
 - converges -> limit is finite
 - diverges -> limit DNE
-
 ### Application
 Evaluating type I improper integrals
 $$

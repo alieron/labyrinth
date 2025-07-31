@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/ma1521/multivariate_functions
 next: /labyrinth/notes/math/ma1521/applied_partial_differentiation
 ---
-
    
-
 ### Summary
 Higher order partial derivatives
 $$
@@ -60,10 +58,9 @@ Implicit differentiation theorem
 $$
 f_{z}\neq_{0} \implies \frac{\partial z}{\partial x}=-\frac{f_{x}}{f_{z}}
 $$
-
 ### Concept
 Partial derivatives
-- focus on bivariate functions for MA1521
+- focus on bivariate functions for #ma1521
 - do the small change over each variable individually
 - treate the other variable as a constant
 
@@ -118,7 +115,6 @@ $$
 dz=f_{x}(x,y)dx+f_{y}(x,y)dy\approx\Delta z
 $$
 > change in the tangent plane, gives a good approximation of increment over smaller changes
-
 ### Application
 Computing partial derivatives
 $$

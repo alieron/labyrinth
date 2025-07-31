@@ -4,10 +4,7 @@ tags:
 - math/calculus
 - math/fundamentals
 complete: true
-
 ---
-
-
 ### Summary
 Polynomial of degree n
 $$

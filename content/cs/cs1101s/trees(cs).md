@@ -4,10 +4,7 @@ tags:
 - cs1101s/chapter2
 - lang/js
 complete: true
-
 ---
-
-
 ### Summary
 Tree of numbers
 ```js
@@ -57,7 +54,6 @@ const tree = list(list(1,2), 3, list(4));
 \end{tikzpicture}
 \end{document}
 ```
-
 ### Concept
 A tree of data type T is either:
 - *null*
@@ -66,7 +62,6 @@ A tree of data type T is either:
 	- and whose head is type T or a tree of type T
 
 Every tree is a list, made up only of data type T and _null_
-
 ### Application
 Tree processing functions
 Main idea:

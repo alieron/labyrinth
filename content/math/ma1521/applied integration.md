@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/ma1521/improper_integrals
 next: /labyrinth/notes/math/ma1521/sequences
 ---
-
    
-
 ### Summary
 [Volume of revolution](/labyrinth/notes/math/ma1301/volume_of_revolution) by disk method
 $$
@@ -31,7 +29,6 @@ L & = \int_{a}^b\sqrt{ 1+ \left( \frac{dy}{dx} \right)^2} \ dx, \quad a\leq x\le
 & =\int_{c}^d\sqrt{ 1+ \left( \frac{dx}{dy} \right)^2} \ dy, \quad c\leq y\leq d
 \end{align*}
 $$
-
 ### Concept
 Area bounded by curve
 - and x-axis
@@ -45,7 +42,6 @@ $$
 A = \int_{a}^{b} |f(x)-g(x)| \ dx 
 $$
 > area is +ve
-
 ### Application
 Volume by cylindrical shell
 $$

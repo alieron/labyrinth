@@ -3,10 +3,7 @@ tags:
 - ma1521/chapter9
 - math/fundamentals
 complete: true
-
 ---
-
-
 ### Summary
 Polar coordinate system
 ![[polar_coords.png]]

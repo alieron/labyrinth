@@ -1,15 +1,13 @@
 ---
 tags:
-- cs/paradigm
-- cs2030s/chapter11
-- lang/java
-complete: false
+  - cs2030s/chapter11
+  - cs/paradigm
+  - lang/java
+complete: true
 prev: /labyrinth/notes/cs/cs2030s/monads_and_functors
 next: /labyrinth/notes/cs/cs2030s/async
 ---
-
    
-
 ### Summary
 Embarrassingly parallel
 - each element/task can be processed independently of the others
@@ -108,7 +106,6 @@ Stream::of
 Stream::generate
 Set::stream // sets are unordered
 ```
-
 ### Concept
 Sequential
 - step by step execution
@@ -137,7 +134,6 @@ Stream::sequential
 // lazily converts the stream pipeline into a sequential stream
 ```
 > last call gets the say for parallel/sequential
-
 ### Application
 Measure performance using Instant and Duration
 ```java
@@ -210,13 +206,3 @@ Stream.iterate(0, i -> i - 1)
 	.forEachOrdered(i -> {System.out.print(i + " ");})
 // -19 -18 -17 -16 -15 -14 -13 -12 -11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 
 ```
-
-###### Extra
-
-$$
-\verb|combiner.apply(identity, i)|\equiv \verb|i|
-$$
-```java
-combiner.apply(u1, accumulator(u2, t)) <==> combiner.apply(accumulator(u1, t), u2)
-```
-

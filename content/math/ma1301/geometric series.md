@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/ma1301/arithmetic_series
 next: /labyrinth/notes/math/ma1301/binomial_theorem
 ---
-
    
-
 ### Summary
 Basic formulae
 $$
@@ -37,9 +35,7 @@ $$
 \end{align*}
 $$
 
-#
-
-## Concept
+### Concept
 Geometric sequence
 $$
 \begin{align*}
@@ -63,7 +59,6 @@ ie. & \ 1, \ -4, \ 16: \\
 d & = -4, \ \therefore geometric \ sequence(alternating)
 \end{align*}
 $$
-
 ### Application
 Expressing 0.321321321... as a rational number
 $$

@@ -6,9 +6,7 @@ complete: false
 prev: /labyrinth/notes/math/ma1301/dot_product
 next: /labyrinth/notes/math/ma1301/lines_in_R³
 ---
-
    
-
 ### Summary
 Vector/cross product, [determinant](/labyrinth/notes/math/ma1522/determinants#^2f9027) method
 $$
@@ -55,7 +53,7 @@ $$
 \end{align*}
 $$
 
-Triangle formed by 2 vectors [[#^66cf44|derived below]]
+Triangle formed by 2 vectors [derived below](#^66cf44)
 $$
 \begin{align*}
 for: & \ \triangle ABC \\
@@ -67,7 +65,6 @@ h & = \frac{|\vec{CA}\times \vec{CB}|}{|\vec{CB}|} = \frac{|\mathbf{a}\times \ma
 %% & = |\vec{CA}|\sin\theta = |\mathbf{a}-\mathbf{c}|\sin\theta %%
 \end{align*}
 $$
-
 ### Concept
 Vector product of standard unit vectors
 $$
@@ -105,5 +102,4 @@ A & = |\mathbf{a}||\mathbf{b}|\sin\theta = |\mathbf{a}\times \mathbf{b}|
 \end{align*}
 $$
 ![[area_of_parallelogram.png]]![[cross_product_parallelogram.png]]
-
 ### Application

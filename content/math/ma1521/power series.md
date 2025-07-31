@@ -6,9 +6,7 @@ complete: false
 prev: /labyrinth/notes/math/ma1521/series
 next: /labyrinth/notes/math/ma1521/geometry_in_R³
 ---
-
    
-
 ### Summary
 Power series at a
 $$
@@ -49,7 +47,6 @@ R>0 \implies f(x)\text{ is differentiable on the interval }|x-a| < R \\
 \end{split}\right.\quad, \ |x-a| <R
 \end{gather*}
 $$
-
 ### Concept
 Power series
 - resembles [polynomials](/labyrinth/notes/math/ma1521/polynomials)
@@ -63,7 +60,7 @@ Power series representation of a function
 $$
 \sum_{n=0}^{\infty} x^n = 1 + x + x^2 + x^3 + \dots = \frac{1}{1-x}, \quad |x| < 1
 $$
-> proof in  add link to cs1231s combinations and perms 
+> proof in  ==add link to cs1231s combinations and perms== 
 
 Taylor and maclaurin series
 - approximation of any function about a point
@@ -81,7 +78,6 @@ f(x) & = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n && \text{(Taylor Serie
 & = f(0) + \frac{df}{dx}(0)x + \frac{d^2f}{dx^2}(0)\frac{x^{2}}{2!}+\frac{d^{3}f}{dx^{3}}(0)\frac{x^{3}}{3!}+\dots
 \end{align*}
 $$
-
 ### Application
 Convergence of power series
 $$

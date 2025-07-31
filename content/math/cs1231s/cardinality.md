@@ -6,9 +6,7 @@ complete: false
 prev: /labyrinth/notes/math/cs1231s/function_relations
 next: /labyrinth/notes/math/cs1231s/infinite_sets
 ---
-
    
-
 ### Summary
 Cardinality ^695995
 $$
@@ -21,7 +19,6 @@ $$
 X\text{ is finite}\leftrightarrow X=\varnothing\lor \exists n \in \mathbb{Z}^+ \ | X | =| \{ 1,2,\dots,n \} |  
 \end{gather*}
 $$
-
 ### Concept
 Function relations over sized sets (Theorem 3.1)
 $$
@@ -171,7 +168,6 @@ $$
 \end{document} 
 ```
 > [pigeonhole principle](/labyrinth/notes/math/cs1231s/fundemental_methods_of_proof#^f49094)
-
 ### Application
 $$
 

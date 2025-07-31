@@ -1,16 +1,14 @@
 ---
 tags:
-- cs/algorithms
-- cs/fundamentals
 - cs1101s/chapter3
+- cs/fundamentals
+- cs/algorithms
 - lang/js
 complete: true
 prev: /labyrinth/notes/cs/cs1101s/mutable_data
 next: /labyrinth/notes/cs/cs1101s/environment_model
 ---
-
    
-
 ### Summary
 For loops
 $$
@@ -31,7 +29,6 @@ while(bool) {
 	// body
 }
 ```
-
 ### Concept
 For loops
 - For repeating a task x number of times
@@ -42,7 +39,6 @@ While loops
 - Check if condition is true, run the loop body, check if condition is still true, repeat
 
 > Beware infinite loops
-
 ### Application
 Loops in [math](/labyrinth/notes/math/math_fundementals/summation_notation)
 ```js

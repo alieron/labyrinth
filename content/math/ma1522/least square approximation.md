@@ -1,14 +1,13 @@
 ---
 tags:
-- ma1522/chapter5
-- math/linear_algebra
+  - ma1522/chapter5
+  - math/linear_algebra
+  - lang/octave
 complete: true
 prev: /labyrinth/notes/math/ma1522/QR_factorization
 next: /labyrinth/notes/math/ma1522/eigenvectors
 ---
-
    
-
 ### Summary
 Least square solution
 $$
@@ -48,7 +47,6 @@ $$
 & = {\color{orange} \mathbf{A}(\mathbf{A}^T\mathbf{A})^{-1}\mathbf{A}^T\mathbf{b} } \\
 \end{align*}
 $$
-
 ### Concept
 Least square solution
 - solution that is closer than every other vector
@@ -97,7 +95,6 @@ $$
 \mathbf{Ru}& =\mathbf{Q}^T\mathbf{b} && \text{(}\mathbf{R}\text{ is invertible)}
 \end{align*}
 $$
-
 ### Application
 Linear regression
 $$
@@ -124,3 +121,13 @@ y_{n}
 \end{gather*}
 $$
 > constructing the matrix equation
+### Extra
+Octave
+```octave
+# Least squares solution(last column)
+rref([A'*A A'*b])
+
+# Least squares solution if A is QR factorizable
+[Q, R] = qr(A)
+rref([R Q’*b])
+```

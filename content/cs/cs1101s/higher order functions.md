@@ -1,15 +1,13 @@
 ---
 tags:
-- cs/functional_programming
 - cs1101s/chapter1
+- cs/functional_programming
 - lang/js
 complete: true
 prev: /labyrinth/notes/cs/cs1101s/orders_of_growth
 next: /labyrinth/notes/cs/cs1101s/data_abstraction
 ---
-
    
-
 ### Summary
 HOFs
 ```js
@@ -43,7 +41,6 @@ add(1, 2); // -> 3
 const one = () => 1;
 one(); // -> 1
 ```
-
 ### Concept
 Higher order functions, either:
 - accepts a function as an argument
@@ -63,9 +60,7 @@ const g = y => f(y);         // 3. Declaration of lambda function g, read rest  
 g(2)                         // 4. Apply g with arg 2                                      // 8. return 1
 ```
 
-#
-
-## Application
+### Application
 Nesting vs Chaining
 ```js
 const twice = f => x => f(f(x));

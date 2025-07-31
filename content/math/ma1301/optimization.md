@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/ma1301/tangent_and_normal
 next: /labyrinth/notes/math/ma1301/integration
 ---
-
    
-
 ### Summary
 Minimise/maximise one variable wrt to another, applying [first derivative test](/labyrinth/notes/math/ma1301/derivative_tests)
 $$
@@ -16,7 +14,6 @@ $$
 find \ \frac{dy}{dx}=0
 \end{align*}
 $$
-
 ### Application
 Commonly involves [quadratic equations](/labyrinth/notes/math/math_fundementals/quadratic_equations)
 

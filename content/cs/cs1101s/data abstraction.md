@@ -1,17 +1,15 @@
 ---
 tags:
+- cs1101s/chapter2
 - cs/data_structures
 - cs/models
-- cs1101s/chapter2
 - lang/js
 - lang/pgf-tikz
 complete: true
 prev: /labyrinth/notes/cs/cs1101s/higher_order_functions
 next: /labyrinth/notes/cs/cs1101s/searching
 ---
-
    
-
 ### Summary
 Pairs
 ```js
@@ -47,7 +45,6 @@ Box and pointer diagrams
 \end{tikzpicture}
 \end{document}
 ```
-
 ### Concept
 Primitive form of data abstraction using pairs to store 2 values
 Second value can be used to store another pair, into a chain of pairs
@@ -108,8 +105,7 @@ equal(a, c); // -> true
 \end{tikzpicture}
 \end{document}
 ```
-
-###### Extra
+### Extra
 Tikz template for box and pointer diagrams
 ```latex
 \usepackage{tikz}

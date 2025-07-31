@@ -5,10 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/gea1000/confounders
 next: /labyrinth/notes/math/gea1000/bivariate_analysis
+
 ---
-
-   
-
 ### Summary
 Skew, in the direction of the tail
 ![[skew.png]]
@@ -21,7 +19,6 @@ right \ skew: & \qquad mean> median> mode
 $$
 
 Spread, larger spread means more points are further away from the mean
-
 ### Concept
 Boxplots and how to determine outliers
 ```tikz

@@ -4,10 +4,7 @@ tags:
 - math/set_theory
 - lang/pgf-tikz
 complete: true
-
 ---
-
-
 ### Summary
 Undirected graph
 - no arrows, edges are like arrows in both directions
@@ -89,8 +86,7 @@ $$
 \end{tikzpicture}
 \end{document}
 ```
-
-###### Extra
+### Extra
 Tikz template for directed/undirected graphs
 ```latex
 \usepackage{tikz}

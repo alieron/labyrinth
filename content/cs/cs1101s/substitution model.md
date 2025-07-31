@@ -1,20 +1,17 @@
 ---
 tags:
+- cs1101s/chapter1
 - cs/fundamentals
 - cs/models
-- cs1101s/chapter1
 - lang/js
 complete: true
 prev: /labyrinth/notes/cs/cs1101s/ternary_operator
 next: /labyrinth/notes/cs/cs1101s/recursion
 ---
-
    
-
 ### Summary
 Applicative Order -> Evaluate arguments before calling functions
 Normal Order -> Call functions, evaluate once fully expanded
-
 ### Concept
 ```js
 function sq(x) { return x * x ;}

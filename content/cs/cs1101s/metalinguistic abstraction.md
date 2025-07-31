@@ -1,12 +1,10 @@
 ---
 tags:
-- cs/models
 - cs1101s/chapter4
+- cs/models
 complete: true
 prev: /labyrinth/notes/cs/cs1101s/memoization
 ---
-
-
 
 ### Summary
 1. Symbol initialization - variables are noted, temporarily "unassigned"
@@ -14,7 +12,6 @@ prev: /labyrinth/notes/cs/cs1101s/memoization
 
 Frames and environments
 - Nested in lists
-
 ### Concept
 Self-compiling languages
 - Running JS/Source programmes using a programme written in JS/Source itself 

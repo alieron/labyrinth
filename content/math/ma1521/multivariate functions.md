@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/ma1521/vector-valued_functions
 next: /labyrinth/notes/math/ma1521/partial_derivatives
 ---
-
    
-
 ### Summary
 Level curve ^69f6b8
 - can be thought of as a slice of the curve at z=k
@@ -51,7 +49,6 @@ Level surface
 $$
 f(x,y,z)=k, \quad k \in \mathbb{R}
 $$
-
 ### Concept
 Bivariate functions of a surface
 - accepts an [ordered pair](/labyrinth/notes/math/cs1231s/n-ary_relations#^81cdfc)
@@ -83,7 +80,6 @@ w = f(x,y,z) \\
 f: \mathbb{R}^3\to \mathbb{R}
 \end{gather*}
 $$
-
 ### Application
 Domain of a bivariate function
 $$

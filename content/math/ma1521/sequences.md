@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/ma1521/applied_integration
 next: /labyrinth/notes/math/ma1521/series
 ---
-
    
-
 ### Summary
 Convergence and divergence, limit of a sequence
 $$
@@ -26,7 +24,6 @@ $$
 $$
 (\forall n \in \mathbb{Z}^+ \ a_{n}\leq b_{n}\leq c_{n}) \land (\lim_{ n \to \infty } a_{n} = \lim_{ n \to \infty } c_{n}=L) \to \lim_{ n \to \infty } =L
 $$
-
 ### Concept
 Sequences
 - infinite set of real numbers
@@ -37,9 +34,7 @@ $$
 $$
 > a sequence is a [function](/labyrinth/notes/math/cs1231s/function_relations#^86d994)/restriction of domain of the defining function to $\mathbb{Z}^+$
 
-#
-
-## Application
+### Application
 Sequences of [arithmetic series](/labyrinth/notes/math/ma1301/arithmetic_series) and [geometric series](/labyrinth/notes/math/ma1301/geometric_series)
 $$
 \begin{align*}

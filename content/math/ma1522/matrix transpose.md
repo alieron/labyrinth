@@ -1,14 +1,13 @@
 ---
 tags:
-- ma1522/chapter2
-- math/linear_algebra
+  - ma1522/chapter2
+  - math/linear_algebra
+  - lang/octave
 complete: true
 prev: /labyrinth/notes/math/ma1522/matrix_multiplication
 next: /labyrinth/notes/math/ma1522/matrix_equations
 ---
-
    
-
 ### Summary
 Rules
 $$
@@ -27,7 +26,6 @@ Symmetric along the diagonal ^e47d16
 $$
 \mathbf{A}\text{ is symmetric when: }\mathbf{A} = \mathbf{A}^T
 $$
-
 ### Concept
 Matrix transpose, flipping on diagonal
 $$
@@ -50,7 +48,6 @@ $$
 \end{aligned}
 \end{gather*}
 $$
-
 ### Application
 Finding transpose
 $$
@@ -64,3 +61,12 @@ $$
 3 & 6 & 9
 \end{pmatrix}
 $$
+### Extra
+Octave
+```octave
+# Matrix transpose
+transpose(A)
+
+# or
+A'
+```

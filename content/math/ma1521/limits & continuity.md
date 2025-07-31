@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/ma1521/functions
 next: /labyrinth/notes/math/ma1521/limits_at_∞
 ---
-
    
-
 ### Summary
 Rules ^c0031f
 $$
@@ -44,7 +42,6 @@ $$
 \lim_{ x \to 0 } \frac{\tan x}{x} = 1 \\
 \end{align*}
 $$
-
 ### Concept
 Limit exists
 - behaviour around c
@@ -89,7 +86,6 @@ for \ \lim_{ x \to c } f(x) = L \\
 \forall\delta \in \mathbb{R} \ \exists\epsilon \in \mathbb{R} \ 0< |x-c|<\delta \implies |f(x)-L|<\epsilon
 \end{gather*}
 $$
-
 ### Application
 Limits of reciprocal
 $$
@@ -153,8 +149,7 @@ then \  \lim_{ x \to c } -|f(x)| = 0 \\
 \therefore \lim_{ x \to c } |f(x)| =  \lim_{ x \to c } -|f(x)| =0 \implies \lim_{ x \to c } f(x) = 0
 \end{gather*}
 $$
-
-###### Extra
+### Extra
 Distributes with simple arithmetic
 $$
 \lim_{ x \to c }(f(x) \ \begin{array}{}+\\[-20pt]-\\[-20pt] \times \\[-20pt] \div \end{array} \ g(x))=\lim_{ x \to c }f(x) \ \begin{array}{}+\\[-20pt]-\\[-20pt] \times \\[-20pt] \div \end{array} \ \lim_{ x \to c }g(x)

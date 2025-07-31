@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/ma1301/volume_of_revolution
 next: /labyrinth/notes/math/ma1301/vectors_in_R³
 ---
-
    
-
 ### Summary
 Equations containing $\frac{dy}{dx}$ and $x$ and/or $y$, solve using [integration](/labyrinth/notes/math/ma1301/integration)
 $$
@@ -18,7 +16,6 @@ $$
 \frac{dy}{dx}=f(x)g(y)
 \end{gather}
 $$
-
 ### Concept
 $$
 \begin{gather}
@@ -29,7 +26,6 @@ $$
 \frac{dy}{dx}=f(x)g(y) \implies \int \frac{1}{g(y)} \ dy = \int f(x) \ dx
 \end{gather}
 $$
-
 ### Application
 For the form $\frac{dy}{dx}=f(x)$
 $$

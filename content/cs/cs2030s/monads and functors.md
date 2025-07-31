@@ -1,16 +1,14 @@
 ---
 tags:
-- cs/oop
-- cs/paradigm
-- cs2030s/chapter10
-- lang/java
-complete: false
+  - cs2030s/chapter10
+  - cs/oop
+  - cs/paradigm
+  - lang/java
+complete: true
 prev: /labyrinth/notes/cs/cs2030s/functional_interfaces
 next: /labyrinth/notes/cs/cs2030s/streams_II
 ---
-
    
-
 ### Summary
 Monad laws
 1. Left identity law
@@ -45,7 +43,6 @@ functor.map(x -> x) <==> functor
 ```java
 functor.map(f).map(g) <==> functor.map(x -> g(f(x)))
 ```
-
 ### Concept
 Monad
 - a box that stores data and its side-effects
@@ -56,7 +53,6 @@ Functor
 - a box that stores data and without side-effects
 - boxing with a factory method `of`
 - data can be modified through `map`
-
 ### Application
 Equivalence of monad/functors statements
 ```java
@@ -460,32 +456,3 @@ public abstract class Maybe<T> {
   public abstract void ifPresent(Consumer<? super T> c);
 }
 ```
-
-#
-
-##### Extra
-Monad functor laws in latex
-$$
-\verb|Monad.of(x).flatMap(x -> f(x))| \equiv \verb|f(x)|
-$$
-$$
-\verb|monad.flatMap(y -> Monad.of(y))| \equiv \verb|monad|
-$$
-$$
-\verb|monad.flatMap(x -> f(x)).flatMap(x -> g(x))| \equiv \verb|monad.flatMap(x -> f(x).flatMap(x -> g(x)))|
-$$
-$$
-\verb|functor.map(x -> x)|\equiv \verb|functor|
-$$
-$$
-\verb|functor.map(x -> f(x)).map(x -> g(x))|\equiv \verb|functor.map(x -> g(f(x)))|
-$$
-$$
-\begin{align*}
-\verb|m.map(x -> f(x)).map(x -> g(x))| & \equiv \verb|m.flatMap(x -> Monad.of(f(x))).flatMap(x -> Monad.of(g(x)))| && \text{(Convert to }\verb|flatMap|\text{)} \\
-& \equiv \verb|m.flatMap(x -> Monad.of(f(x)).flatMap(x -> Monad.of(g(x))))| && \text{(Associative Law)} \\
-& \equiv \verb|m.flatMap(x -> Monad.of(g(f(x))))| && \text{(Left Identity Law)} \\
-& \equiv \verb|m.flatMap(x -> Monad.of(g(f(x))))| && \text{()} \\
-\end{align*}
-$$
-

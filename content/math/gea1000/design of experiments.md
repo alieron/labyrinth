@@ -4,10 +4,8 @@ tags:
 - math/statistics
 complete: true
 next: /labyrinth/notes/math/gea1000/rates
+
 ---
-
-
-
 ### Summary
 Changes of [univariate](/labyrinth/notes/math/gea1000/univariate_analysis) summary statistics, and [bivariate](/labyrinth/notes/math/gea1000/bivariate_analysis) r and m 
 $$
@@ -30,6 +28,8 @@ COV = \frac{SD}{\bar{x}}
 \end{align*}
 $$
 
+Random Assignment -> proportional distribution of different characteristics between treatment and control, to [reduce confounding](/labyrinth/notes/math/gea1000/confounders)
+Probability Sampling -> probability of being selected is known and non-zero
 ### Concept
 Types of variables
 - Categorical Nominal
@@ -62,9 +62,3 @@ Experimental Studies
 Observational Studies
 - Self-selecting
 - Only provides evidence of association
-
-#
-
-##### Extra
-Random Assignment -> proportional distribution of different characteristics between treatment and control, to [reduce confounding](/labyrinth/notes/math/gea1000/confounders)
-Probability Sampling -> probability of being selected is known and non-zero

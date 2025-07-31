@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/ma1301/1st_order_ODE
 next: /labyrinth/notes/math/ma1301/unit_vectors
 ---
-
    
-
 ### Summary
 3d vectors
 $$
@@ -61,7 +59,6 @@ kx\\ ky\\ kz
 \end{pmatrix}
 \end{gather}
 $$
-
 ### Concept
 Use the right hand rule for the 3D cartesian coordinate system
 
@@ -91,7 +88,6 @@ A(x_{a},y_{a},z_{a}), \ B(x_{b},y_{b},z_{b})\\
 |\vec{AB}| = \sqrt{ (x_{b}-x_{a})^2+(y_{b}-y_{a})^2+(z_{b}-z_{a})^2 }
 \end{gather}
 $$
-
 ### Application
 2d vectors
 $$

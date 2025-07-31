@@ -1,15 +1,13 @@
 ---
 tags:
-- cs/functional_programming
-- cs2030s/chapter8
-- lang/java
-complete: false
+  - cs2030s/chapter8
+  - cs/functional_programming
+  - lang/java
+complete: true
 prev: /labyrinth/notes/cs/cs2030s/nested_classes
 next: /labyrinth/notes/cs/cs2030s/monads_and_functors
 ---
-
    
-
 ### Summary
 Functional interfaces
 - interface with a single method, no ambiguity about which function is being implemented
@@ -71,23 +69,26 @@ A::hoo // BiFunction<A, Integer, Integer> (a, x) -> a.hoo(x);
 
 [Currying](/labyrinth/notes/cs/cs1101s/higher_order_functions#^3ffd84)
 ```java
+// say
+int a = 1;
+int b = 2;
+
 int add(int x, int y) {
 	return x + y;
 }
-add(x, y);
+add(a, b);
 
 // BiFunction implementation
 BiFunction<Integer, Integer, Integer> add = (x, y) -> x + y;
-add.apply(x, y);
+add.apply(a, b);
 
 // Curried Function implementation
 Function<Integer, Function<Integer, Integer>> add = x -> y -> x + y;
-add.apply(x).apply(y);
+add.apply(a).apply(b);
 ```
+![[bifunction.png]]
+![[curried_function.png]]
 > useful for lazy evaluation, inner lambda can be evaluated later
-
- add stack and heap
-
 ### Concept
 Pure functions
 1. does not depend on anything extrinsic of the function
@@ -132,7 +133,6 @@ int compare(T o1, T o2) // returns -ve if o1 < o2
 // from List<T>
 list::sort(Comparator<T> cmp) // sorts the list in ascending order wrt to comparator
 ```
-
 ### Application
 Square
 ```java
@@ -179,5 +179,3 @@ int addToQueue(Queue<Integer> queue, int i) {
   queue.enq(i);  // has side effects on queue
 }
 ```
-
-Producer, Consumer, Transformer, BooleanCondition, Combiner

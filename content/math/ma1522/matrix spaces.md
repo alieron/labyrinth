@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/ma1522/dimensions
 next: /labyrinth/notes/math/ma1522/orthogonality
 ---
-
    
-
 ### Summary
 Column space
 - output space of the matrix, set of all vectors with solutions
@@ -46,7 +44,6 @@ $$
 \end{align*}
 $$
 > for a square matrix $n=m$
-
 ### Concept
 For any given matrix
 $$
@@ -109,7 +106,6 @@ $$
 \operatorname{nullity}(\mathbf{A})=\dim(\operatorname{Null}(\mathbf{A}))
 $$
 > the number of non-pivot columns or parameters in the general solution
-
 ### Application
 Spaces of a given matrix
 $$

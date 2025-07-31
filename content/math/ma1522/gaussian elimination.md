@@ -1,15 +1,13 @@
 ---
 tags:
-- lang/octave
-- ma1522/chapter1
-- math/linear_algebra
+  - ma1522/chapter1
+  - math/linear_algebra
+  - lang/octave
 complete: true
 prev: /labyrinth/notes/math/ma1522/linear_systems
 next: /labyrinth/notes/math/ma1522/matrices
 ---
-
    
-
 ### Summary
 Linear systems as augmented matrices
 $$
@@ -43,7 +41,6 @@ $$
 \end{gather*}
 $$
 > for the matrix in RREF
-
 ### Concept
 Elementary row operations(reversible) ^962797
 - Interchanging, $R_{1}\leftrightarrow R_{2}$
@@ -70,22 +67,6 @@ Unknown constants in system
 
 Intuition for row reduction ^0aa696
 - an expression of columns as <span style="color:rgb(255, 167, 40)">multiples of the first n columns</span>
-
-###### Octave
-```octave
-
-# find the rref of a matrix
-rref([1 2 3;
-	  4 5 6;
-	  7 8 9])
-
-> ans =
->
->   1   0  -1
->   0   1   2
->   0   0   0
-```
-
 ### Application
 Row reduction
 $$
@@ -296,3 +277,9 @@ a & 0 & 2 & 2 \\
 \qquad\text{Case: } a\neq0: & \text{Infinite Solutions, 1 non-pivot column, }x_{3}=\frac{2-2s}{a}, \ x_{2}=\frac{2-2s}{a}
 \end{gather*}
 $$
+### Extra
+Octave
+```octave
+# RREF of a matrix
+rref(A)
+```

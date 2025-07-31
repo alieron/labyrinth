@@ -1,15 +1,13 @@
 ---
 tags:
-- cs/oop
 - cs2030s/chapter2
+- cs/oop
 - lang/java
 complete: true
 prev: /labyrinth/notes/cs/cs2030s/classes
 next: /labyrinth/notes/cs/cs2030s/polymorphism
 ---
-
    
-
 ### Summary
 Subtype relationship
 - child class is a [subtype](/labyrinth/notes/cs/cs2030s/types#^078dcb) of the parent
@@ -56,7 +54,7 @@ class Child extends Parent { // not possible to inherit
 Protected
 - child class cannot access private fields in the parent class
 - protected allows this
-- avoid using protected for cs2030s
+- avoid using protected for #cs2030s
 ```java
 class Parent {
 	private int a; // cannot be accessed outside Parent
@@ -66,7 +64,6 @@ class Parent {
 class Child extends Parent { // not possible to inherit
 }
 ```
-
 ### Concept
 Every class in java extends from the base [java.lang.Object](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html) class
 
@@ -79,7 +76,6 @@ Type casting ^1f8d90
 - to mimick a narrowing type conversion, mainly at run-time
 - succeeds at compile-time when the CTT of the variable is related to type its being cast to
 - succeeds at run-time when the RTT of the variable is a subtype of the type its being cast to
-
 ### Application
 Run-time errors when type casting, see [casting to interfaces](/labyrinth/notes/cs/cs2030s/class_abstraction#^db9022)
 ```java
@@ -109,21 +105,13 @@ b = (D) e;  // compile-time error: CTT(e) = E is not related to D
 
 b = (D) a;  // compiles: CTT(a) = A is related to D, run-time error: RTT(a) = E </: D
 
-// 
-
-# 1
+// # 1
 b = (B) a;  // compiles: CTT(a) = A is related to B, run-time error: RTT(a) = E </: B
-// 
-
-# 2
+// # 2
 b = (B) e;  // compile-time error: CTT(e) = E is not related to B
-// 
-
-# 3
+// # 3
 b = (D) b;  // compiles: CTT(b) = B is related to D, runs: RTT(b) = D <: D
-// 
-
-# 4
+// # 4
 b = (B) d;  // compiles: CTT(d) = D is related to B, runs: RTT(d) = D <: B
 ```
 > from examples 1 & 2, we see that the compile time check only checks the declared type

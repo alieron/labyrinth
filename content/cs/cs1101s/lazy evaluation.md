@@ -5,10 +5,7 @@ tags:
 - cs1101s/chapter1
 - lang/js
 complete: true
-
 ---
-
-
 ### Summary
 Control flow
 ```js
@@ -27,7 +24,6 @@ const ones = pair(1, () => ones);
 head(ones); // -> 1
 head(streamm_tail(ones)); // -> 1
 ```
-
 ### Concept
 Call-by-need
 Evaluation of an expression is delayed until its value is needed

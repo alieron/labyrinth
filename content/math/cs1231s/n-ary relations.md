@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/cs1231s/sets
 next: /labyrinth/notes/math/cs1231s/binary_relations
 ---
-
    
-
 ### Summary
 n-ary relation
 - set of n-tuples over n sets where the predicate is true
@@ -20,7 +18,6 @@ R = \{\begin{array}{c|c}(a_{1}, \dots, a_{n}) \in A_{1}\times \dots \times A_{n}
 R \subseteq A_{1}\times \dots \times A_{n}
 \end{gather*}
 $$
-
 ### Concept
 Tuples ^81cdfc
 - ordered lists
@@ -40,7 +37,6 @@ A_{1} =\dots = A_{n} = A \to A_{1}\times \dots \times A_{n} = A^n
 \end{gather*}
 $$
  similar idea to [Rⁿ](/labyrinth/notes/math/ma1522/vectors_in_Rⁿ)
-
 ### Application
 Cartesian product
 $$

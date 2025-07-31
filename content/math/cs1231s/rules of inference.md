@@ -3,10 +3,7 @@ tags:
 - cs1231s/chapter1
 - math/logic
 complete: true
-
 ---
-
-
 ### Summary
 Modus ponens ^c19fcd
 $$

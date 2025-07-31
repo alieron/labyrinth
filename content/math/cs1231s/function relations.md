@@ -7,9 +7,7 @@ complete: false
 prev: /labyrinth/notes/math/cs1231s/ordering
 next: /labyrinth/notes/math/cs1231s/cardinality
 ---
-
    
-
 ### Summary
 Properties of a function
 $$
@@ -101,7 +99,6 @@ $$
 \text{F2:} &&& \forall x \in X \ \forall y \in Y \ \forall y' \in Y && {\color{royalblue}(x,y)\in f\land (x, y')\in f} \xrightarrow{show} {\color{limegreen}y=y'}
 \end{align*}
 $$
-
 ### Concept
 Image and range ^803f4f
 - typical notation for [functions](/labyrinth/notes/math/ma1521/functions)
@@ -302,7 +299,6 @@ $$
 \end{aligned}
 \end{align*}
 $$
-
 ### Application
 Identifying funtions
 $$
@@ -385,9 +381,7 @@ for \ f: \mathbb{R} \to \mathbb{R} \\
 \end{gather*}
 $$
 
-#
-
-##### Extra
+### Extra
 Tikz template for arrow diagram between number lines
 ```latex
 \usepackage{tikz}

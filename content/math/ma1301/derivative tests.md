@@ -3,10 +3,7 @@ tags:
 - ma1301/chapter2
 - math/calculus
 complete: true
-
 ---
-
-
 ### Summary
 Increasing/decreasing
 $$
@@ -41,7 +38,6 @@ f''(x)=0
 \end{gather*}
 $$
 ![[stationary_pt.png]]
-
 ### Application
 First [derivative](/labyrinth/notes/math/math_fundementals/derivative_notation) test -> determine turning/stationary points
 Second derivative test -> determine concavity, if turning point is maximum or minimum

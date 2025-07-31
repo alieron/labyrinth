@@ -1,16 +1,14 @@
 ---
 tags:
+- cs1101s/chapter4
 - cs/algorithms
 - cs/paradigm
-- cs1101s/chapter4
 - lang/js
 complete: true
 prev: /labyrinth/notes/cs/cs1101s/streams
 next: /labyrinth/notes/cs/cs1101s/metalinguistic_abstraction
 ---
-
    
-
 ### Summary
 Basic memory read and write for binary functions
 ```js
@@ -25,7 +23,6 @@ function write(n, k, value) {
 	mem[n][k] = value;
 }
 ```
-
 ### Concept
 Trading space for time
 - avoid doing repeated computation
@@ -37,7 +34,6 @@ Useful in:
 
 Not useful in:
 - factorial
-
 ### Application
 n-choose-k
 ```js

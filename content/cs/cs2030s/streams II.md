@@ -1,17 +1,15 @@
 ---
 tags:
-- cs/functional_programming
-- cs2030s/chapter9
-- lang/java
-complete: false
+  - cs2030s/chapter9
+  - cs/functional_programming
+  - lang/java
+complete: true
 prev: /labyrinth/notes/cs/cs2030s/monads_and_functors
 next: /labyrinth/notes/cs/cs2030s/parallelism
 ---
-
    
 
 Succeeds: [streams](/labyrinth/notes/cs/cs1101s/streams)
-
 ### Summary
 Terminal -> triggers the evaluation
 Intermediate -> returns another `Stream`
@@ -29,7 +27,7 @@ s.map(x -> x + x); // error, IllegalStateException
 ```
 
 Reduce
-- evaluates left-to-right, unlike [accumulate](/labyrinth/notes/cs/cs1101s/lists) from cs1101s
+- evaluates left-to-right, unlike [accumulate](/labyrinth/notes/cs/cs1101s/lists) from #cs1101s
 ```java
 Stream.iterate(1, i -> i + 1).limit(5).reduce(0, (x, y) -> 2 * x + y)
 // 57 = 2(2(2(2(2(0)+1)+2)+3)+4)+5
@@ -41,7 +39,6 @@ Filter
 Map/flatMap
 - lazily applies a function to all entries
 - for flatMap the resulting stream is flattened into the current stream
-
 ### Concept
 Factory methods
 ```java
@@ -84,7 +81,6 @@ Stream::skip
 Stream::sorted 
 Stream::distinct
 ```
-
 ### Application
 isPrime
 ```java
@@ -280,4 +276,3 @@ public class InfiniteList<T> {
   }
 }
 ```
-

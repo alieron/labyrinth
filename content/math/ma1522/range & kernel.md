@@ -6,8 +6,6 @@ complete: false
 prev: /labyrinth/notes/math/ma1522/linear_transformation
 ---
 
-
-
 ### Summary
 Rank and injectivity/surjectivity
 $$
@@ -38,7 +36,6 @@ $$
 14) &&& T_{\mathbf{A}}\text{ is 1-1}\land\text{onto}
 \end{align*}
 $$
-
 ### Concept
 [Range](/labyrinth/notes/math/cs1231s/function_relations#^803f4f)
 $$
@@ -95,15 +92,7 @@ T_{\mathbf{B}}(T_{\mathbf{A}}(\mathbf{x}))=\mathbf{BAx} \\
 \therefore \exists T_{\mathbf{B}} \quad  T_{\mathbf{A}}(T_{\mathbf{B}}(\mathbf{x}))=\mathbf{x}\land T_{\mathbf{B}}(T_{\mathbf{A}}(\mathbf{x}))=\mathbf{x}
 \end{gather*}
 $$
-
-#
-
-## Application
+### Application
 $$
 
 $$
-
-#
-
-##### Extra
-

@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/ma1522/matrix_transpose
 next: /labyrinth/notes/math/ma1522/inverse_of_square_matrices
 ---
-
    
-
 ### Summary
 Alternate representation of [linear systems](/labyrinth/notes/math/ma1522/linear_systems), as the product of a matrix and vector, and as a vector equation ^31d777
 - $\mathbf{A}$ is the coefficient matrix
@@ -43,7 +41,6 @@ $$
 \end{gather*}
 $$
 > row reducing gives $\mathbf{B}$ as [multiples](/labyrinth/notes/math/ma1522/gaussian_elimination#^0aa696) of the columns of $\mathbf{A}$
-
 ### Concept
 Homogeneous linear systems are always consistent
 $$
@@ -64,7 +61,7 @@ s(\mathbf{Au}) = s\mathbf{0}, \ \forall s\in \mathbb{R} \\
 \therefore s\mathbf{u}\text{ is also a solution} 
 \end{gather*}
 $$
-> visualise it as the origin/line formed by the [intersection of planes](/labyrinth/notes/math/ma1301/planes_in_R³#^90ce2c)(#) that passes through the origin ^db80b8
+> visualise it as the origin/line formed by the [intersection of planes](/labyrinth/notes/math/ma1301/planes_in_R³#^90ce2c)(the linear equations) that passes through the origin ^db80b8
 
 Combined augmented matrix
 - $p$ linear systems on the same coefficient matrix $\mathbf{A}$
@@ -72,7 +69,6 @@ Combined augmented matrix
 $$
 \left(\begin{array}{cccc|c|c|c|c} \color{aqua}{a_{11}} & \color{aqua}{a_{12}} & \color{aqua}{\cdots} & \color{aqua}{a_{1n}} & \color{magenta}{b_{11}} & \color{magenta}{b_{12}} & & \color{magenta}{b_{1p}} \\ \color{aqua}{a_{21}} & \color{aqua}{a_{22}} & \color{aqua}{\cdots} & \color{aqua}{a_{2n}} & \color{magenta}{b_{21}} & \color{magenta}{b_{22}} & & \color{magenta}{b_{2p}} \\ \color{aqua}{\vdots} & \color{aqua}{\vdots} & \color{aqua}{\ddots} & \color{aqua}{\vdots} & \color{magenta}{\vdots} & \color{magenta}{\vdots} & \color{magenta}{\cdots} & \color{magenta}{\vdots} \\ \color{aqua}{a_{m1}} & \color{aqua}{a_{m2}} & \color{aqua}{\cdots} & \color{aqua}{a_{mn}} & \color{magenta}{b_{m1}} & \color{magenta}{b_{m2}} & & \color{magenta}{b_{mp}} \end{array}\right)=\left(\begin{array}{c|c|c|c|c} \color{aqua}{\mathbf{A}} & \color{magenta}{\mathbf{b}_{1}} & \color{magenta}{\mathbf{b}_{2}} & \color{magenta}{\dots}  & \color{magenta}{\mathbf{b}_{p}} \end{array}\right) 
 $$
-
 ### Application
 Homongenous solution with infinitely many solutions
 $$

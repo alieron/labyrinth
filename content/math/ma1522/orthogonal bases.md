@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/ma1522/orthogonality
 next: /labyrinth/notes/math/ma1522/orthogonal_projection
 ---
-
    
-
 ### Summary
 Relative coordinates to an orthogonal basis ^ffe6f8
 $$
@@ -50,7 +48,6 @@ $$
 3)&&& \text{rows of }\mathbf{A}\text{ is an orthonormal basis of }\mathbb{R}^n
 \end{align*}
 $$
-
 ### Concept
 Orthogonality and [linear independence](/labyrinth/notes/math/ma1522/linear_independence)
 - not every orthogonal set is linearly independent -> can contain the 0 vector
@@ -133,7 +130,6 @@ $$
 \det(\mathbf{Q}) & = \pm \sqrt{ 1 }= \pm1
 \end{align*}
 $$
-
 ### Application
 Relative coordinates
 $$
@@ -177,8 +173,7 @@ $$
 \sin\theta & \cos\theta
 \end{pmatrix}
 $$
-
-###### Extra
+### Extra
 $$
 [\mathbf{v}]_{S}=\begin{pmatrix}
 \mathbf{v}\cdot \mathbf{u}_{1} \\

@@ -1,13 +1,11 @@
 ---
 tags:
-- cs/paradigm
-- cs2030s/chapter12
-- lang/java
-complete: false
+  - cs2030s/chapter12
+  - cs/paradigm
+  - lang/java
+complete: true
 prev: /labyrinth/notes/cs/cs2030s/async
 ---
-
-
 
 ### Summary
 RecursiveTask
@@ -104,7 +102,6 @@ return left.join()   // <---|--+
 return left.compute()   // not even concurrent
 	 + right.compute();
 ```
-
 ### Concept
 Thread pool
 - collection of threads and collection(deque) of tasks
@@ -120,7 +117,6 @@ r.join() // wait for the subtask to complete, invokes r.compute()
 
 abstract T compute() { ... // the method that defines 
 ```
-
 ### Application
 ```java
 class Task extends RecursiveTask<Integer> {
@@ -198,4 +194,3 @@ int a = f1.join(); // needs to traverse the deque to reach f1
 int b = f2.join(); 
 return a + b; 
 ```
-

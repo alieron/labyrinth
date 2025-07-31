@@ -3,10 +3,7 @@ tags:
 - math/fundamentals
 - math/geometry
 complete: true
-
 ---
-
-
 ### Summary
 
 |    Name    |       Figure        |                  Curved<br>Surface<br>Area                  |                    Total<br>Surface<br>Area                    |                                 Volume                                 |

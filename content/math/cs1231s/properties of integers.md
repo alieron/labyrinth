@@ -3,11 +3,8 @@ tags:
 - cs1231s
 - math/number_theory
 complete: false
-
 ---
-
 \[\[special sets|Previous]]   \[\[logical operators|Next]]
-
 ### Summary
 Basic properties
 $$
@@ -25,7 +22,6 @@ $$
 \text{Trichotomy :} &\qquad x=y, \ or \ x<y, \ or \ x>y \qquad \text{(Exactly one is true)}  \\
 \end{align*}
 $$
-
 ### Concept
 Basic Properties
 - Closure -> Product and sum are integers
@@ -35,7 +31,6 @@ Basic Properties
 - Trichotomy -> Two integers are exclusively either equal to, less than or more than each other
 
 > The $\mathbb{Z}$ comes from the German word for numbers "zahlen"
-
 ### Application
 Definition of odd and even integers ^ec72bc
 $$
@@ -57,8 +52,7 @@ $$
 $$
 > Assumption 2: Every [rational](/labyrinth/notes/math/cs1231s/special_sets#^9f1e5d) number can be reduced to a faction in its lowest term
 
-Definition of colorful for cs1231s
+Definition of colorful for #cs1231s
 $$
 n\text{ is colorful} \iff \exists k \ \mathrm{s.t.}\ n=3k \iff 3 \mid n
 $$
-

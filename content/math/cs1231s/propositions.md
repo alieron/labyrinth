@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/cs1231s/mathematical_terminology
 next: /labyrinth/notes/math/cs1231s/conditionals
 ---
-
    
-
 ### Summary
 Negation(NOT)
 $$
@@ -68,7 +66,6 @@ $$
 \text{Absorption:} &&& p \lor (p\land q) \equiv p \land (p \lor q) \equiv p
 \end{align*}
 $$
-
 ### Concept
 $p$ and $q$ represent statements -> can either true or false
 
@@ -83,7 +80,6 @@ Contradiction
 $$
 {\color{orangered} \mathbf{c}}, \ is \ always \ false
 $$
-
 ### Application
 Logical equivalance
 - solve via truth table

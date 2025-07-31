@@ -3,11 +3,8 @@ tags:
 - math/fundamentals
 - math/modular_arithmetic
 complete: false
-
 ---
-
-[[#|Previous]]   [[#|Next]]
-
+   
 ### Summary
 Congruence modulo $n$ ^3013a5
 $$
@@ -24,7 +21,6 @@ where, \ k = p - q
 $$
 
 Modulo inverse(multiplicative) ^186d73
-
 ### Concept
 Modulo operator, remainder of integer division
 $$
@@ -45,7 +41,6 @@ $$
 
 \end{align*}
 $$
-
 ### Application
 Demonstration of congruence modulo 10
 $$

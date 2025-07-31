@@ -1,16 +1,14 @@
 ---
 tags:
+- cs1101s/chapter1
 - cs/functional_programming
 - cs/fundamentals
-- cs1101s/chapter1
 - lang/js
 complete: true
 prev: /labyrinth/notes/cs/cs1101s/substitution_model
 next: /labyrinth/notes/cs/cs1101s/orders_of_growth
 ---
-
    
-
 ### Summary
 Recursive
 ```js
@@ -63,14 +61,12 @@ iter(24, 5, 4)
 ```
 $O(n)$ time but $O(1)$/constant space,
 since there are no/constant(ie. happen every recurrence) deferred operations
-
 ### Concept
 Functions that calls itself
 - Base case
 - Wish
 - Bridge
 Gives rise to iterative and recursive processes
-
 ### Application
 Fibonacci series(iterative > recursive solution) ^ede420
 1. Recursive solution

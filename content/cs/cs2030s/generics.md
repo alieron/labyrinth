@@ -1,15 +1,13 @@
 ---
 tags:
-- cs/oop
 - cs2030s/chapter5
+- cs/oop
 - lang/java
 complete: true
 prev: /labyrinth/notes/cs/cs2030s/exceptions
 next: /labyrinth/notes/cs/cs2030s/wildcards
 ---
-
    
-
 ### Summary
 Type parameters
 - scopes with method level declaration
@@ -168,7 +166,6 @@ class B {
 	}
 }
 ```
-
 ### Concept
 Make classes more flexible
 - a framework for compiler type checks(code sharing)
@@ -237,7 +234,6 @@ B<Integer> = new B<Integer>();
 B<Double> = new B<Double>();
 // no way to know what T will be
 ```
-
 ### Application
 Pair
 ```java

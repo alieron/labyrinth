@@ -1,15 +1,13 @@
 ---
 tags:
-- cs/oop
-- cs2030s/chapter7
-- lang/java
-complete: false
+  - cs2030s/chapter7
+  - cs/oop
+  - lang/java
+complete: true
 prev: /labyrinth/notes/cs/cs2030s/immutable_classes
 next: /labyrinth/notes/cs/cs2030s/functional_interfaces
 ---
-
    
-
 ### Summary
 Inner class
 - requires an instance of the outer class
@@ -21,15 +19,15 @@ class A {
 	class B {
 		private int x;
 		
-	    void foo() {
-		    x = 1;        // instance field from B
+		void foo() {
+			x = 1;        // instance field from B
 			this.x = 1;
 			
-		    y = 1;        // static field from A
-		    A.y = 1; 
+			y = 1;        // static field from A
+			A.y = 1; 
 			
-		    A.this.x = 1; // instance field from A
-	    }
+			A.this.x = 1; // instance field from A
+		}
 	}
 }
 
@@ -47,7 +45,7 @@ class A {
 	static class C {
 		void bar() {
 		    x = 1; // cannot access instance field from A
-		    y = 1; // static field from A
+		    y = 1; // can access static field from A
 	    }
 	}
 }
@@ -59,18 +57,18 @@ Local class
 - class declared within a method
 ```java
 class A {
-    int x = 1;
+	int x = 1;
 	
-    void f() {
-	    int y = 1;
+	void f() {
+		int y = 1;
 		
-	    class B {
-		    void g() {
-		        x = y; // accessing x and y is OK.
+		class B {
+			void g() {
+				x = y; // accessing x and y is OK.
 			}
-	    }
+		}
 		
-	    new B().g();
+		new B().g();
 	}
 }
 
@@ -88,13 +86,12 @@ new X(arguments) { body }
 // arguments are supplied to the constructor, like using super()
 // override methods or implement them in the body, no constructor
 ```
-
 ### Concept
 Fully qualified name
 ```java
 class A {
 	int x = 0;
-
+	
 	int f() {
 		int x = 3;
 		return x; // x is potentially ambiguous, use this.x to refer to outer x
@@ -111,41 +108,39 @@ Variable capture (Local classes)
 - get around this using mutable reference types, sus though
 ```java
 interface C {
-  void g();
+	void g();
 }
 
 class A {
-  int x = 1;
-
-  C f() {
-    int y = 1; // alone, this would be effectively final
-    y = 2; // not effectively final, no reassignment even if before the local class is declared
-
-    class B implements C {
-      void g() {
-        x = y; // accessing x and y is OK.
-      }
-    }
-
-	y = 2; // not effectively final
-    B b = new B();
-    return b;
-  }
+	int x = 1;
+	
+	C f() {
+		int y = 1; // alone, this would be effectively final
+		y = 2; // not effectively final, no reassignment even if before the local class is declared
+		
+		class B implements C {
+			void g() {
+				x = y; // accessing x and y is OK.
+			}
+		}
+		
+		y = 2; // not effectively final
+		B b = new B();
+		return b;
+	}
 }
 ```
- add stack heap diagram
-
 ### Application
 Hiding inner classes
 ```java
 class A {
-  private class B {
-    public void buz() { 
-    }
-  }
-  B foo() {
-    return new B();
-  }
+	private class B {
+		public void buz() { 
+		}
+	}
+	B foo() {
+		return new B();
+	}
 }
 
 A a = new A();
@@ -157,9 +152,9 @@ a.foo().buz();   // error, A.B::buz is defined in a private nested class
 Comparator
 ```java
 Comparator<String> cmp = new Comparator<String>() { // implements comparator
-  public int compare(String s1, String s2) {
-    return s1.length() - s2.length();
-  }
+	public int compare(String s1, String s2) {
+		return s1.length() - s2.length();
+	}
 };
 
 names.sort(cmp);
@@ -168,65 +163,73 @@ names.sort(cmp);
 Inner class captures outer instance
 ```java
 class A {
-  int x = 1;
-  class B {
-    void go() { System.out.println(x); } // A.this.x works also
-  }
-  void bo() {
-    new B().go();
-  }
+	int x = 1;
+	class B {
+		void go() { System.out.println(x); } // A.this.x works also
+	}
+	void bo() {
+		new B().go();
+	}
 }
 
 A a = new A();
 a.bo();
 ```
- add diagram
-![[StackHeap.svg]]
+![[inner_class.png]]
 
 Local class only captures variables that are used internally
 ```java
 class A {
-  void bo() {
-    int x = 1;
-    int i = 2;
-    
-    class B {
-      void go() { System.out.println(x); } // A.this.x works also
-    }
-    new B().go();
-  }
+	int x = 1;
+	
+	void bo() {
+		int y = 1;
+		int i = 2;
+		
+		class B {
+			void go() { 
+				System.out.println(x); // A.this.x works also
+				System.out.println(y); 
+			} 
+		}
+		new B().go();
+	}
 }
 
 A a = new A();
 a.bo();
 ```
-![[StackHeap2.svg]]
+![[local_class.png]]
+> this way `x` must be effectively final for use within `B` but `i` can still be modified
 
 Scope and effectively final
 ```java
 class E {
-  int w;
-
-  void doTask() {
-    int x;
-
-    class F {
-      int y;
-
-      F() {
-        w = 1; // comes from E.this.w
-        x = 1; // error: not effectively final
-        y = 1; // class field
-        z = 1; // error: scope
-      }
-    }
-  
-    F f = new F();
-  }
-
-  class G {
-    int z;
-  }
+	int w;
+	
+	void doTask() {
+		int x;
+		
+		class F {
+			int y;
+			
+			F() {
+				w = 1; // comes from E.this.w
+				x = 1; // error: not effectively final
+				y = 1; // class field
+				z = 1; // error: scope
+			}
+		}
+		
+		F f = new F();
+	}
+	
+	class G {
+		int z;
+	}
 }
 ```
- add diagram
+### Extra
+Check for correctness
+https://thisisadi.yoga/Programming/Tools/StackHeap/ - A good stack and heap diagram visualizer
+> It uses a slightly different naming convention - the `$` follow java's internal naming convention for nested classes

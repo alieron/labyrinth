@@ -1,15 +1,13 @@
 ---
 tags:
-- cs/oop
 - cs2030s/chapter3
+- cs/oop
 - lang/java
 complete: true
 prev: /labyrinth/notes/cs/cs2030s/inheritance
 next: /labyrinth/notes/cs/cs2030s/LSP
 ---
-
    
-
 ### Summary
 Dynamic type checking
 - check if the run-time type of x is a subtype of y
@@ -35,7 +33,6 @@ class Child extends Parent {
 
 Specific ^cc9566
 - method M is more specific than a method N if the arguments to M can be passed to N without compilation error
-
 ### Concept
 Overriding
 - replacing parent methods, <span style="color:red">with the same method signature</span>, in the child class
@@ -54,7 +51,7 @@ Dynamic binding ^8d8849
 - invoke the method, with the same descriptor based on RTT
 - class methods do not support dynamic binding
 ```java
-class {
+class A {
 	boolean contains(Object[] array, Object obj) {
 	  for (Object curr : array) { // compile-time curr is Object
 	    if (curr.equals(obj)) { // invokes the equal function based on the run-time type of curr
@@ -67,7 +64,6 @@ class {
 ```
 1. at compile-time, CTT(`curr`) = Object, search for the most specific `Object.equals()` method that accepts CTT(`obj`) = Object, store the method descriptor -> `Object::equals(Object)`
 2. at run-time, determine RTT(`curr`), look for the first accessible method that matches the descriptor, traverse up the class hierachy until found
-
 ### Application
 Object methods that are usually overriden
 `String toString()`

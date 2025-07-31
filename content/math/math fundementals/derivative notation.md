@@ -3,10 +3,7 @@ tags:
 - math/calculus
 - math/fundamentals
 complete: true
-
 ---
-
-
 ### Summary
 $$
 \begin{align*}

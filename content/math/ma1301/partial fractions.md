@@ -3,10 +3,7 @@ tags:
 - ma1301/chapter1
 - math/algebra
 complete: true
-
 ---
-
-
 ### Summary
 Linear / Quadratic
 $$
@@ -27,7 +24,6 @@ $$
 \frac{px^2+qx+r}{(x-a)(x^2+bx+c)} & = \frac{A}{x-a} + \frac{Bx+C}{x^2+bx+c} \\
 \end{align*}
 $$
-
 ### Application
 Solve the system for $A$ and $B$ (linear/quadratic)
 $$

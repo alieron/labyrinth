@@ -1,13 +1,11 @@
 ---
 tags:
-- cs/fundamentals
 - cs1101s/chapter1
+- cs/fundamentals
 - lang/js
 complete: true
 next: /labyrinth/notes/cs/cs1101s/substitution_model
 ---
-
-
 
 ### Summary
 $$
@@ -18,9 +16,8 @@ true ? 1 : 0;
 // output: 1
 
 false ? 1 : 0;
-//output: 0
+// output: 0
 ```
-
 ### Concept
 Ternary operator has 3 parameters/operands:
 - Predicate
@@ -28,7 +25,6 @@ Ternary operator has 3 parameters/operands:
 - Alternative
 
 Based on the boolean predicated, either the consequent or alternative is returned
-
 ### Application
 Absolute function
 $$
@@ -48,10 +44,10 @@ function abs(x) {
 }
 
 abs(5);
-//output: 5
+// output: 5
 
 abs(-8);
-//output: 8
+// output: 8
 ```
 
 Binary boolean operators

@@ -2,18 +2,14 @@
 tags:
 - math/number_theory
 complete: false
-
 ---
-
-[[#|Previous]]   [[#|Next]]
-
+   
 ### Summary
 $$
 \begin{align*}
 
 \end{align*}
 $$
-
 ### Concept
 Coprime ^449690
 $$
@@ -21,7 +17,6 @@ $$
 
 \end{align*}
 $$
-
 ### Application
 $$
 

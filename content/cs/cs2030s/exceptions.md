@@ -1,15 +1,13 @@
 ---
 tags:
-- cs/fundamentals
 - cs2030s/chapter4
+- cs/fundamentals
 - lang/java
 complete: true
 prev: /labyrinth/notes/cs/cs2030s/wrapper_classes
 next: /labyrinth/notes/cs/cs2030s/generics
 ---
-
    
-
 ### Summary
 Try-catch-finally
 ```java
@@ -29,7 +27,6 @@ void func() throws Exception {
 	throw new Exception(); // use new to instantiate an exception
 }
 ```
-
 ### Concept
 Checked exceptions
 - extends [java.lang.Exception](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Exception.html)
@@ -42,7 +39,6 @@ Unchecked exceptions(run-time exceptions)
 - errors that cannot be recovered from, caused by programmer error
 - no need to specify in method declaration
 - eg. divide by 0, only happens when running
-
 ### Application
 NullPointerException, runtime error
 ```java

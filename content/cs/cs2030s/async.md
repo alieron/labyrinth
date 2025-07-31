@@ -1,15 +1,13 @@
 ---
 tags:
-- cs/paradigm
 - cs2030s/chapter12
+- cs/paradigm
 - lang/java
 complete: true
 prev: /labyrinth/notes/cs/cs2030s/parallelism
 next: /labyrinth/notes/cs/cs2030s/fork_and_join
 ---
-
    
-
 ### Summary
 Limitations of Thread
 - cannot return a value -> unable to pass results between tasks running on different threads, except by using shared variables
@@ -104,7 +102,6 @@ CompletableFuture.<Integer>supplyAsync(() -> null)
 			.handle((t, e) -> (e == null) ? t : 0) // returns 0 if exception is encountered
 			.join();
 ```
-
 ### Concept
 Thread
 - [java.lang.Thread](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Thread.html)
@@ -158,7 +155,6 @@ c.exceptionally(Function<Throwable, T> action) // if task finishes exceptionally
 c.whenComplete(BiConsumer<T, Throwable> action) // run something based on the result or exception if any
 ```
 > maximize concurrency by calling `get` or `join` as late as possible
-
 ### Application
 Checking threads
 ```java

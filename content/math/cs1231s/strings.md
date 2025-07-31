@@ -3,10 +3,7 @@ tags:
 - cs1231s
 - math/set_theory
 complete: true
-
 ---
-
-
 ### Summary
 Alphabet
 - finite set of symbols
@@ -16,7 +13,6 @@ String
 
 Language ^f0c868
 - a set of strings over an alphabet
-
 ### Application
 Example
 $$

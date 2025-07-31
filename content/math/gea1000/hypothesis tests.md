@@ -4,10 +4,8 @@ tags:
 - math/statistics
 complete: true
 prev: /labyrinth/notes/math/gea1000/confidence_intervals
+
 ---
-
-
-
 ### Summary
 Steps:
 1. Deteremine null($H_0$) and alternate($H_A$) hypotheses
@@ -20,7 +18,6 @@ Steps:
 4. Conclude hypothesis test
 	- if p-value \< significance -> reject $H_0$ in favour of $H_A$
 	- if p-value \> significance -> inconclusive test, cannot reject $H_0$, but $H_0$ is not neccesarily true
-
 ### Concept
 Hypothesis test
 To decide whether the data is sufficient enough to reject a particular hypothesis about a population

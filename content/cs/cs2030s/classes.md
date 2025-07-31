@@ -1,15 +1,13 @@
 ---
 tags:
-- cs/oop
 - cs2030s/chapter1
+- cs/oop
 - lang/java
 complete: true
 prev: /labyrinth/notes/cs/cs2030s/types
 next: /labyrinth/notes/cs/cs2030s/inheritance
 ---
-
    
-
 ### Summary
 Constructor
 ```java
@@ -65,7 +63,6 @@ class Thing {
 	final zero = 0; // immutable field
 }
 ```
-
 ### Concept
 Encapsulation
 - packaging of relevant variables and methods(verbs) in an object(nouns)
@@ -100,7 +97,6 @@ Abstraction barrier
 - Client -> uses the functions/classes to perform a task
 - the client would not care about the specific imlementation of the function, just that it performs the desired task
 - the implementer has the freedom to change the implementation, as long as the behaviour remains unchanged
-
 ### Application
 Main method, entry point
 ```java

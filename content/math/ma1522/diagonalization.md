@@ -1,14 +1,13 @@
 ---
 tags:
-- ma1522/chapter6
-- math/linear_algebra
+  - ma1522/chapter6
+  - math/linear_algebra
+  - lang/octave
 complete: true
 prev: /labyrinth/notes/math/ma1522/eigenvectors
 next: /labyrinth/notes/math/ma1522/orthogonal_diagonalization
 ---
-
    
-
 ### Summary
 Diagonalizable
 $$
@@ -39,7 +38,6 @@ $$
 $$
 \mathbf{A}\text{ is diagonalizable}\land\mathbf{A}\text{ has only one eigenvalue }\lambda \iff \mathbf{A}=\lambda \mathbf{I}
 $$
-
 ### Concept
 Diagonalization
 $$
@@ -81,7 +79,6 @@ $$
 \end{gather*}
 $$
 > akin to changing base, applying the power, then changing back
-
 ### Application
 Diagonal and identity matrix
 $$
@@ -123,8 +120,7 @@ x-1 & 0 & 0 \\
 \therefore \operatorname{dim}(E_{1})=1<r_{1}=2
 \end{gather*}
 $$
-
-###### Extra
+### Extra
 Theorem for the independence of eigenspaces(formally)
 $$
 \begin{align*}
@@ -132,3 +128,9 @@ $$
 & \implies \{ \mathbf{u}_{1},\dots,\mathbf{u}_{k} \} \cup\{ \mathbf{v}_{1},\dots,\mathbf{v}_{m} \}\text{ is also linearly independent}
 \end{align*}
 $$
+
+Octave
+```octave
+# Diagonalization
+[P D] = eig(A)
+```

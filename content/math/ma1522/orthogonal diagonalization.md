@@ -6,9 +6,7 @@ complete: false
 prev: /labyrinth/notes/math/ma1522/diagonalization
 next: /labyrinth/notes/math/ma1522/markov_chains
 ---
-
    
-
 ### Summary
 Spectral theorem, [symmetry](/labyrinth/notes/math/ma1522/matrix_transpose#^e47d16)
 $$
@@ -40,7 +38,6 @@ $$
 \mathbf{B} & \mathbf{A}
 \end{pmatrix} = \det(\mathbf{A}-\mathbf{B})\det(\mathbf{A}+\mathbf{B})
 $$
-
 ### Concept
 Orthogonal diagonalization
 - breaking up a complex transformation into a rotation, scale and then reverse rotation
@@ -82,7 +79,6 @@ $$
 \end{align*}
 $$
 > only perform Gram-Schmidt for vectors within each eigenspace, the eigenspaces are already orthogonal
-
 ### Application
 $$
 

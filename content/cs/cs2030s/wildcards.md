@@ -1,15 +1,13 @@
 ---
 tags:
-- cs/oop
 - cs2030s/chapter6
+- cs/oop
 - lang/java
 complete: true
 prev: /labyrinth/notes/cs/cs2030s/generics
 next: /labyrinth/notes/cs/cs2030s/immutable_classes
 ---
-
    
-
 ### Summary
 PECS
 - *producer extends; consumer super*
@@ -54,7 +52,6 @@ $$
 \end{gather*}
 $$
 ![[super.png]]
-
 ### Concept
 Java generics classes are [invariant](/labyrinth/notes/cs/cs2030s/wrapper_classes#^f8f5bb)
 $$
@@ -86,7 +83,6 @@ L<A> a = new L<>();
 Type inference
 - infer type argument automatically
 - if there are multiple, pick the most [specific](/labyrinth/notes/cs/cs2030s/polymorphism#^cc9566) one
-
 ### Application
 Sequence, copying
 ```java

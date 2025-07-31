@@ -1,21 +1,18 @@
 ---
 tags:
-- cs/oop
 - cs2030s/chapter7
+- cs/oop
 - lang/java
 complete: true
 prev: /labyrinth/notes/cs/cs2030s/wildcards
 next: /labyrinth/notes/cs/cs2030s/nested_classes
 ---
-
    
-
 ### Summary
 Factory methods
 - private constructors
 
 No visible changes from outside the abstraction barrier, there can be changes internally
-
 ### Concept
 Nature of [reference types](/labyrinth/notes/cs/cs2030s/types#^e9a435) and aliasing
 - mutable, change can occur on the inside, without reflecting outside
@@ -32,7 +29,6 @@ Why immutable?
 - enable sharing of internals/shared origin
 - enable sharing of objects
 - enable safe concurrent execution
-
 ### Application
 Circle and Point
 ```java

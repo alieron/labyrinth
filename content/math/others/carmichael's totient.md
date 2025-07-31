@@ -2,17 +2,13 @@
 tags:
 - math/modular_arithmetic
 complete: true
-
 ---
-
-[[#|Previous]]   [[#|Next]]
-
+   
 ### Summary
 For [prime numbers](/labyrinth/notes/math/others/prime_numbers)
 $$
 \lambda(p) = p-1
 $$
-
 ### Concept
 Improvement of [euler's totient](/labyrinth/notes/math/others/euler's_totient)
 $$
@@ -21,7 +17,6 @@ $$
 \forall a \ coprime \ to \ n : \qquad a^m \equiv 1 \pmod n
 \end{gather*}
 $$
-
 ### Application
 Difference between euler's and carmichael's totients
 $$

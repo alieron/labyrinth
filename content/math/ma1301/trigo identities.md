@@ -3,10 +3,7 @@ tags:
 - ma1301/chapter2
 - math/geometry
 complete: true
-
 ---
-
-
 ### Summary
 $$
 \begin{align*}
@@ -50,7 +47,6 @@ $$
 \sin A\sin B & = \frac{1}{2}[\cos(A-B)-\cos(A+B)] \\
 \end{align*}
 $$
-
 ### Concept
 Relates to [special angles](/labyrinth/notes/math/math_fundementals/special_angles)
 ![[trigo_diagram.png|500]]

@@ -2,17 +2,13 @@
 tags:
 - math/modular_arithmetic
 complete: false
-
 ---
-
-[[#|Previous]]   [[#|Next]]
-
+   
 ### Summary
 Simple form
 $$
 x\equiv(a+b)^e \mod n
 $$
-
 ### Concept
 Modulo of a [binomial](/labyrinth/notes/math/ma1301/binomial_theorem) expansion
 $$
@@ -27,7 +23,6 @@ c &\equiv (ap+bq)^{e} \pmod n \\
 &\equiv (ap)^e+(bq)^e \pmod n
 \end{align*}
 $$
-
 ### Application
 Solving for unknowns $p$ and $q$
 $$

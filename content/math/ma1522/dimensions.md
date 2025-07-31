@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/ma1522/transition_matrices
 next: /labyrinth/notes/math/ma1522/matrix_spaces
 ---
-
    
-
 ### Summary
 Relations between subspaces
 $$
@@ -38,7 +36,6 @@ $$
 \end{align*}
 $$
 > in essence to check $L\subseteq R$ do $\left(\begin{array}{c|c} R & L \end{array}\right)$
-
 ### Concept
 Dimension of a subspace
 - minimum number of vectors required to span a subspace -> number of vectors in any basis of the space
@@ -86,7 +83,6 @@ $$
 \end{gather*}
 $$
 > number of basis vectors match the dimension and $S$ in $V$ or $S$ spans $V$
-
 ### Application
 Check for basis
 $$

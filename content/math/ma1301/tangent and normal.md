@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/ma1301/cartesian_differentiation
 next: /labyrinth/notes/math/ma1301/optimization
 ---
-
    
-
 ### Summary
 $$
 \begin{align*}
@@ -22,7 +20,6 @@ in \ general :& \qquad m_{tangent} \times m_{normal} = -1 \\
 &m_{tangent} = \frac{y-y_{0}}{x-x_{0}}
 \end{align*}
 $$
-
 ### Concept
 $$
 \begin{align*}
@@ -36,7 +33,6 @@ Eqn \ of \ normal: \qquad y & = -\frac{1}{f'(x)}(x-a)+f(a)\\
 Linear \ Approximation: \qquad y & \approx f(a)+f'(a)(x-a), \ where \ a \ is \ close \ to \ x
 \end{align*}
 $$
-
 ### Application
 Tangents for $x^2+3xy+y^2+4=0$ which are parallel to $y=x+7$
 $$

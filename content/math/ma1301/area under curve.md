@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/ma1301/definite_integrals
 next: /labyrinth/notes/math/ma1301/volume_of_revolution
 ---
-
    
-
 ### Summary
 Area enclosed/bounded by the curve and x-asix
 $$
@@ -26,7 +24,6 @@ A & = \int_{a}^b \underbrace{ g(x)-f(x) }_{ top - bottom } \ dx\\
 else, \ A & = \int_{a}^b |g(x)-f(x)| \ dx
 \end{align*}
 $$
-
 ### Concept
 Area is a positive sum
 $$
@@ -58,7 +55,6 @@ $$
 \ + x
 \end{gather}
 $$
-
 ### Application
 $\int_{0}^\pi \cos x \ dx$ vs $\int_{0}^\pi |\cos x| \ dx$
 $$

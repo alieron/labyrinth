@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/ma1521/geometry_in_R³
 next: /labyrinth/notes/math/ma1521/multivariate_functions
 ---
-
    
-
 ### Summary
 Derivative rules with dot and cross product
 - usual [rules of differentiation apply](/labyrinth/notes/math/ma1301/differentiation#^87dfa9)
@@ -29,7 +27,6 @@ s & = \int_{a}^{b} \sqrt{ f'(t)^{2}+g'(t)^{2}+h'(t)^{2} } \ dt \\
 & = \int_{a}^{b} \| \mathbf{r}'(t) \|  \ dt 
 \end{align*}
 $$
-
 ### Concept
 Vector-valued functions
 $$
@@ -51,7 +48,6 @@ $$
 & = \left\langle f'(t),g'(t),h'(t) \right\rangle 
 \end{align*}
 $$
-
 ### Application
 Elliptical helix
 $$

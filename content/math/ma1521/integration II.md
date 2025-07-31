@@ -6,11 +6,9 @@ complete: false
 prev: /labyrinth/notes/math/ma1521/applied_differentiation
 next: /labyrinth/notes/math/ma1521/improper_integrals
 ---
-
    
 
 Succeeds: [integration](/labyrinth/notes/math/ma1301/integration)
-
 ### Summary
 Trigonometric substitution
 $$
@@ -41,7 +39,6 @@ Solving [partial fractions](/labyrinth/notes/math/ma1301/partial_fractions)
 $$
 \int \frac{px+q}{ax^{2}+bx+c} \ dx
 $$
-
 ### Concept
 Riemann sum
 - total area of infinitely many small rectangles
@@ -81,7 +78,6 @@ $$
 \text{Odd: }&\quad \int_{-a}^{a} f(x) \ dx = 0 && \text{ie. }x, x^3
 \end{align*}
 $$
-
 ### Application
 Trigo substitution
 $$

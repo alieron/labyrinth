@@ -4,10 +4,7 @@ tags:
 - math/number_theory
 - math/set_theory
 complete: true
-
 ---
-
-
 ### Summary
 $$
 \begin{align*}
@@ -22,11 +19,10 @@ $$
 \mathbb{C}&: \{ a+bi \ |\ a,b\in \mathbb{R} \} \quad ie. \ 0, 1+2i &&\text{Complex Numbers}
 \end{align*}
 $$
-
 ### Concept
-In the context of cs1231s $\mathbb{N}$ includes 0
+In the context of #cs1231s $\mathbb{N}$ includes 0
 
-Note for cs1231s:
+Note for #cs1231s:
 $$
 \begin{align*}
 \text{Subset}&: A \subseteq B && A\text{ is a subset of }B\text{ in place of}\subset\\
@@ -42,7 +38,6 @@ $$
 \mathbb{Z}_{\geq_{12}} &: \ \text{Integers greater than or equal to 12}
 \end{align*}
 $$
-
 ### Application
 Combinations, using [set notation](/labyrinth/notes/math/cs1231s/sets#^490492)
 $$

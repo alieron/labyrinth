@@ -5,10 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/gea1000/statistical_probability
 next: /labyrinth/notes/math/gea1000/hypothesis_tests
+
 ---
-
-   
-
 ### Summary
 Confidence intervals(CI)
 - % confidence that the population parameter lies within the interval
@@ -38,7 +36,6 @@ CI for population mean
 $$
 \bar{x}\pm t^*\frac{SD_{x}}{\sqrt{ n }}
 $$
-
 ### Concept
 Statistical inference
 - check if a sample statistic is relevant to the target population

@@ -3,10 +3,7 @@ tags:
 - ma1522/chapter1
 - math/linear_algebra
 complete: true
-
 ---
-
-
 ### Summary
 REF(row echelon form) ^17a789
 - nonzero rows are above any all-zero rows

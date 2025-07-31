@@ -1,16 +1,14 @@
 ---
 tags:
+- cs2030s/chapter3
 - cs/fundamentals
 - cs/oop
-- cs2030s/chapter3
 - lang/java
 complete: true
 prev: /labyrinth/notes/cs/cs2030s/polymorphism
 next: /labyrinth/notes/cs/cs2030s/class_abstraction
 ---
-
    
-
 ### Summary
 A child class is substitutable for its parent if it does not violate any of the expected properties of its parent
 
@@ -25,7 +23,6 @@ Restaurant analogy
 - base restaurant should be open from 12pm to 10pm -> parent property
 - lunch_restaurant closes at 2pm, violates LSP -> child property violates parent property
 - 24h_restaurant is open at all times, does not violate LSP -> child property respects parent property
-
 ### Application
 Rectangle and square
 ```java

@@ -5,10 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/gea1000/univariate_analysis
 next: /labyrinth/notes/math/gea1000/ecological_correlation
+
 ---
-
-   
-
 ### Summary
 **Graph of y on x**
 Correlation != Causation
@@ -34,7 +32,6 @@ m_{yx} = \frac{SD_{y}}{SD_{x}}r_{yx} \\
 r_{yx} = r_{xy}
 \end{gather*}
 $$
-
 ### Concept
 Correlation coefficient
 $$
@@ -55,6 +52,5 @@ y & =cb^x \\
 plot &\  \ln y \ vs \ x
 \end{align*}
 $$
-
-###### Note
-Always use independent(x) to predict dependent(y)
+### Extra
+> Always use independent(x) to predict dependent(y)

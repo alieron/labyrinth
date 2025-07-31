@@ -6,9 +6,7 @@ complete: true
 prev: /labyrinth/notes/math/cs1231s/proof_by_induction
 next: /labyrinth/notes/math/cs1231s/n-ary_relations
 ---
-
    
-
 ### Summary
 Set builder for infinite sets, similar to [quantifications](/labyrinth/notes/math/cs1231s/quantifications)
 - for all x in the domain which fulfills the predicate
@@ -47,7 +45,6 @@ A = B \iff (A\subseteq B) \land (B\subseteq A)  \iff \forall x \in U \ x \in A \
 A\subsetneq B \iff A\subseteq B \land A \neq B \equiv A\subseteq B \land (\exists x \in B \ x \not\in A)
 \end{gather*}
 $$
-
 ### Concept
 Properties of sets
 - no ordering
@@ -117,7 +114,6 @@ P(A) = \{\begin{array}{c|c} \forall S \in U & S\subseteq A \leftrightarrow S \in
 \end{gather*}
 $$
 > a set can be an element of another set, similar to [nested arrays](/labyrinth/notes/cs/cs1101s/arrays#^0bd712)
-
 ### Application
 Set statements
 $$

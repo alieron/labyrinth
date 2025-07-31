@@ -3,10 +3,7 @@ tags:
 - ma1522/chapter2
 - math/linear_algebra
 complete: true
-
 ---
-
-
 ### Summary
 Diagonal matrices ^7a3e46
 - stretch matrix

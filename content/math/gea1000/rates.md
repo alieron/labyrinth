@@ -5,10 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/gea1000/design_of_experiments
 next: /labyrinth/notes/math/gea1000/confounders
+
 ---
-
-   
-
 ### Summary
 $$
 \begin{gather*}
@@ -37,7 +35,6 @@ Negative association, rate of A occuring in B is lower than the rate of A occuri
 $$
 rate(A|B) < rate(A|NB)
 $$
-
 ### Concept
 Basic Rules
 $$
@@ -89,7 +86,6 @@ Symmetry Rule
 $$
 rate(A|B) > rate(A|NB) \iff rate(B|A) > rate(B|NA)
 $$
-
 ### Application
 $$
 \begin{gather*}
@@ -108,11 +104,9 @@ rate(A|B) = \frac{100}{150} \\
 rate(A\&B) = \frac{100}{400}
 \end{gather*}
 $$
-
-###### Extra
+### Extra
 $rate(A|B)$ -> proportion of B with A / proportion with A among B
 $rate(A\&B)$ -> proportion with A and B among total
 
-###### Note
-$NA$ represents $\bar{A}$ from conventional [set notation](/labyrinth/notes/math/cs1231s/sets#^490492)
-$A\&B$ represents $A\cap B$
+> $NA$ represents $\bar{A}$ from conventional [set notation](/labyrinth/notes/math/cs1231s/sets#^490492)
+> $A\&B$ represents $A\cap B$
