@@ -80,9 +80,9 @@ function copyAssetIfExists(filename: string) {
 }
 
 function resolveLinks(content: string): string {
-  const wikilinkRegex = /(?<!\!)\[\[([^|\]#]*?)(?:#([^\]|]*))?(?:\|([^\]]+))?\]\]/g;
   const standardLinkRegex = /\[(.+?)\]\(([^)#]+?)(?:\.md)?(?:#([^\)]+))?\)/g;
   const imageEmbedRegex = /!\[\[([^|\]]+)(?:\|\d*(?:x\d*)?)?\]\]/g;
+  const wikilinkRegex = /(?<!\!)\[\[([^|\]#]*?)(?:#([^\]|\\]*))?(?:\\?)(?:\|([^\]]+))?\]\]/g;
 
   // Convert standard markdown links
   content = content.replace(standardLinkRegex, (match, alias, filePath, heading) => {
