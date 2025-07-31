@@ -83,7 +83,6 @@ function copyAssetIfExists(filename: string) {
 }
 
 function resolveLinks(content: string): string {
-  const imageEmbedRegex = /!\[\[([^|\]]+)(?:\|\d*(?:x\d*)?)?\]\]/g;
   const wikilinkRegex = /(?<!\!)\[\[([^|\]#]*?)(?:#([^\]|\\]*))?(?:\\?)(?:\|([^\]]+))?\]\]/g;
   const standardLinkRegex = /\[([^\[]+?)\]\(([^)#]+?)(?:\.md)?(?:#([^\)]+))\)/g;
 
@@ -146,7 +145,7 @@ function extractNavLinks(content: string): string {
 for (const entry of WHITELIST) {
   const fullPath = path.join(VAULT_PATH, entry);
   if (!fs.existsSync(fullPath)) {
-    console.warn(`⚠️  Skipping non-existent: ${entry}`);
+    console.warn(`⚠️ Skipping non-existent: ${entry}`);
     continue;
   }
 
@@ -172,7 +171,7 @@ for (const { full, relative, dest } of FILE_LIST) {
 
   // Detect embedded images and copy assets
   const imageRegex = /!\[\[([^|\]]+)/g;
-  let match;
+  let match: RegExpExecArray | null;
   while ((match = imageRegex.exec(content)) !== null) {
     copyAssetIfExists(match[1]);
   }
