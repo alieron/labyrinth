@@ -17,6 +17,8 @@ import { rehypeStaticMath } from './src/plugins/math';
 import { rehypeTikzDiag } from './src/plugins/tikz';
 import { rehypeLinks } from './src/plugins/links';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://alieron.github.io',
@@ -24,7 +26,7 @@ export default defineConfig({
   build: {
     format: 'preserve',
   },
-  integrations: [react()],
+  integrations: [react(), sitemap()],
   markdown: {
     syntaxHighlight: false,
     remarkPlugins: [
