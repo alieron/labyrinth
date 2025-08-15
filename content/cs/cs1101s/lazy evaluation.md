@@ -1,8 +1,8 @@
 ---
 tags:
+- cs1101s/chapter1
 - cs/functional_programming
 - cs/paradigm
-- cs1101s/chapter1
 - lang/js
 complete: true
 ---

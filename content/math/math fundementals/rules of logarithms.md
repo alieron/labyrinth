@@ -1,7 +1,7 @@
 ---
 tags:
-- math/algebra
 - math/fundamentals
+- math/algebra
 complete: true
 ---
 ### Summary

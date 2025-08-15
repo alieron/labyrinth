@@ -1,7 +1,7 @@
 ---
 tags:
-- math/calculus
 - math/fundamentals
+- math/calculus
 complete: true
 ---
 ### Summary

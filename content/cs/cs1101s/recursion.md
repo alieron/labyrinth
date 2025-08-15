@@ -10,7 +10,7 @@ next: /labyrinth/notes/cs/cs1101s/orders_of_growth
 ---
    
 ### Summary
-Recursive
+Recursive processes
 ```js
 function factorial(n) {
 	return n === 1
@@ -36,7 +36,7 @@ num of steps and max num of deferred operations grow linearly with n
 
 > Accumulation of defered operations that [grows](/labyrinth/notes/cs/cs1101s/orders_of_growth) proportionately to the size of the input
 
-Iterative Processes
+Iterative processes
 ```js
 function factorial(n) {
 	return iter(1, 1, n);

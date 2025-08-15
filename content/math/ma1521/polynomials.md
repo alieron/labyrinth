@@ -1,8 +1,8 @@
 ---
 tags:
 - ma1521
-- math/calculus
 - math/fundamentals
+- math/calculus
 complete: true
 ---
 ### Summary

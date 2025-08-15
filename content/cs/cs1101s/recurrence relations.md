@@ -1,8 +1,8 @@
 ---
 tags:
+- cs1101s/chapter1
 - cs/algorithms
 - cs/fundamentals
-- cs1101s/chapter1
 complete: true
 ---
 ### Summary

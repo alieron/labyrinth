@@ -91,7 +91,7 @@ $$
 \end{align*}
 $$
 ### Application
-Partitions/eqquivalence classes of $R_{4}$
+Partitions/equivalence classes of $R_{4}$
 - undirected graph since its symmetric
 - each node has a loop since its reflexive
 - all nodes are interconnected within its subset since its transitive

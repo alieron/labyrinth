@@ -1,7 +1,7 @@
 ---
 tags:
-- cs/data_structures
 - cs1101s/chapter2
+- cs/data_structures
 - lang/js
 complete: true
 ---

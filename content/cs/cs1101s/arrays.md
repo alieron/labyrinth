@@ -1,8 +1,8 @@
 ---
 tags:
+- cs1101s/chapter3
 - cs/data_structures
 - cs/fundamentals
-- cs1101s/chapter3
 - lang/js
 complete: true
 ---
