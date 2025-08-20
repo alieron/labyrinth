@@ -2,7 +2,7 @@
 tags:
   - ma1522/chapter6
   - math/linear_algebra
-  - "#lang/octave"
+  - lang/octave
 complete: false
 prev: /labyrinth/notes/math/ma1522/orthogonal_diagonalization
 next: /labyrinth/notes/math/ma1522/singular_value_decomposition

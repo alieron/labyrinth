@@ -236,7 +236,7 @@ $$
 $$
 > the inverse is well defined iff the function is a bijection
 
-Inverse of a bijectve function is bijective (Theorem 2.10)
+Inverse of a bijectve function is bijective (Theorem 2.10) ^56e903
 $$
 \begin{align*}
 & \text{Claim: }f:X\to Y\text{ is bijective} \to f^{-1}:Y\to X\text{ is bijective} \\
@@ -271,7 +271,6 @@ $$
 \end{split} \\
 \end{align*}
 $$
-
 
 Composition with inverse is identity (Corollary 2.11)
 $$

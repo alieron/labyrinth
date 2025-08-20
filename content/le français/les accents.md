@@ -15,6 +15,7 @@ next: /labyrinth/notes/le_français/le_genre
 | **¨**  | tréma              |                                                                                                                            | Sépare deux voyelles qui seraient fusionnées (Noël -> No-el) |
 > Il y a d'autres [caractères spéciaux](/labyrinth/notes/le_français/les_caractères_spéciaux)
 ##### Les caractères avec des accents
+
 | Caractère | Nom de l'accent     | Exemple              | Prononciation en français                                          |
 | --------- | ------------------- | -------------------- | ------------------------------------------------------------------ |
 | à         | accent grave        | là (there)           | Même prononciation que le « a » simple [a], ouvert « ah ».         |
@@ -32,17 +33,18 @@ next: /labyrinth/notes/le_français/le_genre
 | ÿ         | tréma (rare)        | L'Haÿ-les-Roses      | Se prononce séparément : « a-ee ».                                 |
 ##### Exemples des mots qui s'écriraient pareils
 
-| Sans accent            | Avec accent         | Exemple de phrase                |
-| ---------------------- | ------------------- | -------------------------------- |
-| ou (_or_)              | où (_where_)        | _Où vas-tu ?_                    |
-| la (_the_)             | là (_there_)        | _Le livre est là._               |
-| mur (_wall_)           | mûr (_ripe_)        | _Un fruit mûr._                  |
-| sur (_on_)             | sûr (_sure_)        | _Je suis sûr de moi._            |
-| des (_some_)           | dès (_since, from_) | _Dès le matin._                  |
-| du (_of the_)          | dû (_owed_)         | _Le loyer est dû._               |
-| tache (_stain_)        | tâche (_task_)      | _J’ai une tâche importante._     |
-| cote (_rating, slope_) | côte (_coast, rib_) | _La côte atlantique._            |
-| cote (_rating, slope_) | côté (_side_)       | _De ce côté-ci._                 |
-| jeune (_young_)        | jeûne (_fasting_)   | _Faire un jeûne de trois jours._ |
+| Sans accent            | Avec accent         |
+| ---------------------- | ------------------- |
+| ou (_or_)              | où (_where_)        |
+| la (_the_)             | là (_there_)        |
+| mur (_wall_)           | mûr (_ripe_)        |
+| sur (_on_)             | sûr (_sure_)        |
+| des (_some_)           | dès (_since, from_) |
+| du (_of the_)          | dû (_owed_)         |
+| tache (_stain_)        | tâche (_task_)      |
+| cote (_rating, slope_) | côte (_coast, rib_) |
+|                        | côté (_side_)       |
+| jeune (_young_)        | jeûne (_fasting_)   |
+> La présence de l'accent semble indiquer une relation au temps
 ##### Pour des lettre majuscules
 > faut clarifier avec le prof

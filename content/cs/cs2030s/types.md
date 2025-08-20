@@ -17,14 +17,14 @@ $$
 \end{gather*}
 $$
 
-Primitive types
+Primitive types in Java
 - stores a copy of its value
 
 | kind           | type      | size(bits) | value range                          |
 | -------------- | --------- | ---------- | ------------------------------------ |
 | booleans       | `boolean` | 1          | $\{ 0, 1 \}$                         |
 | strings        | `char`    | 16         | $[0, 2^{16}-1]$                      |
-| integral       | `byte`    | 8          | $[0, 2^8-1]$                         |
+| integer        | `byte`    | 8          | $[0, 2^8-1]$                         |
 |                | `short`   | 16         | $[-2^{15}, 2^{15}-1]$                |
 |                | `int`     | 32         | $[-2^{31}, 2^{31}-1]$                |
 |                | `long`    | 64         | $[-2^{63}, 2^{63} - 1]$              |

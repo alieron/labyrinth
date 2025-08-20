@@ -103,7 +103,7 @@ $$
 $$
 > cont. there is a unique empty set (Corollary 2.3)
 
-Power set
+Power set ^a77fb5
 - set of all the possible subsets of its input
 
 $$

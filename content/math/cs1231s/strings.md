@@ -5,7 +5,7 @@ tags:
 complete: true
 ---
 ### Summary
-Alphabet
+Alphabet ^23aab2
 - finite set of symbols
 
 String
