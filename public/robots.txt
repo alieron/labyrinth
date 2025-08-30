@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alieron.github.io/labyrinth/sitemap-index.xml
