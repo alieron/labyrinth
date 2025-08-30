@@ -31,7 +31,7 @@ function escapeHtml(str: string) {
 
 const highlighter = await createHighlighter({
   themes: ['one-dark-pro'],
-  langs: ['js', 'ts', 'java', 'matlab', 'cpp', 'python', 'latex']
+  langs: ['js', 'ts', 'java', 'matlab', 'cpp', 'python', 'latex', 'mips']
 });
 
 const langAlias = {
