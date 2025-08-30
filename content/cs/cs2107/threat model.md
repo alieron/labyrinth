@@ -35,7 +35,6 @@ Availability
 - eg. DDoS attacks
 
 Authenticity
-- 
 
 Non-repudiation
 ### Extra
