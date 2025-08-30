@@ -1,12 +1,14 @@
 ---
 tags:
-  - cs2100
+  - cs2100/chapter1
   - cs/fundamentals
   - lang/c
 complete: false
+next: /labyrinth/notes/cs/cs2100/data_representation
+
 ---
 ### Summary
-##### Preprocessor directives
+Preprocessor directives
 ```c
 // importing header files/libraries
 #include <stdio.h>
@@ -16,7 +18,7 @@ complete: false
 ```
 > note the absence of ';' in the preprocessor directives
 
-##### Variables
+Variables
 ```c
 int x; // initialization
 x = 2; // declaration
@@ -24,7 +26,7 @@ x = 2; // declaration
 int y = 2; // initialization and declaration
 ```
 
-##### Main function
+Main function
 ```c
 int main(void) {
 	// declaration statements
@@ -37,14 +39,14 @@ int main(void) {
 }
 ```
 
-##### IO
+IO
 ```c
 int age;
 printf("What is your age? ");
 scanf("%d", &age); // write value to the address of age
 ```
 
-##### Format specifiers
+Format specifiers
 
 | Placeholder | Variable Type   | Function Use                     |
 | ----------- | --------------- | -------------------------------- |
@@ -57,7 +59,7 @@ scanf("%d", &age); // write value to the address of age
 - %5d -> integer with width of 5, right justified
 - %8.3f -> real number with width of 8 and 3 decimal places, right justified
 
-##### Escape sequences
+Escape sequences
 
 | Escape sequence | Meaning        | Result                                            |
 | --------------- | -------------- | ------------------------------------------------- |
@@ -67,7 +69,7 @@ scanf("%d", &age); // write value to the address of age
 | %%              | Percent        | Display a percent character %                     |
 > see [Learn X in Y minutes: C](https://learnxinyminutes.com/c/) for complete guide to C
 ### Concept
-##### Compilation
+Compilation
 ```sh
 // compiling to executable file
 gcc test.c -o test
@@ -76,12 +78,12 @@ gcc test.c -o test
 gcc -Wall test.c
 ```
 
-##### von Neumann Architecture
+von Neumann Architecture
 
 
 
 ### Application
-##### Macros
+Macros
 ```c
 #define PI 3.142
 
@@ -99,5 +101,3 @@ int main(void) {
 	volCone = 3.142 * radius * radius * height / 3.0;
 }
 ```
-### Extra
-

@@ -34,7 +34,6 @@ $$
 \sum^n_{i=m} a_{i} , & \ where \ a_{i} \ has \ the \ form, \ r^i \\
 \end{align*}
 $$
-
 ### Concept
 Geometric sequence
 $$

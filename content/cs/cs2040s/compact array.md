@@ -4,10 +4,11 @@ tags:
   - cs/data_structures
   - lang/java
 complete: true
-next: /labyrinth/notes/cs/cs2040s/unsorted_arrays
+next: /labyrinth/notes/cs/cs2040s/linked_list
 
 ---
 Succeeds: [arrays](/labyrinth/notes/cs/cs1101s/arrays)
+Implements: [list ADT](/labyrinth/notes/cs/cs2040s/list_ADT)
 ### Summary
 Compact array
 - optimized for direct indexing $O(1)$
@@ -62,6 +63,33 @@ int idx = A.indexOf(10); // 1
 A.add(2, 20); // A = [5, 10, 20, 15, 25]
 
 // remove(i)
-A.remove(1); // A =[5, 20, 15, 25]
+A.remove(1); // A = [5, 20, 15, 25]
 ```
 
+Finding min and max, $O(N)$
+```java
+int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
+for (int x : A) {
+    if (x < min) min = x;
+    if (x > max) max = x;
+}
+System.out.println("Min = " + min + ", Max = " + max);
+```
+
+Naive duplicate detection, $O(N^2)$
+```java
+boolean hasDuplicate = false;
+
+for (int i = 0; i < A.size(); i++) {
+	for (int j = i + 1; j < A.size(); j++) {
+		if (A.get(i).equals(A.get(j))) {
+				hasDuplicate = true;
+				System.out.println("Duplicate found: " + A.get(i));
+		}
+	}
+}
+
+if (!hasDuplicate) {
+	System.out.println("No duplicates found.");
+}
+```

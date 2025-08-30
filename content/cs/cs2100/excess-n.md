@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2100/chapter1
+  - cs2100/chapter2
   - cs/low_level
 complete: true
 prev: /labyrinth/notes/cs/cs2100/complement_operations
@@ -11,6 +11,7 @@ next: /labyrinth/notes/cs/cs2100/fixed_&_floating_point
 Excess representation
 - alternative to sign-and-magnitude, same range as [2s complement](/labyrinth/notes/cs/cs2100/signed_numbers#^bc6f6a)
 - even distribution of +ve and -ve values
+
 $$
 \begin{array}{c|c}
 \text{Excess-}n & \text{Decimal Value} \\
@@ -24,10 +25,11 @@ $$
 \mathrm{bin}(2^n - 1) & n-1
 \end{array}
 $$
-> In general, given $n$ bits, we use excess-$2^{n-1}$ or excess-$(2^{n-1}-1)$
+> in general, given `n` bits, we use **excess-2ⁿ⁻ⁱ** or **excess-(2ⁿ⁻ⁱ-1)**
 ### Concept
 Excess-n
-- translation by $n$
+- translation by `n`
+
 $$
 x_{\text{excess-}n}=x + n
 $$

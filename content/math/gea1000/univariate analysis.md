@@ -38,19 +38,19 @@ Boxplots and how to determine outliers
 	\draw (5.8,5pt) -- (5.8,-5pt);
 
     % draw nodes
-	\draw (5,0) node[below=5pt, scale=0.75] {$ Q_1 $};
-	\draw (5.8,0) node[below=5pt, scale=0.75] {$ Median $};
-	\draw (7,0) node[below=5pt, scale=0.75] {$ Q_3 $};
+	\draw (5,0) node[below=5pt] {$ Q_1 $};
+	\draw (5.8,0) node[below=5pt] {$ Median $};
+	\draw (7,0) node[below=5pt] {$ Q_3 $};
 
 	% braces for IQR and range
 	\draw [decorate,decoration={brace,amplitude=5pt,raise=5pt}]
-	  (5,0) -- (7,0) node[midway,above=12pt,scale=0.75]{$ IQR $};
+	  (5,0) -- (7,0) node[midway,above=12pt]{$ IQR $};
 	\draw [decorate,decoration={brace,amplitude=5pt,raise=5pt}]
-	  (2,0) -- (5,0) node[midway,above=12pt,scale=0.75]{$ Q_1 - 1.5\times IQR $};
+	  (2,0) -- (5,0) node[midway,above=12pt]{$ Q_1 - 1.5\times IQR $};
 	\draw [decorate,decoration={brace,amplitude=5pt,raise=5pt}]
-	  (7,0) -- (10,0) node[midway,above=12pt,scale=0.75]{$ Q_3 + 1.5\times IQR $};
-	\draw [decorate,decoration={brace,amplitude=5pt,mirror,raise=16pt}]
-	  (1,0) -- (11,0) node[midway,below=18pt,scale=0.75]{$ Range $};
+	  (7,0) -- (10,0) node[midway,above=12pt]{$ Q_3 + 1.5\times IQR $};
+	\draw [decorate,decoration={brace,amplitude=5pt,mirror,raise=20pt}]
+	  (1,0) -- (11,0) node[midway,below=27pt]{$ Range $};
 
 	\draw plot[only marks,mark=x,mark size=2pt] coordinates
 	  {(1.5, 0) (1.2, 0) (1, 0) (11, 0) (10.8, 0)};

@@ -1,8 +1,8 @@
 ---
 tags:
   - cs2107/chapter1
-  - cs/security
-complete: false
+  - cs/cryptography
+complete: true
 prev: /labyrinth/notes/cs/cs2107/threat_model
 next: /labyrinth/notes/cs/cs2107/substitution_ciphers
 
@@ -12,7 +12,7 @@ Correct
 $$
 D_{k}(E_{k}(x)) = x
 $$
-> The decryption function is the [inverse](/labyrinth/notes/math/math_fundementals/inverse_functions) of the encryption function
+> the decryption function is the [inverse](/labyrinth/notes/math/math_fundementals/inverse_functions) of the encryption function
 
 Secure
 - eavesdropper is unable to derive useful information about the plaintext or key, even if given the ciphertext
@@ -23,14 +23,14 @@ Symmetric key encryption
 \usetikzlibrary{positioning}
 \begin{document}  
   
-\begin{tikzpicture}[node distance=1cm]  
+\begin{tikzpicture}[node distance=0.8cm]  
   
 % Nodes  
-\node[draw, rectangle, text centered, text width=3cm] (x){Plaintext $x$};  
-\node[right=of x, draw, rectangle, text centered, text width=3cm] (e) {Encryption \\ $E_k(x)=c$};  
-\node[right=of e, draw, rectangle, text centered, text width=3cm] (c) {Ciphertext $c$};  
-\node[right=of c, draw, rectangle, text centered, text width=3cm] (d) {Decryption $D_k(c)=x$};  
-\node[right=of d, draw, rectangle, text centered, text width=3cm] (x2) {Plaintext $x$};  
+\node[draw, rectangle, text centered] (x){Plaintext $x$};  
+\node[right=of x, draw, rectangle, text centered, text width=2cm] (e) {Encryption \\ $E_k(x)=c$};  
+\node[right=of e, draw, rectangle, text centered] (c) {Ciphertext $c$};  
+\node[right=of c, draw, rectangle, text centered, text width=2cm] (d) {Decryption \\ $D_k(c)=x$};  
+\node[right=of d, draw, rectangle, text centered] (x2) {Plaintext $x$};  
   
 % Arrows  
 \draw[->] (x) -- (e);  
@@ -39,7 +39,7 @@ Symmetric key encryption
 \draw[->] (d) -- (x2);  
   
 % Key  
-\node (key) [above=of c, draw, rectangle, text centered, text width=2cm] {Key $k$};  
+\node (key) [above=of c, draw, rectangle, text centered] {Key $k$};  
 \draw[->] (key.west) -| (e.north);  
 \draw[->] (key.east) -| (d.north);  
   
@@ -58,5 +58,4 @@ Attacker's capabilities
 - **Known plaintext attack**: attacker has a collection of plaintexts and their corresponding ciphertexts
 - **Chosen plaintext attack(CPA)**: attacker has access to an encryption oracle
 - **Chosen ciphertext attack(CCA2)**: attacker has access to a decryption oracle
-> For #cs2107 assume the attacker computing power is a supercomputer which can be run for 1000 years
-### Application
+> for #cs2107 assume the attacker computing power is a supercomputer which can be run for 1000 years

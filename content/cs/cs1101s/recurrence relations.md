@@ -54,7 +54,7 @@ T(n) = 2\cdot T\left( \frac{n}{2} \right) + O(n)
 $$
 ### Application
 Deriving recurrance relations, using [arithmetic](/labyrinth/notes/math/ma1301/arithmetic_series) and [geometric](/labyrinth/notes/math/ma1301/geometric_series) progression
-Linear
+- Linear
 $$
 \begin{align*}
 T(n) & = T(n-1) + O(1) \\
@@ -78,7 +78,7 @@ T(n) & = 2T(n-1) + O(1) \\
 \therefore \ & \frac{O(1)(2^n-1)}{2-1} = O(2^n-1) \implies O(2^n) \\
 \end{align*}
 $$
-Binary
+- Binary
 $$
 \begin{align*}
 T(n) & = T\left( \frac{n}{2} \right) + O(1) \\
@@ -103,7 +103,8 @@ T(n) & = 2T\left( \frac{n}{2} \right) + O(n) \\
 \therefore \ & O(n) \times \log_{2} n = O(n\log_{2} n) \implies O(n\log n) \\
 \end{align*}
 $$
-###### Math Note
+
+Math Note
 $$
 2^{\log_{2}n} = n, \ \frac{n}{2^{\log_{2}n}} = 1
 $$

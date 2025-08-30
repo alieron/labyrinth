@@ -3,7 +3,7 @@ tags:
   - cs2107
   - cs/security
 complete: false
-next: /labyrinth/notes/cs/cs2107/fundementals_of_encryption
+next: /labyrinth/notes/cs/cs2107/encryption
 
 ---
 ### Summary
@@ -34,6 +34,10 @@ Availability
 - prevent unauthorized withholding of information or resources
 - eg. DDoS attacks
 
+Authenticity
+- 
+
+Non-repudiation
 ### Extra
 - accountability -> system log
 - traitor-tracing -> watermarks

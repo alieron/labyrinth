@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2100/chapter1
+  - cs2100/chapter2
   - cs/low_level
 complete: true
 prev: /labyrinth/notes/cs/cs2100/signed_numbers
@@ -116,3 +116,27 @@ $$
 \end{array} & {\color{red}\text{Overflow } 1001_{2s}=-7_{10}} \\
 \end{gather*}
 $$
+
+1s complement zero addition
+$$
+\begin{gather*}
+\begin{array}{cr}
+ & 2 \\
++ & 0 \\
+\hline & 2 \\
+\\ \\
+\end{array} & \begin{array}{cr}
+ & 0010_{1s} \\
++ & 0000_{1s} \\
+\hline & 0010_{1s} \\
+\\ \\
+\end{array} & \begin{array}{cr}
+ & 0010_{1s} \\
++ & 1111_{1s} \\
+\hline & {\color{red}1 }0001_{1s} \\
++ & 1_{1s} \\
+\hline & 0010_{1s}
+\end{array} & \text{No Overflow}
+\end{gather*}
+$$
+> add 1 if there's a carry out on MSB because there are two 0s

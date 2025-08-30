@@ -1,10 +1,11 @@
 ---
 tags:
-  - cs2100/chapter1
+  - cs2100/chapter2
   - cs/low_level
   - lang/c
 complete: true
 prev: /labyrinth/notes/cs/cs2100/excess-n
+next: /labyrinth/notes/cs/cs2100/pointers
 
 ---
 ### Summary
@@ -14,6 +15,7 @@ Fixed point
 - fixed number of bits allocated to the integer and fraction parts
 - limited range
 - limited accuracy
+
 ```tikz
 \usetikzlibrary{decorations.pathreplacing,positioning}
 
@@ -48,6 +50,7 @@ Floating point(IEEE 754)
 - larger range
 - single-precision(32 bits): 1 bit sign, 8 bit exponent in excess-127 and 23 bit mantissa
 - double-precision(64 bits): 1 bit sign, 11 bit exponent in excess-1023 and 52 bit mantissa
+
 ```tikz
 \usetikzlibrary{decorations.pathreplacing,positioning}
 
@@ -73,11 +76,12 @@ Floating point(IEEE 754)
 
 \end{document}
 ```
-> excess-127 is used on 8 bits instead of excess-256 to support more +ve exponents
+> **excess-127** is used on 8 bits instead of **excess-256** to support more +ve exponents
 ### Application
 Decimal to binary fixed point
 - divide by 2 for integer part
 - multiply by 2 for fraction part
+
 $$
 \begin{gather*}
 & 12.5625_{10} \\
@@ -156,6 +160,7 @@ $$
 
 Complements of fixed points
 - ignore the decimal
+
 $$
 -0101.01_{2} = 1010.10_{1s} = 1010.11_{2s}
 $$

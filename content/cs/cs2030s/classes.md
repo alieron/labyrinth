@@ -21,7 +21,7 @@ class Thing {
 }
 ```
 
-Instansiation
+Instantiation ^29c4ea
 ```java
 Thing thing = new Thing(); // creates new instance and runs the constructor
 ```
