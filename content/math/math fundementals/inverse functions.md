@@ -1,8 +1,8 @@
 ---
 tags:
-- math/fundamentals
-- math/algebra
-complete: true
+  - math/fundamentals
+  - math/algebra
+complete: false
 ---
 ### Summary
 $$

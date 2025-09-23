@@ -3,6 +3,7 @@ tags:
   - cs2100/chapter4
   - cs/low_level
   - cs/data_structures
+  - lang/c
 complete: true
 prev: /labyrinth/notes/cs/cs2100/functions_in_C
 next: /labyrinth/notes/cs/cs2100/strings_in_C
@@ -152,20 +153,7 @@ printf("%lx\n", *((long *) llong)); // 0x65 66 67 68 61 62 63 64
 % definitions for box and pointer diagrams
 \def\boxsize{6mm}
 \tikzset{cell/.style={inner sep=0pt,minimum size=\boxsize, node distance=1em and 3.5em}}
-\newcommand\ptr[2]%
-  {
-    \draw[arrows={-Latex}] (#1.center)--(#2);
-  }
-\newcommand\pnull[1]%
-  {
-      \draw (#1.south west)--(#1.north east);
-  }
-\newcommand\pair[4][]%
-  {
-    \node[draw,cell,#1] (#2) {#3};
-    \node[draw,cell,xshift=\boxsize] (#2tail) at (#2) {#4};
-  }
-% 
+
 \begin{document}
 \begin{tikzpicture}
 % draw diagram here

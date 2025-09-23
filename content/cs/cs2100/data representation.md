@@ -32,7 +32,7 @@ Units
 - nibble = 4 bits
 - word = n bytes
 
-Capacity
+Capacity ^2a92f4
 - $n$ bits can represent up to $2^n$ values
 - to represent $m$ values, $\lceil \log_{2}m \rceil$ bits are required
 > 0 is counted as a value

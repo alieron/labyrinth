@@ -17,7 +17,7 @@ Load word/byte
 lw dest, n(addr) # dest <- *(addr + n)
 lb dest, n(addr) # dest <- *(addr + n)
 ```
-> `lw` will error if `(addr + n) % 4 != 0`, due to word alignement
+> `lw` will error if `(addr + n) % 4 != 0`, due to word alignment
 
 Store word/byte
 - I-type

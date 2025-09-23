@@ -21,4 +21,4 @@ $$
 
 $$
 
-[modulo](/labyrinth/notes/math/others/modulo)
+[modulo](/labyrinth/notes/math/modulo)

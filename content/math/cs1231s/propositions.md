@@ -108,8 +108,9 @@ $$
 \end{align*}
 $$
 
-Exclusive-OR(XOR)
-true iff only one of the variables are true
+Exclusive-OR([XOR](/labyrinth/notes/cs/XOR)) ^211e52
+- true iff only one of the variables are true
+
 $$
 p \oplus q \equiv (p \lor q) \land \sim(p\land q)
 $$

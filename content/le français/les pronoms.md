@@ -16,7 +16,7 @@ Pour parler d'une **personne** ou d'une **chose**
 | tu (you)           | te / t'      | te / t'        | te / t' (yourself) |
 | il (he)            | le / l'      | lui            | se / s' (himself)  |
 | elle (she)         | la / l'      | lui            | se / s' (herself)  |
-| on                 | le / la / l' | lui            | se / s'            |
+| on                 | le / la / l' | lui            | se / s' (oneself)  |
 | nous (we)          | nous (us)    | nous           | nous (ourselves)   |
 | vous (you, formal) | vous (them)  | vous           | vous (yourselves)  |
 | ils                | les          | leur           | se / s'            |

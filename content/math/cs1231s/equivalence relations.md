@@ -177,4 +177,4 @@ $$
 \end{tikzpicture}
 \end{document}
 ```
-> $R_{4}$ is a [congruence modulo](/labyrinth/notes/math/others/modulo#^3013a5) 4 relation
+> $R_{4}$ is a [congruence modulo](/labyrinth/notes/math/modulo#^3013a5) 4 relation

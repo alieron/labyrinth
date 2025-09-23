@@ -45,7 +45,7 @@ $$
 
 [Binary search](/labyrinth/notes/cs/cs1101s/searching#^e5eb03)
 $$
-T(n) = T\left( \frac{n}{2} \right) + 1
+T(n) = T\left( \frac{n}{2} \right) + O(1)
 $$
 
 [Merge sort](/labyrinth/notes/cs/cs1101s/sorting#^98f7dd)

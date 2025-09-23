@@ -21,4 +21,4 @@ $$
 
 $$
 
-[prime numbers](/labyrinth/notes/math/others/prime_numbers)
+[prime numbers](/labyrinth/notes/math/prime_numbers)

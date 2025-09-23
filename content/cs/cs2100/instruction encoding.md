@@ -5,10 +5,11 @@ tags:
   - lang/mips
 complete: true
 prev: /labyrinth/notes/cs/cs2100/control-flow_instructions
+next: /labyrinth/notes/cs/cs2100/ISA
 
 ---
 ### Summary
-R-type
+R-type ^393b46
 - register addressing
 ```mips
 arith rd, rs, rt
@@ -24,10 +25,11 @@ $$
 $$
 > note `rs`, `rt` and `rd` are all only 5 bits since there are only 32 registers
 
-I-type
+I-type ^70d48c
 - immediate addressing
 - base addressing(load/store)
 - PC-relative addressing(branching)
+
 ```mips
 op rt, rs, imm
 

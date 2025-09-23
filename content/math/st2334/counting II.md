@@ -7,7 +7,7 @@ prev: /labyrinth/notes/math/st2334/events
 next: /labyrinth/notes/math/st2334/probability
 
 ---
-Succeeds: [counting](#)
+Succeeds: [counting](/labyrinth/notes/math/cs1231s/counting)
 ### Summary
 Counting methods
 ![[counting_methods.png|800]]
@@ -18,7 +18,7 @@ Multiplication principle
 Addition principle
 - counting the number of independent outcome types
 
-Permutation
+Permutation ^efad71
 - number of ways to arrange $r$ objects out of $n$
 
 $$

@@ -1,8 +1,8 @@
 ---
 tags:
-- cs1101s/chapter2
-- cs/algorithms
-complete: false
+  - cs1101s/chapter2
+  - cs/algorithms
+complete: true
 prev: /labyrinth/notes/cs/cs1101s/searching
 next: /labyrinth/notes/cs/cs1101s/mutable_data
 ---
@@ -30,7 +30,3 @@ Merge sort ^98f7dd
 
 Quick sort
 - Choose a random pivot, split into values larger and smaller than pivot, sort each set recursively
-### Application
-$$
-
-$$

@@ -68,20 +68,7 @@ puts(d); // hello??????... we don't know whats stored in memory after the array
 % definitions for box and pointer diagrams
 \def\boxsize{6mm}
 \tikzset{cell/.style={inner sep=0pt,minimum size=\boxsize, node distance=1em and 3.5em}}
-\newcommand\ptr[2]%
-  {
-    \draw[arrows={-Latex}] (#1.center)--(#2);
-  }
-\newcommand\pnull[1]%
-  {
-      \draw (#1.south west)--(#1.north east);
-  }
-\newcommand\pair[4][]%
-  {
-    \node[draw,cell,#1] (#2) {#3};
-    \node[draw,cell,xshift=\boxsize] (#2tail) at (#2) {#4};
-  }
-% 
+
 \begin{document}
 \begin{tikzpicture}
 % draw diagram here
@@ -116,20 +103,7 @@ strcpy(name, "Ovuvuevuevue Enyetuenwuevue Ugbemugbem Osas"); // 2
 % definitions for box and pointer diagrams
 \def\boxsize{6mm}
 \tikzset{cell/.style={inner sep=0pt,minimum size=\boxsize, node distance=1em and 3.5em}}
-\newcommand\ptr[2]%
-  {
-    \draw[arrows={-Latex}] (#1.center)--(#2);
-  }
-\newcommand\pnull[1]%
-  {
-      \draw (#1.south west)--(#1.north east);
-  }
-\newcommand\pair[4][]%
-  {
-    \node[draw,cell,#1] (#2) {#3};
-    \node[draw,cell,xshift=\boxsize] (#2tail) at (#2) {#4};
-  }
-% 
+
 \begin{document}
 \begin{tikzpicture}
 % first string: "Bob Ross"

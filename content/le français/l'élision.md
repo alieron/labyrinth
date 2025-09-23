@@ -3,6 +3,7 @@ tags:
   - français
 complete: false
 prev: /labyrinth/notes/le_français/les_pronoms
+next: /labyrinth/notes/le_français/les_temps_verbaux
 
 ---
 **Remplacer la voyelle finale d’un mot par une apostrophe** quand le mot suivant commence par **une voyelle ou un h muet** (silent h).

@@ -66,7 +66,7 @@ nor dest, src1, src2 # dest <- ~(src1 | src2)
 ```
 > no `nori` instruction since there is not much need for it
 
-XOR
+[XOR](/labyrinth/notes/cs/XOR)
 - R-type
 
 ```mips
@@ -138,3 +138,23 @@ $$
 \end{array}
 \end{gather*}
 $$
+
+XOR for selective inversion
+$$
+\begin{gather*}
+x\oplus i = \begin{cases}
+x & if \ i = 0 \\
+\sim x & if \ i =1
+\end{cases} \\
+\\
+\text{0xDEAD} \oplus \text{0xAAAA} \\
+\\
+\begin{array} {rr}
+ & {\color{orangered}1 }1{\color{orangered}0 }1\ {\color{orangered}1 }1{\color{orangered}1 }0\ {\color{orangered}1 }0{\color{orangered}1 }0\ {\color{orangered}1 }1{\color{orangered}0 }1 \\
+\text{XOR} & 1010\ 1010\ 1010\ 1010 \\
+\hline
+ & {\color{orangered}0 }1{\color{orangered}1 }1\ {\color{orangered}0 }1{\color{orangered}0 }0\ {\color{orangered}0 }0{\color{orangered}0 }0\ {\color{orangered}0 }1{\color{orangered}1 }1
+\end{array}
+\end{gather*}
+$$
+> while AND can be used to select bits, XOR can invert a selection of bits

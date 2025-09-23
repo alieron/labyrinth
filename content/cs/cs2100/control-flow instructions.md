@@ -146,3 +146,22 @@ Loop: addi $s20, $s0, 5
 slt $t0, $s1, $s0 # if b < a thats our condition to exit, sets 1 if exit, 0 if repeat
 beq $t0, $0, Loop # if 0 repeat
 ```
+
+Branch pseudo-instructions
+```mips
+bgt r1, r2, L # r1 > r2 => r2 < r1
+
+stl $at, r2, r1
+bne $at, $0, L
+
+bge r1, r2, L # r1 >= r2 => !(r1 < r2)
+
+slt $at, r1, r2
+beq $at, $0, L
+
+ble r1, r2, L # r1 <= r2 => !(r2 < r1)
+
+stl $at, r2, r1
+beq $at, $0, L
+```
+> use the `$at` which is a reserved temporary register

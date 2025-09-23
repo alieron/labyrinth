@@ -27,7 +27,7 @@ MIPS registers ^44e5a0
 | `$fp`        | 30        | Frame pointer                                                                     |
 | `$ra`        | 31        | Return address                                                                    |
 ### Concept
-Instruction Set Architecture(ISA)
+Instruction Set Architecture([ISA](/labyrinth/notes/cs/cs2100/ISA))
 - abstraction on the interface between hardware and low-level software
 - tells the programmer about the processor's functionality
 - specification of the processor's supported instructions and registers

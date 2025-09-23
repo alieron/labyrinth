@@ -5,7 +5,7 @@ complete: false
 ---
    
 ### Summary
-For the [modulo](/labyrinth/notes/math/others/modulo) of a [prime](/labyrinth/notes/math/others/prime_numbers) $p$
+For the [modulo](/labyrinth/notes/math/modulo) of a [prime](/labyrinth/notes/math/prime_numbers) $p$
 $$
 a^p\equiv a \pmod p \iff a^p \mod p = a
 $$
@@ -24,7 +24,7 @@ a^p\equiv a \pmod p \\
 \end{gather*}
 $$
 
-Multiplicative [inverse](/labyrinth/notes/math/others/modulo#^186d73) for prime moduli
+Multiplicative [inverse](/labyrinth/notes/math/modulo#^186d73) for prime moduli
 $$
 \begin{gather*}
 a^{p-1}\equiv 1 \pmod p \iff a^{p-1} \mod p = 1 \\
