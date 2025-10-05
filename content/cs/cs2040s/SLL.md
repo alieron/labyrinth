@@ -28,7 +28,6 @@ Strengths
 Limitations
 - indexing requires traversal
 - slow extraction from tail
-
 ### Concept
 Data structure
 - series of nodes

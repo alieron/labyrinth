@@ -3,12 +3,54 @@ tags:
   - cs2100/chapter2
   - cs/low_level
   - lang/pgf-tikz
-complete: true
+complete: false
 prev: /labyrinth/notes/cs/cs2100/number_systems
 next: /labyrinth/notes/cs/cs2100/complement_operations
 
 ---
 ### Summary
+Encoded and decoded values
+```tikz
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\begin{document}
+
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines=middle,
+    xlabel={Encoded},
+    ylabel={Decoded},
+    xmin=0, xmax=24,
+    ymin=-14, ymax=12,
+    xtick={0,9,10,20},
+    xticklabels={$000\dots0$,$011\dots1$,$100\dots0$,$111\dots1$},
+    ytick={9,7,0,-1,-10,-11,-13},
+    yticklabels={$2^{n-1}-1$,$2^{n-1}-1-N$,$0$,$-1$,$-(2^{n-1}-1)$,$-2^{n-1}$,$-N$},
+    width=13cm,height=8cm,
+    thick,
+    tick style={black, thick},     % makes tick lines visible and thicker
+    major tick length=6pt,         % make tick marks longer
+    every tick label/.append style={font=\tiny}, % better label alignment
+]
+
+% SM, 1s and 2s
+\addplot[domain=0:9] {x};
+
+% SM
+\addplot[domain=10:20] {-x+10};
+% 1s
+\addplot[domain=10:20] {x-20};
+% 2s
+\addplot[domain=10:20] {x-21};
+
+% excess-N
+\addplot[domain=0:20] {x - 13};
+
+\end{axis}
+\end{tikzpicture}
+\end{document}
+```
+
 Sign-and-magnitude
 - negate by inverting the sign bit
 
@@ -28,10 +70,10 @@ $$
 
 $$
 \begin{array}{rc}
-\text{Largest:} & 0111 1111_{sm}=127_{10} \\
-\text{Smallest:} & 1000 0000_{sm}=-128_{10} \\
-\text{Zeros:} & 0000 0000_{sm}=0_{10} \\
- & 1111 1111_{sm}=-0_{10} \\
+\text{Largest:} & 0111 1111_{1s}=127_{10} \\
+\text{Smallest:} & 1000 0000_{1s}=-127_{10} \\
+\text{Zeros:} & 0000 0000_{1s}=0_{10} \\
+ & 1111 1111_{1s}=-0_{10} \\
 \text{Range(8-bit):} & [-127_{10}, 127_{10}] \\
 \text{Range(n-bit):} & [-(2^{n-1}-1), 2^{n-1}-1]
 \end{array}

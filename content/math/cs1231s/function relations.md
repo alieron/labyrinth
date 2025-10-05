@@ -79,7 +79,7 @@ $$
 > 1-1 (injective) -> no y has more than one incoming arrow
 > bijective -> both 1-1 and onto, every y has only one incoming arrow
 
-Boolean functions
+Boolean functions ^38c347
 $$
 \begin{align*}
 &\text{for some }n \in \mathbb{Z}^+\\

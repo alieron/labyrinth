@@ -51,11 +51,11 @@ $$
 Laws of boolean algebra ^fad79a
 $$
 \begin{align*}
-& \quad && AND & \quad & OR \\
+&&& AND & \quad & OR \\
 \\
 \text{Commutativity:} &&& p \land q \equiv q \land p && p \lor q \equiv q \lor p \\
 \text{Associativity:} &&& p \land q \land r \equiv(p \land q) \land r \equiv p \land (q \land r) && p \lor q \lor r \equiv(p \lor q) \lor r \equiv p \lor (q \lor r) \\
-\text{Distributivity:} &&& p \land (q \lor r) \equiv(p \land q) \lor (p \land r) && p \lor (q \land r) \equiv(p \lor q) \land (p \lor r) \\
+\text{Distributivity:} &&& p \lor (q \land r) \equiv(p \lor q) \land (p \lor r) && p \land (q \lor r) \equiv(p \land q) \lor (p \land r)\\
 \\
 \text{Identity:} &&& p \land {\color{aqua} \mathbf{t}} \equiv p, \quad p \land {\color{orangered} \mathbf{c}} \equiv {\color{orangered} \mathbf{c}} && p \lor {\color{orangered} \mathbf{c}} \equiv p, \quad p \lor {\color{aqua} \mathbf{t}} \equiv {\color{aqua} \mathbf{t}} \\
 \text{Negation:} &&& p \land {\sim p} \equiv {\color{orangered} \mathbf{c}} && p \lor {\sim p} \equiv {\color{aqua} \mathbf{t}} \\

@@ -92,7 +92,7 @@ void inverse(point *a) { // a is a local pointer to the external struct
 	(*a).y = temp;
 }
 ```
-> the parentheses are required in `(*a).x` since the `.` operator has precedence over the `*` operator
+> the parentheses are required in `(*a).x` since the `.` operator has precedence over `*`
 
 Arrow operator
 - syntactic sugar

@@ -2,6 +2,7 @@
 tags:
   - cs2040s/chapter3
   - cs/data_structures
+  - lang/java
 complete: true
 prev: /labyrinth/notes/cs/cs2040s/queue_ADT
 next: /labyrinth/notes/cs/cs2040s/deque_ADT

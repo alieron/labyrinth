@@ -42,9 +42,9 @@ private static void mergeSort(int a[], int low, int high) {
 	// the array to be sorted is a[low..high]
 	if (low < high) { // base case: low >= high (0 or 1 item)
 		int mid = (low + high) / 2; 
-		mergeSort(a, low, mid); // sort the first half
+		mergeSort(a, low, mid); // sort the first half O(n/2 log n/2)
 		mergeSort(a, mid + 1, high); // sort the second half
-		merge(a, low, mid, high); // conquer: the merge routine
+		merge(a, low, mid, high); // conquer: the merge routine O(n)
 	}
 }
 ```
@@ -58,7 +58,7 @@ Merge subroutine ^12175e
 private static void merge(int a[], int low, int mid, int high) {
 	// subarray1 = a[low..mid], subarray2 = a[mid+1..high], both sorted
 	int N = high-low+1;
-	int[] b = new int[N]; // discuss: why do we need a temporary array b?
+	int[] b = new int[N]; // temporary array O(n) space
 	int left = low, right = mid+1, bIdx = 0;
 	while (left <= mid && right <= high) // the merging
 		b[bIdx++] = (a[left] <= a[right]) ? a[left++] : a[right++];
@@ -72,7 +72,9 @@ Divide and conquer paradigm
 - breakdown the problem into smaller subproblems
 - divide until the subproblem is trivial
 ### Application
-Kattis: [classfieldtrip](https://open.kattis.com/problems/classfieldtrip), merge two sorted strings
+Kattis: [classfieldtrip](https://open.kattis.com/problems/classfieldtrip)
+- merge two sorted strings
+
 ```java
 Scanner sc = new Scanner(System.in);
 

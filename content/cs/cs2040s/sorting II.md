@@ -73,6 +73,27 @@ Search
 ![[array_search.png|600]]
 > sorting is not necessarily the best solution in all cases
 
+Leetcode: [Shortest Unsorted Continuous Subarray](https://leetcode.com/problems/shortest-unsorted-continuous-subarray/) ^d90749
+- naive sort then check
+
+```java
+int len = nums.length;
+int[] sorted = Arrays.copyOf(nums, len);
+
+Arrays.sort(sorted); // O(n log n)
+
+int l = len, r = 0;
+
+for (int i = 0; i < len; i++) { // O(n)
+	if (nums[i] != sorted[i]) {
+		l = Math.min(l, i);
+		r = Math.max(r, i);
+	}
+}
+
+return r - l >= 0 ? r - l + 1 : 0;
+```
+
 Minimum swaps to sort an array
 - each cycle of `n` elements takes `n - 1` swaps
 

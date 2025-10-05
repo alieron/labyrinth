@@ -9,5 +9,6 @@ prev: /labyrinth/notes/math/RSA
 ### Summary
 
 ### Concept
+Birthday paradox
 
 ### Application

@@ -1,12 +1,45 @@
 ---
-tags: []
+tags:
+  - cs2040s/chapter5
+  - cs/data_structures
 complete: false
 prev: /labyrinth/notes/cs/cs2040s/table_ADT
+next: /labyrinth/notes/cs/cs2040s/union-find_disjoint_sets
 
 ---
 ### Summary
+Hash table
+- implements [table ADT](/labyrinth/notes/cs/cs2040s/table_ADT)
 
+| Operation   | Method                              | Performance |
+| ----------- | ----------------------------------- | ----------- |
+| `search(v)` | check if the index `h(v)` is filled | - $O(1)$    |
+| `insert(v)` | fill index `h(v)`                   | - $O(1)$    |
+| `remove(v)` | empty index `h(v)`                  | - $O(1)$    |
+> identical to [DAT](/labyrinth/notes/cs/cs2040s/table_ADT#^c3b281), just using the hash of the value, 
+
+Separate chaining
+
+Linear probing
+
+Quadratic probing
+
+Double hashing
+
+Hash table classes
+- [java.util.HashMap](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html) - separate chaining
+- [java.util.HashSet](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html) - separate chaining
 ### Concept
+Hashing
+- map some large range of values(might be non-integers, ie. strings) to integer keys
+- prone to collisions due to the [pigeaonhole principle](/labyrinth/notes/math/cs1231s/fundemental_methods_of_proof#^f49094)
+
+Perfect hash function
+- a [bijective](/labyrinth/notes/math/cs1231s/function_relations) function -> all keys are mapped 1-1 to a value
+- no collisions
+- no wasted space
+
+Collision resolution
 
 ### Application
 Leetcode: [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/?envType=problem-list-v2&envId=sliding-window)

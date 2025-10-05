@@ -26,6 +26,7 @@ while (left < right) { // determine whether we should overlap in the middle or n
 
 Sliding window ^01a391
 - start the two pointers at the start
+- update the property when adding a new element/removing the last one
 - increment each pointer based on properties of the enclosed window
 
 Slow and fast
@@ -61,6 +62,28 @@ for (int l = 0; l < nums.length - 1; l++) {
 return false;
 ```
 
+Leetcode: [Shortest Unsorted Continuous Subarray](https://leetcode.com/problems/shortest-unsorted-continuous-subarray/)
+- improves upon the [naive solution](/labyrinth/notes/cs/cs2040s/sorting_II#^d90749)
+- use the opposite ends approach with [greedy](/labyrinth/notes/cs/cs2040s/greedy_algorithms) max and min
+
+```java
+int n = nums.length, max = nums[0], min = nums[n - 1], end = -1, beg = 0;
+for (int i = 1; i < n; i++) { // O(n)
+	if (nums[i] >= max) { // largest index which is less than the max on the left
+		max = nums[i];
+	} else {
+		end = i;
+	}
+
+	if (nums[n - 1 - i] <= min) { // smallest index which is more than the min on the right
+		min = nums[n - 1 - i];
+	} else {
+		beg = n - 1 - i;
+	}
+}
+
+return end - beg + 1;
+```
 ### Extra
 Problems
 - [two pointer problems](https://leetcode.com/problem-list/two-pointers/)

@@ -150,7 +150,8 @@ $$
 \end{align*}
 $$
 ### Application
-Pigeonhole principle, if there are more cards then boxes, then there is a(at least one) box with more than one card ^f49094
+Pigeonhole principle ^f49094
+- if there are more cards then boxes, then there is a(at least one) box with more than one card
 - general
 - no ordering
 

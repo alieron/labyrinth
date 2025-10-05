@@ -46,7 +46,7 @@ A\subsetneq B \iff A\subseteq B \land A \neq B \equiv A\subseteq B \land (\exist
 \end{gather*}
 $$
 ### Concept
-Properties of sets
+Properties of sets ^95939c
 - no ordering
 - no repetition
 

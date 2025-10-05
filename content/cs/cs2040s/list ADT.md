@@ -4,7 +4,7 @@ tags:
   - cs/fundamentals
   - cs/abstract_data_types
   - lang/java
-complete: true
+complete: false
 next: /labyrinth/notes/cs/cs2040s/SLL
 prev: /labyrinth/notes/cs/cs2040s/radix_sort
 
@@ -17,18 +17,7 @@ List ADT
 [java.util.List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html) interface
 - [java.util.ArrayList](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html) -> compact array
 - [java.util.LinkedList](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html) -> DLL
-### Concept
-List operations
-- `get(i)`
-	- return the value at index `i`
-- `search(v)` 
-	- return the index of `v` if found within the list
-	- return -1 if not found
-- `insert(i, v)`
-	- insert `v` into the list at index `i`
-- `remove(i)`
-	- remove the value at index `i` from the list
-### Application
+
 Library implemetations
 ```java
 import java.util.ArrayList;
@@ -55,3 +44,15 @@ A.add(2, 20); // A = [5, 10, 20, 15, 25]
 // remove(i)
 A.remove(1); // A = [5, 20, 15, 25]
 ```
+### Concept
+List operations
+- `get(i)`
+	- return the value at index `i`
+- `search(v)` 
+	- return the index of `v` if found within the list
+	- return -1 if not found
+- `insert(i, v)`
+	- insert `v` into the list at index `i`
+- `remove(i)`
+	- remove the value at index `i` from the list
+### Application

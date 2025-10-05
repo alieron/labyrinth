@@ -72,12 +72,13 @@ Circular array implementation - [arrays](/labyrinth/notes/cs/cs1101s/arrays)
 > array "wraps" around to avoid having to shift all the elements during insertion/removal
 
 Two [stacks](/labyrinth/notes/cs/cs2040s/stack_ADT) implementation
+- enqueue to the bottom or dequeue from the bottom
 
-| Operation    | Method                                                                                                                                           | Performance                                             |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
-| `enqueue(v)` | Expensive enqueue: pop items in stack1 to stack2, push `v` to bottom of stack1, push rest of elements back to stack1<br>Push: push `v` to stack1 | - $O(n)$, expensive enqueue<br>- $O(1)$, push to stack  |
-| `dequeue()`  | Pop: pop `v` from stack1<br>Expensive dequeue: pop items in stack1 to stack2, pop `v` from top of stack 2, push rest of elements back to stack2  | - $O(1)$, pop from stack<br>- $O(n)$, expensive dequeue |
-| `peek()`     | similar to dequeue                                                                                                                               | - $O(1)$, peek the stack<br>- $O(n)$, expensive dequeue |
+| Operation    | Method                                                                                                                                           | Performance                                               |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------- |
+| `enqueue(v)` | Expensive enqueue: pop items in stack1 to stack2, push `v` to bottom of stack1, push rest of elements back to stack1<br>Push: push `v` to stack1 | - $O(n)$, expensive enqueue<br>- $O(1)$, push to primary  |
+| `dequeue()`  | Pop: pop `v` from stack1<br>Expensive dequeue: pop items in stack1 to stack2, pop `v` from top of stack 2, push rest of elements back to stack2  | - $O(1)$, pop from primary<br>- $O(n)$, expensive dequeue |
+| `peek()`     | similar to dequeue                                                                                                                               | - $O(1)$, peek the primary<br>- $O(n)$, expensive dequeue |
 
 [SLL](/labyrinth/notes/cs/cs2040s/SLL) implementation
 
@@ -155,5 +156,8 @@ Queue operations ^abf27d
 \end{tikzpicture}
 \end{document}
 ```
+
+Monotonic queue
+
 ### Application
 
