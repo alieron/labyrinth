@@ -4,8 +4,8 @@ tags:
 - math/linear_algebra
 complete: true
 prev: /labyrinth/notes/math/ma1301/lines_in_R³
----
 
+---
 ### Summary
 Vector equation of a plane
 - $\mathbf{r}$ represents any point on the plane

@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2040s/chapter3
+  - cs2040s/chapter2
   - cs/data_structures
   - lang/java
 complete: true
@@ -13,12 +13,12 @@ Succeeds: [lists](/labyrinth/notes/cs/cs1101s/lists)
 Singly linked list
 - implements [list ADT](/labyrinth/notes/cs/cs2040s/list_ADT)
 
-| Operation      | Method                                | Performance                                                                                                                                                                                      |
-| -------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `get(i)`       | list traversal                        | - $O(1)$, first element<br>- $O(n)$, last element                                                                                                                                                |
-| `search(v)`    | linear search                         | - $O(1)$, first element <br>- $O(n)$, last element/not found                                                                                                                                     |
-| `insert(i, v)` | traverse the list and insert the node | - $O(1)$, insert at head, shift head pointer<br>- $O(1)$, insert into empty list, need to set the tail pointer<br>- $O(n)$, insert in between<br>- $O(1)$, insert after tail, shift tail pointer |
-| `remove(i)`    | traverse the list and remove the node | - $O(1)$, remove at head<br>- $O(n)$, remove in between<br>- $O(n)$, remove at tail, traverse list to set tail pointer                                                                           |
+| Operation     | Method                                | Performance                                                                                                                                                                                      |
+| ------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `get(i)`      | list traversal                        | - $O(1)$, first element<br>- $O(n)$, last element                                                                                                                                                |
+| `search(v)`   | linear search                         | - $O(1)$, first element <br>- $O(n)$, last element/not found                                                                                                                                     |
+| `insert(i,v)` | traverse the list and insert the node | - $O(1)$, insert at head, shift head pointer<br>- $O(1)$, insert into empty list, need to set the tail pointer<br>- $O(n)$, insert in between<br>- $O(1)$, insert after tail, shift tail pointer |
+| `remove(i)`   | traverse the list and remove the node | - $O(1)$, remove at head<br>- $O(n)$, remove in between<br>- $O(n)$, remove at tail, traverse list to set tail pointer                                                                           |
 
 Strengths
 - fast insertion and extraction at the head
@@ -83,28 +83,28 @@ Leetcode: [Delete the Middle Node of a Linked List](https://leetcode.com/problem
  * }
  */
 public ListNode deleteMiddle(ListNode head) {
-		int idx = Math.floorDiv(length(head, 1), 2); // O(n)
-		removeNode(head, idx - 1); // O(n)
-		if (idx == 0)
-				return null;
-		else
-				return head;
+	int idx = Math.floorDiv(length(head, 1), 2); // O(n)
+	removeNode(head, idx - 1); // O(n)
+	if (idx == 0)
+		return null;
+	else
+		return head;
 }
 
 public int length(ListNode node, int length) {
-		if (node.next != null)
-				return length(node.next, ++length);
-		else
-				return length;
+	if (node.next != null)
+		return length(node.next, ++length);
+	else
+		return length;
 }
 
 public void removeNode(ListNode node, int idx) {
-		if (idx > 0)
-				removeNode(node.next, --idx);
-		else if (node.next != null && node.next.next != null)
-				node.next = node.next.next;
-		else
-				node.next = null;
+	if (idx > 0)
+		removeNode(node.next, --idx);
+	else if (node.next != null && node.next.next != null)
+		node.next = node.next.next;
+	else
+		node.next = null;
 }
 ```
 

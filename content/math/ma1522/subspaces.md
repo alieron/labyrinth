@@ -5,8 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1522/linear_combinations
 next: /labyrinth/notes/math/ma1522/linear_independence
+
 ---
-   
 ### Summary
 Properties of a subspace
 $$

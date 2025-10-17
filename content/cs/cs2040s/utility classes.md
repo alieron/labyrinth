@@ -1,7 +1,7 @@
 ---
 tags:
   - cs2040s
-  - cs/fundamentals
+  - cs/oop
   - lang/java
 complete: false
 ---

@@ -4,7 +4,7 @@ tags:
   - cs/cryptography
 complete: false
 prev: /labyrinth/notes/cs/cs2107/MFA
-next: /labyrinth/notes/math/RSA
+next: /labyrinth/notes/cs/cs2107/textbook_RSA
 
 ---
 ### Summary

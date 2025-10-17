@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2040s/chapter2
+  - cs2040s/chapter1
   - cs/fundamentals
   - cs/algorithms
 complete: false

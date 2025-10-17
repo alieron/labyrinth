@@ -6,8 +6,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1522/LU_factorization
 next: /labyrinth/notes/math/ma1522/vectors_in_Rⁿ
+
 ---
-   
 ### Summary
 Determinant of 1x1 matrices
 $$

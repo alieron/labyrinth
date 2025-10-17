@@ -5,8 +5,8 @@ tags:
 complete: false
 prev: /labyrinth/notes/math/ma1522/diagonalization
 next: /labyrinth/notes/math/ma1522/markov_chains
+
 ---
-   
 ### Summary
 Spectral theorem, [symmetry](/labyrinth/notes/math/ma1522/matrix_transpose#^e47d16)
 $$

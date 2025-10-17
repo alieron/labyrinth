@@ -27,7 +27,7 @@ $$
 $$
 
 Negation
-- if $Q(x)$ is false for all values of $x$, then there exists one or more $x$ where $Q(x)$ is false
+- if not $Q(x)$ for all values of $x$, then there exists one or more $x$ where $Q(x)$ is false
 - if there does not exists one or more $x$ where $Q(x)$ is true, then $Q(x)$ is false for all values of $x$
 
 $$

@@ -4,8 +4,8 @@ tags:
 - math/linear_algebra
 complete: false
 prev: /labyrinth/notes/math/ma1522/linear_transformation
----
 
+---
 ### Summary
 Rank and injectivity/surjectivity
 $$

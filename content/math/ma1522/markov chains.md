@@ -5,9 +5,9 @@ tags:
   - lang/octave
 complete: false
 prev: /labyrinth/notes/math/ma1522/orthogonal_diagonalization
-next: /labyrinth/notes/math/ma1522/singular_value_decomposition
+next: /labyrinth/notes/math/ma1522/SVD
+
 ---
-   
 ### Summary
 Algorithm to find the equilibrium vector/eigenvector associated to 1
 $$

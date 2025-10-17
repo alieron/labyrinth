@@ -33,13 +33,17 @@ Minterms and maxterms ^a0f561
 	- $x'$ -> `1`, $x$ -> `0`
 
 $$
+\begin{gather*}
 \begin{array}{c|c|c|c}
 x & y & \text{minterm} & \text{maxterm} \\
 \hline 0 & 0 & m0 = x'\cdot y' & M0 = x+y \\
 0 & 1 & m1 = x'\cdot y & M1 = x + y' \\
 1 & 0 & m2 = x \cdot y' & M2 = x'+y \\
 1 & 1 & m3 = x \cdot y & M3 = x' + y'
-\end{array}
+\end{array} \\
+\\
+(m_{i})'  = M_{i}
+\end{gather*}
 $$
 > `2ⁿ` minterms and `2ⁿ` maxterms over `n` variables, they represent all the rows of the truth table
 ### Application

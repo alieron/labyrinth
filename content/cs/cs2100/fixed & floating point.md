@@ -77,6 +77,11 @@ Floating point(IEEE 754)
 \end{document}
 ```
 > **excess-127** is used on 8 bits instead of **excess-256** to support more +ve exponents
+
+Normalised
+- exponent in excess-n cannot be 0 or the largest unsigned value represented by n bits(2ⁿ-1)
+- for excess-127:
+	- `0 = -127` or `11111111 = 128`
 ### Application
 Decimal to binary fixed point
 - divide by 2 for integer part

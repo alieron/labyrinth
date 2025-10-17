@@ -108,7 +108,7 @@ $$
 \end{align*}
 $$
 
-Exclusive-OR([XOR](/labyrinth/notes/cs/XOR)) ^211e52
+Exclusive-OR([xor](/labyrinth/notes/cs/xor)) ^211e52
 - true iff only one of the variables are true
 
 $$

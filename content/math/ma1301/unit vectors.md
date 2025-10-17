@@ -5,8 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1301/vectors_in_R³
 next: /labyrinth/notes/math/ma1301/dot_product
+
 ---
-   
 ### Summary
 Normalising, divide by magnitude ^43f21a
 $$

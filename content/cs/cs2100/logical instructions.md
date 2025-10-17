@@ -66,7 +66,7 @@ nor dest, src1, src2 # dest <- ~(src1 | src2)
 ```
 > no `nori` instruction since there is not much need for it
 
-[XOR](/labyrinth/notes/cs/XOR)
+[xor](/labyrinth/notes/cs/xor)
 - R-type
 
 ```mips

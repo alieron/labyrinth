@@ -291,7 +291,7 @@ $$
 \end{tikzpicture}
 \end{document}
 ```
-> CTR mode relies on the [XOR](/labyrinth/notes/cs/XOR) to encrypt/decrypt, the plaintext does not go through the encryption function
+> CTR mode relies on the [xor](/labyrinth/notes/cs/xor) to encrypt/decrypt, the plaintext does not go through the encryption function
 
 GCM
 - authenticated encryption

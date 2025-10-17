@@ -151,7 +151,7 @@ Branch pseudo-instructions
 ```mips
 bgt r1, r2, L # r1 > r2 => r2 < r1
 
-stl $at, r2, r1
+slt $at, r2, r1
 bne $at, $0, L
 
 bge r1, r2, L # r1 >= r2 => !(r1 < r2)
@@ -161,7 +161,7 @@ beq $at, $0, L
 
 ble r1, r2, L # r1 <= r2 => !(r2 < r1)
 
-stl $at, r2, r1
+slt $at, r2, r1
 beq $at, $0, L
 ```
 > use the `$at` which is a reserved temporary register

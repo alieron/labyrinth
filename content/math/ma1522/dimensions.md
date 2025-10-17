@@ -5,8 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1522/transition_matrices
 next: /labyrinth/notes/math/ma1522/matrix_spaces
+
 ---
-   
 ### Summary
 Relations between subspaces
 $$

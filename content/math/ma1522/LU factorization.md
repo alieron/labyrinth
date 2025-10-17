@@ -6,8 +6,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1522/elementary_matrices
 next: /labyrinth/notes/math/ma1522/determinants
+
 ---
-   
 ### Summary
 LU factorizable
 - $\mathbf{L}$ is a unit lower triangular matrix

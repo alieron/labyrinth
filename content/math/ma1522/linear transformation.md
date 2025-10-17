@@ -3,10 +3,10 @@ tags:
 - ma1522/chapter7
 - math/linear_algebra
 complete: true
-prev: /labyrinth/notes/math/ma1522/singular_value_decomposition
+prev: /labyrinth/notes/math/ma1522/SVD
 next: /labyrinth/notes/math/ma1522/range_&_kernel
+
 ---
-   
 ### Summary
 Properties of linear transformations
 $$

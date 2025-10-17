@@ -6,8 +6,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1522/matrix_multiplication
 next: /labyrinth/notes/math/ma1522/matrix_equations
+
 ---
-   
 ### Summary
 Rules
 $$

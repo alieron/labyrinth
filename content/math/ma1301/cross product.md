@@ -5,8 +5,8 @@ tags:
 complete: false
 prev: /labyrinth/notes/math/ma1301/dot_product
 next: /labyrinth/notes/math/ma1301/lines_in_R³
+
 ---
-   
 ### Summary
 Vector/cross product, [determinant](/labyrinth/notes/math/ma1522/determinants#^2f9027) method
 $$

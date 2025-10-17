@@ -78,7 +78,7 @@ $$
 |r|< 1 \land a\neq0 \implies\sum_{n=1}^{\infty} ar^{n-1} = \frac{a}{1-r}
 $$
 
-p-series
+p-series ^1ef7c9
 $$
 \sum_{n=1}^{\infty} \frac{1}{n^p}\text{ is convergent} \iff p> 1
 $$

@@ -367,15 +367,15 @@ Gray code
 - unweighted, not an arithmetic representation
 
 | Binary | Gray Code |
-| ------ | --------- |
-| 000    | 000       |
-| 001    | 001       |
-| 010    | 011       |
-| 011    | 010       |
-| 100    | 110       |
-| 101    | 111       |
-| 110    | 101       |
-| 111    | 100       |
+| :----: | :-------: |
+|  000   |    000    |
+|  001   |    001    |
+|  010   |    011    |
+|  011   |    010    |
+|  100   |    110    |
+|  101   |    111    |
+|  110   |    101    |
+|  111   |    100    |
 > 3-bit standard gray code, but gray codes can start with any digit, as long as the rules are adhered to
 
 Grouping

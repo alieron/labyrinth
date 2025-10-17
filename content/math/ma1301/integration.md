@@ -5,8 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1301/optimization
 next: /labyrinth/notes/math/ma1301/integration_by_parts
+
 ---
-   
 ### Summary
 Standard integrals
 $$

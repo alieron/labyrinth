@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2040s/chapter4
+  - cs2040s/chapter3
   - cs/data_structures
   - lang/java
 complete: true

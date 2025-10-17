@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2040s/chapter3
+  - cs2040s/chapter2
   - cs/abstract_data_types
   - lang/java
 complete: false

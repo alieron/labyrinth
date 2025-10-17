@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2040s/chapter2
+  - cs2040s/chapter1
   - cs/algorithms
   - lang/java
 complete: false
@@ -18,7 +18,7 @@ Counting sort
 
 Time complexity
 - counting: $O(n)$ - single pass
-- reconstructing: $O(n+k)$ -  
+- reconstructing: $O(n+k)$
 $$
 O(n+k)
 $$
@@ -56,7 +56,9 @@ private static void countingSort(int a[], int N, int k) {
 }
 ```
 ### Application
-Dutch flag problem, [sort-colors](https://leetcode.com/problems/sort-colors/description/?envType=study-plan-v2&envId=top-100-liked)
+Leetcode: [Sort Colors](https://leetcode.com/problems/sort-colors/description/?envType=study-plan-v2&envId=top-100-liked)
+- dutch flag problem
+
 ```java
 public void sortColors(int[] nums) {
 	int[] qty = new int[] {0, 0, 0}; // k = 3

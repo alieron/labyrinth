@@ -11,7 +11,7 @@ next: /labyrinth/notes/math/cs1231s/ordering
 Equivalance relation
 - a relation that is reflexive, symmetric and transitive
 
-Partitions
+Partitions ^09f6e3
 - set of nonempty, pairwise disjoint subsets
 
 $$

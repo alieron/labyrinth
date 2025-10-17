@@ -5,8 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1522/subspaces
 next: /labyrinth/notes/math/ma1522/basis_vectors
+
 ---
-   
 ### Summary
 Algorithm to check for linear independence
 - recall the [intuition](/labyrinth/notes/math/ma1522/gaussian_elimination#^0aa696) for row reduction, expressing columns as multiples of another

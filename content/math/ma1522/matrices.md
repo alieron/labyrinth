@@ -6,8 +6,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1522/gaussian_elimination
 next: /labyrinth/notes/math/ma1522/matrix_multiplication
+
 ---
-   
 ### Summary
 $m$ by $n$ matrix, $m$ rows and $n$ columns
 $$

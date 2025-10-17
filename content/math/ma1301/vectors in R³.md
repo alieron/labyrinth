@@ -5,8 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1301/1st_order_ODE
 next: /labyrinth/notes/math/ma1301/unit_vectors
+
 ---
-   
 ### Summary
 3d vectors
 $$

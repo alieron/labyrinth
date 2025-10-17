@@ -6,8 +6,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1522/linear_systems
 next: /labyrinth/notes/math/ma1522/matrices
+
 ---
-   
 ### Summary
 Linear systems as augmented matrices
 $$

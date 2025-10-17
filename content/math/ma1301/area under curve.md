@@ -5,8 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1301/definite_integrals
 next: /labyrinth/notes/math/ma1301/volume_of_revolution
+
 ---
-   
 ### Summary
 Area enclosed/bounded by the curve and x-asix
 $$

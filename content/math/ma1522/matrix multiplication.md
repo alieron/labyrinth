@@ -6,8 +6,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1522/matrices
 next: /labyrinth/notes/math/ma1522/matrix_transpose
+
 ---
-   
 ### Summary
 Non-commutative
 - multiply A by B vs multiply B to A

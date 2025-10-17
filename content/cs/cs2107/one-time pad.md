@@ -20,7 +20,7 @@ $$
 \end{gather*}
 $$
 ### Concept
-Premise, based on the [properties of XOR](/labyrinth/notes/cs/XOR#^bff698)
+Premise, based on the [properties of XOR](/labyrinth/notes/cs/xor#^bff698)
 $$
 \begin{align*}
 c & = x \oplus k && \text{(Encryption)} \\

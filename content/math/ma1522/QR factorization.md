@@ -6,8 +6,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1522/orthogonal_projection
 next: /labyrinth/notes/math/ma1522/least_square_approximation
+
 ---
-   
 ### Summary
 QR factorization
 $$

@@ -5,8 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1522/dimensions
 next: /labyrinth/notes/math/ma1522/orthogonality
+
 ---
-   
 ### Summary
 Column space
 - output space of the matrix, set of all vectors with solutions

@@ -5,8 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1301/unit_vectors
 next: /labyrinth/notes/math/ma1301/cross_product
+
 ---
-   
 ### Summary
 Scalar/dot product, sum of the product of each component
 $$

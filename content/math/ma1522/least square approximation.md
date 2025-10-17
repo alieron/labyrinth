@@ -6,8 +6,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1522/QR_factorization
 next: /labyrinth/notes/math/ma1522/eigenvectors
+
 ---
-   
 ### Summary
 Least square solution
 $$

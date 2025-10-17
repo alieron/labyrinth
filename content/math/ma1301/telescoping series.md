@@ -5,8 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1301/binomial_theorem
 next: /labyrinth/notes/math/ma1301/differentiation
+
 ---
-   
 ### Summary
 [Summation](/labyrinth/notes/math/math_fundementals/summation_notation) notation
 $$

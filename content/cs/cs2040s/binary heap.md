@@ -1,9 +1,9 @@
 ---
 tags:
-  - cs2040s/chapter4
+  - cs2040s/chapter3
   - cs/data_structures
   - lang/java
-complete: false
+complete: true
 prev: /labyrinth/notes/cs/cs2040s/priority_queue_ADT
 next: /labyrinth/notes/cs/cs2040s/table_ADT
 
@@ -44,7 +44,8 @@ $$
 $$
 
 Fast build heap
-- 
+- alter the existing array
+
 ```java
 PriorityQueue<Integer> pq = new PriorityQueue<>(Arrays.asList(arr, arr.length)); // supply the array as a collection
 ```
@@ -67,9 +68,15 @@ $$
 \end{aligned}
 \end{align*}
 $$
+> convergent [p-series](/labyrinth/notes/math/ma1521/series#^1ef7c9)
 ### Concept
-Data structure
-- abstraction as a **complete binary tree**
+Abstraction
+- **complete binary tree**
+	- all levels are filled
+	- lowest is filled from the left
+- **max/min heap property**
+	- the parent of every vertex(except the root) is >= that vertex
+	- every path from node to leaf is a sorted sub-array
 
 ```tikz
 \usepackage{tikz}
@@ -121,6 +128,8 @@ Data structure
 \end{tikzpicture}
 \end{document}
 ```
+
+Data structure
 - concrete implementation as a [compact array](/labyrinth/notes/cs/cs2040s/compact_array), with 1-based indexing
 
 ```tikz
@@ -156,10 +165,6 @@ Data structure
 \end{document}
 ```
 
-**Max/min heap property**
-- the parent of every vertex(except the root) is >= that vertex
-- every path from node to leaf is a sorted sub-array
-
 Heap traversal
 ```
 parent(i) = i >> 1 // integer division by 2
@@ -182,10 +187,96 @@ $$
 > using bitwise left shift `n = 1 << (h + 1)`
 
 Heapify
-- bubbles an element up
+- bubble an element up
+- at most $O(h)\approx O(\log n)$ swaps
+- inserting a new root to a [heap](https://visualgo.net/en/heap?create=47,22,30,42,25,14,37,15)
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\tikzstyle{vertex}=[draw,circle,minimum size=18pt,inner sep=0pt]
+
+\begin{document}
+\begin{tikzpicture}[thick,level/.style={sibling distance=70mm/#1}]
+\node [vertex,red] (a4) {47}
+  child {
+    node [vertex,red] (a3) {42}
+    child {
+      node [vertex,red] (a2) {22}
+      child {
+        node [vertex] {15}
+      }
+      child {
+        node [vertex] (a1) {50}
+      }
+    }
+    child {
+      node [vertex] {25}
+    }
+  }
+  child {
+    node [vertex] {37}
+    child {
+      node [vertex] {14}
+    }
+    child {
+      node [vertex] {30}
+    }
+  };
+\node[below=of a1] (in) {in};
+\draw[arrows={-Latex},thin] (in) -- (a1);
+\draw[<->,red] (a1) to[bend right=45] (a2);
+\draw[<->,red] (a2) to[bend left=45] (a3);
+\draw[<->,red] (a3) to[bend left=45] (a4);
+\end{tikzpicture}
+\end{document}
+```
 
 Extract max/min
-- get the highest priority(head)
+- remove the highest priority(head)
+- swap the head with the last leaf, extract it, then reheapify
+- extracting from the [heap](https://visualgo.net/en/heap?create=50,47,37,42,25,14,30,15,22)
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\tikzstyle{vertex}=[draw,circle,minimum size=18pt,inner sep=0pt]
+
+\begin{document}
+\begin{tikzpicture}[thick,level/.style={sibling distance=70mm/#1}]
+\node [vertex,green] (a4) {50}
+  child {
+    node [vertex,red] (a3) {47}
+    child {
+      node [vertex,red] (a2) {42}
+      child {
+        node [vertex] {15}
+      }
+      child {
+        node [vertex,red] (a1) {22}
+      }
+    }
+    child {
+      node [vertex] {25}
+    }
+  }
+  child {
+    node [vertex] {37}
+    child {
+      node [vertex] {14}
+    }
+    child {
+      node [vertex] {30}
+    }
+  };
+\node[below=of a1] (out) {out};
+\draw[arrows={-Latex},thin] (a1) -- (out);
+\draw[<->,green] (a4) to[bend left=45] (a1);
+\draw[<->,red] (a2) to[bend left=45] (a3);
+\draw[<->,red] (a3) to[bend left=45] (a4);
+\end{tikzpicture}
+\end{document}
+```
 ### Application
 Kattis: [Numbers On a Tree](https://open.kattis.com/problems/numbertree)
 - understanding heap traversal

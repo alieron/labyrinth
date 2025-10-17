@@ -5,8 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1522/basis_vectors
 next: /labyrinth/notes/math/ma1522/dimensions
+
 ---
-   
 ### Summary
 Algorithm to find transition matrix
 - extension of the [algorithm for computing coordinates](/labyrinth/notes/math/ma1522/basis_vectors#^b5ff18)

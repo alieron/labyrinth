@@ -4,8 +4,8 @@ tags:
 - math/linear_algebra
 complete: true
 next: /labyrinth/notes/math/ma1522/gaussian_elimination
----
 
+---
 ### Summary
 Inconsistent
 - No solutions

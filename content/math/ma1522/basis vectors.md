@@ -5,8 +5,8 @@ tags:
 complete: false
 prev: /labyrinth/notes/math/ma1522/linear_independence
 next: /labyrinth/notes/math/ma1522/transition_matrices
+
 ---
-   
 ### Summary
 Standard basis ^709a91
 $$

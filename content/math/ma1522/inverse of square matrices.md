@@ -6,8 +6,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1522/matrix_equations
 next: /labyrinth/notes/math/ma1522/elementary_matrices
+
 ---
-   
 ### Summary
 Inverse of 2x2 matrix, with [2x2 determinant](/labyrinth/notes/math/ma1522/determinants#^2f9027) ^462f96
 $$

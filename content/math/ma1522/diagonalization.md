@@ -6,8 +6,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1522/eigenvectors
 next: /labyrinth/notes/math/ma1522/orthogonal_diagonalization
+
 ---
-   
 ### Summary
 Diagonalizable
 $$

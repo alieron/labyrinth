@@ -5,8 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1301/cartesian_differentiation
 next: /labyrinth/notes/math/ma1301/optimization
+
 ---
-   
 ### Summary
 $$
 \begin{align*}

@@ -5,8 +5,8 @@ tags:
 complete: false
 prev: /labyrinth/notes/math/ma1522/orthogonal_bases
 next: /labyrinth/notes/math/ma1522/QR_factorization
+
 ---
-   
 ### Summary
 Gram-Schmidt orthogonalization
 - convert a basis into an orthogonal/orthonormal basis

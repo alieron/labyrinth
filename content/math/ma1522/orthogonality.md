@@ -5,8 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1522/matrix_spaces
 next: /labyrinth/notes/math/ma1522/orthogonal_bases
+
 ---
-   
 ### Summary
 Orthogonal set
 - vectors are pairwise orthogonal

@@ -26,23 +26,46 @@ $$
 ### Concept
 Exclusive-OR(XOR)
 $$
+\begin{gather*}
 a\oplus b = \begin{cases}
 true & if \ a \neq b \\
 false & if \ a = b
-\end{cases}
+\end{cases} \\
+\\
+a\oplus b = (a \land \sim b) \lor(\sim a \land b)
+\end{gather*}
 $$
 
 | $a$ | $b$ | $a \oplus b$ |
 | --- | --- | ------------ |
 | T   | T   | F            |
-| T   | F   | ==T==            |
-| F   | T   | ==T==            |
+| T   | F   | ==T==        |
+| F   | T   | ==T==        |
 | F   | F   | F            |
 
 Addition [modulo](/labyrinth/notes/math/modulo) 2
 $$
 a \oplus b = (a + b) \mod 2
 $$
+
+Exclusive-NOR(XNOR)
+$$
+\begin{gather*}
+a\odot b = \begin{cases}
+true & if \ a = b \\
+false & if \ a \neq b
+\end{cases} \\
+\\
+a\odot b = (a \land b) \lor(\sim a \land \sim b)
+\end{gather*}
+$$
+
+| $a$ | $b$ | $a \odot b$ |
+| --- | --- | ----------- |
+| T   | T   | ==T==       |
+| T   | F   | F           |
+| F   | T   | F           |
+| F   | F   | ==T==       |
 ### Application
 Swapping variables without an intermediate
 ```c
@@ -54,12 +77,12 @@ a = a ^ b; // 0b1001 = original b
 ```
 $$
 \begin{align*}
-b' & = (a \oplus b) \oplus b && \text{(Associativity)} \\
+\sim b & = (a \oplus b) \oplus b && \text{(Associativity)} \\
 & = a \oplus (b \oplus b) && \text{(Self-Inverse)} \\
 & = a \oplus 0 && \text{(Identity)} \\
 & = a \\
 \\
-a' & = (a \oplus b) \oplus b' \\
+\sim a & = (a \oplus b) \oplus \sim b \\
 & = (a \oplus b) \oplus (a \oplus b) \oplus b && \text{(Self-Inverse)} \\
 & = 0 \oplus b && \text{(Identity)} \\
 & = b

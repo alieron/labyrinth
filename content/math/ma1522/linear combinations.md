@@ -5,8 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1522/vectors_in_Rⁿ
 next: /labyrinth/notes/math/ma1522/subspaces
+
 ---
-   
 ### Summary
 Properties of linear span
 $$

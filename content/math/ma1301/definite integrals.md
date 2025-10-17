@@ -5,8 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1301/integration_by_parts
 next: /labyrinth/notes/math/ma1301/area_under_curve
+
 ---
-   
 ### Summary
 Basic rules
 $$

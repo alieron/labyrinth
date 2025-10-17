@@ -4,7 +4,7 @@ tags:
   - cs/security
 complete: true
 prev: /labyrinth/notes/cs/cs2107/passwords
-next: /labyrinth/notes/cs/cs2107/PKC
+next: /labyrinth/notes/cs/cs2107/public_key_cryptography
 
 ---
 ### Summary

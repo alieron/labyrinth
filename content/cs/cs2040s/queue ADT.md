@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2040s/chapter3
+  - cs2040s/chapter2
   - cs/abstract_data_types
 complete: false
 prev: /labyrinth/notes/cs/cs2040s/stack_ADT
@@ -87,7 +87,6 @@ Two [stacks](/labyrinth/notes/cs/cs2040s/stack_ADT) implementation
 | `enqueue(v)` | insert at tail   | - $O(1)$    |
 | `dequeue()`  | remove from head | - $O(1)$    |
 | `peek()`     | get head         | - $O(1)$    |
-
 ```tikz
 \usepackage{tikz}
 \usetikzlibrary{positioning,arrows.meta}

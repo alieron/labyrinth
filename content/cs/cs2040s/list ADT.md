@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2040s/chapter3
+  - cs2040s/chapter2
   - cs/fundamentals
   - cs/abstract_data_types
   - lang/java
@@ -51,7 +51,7 @@ List operations
 - `search(v)` 
 	- return the index of `v` if found within the list
 	- return -1 if not found
-- `insert(i, v)`
+- `insert(i,v)`
 	- insert `v` into the list at index `i`
 - `remove(i)`
 	- remove the value at index `i` from the list

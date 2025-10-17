@@ -5,8 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1301/integration
 next: /labyrinth/notes/math/ma1301/definite_integrals
+
 ---
-   
 ### Summary
 Integration by substitution, involes [differentiation](/labyrinth/notes/math/ma1301/differentiation)
 $$

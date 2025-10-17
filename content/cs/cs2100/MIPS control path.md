@@ -10,6 +10,7 @@ next: /labyrinth/notes/cs/cs2100/boolean_algebra
 ### Summary
 
 ### Concept
+ALU
 
 ### Application
 

@@ -4,8 +4,8 @@ tags:
 - math/calculus
 complete: true
 next: /labyrinth/notes/math/ma1301/geometric_series
----
 
+---
 ### Summary
 Basic formulae
 $$

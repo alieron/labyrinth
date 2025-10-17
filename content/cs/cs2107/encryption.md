@@ -74,7 +74,11 @@ Key size
 - number of bits required to represent a key
 
 $$
-\lceil \log_{2} |\text{keyspace}|  \rceil 
+\begin{array}{rcl}
+\text{size of keyspace:} & |U_{k}| = 2^{|k|} & \text{number of values that }|k|\text{ bits can represent} \\
+\\
+\text{bits required to store keyspace:} & \lceil \log_{2} (|U_{k}| \times |k|) \rceil & \text{each key is }|k|\text{ bits}
+\end{array}
 $$
 > unserstand the [capacity](/labyrinth/notes/cs/cs2100/data_representation#^2a92f4) of an n-bit binary number
 

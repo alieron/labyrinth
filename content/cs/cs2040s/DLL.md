@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2040s/chapter3
+  - cs2040s/chapter2
   - cs/data_structures
   - lang/java
 complete: true
@@ -12,12 +12,12 @@ next: /labyrinth/notes/cs/cs2040s/deque_ADT
 Doubly linked list
 - implements [list ADT](/labyrinth/notes/cs/cs2040s/list_ADT)
 
-| Operation      | Method                                | Performance                                                                                                                                                                                      |
-| -------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `get(i)`       | list traversal                        | - $O(1)$, first element/last element<br>- $O(n)$, other elements                                                                                                                                 |
-| `search(v)`    | linear search                         | - $O(1)$, first element/last element<br>- $O(n)$, not found                                                                                                                                      |
-| `insert(i, v)` | traverse the list and insert the node | - $O(1)$, insert at head, shift head pointer<br>- $O(1)$, insert into empty list, need to set the tail pointer<br>- $O(n)$, insert in between<br>- $O(1)$, insert after tail, shift tail pointer |
-| `remove(i)`    | traverse the list and remove the node | - ${\color{red}O(1)}$, remove at head/remove at tail<br>- $O(n)$, remove in between                                                                                                              |
+| Operation     | Method                                | Performance                                                                                                                                                                                      |
+| ------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `get(i)`      | list traversal                        | - $O(1)$, first element/last element<br>- $O(n)$, other elements                                                                                                                                 |
+| `search(v)`   | linear search                         | - $O(1)$, first element/last element<br>- $O(n)$, not found                                                                                                                                      |
+| `insert(i,v)` | traverse the list and insert the node | - $O(1)$, insert at head, shift head pointer<br>- $O(1)$, insert into empty list, need to set the tail pointer<br>- $O(n)$, insert in between<br>- $O(1)$, insert after tail, shift tail pointer |
+| `remove(i)`   | traverse the list and remove the node | - ${\color{red}O(1)}$, remove at head/remove at tail<br>- $O(n)$, remove in between                                                                                                              |
 Strengths
 - fast insertion and extraction at the head and tail
 

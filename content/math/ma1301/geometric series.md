@@ -5,8 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1301/arithmetic_series
 next: /labyrinth/notes/math/ma1301/binomial_theorem
+
 ---
-   
 ### Summary
 Basic formulae
 $$

@@ -25,7 +25,7 @@ Encoded and decoded values
     xtick={0,9,10,20},
     xticklabels={$000\dots0$,$011\dots1$,$100\dots0$,$111\dots1$},
     ytick={9,7,0,-1,-10,-11,-13},
-    yticklabels={$2^{n-1}-1$,$2^{n-1}-1-N$,$0$,$-1$,$-(2^{n-1}-1)$,$-2^{n-1}$,$-N$},
+    yticklabels={$2^{n-1}-1$,$2^{n}-1-N$,$0$,$-1$,$-(2^{n-1}-1)$,$-2^{n-1}$,$-N$},
     width=13cm,height=8cm,
     thick,
     tick style={black, thick},     % makes tick lines visible and thicker

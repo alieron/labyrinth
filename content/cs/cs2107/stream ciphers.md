@@ -22,7 +22,7 @@ Reused/predictable IV
 ### Concept
 Stream cipher
 - deterministic pseudo-random sequence(key stream) generated from the IV
-- use [XOR](/labyrinth/notes/cs/XOR) to encrypt the plaintext against the key stream
+- use [xor](/labyrinth/notes/cs/xor) to encrypt the plaintext against the key stream
 
 ```tikz
 \usepackage{tikz}

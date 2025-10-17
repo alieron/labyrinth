@@ -5,8 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1301/geometric_series
 next: /labyrinth/notes/math/ma1301/telescoping_series
+
 ---
-   
 ### Summary
 Combinations(recall pascal's triangle)
 $$

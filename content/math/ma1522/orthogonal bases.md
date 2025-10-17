@@ -5,8 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1522/orthogonality
 next: /labyrinth/notes/math/ma1522/orthogonal_projection
+
 ---
-   
 ### Summary
 Relative coordinates to an orthogonal basis ^ffe6f8
 $$

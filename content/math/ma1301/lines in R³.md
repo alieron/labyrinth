@@ -5,8 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1301/cross_product
 next: /labyrinth/notes/math/ma1301/planes_in_R³
+
 ---
-   
 ### Summary
 Vector equation of a line
 - $r$ represents any point on the line

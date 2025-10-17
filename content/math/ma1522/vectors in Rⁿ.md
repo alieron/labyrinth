@@ -5,8 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1522/determinants
 next: /labyrinth/notes/math/ma1522/linear_combinations
+
 ---
-   
 ### Summary
 Rules of vector algebra, same as [vectors in R³](/labyrinth/notes/math/ma1301/vectors_in_R³)
 $$

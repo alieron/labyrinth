@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2040s/chapter5
+  - cs2040s/chapter3
   - cs/abstract_data_types
   - lang/java
 complete: true
@@ -79,7 +79,7 @@ set.remove(1);
 set.size(); // number of values in the set
 set.isEmpty(); // check if the Set is empty
 ```
-> by the no repititon property of [sets](/labyrinth/notes/math/cs1231s/sets#^95939c)
+> duplicates are ignored since there is no repetiton in [sets](/labyrinth/notes/math/cs1231s/sets#^95939c)
 ### Concept
 Table operations
 - `search(v)`
