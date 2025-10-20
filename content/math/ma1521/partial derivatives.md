@@ -60,7 +60,7 @@ f_{z}\neq_{0} \implies \frac{\partial z}{\partial x}=-\frac{f_{x}}{f_{z}}
 $$
 ### Concept
 Partial derivatives
-- focus on bivariate functions for #ma1521
+- focus on bivariate functions for `ma1521`
 - do the small change over each variable individually
 - treate the other variable as a constant
 

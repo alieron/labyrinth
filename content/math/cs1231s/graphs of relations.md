@@ -103,11 +103,14 @@ Tikz template for directed/undirected graphs
   \node (a) {a};
   \node (b) [below left of=a] {b};
   \node (c) [below right of=a] {c};
-  \node (d) [below of=a] {d};
+  \node (d) [below right of=b] {d};
 
-  \loop[-]{a}{45}
+  \round{a}{90}{};
   
   \draw[-] (a) edge (b);
+  \draw[-] (a) edge (c);
+  
+  \round{d}{270}{};
 
 \end{tikzpicture}
 \end{document}

@@ -9,11 +9,13 @@ next: /labyrinth/notes/cs/cs2107/encryption
 ### Summary
 ##### Security trade-off
 Ease-of-use <-> Performance <-> Cost
-##### Common Vulnerabilities and Exposures(CVE)
+
+Common Vulnerabilities and Exposures(CVE)
 - public repo of vulnerabilities
 - zero-day: not yet published
 - eg. Log4j: [CVE-2021-44832](https://www.cve.org/CVERecord?id=CVE-2021-44832)
-##### Adversarial thinking
+
+Adversarial thinking
 - always assume there are malicious actors trying to compromise the system
 ### Concept
 ##### CIA
@@ -39,6 +41,11 @@ Authenticity
 
 Non-repudiation
 - assurance that a user can't deny having sent the message
+
+Characters
+- **Alice** and **Bob**: generic users
+- **Eve**: eavesdropper
+- **Mallory**: malicious attacker
 ### Extra
 - accountability -> system log
 - traitor-tracing -> watermarks

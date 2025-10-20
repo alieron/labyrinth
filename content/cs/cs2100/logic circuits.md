@@ -11,15 +11,15 @@ Succeeds: [propositions](/labyrinth/notes/math/cs1231s/propositions)
 ### Summary
 Logic gates
 
-| Operation |          Gate           |            Output            |
-| :-------: | :---------------------: | :--------------------------: |
-|    NOT    | ![[not_gate.png\|120]]  |             $A'$             |
-|    AND    | ![[and_gate.png\|120]]  |         $A \cdot B$          |
-|    OR     |  ![[or_gate.png\|120]]  |            $A+B$             |
-|   NAND    | ![[nand_gate.png\|120]] | $(A\cdot B)'\equiv A' + B'$  |
-|    NOR    | ![[nor_gate.png\|120]]  | $(A + B)'\equiv A' \cdot B'$ |
-|  [xor](/labyrinth/notes/cs/xor)  | ![[xor_gate.png\|120]]  |         $A \oplus B$         |
-|   XNOR    | ![[xnor_gate.png\|120]] |       $(A \oplus B)'$        |
+|  Operation   |          Gate           |            Output            |
+| :----------: | :---------------------: | :--------------------------: |
+|     NOT      | ![[not_gate.png\|120]]  |             $A'$             |
+|     AND      | ![[and_gate.png\|120]]  |         $A \cdot B$          |
+|      OR      |  ![[or_gate.png\|120]]  |            $A+B$             |
+|     NAND     | ![[nand_gate.png\|120]] | $(A\cdot B)'\equiv A' + B'$  |
+|     NOR      | ![[nor_gate.png\|120]]  | $(A + B)'\equiv A' \cdot B'$ |
+| [XOR](/labyrinth/notes/cs/xor) | ![[xor_gate.png\|120]]  |         $A \oplus B$         |
+|     XNOR     | ![[xnor_gate.png\|120]] |       $(A \oplus B)'$        |
 > hollow circle represents a negation, solid circle represents a wire intersection
 
 Universal gates
@@ -51,7 +51,7 @@ $$
 Logic circuits
 - circuit made up of logic gates
 	- [combinational circuits](/labyrinth/notes/cs/cs2100/combinational_circuits): output depends entirely on inputs
-	- [sequential circuits](#): output depends on inputs and state
+	- [sequential circuits](/labyrinth/notes/cs/cs2100/sequential_circuits): output depends on inputs and state
 - fan in -> number of inputs to a gate
 - **every input** must be connected for the circuit to work
 

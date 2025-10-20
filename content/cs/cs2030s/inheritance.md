@@ -54,7 +54,7 @@ class Child extends Parent { // not possible to inherit
 Protected
 - child class cannot access private fields in the parent class
 - protected allows this
-- avoid using protected for #cs2030s
+- avoid using protected for `cs2030s`
 ```java
 class Parent {
 	private int a; // cannot be accessed outside Parent

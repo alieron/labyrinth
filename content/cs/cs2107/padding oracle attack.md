@@ -19,6 +19,11 @@ Padding
 Padding oracle
 - takes in a ciphertext
 - returns whether its decrypted into the correct padding format
+
+Attack
+$$
+v' = v \oplus (m \oplus m')
+$$
 ### Concept
 PKCS#7
 - padding standard

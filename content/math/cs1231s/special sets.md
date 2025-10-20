@@ -20,9 +20,9 @@ $$
 \end{align*}
 $$
 ### Concept
-In the context of #cs1231s $\mathbb{N}$ includes 0
+In the context of `cs1231s` $\mathbb{N}$ includes 0
 
-Note for #cs1231s:
+Note for `cs1231s`:
 $$
 \begin{align*}
 \text{Subset}&: A \subseteq B && A\text{ is a subset of }B\text{ in place of}\subset\\

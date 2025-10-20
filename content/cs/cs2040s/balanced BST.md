@@ -378,7 +378,6 @@ while (n != 0) {
 
 pw.close();
 ```
-
 ### Extra
 Min size function in python
 ```python

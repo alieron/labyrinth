@@ -7,7 +7,7 @@ complete: true
 ### Summary
 First minor ^c8b222
 - submatrix formed by deleting the ith row and jth column
-> conventionally it refers to the determinant of this submatrix, for #ma1522 it refers to the submatrix
+> conventionally it refers to the determinant of this submatrix, for `ma1522` it refers to the submatrix
 
 Principal minor
 - minors where i=j

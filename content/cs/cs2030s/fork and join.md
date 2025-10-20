@@ -68,7 +68,7 @@ class Summer extends RecursiveTask<Integer> {
 ```
 
 ForkJoinPool
-- each thread has a deque of tasks
+- each thread has a [deque](/labyrinth/notes/cs/cs2040s/deque_ADT) of tasks
 - when a thread is idle, it checks its deque
 	- there are tasks in its deque -> pick up from the head
 	- deque is empty -> pick up from tail of another thread's deque (work stealing)

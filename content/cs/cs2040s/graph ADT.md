@@ -10,7 +10,7 @@ next: /labyrinth/notes/cs/cs2040s/DFS
 ---
 Succeeds: [graphs](/labyrinth/notes/math/cs1231s/graphs)
 ### Summary
-Adjacency matrix - [compact array](/labyrinth/notes/cs/cs2040s/compact_array)
+Adjacency matrix - [compact array](/labyrinth/notes/cs/cs2040s/compact_array) ^ad263b
 - $O(V^2)$ space
 
 | Operation       | Method                          | Performance                             |
@@ -100,4 +100,7 @@ Bipartite graph
 Directed acyclic graph(DAG)
 - directed
 - no cycles
+
+Planar graph
+- can be drawn on a 2D plane without edges crossing
 ### Application

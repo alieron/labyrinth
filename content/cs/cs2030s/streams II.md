@@ -27,7 +27,7 @@ s.map(x -> x + x); // error, IllegalStateException
 ```
 
 Reduce
-- evaluates left-to-right, unlike [accumulate](/labyrinth/notes/cs/cs1101s/lists) from #cs1101s
+- evaluates left-to-right, unlike [accumulate](/labyrinth/notes/cs/cs1101s/lists) from `cs1101s`
 ```java
 Stream.iterate(1, i -> i + 1).limit(5).reduce(0, (x, y) -> 2 * x + y)
 // 57 = 2(2(2(2(2(0)+1)+2)+3)+4)+5

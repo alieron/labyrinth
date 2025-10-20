@@ -49,7 +49,7 @@ $$
 \text{Logical Sum (OR):} &&& x + y
 \end{align*}
 $$
-> for #cs2100 the operator precedence is 1) `NOT`, 2) `AND` then 3) `OR`
+> for `cs2100` the operator precedence is 1) `NOT`, 2) `AND` then 3) `OR`
 
 Duality
 - AND and OR operators can be interchanged and the equation will still remain valid

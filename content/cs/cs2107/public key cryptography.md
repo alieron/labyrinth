@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2107/chapter4
+  - cs2107/chapter3
   - cs/cryptography
 complete: false
 prev: /labyrinth/notes/cs/cs2107/MFA
@@ -46,7 +46,3 @@ Asymmetric-key encryption
 \end{tikzpicture}
 \end{document}
 ```
-
-### Application
-
-### Extra

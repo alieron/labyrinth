@@ -4,10 +4,11 @@ tags:
   - cs/low_level
 complete: true
 prev: /labyrinth/notes/cs/cs2100/combinational_circuits
+next: /labyrinth/notes/cs/cs2100/sequential_circuits
 
 ---
 ### Summary
-Active high/low
+Active high/low ^4e63c3
 - active high - normal outputs: true is high
 - active low - negated outputs: true is low
 
@@ -20,7 +21,7 @@ Constructing multiplexers
 - use the MSB to discriminate between the outputs of two smaller multiplexers on the other bits
 ![[larger_mux.png]]
 ### Concept
-Decoders
+Decoders ^c776bf
 - `n`-bit BCD to `2ⁿ` ouputs
 - each output is a [minterm](/labyrinth/notes/cs/cs2100/standard_forms#^a0f561)
 

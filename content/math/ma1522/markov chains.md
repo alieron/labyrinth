@@ -234,7 +234,7 @@ k\to \infty \quad |r|<1 \implies r^k \to 0 \\
 \end{gather*}
 $$
 
-Outgoing connections on adjacency matrix, on a [graph](/labyrinth/notes/math/cs1231s/graphs_of_relations)
+Connections(edges) from an [adjacency matrix](/labyrinth/notes/cs/cs2040s/graph_ADT#^ad263b), on a [graph](/labyrinth/notes/math/cs1231s/graphs_of_relations)
 ```tikz
 \usepackage{tikz}
 \usetikzlibrary{calc}

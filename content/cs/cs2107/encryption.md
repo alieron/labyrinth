@@ -65,7 +65,7 @@ Attacker's capabilities
 - **Known plaintext attack**: attacker has a collection of plaintexts and their corresponding ciphertexts
 - **Chosen plaintext attack(CPA)**: attacker has access to an encryption oracle
 - **Chosen ciphertext attack(CCA2)**: attacker has access to a decryption oracle
-> for #cs2107 assume the attacker computing power is a supercomputer which can be run for 1000 years
+> for `cs2107` assume the attacker computing power is a supercomputer which can be run for 1000 years
 
 Key space
 - represents all the possible keys in a particular system
@@ -101,7 +101,7 @@ $$
 (1\text{ year}\approx2^{25}\text{ seconds})
 \end{gather*}
 $$
-> for #cs2107 use the convention where $1K = 2^{10}$, $1M = 2^{20}$, $1G = 2^{30}$ and $1T = 2^{40}$
+> for `cs2107` use the convention where $1K = 2^{10}$, $1M = 2^{20}$, $1G = 2^{30}$ and $1T = 2^{40}$
 
 - we have the whole bitcoin mining network, and one hash is equivalent to one test
 

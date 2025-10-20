@@ -52,7 +52,7 @@ $$
 $$
 > Assumption 2: Every [rational](/labyrinth/notes/math/cs1231s/special_sets#^9f1e5d) number can be reduced to a faction in its lowest term
 
-Definition of colorful for #cs1231s
+Definition of colorful for `cs1231s`
 $$
 n\text{ is colorful} \iff \exists k \ \mathrm{s.t.}\ n=3k \iff 3 \mid n
 $$

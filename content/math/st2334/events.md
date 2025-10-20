@@ -29,7 +29,7 @@ $$
 \text{Equivalent:} &&& A = B \iff A\subset B \land B \subset A
 \end{align*}
 $$
-> #st2334 uses $\subset$ instead of $\subseteq$ to represent an improper subset
+> `st2334` uses $\subset$ instead of $\subseteq$ to represent an improper subset
 ### Concept
 Sample space
 - set of all possible outcomes called **sample points**
