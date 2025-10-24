@@ -14,11 +14,13 @@ Active high/low ^4e63c3
 
 Constructing decoders
 - use two smaller decoders with the additional input and its negation to the enables
+
 ![[larger_decoder.png]]
 > watch for whether the decoders are 1-enable or 0-enable
 
 Constructing multiplexers
 - use the MSB to discriminate between the outputs of two smaller multiplexers on the other bits
+
 ![[larger_mux.png]]
 ### Concept
 Decoders ^c776bf
@@ -121,6 +123,7 @@ $$
 O = I_{0}\cdot m_{0} + I_{1}\cdot m_{1} +\dots +I_{2^n}\cdot m_{2^n}
 $$
 - 4:1 multiplexer:
+
 ![[4-1_mux.png]]
 
 | $S_{1}$ | $S_{0}$ |   $O$   |
@@ -183,6 +186,7 @@ $$
 
 74151A 8:1 multiplexer
 - 0-enable
+
 ![[74151A_8-1_mux.png]]
 
 | $C$ | $B$ | $A$ | $\bar{G}$ |   $Y$   |   $W$    |

@@ -5,7 +5,7 @@ tags:
   - lang/java
 complete: true
 prev: /labyrinth/notes/cs/cs2030s/nested_classes
-next: /labyrinth/notes/cs/cs2030s/monads_and_functors
+next: /labyrinth/notes/cs/cs2030s/monads_&_functors
 ---
    
 ### Summary

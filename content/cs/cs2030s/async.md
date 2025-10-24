@@ -126,7 +126,7 @@ t.isAlive(); // check if a thread is still running
 
 CompletableFuture
 - [java.util.concurrent.CompletableFuture](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html)
-- a [monad](/labyrinth/notes/cs/cs2030s/monads_and_functors)
+- a [monad](/labyrinth/notes/cs/cs2030s/monads_&_functors)
 - gives us the behaviour of chaining, lazy evaluation and null handling(exceptions)
 ```java
 // factory methds, same functionalitu as of

@@ -26,13 +26,13 @@ RSA
 $$
 m = (m^e)^d \mod n
 $$
-> RSA is slow to encrypt and decrypt, 
+> RSA is slow to encrypt and decrypt, try to minimize the plaintext being encrypted
 
 Homomorphic property ^76fe23
-- if $e$ is used to encrypt $d$ must be used to decrypt
-	- public can encrypt, but only one person can decrypt
-- if $d$ is used to encrypt $e$ must be used to decrypt
-	- owner can encrypt, and the public can decrypt
+- encrypting with $e$ -> decrypt with $d$
+	- public can encrypt, but only one person can decrypt (only receiver can decrypt)
+- encrypting with $d$ -> decrypt with $e$
+	- owner can encrypt, and the public can decrypt (authenticate owner)
 
 $$
 m = m^{ed} = m^{de} \mod n

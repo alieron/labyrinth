@@ -51,7 +51,7 @@ mp.size(); // number of key-value pairs
 mp.isEmpty(); // check if the Map is empty
 mp.values(); // collection of the values
 ```
-> there are other useful functions that allow Map to be a [monad](/labyrinth/notes/cs/cs2030s/monads_and_functors)
+> there are other useful functions that allow Map to be a [monad](/labyrinth/notes/cs/cs2030s/monads_&_functors)
 
 [java.util.Set](https://docs.oracle.com/javase/8/docs/api/java/util/Set.html) interface
 - [java.util.HashSet](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html) - hash table

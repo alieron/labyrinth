@@ -91,6 +91,7 @@ SR latch
 - set and reset
 - store current state otherwise
 - has an invalid condition
+
 ![[sr_nor_latch.png]]
 > an [active-low](/labyrinth/notes/cs/cs2100/MSI_components#^4e63c3) SR latch would have the NOR gates replaced with NAND
 
@@ -111,6 +112,7 @@ $$
 Gated SR latch
 - SR latch with enable pin
 - only changes if the enable pin is high
+
 ![[gated_sr_latch.png]]
 
 Gated D latch

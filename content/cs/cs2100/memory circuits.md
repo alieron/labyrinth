@@ -13,10 +13,12 @@ Random access memory(RAM)
 
 Memory unit
 - combined in an array to form larger units
+
 ![[mem_unit.png]]
 
 Memory arrays
 - uses a [decoder](/labyrinth/notes/cs/cs2100/MSI_components#^c776bf) on the more significant bits of the address to index the appropriate cell for the next level
+
 ![[4k_8bit_ram.png]]
 ### Concept
 States
@@ -35,4 +37,5 @@ Memory properties
 
 Data transfer
 - how the CPU indexes and reads from/writes to memory
+
 ![[cpu_mem.png]]

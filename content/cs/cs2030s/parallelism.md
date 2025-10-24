@@ -4,7 +4,7 @@ tags:
   - cs/paradigm
   - lang/java
 complete: true
-prev: /labyrinth/notes/cs/cs2030s/monads_and_functors
+prev: /labyrinth/notes/cs/cs2030s/monads_&_functors
 next: /labyrinth/notes/cs/cs2030s/async
 ---
    
