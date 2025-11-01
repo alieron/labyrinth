@@ -228,4 +228,3 @@ Authenticated key exchange(AKE)
 - authentication + key exchange
 - prevents man-in-the-middle attack
 - eg. PKC-based, STS
-### Application

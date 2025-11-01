@@ -62,7 +62,7 @@ Adjacency list - [compact array](/labyrinth/notes/cs/cs2040s/compact_array) or [
   \node[label=left:{2},draw,cell,below=of 1] (2) {};
   \node[label=left:{3},draw,cell,below=of 2] (3) {};
   \node[draw,cell,below=of 3] (4) {$\vdots$};
-  \node[label=left:{$V$},draw,cell,below=of 4] (m) {};
+  \node[label=left:{$V-1$},draw,cell,below=of 4] (m) {};
    
 	\pnull{1}
 	\pnull{2}

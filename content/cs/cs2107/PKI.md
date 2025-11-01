@@ -20,11 +20,11 @@ Revocation
     - **CRL (Certificate Revocation List):** signed list of revoked certs
     - **OCSP (Online Certificate Status Protocol):** real-time query to verify if a certificate is still valid
 ### Concept
-Public key infrastructure(PKI)
+Public Key Infrastructure(PKI)
 - since [PKC](/labyrinth/notes/cs/cs2107/public_key_cryptography) requires a secure broadcast channel to distribute public keys
 - ensure that public keys are authentic
 
-Certificate authority(CA)
+Certificate Authority(CA)
 - **trusted third party** that issues and signs certificates
 - maintains a verified directory of identity -> public key mappings
 

@@ -31,7 +31,7 @@ Supported instructions
 - `slt`
 > limited set of instructions supported by this simplified implementation, `andi` and `ori` do not work due to the sign extension on the immediate value
 ### Concept
-PC register
+PC register ^cfdb07
 - incremented by 4 at every rising clock edge
 
 ```tikz

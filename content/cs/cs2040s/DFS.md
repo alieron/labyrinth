@@ -3,15 +3,16 @@ tags:
   - cs2040s/chapter4
   - cs/algorithms
   - lang/java
-complete: false
+  - lang/pgf-tikz
+complete: true
 next: /labyrinth/notes/cs/cs2040s/BFS
 prev: /labyrinth/notes/cs/cs2040s/graph_traversal
 
 ---
 ### Summary
 Depth first search(DFS)
-- recursive(usually)
-- implicit stack due to recursion
+- recursive, implicit stack
+- iterative, stack
 
 Time complexity ^7735dc
 - using an adjacency list
@@ -65,7 +66,7 @@ void dfs(int u) {
 > only one neighbour is pushed onto the implicit stack at any time, it has to be popped before the next neighbour is pushed, the stack grows linearly
 
 DFS spanning tree
-- [4-pan](https://visualgo.net/en/dfsbfs?create={"vl":{"0":{"x":400,"y":100},"1":{"x":500,"y":0},"2":{"x":500,"y":200},"3":{"x":600,"y":100},"4":{"x":700,"y":100}},"el":{"0":{"u":0,"v":1},"1":{"u":0,"v":2},"2":{"u":1,"v":3},"3":{"u":2,"v":3},"4":{"u":3,"v":4},"5":{"u":1,"v":0},"6":{"u":2,"v":0},"7":{"u":3,"v":1},"8":{"u":3,"v":2},"9":{"u":4,"v":3}}}&directed=0): `DFS(0)`
+- [4-pan](https://visualgo.net/en/dfsbfs?create={"vl":{"0":{"x":400,"y":100},"1":{"x":500,"y":0},"2":{"x":500,"y":200},"3":{"x":600,"y":100},"4":{"x":700,"y":100}},"el":{"0":{"u":0,"v":1},"1":{"u":0,"v":2},"2":{"u":1,"v":3},"3":{"u":2,"v":3},"4":{"u":3,"v":4},"5":{"u":1,"v":0},"6":{"u":2,"v":0},"7":{"u":3,"v":1},"8":{"u":3,"v":2},"9":{"u":4,"v":3}}}&directed=0): `dfs(0)`
 
 ```tikz
 \usepackage{tikz}
@@ -141,6 +142,111 @@ for (int i = 0; i < visited.length(); i++)
 		dfs(i); // if there are any vertices not connected to the first vertex, this will find and call DFS on them
 ```
 
+Cycle detection
+- **tree edge** - essential edge in the DFS spanning tree
+- **back edge** - an edge to a node that has been visited, forming a cycle
+- **forward edge** - an extra edge to an node that has been fully visited, therefore no cycle
+
+```java
+List<Integer> visited = new ArrayList<>(Collections.nCopies(V, 0)); // 0 not visited
+
+boolean dfs_cycle(int u) {
+	visited.set(u, 1); // 1 (partially) visited, done preorder
+
+	boolean hasCycle = false;
+	for (int v: al.get(u)) {
+		if (visited.get(v) == 0)
+			hasCycle |= dfs_cycle(v);
+		else if (visited.get(v) == 1)
+			hasCycle = true;
+			
+		if (hasCycle)
+			break;
+	}
+	visited.set(u, 2); // 2 (fully) visited, done postorder
+	return hasCycle;
+}
+```
+- [3 vertex DAG](https://visualgo.net/en/dfsbfs?create={"vl":{"0":{"x":400,"y":50},"1":{"x":500,"y":150},"2":{"x":400,"y":250}},"el":{"0":{"u":0,"v":1},"1":{"u":1,"v":2},"2":{"u":0,"v":2}}}&directed=1): `dfs_cycle(0)`
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\tikzstyle{vertex}=[draw,circle,minimum size=18pt,inner sep=0pt]
+
+\begin{document}
+\begin{tikzpicture}[thick]
+\node[vertex] (0) {0};
+\node[vertex,below right=of 0] (1) {1};
+\node[vertex,below left=of 1] (2) {2};
+
+\draw[->,green] (0) -- (1);
+\draw[->,green] (1) -- (2);
+\draw[->,cyan] (0) -- (2);
+\end{tikzpicture}
+\end{document}
+```
+- [3-cycle](https://visualgo.net/en/dfsbfs?create={"vl":{"0":{"x":400,"y":50},"1":{"x":500,"y":150},"2":{"x":400,"y":250}},"el":{"0":{"u":0,"v":1},"1":{"u":1,"v":2},"2":{"u":2,"v":0}}}&directed=1): `dfs_cycle(0)`
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\tikzstyle{vertex}=[draw,circle,minimum size=18pt,inner sep=0pt]
+
+\begin{document}
+\begin{tikzpicture}[thick]
+\node[vertex] (0) {0};
+\node[vertex,below right=of 0] (1) {1};
+\node[vertex,below left=of 1] (2) {2};
+
+\draw[->,green] (0) -- (1);
+\draw[->,green] (1) -- (2);
+\draw[->,red] (2) -- (0);
+\end{tikzpicture}
+\end{document}
+```
+- [5 vertex directed](https://visualgo.net/en/dfsbfs?create={"vl":{"0":{"x":400,"y":200},"1":{"x":450,"y":100},"2":{"x":550,"y":100},"3":{"x":500,"y":200},"4":{"x":600,"y":200}},"el":{"0":{"u":0,"v":1},"1":{"u":0,"v":3},"2":{"u":1,"v":2},"3":{"u":2,"v":3},"4":{"u":3,"v":4},"5":{"u":4,"v":2}}}&directed=1): `dfs_cycle(0)`
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\tikzstyle{vertex}=[draw,circle,minimum size=18pt,inner sep=0pt]
+
+\begin{document}
+\begin{tikzpicture}[thick]
+\begin{scope}
+	\node[vertex] (0) at (-2,0) {0};
+	\node[vertex] (1) at (-1,2) {1};
+	\node[vertex] (3) at (0,0) {3};
+	\node[vertex] (2) at (1,2) {2};
+	\node[vertex] (4) at (2,0) {4};
+	
+	\draw[->] (0) -- (1);
+	\draw[->] (0) -- (3);
+	\draw[->] (1) -- (2);
+	\draw[->] (2) -- (3);
+	\draw[->] (3) -- (4);
+	\draw[->] (4) -- (2);
+\end{scope}
+
+\begin{scope}[shift={(0,-2)}] % shift this block below
+	\node[vertex] (0) {0};
+	\node[vertex,below right=of 0] (1) {1};
+	\node[vertex,below=of 1] (2) {2};
+	\node[vertex,below left=of 2] (3) {3};
+	\node[vertex,below right=of 3] (4) {4};
+	
+	\draw[->,green] (0) -- (1);
+	\draw[->,cyan] (0) -- (3);
+	\draw[->,green] (1) -- (2);
+	\draw[->,green] (2) -- (3);
+	\draw[->,green] (3) -- (4);
+	\draw[->,red] (4) -- (2);
+\end{scope}
+\end{tikzpicture}
+\end{document}
+```
+
 Postorder DFS
 - topological sort
 - modified DFS with postorder append to an array
@@ -154,7 +260,7 @@ void dfs_sort(int u) {
 			
 	for (int v : al.get(u))
 		if (!visited.get(v)) // provided that the graph is a DAG, this is not needed
-			dfs(v);
+			dfs_sort(v);
 			
 	order.add(u); // postorder
 }
@@ -165,7 +271,8 @@ for (int i = 0; i < visited.length(); i++)
 		
 order.reverse();
 ```
-- [6 vertex DAG](https://visualgo.net/en/dfsbfs?create={"vl":{"0":{"x":400,"y":0},"1":{"x":500,"y":100},"2":{"x":500,"y":300},"3":{"x":400,"y":200},"4":{"x":300,"y":300},"5":{"x":300,"y":100}},"el":{"0":{"u":0,"v":1},"1":{"u":5,"v":0},"2":{"u":3,"v":1},"3":{"u":3,"v":2},"4":{"u":3,"v":4},"5":{"u":4,"v":2}}}&directed=1)
+> works only if the graph is already verified to be a DAG
+- [6 vertex DAG](https://visualgo.net/en/dfsbfs?create={"vl":{"0":{"x":400,"y":0},"1":{"x":500,"y":100},"2":{"x":500,"y":300},"3":{"x":400,"y":200},"4":{"x":300,"y":300},"5":{"x":300,"y":100}},"el":{"0":{"u":0,"v":1},"1":{"u":5,"v":0},"2":{"u":3,"v":1},"3":{"u":3,"v":2},"4":{"u":3,"v":4},"5":{"u":4,"v":2}}}&directed=1): `dfs_sort(0)`
 
 ```tikz
 \usepackage{tikz}
@@ -208,9 +315,6 @@ order.reverse();
 \end{tikzpicture}
 \end{document}
 ```
-
-Cycle detection
-TODO
 ### Application
 Leetcode: [Keys and Rooms](https://leetcode.com/problems/keys-and-rooms/)
 - adjacency list
@@ -275,6 +379,53 @@ public int minReorder(int n, int[][] connections) {
 	// System.out.println(idx);
 
 	return countReverse(0);
+}
+```
+
+Leetcode: [Course Schedule](https://leetcode.com/problems/course-schedule/)
+- cycle detection
+
+```java
+List<List<Integer>> al;
+List<Integer> visited;
+
+boolean dfs_cycle(int u) {
+	visited.set(u, 1); // 1 (partially) visited
+
+	boolean hasCycle = false;
+	for (int v: al.get(u)) 
+		if (visited.get(v) == 0)
+			hasCycle |= dfs_cycle(v);
+		else if (visited.get(v) == 1) {
+			hasCycle = true;
+			break;
+		}
+	visited.set(u, 2); // 2 (fully) visited
+	return hasCycle;
+}
+
+public boolean canFinish(int numCourses, int[][] prerequisites) {
+	// [a, b] represents b -> a
+
+	// set up al
+	al = new ArrayList<>();
+	for (int i = 0; i < numCourses; i++) 
+		al.add(new ArrayList<>());
+	
+	// set up visited
+	visited = new ArrayList<>(Collections.nCopies(numCourses, 0)); // 0 not visited
+
+	// convert edge list to adjacency list
+	for (int[] prereq : prerequisites) 
+		al.get(prereq[1]).add(prereq[0]);
+	
+	// in case graph is disconnected
+	for (int i = 0; i < numCourses; i++) 
+		if (visited.get(i) == 0)
+			if (dfs_cycle(i))
+				return false;
+	
+	return true;
 }
 ```
 ### Extra

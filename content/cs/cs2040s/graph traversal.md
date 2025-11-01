@@ -2,6 +2,7 @@
 tags:
   - cs2040s/chapter4
   - cs/algorithms
+  - lang/java
   - lang/python
 complete: true
 next: /labyrinth/notes/cs/cs2040s/DFS
@@ -11,17 +12,17 @@ prev: /labyrinth/notes/cs/cs2040s/graph_ADT
 ### Summary
 Graph traversal problems
 
-| Task                 | DFS                                       | BFS                                  |
-| -------------------- | ----------------------------------------- | ------------------------------------ |
-| Reachability test    | check if target was visited               | check if target was visited          |
-| Traversal path       | add to array upon preorder visit          | backtrack through reverse path array |
-| Connected components | run until all are visited                 | run until all are visited            |
-| Cycle detection      | if node is explored but not fully visited | -                                    |
-| Bipartite check      | check alternating neighbours              | check alternating neighbours         |
-| Topological sort     | postorder append to array                 | Kahn's algorithm                     |
+| Task                 | DFS                                                                    | BFS                                                                    |
+| -------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| Reachability test    | check if target was visited                                            | check if target was visited                                            |
+| Traversal path       | preorder add to predecessor array, backtrack through predecessor array | preorder add to predecessor array, backtrack through predecessor array |
+| Connected components | run until all are visited                                              | run until all are visited                                              |
+| Cycle detection      | if node is explored but not fully visited                              | -                                                                      |
+| Bipartite check      | check alternating neighbours                                           | check alternating neighbours                                           |
+| Topological sort     | postorder append to array                                              | Kahn's algorithm                                                       |
 ### Concept
 Traversal path
-- store the source vertex of a given vertex in an array
+- store the source vertex of a given vertex in a predecessor array
 - backtrack through the array to find the path
 
 ```
@@ -29,8 +30,10 @@ in traversal tree: u -> v
 				stored as: p[v] = u
 ```
 ```java
+List<Integer> p = new ArrayList<>(Collections.nCopies(V, -1)); // -1 to signify the root
+
 void backtrack(int u) {
-	if (p.get(u) == -1) { // ensure that p[root] = -1, to signify the end of the path
+	if (p.get(u) == -1) { // stop at -1
 		System.out.printf("%d", u);
 		return;
 	}

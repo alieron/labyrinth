@@ -46,7 +46,7 @@ printf("What is your age? ");
 scanf("%d", &age); // write value to the address of age
 ```
 
-Format specifiers
+Format specifiers ^0f41a6
 
 | Placeholder | Variable Type   | Function Use                     |
 | ----------- | --------------- | -------------------------------- |

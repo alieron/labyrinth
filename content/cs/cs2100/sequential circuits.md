@@ -5,7 +5,7 @@ tags:
   - lang/pgf-tikz
 complete: true
 prev: /labyrinth/notes/cs/cs2100/MSI_components
-next: /labyrinth/notes/cs/cs2100/memory_circuits
+next: /labyrinth/notes/cs/cs2100/MIPS_pipelining
 
 ---
 ### Summary
@@ -44,7 +44,7 @@ Excitation tables
 
 | $Q$ | $Q+$ | $S$ | $R$ |
 | :-: | :--: | :-: | :-: |
-|  0  |  1   |  0  |  X  |
+|  0  |  0   |  0  |  X  |
 |  0  |  1   |  1  |  0  |
 |  1  |  0   |  0  |  1  |
 |  1  |  1   |  X  |  0  |
@@ -52,7 +52,7 @@ Excitation tables
 
 | $Q$ | $Q+$ | $D$ |
 | :-: | :--: | :-: |
-|  0  |  1   |  0  |
+|  0  |  0   |  0  |
 |  0  |  1   |  1  |
 |  1  |  0   |  0  |
 |  1  |  1   |  1  |
@@ -60,7 +60,7 @@ Excitation tables
 
 | $Q$ | $Q+$ | $J$ | $K$ |
 | :-: | :--: | :-: | :-: |
-|  0  |  1   |  0  |  X  |
+|  0  |  0   |  0  |  X  |
 |  0  |  1   |  1  |  X  |
 |  1  |  0   |  X  |  1  |
 |  1  |  1   |  X  |  0  |
@@ -68,7 +68,7 @@ Excitation tables
 
 | $Q$ | $Q+$ | $T$ |
 | :-: | :--: | :-: |
-|  0  |  1   |  0  |
+|  0  |  0   |  0  |
 |  0  |  1   |  1  |
 |  1  |  0   |  1  |
 |  1  |  1   |  0  |
