@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2100/chapter18
+  - cs2100/chapter11
   - cs/low_level
 complete: true
 prev: /labyrinth/notes/cs/cs2100/MIPS_pipelining

@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2100/chapter2
+  - cs2100/chapter1
   - cs/low_level
 complete: true
 prev: /labyrinth/notes/cs/cs2100/signed_numbers

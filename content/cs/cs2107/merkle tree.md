@@ -5,7 +5,7 @@ tags:
 complete: false
 ---
 ### Summary
-
+[cryptographic hashing](/labyrinth/notes/cs/cs2107/cryptographic_hashing)
 ### Concept
 
 ### Application

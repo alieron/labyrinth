@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2100/chapter14
+  - cs2100/chapter8
   - cs/low_level
 complete: false
 prev: /labyrinth/notes/cs/cs2100/karnaugh_map

@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2100/chapter10
+  - cs2100/chapter6
   - cs/low_level
 complete: false
 prev: /labyrinth/notes/cs/cs2100/MIPS_datapath

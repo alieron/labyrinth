@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2100/chapter12
+  - cs2100/chapter7
   - cs/low_level
 complete: true
 prev: /labyrinth/notes/cs/cs2100/standard_forms

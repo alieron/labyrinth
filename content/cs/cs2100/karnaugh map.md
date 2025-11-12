@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2100/chapter13
+  - cs2100/chapter7
   - math/logic
   - lang/pgf-tikz
 complete: true

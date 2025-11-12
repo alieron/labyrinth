@@ -1,10 +1,11 @@
 ---
 tags:
-  - cs2100/chapter18
+  - cs2100/chapter11
   - cs/low_level
   - lang/mips
 complete: true
 prev: /labyrinth/notes/cs/cs2100/data_hazards
+next: /labyrinth/notes/cs/cs2100/cache
 
 ---
 ### Summary
@@ -77,20 +78,20 @@ lw  $4,  5($7)
   stage/.style={
     draw, thick, minimum size=0.8cm, align=center
   },
-  stall/.style={stage, fill=gray!30, label=center:{}},
-  flush/.style={stage, fill=red!25, label=center:{}},
-  nop/.style={draw=none, fill=white!0},
-  IF/.style={stage},
-  ID/.style={stage},
-  EX/.style={stage},
-  MEM/.style={stage, font=\tiny},
-  WB/.style={stage},
+  stall/.style={stage,fill=gray!30},
+  flush/.style={stage,fill=red!25},
+  nop/.style={draw=none,fill=white!0},
+  IF/.style={stage,label=center:{IF}},
+  ID/.style={stage,label=center:{ID}},
+  EX/.style={stage,label=center:{EX}},
+  MEM/.style={stage,label={[font=\tiny]center:{MEM}}},
+  WB/.style={stage,label=center:{WB}},
 }
 
 % \pipeline{inst}{cycle}{stage list}
 \newcommand{\pipeline}[3]{%
   \foreach [count=\i] \stage in {#3} {
-    \node[\stage] at($(#2+\i-1,-#1)$) {\stage};
+    \node[\stage] at($(#2+\i-1,-#1)$) {};
   }
 }
 

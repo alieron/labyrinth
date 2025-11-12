@@ -26,7 +26,7 @@ Security through obscurity
 ### Concept
 Symmetric-key encryption
 ```tikz
-\usepackage{tikz, amsmath}  
+\usepackage{tikz}  
 \usetikzlibrary{positioning}
 \begin{document}  
   
@@ -51,7 +51,6 @@ Symmetric-key encryption
 \draw[->,thick] (key.east) -| (d.north);  
   
 \end{tikzpicture}  
-  
 \end{document}
 ```
 

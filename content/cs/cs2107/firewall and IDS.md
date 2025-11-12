@@ -28,6 +28,7 @@ Demilitarized Zone(DMZ)
 - network segment exposed to the internet but isolated from internal systems
 - hosts public-facing services, ie. web/mail
 - internal LAN stays protected behind an additional firewall
+- an example of [compartmentalization](/labyrinth/notes/cs/cs2107/access_control#^d2e166) and [principle of least privilege](/labyrinth/notes/cs/cs2107/access_control#^3d1b08)
 
 ![[firewall_dmz.png]]
 
@@ -38,11 +39,3 @@ Intrusion Detection Systems (IDS)
 	- flags deviations from normal behavior
 - **Behavior-based:**
 	- monitors user/system activity patterns
-### Concept
-Principle of least privilege
-- a given user should have the exact access rights to execute their roles
-- no unecessary privileges
-
-Compartmentalization
-- keep segments separated
-- limits the impact of any single failure/attack

@@ -5,7 +5,7 @@ tags:
   - cs/web
 complete: false
 prev: /labyrinth/notes/cs/cs2107/cookies
-next: /labyrinth/notes/cs/cs2107/CSRF
+next: /labyrinth/notes/cs/cs2107/XSRF
 
 ---
 ### Summary

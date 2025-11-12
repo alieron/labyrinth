@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2100/chapter17
+  - cs2100/chapter11
   - cs/low_level
   - lang/pgf-tikz
 complete: true

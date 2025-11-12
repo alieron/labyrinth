@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2100/chapter15
+  - cs2100/chapter9
   - cs/low_level
 complete: true
 prev: /labyrinth/notes/cs/cs2100/combinational_circuits

@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2100/chapter5
+  - cs2100/chapter3
   - cs/low_level
 complete: true
 prev: /labyrinth/notes/cs/cs2100/structs

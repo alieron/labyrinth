@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2100/chapter3
+  - cs2100/chapter2
   - cs/low_level
   - lang/c
 complete: true

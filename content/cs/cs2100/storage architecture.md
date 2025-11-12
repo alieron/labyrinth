@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2100/chapter8
+  - cs2100/chapter4
   - cs/low_level
 complete: true
 prev: /labyrinth/notes/cs/cs2100/ISA

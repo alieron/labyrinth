@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2100/chapter2
+  - cs2100/chapter1
   - cs/fundamentals
   - cs/low_level
   - lang/c

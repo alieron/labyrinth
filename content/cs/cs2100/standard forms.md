@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2100/chapter11
+  - cs2100/chapter7
   - math/logic
 complete: true
 prev: /labyrinth/notes/cs/cs2100/boolean_algebra

@@ -4,7 +4,7 @@ tags:
   - cs/security
   - cs/web
 complete: false
-prev: /labyrinth/notes/cs/cs2107/CSRF
+prev: /labyrinth/notes/cs/cs2107/XSRF
 next: /labyrinth/notes/cs/cs2107/control-flow_integrity
 
 ---

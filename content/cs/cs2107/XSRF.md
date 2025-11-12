@@ -28,5 +28,5 @@ $$
 |
 $$
 ### Concept
-Cross Site Request Forgery(CSRF)
+Cross Site Request Forgery(XSRF)
 - exploits **server's trust of the client**

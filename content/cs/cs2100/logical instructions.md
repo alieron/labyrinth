@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2100/chapter5
+  - cs2100/chapter3
   - cs/low_level
   - lang/mips
 complete: true

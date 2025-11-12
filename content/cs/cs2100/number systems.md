@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2100/chapter2
+  - cs2100/chapter1
   - cs/fundamentals
 complete: true
 prev: /labyrinth/notes/cs/cs2100/data_representation

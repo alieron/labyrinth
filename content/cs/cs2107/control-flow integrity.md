@@ -125,7 +125,7 @@ Attacker's goals
 - run malicious code
 ### Concept
 Control flow
-- incrementation of the [program counter](/labyrinth/notes/cs/cs2100/MIPS_datapath#^cfdb07)(PC)
+- incrementation of the [program counter(PC)](/labyrinth/notes/cs/cs2100/MIPS_datapath#^cfdb07)
 - **direct branch** - PC replaced by a constant value specified in the instruction, ie. branch or jump
 - **indirect branch** - PC replaced by a value fetched from memory
 
@@ -133,6 +133,36 @@ Call [stack](/labyrinth/notes/cs/cs2040s/stack_ADT)
 - LIFO
 - exists in memory
 - stack pointer(`$rsp`) indexes the top of the stack
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta}
+\def\frameh{8mm}
+\begin{document}
+
+\begin{tikzpicture}[
+		thick,
+    frame/.style={draw, minimum width=3cm, minimum height=\frameh, align=center, node distance=0}
+]
+
+% Stack frames (grows downward)
+\foreach \i in {0,...,4} {
+    \node[frame] (f\i) at (0,\frameh*\i) {};
+}
+
+\node at(f0) {...};
+\node at(f1) {parameters};
+\node at(f2) {ra};
+\node at(f3) {fp};
+\node[right=of f3] (rbp) {$\$$rbp};
+\draw[->] (rbp) -- (f3);
+\node at(f4) {local variables};
+\node[right=of f4] (rsp) {$\$$rsp};
+\draw[->] (rsp) -- (f4);
+
+\end{tikzpicture}
+\end{document}
+```
 
 Calling functions
 - elements pushed onto the stack
