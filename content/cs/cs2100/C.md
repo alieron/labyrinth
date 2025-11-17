@@ -70,7 +70,7 @@ Escape sequences
 > see [Learn X in Y minutes: C](https://learnxinyminutes.com/c/) for complete guide to C
 ### Concept
 Compilation
-```sh
+```bash
 // compiling to executable file
 gcc test.c -o test
 

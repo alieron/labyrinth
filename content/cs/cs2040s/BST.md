@@ -21,10 +21,10 @@ Binary search tree(BST)
 - implements [priority queue ADT](/labyrinth/notes/cs/cs2040s/priority_queue_ADT)
 - acts as both a max and min heap simultaneously
 
-| Operation    | Method                    | Performance   |
-| ------------ | ------------------------- | ------------- |
-| `enqueue(v)` | insert into the tree      | - $O(h)=O(n)$ |
-| `dequeue()`  | remove max/min, rebalance | - $O(h)=O(n)$ |
+| Operation                     | Method                    | Performance   |
+| ----------------------------- | ------------------------- | ------------- |
+| `insert(v)`                   | insert into the tree      | - $O(h)=O(n)$ |
+| `extractMax()`/`extractMin()` | remove max/min, rebalance | - $O(h)=O(n)$ |
 
 Inorder traversal
 - left -> self -> right

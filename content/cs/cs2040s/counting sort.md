@@ -55,6 +55,8 @@ private static void countingSort(int a[], int N, int k) {
     System.arraycopy(output, 0, a, 0, N);
 }
 ```
+
+Buckets
 ### Application
 Leetcode: [Sort Colors](https://leetcode.com/problems/sort-colors/description/?envType=study-plan-v2&envId=top-100-liked)
 - dutch flag problem

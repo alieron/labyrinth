@@ -14,10 +14,10 @@ Binary heap
 - semi-sorted "tree"
 - leverages divide-and-conquer to imitate sorting
 
-| Operation    | Method                      | Performance   |
-| ------------ | --------------------------- | ------------- |
-| `enqueue(v)` | insert as a leaf, reheapify | - $O(\log n)$ |
-| `dequeue()`  | extract the head            | - $O(\log n)$ |
+| Operation   | Method                      | Performance   |
+| ----------- | --------------------------- | ------------- |
+| `insert(v)` | insert as a leaf, reheapify | - $O(\log n)$ |
+| `extract()` | extract the head            | - $O(\log n)$ |
 
 Slow build heap
 - enqueue $n$ elements, $O(\log n)$ each
@@ -189,7 +189,7 @@ $$
 Heapify
 - bubble an element up
 - at most $O(h)\approx O(\log n)$ swaps
-- inserting a new root to a [heap](https://visualgo.net/en/heap?create=47,22,30,42,25,14,37,15)
+- [heap](https://visualgo.net/en/heap?create=47,22,30,42,25,14,37,15&mode=tree&action=insert+50): `insert(50)`
 
 ```tikz
 \usepackage{tikz}
@@ -235,7 +235,7 @@ Heapify
 Extract max/min
 - remove the highest priority(head)
 - swap the head with the last leaf, extract it, then reheapify
-- extracting from the [heap](https://visualgo.net/en/heap?create=50,47,37,42,25,14,30,15,22)
+- [heap](https://visualgo.net/en/heap?create=50,47,37,42,25,14,30,15,22&mode=tree&action=extractmax): `extract()`
 
 ```tikz
 \usepackage{tikz}

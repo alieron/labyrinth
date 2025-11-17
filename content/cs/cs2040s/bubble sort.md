@@ -16,14 +16,14 @@ Bubble sort
 - stable
 
 Time complexity
-- [average case](https://visualgo.net/en/sorting?create=47,22,30,42,25,14,37,15&mode=Bubble): $O(n^2)$ - each pass sorts 1 element
+- [average case](https://visualgo.net/en/sorting?create=47,22,30,42,25,14,37,15&mode=Bubble&run=true): $O(n^2)$ - each pass sorts 1 element
 
 $$
 T(n-1)+O(n)\implies O(n^2)
 $$
 
 - early termination
-- [best case](https://visualgo.net/en/sorting?create=5,8,12,23,26,27,34,37&mode=Bubble): $O(n)$ - one pass to check that no swaps are needed
+- [best case](https://visualgo.net/en/sorting?create=5,8,12,23,26,27,34,37&mode=Bubble&run=true): $O(n)$ - one pass to check that no swaps are needed
 
 $$
 \begin{gather*}
@@ -35,7 +35,7 @@ $$
 > assuming `k` is very small compared to `n`
 
 Loop invariant
-- at the kth pass, the **last k elements** will be sorted into their **final positions**
+- at the `kth` pass, the **last `k` elements** will be sorted into their **final positions**
 > loop invariant is a property that holds true before and after each iteration
 ### Concept
 Algorithm

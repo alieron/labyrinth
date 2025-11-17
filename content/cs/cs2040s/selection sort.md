@@ -16,7 +16,7 @@ Selection sort
 - not stable
 
 Time complexity
-- [all cases](https://visualgo.net/en/sorting?create=47,22,30,42,25,14,37,15&mode=Selection): $O(n^2)$ - each pass sorts 1 element
+- [all cases](https://visualgo.net/en/sorting?create=47,22,30,42,25,14,37,15&mode=Selection&run=true): $O(n^2)$ - each pass sorts 1 element
 
 $$
 T(n-1)+O(n)\implies O(n^2)

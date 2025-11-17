@@ -19,7 +19,7 @@ Merge sort
 Time complexity
 - splits array in half each recursion -> $\log n$ depth
 - merging each level takes $O(n)$
-- [all cases](https://visualgo.net/en/sorting?create=47,22,30,42,25,14,37,15&mode=Merge): $O(n \log n)$ - array is always split in half
+- [all cases](https://visualgo.net/en/sorting?create=47,22,30,42,25,14,37,15&mode=Merge&run=true): $O(n \log n)$ - array is always split in half
 
 $$
 T(n) = 2T\left( \frac{n}{2} \right) + O(n) \implies O(n \log n)

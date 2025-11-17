@@ -5,7 +5,7 @@ tags:
   - cs/web
 complete: false
 prev: /labyrinth/notes/cs/cs2107/XSS
-next: /labyrinth/notes/cs/cs2107/SSL_renegotiation
+next: /labyrinth/notes/cs/cs2107/renegotiation_attack
 
 ---
 ### Summary

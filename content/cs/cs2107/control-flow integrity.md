@@ -6,7 +6,7 @@ tags:
   - lang/c
   - lang/pgf-tikz
 complete: true
-prev: /labyrinth/notes/cs/cs2107/SSL_renegotiation
+prev: /labyrinth/notes/cs/cs2107/renegotiation_attack
 next: /labyrinth/notes/cs/cs2107/format_string_vulnerability
 
 ---

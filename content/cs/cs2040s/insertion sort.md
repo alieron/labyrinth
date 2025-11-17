@@ -16,8 +16,8 @@ Insertion sort
 - stable
 
 Time complexity
-- [best case](https://visualgo.net/en/sorting?create=5,8,12,23,26,27,34,37&mode=Insertion): $O(n)$ - array already sorted, inner loop runs in $O(1)$
-- [worse case](https://visualgo.net/en/sorting?create=37,34,27,26,23,12,8,5&mode=Insertion): $O(n^2)$ - array is sorted in reverse, inner loop runs in $O(n)$
+- [best case](https://visualgo.net/en/sorting?create=5,8,12,23,26,27,34,37&mode=Insertion&run=true): $O(n)$ - array already sorted, inner loop runs in $O(1)$
+- [worse case](https://visualgo.net/en/sorting?create=37,34,27,26,23,12,8,5&mode=Insertion&run=true): $O(n^2)$ - array is sorted in reverse, inner loop runs in $O(n)$
 - every iteration of the outer loop sorts 1 element
 
 $$

@@ -15,10 +15,10 @@ Priority queue ADT
 Circular array implementation - [compact array](/labyrinth/notes/cs/cs2040s/compact_array)
 - keep the array sorted by priority 
 
-| Operation    | Method                                                                                                    | Performance          |
-| ------------ | --------------------------------------------------------------------------------------------------------- | -------------------- |
-| `enqueue(v)` | Expensive enqueue: insert into sorted array, one round of [insertion sort](/labyrinth/notes/cs/cs2040s/insertion_sort)<br>Append: add at back       | - $O(n)$<br>- $O(1)$ |
-| `dequeue()`  | Pop: remove from front<br>Expensive dequeue: search for highest priority, one round of [selection sort](/labyrinth/notes/cs/cs2040s/selection_sort) | - $O(1)$<br>- $O(n)$ |
+| Operation   | Method                                                                                                    | Performance          |
+| ----------- | --------------------------------------------------------------------------------------------------------- | -------------------- |
+| `insert(v)` | Expensive insert: insert into sorted array, one round of [insertion sort](/labyrinth/notes/cs/cs2040s/insertion_sort)<br>Append: add at back        | - $O(n)$<br>- $O(1)$ |
+| `extract()` | Pop: remove from front<br>Expensive extract: search for highest priority, one round of [selection sort](/labyrinth/notes/cs/cs2040s/selection_sort) | - $O(1)$<br>- $O(n)$ |
 > $O(n \log n)$ to sort the array first for expensive enqueue approach, linear DS is not good
 
 Priority queue class
@@ -36,8 +36,8 @@ pq.offer(0);
 ```
 ### Concept
 Priority queue operations
-- `enqueue(v)`
+- `insert(v)`
 	- add `v` to the queue
-- `dequeue()`
+- `extract()`
 	- get the item in the queue with the highest priority and remove it
 > similar to [queue operations](/labyrinth/notes/cs/cs2040s/queue_ADT#^abf27d), just that dequeuing is done by order of priority instead of order of entry

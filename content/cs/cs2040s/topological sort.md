@@ -3,7 +3,7 @@ tags:
   - cs2040s/chapter4
   - cs/algorithms
   - lang/java
-complete: false
+complete: true
 prev: /labyrinth/notes/cs/cs2040s/BFS
 next: /labyrinth/notes/cs/cs2040s/SSSP
 
@@ -54,7 +54,7 @@ $$
 $$
 > how may ways to arrange the leaf nodes
 
-- [SLL](/labyrinth/notes/cs/cs2040s/SLL) has only one topological order
+- an [SLL](/labyrinth/notes/cs/cs2040s/SLL) has only one topological order
 - [6-path](https://visualgo.net/en/dfsbfs?create={"vl":{"0":{"x":400,"y":50},"1":{"x":500,"y":50},"2":{"x":600,"y":50},"3":{"x":700,"y":50},"4":{"x":800,"y":50},"5":{"x":900,"y":50}},"el":{"0":{"u":0,"v":1},"1":{"u":1,"v":2},"2":{"u":2,"v":3},"3":{"u":3,"v":4},"4":{"u":4,"v":5}}}&directed=1)
 
 ```tikz
@@ -157,7 +157,7 @@ void dfs_sort() {
 }
 ```
 > works only if the graph is already verified to be a DAG
-- [6 vertex DAG](https://visualgo.net/en/dfsbfs?create={"vl":{"0":{"x":400,"y":0},"1":{"x":500,"y":100},"2":{"x":500,"y":300},"3":{"x":400,"y":200},"4":{"x":300,"y":300},"5":{"x":300,"y":100}},"el":{"0":{"u":0,"v":1},"1":{"u":5,"v":0},"2":{"u":3,"v":1},"3":{"u":3,"v":2},"4":{"u":3,"v":4},"5":{"u":4,"v":2}}}&directed=1): `dfs_sort()`
+- [6 vertex DAG](https://visualgo.net/en/dfsbfs?create={"vl":{"0":{"x":400,"y":0},"1":{"x":500,"y":100},"2":{"x":500,"y":300},"3":{"x":400,"y":200},"4":{"x":300,"y":300},"5":{"x":300,"y":100}},"el":{"0":{"u":0,"v":1},"1":{"u":5,"v":0},"2":{"u":3,"v":1},"3":{"u":3,"v":2},"4":{"u":3,"v":4},"5":{"u":4,"v":2}}}&directed=1&action=topodfs): `dfs_sort()`
 
 ```tikz
 \usepackage{tikz}
@@ -205,39 +205,39 @@ Kahn's algorithm
 1. compute in-degrees of all vertices
 2. modified [BFS](/labyrinth/notes/cs/cs2040s/BFS) such that only verticies with no incoming edges(in-degree = 0) are enqueued
 3. the vertex is also "deleted" after being dequeued
-- if there is a cycle -> one of the iterations will reach a case where there are no nodes with in-degree = 0
+- if there is a cycle -> one of the iterations will reach a case where there are no nodes with in-degree = 0, quiet failure
 
 ```java
 int[] indegree = new int[V];
-
-for (int u = 0; u < V; u++) {
-	for (int v : al.get(v)) {
-		indegree[v]++; // increment for every incoming edge
-	}
-}
-
-Queue<Integer> q = new LinkedList<>(); // can be stack O(1) or priority queue O(log n) also, order is not important
-for (int u = 0; u < V; u++) {
-	if (indegree[u] == 0) { // invariant condition, only indegree = 0 in the queue
-		q.offer(u);
-	}
-}
-
 List<Integer> order = new ArrayList<>();
 
-while (!q.isEmpty()) {
-	int u = q.poll();
-	order.add(u);
-
-	for (int v : al.get(u)) {
-		indegree[v]--; // delete the edge
-		if (indegree[v] == 0) { // maintain the invariant
-			q.offer(v);
+void kahn() {
+	// calculate in-degrees
+	for (int u = 0; u < V; u++) 
+		for (int v : al.get(v)) 
+			indegree[v]++; // increment for every incoming edge
+	
+	Queue<Integer> q = new LinkedList<>(); // can be stack O(1) or priority queue O(log n) also, order is not important
+	
+	
+	// enqueue all verticies with in-degree = 0
+	for (int u = 0; u < V; u++) 
+		if (indegree[u] == 0) // invariant condition, only indegree = 0 in the queue
+			q.offer(u);
+		
+	while (!q.isEmpty()) {
+		int u = q.poll();
+		order.add(u);
+	
+		for (int v : al.get(u)) {
+			indegree[v]--; // "delete" the edge
+			if (indegree[v] == 0) // maintain the invariant
+				q.offer(v);
 		}
 	}
 }
 ```
-- [6 vertex DAG](https://visualgo.net/en/dfsbfs?create={"vl":{"0":{"x":400,"y":0},"1":{"x":500,"y":100},"2":{"x":500,"y":300},"3":{"x":400,"y":200},"4":{"x":300,"y":300},"5":{"x":300,"y":100}},"el":{"0":{"u":0,"v":1},"1":{"u":5,"v":0},"2":{"u":3,"v":1},"3":{"u":3,"v":2},"4":{"u":3,"v":4},"5":{"u":4,"v":2}}}&directed=1): `kahn()`
+- [6 vertex DAG](https://visualgo.net/en/dfsbfs?create={"vl":{"0":{"x":400,"y":0},"1":{"x":500,"y":100},"2":{"x":500,"y":300},"3":{"x":400,"y":200},"4":{"x":300,"y":300},"5":{"x":300,"y":100}},"el":{"0":{"u":0,"v":1},"1":{"u":5,"v":0},"2":{"u":3,"v":1},"3":{"u":3,"v":2},"4":{"u":3,"v":4},"5":{"u":4,"v":2}}}&directed=1&action=topobfs): `kahn()`
 
 ```tikz
 \usepackage{tikz}
@@ -292,22 +292,65 @@ _    | [ 3, 5 ]
 ```
 > Kahn's algorithm is easier to modify, ie. applying additional constrains on vertices with in-degree = 0
 
-Number of topological orderings
-- naively generate all $V!$ orderings and check them in $O(E)$: $O(E V!)$
-- modified [DFS](/labyrinth/notes/cs/cs2040s/DFS)
-- reset visited state postorder, allowing DFS to revisit that array through another path
+Valid topological orderings
+- naive solution
+
+$$
+\begin{align*}
+\text{Generate all permuations:} &&& V! \\
+\\
+\text{Check permuation:} &&& O(E) \\
+\\
+\text{Overall:} &&& O(E \cdot V!)
+\end{align*}
+$$
+
+- recursive traversal with elements from Kahn's algorithm
+- if there are multiple nodes with in-degree = 0, each represent a possible ordering
+- reset visited state postorder, allowing recursion to revisit that vertex through another path
 
 ```java
-void dfs(int u) {
-	visited.set(u, true);
+int[] indegree = new int[V];
+List<List<Integer>> orders = new ArrayList<>();
+
+void topoRecur(List<Integer> order) {
+	boolean end = true;
+	
+	for (int u = 0; u < V; u++) 
+		if (!visited.get(u) && indegree[u] == 0) { // at most V times
+			visited.set(u, true);
+			end = false; // means that there are other verticies left to visit
+			List<Integer> curr = new ArrayList<>(order);
+			curr.add(u); // add this to current ordering
 			
-	for (int v : al.get(u))
-		if (!visited.get(v))
-			dfs(v);
+			// "remove" current vertex
+			for (int v : al.get(u)) // O(k) < O(V)
+				indegree[v]--;
 			
-	visited.set(u, false); // reset postorder
+			// proceed with recursion
+			topoRecur(curr); // V - 1
+			
+			// "add" the vertex back
+			visited.set(u, false);
+			for (int v : al.get(u)) 
+				indegree[v]++;
+		}
+	
+	if (end) // cycle or no more verticies, assuming DAG we extract a valid order
+		orders.add(order);
+}
+
+void topoAll() {
+	for (int u = 0; u < V; u++) 
+		for (int v : al.get(v)) 
+			indegree[v]++; // increment for every incoming edge
+			
+	topoRecur(new ArrayList<>());
 }
 ```
+$$
+T(V) = V\cdot T(V-1) + O(V) \implies O(V!)
+$$
 ### Application
 Kattis: [Build Dependencies](https://open.kattis.com/problems/builddeps)
 - dependency tree

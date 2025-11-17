@@ -20,10 +20,10 @@ Binary search tree(BST)
 | `remove(v)` | tree traversal, rebalance | - $O(h)=O(\log n)$ |
 - implements [priority queue ADT](/labyrinth/notes/cs/cs2040s/priority_queue_ADT)
 
-| Operation    | Method                    | Performance        |
-| ------------ | ------------------------- | ------------------ |
-| `enqueue(v)` | insert into the tree      | - $O(h)=O(\log n)$ |
-| `dequeue()`  | remove max/min, rebalance | - $O(h)=O(\log n)$ |
+| Operation                     | Method                    | Performance        |
+| ----------------------------- | ------------------------- | ------------------ |
+| `insert(v)`                   | insert into the tree      | - $O(h)=O(\log n)$ |
+| `extractMax()`/`extractMin()` | remove max/min, rebalance | - $O(h)=O(\log n)$ |
 ### Concept
 Adelson-Velskii Landis tree(AVL tree)
 - balanced BST

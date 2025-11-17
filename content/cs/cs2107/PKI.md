@@ -10,7 +10,7 @@ next: /labyrinth/notes/cs/cs2107/channel_security
 ### Summary
 Attacks on PKI
 - **implementation bugs:** null-byte parsing vulnerability in OpenSSL certificate names
-- **CA compromise:** rogue CA issuing false certificates
+- **[CA compromise](/labyrinth/notes/cs/cs2107/CA_compromise):** rogue CA issuing false certificates
 - **social engineering:** typosquatting, homograph, and subdomain spoofing to mimic trusted sites
 - **too many root CAs:** weakens global trust — any one compromised CA can issue fake certificates
 
@@ -29,13 +29,14 @@ Certificate Authority(CA)
 - maintains a verified directory of identity -> public key mappings
 
 Certificates
-- digital document that binds a _name_ to a _public key_
+- digital document that binds an _entity_ to a _public key_
 - digitally signed by a CA
+- implies that the public key belongs to the entity during the validity period
 - fields:
-    - name (e.g. `www.nus.edu.sg`)
-    - public key
+    - entity's name (e.g. `www.nus.edu.sg`)
+    - entity's public key
     - validity period
-    - signature by CA (authenticity)
+    - signature by CA, hashed by CA private key (authenticity)
     - usage info (encryption, signing, CA authority, etc.)  
 - **standard:** ITU-T X.509
 

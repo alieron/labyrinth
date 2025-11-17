@@ -3,7 +3,7 @@ tags:
   - cs2040s/chapter4
   - cs/algorithms
   - lang/java
-complete: false
+complete: true
 prev: /labyrinth/notes/cs/cs2040s/DFS
 next: /labyrinth/notes/cs/cs2040s/topological_sort
 
@@ -27,20 +27,20 @@ Algorithm
 
 ```java
 List<List<Integer>> al; // O(V+E) only using adjacency list
-List<Boolean> visited = new ArrayList<>(Collections.nCopies(V, false));  // keep track of visited vertices
+List<Boolean> visited = new ArrayList<>(Collections.nCopies(V, false)); // keep track of visited vertices
 
 visited.set(start, true);
 Queue<Integer> q = new LinkedList<>();
 q.add(start); // enqueue the source
 
 while (!q.isEmpty()) {
-	int u = q.poll();       // dequeue vertex
+	int u = q.poll(); // dequeue vertex
 	// do something
 
 	for (int v : al.get(u)) // for all neighbouring vertices
 		if (!visited.get(v)) {
 			visited.set(v, true);
-			q.add(v);              // enqueue neighbours if not yet visited
+			q.add(v); // enqueue neighbours if not yet visited
 		}
 }
 
@@ -48,33 +48,33 @@ while (!q.isEmpty()) {
 > all the neighbours are enqueued before moving on to the sibling, the queue can grow exponentially on graphs with large branching factor
 
 BFS spanning tree
-- [4-pan](https://visualgo.net/en/dfsbfs?create={"vl":{"0":{"x":400,"y":100},"1":{"x":500,"y":0},"2":{"x":500,"y":200},"3":{"x":600,"y":100},"4":{"x":700,"y":100}},"el":{"0":{"u":0,"v":1},"1":{"u":0,"v":2},"2":{"u":1,"v":3},"3":{"u":2,"v":3},"4":{"u":3,"v":4},"5":{"u":1,"v":0},"6":{"u":2,"v":0},"7":{"u":3,"v":1},"8":{"u":3,"v":2},"9":{"u":4,"v":3}}}&directed=0): `bfs(0)`
+- [4-pan](https://visualgo.net/en/dfsbfs?create={"vl":{"0":{"x":400,"y":100},"1":{"x":500,"y":0},"2":{"x":500,"y":200},"3":{"x":600,"y":100},"4":{"x":700,"y":100}},"el":{"0":{"u":0,"v":1},"1":{"u":0,"v":2},"2":{"u":1,"v":3},"3":{"u":2,"v":3},"4":{"u":3,"v":4},"5":{"u":1,"v":0},"6":{"u":2,"v":0},"7":{"u":3,"v":1},"8":{"u":3,"v":2},"9":{"u":4,"v":3}}}&directed=1&action=bfs+0): `bfs(0)`
 
 ```tikz
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning,calc}
 \tikzstyle{vertex}=[draw,circle,minimum size=18pt,inner sep=0pt]
-\newcommand\sedge[4]{
-  \draw[->,#1,transform canvas={shift={($(#3)!4pt!90:(#2)-(#3)$)}}] (#2) to node[auto,swap,red] {#4} (#3);
+\newcommand\sedge[4][]{
+  \draw[->,#1,transform canvas={shift={($(#3)!-4pt!90:(#2)-(#3)$)}}] (#2) to node[auto,pos=0.25,red] {#4} (#3);
 }
 \begin{document}
-\begin{tikzpicture}[thick]
+\begin{tikzpicture}[thick,node distance=2]
 \node[vertex,label={[text=red]1}] (0) {0};
 \node[vertex,label={[text=red]4},above right=of 0] (1) {1};
 \node[vertex,label={[text=red]7},below right=of 0] (2) {2};
 \node[vertex,label={[text=red]10},below right=of 1] (3) {3};
 \node[vertex,label={[text=red]14},right=of 3] (4) {4};
 
-\sedge{green}{0}{1}{2};
-\sedge{gray}{1}{0}{5};
-\sedge{green}{0}{2}{3};
-\sedge{gray}{2}{0}{8};
-\sedge{green}{1}{3}{6};
-\sedge{gray}{3}{1}{11};
-\sedge{gray}{2}{3}{9};
-\sedge{gray}{3}{2}{12};
-\sedge{green}{3}{4}{13};
-\sedge{gray}{4}{3}{15};
+\sedge[green]{0}{1}{2};
+\sedge[gray]{1}{0}{5};
+\sedge[green]{0}{2}{3};
+\sedge[gray]{2}{0}{8};
+\sedge[green]{1}{3}{6};
+\sedge[gray]{3}{1}{11};
+\sedge[gray]{2}{3}{9};
+\sedge[gray]{3}{2}{12};
+\sedge[green]{3}{4}{13};
+\sedge[gray]{4}{3}{15};
 \end{tikzpicture}
 \end{document}
 ```
@@ -102,13 +102,13 @@ void bfs(int u) {
 	q.add(u); // enqueue the source
 
 	while (!q.isEmpty()) {
-		int curr = q.poll();       // dequeue vertex
+		int curr = q.poll(); // dequeue vertex
 		// do something
 
 		for (int v : al.get(curr)) // for all neighbouring vertices
 			if (!visited.get(v)) {
 				visited.set(v, true);
-				q.add(v);              // enqueue neighbours if not yet visited
+				q.add(v); // enqueue neighbours if not yet visited
 			}
 	}
 }
@@ -117,8 +117,6 @@ for (int i = 0; i < visited.length(); i++)
 	if (!visited.get(i))
 		bfs(i); // if there are any vertices not connected to the first vertex, this will find and call BFS on them
 ```
-
-- cyclic?
 ### Application
 Leetcode: [Binary Tree Right Side View]()
 - get rightmost node at each level

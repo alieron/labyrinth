@@ -17,9 +17,9 @@ Quick sort
 - recursive
 
 Time complexity
-- [average case](https://visualgo.net/en/sorting?create=47,22,30,42,25,14,37,15&mode=Quick): $O(n \log n)$ - array is split roughly in half
-- [already sorted](https://visualgo.net/en/sorting?create=5,8,12,23,26,27,34,37&mode=Quick): $O(n^2)$ - bad pivot choice, pivot is max/min
-- [many duplicates](https://visualgo.net/en/sorting?create=5,5,5,5,5,5,5,5&mode=Quick): $O(n^2)$ - duplicates skew more elements to the right of the pivot
+- [average case](https://visualgo.net/en/sorting?create=47,22,30,42,25,14,37,15&mode=Quick&run=true): $O(n \log n)$ - array is split roughly in half
+- [already sorted](https://visualgo.net/en/sorting?create=5,8,12,23,26,27,34,37&mode=Quick&run=true): $O(n^2)$ - bad pivot choice, pivot is max/min
+- [many duplicates](https://visualgo.net/en/sorting?create=5,5,5,5,5,5,5,5&mode=Quick&run=true): $O(n^2)$ - duplicates skew more elements to the right of the pivot
 
 $$
 \begin{gather*}

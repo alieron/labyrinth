@@ -29,8 +29,8 @@ T(V,E)&=O(1)+O(k_{0})+T(V-1,E-k_{0})\quad\text{where }k_{i}\text{ is the number 
 &=V\cdot O(1)+O(E) \implies O(V+E)
 \end{align*}
 $$
-- [worse case](https://visualgo.net/en/dfsbfs?create={"vl":{"0":{"x":400,"y":50},"1":{"x":529,"y":125},"2":{"x":529,"y":275},"3":{"x":400,"y":350},"4":{"x":270,"y":275},"5":{"x":270,"y":124}},"el":{"0":{"u":0,"v":1},"1":{"u":1,"v":2},"2":{"u":2,"v":3},"3":{"u":3,"v":4},"4":{"u":4,"v":5},"5":{"u":0,"v":2},"6":{"u":0,"v":3},"7":{"u":0,"v":4},"8":{"u":0,"v":5},"9":{"u":1,"v":3},"10":{"u":1,"v":4},"11":{"u":1,"v":5},"12":{"u":2,"v":4},"13":{"u":2,"v":5},"14":{"u":3,"v":5}}}&directed=0): $O(V+E) = O(V+V^2) = O(V^2)$ - complete graph
-- [best case](https://visualgo.net/en/dfsbfs?create={"vl":{"0":{"x":400,"y":50},"1":{"x":500,"y":50},"2":{"x":600,"y":50},"3":{"x":700,"y":50},"4":{"x":800,"y":50},"5":{"x":900,"y":50}},"el":{"0":{"u":0,"v":1},"1":{"u":1,"v":2},"2":{"u":2,"v":3},"3":{"u":3,"v":4},"4":{"u":4,"v":5}}}&directed=0): $O(V+E) = O(V+(V-1)) = O(V)$ - single path
+- [worse case](https://visualgo.net/en/dfsbfs?create={"vl":{"0":{"x":400,"y":50},"1":{"x":529,"y":125},"2":{"x":529,"y":275},"3":{"x":400,"y":350},"4":{"x":270,"y":275},"5":{"x":270,"y":124}},"el":{"0":{"u":0,"v":1},"1":{"u":1,"v":2},"2":{"u":2,"v":3},"3":{"u":3,"v":4},"4":{"u":4,"v":5},"5":{"u":0,"v":2},"6":{"u":0,"v":3},"7":{"u":0,"v":4},"8":{"u":0,"v":5},"9":{"u":1,"v":3},"10":{"u":1,"v":4},"11":{"u":1,"v":5},"12":{"u":2,"v":4},"13":{"u":2,"v":5},"14":{"u":3,"v":5}}}&directed=0&action=dfs+0): $O(V+E) = O(V+V^2) = O(V^2)$ - complete graph
+- [best case](https://visualgo.net/en/dfsbfs?create={"vl":{"0":{"x":400,"y":50},"1":{"x":500,"y":50},"2":{"x":600,"y":50},"3":{"x":700,"y":50},"4":{"x":800,"y":50},"5":{"x":900,"y":50}},"el":{"0":{"u":0,"v":1},"1":{"u":1,"v":2},"2":{"u":2,"v":3},"3":{"u":3,"v":4},"4":{"u":4,"v":5}}}&directed=0&action=dfs+0): $O(V+E) = O(V+(V-1)) = O(V)$ - single path/tree
 
 - using adjacency matrix/edge list
 
@@ -66,33 +66,33 @@ void dfs(int u) {
 > only one neighbour is pushed onto the implicit stack at any time, it has to be popped before the next neighbour is pushed, the stack grows linearly
 
 DFS spanning tree
-- [4-pan](https://visualgo.net/en/dfsbfs?create={"vl":{"0":{"x":400,"y":100},"1":{"x":500,"y":0},"2":{"x":500,"y":200},"3":{"x":600,"y":100},"4":{"x":700,"y":100}},"el":{"0":{"u":0,"v":1},"1":{"u":0,"v":2},"2":{"u":1,"v":3},"3":{"u":2,"v":3},"4":{"u":3,"v":4},"5":{"u":1,"v":0},"6":{"u":2,"v":0},"7":{"u":3,"v":1},"8":{"u":3,"v":2},"9":{"u":4,"v":3}}}&directed=0): `dfs(0)`
+- [4-pan](https://visualgo.net/en/dfsbfs?create={"vl":{"0":{"x":400,"y":100},"1":{"x":500,"y":0},"2":{"x":500,"y":200},"3":{"x":600,"y":100},"4":{"x":700,"y":100}},"el":{"0":{"u":0,"v":1},"1":{"u":0,"v":2},"2":{"u":1,"v":3},"3":{"u":2,"v":3},"4":{"u":3,"v":4},"5":{"u":1,"v":0},"6":{"u":2,"v":0},"7":{"u":3,"v":1},"8":{"u":3,"v":2},"9":{"u":4,"v":3}}}&directed=1&action=dfs+0): `dfs(0)`
 
 ```tikz
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning,calc}
 \tikzstyle{vertex}=[draw,circle,minimum size=18pt,inner sep=0pt]
-\newcommand\sedge[4]{
-  \draw[->,#1,transform canvas={shift={($(#3)!4pt!90:(#2)-(#3)$)}}] (#2) to node[auto,swap,red] {#4} (#3);
+\newcommand\sedge[4][]{
+  \draw[->,#1,transform canvas={shift={($(#3)!-4pt!90:(#2)-(#3)$)}}] (#2) to node[auto,pos=0.25,red] {#4} (#3);
 }
 \begin{document}
-\begin{tikzpicture}[thick]
+\begin{tikzpicture}[thick,node distance=2]
 \node[vertex,label={[text=red]1}] (0) {0};
 \node[vertex,label={[text=red]3},above right=of 0] (1) {1};
 \node[vertex,label={[text=red]9},below right=of 0] (2) {2};
 \node[vertex,label={[text=red]6},below right=of 1] (3) {3};
 \node[vertex,label={[text=red]13},right=of 3] (4) {4};
 
-\sedge{green}{0}{1}{2};
-\sedge{gray}{1}{0}{4};
-\sedge{gray}{0}{2}{15};
-\sedge{gray}{2}{0}{10};
-\sedge{green}{1}{3}{5};
-\sedge{gray}{3}{1}{7};
-\sedge{gray}{2}{3}{11};
-\sedge{green}{3}{2}{8};
-\sedge{green}{3}{4}{12};
-\sedge{gray}{4}{3}{14};
+\sedge[green]{0}{1}{2};
+\sedge[gray]{1}{0}{4};
+\sedge[gray]{0}{2}{15};
+\sedge[gray]{2}{0}{10};
+\sedge[green]{1}{3}{5};
+\sedge[gray]{3}{1}{7};
+\sedge[gray]{2}{3}{11};
+\sedge[green]{3}{2}{8};
+\sedge[green]{3}{4}{12};
+\sedge[gray]{4}{3}{14};
 \end{tikzpicture}
 \end{document}
 ```
@@ -229,7 +229,7 @@ boolean dfs_cycle(int u) {
 	\draw[->] (4) -- (2);
 \end{scope}
 
-\begin{scope}[shift={(0,-2)}] % shift this block below
+\begin{scope}[shift={(-1,-2)}] % shift this block below
 	\node[vertex] (0) {0};
 	\node[vertex,below right=of 0] (1) {1};
 	\node[vertex,below=of 1] (2) {2};
@@ -246,7 +246,6 @@ boolean dfs_cycle(int u) {
 \end{tikzpicture}
 \end{document}
 ```
-
 ### Application
 Leetcode: [Keys and Rooms](https://leetcode.com/problems/keys-and-rooms/)
 - adjacency list

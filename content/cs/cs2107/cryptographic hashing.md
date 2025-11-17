@@ -20,7 +20,7 @@ Types of hashes
 	- relies on RSA's [homomorphic property](/labyrinth/notes/cs/cs2107/textbook_RSA#^76fe23)
 > signature's provide **non-repudiation** since only the sender has the private key ^dc3757
 
-Collision resistance
+Collision resistance ^ff5111
 $$
 \begin{align*}
 \text{Collision:} &&& \text{find }m_{1}, m_{2} \implies h(m_{1}) = h(m_{2}) \\
@@ -67,6 +67,19 @@ $$
 Birthday attacks
 - finding a collision
 - how many message do we have to check to have a high chance, $P(\text{collision}) > 0.5$ of finding a collision
+
+Storage structures
+- [hash array](/labyrinth/notes/cs/cs2107/hash_array) - matrix
+- [hash chain](/labyrinth/notes/cs/cs2107/hash_chain) - linear
+- [merkle tree](/labyrinth/notes/cs/cs2107/merkle_tree) - tree
+
+Storage operations
+- `insert(f)`
+	- insert file `f` to the structure
+- `verify(i,j)`
+	- check hashes for the files at index `i` to `j`
+- `update(i, f)`
+	- replace the file at `i` with `f`
 ### Application
 Non-collision resistant hash
 - using [xor](/labyrinth/notes/cs/xor) properties
