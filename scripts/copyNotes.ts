@@ -170,7 +170,7 @@ for (const { full, relative, dest } of FILE_LIST) {
   const content = fs.readFileSync(full, 'utf-8');
 
   // Detect embedded images and copy assets
-  const imageRegex = /!\[\[([^|\]]+)/g;
+  const imageRegex = /!\[\[([^|\\\]]+)/g;
   let match: RegExpExecArray | null;
   while ((match = imageRegex.exec(content)) !== null) {
     copyAssetIfExists(match[1]);
