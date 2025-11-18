@@ -22,11 +22,11 @@ Time complexity
 - [many duplicates](https://visualgo.net/en/sorting?create=5,5,5,5,5,5,5,5&mode=Quick&run=true): $O(n^2)$ - duplicates skew more elements to the right of the pivot
 
 $$
-\begin{gather*}
-\text{average-case:} & T(n) = 2T\left( \frac{n}{2} \right) + O(n) \implies O(n \log n) \\
+\begin{align*}
+\text{average-case:} &&& T(n) = 2T\left( \frac{n}{2} \right) + O(n) \implies O(n \log n) \\
 \\
-\text{worse-case:} & T(n) = T( n-1) + O(n) \implies O(n^2)
-\end{gather*}
+\text{worse-case:} &&& T(n) = T( n-1) + O(n) \implies O(n^2)
+\end{align*}
 $$
 
 - randomized

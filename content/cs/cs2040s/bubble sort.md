@@ -22,15 +22,15 @@ $$
 T(n-1)+O(n)\implies O(n^2)
 $$
 
-- early termination
+Early termination
 - [best case](https://visualgo.net/en/sorting?create=5,8,12,23,26,27,34,37&mode=Bubble&run=true): $O(n)$ - one pass to check that no swaps are needed
 
 $$
-\begin{gather*}
-\text{already sorted:} & \text{1 pass to check} \implies O(n)
+\begin{align*}
+\text{already sorted:} &&& \text{1 pass to check} \implies O(n)
 \\
-\text{almost sorted:} & k\text{ elements are out of place } \implies O((k+1)n) \implies O(n)
-\end{gather*}
+\text{almost sorted:} &&& k\text{ elements are out of place } \implies O((k+1)n) \implies O(n)
+\end{align*}
 $$
 > assuming `k` is very small compared to `n`
 

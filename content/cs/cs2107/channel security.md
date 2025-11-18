@@ -153,8 +153,8 @@ $$
 \text{Server checks:} \qquad t= h_{k}(r) \implies k'=k
 $$
 
-Unilateral authentication
-- authenticates the client
+Unilateral authentication ^6f21fa
+- authenticates the client, in this example
 - uses [signature](/labyrinth/notes/cs/cs2107/cryptographic_hashing#^dc3757)
 
 ```tikz

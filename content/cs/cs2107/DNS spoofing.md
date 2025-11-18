@@ -3,12 +3,28 @@ tags:
   - cs2107/chapter5
   - cs/security
   - cs/networking
-complete: false
-prev: /labyrinth/notes/cs/cs2107/network_security
+complete: true
 next: /labyrinth/notes/cs/cs2107/ARP_poisoning
+prev: /labyrinth/notes/cs/cs2107/renegotiation_attack
 
 ---
 ### Summary
+Premise
+- attacker can send **forged DNS responses** to a victim resolver **faster** than the real DNS server
+- MITM
+
+Attack
+- when victim makes a DNS request
+- respond with the same query ID but with a spoofed ip address
+
+Attacker's Goals
+- redirect victim's traffic -> availability
+- phishing website, get victim's data -> confidentiality
+- perform actions as the victim -> integrity
+
+Defense
+- DNSSEC - authentication on DNS requests
+### Concept
 Domain Name System(DNS) ^cc1630
 - maps human readable URLs to IP addresses
 - uses [UDP](/labyrinth/notes/cs/cs2107/network_security#^74306d)

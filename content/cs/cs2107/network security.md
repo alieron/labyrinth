@@ -5,7 +5,7 @@ tags:
   - cs/networking
 complete: false
 prev: /labyrinth/notes/cs/cs2107/channel_security
-next: /labyrinth/notes/cs/cs2107/DNS_spoofing
+next: /labyrinth/notes/cs/cs2107/renegotiation_attack
 
 ---
 ### Summary

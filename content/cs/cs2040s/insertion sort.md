@@ -21,11 +21,11 @@ Time complexity
 - every iteration of the outer loop sorts 1 element
 
 $$
-\begin{gather*}
-\text{best case:} & T(n-1)+O(1)\implies O(n) \\
+\begin{align*}
+\text{best case:} &&& T(n-1)+O(1)\implies O(n) \\
 \\
-\text{worse case:} & T(n-1)+O(n)\implies O(n^2)
-\end{gather*}
+\text{worse case:} &&& T(n-1)+O(n)\implies O(n^2)
+\end{align*}
 $$
 
 Loop invariant

@@ -11,20 +11,21 @@ prev: /labyrinth/notes/cs/cs2040s/topological_sort
 ### Summary
 SSSP algorithms
 
-|                          | BFS                                  | DFS            | [bellman-ford](/labyrinth/notes/cs/cs2040s/bellman-ford_algorithm) | [dijkstra](/labyrinth/notes/cs/cs2040s/dijkstra's_algorithm)                                            | dynamic programming |
-| ------------------------ | ------------------------------------ | -------------- | ---------------------------------------- | ----------------------------------------------------------------------------- | ------------------- |
-| Time complexity          | $O(V+E)$ - general<br>$O(V)$ - trees | $O(V)$         | $O(VE)$                                  | $O((V+E)\log V)$                                                              | $O(V+E)$            |
-| Type of graph            | unweighted/uniformed weight/tree     | tree           | no negative weight cycle                 | non -ve weight - original<br><br>no negative weight cycle - modified dijkstra | DAG                 |
-| [Graph ADT](/labyrinth/notes/cs/cs2040s/graph_ADT) | adjacency list                       | adjacency list | adjacency list/edge list                 | adjacency list                                                                | edge list           |
+|                          | BFS                                     | DFS    | [Bellman-Ford](/labyrinth/notes/cs/cs2040s/bellman-ford_algorithm) | [Dijkstra's](/labyrinth/notes/cs/cs2040s/dijkstra's_algorithm) | Modified Dijkstra   | Dynamic Programming |
+| ------------------------ | --------------------------------------- | ------ | ---------------------------------------- | ------------------------------------ | ------------------- | ------------------- |
+| Time complexity          | generally - $O(V+E)$<br>trees - $O(V)$  | $O(V)$ | $O(VE)$                                  | $O((V+E)\log V)$                     | $O(VE\log V)$       | $O(V+E)$            |
+| Constraint               | unweighted/uniformed weight<br><br>tree | tree   | no -ve weight cycle                      | no -ve weight<br>                    | no -ve weight cycle | DAG                 |
+| [Graph ADT](/labyrinth/notes/cs/cs2040s/graph_ADT) | AL                                      | AL     | AL/EL                                    | AL                                   | AL                  | AL                  |
 
 SSSP related problems
 - kth shortest paths
-- single-destination shortest path
+- single-destination shortest path(multiple sources) -> transpose AL
+- single-source single-destination shortest path -> early termination, [dijkstra's invariant](/labyrinth/notes/cs/cs2040s/dijkstra's_algorithm#^884205)
 ### Concept
 Single-source shortest path(SSSP)
 - shortest path(smallest weight) from any source node to the other node visitable from the source
 - SSSP is not unique, is the graph is not a tree, there may be multiple paths to same node
-- [6 vertex cyclic graph](https://visualgo.net/en/sssp?create={"vl":{"0":{"x":540,"y":280},"1":{"x":660,"y":200},"2":{"x":660,"y":360},"3":{"x":820,"y":200},"4":{"x":820,"y":360},"5":{"x":940,"y":280}},"el":{"0":{"u":0,"v":1,"w":1},"1":{"u":0,"v":2,"w":5},"2":{"u":1,"v":2,"w":2},"3":{"u":1,"v":3,"w":2},"4":{"u":1,"v":4,"w":1},"5":{"u":2,"v":4,"w":2},"6":{"u":3,"v":4,"w":1},"7":{"u":3,"v":5,"w":3},"8":{"u":4,"v":5,"w":2},"9":{"v":1,"u":4,"w":2}}}): SSSP from `0` to `5`
+- [6 vertex cyclic graph](https://visualgo.net/en/sssp?create={"vl":{"0":{"x":560,"y":260},"1":{"x":660,"y":160},"2":{"x":660,"y":360},"3":{"x":860,"y":160},"4":{"x":860,"y":360},"5":{"x":960,"y":260}},"el":{"0":{"u":0,"v":1,"w":1},"1":{"u":0,"v":2,"w":5},"2":{"u":1,"v":2,"w":2},"3":{"u":1,"v":3,"w":2},"4":{"u":1,"v":4,"w":1},"5":{"u":2,"v":4,"w":2},"6":{"u":3,"v":4,"w":1},"7":{"u":3,"v":5,"w":3},"8":{"u":4,"v":5,"w":2},"9":{"v":1,"u":4,"w":2}}}): SSSP from `0` to `5`
 
 ```tikz
 \usepackage{tikz}
@@ -37,12 +38,12 @@ Single-source shortest path(SSSP)
   \draw[->,#1,transform canvas={shift={($(#3)!-4pt!90:(#2)-(#3)$)}}] (#2) to node[auto] {#4} (#3);
 }
 \begin{document}
-\begin{tikzpicture}[thick]
+\begin{tikzpicture}[thick,node distance=2]
 \node[vertex,label={[text=orange]0}] (0) {0};
 \node[vertex,label={[text=orange]1},above right=of 0] (1) {1};
 \node[vertex,below right=of 0] (2) {2};
-\node[vertex,right=2 of 1] (3) {3};
-\node[vertex,label={[text=orange]below:2},right=2 of 2] (4) {4};
+\node[vertex,right=3 of 1] (3) {3};
+\node[vertex,label={[text=orange]below:2},right=3 of 2] (4) {4};
 \node[vertex,label={[text=orange]4},below right=of 3] (5) {5};
 
 \dwedge[green]{0}{1}{1};
@@ -63,7 +64,7 @@ Single-source shortest path(SSSP)
 SSSP spanning tree
 - has the source-node as the root
 - may not span all nodes, since not all nodes are necessarily visitable by all other nodes
-- [6 vertex cyclic graph](https://visualgo.net/en/sssp?create={"vl":{"0":{"x":540,"y":280},"1":{"x":660,"y":200},"2":{"x":660,"y":360},"3":{"x":820,"y":200},"4":{"x":820,"y":360},"5":{"x":940,"y":280}},"el":{"0":{"u":0,"v":1,"w":1},"1":{"u":0,"v":2,"w":5},"2":{"u":1,"v":2,"w":2},"3":{"u":1,"v":3,"w":2},"4":{"u":1,"v":4,"w":1},"5":{"u":2,"v":4,"w":2},"6":{"u":3,"v":4,"w":1},"7":{"u":3,"v":5,"w":3},"8":{"u":4,"v":5,"w":2},"9":{"v":1,"u":4,"w":2}}}): SSSP spanning tree from `0`
+- [6 vertex cyclic graph](https://visualgo.net/en/sssp?create={"vl":{"0":{"x":560,"y":260},"1":{"x":660,"y":160},"2":{"x":660,"y":360},"3":{"x":860,"y":160},"4":{"x":860,"y":360},"5":{"x":960,"y":260}},"el":{"0":{"u":0,"v":1,"w":1},"1":{"u":0,"v":2,"w":5},"2":{"u":1,"v":2,"w":2},"3":{"u":1,"v":3,"w":2},"4":{"u":1,"v":4,"w":1},"5":{"u":2,"v":4,"w":2},"6":{"u":3,"v":4,"w":1},"7":{"u":3,"v":5,"w":3},"8":{"u":4,"v":5,"w":2},"9":{"v":1,"u":4,"w":2}}}): SSSP spanning tree from `0`
 
 ```tikz
 \usepackage{tikz}
@@ -76,12 +77,12 @@ SSSP spanning tree
   \draw[->,#1,transform canvas={shift={($(#3)!-4pt!90:(#2)-(#3)$)}}] (#2) to node[auto] {#4} (#3);
 }
 \begin{document}
-\begin{tikzpicture}[thick]
+\begin{tikzpicture}[thick,node distance=2]
 \node[vertex,label={[text=orange]0}] (0) {0};
 \node[vertex,label={[text=orange]1},above right=of 0] (1) {1};
 \node[vertex,label={[text=orange]below:3},below right=of 0] (2) {2};
-\node[vertex,label={[text=orange]3},right=2 of 1] (3) {3};
-\node[vertex,label={[text=orange]below:2},right=2 of 2] (4) {4};
+\node[vertex,label={[text=orange]3},right=3 of 1] (3) {3};
+\node[vertex,label={[text=orange]below:2},right=3 of 2] (4) {4};
 \node[vertex,label={[text=orange]4},below right=of 3] (5) {5};
 
 \dwedge[green]{0}{1}{1};
@@ -167,7 +168,7 @@ if (dist[v] > dist[u] + w) { // if using this edge can give v a shorter distance
 
 \dwedge[green]{0}{1}{1};
 \dwedge[green]{0}{2}{3};
-\dwedge[orange]{1}{2}{1};
+\dwedge{1}{2}{1};
 \end{scope}
 
 \begin{scope}[shift={(6,0)}] % shift this block right
@@ -176,7 +177,7 @@ if (dist[v] > dist[u] + w) { // if using this edge can give v a shorter distance
 \node[vertex,label={[text=orange]below:2},below right=of 1] (2) {2};
 
 \dwedge[green]{0}{1}{1};
-\dwedge[gray]{0}{2}{3};
+\dwedge[cyan]{0}{2}{3};
 \dwedge[green]{1}{2}{1};
 \end{scope}
 \end{tikzpicture}

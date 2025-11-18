@@ -19,6 +19,7 @@ Counting sort
 Time complexity
 - counting: $O(n)$ - single pass
 - reconstructing: $O(n+k)$
+
 $$
 O(n+k)
 $$

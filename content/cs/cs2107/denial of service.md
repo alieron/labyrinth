@@ -3,7 +3,7 @@ tags:
   - cs2107/chapter5
   - cs/security
   - cs/networking
-complete: false
+complete: true
 next: /labyrinth/notes/cs/cs2107/firewall_and_IDS
 prev: /labyrinth/notes/cs/cs2107/ARP_poisoning
 
@@ -17,7 +17,7 @@ Denial of Service(DoS)
 - **Amplification:**
 	- amplify small query -> large response
 	- exploits [UDP](/labyrinth/notes/cs/cs2107/network_security#^74306d) services
-> Distributed Denial of Service(DDoS) is when DoS is carried out by a large number of attackers, ie. botnet
+> Distributed Denial of Service(DDoS) is when DoS is carried out by a large number of attackers, eg. botnet
 ### Concept
 Attacker's goal
 - make a service **unavailable** to users

@@ -45,10 +45,10 @@ Cookies
 \draw[arrow] (client.east) ++(0,1.5) -- ++(5,0) node[midway,above]{HTTP request};
 
 % HTML response (Server -> Client)
-\draw[arrow] (server.west) ++(0,.5) -- ++(-5,0) node[midway,above]{HTML response, $c$};
+\draw[arrow] (server.west) ++(0,.5) -- ++(-5,0) node[midway,above]{HTML response, $t$};
 
 % queries (Client -> Server)
-\draw[arrow] (client.east) ++(0,-.5) -- ++(5,0) node[midway,above]{query, $c$};
+\draw[arrow] (client.east) ++(0,-.5) -- ++(5,0) node[midway,above]{query, $t$};
 
 % reply (Server -> Client)
 \draw[arrow] (server.west) ++(0,-1.5) -- ++(-5,0) node[midway,above]{reply};

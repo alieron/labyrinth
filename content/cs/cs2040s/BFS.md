@@ -29,21 +29,22 @@ Algorithm
 List<List<Integer>> al; // O(V+E) only using adjacency list
 List<Boolean> visited = new ArrayList<>(Collections.nCopies(V, false)); // keep track of visited vertices
 
-visited.set(start, true);
-Queue<Integer> q = new LinkedList<>();
-q.add(start); // enqueue the source
-
-while (!q.isEmpty()) {
-	int u = q.poll(); // dequeue vertex
-	// do something
-
-	for (int v : al.get(u)) // for all neighbouring vertices
-		if (!visited.get(v)) {
-			visited.set(v, true);
-			q.add(v); // enqueue neighbours if not yet visited
-		}
+void bfs(int s) {
+	visited.set(s, true);
+	Queue<Integer> q = new LinkedList<>();
+	q.add(s); // enqueue the source
+	
+	while (!q.isEmpty()) {
+		int u = q.poll(); // dequeue vertex
+		// do something
+	
+		for (int v : al.get(u)) // for all neighbouring vertices
+			if (!visited.get(v)) {
+				visited.set(v, true);
+				q.add(v); // enqueue neighbours if not yet visited
+			}
+	}
 }
-
 ```
 > all the neighbours are enqueued before moving on to the sibling, the queue can grow exponentially on graphs with large branching factor
 
