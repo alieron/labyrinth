@@ -26,7 +26,7 @@ Algorithm
 2. while the queue is not empty, dequeue the first vertex and enqueue its neighbours
 
 ```java
-List<List<Integer>> al; // O(V+E) only using adjacency list
+List<List<Integer>> AL; // O(V+E) only using adjacency list
 List<Boolean> visited = new ArrayList<>(Collections.nCopies(V, false)); // keep track of visited vertices
 
 void bfs(int s) {
@@ -38,7 +38,7 @@ void bfs(int s) {
 		int u = q.poll(); // dequeue vertex
 		// do something
 	
-		for (int v : al.get(u)) // for all neighbouring vertices
+		for (int v : AL.get(u)) // for all neighbouring vertices
 			if (!visited.get(v)) {
 				visited.set(v, true);
 				q.add(v); // enqueue neighbours if not yet visited

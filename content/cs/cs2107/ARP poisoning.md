@@ -13,6 +13,7 @@ Premise
 - can make ARP broadcasts to the network
 - switch forwards ARP updates to all users
 - reply without request
+- MITM in the data link layer
 
 Attack
 - broadcast that the gateway IP address is at attacker's MAC
@@ -48,5 +49,5 @@ ARP table
 	- new node broadcasts its MAC to the subnet, reply without request
 
 ARP poisioning
-- attacker can broadcast their own MAC
+- attacker can broadcast their own MAC addr
 - traffic from the victim is routed through the attacker

@@ -5,7 +5,7 @@ complete: false
 ---
    
 ### Summary
-Standard rsa
+Standard RSA
 $$
 \begin{align*}
 \text{RSA modulus:} &\quad&& n=pq, \ where \ p \ and \ q \ are \ primes \\
@@ -18,7 +18,7 @@ $$
 \end{align*}
 $$
 
-Multiprime rsa
+Multiprime RSA
 $$
 \begin{align*}
 \text{Multiprime modulus:} &\quad&& n=pqr \\
@@ -34,7 +34,7 @@ $$
 \end{gather*}
 $$
 ### Application
-Mathematical proof of rsa
+Mathematical proof of RSA
 $$
 \begin{gather*}
 \text{Requires:} \quad m=(m^e \mod n)^d \mod n

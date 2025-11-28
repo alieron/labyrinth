@@ -39,10 +39,10 @@ n-choose-k
 ```js
 function choose(n, k) {
 	return n < k
-		   ? 0
-		   : k === 0 || k === n 
-		   ? 1
-		   : choose(n - 1, k) + choose(n - 1, k - 1);
+			? 0
+			: k === 0 || k === n 
+			? 1
+			: choose(n - 1, k) + choose(n - 1, k - 1);
 }
 ```
 $\Theta(n^2)$ oog in time
@@ -52,10 +52,10 @@ function mchoose(n, k) {
 		return read(n, k);
 	} else {
 		const result = k > n 
-					   ? 0 
-					   : k === 0 || k === n 
-					   ? 1 
-					   : mchoose(n - 1, k) +  mchoose(n - 1, k - 1);
+			 ? 0 
+			 : k === 0 || k === n 
+			 ? 1 
+			 : mchoose(n - 1, k) +  mchoose(n - 1, k - 1);
 		write(n, k, result);
 		return result;
 	}

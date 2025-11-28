@@ -47,6 +47,11 @@ C &= A\cdot B
 \end{align*}
 $$
 ![[half_adder.png]]
+
+Full adder
+
+2-bit comparator
+![[4-bit_comp_truth_table.png]]
 ### Concept
 Logic circuits
 - circuit made up of logic gates

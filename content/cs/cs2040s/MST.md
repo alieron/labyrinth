@@ -20,6 +20,7 @@ MST related problems
 - maximum spanning tree - negate all weights
 - minimum spanning forest - early termination, [Kruskal's invariant](/labyrinth/notes/cs/cs2040s/kruskal's_algorithm#^aa9376)
 - minimum tree with k verticies - early termination, [Prim's invariant](/labyrinth/notes/cs/cs2040s/prim's_algorithm#^57918b)
+- `kth` minimum spanning tree - NP hard
 
 Cayley's formula
 - number of spanning trees in a complete graph/among `n` verticies

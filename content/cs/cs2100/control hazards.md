@@ -288,13 +288,14 @@ add $s0, $s0, $s3
 }
 
 \pipeline{1}{1}{IF,ID,EX,MEM,WB}
-\pipeline{2}{2}{IF,ID,stall,EX,MEM,WB}
-\pipeline{3}{3}{IF,stall,ID,EX,MEM,WB}
+\pipeline{2}{2}{IF,stall, stall,ID,EX,MEM,WB}
+\pipeline{3}{5}{IF,ID,EX,MEM,WB}
 \draw[->,orange] (4,-1) -- (5,-2);
 
 \end{tikzpicture}
 \end{document}
 ```
+> `beq`/`bne` need their operands by ID during early branching
 - branch-not-taken, decision at MEM
 	- wrong guess
 

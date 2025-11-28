@@ -11,7 +11,7 @@ prev: /labyrinth/notes/cs/cs2107/renegotiation_attack
 ### Summary
 Premise
 - attacker can send **forged DNS responses** to a victim resolver **faster** than the real DNS server
-- MITM
+- MITM in the application layer
 
 Attack
 - when victim makes a DNS request

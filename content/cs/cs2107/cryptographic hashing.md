@@ -20,7 +20,7 @@ Types of hashes
 	- relies on RSA's [homomorphic property](/labyrinth/notes/cs/cs2107/textbook_RSA#^76fe23)
 > signature's provide **non-repudiation** since only the sender has the private key ^dc3757
 
-Collision resistance ^ff5111
+Hash properties ^ff5111
 $$
 \begin{align*}
 \text{Collision:} &&& \text{find }m_{1}, m_{2} \implies h(m_{1}) = h(m_{2}) \\
@@ -32,8 +32,8 @@ $$
 $$
 
 One pool birthday attack
-- multiple messages have the same hash
-- $M$ messages and $T$ hashes
+- two messages have the same hash
+- among $M$ messages and $T$ hashes
 
 $$
 \begin{gather*}
@@ -48,6 +48,17 @@ Two pool birthday attack
 
 $$
 P(\text{collision}) = 1 - e^{-km2^{-n}}
+$$
+
+Collision resistance/strength
+$$
+\begin{align*}
+\text{n-bit hash:} &&& 2^n\text{ possible values} \\
+\\
+\text{likely to find collision with:} &&& M = \sqrt{ 2\ln2 }\sqrt{ 2^n }\approx 2^{n/2} \\
+\\
+\therefore\text{strength:} &&& \frac{n}{2}\text{ bits}
+\end{align*}
 $$
 ### Concept
 Hash
@@ -67,6 +78,27 @@ $$
 Birthday attacks
 - finding a collision
 - how many message do we have to check to have a high chance, $P(\text{collision}) > 0.5$ of finding a collision
+
+Alongside [encryption](/labyrinth/notes/cs/cs2107/encryption)
+- encrypt-and-hash
+- integrity of $m$, but not of $E(m)$
+
+$$
+E(m)|| H(m)
+$$
+- encrypt-then-hash
+- ensures integrity of $E(m)$
+
+$$
+E(m)||H(E(m))
+$$
+- hash-then-encrypt
+-
+
+$$
+E(H(m))
+$$
+> only suitable for 
 
 Storage structures
 - [hash array](/labyrinth/notes/cs/cs2107/hash_array) - matrix

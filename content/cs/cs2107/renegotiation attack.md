@@ -12,7 +12,7 @@ next: /labyrinth/notes/cs/cs2107/DNS_spoofing
 Premise
 - TLS _renegotiation_ is enabled, pre-[RFC 5746](https://www.ietf.org/rfc/rfc5746.txt)
 - client thinks it is talking securely to the server; server accepts renegotiation mid-session
-- MITM attacker is positioned between client and server
+- MITM attacker in **network layer** is positioned between client and server
 - server does not bind pre-renegotiation data to the authenticated session
 
 Attack
@@ -87,8 +87,9 @@ Defense
 - at the application layer, enforce strict message framing and authentication on every operation
 ### Concept
 TLS handshake
+- protocol flaw
 - [unilateral authentication](/labyrinth/notes/cs/cs2107/channel_security#^6f21fa), client verifies the server
-- assumes that the user is already authenticated, using [cookies](/labyrinth/notes/cs/cs2107/cookies)
+- assumes that the user is already authenticated, using [cookies](/labyrinth/notes/cs/cs2107/cookies) or authenticated thereafter via the application layer
 
 ```tikz
 \usetikzlibrary{positioning,arrows.meta}

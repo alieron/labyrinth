@@ -5,7 +5,7 @@ tags:
   - cs/web
 complete: false
 prev: /labyrinth/notes/cs/cs2107/cookies
-next: /labyrinth/notes/cs/cs2107/XSRF
+next: /labyrinth/notes/cs/cs2107/CSRF
 
 ---
 ### Summary
@@ -23,11 +23,11 @@ Attack
 Attacker's goal
 - steal [cookies](/labyrinth/notes/cs/cs2107/cookies)
 - deface the original website for [other attacks](/labyrinth/notes/cs/cs2107/web_security#^f62abd)
-- use HttpOnly cookies, prevent Javascript from accessing session data
 
 Defense
 - input-validation by the server before responding
-- escape script characters, ie. `<`, `>
+- escape script characters, ie. `<`, `>`
+- use HttpOnly cookies, prevent Javascript from accessing session data
 ### Concept
 Cross Site Scripting(XSS)
 - exploits **client's trust of the server**

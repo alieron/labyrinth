@@ -36,12 +36,12 @@ Algorithm
 - check against a "taken" array to avoid a cycle
 
 ```java
-List<Boolean> taken = new ArrayList<>(Collections.nCopies(false, V)); // similar to visited array
+List<Boolean> taken = new ArrayList<>(Collections.nCopies(V, false)); // similar to visited array
 
 int prim(int s) {
 	int mst_cost = 0, num_taken = 0;
 	
-	PriorityQueue<IntegerPair> pq = new PriorityQueue<>(Comparator.comparingInt(x -> x[1])); // e = [ v, w ]
+	PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(x -> x[1])); // e = [ v, w ]
 	
 	// take the source node and enqueue outgoing edges
 	taken.set(s, true);
@@ -105,12 +105,60 @@ int prim(int s) {
 curr | pq
 0    | [1, 2], [2, 4]
 1    | [0, 2], [2, 3], [3, 3], [2, 4], [4, 4]
-0    | [2, 3], [3, 3], [2, 4], [4, 4]                                                    <- already "taken"
+0    | [2, 3], [3, 3], [2, 4], [4, 4]                                                    <- already taken
 2    | [1, 3], [3, 3], [4, 3], [0, 4], [2, 4], [4, 4]
-1    | [3, 3], [4, 3], [0, 4], [2, 4], [4, 4]                                            <- already "taken"
+1    | [3, 3], [4, 3], [0, 4], [2, 4], [4, 4]                                            <- already taken
 3    | [4, 2], [1, 3], [4, 3], [5, 3], [0, 4], [2, 4], [4, 4]
 4    | [3, 2], [5, 2], [1, 3], [2, 3], [4, 3], [5, 3], [0, 4], [1, 4], [2, 4], [4, 4]
-3    | [5, 2], [1, 3], [2, 3], [4, 3], [5, 3], [0, 4], [1, 4], [2, 4], [4, 4]            <- already "taken"
+3    | [5, 2], [1, 3], [2, 3], [4, 3], [5, 3], [0, 4], [1, 4], [2, 4], [4, 4]            <- already taken
 5    | [1, 3], [2, 3], [4, 3], [5, 3], [0, 4], [1, 4], [2, 4], [4, 4]                    <- V-1 taken, break
 ```
 ### Application
+Leetcode: [Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
+- prim's method
+
+```java
+int V = points.length;
+List<List<int[]>> AL = new ArrayList<>();
+for (int i = 0; i < V; i++)
+	AL.add(new ArrayList<>());
+
+for (int i = 0; i < V - 1; i++)
+	for (int j = i + 1; j < V; j++) {
+		int w = Math.abs(points[i][0] - points[j][0]) + Math.abs(points[i][1] - points[j][1]);
+		AL.get(i).add(new int[] { j, w });
+		AL.get(j).add(new int[] { i, w });
+	}
+
+List<Boolean> taken = new ArrayList<>(Collections.nCopies(V, false));
+
+int mst_cost = 0, num_taken = 0;
+
+PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.<int[]>comparingInt(x -> x[1]).thenComparingInt(x -> x[0]));// e = [ v, w ]
+
+// s = 0
+taken.set(0, true);
+for (int[] v_w : AL.get(0))
+	if (!taken.get(v_w[0]))
+		pq.offer(v_w);
+
+while (!pq.isEmpty()) {
+	int[] min = pq.poll();
+	int u = min[0];
+
+	if (taken.get(u))
+		continue;
+
+	mst_cost += min[1];
+
+	taken.set(u, true);
+	for (int[] v_w : AL.get(u))
+		if (!taken.get(v_w[0]))
+			pq.offer(v_w);
+
+	if (num_taken == V - 1)
+		break;
+}
+
+return mst_cost;
+```

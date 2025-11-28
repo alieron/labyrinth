@@ -21,7 +21,7 @@ $$
 \end{align*}
 $$
 
-Tyoe II
+Type II
 - function goes to infinity within the interval of integration
 
 $$

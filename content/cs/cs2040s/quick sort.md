@@ -28,7 +28,6 @@ $$
 \text{worse-case:} &&& T(n) = T( n-1) + O(n) \implies O(n^2)
 \end{align*}
 $$
-
 - randomized
 
 $$
@@ -62,7 +61,7 @@ private static void quickSort(int a[], int L, int R) { // ideally log N times, b
 Partitioning
 ```java
 private static int partition(int a[], int i, int j) {
-	int p = a[i]; // first element is the pivot
+	int p = a[i]; // store the the pivot
 	int m = i;
 	for (int k = i+1; k <= j; ++k) {
 		if (a[k] < p) { // swap smaller elements into the left of the moving pivot

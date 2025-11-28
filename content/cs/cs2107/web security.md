@@ -71,7 +71,7 @@ $$
 
 Other attacks ^f62abd
 - tracking
-	- bew bugs/beacons
+	- new bugs/beacons
 	- cookies
 - drive-by-download - automatic download/execution
 - pixel stealing - steel visual data from display

@@ -21,6 +21,8 @@ Attacker's goals
 - trigger unwanted authentication action
 
 Defense
+- stay logged out when not intending to use the service
+- clear cookies
 - include something unpredictable in the URL, ie. token
 
 $$
@@ -28,5 +30,5 @@ $$
 |
 $$
 ### Concept
-Cross Site Request Forgery(XSRF)
+Cross Site Request Forgery(CSRF)
 - exploits **server's trust of the client**

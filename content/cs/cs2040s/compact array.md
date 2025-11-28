@@ -7,7 +7,7 @@ complete: true
 next: /labyrinth/notes/cs/cs2040s/asymptotics
 
 ---
-Succeeds: [arrays](/labyrinth/notes/cs/cs1101s/arrays)
+OSucceeds: [arrays](/labyrinth/notes/cs/cs1101s/arrays)
 ### Summary
 Compact array
 - implements [list ADT](/labyrinth/notes/cs/cs2040s/list_ADT)

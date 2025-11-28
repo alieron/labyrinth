@@ -7,7 +7,7 @@ tags:
   - lang/pgf-tikz
 complete: true
 next: /labyrinth/notes/cs/cs2107/format_string_vulnerability
-prev: /labyrinth/notes/cs/cs2107/XSRF
+prev: /labyrinth/notes/cs/cs2107/CSRF
 
 ---
 ### Summary

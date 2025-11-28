@@ -53,6 +53,7 @@ private static void mergeSort(int a[], int low, int high) {
 Merge subroutine ^12175e
 - joining two already sorted arrays
 - choose smallest between the two arrays
+- a [two pointer](/labyrinth/notes/cs/cs2040s/two_pointer_approach) algorithm
 
 ```java
 private static void merge(int a[], int low, int mid, int high) {

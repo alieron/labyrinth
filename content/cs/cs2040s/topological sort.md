@@ -214,7 +214,7 @@ List<Integer> order = new ArrayList<>();
 void kahn() {
 	// calculate in-degrees
 	for (int u = 0; u < V; u++) 
-		for (int v : al.get(v)) 
+		for (int v : AL.get(u)) 
 			indegree[v]++; // increment for every incoming edge
 	
 	Queue<Integer> q = new LinkedList<>(); // can be stack O(1) or priority queue O(log n) also, order is not important
@@ -229,7 +229,7 @@ void kahn() {
 		int u = q.poll();
 		order.add(u);
 	
-		for (int v : al.get(u)) {
+		for (int v : AL.get(u)) {
 			indegree[v]--; // "delete" the edge
 			if (indegree[v] == 0) // maintain the invariant
 				q.offer(v);
@@ -407,4 +407,47 @@ public static void main(String[] args) throws IOException {
 	
 	pw.close();
 }
+```
+
+Leetcode: [Minimum Number of Vertices to Reach All Nodes](https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes/)
+- find in-degrees
+
+```java
+List<List<Integer>> AL = new ArrayList<>();
+for (int i = 0; i < n; i++)
+	AL.add(new ArrayList<>());
+
+for (List<Integer> e : edges) 
+	AL.get(e.get(0)).add(e.get(1));
+
+// find nodes with in-degree = 0
+int[] indegree = new int[n];
+
+for (int u = 0; u < n; u++)
+	for (int v : AL.get(u))
+		indegree[v]++;
+
+List<Integer> out = new ArrayList<>();
+
+for (int u = 0; u < n; u++)
+	if (indegree[u] == 0)
+		out.add(u);
+
+return out;
+```
+- without AL construction, in-degree directly from EL
+
+```java
+int[] indegree = new int[n];
+
+for (List<Integer> e : edges) 
+	indegree[e.get(1)]++;
+
+List<Integer> out = new ArrayList<>();
+
+for (int u = 0; u < n; u++)
+	if (indegree[u] == 0)
+		out.add(u);
+
+return out;
 ```

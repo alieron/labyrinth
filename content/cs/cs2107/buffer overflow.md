@@ -16,7 +16,7 @@ Premise
 - vulnerable functions with no bounds checks, eg. `strcpy`, `gets`
 
 Attack
-- send oversized input to overwrite adjacent memory: local variables, saved frame pointer, return address on stack, function pointers on heap.
+- send oversized input to overwrite adjacent memory: local variables, saved frame pointer, return address on stack, function pointers on heap
 - overwrite return address to execute another function
 
 Attacker’s goals    

@@ -11,16 +11,16 @@ prev: /labyrinth/notes/cs/cs2040s/topological_sort
 ### Summary
 SSSP algorithms
 
-|                          | BFS                                     | DFS    | [Bellman-Ford](/labyrinth/notes/cs/cs2040s/bellman-ford_algorithm) | [Dijkstra's](/labyrinth/notes/cs/cs2040s/dijkstra's_algorithm) | Modified Dijkstra   | Dynamic Programming |
+|                          | BFS                                     | DFS    | [Bellman-Ford](/labyrinth/notes/cs/cs2040s/bellman-ford_algorithm) | [Dijkstra's](/labyrinth/notes/cs/cs2040s/dijkstra's_algorithm) | Modified Dijkstra's | Dynamic Programming |
 | ------------------------ | --------------------------------------- | ------ | ---------------------------------------- | ------------------------------------ | ------------------- | ------------------- |
 | Time complexity          | generally - $O(V+E)$<br>trees - $O(V)$  | $O(V)$ | $O(VE)$                                  | $O((V+E)\log V)$                     | $O(VE\log V)$       | $O(V+E)$            |
 | Constraint               | unweighted/uniformed weight<br><br>tree | tree   | no -ve weight cycle                      | no -ve weight<br>                    | no -ve weight cycle | DAG                 |
-| [Graph ADT](/labyrinth/notes/cs/cs2040s/graph_ADT) | AL                                      | AL     | AL/EL                                    | AL                                   | AL                  | AL                  |
+| [Graph ADT](/labyrinth/notes/cs/cs2040s/graph_ADT) | AL                                      | AL     | AL + EL(optional)                        | AL                                   | AL                  | AL                  |
 
 SSSP related problems
-- kth shortest paths
 - single-destination shortest path(multiple sources) -> transpose AL
-- single-source single-destination shortest path -> early termination, [dijkstra's invariant](/labyrinth/notes/cs/cs2040s/dijkstra's_algorithm#^884205)
+- single-source single-destination shortest path -> early termination, [dijkstra's invariant](##^884205)
+- `kth` shortest path -> dijkstra with PQ of distances, revisit
 ### Concept
 Single-source shortest path(SSSP)
 - shortest path(smallest weight) from any source node to the other node visitable from the source
@@ -61,7 +61,7 @@ Single-source shortest path(SSSP)
 \end{document}
 ```
 
-SSSP spanning tree
+Shortest path spanning tree
 - has the source-node as the root
 - may not span all nodes, since not all nodes are necessarily visitable by all other nodes
 - [6 vertex cyclic graph](https://visualgo.net/en/sssp?create={"vl":{"0":{"x":560,"y":260},"1":{"x":660,"y":160},"2":{"x":660,"y":360},"3":{"x":860,"y":160},"4":{"x":860,"y":360},"5":{"x":960,"y":260}},"el":{"0":{"u":0,"v":1,"w":1},"1":{"u":0,"v":2,"w":5},"2":{"u":1,"v":2,"w":2},"3":{"u":1,"v":3,"w":2},"4":{"u":1,"v":4,"w":1},"5":{"u":2,"v":4,"w":2},"6":{"u":3,"v":4,"w":1},"7":{"u":3,"v":5,"w":3},"8":{"u":4,"v":5,"w":2},"9":{"v":1,"u":4,"w":2}}}): SSSP spanning tree from `0`
@@ -210,3 +210,44 @@ $$
 [DFS](/labyrinth/notes/cs/cs2040s/DFS) method
 - DFS finds the first path to any visitable node
 - correctness is only garunteed when there is only 1 path to any node
+### Application
+Leetcode: [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) ^d09439
+- per-level BFS
+- care about jumps not weights
+
+```java
+List<List<int[]>> AL = new ArrayList<>();
+for (int i = 0; i < n; i++)
+	AL.add(new ArrayList<>());
+
+for (int[] e : flights) // directed edges
+	AL.get(e[0]).add(new int[] { e[1], e[2] });
+
+int INF = 1000000000;
+int[] dist = new int[n];
+Arrays.fill(dist, INF);
+dist[src] = 0;
+
+// BFS by level
+Queue<int[]> q = new LinkedList<>();
+q.add(new int[] { src, 0 }); // [u, d]
+
+while (!q.isEmpty() && k-- >= 0) { // if k = 0, one jump to dst
+	// each iteration level/jump from src
+	int sz = q.size(); // important, we only want to go through the number of nodes in this level
+	for (int i = 0; i < sz; i++) {
+		int[] u_d = q.poll();
+
+		for (int[] v_w : AL.get(u_d[0])) {
+			int v = v_w[0];
+			int d = u_d[1] + v_w[1];
+			if (d < dist[v]) {
+				dist[v] = d;
+				q.add(new int[] { v, d });
+			}
+		}
+	}
+}
+
+return dist[dst] == INF ? -1 : dist[dst];
+```

@@ -12,8 +12,8 @@ next: /labyrinth/notes/cs/cs1101s/tombstone_diagrams
 ### Summary
 ```js
 function f(x) {
-    const b = x + 1;
-    return b;
+	const b = x + 1;
+	return b;
 }
 let a = 1;
 a = f(a);

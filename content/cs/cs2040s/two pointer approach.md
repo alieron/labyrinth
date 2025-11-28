@@ -84,6 +84,26 @@ for (int i = 1; i < n; i++) { // O(n)
 
 return end - beg + 1;
 ```
+
+Leetcode: [Ugly Number II](https://leetcode.com/problems/ugly-number-ii/) ^3e6296
+- multi-pointer approach
+
+```java
+int[] a = new int[n];
+a[0] = 1;
+int x = 0, y = 0, z = 0;
+for (int i = 1; i < n; i++) {
+	a[i] = Math.min(a[x] * 2, Math.min(a[y] * 3, a[z] * 5));
+	if (a[i] == a[x] * 2)
+		x++;
+	if (a[i] == a[y] * 3)
+		y++;
+	// else // won't work cause there may be overlaps 
+	if (a[i] == a[z] * 5)
+		z++;
+}
+return a[n - 1];
+```
 ### Extra
 Problems
 - [two pointer problems](https://leetcode.com/problem-list/two-pointers/)

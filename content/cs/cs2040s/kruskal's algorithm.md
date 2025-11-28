@@ -32,7 +32,7 @@ $$
 $$
 
 Invariant ^aa9376
-- at the `kth` iteration, there will be a minimum spanning forest of `k` edges
+- at the `kth` iteration, there will be a minimum spanning forest of `k` **edges**
 ### Concept
 Algorithm
 - sort edges by weight
@@ -44,7 +44,7 @@ Algorithm
 List<int[]> EL; // e = [ u, v, w ]
 
 int kruskal() {
-	Collections.sort(EL, Comparator.comparingInt(x -> x[2])); // sort edges -> O(E log E) = O(E log V)
+	Collections.sort(EL, Comparator.<int[]>comparingInt(x -> x[2]).thenComparingInt(x -> x[0]).thenComparingInt(x -> x[1])); // sort edges -> O(E log E) = O(E log V)
 	
 	int mst_cost = 0, num_taken = 0;
 	UnionFind UF = new UnionFind(V); // V disjoint verticies
@@ -83,15 +83,48 @@ int kruskal() {
 \node[vertex,below right=of 3] (5) {5};
 
 \uwedge[green]{0}{1}{2}{1};
-\uwedge[gray]{0}{2}{4}{9};
+\uwedge[gray]{0}{2}{4}{};
 \uwedge[green]{1}{2}{3}{4};
 \uwedge[green]{1}{3}{3}{5};
-\uwedge[gray]{1}{4}{4}{10};
-\uwedge[gray]{2}{4}{3}{7};
-\uwedge[gray]{3}{5}{3}{8};
+\uwedge[gray]{1}{4}{4}{};
+\uwedge[gray]{2}{4}{3}{};
+\uwedge[gray]{3}{5}{3}{};
 \uwedge[green]{3}{4}{2}{2};
 \uwedge[green]{4}{5}{2}{3};
 \end{tikzpicture}
 \end{document}
 ```
 ### Application
+Leetcode: [Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
+- kruskal's method
+
+```java
+int V = points.length, E = (V * (V - 1)) / 2;
+List<int[]> EL = new ArrayList<>();
+
+for (int i = 0; i < V - 1; i++)
+	for (int j = i + 1; j < V; j++) {
+		int w = Math.abs(points[i][0] - points[j][0]) + Math.abs(points[i][1] - points[j][1]);
+		EL.add(new int[] { i, j, w });
+			// EL.add(new int[] { j, i, w }); // don't do both ways
+	}
+
+Collections.sort(EL, Comparator.<int[]>comparingInt(x -> x[2]).thenComparingInt(x -> x[0]).thenComparingInt(x -> x[1]));
+
+int mst_cost = 0, num_taken = 0;
+UnionFind UF = new UnionFind(V);
+for (int i = 0; i < E; ++i) {
+	int[] min = EL.get(i);
+
+	if (UF.isSameSet(min[0], min[1]))
+		continue;
+	UF.unionSet(min[0], min[1]);
+
+	mst_cost += min[2];
+	++num_taken;
+
+	if (num_taken == V - 1)
+		break;
+}
+return mst_cost;
+```

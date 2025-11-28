@@ -51,14 +51,14 @@ Algorithm
 - avoid cycles by tracking visited nodes
 
 ```java
-List<List<Integer>> al; // O(V+E) only using adjacency list
-List<Boolean> visited;  // keep track of visited vertices
+List<List<Integer>> AL; // O(V+E) only using adjacency list
+List<Boolean> visited = new ArrayList<>(Collections.nCopies(V, false)); // keep track of visited vertices
 
 void dfs(int u) {
 	visited.set(u, true);   // visit self, currently like preorder traversal
 	// do something
 			
-	for (int v : al.get(u)) // for all neighbouring vertices
+	for (int v : AL.get(u)) // for all neighbouring vertices
 		if (!visited.get(v))
 			dfs(v);             // call DFS recursively if not yet visited
 }

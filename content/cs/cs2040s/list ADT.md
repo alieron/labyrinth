@@ -55,4 +55,3 @@ List operations
 	- insert `v` into the list at index `i`
 - `remove(i)`
 	- remove the value at index `i` from the list
-### Application

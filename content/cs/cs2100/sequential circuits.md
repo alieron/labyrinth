@@ -72,6 +72,14 @@ Excitation tables
 |  0  |  1   |  1  |
 |  1  |  0   |  1  |
 |  1  |  1   |  0  |
+
+Sinks
+- once the circuit enters this state
+- it never moves out
+
+Self-correcting 
+- if the circuit enters any unused (invalid) state
+- it is able to transit to a valid state after a finite number of transitions
 ### Concept
 Types of sequential circuits
 - **synchronous**: outputs change at a specific time

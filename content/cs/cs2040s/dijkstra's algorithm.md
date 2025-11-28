@@ -277,11 +277,11 @@ Modified algorithm
 void dijkstra(int s) { // O(V log V + E log V) = O((V+E) log V)
 	dist.set(s, 0);
 	
-	PriorityQueue<IntegerPair> pq = new PriorityQueue<>(Comparator.comparingInt(x -> x[1])); 
+	PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(x -> x[1])); 
 	pq.offer(new int[] { s, 0 }); // only the source is added
 	
 	while (!pq.isEmpty()) { // every vertex and every edge are relaxed -> O((V+E) log V)
-		int[] min = pq.pollFirst(); // node to be relaxed
+		int[] min = pq.poll(); // node to be relaxed
 		int u = min[0];
 		
 		for (int[] v_w : AL.get(u)) { // e = [ v, w ]
@@ -355,8 +355,50 @@ _    | [0, 0]
 > correct SSSP but invariant is violated
 
 ### Application
+Leetcode: [Network Delay Time](https://leetcode.com/problems/network-delay-time/)
+- 1-indexing
+- max of all SSSPs
+
+```java
+List<List<int[]>> AL = new ArrayList<>();
+for (int i = 0; i <= n; i++) // 1-indexing
+	AL.add(new ArrayList<>());
+
+for (int[] e : times)
+	AL.get(e[0]).add(new int[] { e[1], e[2] });
+
+int INF = 1000000000;
+
+List<Integer> dist = new ArrayList<>(Collections.nCopies(n + 1, INF));
+dist.set(0, 0); // ignore the 0th node
+dist.set(k, 0);
+
+PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(x -> x[1]));
+pq.offer(new int[] { k, 0 });
+
+while (!pq.isEmpty()) {
+	int[] min = pq.poll();
+	int u = min[0];
+
+	for (int[] v_w : AL.get(u)) { // e = [ v, w ]
+		int v = v_w[0];
+		int w = v_w[1];
+
+		if (dist.get(u) + w >= dist.get(v))
+			continue; // not improving, skip
+
+		dist.set(v, dist.get(u) + w); // relax operation
+		pq.offer(new int[] { v, dist.get(v) });
+	}
+}
+
+Collections.sort(dist); // O(V log V)
+int max = dist.get(n);
+return max == INF ? -1 : max;
+```
+
 Kattis: [Vacation Time](https://open.kattis.com/problems/vacationtime)
-- SSSP from source and destination
+- SSSP from source and destination, bidirectional search
 - meet in the middle with selected edge
 
 ```java
@@ -436,4 +478,157 @@ pw.println(min == INF ? -1 : min);
 pw.close();
 ```
 
+Leetcode: [Minumum Time to Visit Disappearing Nodes](https://leetcode.com/problems/minimum-time-to-visit-disappearing-nodes/)
+```java
+List<List<int[]>> AL = new ArrayList<>();
+for (int i = 0; i < n; i++)
+	AL.add(new ArrayList<>());
+
+for (int[] e : edges) { // undirected edges
+	AL.get(e[0]).add(new int[] { e[1], e[2] });
+	AL.get(e[1]).add(new int[] { e[0], e[2] });
+}
+
+int INF = 1000000000;
+int[] dist = new int[n];
+Arrays.fill(dist, INF);
+dist[0] = 0; // 0 is the source
+// disappear[0] >= 1, so no edge case here
+
+boolean[] visited = new boolean[n];
+Arrays.fill(visited, false);
+
+PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(x -> x[1]));
+pq.offer(new int[] { 0, 0 });
+
+while (!pq.isEmpty()) {
+	int[] min = pq.poll();
+	int u = min[0];
+
+	if (visited[u]) // avoid revisiting nodes
+		continue;
+	visited[u] = true;
+
+	if (dist[u] >= disappear[u])
+		continue;
+
+	for (int[] v_w : AL.get(u)) { // e = [ v, w ]
+		int v = v_w[0];
+		int w = v_w[1];
+
+		int r = dist[u] + w;
+		if (r >= disappear[v] || r >= dist[v]) // if the resulting distance is >= to the time it disappears
+			continue; // not improving, skip
+
+		dist[v] = r; // relax operation
+		pq.offer(new int[] { v, dist[v] });
+	}
+}
+
+for (int i = 0; i < n; i++)
+	if (dist[i] == INF)
+		dist[i] = -1;
+
+return dist;
+}
+```
+
+Leetcode: [Number of Ways to Arrive at Destination](https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/)
+- number of shortests paths
+- count paths modification
+- better [solution](/labyrinth/notes/cs/cs2040s/SSSP#^d09439) using BFS
+
+```java
+List<List<int[]>> AL = new ArrayList<>();
+for (int i = 0; i < n; i++)
+	AL.add(new ArrayList<>());
+
+for (int[] e : roads) { // undirected edges
+	AL.get(e[0]).add(new int[] { e[1], e[2] });
+	AL.get(e[1]).add(new int[] { e[0], e[2] });
+}
+
+long INF = Long.MAX_VALUE;
+long[] dist = new long[n];
+Arrays.fill(dist, INF);
+dist[0] = 0;
+
+int[] ways = new int[n]; // keep track of number of ways to each node
+Arrays.fill(ways, 0);
+ways[0] = 1; // only 1 way to source
+
+PriorityQueue<long[]> pq = new PriorityQueue<>(Comparator.comparingLong(x -> x[1]));
+pq.offer(new long[] { 0, 0 });
+
+while (!pq.isEmpty()) {
+	long[] min = pq.poll();
+	int u = (int) min[0];
+
+	if (min[1] > dist[u]) // distance is not the mimimum, no point checking
+		continue;
+
+	for (int[] v_w : AL.get(u)) { // e = [ v, w ]
+		int v = v_w[0];
+		int w = v_w[1];
+
+		if (v == n-1) System.out.println("here");
+
+		if (dist[u] + w < dist[v]) {
+			dist[v] = dist[u] + w; // relax operation
+			ways[v] = ways[u]; // replace the number of ways
+			pq.offer(new long[] { v, dist[v] });
+		} else if (dist[u] + w == dist[v]) { // alr visited with same distance, add the ways
+			ways[v] = (ways[v] + ways[u]) % (1000000000 + 7);
+		}
+	}
+}
+return ways[n - 1];
+```
+
+Leetcode: [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
+- SSSP by jumps, accumulate distance
+- early termination once destination is reached
+
+```java
+List<List<int[]>> AL = new ArrayList<>();
+for (int i = 0; i < n; i++)
+	AL.add(new ArrayList<>());
+
+for (int[] e : flights) // directed edges
+	AL.get(e[0]).add(new int[] { e[1], e[2] });
+
+int INF = 1000000000;
+int[] jmps = new int[n];
+Arrays.fill(jmps, INF);
+jmps[src] = 0;
+
+PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(x -> x[1]));
+pq.offer(new int[] { src, 0, 0 });
+
+while (!pq.isEmpty()) {
+	int[] min = pq.poll();
+	int u = min[0];
+	int d = min[1];
+	int j = min[2];
+
+	if (u == dst)
+		return min[1]; // early termination
+
+	// overall least jumps, SSSP by jumps
+	if (j > k || j > jmps[u]) // skip if more than k jumps are needed or there is a path with less jumps to this node
+		continue;
+
+	jmps[u] = j;
+
+	for (int[] v_w : AL.get(u)) { // e = [ v, w ]
+		int v = v_w[0];
+		int w = v_w[1];
+
+		//don't care about getting the overall shortest path
+		pq.offer(new int[] { v, min[1] + w, j + 1 }); // implicit relax operation
+	}
+}
+
+return -1;
+```
 ### Extra

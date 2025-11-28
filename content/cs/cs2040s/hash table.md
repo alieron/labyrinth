@@ -323,3 +323,49 @@ for (int n : arr) {
 Set<Integer> count = new HashSet<>(map.values());
 return map.size() == count.size(); // if they are the same size there are no duplicates
 ```
+
+Leetcode: [Ugly Number II](https://leetcode.com/problems/ugly-number-ii/)
+- produce all multiples, prevent repetition
+- has a better [multi-pointer approach](/labyrinth/notes/cs/cs2040s/two_pointer_approach#^3e6296)
+
+```java
+TreeSet<Long> pq = new TreeSet<>(); // overflows with Integer, -ve values get polled first
+
+pq.add(1L);
+while (--n > 0) {
+	long curr = pq.pollFirst();
+	pq.add(curr * 2);
+	pq.add(curr * 3);
+	pq.add(curr * 5);
+}
+
+return pq.pollFirst().intValue();
+```
+
+Leetcode: [Unique Length-3 Palindromes](https://leetcode.com/problems/unique-length-3-palindromic-subsequences/)
+- palindromes in the format `X * X`
+
+```java
+// s.length >= 3
+HashMap<Character, int[]> mp = new HashMap<>();
+
+for (int i = 0; i < s.length(); i++) {
+	int[] app = mp.getOrDefault(s.charAt(i), new int[] { i, i });
+	app[1] = i;
+	mp.put(s.charAt(i), app); // first and last appearances
+}
+
+int total = 0;
+for (Map.Entry<Character, int[]> e : mp.entrySet()) {
+	char c = e.getKey();
+	int[] app = e.getValue();
+	
+	HashSet<Character> hs = new HashSet<>(); // prevent duplicates
+	for (int i = app[0] + 1; i < app[1]; i++) 
+		hs.add(s.charAt(i));
+
+	total += hs.size();
+}
+
+return total;
+```

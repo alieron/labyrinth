@@ -21,6 +21,20 @@ $$
 \end{align*}
 $$
 > $\phi(n)$ represents the [euler's totient](/labyrinth/notes/math/euler's_totient) function
+
+Strength
+- depends on the size of $N$
+
+$$
+\begin{align*}
+\text{1024-bit} &&& \sim 80\text{ bits} \\
+\\
+\text{2048-bit} &&& \sim 112\text{ bits} \\
+\\
+\text{3072-bit} &&& \sim 128\text{ bits} \\
+\end{align*}
+$$
+> due to the sub exponential runtime of the [GNFS](/labyrinth/notes/cs/GNFS) algorithm for factorizing large integers, which provides a faster than brute-force attack
 ### Concept
 RSA
 $$

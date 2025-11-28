@@ -180,4 +180,8 @@ Dynamic programming
 - DAG only
 - apply [topological sort](/labyrinth/notes/cs/cs2040s/topological_sort) to get an optimal order for the edges
 - run one pass of Bellman-Ford using that order
+
+Negative cycle detection
+- after `V-1` passes of bellman-ford
+- do one more round, if edges can still be relaxed, then there is a negative weight cycle
 ### Application

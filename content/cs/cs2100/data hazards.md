@@ -215,7 +215,6 @@ sw  $15, 100($2)
 \pipeline{3}{5}{IF,ID,EX,MEM,WB}
 \pipeline{4}{6}{IF,ID,EX,MEM,WB}
 \pipeline{5}{7}{IF,ID,EX,MEM,WB}
-\draw[->,orange] (4,-1) -- (5,-2);
 
 \end{tikzpicture}
 \end{document}
