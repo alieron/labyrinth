@@ -158,3 +158,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* sets tab size to 2 spaces in shiki code blocks */
+pre.shiki code {
+  tab-size: 2;
+  -moz-tab-size: 2;
+}
