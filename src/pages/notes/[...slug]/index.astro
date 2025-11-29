@@ -41,7 +41,12 @@ const currentNotes = notes.filter((note) => {
   return parts.slice(0, -1).join("/") === path;
 });
 
-const noteMap = new Map(currentNotes.map((note) => [toSlug(trimRelPath(note.filePath)?.split('/').pop()) ?? note.id, note]));
+const noteMap = new Map(
+  currentNotes.map((note) => [
+    toSlug(trimRelPath(note.filePath)?.split("/").pop()) ?? note.id,
+    note,
+  ]),
+);
 
 // Identify notes that are in the nav chain
 const linkedNoteIds = new Set<string>();
@@ -49,18 +54,22 @@ let orderedNotes: typeof currentNotes = [];
 
 // Find the start of the chain
 const firstNote = currentNotes.find(
-  (n) => n.data.prev === undefined && n.data.next !== undefined && noteMap.has(n.data.next.split('/').pop() as string)
+  (n) =>
+    n.data.prev === undefined &&
+    n.data.next !== undefined &&
+    noteMap.has(n.data.next.split("/").pop() as string),
 );
 
 if (firstNote) {
   let current: CollectionEntry<"notes"> | null = firstNote;
   while (current) {
-    const id = toSlug(trimRelPath(current.filePath)?.split('/').pop()) ?? current.id;
+    const id =
+      toSlug(trimRelPath(current.filePath)?.split("/").pop()) ?? current.id;
     if (linkedNoteIds.has(id)) break; // prevent cycles
     linkedNoteIds.add(id);
     orderedNotes.push(current);
     currentNotes.splice(currentNotes.indexOf(current), 1); // remove
-    const nextId = current.data.next?.split('/').pop();
+    const nextId = current.data.next?.split("/").pop();
     current = nextId && noteMap.has(nextId) ? noteMap.get(nextId)! : null;
   }
 }
@@ -127,59 +136,55 @@ const items: (folderEntry | noteEntry)[] = [
 ---
 
 <Layout>
-  <div class="flex-1 max-w-5xl overflow-y-auto mx-auto">
-    <div class="px-6 mb-4">
-      <NoteBreadcrumbs path={path} isFolder={true} />
-      <div class="rounded-md border">
-        <table class="table-fixed border-collapse w-full">
-          <thead>
-            <tr class="text-left">
-              <th class="py-2 px-4 w-1/5">Name</th>
-              <th class="py-2 px-4 w-3/5">Tags</th>
-              <th class="py-2 px-4 w-1/5">Complete</th>
+  <NoteBreadcrumbs path={path} isFolder={true} />
+  <div class="rounded-md border">
+    <table class="table-fixed border-collapse w-full">
+      <thead>
+        <tr class="text-left">
+          <th class="py-2 px-4 w-1/5">Name</th>
+          <th class="py-2 px-4 w-3/5">Tags</th>
+          <th class="py-2 px-4 w-1/5">Complete</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          items.map((item) => (
+            <tr class="border-t">
+              <td class="py-2 px-4">
+                <div class="flex flex-row items-center gap-2">
+                  {item.type === "folder" ? (
+                    <Folder className="flex-none w-4" />
+                  ) : (
+                    <File className="flex-none w-4" />
+                  )}
+                  <a
+                    href={resolveBase(item.href)}
+                    class="text-nowrap overflow-hidden text-ellipsis text-ellipsis hover:text-primary"
+                  >
+                    {item.name}
+                  </a>
+                </div>
+              </td>
+              <td class="pt-2 px-4 overflow-hidden">
+                {item.type === "note" && (
+                  <div class="flex flex-nowrap gap-1 pb-2 overflow-x-auto">
+                    {item.tags.length > 0 ? (
+                      item.tags.map((tag) => <TagBadge tag={tag} />)
+                    ) : (
+                      <Minus className="w-4" />
+                    )}
+                  </div>
+                )}
+              </td>
+              <td class="py-2 px-4">
+                {item.type === "note" && (
+                  <CompletionBadge completion={item.complete} />
+                )}
+              </td>
             </tr>
-          </thead>
-          <tbody>
-            {
-              items.map((item) => (
-                <tr class="border-t">
-                  <td class="py-2 px-4">
-                    <div class="flex flex-row items-center gap-2">
-                      {item.type === "folder" ? (
-                        <Folder className="flex-none w-4" />
-                      ) : (
-                        <File className="flex-none w-4" />
-                      )}
-                      <a
-                        href={resolveBase(item.href)}
-                        class="text-nowrap overflow-hidden text-ellipsis text-ellipsis hover:text-primary"
-                      >
-                        {item.name}
-                      </a>
-                    </div>
-                  </td>
-                  <td class="pt-2 px-4 overflow-hidden">
-                    {item.type === "note" && (
-                      <div class="flex flex-nowrap gap-1 pb-2 overflow-x-auto">
-                        {item.tags.length > 0 ? (
-                          item.tags.map((tag) => <TagBadge tag={tag} />)
-                        ) : (
-                          <Minus className="w-4" />
-                        )}
-                      </div>
-                    )}
-                  </td>
-                  <td class="py-2 px-4">
-                    {item.type === "note" && (
-                      <CompletionBadge completion={item.complete} />
-                    )}
-                  </td>
-                </tr>
-              ))
-            }
-          </tbody>
-        </table>
-      </div>
-    </div>
+          ))
+        }
+      </tbody>
+    </table>
   </div>
 </Layout>

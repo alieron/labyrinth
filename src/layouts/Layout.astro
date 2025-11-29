@@ -40,10 +40,12 @@ import { resolveBase } from "@/utils/resolve";
   </head>
 
   <body>
-    <div class="container flex flex-col max-w-7xl mx-auto min-h-screen">
+    <div class="container flex flex-col max-w-5xl mx-auto min-h-screen">
       <Header />
-      <main class="flex-1 h-full">
-        <slot />
+      <main class="flex flex-1 h-full">
+        <div class="px-6 mb-40 flex-1 overflow-y-auto">
+          <slot />
+        </div>
       </main>
       <Footer />
     </div>

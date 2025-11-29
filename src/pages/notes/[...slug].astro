@@ -1,9 +1,11 @@
 ---
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { type CollectionEntry, getCollection, render } from "astro:content";
-import NoteLayout from "@/layouts/NoteLayout.astro";
+import Layout from "@/layouts/Layout.astro";
 import CompletionBadge from "@/components/CompletionBadge.astro";
 import TagBadge from "@/components/TagBadge.astro";
 import NoteBreadcrumbs from "@/components/NoteBreadcrumbs.astro";
+import { ButtonLink } from "@/components/ui/button-link";
 import { trimRelPath, toSlug } from "@/utils/slug";
 
 export async function getStaticPaths() {
@@ -27,34 +29,48 @@ const { note, path } = Astro.props;
 const { Content, remarkPluginFrontmatter } = await render(note);
 ---
 
-<NoteLayout
-  prev={note.data.prev}
-  next={note.data.next}
->
-  <div class="flex-1 max-w-5xl overflow-y-auto mb-150">
-    {/* Title */}
-    <div class="px-6 mb-4">
-      <NoteBreadcrumbs path={path} isFolder={false} />
-      <h1 class="text-4xl font-bold tracking-tight">
-        {remarkPluginFrontmatter.title}
-      </h1>
-      <div class="mt-2 flex flex-col gap-4 text-sm text-muted-foreground">
-        <CompletionBadge completion={note.data.complete} />
-        {
-          note.data.tags.length > 0 && (
-            <div class="flex flex-wrap items-center gap-2">
-              {note.data.tags.map((tag) => (
-                <TagBadge tag={tag} />
-              ))}
-            </div>
-          )
-        }
-      </div>
-    </div>
-    <hr />
-    {/* Main Content */}
-    <div class="flex flex-col wrap-break-word gap-3 px-6 mt-4">
-      <Content />
-    </div>
+<Layout>
+  {/* Left Column Buttons */}
+  <Fragment slot="left-col">
+    {
+      note.data.prev && (
+        <ButtonLink variant="outline" size="icon" href={note.data.prev}>
+          <ChevronLeft />
+        </ButtonLink>
+      )
+    }
+  </Fragment>
+  {/* Right Column Buttons */}
+  <Fragment slot="right-col">
+    {
+      note.data.next && (
+        <ButtonLink variant="outline" size="icon" href={note.data.next}>
+          <ChevronRight />
+        </ButtonLink>
+      )
+    }
+  </Fragment>
+
+  {/* Title */}
+  <NoteBreadcrumbs path={path} isFolder={false} />
+  <h1 class="text-4xl font-bold tracking-tight">
+    {remarkPluginFrontmatter.title}
+  </h1>
+  <div class="my-4 flex flex-col gap-4 text-sm text-muted-foreground">
+    <CompletionBadge completion={note.data.complete} />
+    {
+      note.data.tags.length > 0 && (
+        <div class="flex flex-wrap items-center gap-2">
+          {note.data.tags.map((tag) => (
+            <TagBadge tag={tag} />
+          ))}
+        </div>
+      )
+    }
   </div>
-</NoteLayout>
+  <hr />
+  {/* Main Content */}
+  <div class="flex flex-col wrap-break-word gap-3 mt-4">
+    <Content />
+  </div>
+</Layout>
