@@ -38,7 +38,8 @@ const notes = await getCollection("notes");
 // Notes directly inside the current folder
 const currentNotes = notes.filter((note) => {
   const parts = (trimRelPath(note.filePath) ?? note.id).split("/");
-  return parts.slice(0, -1).join("/") === path;
+  parts.pop();
+  return parts.join("/") === path;
 });
 
 const noteMap = new Map(
