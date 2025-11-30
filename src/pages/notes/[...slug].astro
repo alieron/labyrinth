@@ -3,7 +3,7 @@ import { type CollectionEntry, getCollection, render } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import CompletionBadge from "@/components/CompletionBadge.astro";
 import TagBadge from "@/components/TagBadge.astro";
-import NoteBreadcrumbs from "@/components/NoteBreadcrumbs.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import NoteNavigation from "@/components/NoteNavigation.astro";
 import { trimRelPath, toSlug } from "@/utils/slug";
 
@@ -30,7 +30,7 @@ const { Content, remarkPluginFrontmatter } = await render(note);
 
 <Layout title={remarkPluginFrontmatter.title}>
   {/* Title */}
-  <NoteBreadcrumbs path={path} isFolder={false} />
+  <Breadcrumbs path={path} type="notes" isFolder={false} />
   <NoteNavigation prev={note.data.prev} next={note.data.next} />
   <h1 class="text-4xl font-bold tracking-tight">
     {remarkPluginFrontmatter.title}

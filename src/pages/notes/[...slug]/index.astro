@@ -4,7 +4,7 @@ import { File, Folder, Minus } from "lucide-react";
 import Layout from "@/layouts/Layout.astro";
 import CompletionBadge from "@/components/CompletionBadge.astro";
 import TagBadge from "@/components/TagBadge.astro";
-import NoteBreadcrumbs from "@/components/NoteBreadcrumbs.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import { trimRelPath, toSlug } from "@/utils/slug";
 import { resolveBase } from "@/utils/resolve";
 
@@ -137,7 +137,7 @@ const items: (folderEntry | noteEntry)[] = [
 ---
 
 <Layout>
-  <NoteBreadcrumbs path={path} isFolder={true} />
+  <Breadcrumbs path={path} type="notes" isFolder={true} />
   <div class="rounded-md border">
     <table class="table-fixed border-collapse w-full">
       <thead>

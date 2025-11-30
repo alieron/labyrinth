@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import { Tag } from "lucide-react";
 import Layout from "@/layouts/Layout.astro";
-import TagBreadcrumbs from "@/components/TagBreadcrumbs.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import { resolveBase } from "@/utils/resolve";
 
 const notes = await getCollection("notes");
@@ -41,7 +41,7 @@ const items: tagEntry[] = [
 
 <Layout>
   <div class="mb-4">
-    <TagBreadcrumbs path={""} />
+    <Breadcrumbs path="" type="tags" />
     <div class="rounded-md border">
       <table class="table-fixed border-collapse w-full">
         <thead>

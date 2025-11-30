@@ -5,8 +5,8 @@ import { resolveBase } from "@/utils/resolve";
 
 <header class="top-0 px-6 py-10 mb-4 flex items-center">
   <div class="size-9"></div>
+  <!-- Link to homepage -->
   <div class="flex h-4 text-center items-center space-x-2 text-sm mx-auto">
-    {/* Link to homepage */}
     <a
       href={resolveBase("/")}
       class="text-foreground hover:text-foreground/80"
@@ -23,7 +23,7 @@ import { resolveBase } from "@/utils/resolve";
       about
     </a>
   </div>
-  {/* Theme Switcher */}
+  <!-- Theme Switcher -->
   <div class="size-9">
     <ThemeToggle client:load />
   </div>
