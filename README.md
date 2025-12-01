@@ -16,14 +16,21 @@ npm i
 ln -s <path/to/your/vault> vault
 ```
 
-3. create a `whitelist.config.json`
+3. create a `content.include`
 example:
 
-```json
-[
-  "directory",
-  "file.md"
-]
+```bash
+# specific file(relative to the vault directory)
+file.md
+
+# all markdown files
+*.md
+
+# all files in a directory
+directory/** 
+
+# except a specific one
+!directory/file.md
 ```
 
 4. copy your notes into `contents/` and assets into `public/assets/`

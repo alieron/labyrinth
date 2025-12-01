@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import ignore from 'ignore';
 import { toSlug } from '../src/utils/slug';
 import { resolveBase } from '../src/utils/resolve';
 
@@ -10,10 +11,10 @@ const __dirname = path.dirname(__filename);
 const VAULT_PATH = path.resolve(__dirname, '../vault'); // symlinked vault
 const OUTPUT_PATH = path.resolve(__dirname, '../content'); // output directory for astro content
 const ASSET_OUTPUT_PATH = path.resolve(__dirname, '../public/assets'); // output directory for embedded images
-const WHITELIST_FILE = path.resolve(__dirname, '../whitelist.config.json');
+const INCLUDE_FILE = path.resolve(__dirname, '../content.include'); // include file
 
 // Read whitelist
-const WHITELIST: string[] = JSON.parse(fs.readFileSync(WHITELIST_FILE, 'utf-8'));
+const INCLUDE: ignore.Ignore = ignore().add(fs.readFileSync(INCLUDE_FILE, 'utf-8'));
 const NOTE_MAP: Map<string, string> = new Map(); // file name => relative path
 const FILE_LIST: { full: string, relative: string, dest: string }[] = [];
 const ASSET_EXTENSIONS = ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp'];
@@ -24,19 +25,36 @@ fs.mkdirSync(OUTPUT_PATH, { recursive: true });
 fs.rmSync(ASSET_OUTPUT_PATH, { recursive: true, force: true });
 fs.mkdirSync(ASSET_OUTPUT_PATH, { recursive: true });
 
-// Recursively walk directories and collect `.md` files
-function walkVault(src: string, base: string) {
-  for (const file of fs.readdirSync(src)) {
-    const full = path.join(src, file);
-    const relative = path.relative(base, full);
-    const dest = path.join(OUTPUT_PATH, relative);
+// Recursively walk directories and collect .md files if they are in the include file
+function walkWithInclude(root: string) {
+  function walk(dir: string) {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      const relative = path.relative(root, full).replace(/\\/g, '/');
 
-    if (fs.statSync(full).isDirectory()) {
-      walkVault(full, base);
-    } else if (file.endsWith('.md') && !(/^[~_]/.test(file))) {
-      FILE_LIST.push({ full, relative, dest });
+      const relativeForMatch = entry.isDirectory() ? relative + '/' : relative;
+
+      const included = INCLUDE.ignores(relativeForMatch);
+
+      if (entry.isDirectory()) {
+        walk(full);
+        continue;
+      }
+
+      // only accept included markdown files
+      if (
+        included &&
+        entry.isFile() &&
+        relative.endsWith('.md') &&
+        !/^[~_]/.test(entry.name)
+      ) {
+        const dest = path.join(OUTPUT_PATH, relative);
+        FILE_LIST.push({ full, relative, dest });
+      }
     }
   }
+
+  walk(root);
 }
 
 function toResolvedLink(filePath: string | undefined, alias: string | undefined, heading: string | undefined) {
@@ -141,22 +159,8 @@ function extractNavLinks(content: string): string {
   return `---\n${newFrontmatter}\n---\n${content}`;
 }
 
-// Step 1: Walk and collect all markdown files from whitelist
-for (const entry of WHITELIST) {
-  const fullPath = path.join(VAULT_PATH, entry);
-  if (!fs.existsSync(fullPath)) {
-    console.warn(`⚠️ Skipping non-existent: ${entry}`);
-    continue;
-  }
-
-  if (fs.statSync(fullPath).isDirectory()) {
-    walkVault(fullPath, VAULT_PATH);
-  } else if (entry.endsWith('.md')) {
-    const relative = path.relative(VAULT_PATH, fullPath);
-    const dest = path.join(OUTPUT_PATH, relative);
-    FILE_LIST.push({ full: fullPath, relative, dest });
-  }
-}
+// Step 1: Walk and collect all markdown files from include file
+walkWithInclude(VAULT_PATH);
 
 // Step 2: Build NOTE_MAP
 for (const { relative } of FILE_LIST) {
@@ -184,4 +188,4 @@ for (const { full, relative, dest } of FILE_LIST) {
   console.log(`📄 Processed and copied: ${relative}`);
 }
 
-console.log('✅ Whitelisted notes copied and links resolved.');
+console.log('✅ Included notes copied and links resolved.');
