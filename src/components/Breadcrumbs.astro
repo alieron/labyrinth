@@ -50,7 +50,7 @@ const rootHref = resolveBase(`/${type}/`);
 
         const href = isNotes ? `${toSlug(partialPath)}/` : partialPath;
 
-        return isLast ? (
+        return isLast ? isFolder && (
           <>
             <li>
               <span>{part}</span>
