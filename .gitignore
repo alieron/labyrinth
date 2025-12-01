@@ -1,6 +1,6 @@
 # Project
 vault
-whitelist.config.json
+content.include
 # comment these out when publishing
 content
 public/assets

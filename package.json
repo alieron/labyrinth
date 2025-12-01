@@ -20,6 +20,7 @@
     "clsx": "^2.1.1",
     "hast-util-classnames": "^3.0.0",
     "hast-util-select": "^6.0.4",
+    "ignore": "^7.0.5",
     "lucide-react": "^0.518.0",
     "mathjax-full": "^3.2.2",
     "node-tikzjax": "^1.0.3",
