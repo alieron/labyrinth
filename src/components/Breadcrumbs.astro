@@ -19,7 +19,7 @@ const Icon = isNotes ? BookOpen : Hash;
 const rootHref = resolveBase(`/${type}/`);
 ---
 
-<nav class="text-lg text-foreground items-center mb-6">
+<nav class="text-lg text-foreground items-center">
   <ul class="flex flex-wrap items-center gap-2">
     <li>
       {
@@ -50,13 +50,15 @@ const rootHref = resolveBase(`/${type}/`);
 
         const href = isNotes ? `${toSlug(partialPath)}/` : partialPath;
 
-        return isLast ? isFolder && (
-          <>
-            <li>
-              <span>{part}</span>
-            </li>
-            {isFolder && <li class="cursor-default">/</li>}
-          </>
+        return isLast ? (
+          isFolder && (
+            <>
+              <li>
+                <span>{part}</span>
+              </li>
+              {isFolder && <li class="cursor-default">/</li>}
+            </>
+          )
         ) : (
           <>
             <li>

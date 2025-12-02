@@ -10,8 +10,8 @@ type Props = {
 const { prev, next } = Astro.props;
 ---
 
-<div class="flex items-center justify-between gap-4 my-4">
-  <div class="flex-1">
+<div class="flex items-center justify-between my-4">
+  <div>
     {
       prev && (
         <ButtonLink variant="outline" size="icon" href={prev}>
@@ -20,8 +20,7 @@ const { prev, next } = Astro.props;
       )
     }
   </div>
-
-  <div class="flex-1 flex justify-end">
+  <div>
     {
       next && (
         <ButtonLink variant="outline" size="icon" href={next}>

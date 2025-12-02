@@ -23,7 +23,7 @@ export default function TagList({ tags, showPreview = true, maxPreviewCount = 10
       if (!container) return;
 
       const containerWidth = container.offsetWidth;
-      const buttonWidth = 80; // Approximate width of the "more" button
+      const buttonWidth = 96; // Approximate width of the "more" button
       let availableWidth = containerWidth - buttonWidth;
       let count = 0;
 
@@ -38,7 +38,7 @@ export default function TagList({ tags, showPreview = true, maxPreviewCount = 10
         }
       }
 
-      setVisibleCount(Math.max(1, count));
+      setVisibleCount(Math.max(0, count)); // TODO: if 0 tags display, change the icon
       setMeasured(true);
     };
 
@@ -55,7 +55,7 @@ export default function TagList({ tags, showPreview = true, maxPreviewCount = 10
   const hasHiddenTags = hiddenTags.length > 0 || !measured;
 
   return (
-    <div ref={containerRef} className="flex flex-wrap items-center gap-2">
+    <div ref={containerRef} className="flex items-center gap-2 min-h-[28px] overflow-hidden">
       {visibleTags.map((tag, index) => (
         <TagBadge key={index} tag={tag} />
       ))}
