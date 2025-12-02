@@ -39,9 +39,7 @@ const rootHref = resolveBase(`/${type}/`);
 
     <li
       class={`cursor-default ${path.length !== 0 ? "text-muted-foreground" : ""}`}
-    >
-      /
-    </li>
+    >/</li>
 
     {
       splitPath.map((part, idx) => {
@@ -62,9 +60,7 @@ const rootHref = resolveBase(`/${type}/`);
         ) : (
           <>
             <li>
-              <a href={href} class="text-muted-foreground hover:text-primary">
-                {part}
-              </a>
+              <a href={href} class="text-muted-foreground hover:text-primary">{part}</a>
             </li>
             <li class="text-muted-foreground cursor-default">/</li>
           </>

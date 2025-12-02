@@ -11,14 +11,8 @@ const { completion } = Astro.props;
 
 {
   completion ? (
-    <Badge className="bg-emerald-100 text-emerald-800 dark:bg-emerald-400/20 dark:text-emerald-500">
-      <CircleCheck />
-      Complete
-    </Badge>
+    <Badge className="bg-emerald-100 text-emerald-800 dark:bg-emerald-400/20 dark:text-emerald-500"><CircleCheck />Complete</Badge>
   ) : (
-    <Badge className="bg-orange-50 text-orange-700 dark:bg-orange-300/20 dark:text-orange-400">
-      <Clock />
-      Work in Progress
-    </Badge>
+    <Badge className="bg-orange-50 text-orange-700 dark:bg-orange-300/20 dark:text-orange-400"><Clock />Work in Progress</Badge>
   )
 }
