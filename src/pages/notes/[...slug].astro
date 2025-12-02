@@ -2,9 +2,9 @@
 import { type CollectionEntry, getCollection, render } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import CompletionBadge from "@/components/CompletionBadge.astro";
-import TagBadge from "@/components/TagBadge.astro";
 import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import NoteNavigation from "@/components/NoteNavigation.astro";
+import TagList from "@/components/TagList";
 import { trimRelPath, toSlug } from "@/utils/slug";
 
 export async function getStaticPaths() {
@@ -35,17 +35,15 @@ const { Content, remarkPluginFrontmatter } = await render(note);
   <h1 class="text-4xl font-bold tracking-tight">
     {remarkPluginFrontmatter.title}
   </h1>
-  <div class="my-4 flex flex-col gap-4 text-sm text-muted-foreground">
-    <CompletionBadge completion={note.data.complete} />
+  <div class="my-4 flex justify-between gap-4 text-sm text-muted-foreground">
+    <div class="flex-grow">
     {
       note.data.tags.length > 0 && (
-        <div class="flex flex-wrap items-center gap-2">
-          {note.data.tags.map((tag) => (
-            <TagBadge tag={tag} />
-          ))}
-        </div>
+        <TagList tags={note.data.tags} client:load />
       )
-    }
+      }
+    </div>
+    <CompletionBadge completion={note.data.complete} />
   </div>
   <hr />
   {/* Main Content */}
