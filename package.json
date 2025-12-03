@@ -11,8 +11,9 @@
   "dependencies": {
     "@astrojs/react": "^4.3.0",
     "@astrojs/sitemap": "^3.4.2",
+    "@radix-ui/react-popover": "^1.1.15",
     "@radix-ui/react-separator": "^1.1.7",
-    "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-slot": "^1.2.4",
     "@tailwindcss/vite": "^4.1.11",
     "@types/hast": "^3.0.4",
     "astro": "^5.11.0",
@@ -20,6 +21,7 @@
     "clsx": "^2.1.1",
     "hast-util-classnames": "^3.0.0",
     "hast-util-select": "^6.0.4",
+    "ignore": "^7.0.5",
     "lucide-react": "^0.518.0",
     "mathjax-full": "^3.2.2",
     "node-tikzjax": "^1.0.3",

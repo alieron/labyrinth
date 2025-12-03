@@ -1,0 +1,32 @@
+---
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ButtonLink } from "./ui/button-link";
+
+type Props = {
+  prev?: string;
+  next?: string;
+};
+
+const { prev, next } = Astro.props;
+---
+
+<div class="flex items-center justify-between my-4">
+  <div>
+    {
+      prev && (
+        <ButtonLink variant="outline" size="icon" href={prev}>
+          <ChevronLeft />
+        </ButtonLink>
+      )
+    }
+  </div>
+  <div>
+    {
+      next && (
+        <ButtonLink variant="outline" size="icon" href={next}>
+          <ChevronRight />
+        </ButtonLink>
+      )
+    }
+  </div>
+</div>

@@ -4,11 +4,17 @@ import { resolveBase } from "@/utils/resolve";
 ---
 
 <Layout>
-  <div class="px-4">
-    <h1 class="text-4xl font-bold mt-3">Notes</h1>
-    <ul class="list-disc pl-8 text-foreground marker:text-muted-foreground">
-      <li class="leading-snug">by module: <a href={resolveBase("/notes/")} class="text-primary underline hover:text-primary-80">notes</a></li>
-      <li class="leading-snug">by category: <a href={resolveBase("/tags/")} class="text-primary underline hover:text-primary-80">tags</a></li>
-    </ul>
-  </div>
+  <h1 class="text-4xl font-bold">Notes</h1>
+  <ul class="list-disc pl-8 text-foreground marker:text-muted-foreground">
+    <li class="leading-snug">
+      by module: <a
+        href={resolveBase("/notes/")}
+        class="text-primary underline hover:text-primary-80">notes</a>
+    </li>
+    <li class="leading-snug">
+      by category: <a
+        href={resolveBase("/tags/")}
+        class="text-primary underline hover:text-primary-80">tags</a>
+    </li>
+  </ul>
 </Layout>
