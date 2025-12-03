@@ -1,10 +1,9 @@
 ---
 import { getCollection } from "astro:content";
-import { File, Tag, Minus } from "lucide-react";
+import { File, Tag, Minus, Check } from "lucide-react";
 import Layout from "@/layouts/Layout.astro";
-import CompletionBadge from "@/components/CompletionBadge.astro";
-import TagBadge from "@/components/TagBadge.astro";
-import TagBreadcrumbs from "@/components/TagBreadcrumbs.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import TagList from "@/components/TagList";
 import { trimRelPath, toSlug } from "@/utils/slug";
 import { resolveBase } from "@/utils/resolve";
 
@@ -36,9 +35,9 @@ const splitTag = tag === "" ? [] : tag?.split("/");
 
 const notes = await getCollection("notes");
 
-// Notes that have the current tag
+// Notes that have the current tag prefix
 const matchingNotes = notes.filter((note) =>
-  note.data.tags?.some((tag) => tag === tag),
+  note.data.tags?.some((t) => t.startsWith(tag)),
 );
 
 // Tags nested immediately under the current tag
@@ -96,59 +95,70 @@ const items: (tagEntry | noteEntry)[] = [
 ---
 
 <Layout>
-  <div class="flex-1 max-w-5xl overflow-y-auto mx-auto">
-    <div class="px-6 mb-4">
-      <TagBreadcrumbs path={tag} />
-      <div class="rounded-md border">
-        <table class="table-fixed border-collapse w-full">
-          <thead>
-            <tr class="text-left">
-              <th class="py-2 px-4 w-1/5">Name</th>
-              <th class="py-2 px-4 w-3/5">Tags</th>
-              <th class="py-2 px-4 w-1/5">Complete</th>
+  <Breadcrumbs path={tag} type="tags" isFolder={true} />
+  <div class="rounded-md border mt-8">
+    <table class="table-fixed border-collapse w-full">
+      <thead>
+        <tr>
+          <th class="w-full"></th>
+          <th class="align-right w-30"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-muted/50">
+          <td colspan="2" class="py-2 px-4">
+            <div class="flex items-center gap-4 text-muted-foreground">
+              <span class="flex items-center gap-1">
+                <Tag className="w-[1em] mr-1" />
+                {nestedTags.size} nested tags</span
+              >
+              <span class="flex items-center gap-1">
+                <File className="w-[1em] mr-1" />
+                {matchingNotes.length} notes</span
+              >
+            </div>
+          </td>
+        </tr>
+        {
+          items.map((item) => (
+            <tr class="border-t">
+              <td class="py-2 px-4 min-w-0">
+                <div class="flex items-center gap-2">
+                  {item.type === "tag" ? (
+                    <Tag className="flex-none w-[1em]" />
+                  ) : (
+                    <File className="flex-none w-[1em]" />
+                  )}
+                  <a
+                    href={resolveBase(item.href)}
+                    class="truncate hover:text-primary"
+                  >
+                    {item.name}
+                  </a>
+                  {item.type === "note" && item.complete && (
+                    <Check className="flex-none w-[1em] text-green-600" />
+                  )}
+                </div>
+              </td>
+              <td class="px-4">
+                {item.type === "note" && (
+                  <div class="w-auto items-center">
+                    {item.tags.length > 0 ? (
+                      <TagList
+                        tags={item.tags}
+                        showPreview={false}
+                        client:load
+                      />
+                    ) : (
+                      <Minus className="w-4" />
+                    )}
+                  </div>
+                )}
+              </td>
             </tr>
-          </thead>
-          <tbody>
-            {
-              items.map((item) => (
-                <tr class="border-t">
-                  <td class="py-2 px-4">
-                    <div class="flex flex-row items-center gap-2">
-                      {item.type === "tag" ? (
-                        <Tag className="flex-none w-4" />
-                      ) : (
-                        <File className="flex-none w-4" />
-                      )}
-                      <a
-                        href={resolveBase(item.href)}
-                        class="text-nowrap overflow-hidden text-ellipsis text-ellipsis hover:text-primary"
-                      >
-                        {item.name}
-                      </a>
-                    </div>
-                  </td>
-                  <td class="pt-2 px-4 overflow-hidden">
-                    {item.type === "note" && (
-                      <div class="flex flex-nowrap gap-1 pb-2 overflow-x-auto">
-                        {item.tags.length > 0 ? (
-                          item.tags.map((tag) => <TagBadge tag={tag} />)
-                        ) : (
-                          <Minus className="w-4" />
-                        )}
-                      </div>
-                    )}
-                  </td>
-                  <td class="py-2 px-4">
-                    {item.type === "note" && (
-                      <CompletionBadge completion={item.complete} />
-                    )}
-                  </td>
-                </tr>
-              ))
-            }
-          </tbody>
-        </table>
-      </div>
-    </div>
+          ))
+        }
+      </tbody>
+    </table>
   </div>
 </Layout>

@@ -1,5 +1,4 @@
 ---
-import { Hash } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { resolveBase } from "@/utils/resolve";
 
@@ -13,7 +12,6 @@ let partialTag = resolveBase("/tags");
 ---
 
 <Badge className="bg-primary/10 text-primary dark:bg-primary/20">
-  <Hash />
   <ul class="flex flex-wrap items-center gap-1">
     {
       splitTag.map((part, index) => {

@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import { Tag } from "lucide-react";
 import Layout from "@/layouts/Layout.astro";
-import TagBreadcrumbs from "@/components/TagBreadcrumbs.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import { resolveBase } from "@/utils/resolve";
 
 const notes = await getCollection("notes");
@@ -40,41 +40,45 @@ const items: tagEntry[] = [
 ---
 
 <Layout>
-  <div class="flex-1 max-w-5xl overflow-y-auto mx-auto">
-    <div class="px-6 mb-4">
-      <TagBreadcrumbs path={""} />
-      <div class="rounded-md border">
-        <table class="table-fixed border-collapse w-full">
-          <thead>
-            <tr class="text-left">
-              <th class="py-2 px-4 w-1/5">Name</th>
-              <th class="py-2 px-4 w-3/5">Tags</th>
-              <th class="py-2 px-4 w-1/5">Complete</th>
+  <Breadcrumbs path="" type="tags" isFolder={true} />
+  <div class="rounded-md border mt-8">
+    <table class="table-fixed border-collapse w-full">
+      <thead>
+        <tr>
+          <th class="w-full"></th>
+          <th class="align-right w-30"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-muted/50">
+          <td colspan="2" class="py-2 px-4">
+            <div class="flex items-center gap-4 text-muted-foreground">
+              <span class="flex items-center gap-1">
+                <Tag className="w-[1em] mr-1" />
+                {rootTags.size} root tags</span
+              >
+            </div>
+          </td>
+        </tr>
+        {
+          items.map((item) => (
+            <tr class="border-t">
+              <td class="py-2 px-4">
+                <div class="flex flex-row items-center gap-2">
+                  <Tag className="flex-none w-4" />
+                  <a
+                    href={resolveBase(item.href)}
+                    class="text-nowrap overflow-hidden text-ellipsis text-ellipsis hover:text-primary"
+                  >
+                    {item.name}
+                  </a>
+                </div>
+              </td>
+              <td class="px-4" />
             </tr>
-          </thead>
-          <tbody>
-            {
-              items.map((item) => (
-                <tr class="border-t">
-                  <td class="py-2 px-4">
-                    <div class="flex flex-row items-center gap-2">
-                      <Tag className="flex-none w-4" />
-                      <a
-                        href={resolveBase(item.href)}
-                        class="text-nowrap overflow-hidden text-ellipsis text-ellipsis hover:text-primary"
-                      >
-                        {item.name}
-                      </a>
-                    </div>
-                  </td>
-                  <td class="pt-2 px-4 overflow-hidden" />
-                  <td class="py-2 px-4" />
-                </tr>
-              ))
-            }
-          </tbody>
-        </table>
-      </div>
-    </div>
+          ))
+        }
+      </tbody>
+    </table>
   </div>
 </Layout>
