@@ -24,14 +24,14 @@ const rootHref = resolveBase(`/${type}/`);
     <li>
       {
         path.length === 0 ? (
-          <Icon />
+          <Icon className="w-[1.5em]"/>
         ) : (
           <a
             href={rootHref}
             class="text-muted-foreground hover:text-primary"
             aria-label={type}
           >
-            <Icon />
+            <Icon className="w-[1.5em]"/>
           </a>
         )
       }

@@ -80,8 +80,8 @@ export default function TagList({ tags, showPreview = true, maxPreviewCount = 10
               )}
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="max-w-sm w-auto" >
-            <div className="flex flex-wrap gap-2">
+          <PopoverContent className="p-2 w-auto max-w-xs" >
+            <div className="flex flex-wrap gap-2 w-fit">
               {hiddenTags.map((tag, index) => (
                 <TagBadge key={index} tag={tag} />
               ))}

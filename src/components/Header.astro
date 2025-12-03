@@ -3,9 +3,8 @@ import ThemeToggle from "@/components/ThemeToggle";
 import { resolveBase } from "@/utils/resolve";
 ---
 
-<header class="top-0 px-6 py-10 mb-4 flex items-center">
+<header class="top-0 px-4 py-2 md:py-10 flex items-center">
   <div class="size-9"></div>
-  <!-- Link to homepage -->
   <div class="flex h-4 text-center items-center space-x-2 text-sm mx-auto">
     <a
       href={resolveBase("/")}
@@ -19,7 +18,6 @@ import { resolveBase } from "@/utils/resolve";
       aria-label="about"
     >about</a>
   </div>
-  <!-- Theme Switcher -->
   <div class="size-9">
     <ThemeToggle client:load />
   </div>
