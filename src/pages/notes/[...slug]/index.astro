@@ -5,6 +5,7 @@ import Layout from "@/layouts/Layout.astro";
 import CompletionBadge from "@/components/CompletionBadge.astro";
 import TagBadge from "@/components/TagBadge.astro";
 import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import TagList from "@/components/TagList";
 import { trimRelPath, toSlug } from "@/utils/slug";
 import { resolveBase } from "@/utils/resolve";
 
@@ -138,20 +139,34 @@ const items: (folderEntry | noteEntry)[] = [
 
 <Layout>
   <Breadcrumbs path={path} type="notes" isFolder={true} />
-  <div class="rounded-md border">
+  <div class="rounded-md border mt-8">
     <table class="table-fixed border-collapse w-full">
       <thead>
-        <tr class="text-left">
-          <th class="py-2 px-4">Name</th>
-          <th class="flex-none py-2 px-4">Tags</th>
+        <tr>
+          <th class="w-full"></th>
+          <th class="align-right w-30"></th>
         </tr>
       </thead>
       <tbody>
+        <tr class="bg-muted/50">
+          <td colspan="2" class="py-2 px-4">
+            <div class="flex items-center gap-4 text-muted-foreground">
+              <span class="flex items-center gap-1">
+                <Folder className="w-[1em] mr-1" />
+                {subfolders.size} folders</span
+              >
+              <span class="flex items-center gap-1">
+                <File className="w-[1em] mr-1" />
+                {finalNotes.length} notes</span
+              >
+            </div>
+          </td>
+        </tr>
         {
           items.map((item) => (
             <tr class="border-t">
-              <td class="py-2 px-4">
-                <div class="flex flex-row items-center gap-2">
+              <td class="py-2 px-4 min-w-0">
+                <div class="flex items-center gap-2">
                   {item.type === "folder" ? (
                     <Folder className="flex-none w-[1em]" />
                   ) : (
@@ -159,20 +174,23 @@ const items: (folderEntry | noteEntry)[] = [
                   )}
                   <a
                     href={resolveBase(item.href)}
-                    class="text-nowrap overflow-hidden text-ellipsis text-ellipsis hover:text-primary"
+                    class="truncate hover:text-primary"
                   >
-                    {item.name}
-                  </a>
+                    {item.name}</a>
                   {item.type === "note" && item.complete && (
                     <Check className="flex-none w-[1em] text-green-600" />
                   )}
                 </div>
               </td>
-              <td class="pt-2 px-4 overflow-hidden">
+              <td class="px-4">
                 {item.type === "note" && (
-                  <div class="flex flex-nowrap gap-1 pb-2 overflow-x-auto">
+                  <div class="w-auto items-center">
                     {item.tags.length > 0 ? (
-                      item.tags.map((tag) => <TagBadge tag={tag} />)
+                      <TagList
+                        tags={item.tags}
+                        showPreview={false}
+                        client:load
+                      />
                     ) : (
                       <Minus className="w-4" />
                     )}

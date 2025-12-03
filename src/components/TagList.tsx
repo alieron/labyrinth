@@ -23,7 +23,7 @@ export default function TagList({ tags, showPreview = true, maxPreviewCount = 10
       if (!container) return;
 
       const containerWidth = container.offsetWidth;
-      const buttonWidth = 96; // Approximate width of the "more" button
+      const buttonWidth = 80; // Approximate width of the "more" button
       let availableWidth = containerWidth - buttonWidth;
       let count = 0;
 
@@ -55,33 +55,32 @@ export default function TagList({ tags, showPreview = true, maxPreviewCount = 10
   const hasHiddenTags = hiddenTags.length > 0 || !measured;
 
   return (
-    <div ref={containerRef} className="flex items-center gap-2 min-h-[28px] overflow-hidden">
+    <div ref={containerRef} className="h-8 flex items-center gap-2 overflow-hidden">
       {visibleTags.map((tag, index) => (
         <TagBadge key={index} tag={tag} />
       ))}
-
       {hasHiddenTags && (
         <Popover>
           <PopoverTrigger asChild>
             <Button
               variant="ghost"
               size="sm"
-              className="h-7 px-2 text-muted-foreground hover:text-foreground"
+              className="text-muted-foreground hover:text-foreground"
             >
               {showPreview ? (
                 <>
-                  <MoreHorizontal className="w-4 h-4 mr-1" />
+                  <MoreHorizontal className="w-[0.75em] mr-1" />
                   <span className="text-xs">+{hiddenTags.length} more</span>
                 </>
               ) : (
                 <>
-                  <Tag className="w-4 h-4 mr-1" />
+                  <Tag className="w-[0.75em] mr-1" />
                   <span className="text-xs">{tags.length} tags</span>
                 </>
               )}
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="w-auto max-w-sm">
+          <PopoverContent className="max-w-sm w-auto" >
             <div className="flex flex-wrap gap-2">
               {hiddenTags.map((tag, index) => (
                 <TagBadge key={index} tag={tag} />
