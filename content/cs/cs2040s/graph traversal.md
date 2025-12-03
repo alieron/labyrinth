@@ -102,8 +102,8 @@ Cut vertex/bridges
 
 Strongly connected components
 - subgraph where there is a two-way path between every vertex
-- [kosaraju's algorithm](/labyrinth/notes/cs/kosaraju's_algorithm) or [tarjan's algorithm](/labyrinth/notes/cs/tarjan's_algorithm)
-- useful for solving [2-SAT](/labyrinth/notes/cs/2-SAT)
+- [kosaraju's algorithm](#) or [tarjan's algorithm](#)
+- useful for solving [2-SAT](#)
 > out of syllabus for `cs2040s`
 ### Extra
 Python script for generating graphs for use in VisuAlgo url

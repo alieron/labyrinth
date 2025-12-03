@@ -210,6 +210,11 @@ $$
 [DFS](/labyrinth/notes/cs/cs2040s/DFS) method
 - DFS finds the first path to any visitable node
 - correctness is only garunteed when there is only 1 path to any node
+
+[Dynamic Programming](/labyrinth/notes/cs/cs2040s/dynamic_programming)
+- given a DAG
+- topological sort + one pass Bellman-Ford
+- 
 ### Application
 Leetcode: [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) ^d09439
 - per-level BFS
