@@ -11,7 +11,6 @@ $$
 \end{align*}
 $$
 ### Concept
-Coprime ^449690
 $$
 \begin{align*}
 
@@ -22,4 +21,4 @@ $$
 
 $$
 
-[prime numbers](/labyrinth/notes/math/prime_numbers)
+[modulo](/labyrinth/notes/math/algebra/modulo)

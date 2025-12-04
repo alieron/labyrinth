@@ -43,7 +43,7 @@ $$
 | F   | T   | ==T==        |
 | F   | F   | F            |
 
-Addition [modulo](/labyrinth/notes/math/modulo) 2
+Addition [modulo](/labyrinth/notes/math/algebra/modulo) 2
 $$
 a \oplus b = (a + b) \mod 2
 $$

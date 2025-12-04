@@ -119,7 +119,7 @@ for (int i = 0; i < visited.length(); i++)
 		bfs(i); // if there are any vertices not connected to the first vertex, this will find and call BFS on them
 ```
 ### Application
-Leetcode: [Binary Tree Right Side View]()
+Leetcode: [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)
 - get rightmost node at each level
 - BFS such that rightmost is last to be visited
 

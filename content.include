@@ -2,5 +2,10 @@ le français/**
 
 cs/*/**
 cs/xor.md
+cs/recursion tree.md
+!cs/graph algorithms/**
+!cs/theory of computation/**
 
 math/**
+!math/modular arithmetic/**
+!math/RSA.md

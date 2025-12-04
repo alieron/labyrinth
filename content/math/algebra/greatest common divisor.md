@@ -1,6 +1,6 @@
 ---
 tags:
-- math/modular_arithmetic
+- math/number_theory
 complete: false
 ---
    
@@ -11,6 +11,7 @@ $$
 \end{align*}
 $$
 ### Concept
+Coprime ^449690
 $$
 \begin{align*}
 
@@ -21,4 +22,4 @@ $$
 
 $$
 
-[prime numbers](/labyrinth/notes/math/prime_numbers)
+[prime numbers](/labyrinth/notes/math/algebra/prime_numbers)

@@ -46,9 +46,7 @@ $$
 \begin{gather*}
 S(h) = S(h-1) + S(h-2) + 1 \\
 \\
-\text{or} \\
-\\
-N_{h} = N_{h-1}+N_{h-2} + 1 
+S(1) = 2,\ S(0) = 1
 \end{gather*}
 $$
 > similar [recurrence relation](/labyrinth/notes/cs/cs1101s/recurrence_relations) to exponential order of growth

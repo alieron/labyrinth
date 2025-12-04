@@ -154,7 +154,7 @@ T flip-flop
 Asynchronous inputs
 - PRE and CLR to immediately set and reset
 ### Application
-State diagram
+State diagram ^54fb5e
 $$
 \begin{gather*}
 \text{Compact state table:} \\

@@ -1,9 +1,9 @@
 ---
 tags:
-- math/number_theory
+  - math/group_theory
+  - math/number_theory
 complete: false
 ---
-   
 ### Summary
 $$
 \begin{align*}
@@ -21,4 +21,4 @@ $$
 
 $$
 
-[modulo](/labyrinth/notes/math/modulo)
+### Extra

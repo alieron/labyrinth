@@ -20,7 +20,7 @@ $$
 \text{Decryption:} &&& m = c^d \mod n
 \end{align*}
 $$
-> $\phi(n)$ represents the [euler's totient](/labyrinth/notes/math/euler's_totient) function
+> $\phi(n)$ represents the [euler's totient](/labyrinth/notes/math/algebra/euler's_totient) function
 
 Strength
 - depends on the size of $N$
