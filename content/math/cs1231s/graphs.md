@@ -4,9 +4,9 @@ tags:
 - math/graph_theory
 complete: false
 prev: /labyrinth/notes/math/cs1231s/permutations_&_combinations
-next: /labyrinth/notes/math/cs1231s/trees(math
+next: /labyrinth/notes/math/cs1231s/tree_graphs
 ---
-   )
+   
 ### Summary
 [graphs of relations](/labyrinth/notes/math/cs1231s/graphs_of_relations)
 $$

@@ -4,13 +4,13 @@ tags:
   - cs/data_structures
   - lang/java
 complete: true
-prev: /labyrinth/notes/cs/cs2040s/queue_ADT
-next: /labyrinth/notes/cs/cs2040s/deque_ADT
+prev: /labyrinth/notes/cs/cs2040s/queue
+next: /labyrinth/notes/cs/cs2040s/deque
 
 ---
 ### Summary
 Doubly linked list
-- implements [list ADT](/labyrinth/notes/cs/cs2040s/list_ADT)
+- implements [list](/labyrinth/notes/cs/cs2040s/list)
 
 | Operation     | Method                                | Performance                                                                                                                                                                                      |
 | ------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

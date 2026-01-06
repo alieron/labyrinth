@@ -9,7 +9,7 @@ complete: true
 Hash chain
 - block chain
 - **forward integrity** - previous hashes cannot be computed, provided the hash function is [pre-image resistant](/labyrinth/notes/cs/cs2107/cryptographic_hashing#^ff5111)
-- [linear](/labyrinth/notes/cs/cs2040s/list_ADT) structure
+- [linear](/labyrinth/notes/cs/cs2040s/list) structure
 
 | Operation      | Method                                                                      | Performance |
 | -------------- | --------------------------------------------------------------------------- | ----------- |

@@ -1,15 +1,19 @@
 ---
 tags:
-- cs1101s/chapter4
-- cs/algorithms
-- cs/paradigm
-- lang/js
+  - cs1101s/chapter4
+  - cs/algorithms
+  - cs/paradigm
+  - lang/js
 complete: true
 prev: /labyrinth/notes/cs/cs1101s/streams
 next: /labyrinth/notes/cs/cs1101s/metalinguistic_abstraction
+
 ---
-   
-### Summary
+### Concept
+Trading space for time
+- avoid doing repeated computation
+- store results and retrieve it  without having to compute it again
+
 Basic memory read and write for binary functions
 ```js
 const mem = [];
@@ -23,10 +27,6 @@ function write(n, k, value) {
 	mem[n][k] = value;
 }
 ```
-### Concept
-Trading space for time
-- avoid doing repeated computation
-- store results and retrieve it  without having to compute it again
 
 Useful in:
 - fibonacci
@@ -36,6 +36,7 @@ Not useful in:
 - factorial
 ### Application
 n-choose-k
+- without memoization, $\Theta(n^2)$ oog in time
 ```js
 function choose(n, k) {
 	return n < k
@@ -45,7 +46,8 @@ function choose(n, k) {
 			: choose(n - 1, k) + choose(n - 1, k - 1);
 }
 ```
-$\Theta(n^2)$ oog in time
+
+- with memoization, $\Theta((n-k)k)=\Theta(nk-k^2)\implies O(nk)$ oog in time and space
 ```js
 function mchoose(n, k) {
 	if (read(n, k) !== undefined) {
@@ -62,7 +64,6 @@ function mchoose(n, k) {
 } 
 ```
 ![[memo_choose.png]]
-$\Theta((n-k)k)=\Theta(nk-k^2)\implies O(nk)$ oog in time and space
 
 Unary function memoizer and tribonacci series
 ```js

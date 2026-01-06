@@ -1,6 +1,6 @@
 ---
 tags:
-- math/number_theory
+- math/modular_arithmetic
 complete: false
 ---
    
@@ -21,4 +21,4 @@ $$
 
 $$
 
-[modulo](/labyrinth/notes/math/algebra/modulo)
+[prime numbers](/labyrinth/notes/math/~ma2202/prime_numbers)

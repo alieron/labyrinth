@@ -8,15 +8,25 @@ tags:
 complete: true
 prev: /labyrinth/notes/cs/cs1101s/higher_order_functions
 next: /labyrinth/notes/cs/cs1101s/searching
+
 ---
-   
-### Summary
-Pairs
+### Concept
+Primitive data abstraction using pairs to store 2 values
+```js
+const p = pair(a, b) // -> [a, b]
+
+head(p) // -> a
+tail(p) // -> b
+```
+
+Further abstracted to [lists](/labyrinth/notes/cs/cs1101s/lists), [trees](/labyrinth/notes/cs/cs1101s/trees) and [arrays](/labyrinth/notes/cs/cs1101s/arrays)
+- second value can be used to store another pair, into a chain of pairs
+- first value can also be a pair, to form a tree of pairs
+
+Box and pointer diagrams
 ```js
 const x = pair(1, 2);
 ```
-
-Box and pointer diagrams
 ```tikz
 \usepackage{tikz}
 \usetikzlibrary{positioning,arrows.meta}
@@ -45,22 +55,11 @@ Box and pointer diagrams
 \end{tikzpicture}
 \end{document}
 ```
-### Concept
-Primitive form of data abstraction using pairs to store 2 values
-Second value can be used to store another pair, into a chain of pairs
-First value can also be a pair, to form a tree of pairs
-```js
-const p = pair(a, b) // -> [a, b]
-
-head(p) // -> a
-tail(p) // -> b
-```
-
-Further abstracted to [lists](/labyrinth/notes/cs/cs1101s/lists), [trees(cs)](/labyrinth/notes/cs/cs1101s/trees(cs)) and [arrays](/labyrinth/notes/cs/cs1101s/arrays)
 
 Equality vs Identity
-\=== -> Equal by identity
-equal() -> Equal by value
+- compare the pointer or the value itselt
+- `===` -> equal by identity, same object
+- `equal()` -> equal by value
 ```js
 const a = pair(1, 2);
 const b = a;

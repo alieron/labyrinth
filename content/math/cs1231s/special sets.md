@@ -38,6 +38,14 @@ $$
 \mathbb{Z}_{\geq_{12}} &: \ \text{Integers greater than or equal to 12}
 \end{align*}
 $$
+
+Rational and irrational numbers ^9f1e5d
+$$
+\begin{gather*}
+r\text{ is rational} \iff \exists a,b\in \mathbb{Z} \ r=\frac{a}{b}\text{ and }b\neq 0\\
+r\text{ is irrational} \iff r\in \mathbb{R}\text{ but }r\not\in\mathbb{Q}
+\end{gather*}
+$$
 ### Application
 Combinations, using [set notation](/labyrinth/notes/math/cs1231s/sets#^490492)
 $$
@@ -50,12 +58,4 @@ $$
 Subsets among special sets
 $$
 \mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{C}
-$$
-
-Definition of rational and irrational numbers ^9f1e5d
-$$
-\begin{gather*}
-r\text{ is rational} \iff \exists a,b\in \mathbb{Z} \ \mathrm{s.t.}\ r=\frac{a}{b}\text{ and }b\neq 0\\
-r\text{ is irrational} \iff r\in \mathbb{R}\text{ but }r\ni\mathbb{Q}
-\end{gather*}
 $$

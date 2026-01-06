@@ -20,7 +20,7 @@ $$
 \text{Decryption:} &&& m = c^d \mod n
 \end{align*}
 $$
-> $\phi(n)$ represents the [euler's totient](/labyrinth/notes/math/algebra/euler's_totient) function
+> $\phi(n)$ represents the [euler's totient](/labyrinth/notes/math/abstract_algebra/euler's_totient) function
 
 Strength
 - depends on the size of $N$
@@ -34,7 +34,7 @@ $$
 \text{3072-bit} &&& \sim 128\text{ bits} \\
 \end{align*}
 $$
-> due to the sub exponential runtime of the [GNFS](#) algorithm for factorizing large integers, which provides a faster than brute-force attack
+> due to the sub exponential runtime of the [~GNFS](#) algorithm for factorizing large integers, which provides a faster than brute-force attack
 ### Concept
 RSA
 $$

@@ -270,7 +270,7 @@ _    | [0, 0], [1, INF], [2, INF], [3, INF], [4, INF]
 
 Modified algorithm
 - to support negative weight
-- BFS with a [priority queue](/labyrinth/notes/cs/cs2040s/priority_queue_ADT)(min weight) instead
+- BFS with a [priority queue](/labyrinth/notes/cs/cs2040s/priority_queue)(min weight) instead
 - deteriorates to PQ + Bellman-Ford
 
 ```java

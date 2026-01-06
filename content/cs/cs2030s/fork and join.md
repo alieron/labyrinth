@@ -68,7 +68,7 @@ class Summer extends RecursiveTask<Integer> {
 ```
 
 ForkJoinPool
-- each thread has a [deque](/labyrinth/notes/cs/cs2040s/deque_ADT) of tasks
+- each thread has a [deque](/labyrinth/notes/cs/cs2040s/deque) of tasks
 - when a thread is idle, it checks its deque
 	- there are tasks in its deque -> pick up from the head
 	- deque is empty -> pick up from tail of another thread's deque (work stealing)
@@ -110,7 +110,7 @@ Thread pool
 
 RecursiveTask
 - fork the problem into smaller sub-problems, solve recursively, with threads running in parallel, join the results at the base case
-- similar to traversing a [tree](/labyrinth/notes/cs/cs1101s/trees(cs)), forking at every branch, then joining once reaching the leaves
+- similar to traversing a [trees](/labyrinth/notes/cs/cs1101s/trees), forking at every branch, then joining once reaching the leaves
 ```java
 r.fork() // submits subtask r to the thread pool for execution
 r.join() // wait for the subtask to complete, invokes r.compute()

@@ -4,12 +4,12 @@ tags:
   - cs/abstract_data_types
   - lang/java
 complete: true
-next: /labyrinth/notes/cs/cs2040s/priority_queue_ADT
+next: /labyrinth/notes/cs/cs2040s/priority_queue
 prev: /labyrinth/notes/cs/cs2040s/DLL
 
 ---
 ### Summary
-Deque ADT
+Deque
 - both LIFO and FIFO
 
 Circular array implementation - [arrays](/labyrinth/notes/cs/cs1101s/arrays)
@@ -72,52 +72,8 @@ Circular array implementation - [arrays](/labyrinth/notes/cs/cs1101s/arrays)
 \end{tikzpicture}
 \end{document}
 ```
-
-[java.util.Dequeue](https://docs.oracle.com/javase/8/docs/api/java/util/Deque.html) interface
-- [java.util.ArrayDeque](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayDeque.html) -> circular array 
-- [java.util.LinkedList](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html) -> DLL
-
-Library implemetations
-```java
-import java.util.ArrayDeque;
-import java.util.LinkedList;
-
-Deque<Integer> A = new ArrayDeque<>();
-// or
-Deque<Integer> A = new LinkedList<>();
-// insert at tail, following java.util.Queue
-A.add(5);
-A.add(10);
-A.add(15);
-A.add(25); // A = 5 -> 10 -> 15 -> 25
-
-// insertHead
-A.addFirst(4); // 4 -> 5 -> 10 -> 15 -> 25
-// think of it as first element to be popped
-
-// insertTail
-A.addLast(8); // 4 -> 5 -> 10 -> 15 -> 25 -> 8
-
-// remove at head, following java.util.Queue
-int a = A.remove(); // 5 -> 10 -> 15 -> 25 -> 8
-
-// removeHead
-int b = A.removeFirst(); // 10 -> 15 -> 25 -> 8
-
-// removeTail
-int c = A.removeLast(); // 10 -> 15 -> 25
-
-// peek at head, following java.util.Queue
-int d = A.peek(); // 10
-
-// peekHead
-int e = A.peekFirst(); // 10
-
-// peekTail
-int f = A.peekLast(); // 25
-```
 ### Concept
-Dequeue operations
+Dequeue ADT operations
 - `enqueue(v)` 
 	- add `v` to the front/back of the deque
 - `dequeue()`
@@ -153,7 +109,7 @@ Dequeue operations
 \end{document}
 ```
 
-Deque as [Queue](/labyrinth/notes/cs/cs2040s/queue_ADT)
+Deque as [Queue](/labyrinth/notes/cs/cs2040s/queue)
 
 | Queue Method | Deque Method                  |
 | ------------ | ----------------------------- |
@@ -161,14 +117,14 @@ Deque as [Queue](/labyrinth/notes/cs/cs2040s/queue_ADT)
 | `remove()`   | `removeFirst()` or `remove()` |
 | `peek()`     | `peekFirst()` or `peek()`     |
 
-Deque as [Stack](/labyrinth/notes/cs/cs2040s/stack_ADT)
+Deque as [Stack](/labyrinth/notes/cs/cs2040s/stack)
 
 | Stack Method | Deque Method                  |
 | ------------ | ----------------------------- |
 | `push(v)`    | `addFirst(v)`                 |
 | `pop()`      | `removeFirst()` or `remove()` |
 | `peek()`     | `peekFirst()` or `peek()`     |
-> by convention following [queue ADT](/labyrinth/notes/cs/cs2040s/queue_ADT), the back(last) of the dequeue is the tail, the front(first) refers to the head 
+> by convention following [queue](/labyrinth/notes/cs/cs2040s/queue), the back(last) of the dequeue is the tail, the front(first) refers to the head 
 ### Application
 Kattis: [backspace](https://open.kattis.com/problems/backspace)
 - stack behaviour for backspace
@@ -231,4 +187,4 @@ pw.println(sj.toString());
 
 pw.close();
 ```
-> use [StringJoiner](/labyrinth/notes/cs/cs2040s/utility_classes#^35facb) to handle the joining of strings separated by a delimter
+> use [StringJoiner](/labyrinth/notes/cs/cs2040s/java_standard_library#^35facb) to handle the joining of strings separated by a delimter

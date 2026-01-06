@@ -4,14 +4,14 @@ tags:
   - cs/data_structures
   - lang/java
 complete: true
-prev: /labyrinth/notes/cs/cs2040s/list_ADT
-next: /labyrinth/notes/cs/cs2040s/stack_ADT
+prev: /labyrinth/notes/cs/cs2040s/list
+next: /labyrinth/notes/cs/cs2040s/stack
 
 ---
 Succeeds: [lists](/labyrinth/notes/cs/cs1101s/lists)
 ### Summary
 Singly linked list
-- implements [list ADT](/labyrinth/notes/cs/cs2040s/list_ADT)
+- implements [list](/labyrinth/notes/cs/cs2040s/list)
 
 | Operation     | Method                                | Performance                                                                                                                                                                                      |
 | ------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

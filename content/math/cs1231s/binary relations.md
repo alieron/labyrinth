@@ -147,10 +147,8 @@ $$
 && \square
 \end{align*}
 $$
-
-A relation on a set can be represented by a undirected/directed [graph](/labyrinth/notes/math/cs1231s/graphs_of_relations)
 ### Application
-Directed graph for [subsets](/labyrinth/notes/math/cs1231s/sets#^ca7c0d)
+Directed [graph](/labyrinth/notes/math/cs1231s/graphs_of_relations) for [subsets](/labyrinth/notes/math/cs1231s/sets#^ca7c0d)
 - binary operators can be binary relations
 
 $$

@@ -5,8 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/cs/cs1101s/searching
 next: /labyrinth/notes/cs/cs1101s/mutable_data
+
 ---
-   
 ### Summary
 $$
 \begin{align*}
@@ -20,13 +20,13 @@ $$
 $$
 ### Concept
 Insertion sort
-- Sort tail recursively, insert head into sorted tail
+- sort tail recursively, insert head into sorted tail
 
 Selection sort
-- Remove the smallest, sort the rest recursively
+- remove the smallest, sort the rest recursively
 
 Merge sort ^98f7dd
-- Split in half, sort each half recursively
+- split in half, sort each half recursively
 
 Quick sort
-- Choose a random pivot, split into values larger and smaller than pivot, sort each set recursively
+- choose a random pivot, split into values larger and smaller than pivot, sort each set recursively

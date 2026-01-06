@@ -5,7 +5,7 @@ tags:
   - lang/java
 complete: false
 prev: /labyrinth/notes/cs/cs2040s/counting_sort
-next: /labyrinth/notes/cs/cs2040s/list_ADT
+next: /labyrinth/notes/cs/cs2040s/list
 
 ---
 ### Summary
@@ -34,7 +34,7 @@ method radixSort(array A, integer N, integer d, integer k)
     stableCountingSort(A, N, k, digit)
 ```
 ```java
-private static void radixSort(int a[], int N, int d, int k) {
+void radixSort(int a[], int N, int d, int k) {
     for (int exp = 1; exp <= Math.pow(10, d-1); exp *= 10)
         countingSortByDigit(a, N, k, exp); // stable counting sort on digit
 }

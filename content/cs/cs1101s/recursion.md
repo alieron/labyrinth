@@ -7,10 +7,15 @@ tags:
 complete: true
 prev: /labyrinth/notes/cs/cs1101s/substitution_model
 next: /labyrinth/notes/cs/cs1101s/orders_of_growth
+
 ---
-   
-### Summary
-Recursive processes
+### Concept
+Functions that calls itself
+- gives rise to iterative and recursive processes
+- consists:
+	- base case
+	- wish
+	- bridge
 ```js
 function factorial(n) {
 	return n === 1
@@ -19,8 +24,23 @@ function factorial(n) {
 	// Bridge   // Wish
 }
 ```
-creates deferred operations, ie. performs an operation on its recursive function call
-delayed statements build up due to the [substitution model](/labyrinth/notes/cs/cs1101s/substitution_model)
+
+Deferred operation
+- when the *right operand* needs to be evaluated before the operation can be evaluated
+- so the *left operand* needs to be stored until the right is ready
+
+Recursive processes
+- accumulation of defered operations that [grows](/labyrinth/notes/cs/cs1101s/orders_of_growth) proportionately to the size of the input
+- recursive factorial:
+```js
+function factorial(n) {
+	return n === 1
+	? 1
+	: n * factorial(n - 1);
+}
+```
+- creates deferred operations, right operand is its recursive function call
+- operations build up due to the [substitution model](/labyrinth/notes/cs/cs1101s/substitution_model)
 ```js
 factorial(4)
 4 * factorial(3)
@@ -31,12 +51,12 @@ factorial(4)
 4 * 6
 24
 ```
-$O(n)$ time and $O(n)$ space
-num of steps and max num of deferred operations grow linearly with n
-
-> Accumulation of defered operations that [grows](/labyrinth/notes/cs/cs1101s/orders_of_growth) proportionately to the size of the input
+- $O(n)$ time and $O(n)$ space
+- num of steps and max num of deferred operations grow linearly with n
 
 Iterative processes
+- no build up of deferred operations
+- iterative factorial:
 ```js
 function factorial(n) {
 	return iter(1, 1, n);
@@ -49,7 +69,7 @@ function iter(product, counter, n) {
 		   n);
 }
 ```
-no operations performed on its own function call
+- no operations performed on its own function call
 ```js
 factorial(4)
 iter(1, 1, 4) // no deferred operations are created
@@ -59,14 +79,8 @@ iter(6, 4, 4)
 iter(24, 5, 4)
 24
 ```
-$O(n)$ time but $O(1)$/constant space,
-since there are no/constant(ie. happen every recurrence) deferred operations
-### Concept
-Functions that calls itself
-- Base case
-- Wish
-- Bridge
-Gives rise to iterative and recursive processes
+- $O(n)$ time but $O(1)$/constant space,
+- since there are no deferred operations
 ### Application
 Fibonacci series(iterative > recursive solution) ^ede420
 1. Recursive solution
@@ -79,7 +93,7 @@ function fib(n) {
 ```
 > time grows exponentially, proportionately with the size of the tree
 
-Tree for fib(n) has F(n+1) leaves, where:
+[Tree](/labyrinth/notes/cs/recursion_tree) for fib(n) has F(n+1) leaves, where:
 $$
 \begin{align}
 F(n) = \lfloor\frac{\phi^n}{\sqrt{5}}+\frac{1}{2}\rfloor \ , \quad \phi = \frac{1+\sqrt{5}}{2} 
@@ -100,4 +114,4 @@ function fib_iter(a, b, count) {
 	: fib_iter(a + b, a, count - 1);
 }
 ```
-$O(n)$ time, without "branching"
+> $O(n)$ time, without "branching"

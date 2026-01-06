@@ -76,7 +76,7 @@ $$
 $$
 
 Normal to the plane formed by $\mathbf{a}$ and $\mathbf{b}$
-use the **right hand rule**, thumb is the first vector, index is the second and middle is the cross product
+- use the **right hand rule**, thumb is the first vector, index is the second and middle is the cross product
 $$
 \mathbf{a}\times \mathbf{b} \perp \mathbf{a} \ and \ \mathbf{b}\\
 $$

@@ -129,7 +129,7 @@ Control flow
 - **direct branch** - PC replaced by a constant value specified in the instruction, ie. branch or jump
 - **indirect branch** - PC replaced by a value fetched from memory
 
-Call [stack](/labyrinth/notes/cs/cs2040s/stack_ADT)
+Call [stack](/labyrinth/notes/cs/cs2040s/stack)
 - LIFO
 - exists in memory
 - stack pointer(`$rsp`) indexes the top of the stack

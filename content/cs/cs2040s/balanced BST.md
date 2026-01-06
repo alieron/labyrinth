@@ -6,19 +6,19 @@ tags:
   - lang/python
 complete: false
 prev: /labyrinth/notes/cs/cs2040s/BST
-next: /labyrinth/notes/cs/cs2040s/graph_ADT
+next: /labyrinth/notes/cs/cs2040s/graph_DS
 
 ---
 ### Summary
 Binary search tree(BST)
-- implements [table ADT](/labyrinth/notes/cs/cs2040s/table_ADT)
+- implements [table](/labyrinth/notes/cs/cs2040s/table)
 
 | Operation   | Method                    | Performance        |
 | ----------- | ------------------------- | ------------------ |
 | `search(v)` | tree traversal            | - $O(h)=O(\log n)$ |
 | `insert(v)` | tree traversal, rebalance | - $O(h)=O(\log n)$ |
 | `remove(v)` | tree traversal, rebalance | - $O(h)=O(\log n)$ |
-- implements [priority queue ADT](/labyrinth/notes/cs/cs2040s/priority_queue_ADT)
+- implements [priority queue](/labyrinth/notes/cs/cs2040s/priority_queue)
 
 | Operation                     | Method                    | Performance        |
 | ----------------------------- | ------------------------- | ------------------ |

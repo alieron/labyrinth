@@ -30,10 +30,10 @@ $$
 \begin{align*}
 &\text{for a finite set }Y \\
 \\
-& \text{Claims: } \begin{split}
-&(a) \ X\text{ is finite} \to X\cup Y\text{ is finite}\\
+& \begin{aligned}
+\text{Claims: } &(a) \ X\text{ is finite} \to X\cup Y\text{ is finite}\\
 &(b) \ X\subseteq Y\to | Y-X | =| Y | -| X |
-\end{split} \\
+\end{aligned} \\
 \\
 &\begin{aligned}
 X\cap(Y-X)& =X\cap(Y\cap \overline{X})\\

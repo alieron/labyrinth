@@ -6,7 +6,7 @@ tags:
   - lang/python
 complete: true
 next: /labyrinth/notes/cs/cs2040s/DFS
-prev: /labyrinth/notes/cs/cs2040s/graph_ADT
+prev: /labyrinth/notes/cs/cs2040s/graph_DS
 
 ---
 ### Summary
@@ -102,8 +102,8 @@ Cut vertex/bridges
 
 Strongly connected components
 - subgraph where there is a two-way path between every vertex
-- [kosaraju's algorithm](#) or [tarjan's algorithm](#)
-- useful for solving [2-SAT](#)
+- [SCC](#)
+- useful for solving [~2-SAT](#)
 > out of syllabus for `cs2040s`
 ### Extra
 Python script for generating graphs for use in VisuAlgo url

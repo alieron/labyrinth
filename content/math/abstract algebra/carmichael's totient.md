@@ -5,12 +5,12 @@ complete: true
 ---
    
 ### Summary
-For [prime numbers](/labyrinth/notes/math/algebra/prime_numbers)
+For [prime numbers](/labyrinth/notes/math/~ma2202/prime_numbers)
 $$
 \lambda(p) = p-1
 $$
 ### Concept
-Improvement of [euler's totient](/labyrinth/notes/math/algebra/euler's_totient)
+Improvement of [euler's totient](/labyrinth/notes/math/abstract_algebra/euler's_totient)
 $$
 \begin{gather*}
 \lambda(n)=m, m \in \mathbb{Z}_{+} \ is \ the \ smallest \ number \ \ \mathrm{s.t.}\\

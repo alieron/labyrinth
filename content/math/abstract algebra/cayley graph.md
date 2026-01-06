@@ -157,6 +157,8 @@ Cayley graph
 \end{tikzpicture}
 \end{document}
 ```
+
+Cayley table
 ### Application
 
 

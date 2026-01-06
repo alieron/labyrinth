@@ -8,17 +8,17 @@ prev: /labyrinth/notes/cs/cs2040s/union-find_disjoint_sets
 next: /labyrinth/notes/cs/cs2040s/balanced_BST
 
 ---
-Succeeds: [trees(cs)](/labyrinth/notes/cs/cs1101s/trees(cs))
+Succeeds: [trees](/labyrinth/notes/cs/cs1101s/trees)
 ### Summary
 Binary search tree(BST)
-- implements [table ADT](/labyrinth/notes/cs/cs2040s/table_ADT)
+- implements [table](/labyrinth/notes/cs/cs2040s/table)
 
 | Operation   | Method         | Performance   |
 | ----------- | -------------- | ------------- |
 | `search(v)` | tree traversal | - $O(h)=O(n)$ |
 | `insert(v)` | tree traversal | - $O(h)=O(n)$ |
 | `remove(v)` | tree traversal | - $O(h)=O(n)$ |
-- implements [priority queue ADT](/labyrinth/notes/cs/cs2040s/priority_queue_ADT)
+- implements [priority queue](/labyrinth/notes/cs/cs2040s/priority_queue)
 - acts as both a max and min heap simultaneously
 
 | Operation                     | Method                    | Performance   |

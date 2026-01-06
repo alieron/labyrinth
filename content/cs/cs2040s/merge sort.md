@@ -24,39 +24,14 @@ Time complexity
 $$
 T(n) = 2T\left( \frac{n}{2} \right) + O(n) \implies O(n \log n)
 $$
-
-Blackbox sorting
-- [Collections.sort()](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#sort-java.util.List-)
-	- modified merge sort(tim sort)
-- [Arrays.sort()](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#sort-java.lang.Object:A-)
-	- modified merge sort(tim sort) for objects
 ### Concept
-Algorithm
-1. if array has 0 or 1 element, it is sorted
-2. divide array into two halves
-3. recursively sort each half
-4. merge the two sorted halves
-
-```java
-private static void mergeSort(int a[], int low, int high) {
-	// the array to be sorted is a[low..high]
-	if (low < high) { // base case: low >= high (0 or 1 item)
-		int mid = (low + high) / 2; 
-		mergeSort(a, low, mid); // sort the first half O(n/2 log n/2)
-		mergeSort(a, mid + 1, high); // sort the second half
-		merge(a, low, mid, high); // conquer: the merge routine O(n)
-	}
-}
-```
-> recursive split + merge, handling [odd number of elements](https://visualgo.net/en/sorting?create=47,22,30&mode=Merge): larger "half" on the left
-
 Merge subroutine ^12175e
 - joining two already sorted arrays
 - choose smallest between the two arrays
 - a [two pointer](/labyrinth/notes/cs/cs2040s/two_pointer_approach) algorithm
 
 ```java
-private static void merge(int a[], int low, int mid, int high) {
+void merge(int a[], int low, int mid, int high) {
 	// subarray1 = a[low..mid], subarray2 = a[mid+1..high], both sorted
 	int N = high-low+1;
 	int[] b = new int[N]; // temporary array O(n) space
@@ -68,6 +43,25 @@ private static void merge(int a[], int low, int mid, int high) {
 	for (int k = 0; k < N; ++k) a[low+k] = b[k]; // copy back
 }
 ```
+
+Algorithm
+1. if array has 0 or 1 element, it is sorted
+2. divide array into two halves
+3. recursively sort each half
+4. merge the two sorted halves
+
+```java
+void mergeSort(int a[], int low, int high) {
+	// the array to be sorted is a[low..high]
+	if (low < high) { // base case: low >= high (0 or 1 item)
+		int mid = (low + high) / 2; 
+		mergeSort(a, low, mid); // sort the first half O(n/2 log n/2)
+		mergeSort(a, mid + 1, high); // sort the second half
+		merge(a, low, mid, high); // conquer: the merge routine O(n)
+	}
+}
+```
+> recursive split + merge, handling [odd number of elements](https://visualgo.net/en/sorting?create=47,22,30&mode=Merge): larger "half" first
 
 Divide and conquer paradigm
 - breakdown the problem into smaller subproblems
@@ -105,4 +99,3 @@ out += b;
 System.out.println(out);
 ```
 > can also be done using two pointers, one for each string, to reduce the overhead of string slicing
-

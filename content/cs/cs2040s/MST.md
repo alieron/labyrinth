@@ -2,7 +2,7 @@
 tags:
   - cs2040s/chapter4
   - cs/algorithms
-complete: true
+complete: false
 next: /labyrinth/notes/cs/cs2040s/kruskal's_algorithm
 prev: /labyrinth/notes/cs/cs2040s/dijkstra's_algorithm
 
@@ -10,16 +10,17 @@ prev: /labyrinth/notes/cs/cs2040s/dijkstra's_algorithm
 ### Summary
 MST algorithms
 
-|                          | [Kruskal's](/labyrinth/notes/cs/cs2040s/kruskal's_algorithm) | [Prim's](/labyrinth/notes/cs/cs2040s/prim's_algorithm) |
-| ------------------------ | ---------------------------------- | ---------------------------- |
-| Time complexity          | $O(E\log V)$                       | $O(E\log V)$                 |
-| Constraint               | $V < 1,000,000$                    | undirected                   |
-| [Graph ADT](/labyrinth/notes/cs/cs2040s/graph_ADT) | EL                                 | AL                           |
+|                         | Time Complexity | Constraint       | Type of Graph ADT |
+| ----------------------- | --------------- | ---------------- | ----------------- |
+| [kruskal's algorithm](/labyrinth/notes/cs/cs2040s/kruskal's_algorithm) | $O(E\log V)$    | $V < 1,000,000$  | EL                |
+| [prim's algorithm](/labyrinth/notes/cs/cs2040s/prim's_algorithm)    | $O(E\log V)$    | undirected graph | AL                |
+| [boruvka's algorithm](#) | $O(E\log V)$    | TODO             | TODO              |
+> boruvka's algorithm is not in the `cs2040s` syllabus
 
 MST related problems
 - maximum spanning tree - negate all weights
-- minimum spanning forest - early termination, [Kruskal's invariant](/labyrinth/notes/cs/cs2040s/kruskal's_algorithm#^aa9376)
-- minimum tree with k verticies - early termination, [Prim's invariant](/labyrinth/notes/cs/cs2040s/prim's_algorithm#^57918b)
+- minimum spanning forest - early termination, [kruskal's invariant](/labyrinth/notes/cs/cs2040s/kruskal's_algorithm#^aa9376)
+- minimum tree with k verticies - early termination, [prim's invariant](/labyrinth/notes/cs/cs2040s/prim's_algorithm#^57918b)
 - `kth` minimum spanning tree - NP hard
 
 Cayley's formula

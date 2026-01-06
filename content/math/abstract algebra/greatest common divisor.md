@@ -1,7 +1,6 @@
 ---
 tags:
-  - math/group_theory
-  - math/number_theory
+- math/number_theory
 complete: false
 ---
 ### Summary
@@ -11,6 +10,7 @@ $$
 \end{align*}
 $$
 ### Concept
+Coprime ^449690
 $$
 \begin{align*}
 
@@ -21,4 +21,4 @@ $$
 
 $$
 
-### Extra
+[prime numbers](/labyrinth/notes/math/~ma2202/prime_numbers)

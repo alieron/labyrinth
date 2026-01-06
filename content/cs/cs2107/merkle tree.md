@@ -7,7 +7,7 @@ complete: true
 ---
 ### Summary
 Merkle tree
-- [tree](/labyrinth/notes/cs/cs1101s/trees(cs)) structure
+- [trees](/labyrinth/notes/cs/cs1101s/trees) structure
 
 | Operation      | Method                                                                      | Performance              |
 | -------------- | --------------------------------------------------------------------------- | ------------------------ |

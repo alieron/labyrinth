@@ -4,13 +4,13 @@ tags:
   - cs/data_structures
   - lang/java
 complete: false
-prev: /labyrinth/notes/cs/cs2040s/table_ADT
+prev: /labyrinth/notes/cs/cs2040s/table
 next: /labyrinth/notes/cs/cs2040s/union-find_disjoint_sets
 
 ---
 ### Summary
 Hash table
-- implements [table ADT](/labyrinth/notes/cs/cs2040s/table_ADT)
+- implements [table](/labyrinth/notes/cs/cs2040s/table)
 
 | Operation   | Method                              | Performance |
 | ----------- | ----------------------------------- | ----------- |
@@ -58,7 +58,7 @@ Hash table
 \end{tikzpicture}
 \end{document}
 ```
-> identical to [DAT](/labyrinth/notes/cs/cs2040s/table_ADT#^c3b281), just using the hash of the value as the index 
+> identical to [DAT](/labyrinth/notes/cs/cs2040s/table#^c3b281), just using the hash of the value as the index 
 
 Separate chaining
 - closed addressing
@@ -190,10 +190,6 @@ Double hashing
 ```
 (h(v) + (step++ * h2(v))) % m
 ```
-
-Hash table classes
-- [java.util.HashMap](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html) - separate chaining
-- [java.util.HashSet](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html) - separate chaining
 ### Concept
 Hashing
 - map some large range of values(might be non-integers, ie. strings) to integer keys

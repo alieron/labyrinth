@@ -9,7 +9,7 @@ prev: /labyrinth/notes/cs/cs2040s/binary_heap
 
 ---
 ### Summary
-Table ADT
+Table
 - binds a key to a value
 - allows lookup for stored values
 
@@ -22,64 +22,6 @@ Direct addressing table(DAT) - [array](/labyrinth/notes/cs/cs2040s/compact_array
 | `insert(v)` | fill index `v`                   | - $O(1)$    |
 | `remove(v)` | empty index `v`                  | - $O(1)$    |
 > the couting array in [counting sort](/labyrinth/notes/cs/cs2040s/counting_sort) works similarly, range of keys must be small(and non-negative), $O(k)$ space
-
-[java.util.Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html) interface
-- [java.util.HashMap](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html) - hash table
-- [java.util.TreeMap](https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html) - BST
-
-Library implementations
-```java
-Map<Integer> mp = new HashMap<>();
-// or
-Map<Integer> mp = new TreeMap<>();
-
-// insert(v)
-mp.put(0, 123);
-mp.put(0, 100); // replaces the old mapping
-mp.put(1, 120);
-// 0 -> 100, 1 -> 120
-
-// search(v)
-mp.containsKey(0); // true, checks if this key has a value
-mp.containsValue(120); // true, checks if this value is present
-
-// remove(v)
-mp.remove(0); // removes key-value pair
-// 0 -> 120
-
-mp.size(); // number of key-value pairs
-mp.isEmpty(); // check if the Map is empty
-mp.values(); // collection of the values
-```
-> there are other useful functions that allow Map to be a [monad](/labyrinth/notes/cs/cs2030s/monads_&_functors)
-
-[java.util.Set](https://docs.oracle.com/javase/8/docs/api/java/util/Set.html) interface
-- [java.util.HashSet](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html) - hash table
-- [java.util.TreeSet](https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html) - BST
-
-Library implementations
-```java
-Set<Integer> set = new HashSet<>();
-// or
-Set<Integer> set = new TreeSet<>();
-
-// insert(v)
-set.add(1);
-set.add(1); // duplicates are not added
-set.add(12);
-// 1, 12
-
-// search(v)
-set.contains(1); // true, checks if the value is present
-
-// remove(v)
-set.remove(1);
-// 12
-
-set.size(); // number of values in the set
-set.isEmpty(); // check if the Set is empty
-```
-> duplicates are ignored since there is no repetiton in [sets](/labyrinth/notes/math/cs1231s/sets#^95939c)
 ### Concept
 Table operations
 - `search(v)`
@@ -122,4 +64,4 @@ Table operations
 	\draw[->] (k.center) -> (vk);
 \end{tikzpicture}
 \end{document}
-```
+``` 

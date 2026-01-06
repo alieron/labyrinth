@@ -219,7 +219,6 @@ void kahn() {
 	
 	Queue<Integer> q = new LinkedList<>(); // can be stack O(1) or priority queue O(log n) also, order is not important
 	
-	
 	// enqueue all verticies with in-degree = 0
 	for (int u = 0; u < V; u++) 
 		if (indegree[u] == 0) // invariant condition, only indegree = 0 in the queue

@@ -9,20 +9,6 @@ next: /labyrinth/notes/math/cs1231s/cardinality
 ---
    
 ### Summary
-Properties of a function
-$$
-\begin{align*}
-&&& f: X\to Y \leftrightarrow  f\subseteq X\times Y \text{ satisfies} && \text{function/mapping from }X\text{ to }Y \\
-\\
-\text{(F1)} &&& \forall x \in X \ \exists y \in Y \ (x,y)\in f \\
-\\
-\text{(F2)} &&& \forall x \in X \ \forall y \in Y \ \forall y' \in Y \ (x,y) \in f \land (x,y')\in f \to y = y' 
-\end{align*}
-$$
-> F1 -> every x has an arrow
-> F2 -> no x has more than one arrow
-> function -> every x has only one out going arrow
-
 Identity function
 $$
 i_{X} : X\to X \leftrightarrow \forall x \in X \ i_{X}(x) = x
@@ -100,6 +86,20 @@ $$
 \end{align*}
 $$
 ### Concept
+Function definition
+$$
+\begin{align*}
+&&& f: X\to Y \leftrightarrow  f\subseteq X\times Y \text{ satisfies} && \text{function/mapping from }X\text{ to }Y \\
+\\
+\text{(F1)} &&& \forall x \in X \ \exists y \in Y \ (x,y)\in f \\
+\\
+\text{(F2)} &&& \forall x \in X \ \forall y \in Y \ \forall y' \in Y \ (x,y) \in f \land (x,y')\in f \to y = y' 
+\end{align*}
+$$
+> F1 -> every x has an arrow
+> F2 -> no x has more than one arrow
+> function -> every x has only one out going arrow
+
 Image and range ^803f4f
 - typical notation for [functions](/labyrinth/notes/math/ma1521/functions)
 

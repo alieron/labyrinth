@@ -5,8 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/cs/cs1101s/data_abstraction
 next: /labyrinth/notes/cs/cs1101s/sorting
+
 ---
-   
 ### Summary
 $$
 \begin{align*}
@@ -18,9 +18,13 @@ $$
 $$
 ### Concept
 Linear search
-- Searching through lists/arrays
-- Check every element
+- $\Theta(n)$
+- searching through unsorted lists/arrays
+- check every element
+- eliminate 1 element from search space each time
 
 Binary search ^e5eb03
-- Searching through [sorted](/labyrinth/notes/cs/cs1101s/sorting) binary search [trees(cs)](/labyrinth/notes/cs/cs1101s/trees(cs))
-- Check if value is larger or smaller than the head node, check the half that the value should be in
+- $\Theta(\log n)$ 
+- searching through [sorted](/labyrinth/notes/cs/cs1101s/sorting) lists/arrays or binary search [trees](/labyrinth/notes/cs/cs1101s/trees)
+- check if value is larger or smaller than the head node, check the half that the value should be in
+- cut search space in half each time

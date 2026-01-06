@@ -5,12 +5,18 @@ tags:
 - cs/functional_programming
 - lang/js
 complete: true
-prev: /labyrinth/notes/cs/cs1101s/environment_model
+prev: /labyrinth/notes/cs/cs1101s/tombstone_diagram
 next: /labyrinth/notes/cs/cs1101s/memoization
+
 ---
-   
-### Summary
-Integer stream
+### Concept
+A stream is either:
+- *null*
+- or a pair whose tail is a nullary function that returns a stream
+
+Next element is evaluated [lazily](/labyrinth/notes/cs/cs1101s/lazy_evaluation), only when requested is the function evaluated
+### Application
+Integers stream
 ```js
 const integers = pair(1, () => stream_map(x => x+1, integers); // delayed by 1
 ```
@@ -52,14 +58,8 @@ Indexing
 stream_ref(s, n) => elem at index n, processes n+1 elems
 eval_stream => list of index 0 to n: length = n
 ```
-### Concept
-A stream is either:
-- *null*
-- or a pair whose tail is a nullary function that returns a stream
 
-[Lazy evaluation](/labyrinth/notes/cs/cs1101s/lazy_evaluation) -> next element is only evaluated when needed/called upon
-### Application
-Alternate integers
+Integers another way
 ```js
 const psum = s => pair(head(s), () => add_stream(stream_tail(s), psum(s))); // delayed by 1 recursively
 
@@ -82,7 +82,7 @@ $$
 \text{integers} \to \quad & 1 & 2 & 3 & 4 & 5 & 6 & \dots
 \end{array} \quad \to \infty
 $$
-Creates $O(n^2)$ addition operations
+> creates $O(n^2)$ addition operations
 
 Zip streams
 ```js

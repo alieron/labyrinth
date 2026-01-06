@@ -5,26 +5,24 @@ tags:
 - lang/js
 complete: true
 next: /labyrinth/notes/cs/cs1101s/substitution_model
----
 
-### Summary
-$$
-predicate \ ? \ consequent \ : \ alternative
-$$
+---
+### Concept
+Conditional statement:
+- based on the predicate, either the consequent or alternative is returned [lazily](/labyrinth/notes/cs/cs1101s/lazy_evaluation)
+- 3 parameters/operands:
+	- boolean predicate
+	- consequent
+	- alternative
 ```js
+predicate ? consequent : alternative;
+
 true ? 1 : 0;
 // output: 1
 
 false ? 1 : 0;
 // output: 0
 ```
-### Concept
-Ternary operator has 3 parameters/operands:
-- Predicate
-- Consequent
-- Alternative
-
-Based on the boolean predicated, either the consequent or alternative is returned
 ### Application
 Absolute function
 $$
@@ -50,7 +48,7 @@ abs(-8);
 // output: 8
 ```
 
-Binary boolean operators
+Implementing boolean operators
 ```js
 a || b // a or b
 // is equivalent to
@@ -60,5 +58,3 @@ a && b // a and b
 // is equivalent to
 a ? b : false // if a, return b, else return false
 ```
-
-[lazy evaluation](/labyrinth/notes/cs/cs1101s/lazy_evaluation)

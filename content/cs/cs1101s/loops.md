@@ -7,38 +7,37 @@ tags:
 complete: true
 prev: /labyrinth/notes/cs/cs1101s/mutable_data
 next: /labyrinth/notes/cs/cs1101s/environment_model
+
 ---
-   
-### Summary
+### Concept
+Used when repeasting an action
+Beware of conditions that can result in an infinite loop
+
 For loops
-$$
-for(initialiser; \ condition; \ increment)
-$$
+- repeating a task x number of times
+- initialise an incrementer, check if condition is true, run the loop body, increment, check if the condition is still true, repeat
 ```js
+for(initialiser; condition; increment) {
+	// body
+}
+
 for(let i = 0; i <= 5; i = i + 1) {
 	// body
 }
 ```
 
 While loops
-$$
-while(condition)
-$$
+- for repeating a task until a condition is met
+- check if condition is true, run the loop body, check if condition is still true, repeat
 ```js
-while(bool) {
+while(condition) { 
+	// body
+}
+
+while(true) {
 	// body
 }
 ```
-### Concept
-For loops
-- For repeating a task x number of times
-- Initialise an incrementer, check if condition is true, run the loop body, increment, check if the condition is still true, repeat
-
-While loops
-- For repeating a task until a condition is met
-- Check if condition is true, run the loop body, check if condition is still true, repeat
-
-> Beware infinite loops
 ### Application
 Loops in [math](/labyrinth/notes/math/math_fundementals/summation_notation)
 ```js

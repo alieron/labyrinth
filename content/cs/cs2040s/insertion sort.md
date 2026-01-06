@@ -38,16 +38,20 @@ Algorithm
 4. repeat 2-3 for the rest of the elements
 
 ```java
-for (i = 1; i <= N; ++i) { // N-1 times
-  e = A[i]; j = i;  
-  while (j > 0) {  
-    if (A[j-1] > e)  
-      A[j] = A[j-1];  
-    else  
-      break;  
-    j--;  
-  }  
-  A[j] = e;  
+void insertionSort(int[] A) {
+	int N = A.length;
+
+	for (i = 1; i <= N; ++i) { // N-1 times
+	  e = A[i]; j = i;  
+	  while (j > 0) {  
+	    if (A[j-1] > e)  
+	      A[j] = A[j-1];  
+	    else  
+	      break;  
+	    j--;  
+	  }  
+	  A[j] = e;  
+	}
 }
 ```
 > build a sorted array, "insert" each new element into the sorted part

@@ -6,10 +6,15 @@ tags:
 complete: true
 prev: /labyrinth/notes/cs/cs1101s/orders_of_growth
 next: /labyrinth/notes/cs/cs1101s/data_abstraction
+
 ---
-   
-### Summary
-HOFs
+### Concept
+Higher order functions, either:
+- accepts a function as an argument
+- returns a function
+
+The idea of functions as variables, that can be passed into functions
+
 ```js
 // Accepts function as an argument
 function apply(f) {
@@ -24,7 +29,8 @@ function applied(x) {
 applied(1)(); // -> 2
 ```
 
-Lambda functions ^dec713
+ Lambda functions ^dec713
+- more concise notation for defining functions
 ```js
 // Unary lambda functions
 const identity = x => x;
@@ -41,16 +47,6 @@ add(1, 2); // -> 3
 const one = () => 1;
 one(); // -> 1
 ```
-### Concept
-Higher order functions, either:
-- accepts a function as an argument
-- returns a function
-
-The idea of functions as variables
-
-Scopes
-- look for the closest surrounding name declaration
-- if not declared within current scope/block, look one level up
 
 Lambda function is declared, but never initialised until function application
 ```js
@@ -60,6 +56,9 @@ const g = y => f(y);         // 3. Declaration of lambda function g, read rest  
 g(2)                         // 4. Apply g with arg 2                                      // 8. return 1
 ```
 
+Scoping
+- look for the closest surrounding name declaration
+- if not declared within current scope/block, look one level up
 ### Application
 Nesting vs Chaining
 ```js

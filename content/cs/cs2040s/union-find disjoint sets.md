@@ -458,7 +458,7 @@ $$
 \end{document}
 ```
 
-Inverse Ackermann function
+Inverse ackermann function
 - a function that grows very slowly
 
 $$
@@ -544,7 +544,7 @@ return max;
 class UnionFind { ...
 ```
 ### Extra
-[CPBook implementation](https://github.com/stevenhalim/cpbook-code/blob/master/ch2/ourown/unionfind_ds.java)
+Java implementation - from [CPBook](https://github.com/stevenhalim/cpbook-code/blob/master/ch2/ourown/unionfind_ds.java)
 ```java
 import java.util.*;
 

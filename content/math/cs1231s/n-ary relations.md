@@ -36,7 +36,7 @@ A_{1}\times \dots \times A_{n} = \{\begin{array}{c|c} (a_{1},\dots,a_{n}) & a_{1
 A_{1} =\dots = A_{n} = A \to A_{1}\times \dots \times A_{n} = A^n
 \end{gather*}
 $$
- similar idea to [Rⁿ](/labyrinth/notes/math/ma1522/vectors_in_Rⁿ)
+> similar idea to [Rⁿ](/labyrinth/notes/math/ma1522/vectors_in_Rⁿ)
 ### Application
 Cartesian product
 $$

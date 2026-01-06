@@ -4,12 +4,12 @@ tags:
   - cs/abstract_data_types
   - lang/java
 complete: false
-next: /labyrinth/notes/cs/cs2040s/queue_ADT
+next: /labyrinth/notes/cs/cs2040s/queue
 prev: /labyrinth/notes/cs/cs2040s/SLL
 
 ---
 ### Summary
-Stack ADT
+Stack
 - last in first out(LIFO)
 
 [Compact array](/labyrinth/notes/cs/cs2040s/compact_array) implementation
@@ -87,36 +87,8 @@ Stack ADT
 \end{tikzpicture}
 \end{document}
 ```
-
-Stack classes
-- [java.util.Stack](https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html) -> compact array
-- [java.util.LinkedList](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html) -> DLL
-
-Library implementation
-```java
-import java.util.Stack;
-
-Stack<Integer> st = new Stack<>();
-// or
-
-// push(v)
-st.push(2); // [2]
-st.push(3); // [3, 2]
-
-// pop()
-st.pop(); // 3, [2]
-
-// peek()
-st.peek(); // 2, [2]
-
-// check if stack is empty
-st.empty(); // false
-
-// number of elements in the stack
-st.size(); // 1
-```
 ### Concept
-Stack operations
+Stack ADT operations
 - `push(v)`
 	- push `v` onto the top of the stack
 - `pop()`

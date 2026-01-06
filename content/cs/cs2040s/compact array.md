@@ -10,7 +10,7 @@ next: /labyrinth/notes/cs/cs2040s/asymptotics
 OSucceeds: [arrays](/labyrinth/notes/cs/cs1101s/arrays)
 ### Summary
 Compact array
-- implements [list ADT](/labyrinth/notes/cs/cs2040s/list_ADT)
+- implements [list](/labyrinth/notes/cs/cs2040s/list)
 
 | Operation      | Method                                           | Performance                                                                               |
 | -------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------- |

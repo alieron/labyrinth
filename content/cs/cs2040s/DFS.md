@@ -44,7 +44,7 @@ T(V,E) &= V\cdot O(1) + \sum_{i=0}^{V-1} O(E) \\
 \end{aligned}
 \end{gather*}
 $$
-> be careful when choosing between [graph DSes](/labyrinth/notes/cs/cs2040s/graph_ADT)
+> be careful when choosing between [graph DS](/labyrinth/notes/cs/cs2040s/graph_DS)
 ### Concept
 Algorithm
 - recursively call DFS on every neighbour of the current node

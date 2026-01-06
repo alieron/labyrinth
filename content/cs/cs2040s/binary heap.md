@@ -4,13 +4,13 @@ tags:
   - cs/data_structures
   - lang/java
 complete: true
-prev: /labyrinth/notes/cs/cs2040s/priority_queue_ADT
-next: /labyrinth/notes/cs/cs2040s/table_ADT
+prev: /labyrinth/notes/cs/cs2040s/priority_queue
+next: /labyrinth/notes/cs/cs2040s/table
 
 ---
 ### Summary
 Binary heap
-- implements [priority queue ADT](/labyrinth/notes/cs/cs2040s/priority_queue_ADT)
+- implements [priority queue](/labyrinth/notes/cs/cs2040s/priority_queue)
 - semi-sorted "tree"
 - leverages divide-and-conquer to imitate sorting
 

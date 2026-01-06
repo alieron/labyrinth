@@ -42,21 +42,21 @@ complete
 
 #### 25/26 S1
 ##### cs2040s
-...
+A- (pain)
 [compact array](/labyrinth/notes/cs/cs2040s/compact_array) -> [prim's algorithm](/labyrinth/notes/cs/cs2040s/prim's_algorithm)
 core topics are complete, working on polishing up code examples
 
 ##### cs2100
-...
+A+
 [C](/labyrinth/notes/cs/cs2100/C) -> [fully associative cache](/labyrinth/notes/cs/cs2100/fully_associative_cache)
 complete, except for MIPS controlpath
 
 ##### cs2107
-...
+A
 [threat model](/labyrinth/notes/cs/cs2107/threat_model) -> [privilege escalation](/labyrinth/notes/cs/cs2107/privilege_escalation)
 mostly complete
 
 ##### st2334
-...
+B (lmao)
 [events](/labyrinth/notes/math/st2334/events) -> [#]()
 0 progress

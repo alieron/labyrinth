@@ -31,7 +31,7 @@ Invariant ^57918b
 - at the `kth` iteration, we have a minimum tree spanning `k` nodes
 ### Concept
 Algorithm
-- from a source node, enqueue all outgoing edges into a [priority queue](/labyrinth/notes/cs/cs2040s/priority_queue_ADT)
+- from a source node, enqueue all outgoing edges into a [priority queue](/labyrinth/notes/cs/cs2040s/priority_queue)
 - dequeue edge with lowest weight
 - check against a "taken" array to avoid a cycle
 

@@ -6,27 +6,27 @@ tags:
 complete: true
 prev: /labyrinth/notes/cs/cs1101s/sorting
 next: /labyrinth/notes/cs/cs1101s/loops
+
 ---
-   
-### Summary
+### Concept
+Reassigning a new value to an already in use symbol
+```js
+let x = 0; // initial value
+x = 5; // new value
+```
+### Application
 Destructive list functions
 ```js
 set_head(p, x);
 set_tail(p, x);
 ```
 
-[Array](/labyrinth/notes/cs/cs1101s/arrays) indexing
+[Array](/labyrinth/notes/cs/cs1101s/arrays) assignment
 ```js
 A[i] = x;
 ```
-### Concept
-Variable
-```js
-let x = 0; // initial value
-x = 5; // new value
-```
 
-Reassigning a new value to an already in use symbol
-### Application
-Creation of circular lists
-- set_tail of the pair to the head of the pair
+Circular list
+```js
+set_tail(p, p);
+```

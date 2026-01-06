@@ -4,19 +4,22 @@ tags:
 - cs/models
 complete: true
 prev: /labyrinth/notes/cs/cs1101s/memoization
+
 ---
-
-### Summary
-1. Symbol initialization - variables are noted, temporarily "unassigned"
-2. Value assignment - values are assigned to the symbols
-
-Frames and environments
-- Nested in lists
 ### Concept
+Abstraction for "tokenizing" the syntax of a programming language and handling its evaluation
+
 Self-compiling languages
-- Running JS/Source programmes using a programme written in JS/Source itself 
+- running JS/Source programmes using a program written in JS/Source itself 
+
+Abstrations
+1. Symbol(variable) initialization - variables are noted, temporarily "unassigned"
+2. Value assignment - values are assigned to the symbols
+3. Frames and environments - handle how variables can be accessed
 
 Tagged list
+- general purpose [lists](/labyrinth/notes/cs/cs1101s/lists) for storing information and its context(tag)
+
 ```tikz
 \usepackage{tikz}
 \usetikzlibrary{positioning,arrows.meta}

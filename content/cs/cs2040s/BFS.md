@@ -10,7 +10,7 @@ next: /labyrinth/notes/cs/cs2040s/topological_sort
 ---
 ### Summary
 Breadth first search(BFS)
-- iterative, [queue](/labyrinth/notes/cs/cs2040s/queue_ADT)
+- iterative, [queue](/labyrinth/notes/cs/cs2040s/queue)
 
 Time complexity
 - using an adjacency list

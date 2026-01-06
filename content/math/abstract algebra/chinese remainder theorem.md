@@ -1,6 +1,5 @@
 ---
 tags:
-- math/fundamentals
 - math/number_theory
 complete: false
 ---
@@ -12,15 +11,14 @@ $$
 \end{align*}
 $$
 ### Concept
-
 $$
 \begin{align*}
 
 \end{align*}
 $$
 ### Application
-Binom coefficient of prime
 $$
 
 $$
 
+[modulo](/labyrinth/notes/math/abstract_algebra/modulo)

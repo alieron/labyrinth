@@ -3,12 +3,12 @@ tags:
   - cs2040s/chapter2
   - cs/abstract_data_types
 complete: false
-prev: /labyrinth/notes/cs/cs2040s/stack_ADT
+prev: /labyrinth/notes/cs/cs2040s/stack
 next: /labyrinth/notes/cs/cs2040s/DLL
 
 ---
 ### Summary
-Queue ADT
+Queue
 - first in first out(FIFO)
 
 Circular array implementation - [arrays](/labyrinth/notes/cs/cs1101s/arrays)
@@ -71,7 +71,7 @@ Circular array implementation - [arrays](/labyrinth/notes/cs/cs1101s/arrays)
 ```
 > array "wraps" around to avoid having to shift all the elements during insertion/removal
 
-Two [stacks](/labyrinth/notes/cs/cs2040s/stack_ADT) implementation
+Two [stacks](/labyrinth/notes/cs/cs2040s/stack) implementation
 - enqueue to the bottom or dequeue from the bottom
 
 | Operation    | Method                                                                                                                                           | Performance                                               |
@@ -119,12 +119,8 @@ Two [stacks](/labyrinth/notes/cs/cs2040s/stack_ADT) implementation
 \end{tikzpicture}
 \end{document}
 ```
-
-[java.util.Queue](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html) interface
-- [java.util.ArrayDeque](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayDeque.html) -> circular array 
-- [java.util.LinkedList](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html) -> DLL
 ### Concept
-Queue operations ^abf27d
+Queue ADT operations ^abf27d
 - `enqueue(v)`
 	- add `v` to the back of the queue
 - `dequeue()`
@@ -157,6 +153,4 @@ Queue operations ^abf27d
 ```
 
 Monotonic queue
-
-### Application
-
+TODO

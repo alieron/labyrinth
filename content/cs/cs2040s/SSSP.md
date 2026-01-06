@@ -11,14 +11,17 @@ prev: /labyrinth/notes/cs/cs2040s/topological_sort
 ### Summary
 SSSP algorithms
 
-|                          | BFS                                     | DFS    | [Bellman-Ford](/labyrinth/notes/cs/cs2040s/bellman-ford_algorithm) | [Dijkstra's](/labyrinth/notes/cs/cs2040s/dijkstra's_algorithm) | Modified Dijkstra's | Dynamic Programming |
-| ------------------------ | --------------------------------------- | ------ | ---------------------------------------- | ------------------------------------ | ------------------- | ------------------- |
-| Time complexity          | generally - $O(V+E)$<br>trees - $O(V)$  | $O(V)$ | $O(VE)$                                  | $O((V+E)\log V)$                     | $O(VE\log V)$       | $O(V+E)$            |
-| Constraint               | unweighted/uniformed weight<br><br>tree | tree   | no -ve weight cycle                      | no -ve weight<br>                    | no -ve weight cycle | DAG                 |
-| [Graph ADT](/labyrinth/notes/cs/cs2040s/graph_ADT) | AL                                      | AL     | AL + EL(optional)                        | AL                                   | AL                  | AL                  |
+|                            | Time Complexity                        | Constraint                              | Type of Graph ADT |
+| -------------------------- | -------------------------------------- | --------------------------------------- | ----------------- |
+| [BFS](/labyrinth/notes/cs/cs2040s/BFS)                    | generally - $O(V+E)$<br>trees - $O(V)$ | unweighted/uniformed weight<br><br>tree | AL                |
+| [DFS](/labyrinth/notes/cs/cs2040s/DFS)                    | $O(V)$                                 | tree                                    | AL                |
+| [bellman-ford algorithm](/labyrinth/notes/cs/cs2040s/bellman-ford_algorithm) | $O(VE)$                                | no -ve weight cycle                     | AL + EL(optional) |
+| [dijkstra's algorithm](/labyrinth/notes/cs/cs2040s/dijkstra's_algorithm)   | $O((V+E)\log V)$                       | no -ve weight                           | AL                |
+| modified dijkstra          | $O(VE\log V)$                          | no -ve weight cycle                     | AL                |
+| dynamic programming        | $O(V+E)$                               | DAGs                                    | AL                |
 
 SSSP related problems
-- single-destination shortest path(multiple sources) -> transpose AL
+- single-destination shortest path(multiple sources) -> SSSP on transposed AL
 - single-source single-destination shortest path -> early termination, [dijkstra's invariant](##^884205)
 - `kth` shortest path -> dijkstra with PQ of distances, revisit
 ### Concept
@@ -39,12 +42,12 @@ Single-source shortest path(SSSP)
 }
 \begin{document}
 \begin{tikzpicture}[thick,node distance=2]
-\node[vertex,label={[text=orange]0}] (0) {0};
-\node[vertex,label={[text=orange]1},above right=of 0] (1) {1};
+\node[vertex] (0) {0};
+\node[vertex,above right=of 0] (1) {1};
 \node[vertex,below right=of 0] (2) {2};
 \node[vertex,right=3 of 1] (3) {3};
-\node[vertex,label={[text=orange]below:2},right=3 of 2] (4) {4};
-\node[vertex,label={[text=orange]4},below right=of 3] (5) {5};
+\node[vertex,right=3 of 2] (4) {4};
+\node[vertex,below right=of 3] (5) {5};
 
 \dwedge[green]{0}{1}{1};
 \dwedge{0}{2}{5};
@@ -214,7 +217,6 @@ $$
 [Dynamic Programming](/labyrinth/notes/cs/cs2040s/dynamic_programming)
 - given a DAG
 - topological sort + one pass Bellman-Ford
-- 
 ### Application
 Leetcode: [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) ^d09439
 - per-level BFS

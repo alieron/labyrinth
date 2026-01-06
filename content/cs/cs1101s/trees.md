@@ -5,8 +5,14 @@ tags:
 - lang/js
 complete: true
 ---
-### Summary
-Tree of numbers
+### Concept
+A tree of data type T is either:
+- *null*
+- or a pair,
+	- whose tail is a tree of type T
+	- and whose head is type T or a tree of type T
+
+Every tree is a list, made up only of data type T and _null_
 ```js
 const tree = list(list(1,2), 3, list(4));
 
@@ -54,17 +60,8 @@ const tree = list(list(1,2), 3, list(4));
 \end{tikzpicture}
 \end{document}
 ```
-### Concept
-A tree of data type T is either:
-- *null*
-- or a pair,
-	- whose tail is a tree of type T
-	- and whose head is type T or a tree of type T
-
-Every tree is a list, made up only of data type T and _null_
 ### Application
 Tree processing functions
-Main idea:
 - if tree/list is empty return base case
 - if not empty, process the head and tail of the tree
 ```js
@@ -83,3 +80,4 @@ function map_tree(f, tree) {
 						   : map_tree(f, sub_tree), // apply map_tree on the head as well
 			   tree);
 } 
+```

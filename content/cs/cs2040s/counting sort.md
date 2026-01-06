@@ -42,7 +42,7 @@ method countingSort(array A, integer N, integer k)
     C[A[i]]--
 ```
 ```java
-private static void countingSort(int a[], int N, int k) {
+void countingSort(int a[], int N, int k) {
     int[] count = new int[k+1];
     int[] output = new int[N];
     for (int i = 0; i < N; i++)
@@ -58,26 +58,23 @@ private static void countingSort(int a[], int N, int k) {
 ```
 
 Buckets
-- like a [queue](/labyrinth/notes/cs/cs2040s/queue_ADT), in order to preserve stability
+- like a [queue](/labyrinth/notes/cs/cs2040s/queue), in order to preserve stability
 ### Application
 Leetcode: [Sort Colors](https://leetcode.com/problems/sort-colors/description/?envType=study-plan-v2&envId=top-100-liked)
 - dutch flag problem
 
 ```java
-public void sortColors(int[] nums) {
-	int[] qty = new int[] {0, 0, 0}; // k = 3
+int[] qty = new int[] {0, 0, 0}; // k = 3
 
-	for (int i = 0; i < nums.length; i++) {
-		qty[nums[i]]++;
-	}
+for (int i = 0; i < nums.length; i++)
+	qty[nums[i]]++;
 
-	int idx = 0;
-	for (int i = 0; i < nums.length; i++) {
-		while (qty[idx] == 0)
-			idx++;
+int idx = 0;
+for (int i = 0; i < nums.length; i++) {
+	while (qty[idx] == 0)
+		idx++;
 
-		nums[i] = idx;
-		qty[idx]--;
-	}
+	nums[i] = idx;
+	qty[idx]--;
 }
 ```

@@ -33,12 +33,16 @@ Algorithm
 5. repeat 2-3 until the lowest index is the last index
 
 ```java
-for (int i = 0; i < N-1; ++i) { // N-1 iterations
-  cur_min = i;  
-  for (int j = i+1; j < n; ++j)  
-    if (A[j] < A[cur_min])
-      cur_min = j;  
-  swap(A, i, cur_min);  
+void selectionSort(int[] A) {
+	int N = A.length;
+	
+	for (int i = 0; i < N-1; ++i) { // N-1 iterations
+	  cur_min = i;  
+	  for (int j = i+1; j < n; ++j)  
+	    if (A[j] < A[cur_min])
+	      cur_min = j;  
+	  swap(A, i, cur_min);  
+	}
 }
 ```
 > "select" the current smallest

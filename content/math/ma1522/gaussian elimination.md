@@ -23,7 +23,7 @@ R_{1} \\ R_{2} \\  \\ R_{m}
 $$
 
 Existence and Uniqueness Theorem
-- A linear system is consistent iff the rightmost column is not a pivot column
+- a linear system is consistent iff the rightmost column is not a pivot column
 
 $$
 \text{No rows such that: }

@@ -46,10 +46,14 @@ Algorithm
 5. repeat 1-4 reducing the size of the array by one each time
 
 ```java
-for (int j = 0; j < N-1; ++j) // N-1 iterations
-	for (int i = 0; i < N-1; ++i) // except the last, O(N)
-		if (A[i] > A[i+1]) // comparison
-			swap(A, i, i+1); // swap in O(1)
+void bubbleSort(int[] A) {
+	int N = A.length;
+	
+	for (int j = 0; j < N-1; ++j) // N-1 iterations
+		for (int i = 0; i < N-1; ++i) // except the last, O(N)
+			if (A[i] > A[i+1]) // comparison
+				swap(A, i, i+1); // swap in O(1)
+}
 ```
 > the largest elements "bubble" to the back
 
@@ -58,28 +62,31 @@ Early termination
 - no swaps implies that the array is sorted
 
 ```java
-boolean swapped = false;
-
-for (int j = 0; j < N-1; ++j) {
-	swapped = false;
-	for (int i = 0; i < N-1; ++i) // except the last, O(N)
-		if (A[i] > A[i+1]) {
-			swap(A, i, i+1); // swap in O(1)
-			swapped = true;
-		}
-	if (!swapped) // inner loop ran without making any swaps, therefore its sorted
-		break;	
+void optBubbleSort(int[] A) {
+	int N = A.length;
+	boolean swapped = false;
+	
+	for (int j = 0; j < N-1; ++j) {
+		swapped = false;
+		for (int i = 0; i < N-1; ++i) // except the last, O(N)
+			if (A[i] > A[i+1]) {
+				swap(A, i, i+1); // swap in O(1)
+				swapped = true;
+			}
+		if (!swapped) // inner loop ran without making any swaps, therefore its sorted
+			break;	
+	}
+	// or
+	j = 0;
+	do {
+	  swapped = false; ++j;
+	  for (int i = 0; i < N-j; ++i)
+	    if (A[i] > A[i+1]) {
+	      swap(A[i], A[i+1]);
+	      swapped = true;
+	    }
+	} while (swapped);
 }
-// or
-j = 0;
-do {
-  swapped = false; ++j;
-  for (int i = 0; i < N-j; ++i)
-    if (A[i] > A[i+1]) {
-      swap(A[i], A[i+1]);
-      swapped = true;
-    }
-} while (swapped);
 ```
 ### Application
 Largest k elements
@@ -120,4 +127,4 @@ for (; n > 0; n--)
 
 pw.close();
 ```
-> make use of [BufferedReader](/labyrinth/notes/cs/cs2040s/utility_classes#^fecb85) and [PrintWriter](/labyrinth/notes/cs/cs2040s/utility_classes#^6d9f10) for faster IO
+> make use of [BufferedReader](/labyrinth/notes/cs/cs2040s/java_standard_library#^fecb85) and [PrintWriter](/labyrinth/notes/cs/cs2040s/java_standard_library#^6d9f10) for faster IO
