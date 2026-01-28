@@ -28,6 +28,7 @@ Layered MITM
 - physical layer -> Wi-Fi signals/ethernet
 ### Concept
 Data transmission ^456a7e
+- made up of [layers](/labyrinth/notes/cs/cs2105/networks#^4119c5)
 - headers for each layer attached to data(payload)
 - actual connection on the physical layer
 - might take multiple hops, ie. through routers/switches

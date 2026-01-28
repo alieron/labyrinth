@@ -129,7 +129,7 @@ Control flow
 - **direct branch** - PC replaced by a constant value specified in the instruction, ie. branch or jump
 - **indirect branch** - PC replaced by a value fetched from memory
 
-Call [stack](/labyrinth/notes/cs/cs2040s/stack)
+[Call stack](/labyrinth/notes/cs/cs2106/stack_memory)
 - LIFO
 - exists in memory
 - stack pointer(`$rsp`) indexes the top of the stack
@@ -214,7 +214,7 @@ int main() {
 \end{tikzpicture}
 \end{document}
 ```
-> similar to the stack in the [environment model](/labyrinth/notes/cs/cs1101s/environment_model)
+> similar to the stack in the [environment model](/labyrinth/notes/cs/cs1101s/environment_model), for stack memory specifics see [stack memory](/labyrinth/notes/cs/cs2106/stack_memory)
 ### Extra
 Tikz template for drawing memory frames
 ```latex

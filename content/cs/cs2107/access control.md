@@ -2,6 +2,7 @@
 tags:
   - cs2107/chaoter9
   - cs/security
+  - lang/sh
 complete: true
 next: /labyrinth/notes/cs/cs2107/intermediate_control
 prev: /labyrinth/notes/cs/cs2107/TOCTOU

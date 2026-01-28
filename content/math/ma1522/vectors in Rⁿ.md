@@ -59,7 +59,7 @@ x_{1}\\ \vdots \\ x_{n}
 \end{pmatrix}, \ for \ \boldsymbol{x} \in \mathbb{R}^n
 $$
 
-Vector space, satisfies
+Vector space, satisfies ^f4d609
 $$
 \begin{align*}
 \text{Closure under Linear Combination:} &&& \mathbf{u},\mathbf{v}\in V \implies \forall a,b \in \mathbb{R} \ a\mathbf{u}+b\mathbf{v}\in V

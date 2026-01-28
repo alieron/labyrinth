@@ -12,7 +12,7 @@ Orthogonal set
 - vectors are pairwise orthogonal
 
 $$
-S=\{\mathbf{v}_1,\mathbf{v}_2,...,\mathbf{v}_k\}\text{ is orthogonal if for every }i\neq j, \quad \mathbf{v}_i\cdot\mathbf{v}_j=0
+S=\{\mathbf{v}_1,\mathbf{v}_2,...,\mathbf{v}_k\}\text{ is orthogonal if for every }i, j=1,\dots,k, \quad \mathbf{v}_i\cdot\mathbf{v}_j=\begin{cases}0 &\text{ if }i\neq j\\|\mathbf{v}_{i}|^{2}&\text{ if }i=j\end{cases}
 $$
 > can include the 0 vector
 

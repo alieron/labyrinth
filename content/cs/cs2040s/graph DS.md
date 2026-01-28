@@ -170,7 +170,7 @@ $$
 > undirected trees may have trivial cycles between 2 vertices, they are ignored
 > directed trees are DAGs
 
-Complete graph
+Complete graph ^097f38
 - has an edge between every pair
 
 ```tikz

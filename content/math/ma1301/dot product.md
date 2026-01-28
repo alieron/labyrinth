@@ -8,6 +8,21 @@ next: /labyrinth/notes/math/ma1301/cross_product
 
 ---
 ### Summary
+Properties of dot products
+$$
+\begin{align*}
+\text{Distributivity:} &&& \mathbf{a}\cdot(\mathbf{b}+\mathbf{c}) = \mathbf{a}\cdot \mathbf{b}+\mathbf{a}\cdot \mathbf{c} \\
+\\
+\text{Symmetry:} &&& \mathbf{a}\cdot \mathbf{b}=\mathbf{b}\cdot \mathbf{a} \\
+\\
+\text{Bilinearity:} &&& \lambda(\mathbf{a}\cdot \mathbf{b}) = (\lambda \mathbf{a})\cdot \mathbf{b}=\mathbf{a}\cdot(\lambda \mathbf{b})\text{, for }\lambda \in \mathbb{R} \\
+\\
+\text{Self-product:} &&& \mathbf{a}\cdot \mathbf{a} = |\mathbf{a}|^2 \\
+\\
+\text{Orthogonal-product:} &&& \mathbf{a}\cdot \mathbf{b} = 0\text{, if } \mathbf{a} \perp \mathbf{b}
+\end{align*}
+$$
+### Concept
 Scalar/dot product, sum of the product of each component
 $$
 \mathbf{a}\cdot \mathbf{b} = x_{a}x_{b}+y_{a}y_{b}+z_{a}z_{b}\\
@@ -22,19 +37,6 @@ $$
 \end{align*}
 $$
 
-Rules
-$$
-\begin{align*}
-\mathbf{a}\cdot \mathbf{a} & = |\mathbf{a}|^2 \\
-\\
-\mathbf{a}\cdot \mathbf{b} & = 0, \quad if \ \mathbf{a} \perp \mathbf{b} \\
-\\
-\lambda(\mathbf{a}\cdot \mathbf{b}) & = (\lambda \mathbf{a})\cdot \mathbf{b}=\mathbf{a}\cdot(\lambda \mathbf{b}), \quad for \ \lambda \in \mathbb{R} \\
-\\
-\mathbf{a}\cdot(\mathbf{b}+\mathbf{c}) & = \mathbf{a}\cdot \mathbf{b}+\mathbf{a}\cdot \mathbf{c} \\
-\end{align*}
-$$
-
 Compound vectors
 $$
 \begin{align*}
@@ -44,7 +46,7 @@ $$
 & = \sqrt{ \mathbf{a}\cdot \mathbf{a} + 2(\mathbf{a}\cdot \mathbf{b}) + \mathbf{b}\cdot \mathbf{b} } \qquad \text{(Quadratic Expansion)}
 \end{align*}
 $$
-### Concept
+
 Expanding the scalar product
 $$
 \begin{align*}
