@@ -2,7 +2,7 @@
 tags:
   - cs2106/chapter2
   - cs/low_level
-complete: false
+complete: true
 prev: /labyrinth/notes/cs/cs2106/OS
 next: /labyrinth/notes/cs/cs2106/stack_memory
 
@@ -34,9 +34,21 @@ Data
 - no definite deallocation timing
 
 #### 5 state process model
-- processes might need to wait, user input/network
+- create: spawn new process
+- admit: process becomes ready to run
+- switch(scheduled): process is selected to be run
+- switch(release): process gives up CPU, either voluntarily or by scheduler
+- event wait: process requests service that is unavailable or in progress, ie. I/O, user input, network request
+- event occurs: request is fulfilled and process can continue
+
+![[5-state_model.png]]
 
 Queuing model
+- global view from the OS's perspective
+- 1 CPU can only run <= 1 process at a time
 
+![[queuing-model.png]]
 
 #### Process control block(PCB)
+- entry in the process table
+- contains the whole context required to describe one process

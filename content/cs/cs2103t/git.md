@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2103t
+  - cs2103t/rcs
   - cs/software_eng
   - lang/sh
 complete: false

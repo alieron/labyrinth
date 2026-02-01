@@ -33,7 +33,7 @@ $$
 \varphi(mn)=\varphi(m)\varphi(n), \ where \ gcd(m, n) = 1
 $$
 ### Application
-Application in [math/RSA](#)
+Application in [RSA](/labyrinth/notes/math/abstract_algebra/RSA)
 $$
 \begin{gather*}
 n = pq, \ where \ p \ and \ q \ are \ primes \\

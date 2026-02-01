@@ -8,6 +8,25 @@ next: /labyrinth/notes/cs/cs2100/data_representation
 
 ---
 ### Summary
+#### Operator precedence
+```c
+1.  ++(suffix) --(suffix) () [] . ->
+2.  ++(prefix) --(prefix) ! ~ (type)(cast) *(dereference) &(address-of) sizeof
+3.  * / %
+4.  + -
+5.  << >>
+6.  < <= > >=
+7.  == !=
+8.  &(logical)
+9.  ^
+10. |
+11. &&
+12. ||
+13. ?: (ternary)
+14. = += -= *= /= %= <<= >>= &= ^= |=
+15. ,
+```
+
 Preprocessor directives
 ```c
 // importing header files/libraries

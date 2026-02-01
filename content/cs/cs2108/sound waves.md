@@ -7,7 +7,7 @@ next: /labyrinth/notes/cs/cs2108/basis_functions
 
 ---
 ### Concept
-Sinusoids
+#### Sinusoids
 $$
 \begin{align*}
 \text{Continuous:} &&& y_{sin}(t) = a \sin(2\pi ft) && y_{cos}(t)=b\cos(2\pi ft) \\
@@ -29,8 +29,7 @@ A \sin(\omega t + \phi) &= A\sin(\omega t)\cos \phi + A\cos(\omega t)\sin \phi \
 &= a\sin(\omega t) + b\cos(\omega t)
 \end{align*}
 $$
-
-Sum of frequencies
+#### Sum of frequencies
 - any sound is a combination of tones
 - a large enough number of frequencies $K$, can represent a sound well enough
 
@@ -46,8 +45,9 @@ sig[n] &= \sum_{k=1}^{K} y[n,k] \\
 \end{gather*}
 $$
 
-WIP
 Periodic signals
+- fundemental frequency -> defines the frequency at which the combined signal oscillates at
+
 - base case with 2 frequencies
 $$
 \begin{gather*}
@@ -60,7 +60,7 @@ h\text{ is periodic }\iff \frac{p}{q}\text{ is rational} \\
 \text{Integer multiples of }\omega_{0}:\qquad p=n_{1}\omega_{0}, \ n_{1}\in \mathbb{Z} \quad \ q=n_{2}\omega_{0},\ n_{2}\in \mathbb{Z}
 \end{gather*}
 $$
-> $\sin$ and $\cos$ are interchangeable since all that maters is the angluar velocity of each tone
+> sine and cosine are interchangeable here since all that maters is the angluar frequency of each tone
 
 - large number of frequencies
 $$

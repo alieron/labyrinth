@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2103t
+  - cs2103t/java
   - cs/software_eng
 complete: false
 next: /labyrinth/notes/cs/cs2103t/git
@@ -27,6 +27,7 @@ Class
 | --------- | ---------------------------------- |
 | `public`  | accessible to any other class      |
 | *default* | accessible within the same package |
+
 Attributes, methods and constructors
 
 | Modifier    | Permissions                                            |

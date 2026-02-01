@@ -3,7 +3,7 @@ tags:
   - cs/networking
   - cs2105/chapter1
 complete: true
-next: /labyrinth/notes/cs/cs2105/application_layer
+next: /labyrinth/notes/cs/cs2105/network_delays
 
 ---
 ### Summary
@@ -20,30 +20,6 @@ next: /labyrinth/notes/cs/cs2105/application_layer
 | Exa    | 10¹⁸ |
 | Zetta  | 10²¹ |
 | Yotta  | 10²⁴ |
-#### Packet loss
-- packet is dropped if the router's buffer is full
-- previous node/source may retransmit if no reply is received
-#### Packet delay
-1. processing delay
-	- check errors and determine output link
-
-2. queueing delay
-	- time spent waiting in the queue
-
-3. transmission delay
-	- for packets of $L$-bits
-	- at transmission rate $R$
-$$
-d_{\text{trans}} = \frac{L\ \text{(bits)}\qquad}{R\ \text{(bits/sec)}}
-$$
-
-4. propagation delay
-	- for physical link of length $l$
-	- at the propagation speed of the medium $s$
-$$
-d_{\text{prop}} = \frac{l \ \text{(m)} \ \ }{s \ \text{(m/s)}}
-$$
-> propagation speed of light in a fiber optic cable is `~2×10⁸ m/sec`
 ### Concept
 #### Internet
 - network of connected computing devices

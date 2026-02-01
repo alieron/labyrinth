@@ -253,7 +253,6 @@ $$
 \\
 & \text{(F2) Suppose } (y,x)\in f^{-1} \land (y, x')\in f^{-1}\\
 & \quad\begin{split}
-
 \end{split} \\
 \end{split} \\
 \\
@@ -261,12 +260,10 @@ $$
 & \quad\begin{split}
 & \text{(onto) Consider any }x \in X \\
 & \quad\begin{split}
-
 \end{split} \\
 \\
 & \text{(1-1) Suppose } f^{-1}(y)=f^{-1}(y') = x\\
 & \quad\begin{split}
-
 \end{split} \\
 \end{split} \\
 \end{align*}

@@ -66,7 +66,7 @@ $$
 \end{align*}
 $$
 
-Inner/[dot product](/labyrinth/notes/math/ma1301/dot_product)
+Inner/[dot product](/labyrinth/notes/math/ma1301/dot_product) ^8d371f
 $$
 \begin{gather*}
 \mathbf{u}\cdot \mathbf{v}=\mathbf{u}^T\mathbf{v}=\sum_{i=1}^{n} u_{i}v_{i}\\
