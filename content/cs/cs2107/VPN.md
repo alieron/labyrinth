@@ -4,7 +4,7 @@ tags:
   - cs/security
   - cs/networking
 complete: false
-prev: /labyrinth/notes/cs/cs2107/firewall_and_IDS
+prev: /labyrinth/notes/cs/cs2107/firewall_&_IDS
 next: /labyrinth/notes/cs/cs2107/web_security
 
 ---

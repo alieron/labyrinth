@@ -9,7 +9,7 @@ next: /labyrinth/notes/cs/cs2100/structural_hazards
 
 ---
 ### Summary
-Pipelined [datapath](/labyrinth/notes/cs/cs2100/MIPS_datapath)
+Pipelined [datapath](/labyrinth/notes/cs/cs2100/mips_datapath)
 
 ![[pipeline_datapath.png]]
 
@@ -33,7 +33,7 @@ Pipeline registers
 	- memory read data
 	- WR
 
-Pipeline [control path](/labyrinth/notes/cs/cs2100/MIPS_control_path)^f8d082
+Pipeline [control path](/labyrinth/notes/cs/cs2100/mips_control_path)^f8d082
 
 ![[pipeline_control.png]] 
 ### Concept

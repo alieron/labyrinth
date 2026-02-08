@@ -4,8 +4,8 @@ tags:
   - cs/low_level
   - lang/c
 complete: true
-prev: /labyrinth/notes/cs/cs2100/strings_in_C
-next: /labyrinth/notes/cs/cs2100/MIPS
+prev: /labyrinth/notes/cs/cs2100/c_strings
+next: /labyrinth/notes/cs/cs2100/mips
 
 ---
 ### Summary
@@ -23,7 +23,7 @@ typedef struct {
 ```
 
 Struct variable
-- similar to creating an [instance](/labyrinth/notes/cs/cs2030s/classes#^29c4ea) of a class
+- similar to creating an [instance](/labyrinth/notes/cs/cs2030s/java_classes#^29c4ea) of a class
 
 ```c
 // declaration
@@ -49,7 +49,7 @@ p5.label = p4.label;
 ```
 ### Concept
 Structs as function parameters
-- [pass-by-value](/labyrinth/notes/cs/cs2100/functions_in_C#^f29a98)
+- [pass-by-value](/labyrinth/notes/cs/cs2100/c_functions#^f29a98)
 - struct is copied into the local variable
 
 ```c
@@ -137,4 +137,4 @@ printf("%d\n", line[2].y);      // 0
 printf("%d\n", line[2].label);  // 0
 // effectively, all the bytes it would have occupied get initialized to 0
 ```
-> keep in mind that the [size of a pointer](/labyrinth/notes/cs/cs2100/pointers#^4af4c3) depends on architecture
+> keep in mind that the [size of a pointer](/labyrinth/notes/cs/cs2100/c_pointers#^4af4c3) depends on architecture

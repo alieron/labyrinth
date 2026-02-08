@@ -125,7 +125,7 @@ Attacker's goals
 - run malicious code
 ### Concept
 Control flow
-- incrementation of the [program counter(PC)](/labyrinth/notes/cs/cs2100/MIPS_datapath#^cfdb07)
+- incrementation of the [program counter(PC)](/labyrinth/notes/cs/cs2100/mips_datapath#^cfdb07)
 - **direct branch** - PC replaced by a constant value specified in the instruction, ie. branch or jump
 - **indirect branch** - PC replaced by a value fetched from memory
 

@@ -14,7 +14,7 @@ next: /labyrinth/notes/cs/cs2106/stack_memory
 
 | Memory context                                             | Hardware context                                                                                                                           | OS context                                                                   |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
-| - code/machine code<br>- data<br>- **stack**<br>- **heap** | - [registers](/labyrinth/notes/cs/cs2100/MIPS#^44e5a0)<br>- [program counter](/labyrinth/notes/cs/cs2100/MIPS_datapath#^cfdb07)<br>- return PC<br>- **stack pointer**<br>- **frame pointer** | - process properties<br>- resources used<br>- **pid**<br>- **process state** |
+| - code/machine code<br>- data<br>- **stack**<br>- **heap** | - [registers](/labyrinth/notes/cs/cs2100/mips#^44e5a0)<br>- [program counter](/labyrinth/notes/cs/cs2100/mips_datapath#^cfdb07)<br>- return PC<br>- **stack pointer**<br>- **frame pointer** | - process properties<br>- resources used<br>- **pid**<br>- **process state** |
 #### Memory regions
 Text
 - stores the instructions of the program

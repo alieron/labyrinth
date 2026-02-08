@@ -32,7 +32,7 @@ enum Status {
 }
 ```
 #### Subclasses
-- enum constants can be an [anonymous subclass](/labyrinth/notes/cs/cs2030s/nested_classes#^85781f) of the base enum class
+- enum constants can be an [anonymous subclass](/labyrinth/notes/cs/cs2030s/java_nested_classes#^85781f) of the base enum class
 
 ```java
 enum Op {

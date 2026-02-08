@@ -5,8 +5,8 @@ tags:
   - cs/data_structures
   - lang/c
 complete: true
-prev: /labyrinth/notes/cs/cs2100/functions_in_C
-next: /labyrinth/notes/cs/cs2100/strings_in_C
+prev: /labyrinth/notes/cs/cs2100/c_functions
+next: /labyrinth/notes/cs/cs2100/c_strings
 
 ---
 Succeeds: [arrays](/labyrinth/notes/cs/cs1101s/arrays)
@@ -85,7 +85,7 @@ int sumArray(int *arr, int size) { 
 }
 ```
 
-Arrays with [pointer arithmetic](/labyrinth/notes/cs/cs2100/pointers#^d5692f)
+Arrays with [pointer arithmetic](/labyrinth/notes/cs/cs2100/c_pointers#^d5692f)
 ```c
 int a[3] = {1, 2, 3};
 

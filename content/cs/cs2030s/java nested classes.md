@@ -4,8 +4,8 @@ tags:
   - cs/oop
   - lang/java
 complete: true
-prev: /labyrinth/notes/cs/cs2030s/immutable_classes
-next: /labyrinth/notes/cs/cs2030s/functional_interfaces
+prev: /labyrinth/notes/cs/cs2030s/java_immutable_classes
+next: /labyrinth/notes/cs/cs2030s/java_functional_interfaces
 ---
    
 ### Summary

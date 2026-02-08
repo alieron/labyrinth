@@ -4,8 +4,8 @@ tags:
 - cs/oop
 - lang/java
 complete: true
-prev: /labyrinth/notes/cs/cs2030s/wildcards
-next: /labyrinth/notes/cs/cs2030s/nested_classes
+prev: /labyrinth/notes/cs/cs2030s/java_wildcards
+next: /labyrinth/notes/cs/cs2030s/java_nested_classes
 ---
    
 ### Summary

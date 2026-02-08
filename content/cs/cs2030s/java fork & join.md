@@ -4,7 +4,7 @@ tags:
   - cs/paradigm
   - lang/java
 complete: true
-prev: /labyrinth/notes/cs/cs2030s/async
+prev: /labyrinth/notes/cs/cs2030s/java_async
 ---
 
 ### Summary

@@ -5,7 +5,7 @@ tags:
   - lang/mips
 complete: true
 prev: /labyrinth/notes/cs/cs2100/memory_addressing
-next: /labyrinth/notes/cs/cs2100/MIPS_control_path
+next: /labyrinth/notes/cs/cs2100/mips_control_path
 
 ---
 ### Summary

@@ -4,7 +4,7 @@ tags:
 - cs/fundamentals
 - lang/java
 complete: true
-prev: /labyrinth/notes/cs/cs2030s/wrapper_classes
+prev: /labyrinth/notes/cs/cs2030s/java_wrapper_classes
 next: /labyrinth/notes/cs/cs2030s/generics
 ---
    

@@ -5,7 +5,7 @@ tags:
   - lang/pgf-tikz
 complete: true
 prev: /labyrinth/notes/cs/cs2100/MSI_components
-next: /labyrinth/notes/cs/cs2100/MIPS_pipelining
+next: /labyrinth/notes/cs/cs2100/mips_pipelining
 
 ---
 ### Summary

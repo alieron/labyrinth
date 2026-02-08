@@ -162,7 +162,7 @@ sw  $15, 100($2)  #5
 \end{tikzpicture}
 \end{document}
 ```
-> recall that [MEM/WB](/labyrinth/notes/cs/cs2100/MIPS_pipelining#^8849f3) also stores the ALU result, and take forwarded data from the previous cycle only
+> recall that [MEM/WB](/labyrinth/notes/cs/cs2100/mips_pipelining#^8849f3) also stores the ALU result, and take forwarded data from the previous cycle only
 
 Load word
 - requires memory access

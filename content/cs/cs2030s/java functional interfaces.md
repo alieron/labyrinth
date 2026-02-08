@@ -4,7 +4,7 @@ tags:
   - cs/functional_programming
   - lang/java
 complete: true
-prev: /labyrinth/notes/cs/cs2030s/nested_classes
+prev: /labyrinth/notes/cs/cs2030s/java_nested_classes
 next: /labyrinth/notes/cs/cs2030s/monads_&_functors
 ---
    
@@ -114,7 +114,7 @@ x -> code // Single parameter
 x -> { code; return code; } // Multiline
 ```
 
-[Anonymous classes](/labyrinth/notes/cs/cs2030s/nested_classes#^85781f) of a functional interface
+[Anonymous classes](/labyrinth/notes/cs/cs2030s/java_nested_classes#^85781f) of a functional interface
 ```java
 Supplier<Integer> s = () -> 1; // is the same as
 Supplier<Integer> s = new Supplier<>() { public Integer get() { return 1; } };

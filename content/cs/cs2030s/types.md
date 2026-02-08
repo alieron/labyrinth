@@ -4,7 +4,7 @@ tags:
 - cs/fundamentals
 - lang/java
 complete: true
-next: /labyrinth/notes/cs/cs2030s/classes
+next: /labyrinth/notes/cs/cs2030s/java_classes
 ---
 
 ### Summary

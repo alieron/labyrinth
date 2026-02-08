@@ -5,7 +5,7 @@ tags:
   - lang/mips
 complete: true
 prev: /labyrinth/notes/cs/cs2100/storage_architecture
-next: /labyrinth/notes/cs/cs2100/MIPS_datapath
+next: /labyrinth/notes/cs/cs2100/mips_datapath
 
 ---
 ### Summary
@@ -32,15 +32,15 @@ $$
 > affects the order of bytes within a multi-byte word, within the byte nothing changes
 
 Register addressing
-- [R-type](/labyrinth/notes/cs/cs2100/instruction_encoding#^393b46)
+- [R-type](/labyrinth/notes/cs/cs2100/mips_instruction_encoding#^393b46)
 - operand is specified in registers
 
 Immediate addressing
-- [I-type](/labyrinth/notes/cs/cs2100/instruction_encoding#^70d48c)
+- [I-type](/labyrinth/notes/cs/cs2100/mips_instruction_encoding#^70d48c)
 - operand is specified in the instruction
 
 Displacement addressing
-- [I-type](/labyrinth/notes/cs/cs2100/instruction_encoding#^70d48c) - load/store
+- [I-type](/labyrinth/notes/cs/cs2100/mips_instruction_encoding#^70d48c) - load/store
 - operand is in memory
 ### Concept
 Addressing modes ^d52034

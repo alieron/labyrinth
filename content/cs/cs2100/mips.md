@@ -3,7 +3,7 @@ tags:
   - cs2100/chapter3
   - cs/low_level
 complete: true
-prev: /labyrinth/notes/cs/cs2100/structs
+prev: /labyrinth/notes/cs/cs2100/c_structs
 next: /labyrinth/notes/cs/cs2100/arithmetic_instructions
 
 ---

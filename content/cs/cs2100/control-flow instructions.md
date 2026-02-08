@@ -6,7 +6,7 @@ tags:
   - lang/mips
 complete: true
 prev: /labyrinth/notes/cs/cs2100/memory_instructions
-next: /labyrinth/notes/cs/cs2100/instruction_encoding
+next: /labyrinth/notes/cs/cs2100/mips_instruction_encoding
 
 ---
 ### Summary

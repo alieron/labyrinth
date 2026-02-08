@@ -51,7 +51,7 @@ Domain Name System(DNS) ^cc1630
 \end{tikzpicture}
 \end{document}
 ``` 
-> the DNS is also a single point of failure for the network a [DoS](/labyrinth/notes/cs/cs2107/denial_of_service) can target the DNS server to indirectly deny availability to anotehr service
+> the DNS is also a single point of failure for the network a [DoS](/labyrinth/notes/cs/cs2107/denial_of_service) can target the DNS server to indirectly deny availability to another service
 
 DNS spoofing
 - as long as QID is known

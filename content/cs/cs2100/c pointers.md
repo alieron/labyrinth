@@ -5,7 +5,7 @@ tags:
   - lang/c
 complete: true
 prev: /labyrinth/notes/cs/cs2100/fixed_&_floating_point
-next: /labyrinth/notes/cs/cs2100/functions_in_C
+next: /labyrinth/notes/cs/cs2100/c_functions
 
 ---
 ### Summary

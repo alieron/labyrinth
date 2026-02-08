@@ -33,7 +33,7 @@ Defense
 Buffer overflow
 - exploit implementation bugs
 - unsafe functions
-- involves [strings](/labyrinth/notes/cs/cs2100/strings_in_C)
+- involves [strings](/labyrinth/notes/cs/cs2100/c_strings)
 > pay attention to the null terminating character
 
 Canary

@@ -8,7 +8,7 @@ complete: true
 ---
 ### Concept
 #### Function pointer
-- [pointer](/labyrinth/notes/cs/cs2100/pointers) to a function
+- [pointer](/labyrinth/notes/cs/cs2100/c_pointers) to a function
 - refer to functions as variables
 - makes [higher order functions](/labyrinth/notes/cs/cs1101s/higher_order_functions) possible
 

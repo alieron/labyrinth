@@ -3,7 +3,7 @@ tags:
   - cs2100/chapter4
   - cs/low_level
 complete: true
-prev: /labyrinth/notes/cs/cs2100/instruction_encoding
+prev: /labyrinth/notes/cs/cs2100/mips_instruction_encoding
 next: /labyrinth/notes/cs/cs2100/storage_architecture
 
 ---
@@ -85,7 +85,7 @@ $$
 \end{tikzpicture}
 \end{document}
 ```
-> think of the `x+y` as the `opcode` and `funct` in MIPS [R-type](/labyrinth/notes/cs/cs2100/instruction_encoding#^393b46) instructions
+> think of the `x+y` as the `opcode` and `funct` in MIPS [R-type](/labyrinth/notes/cs/cs2100/mips_instruction_encoding#^393b46) instructions
 
 - maximise Type-A
 

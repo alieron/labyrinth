@@ -3,7 +3,7 @@ tags:
   - cs2100/chapter7
   - math/logic
 complete: true
-prev: /labyrinth/notes/cs/cs2100/MIPS_control_path
+prev: /labyrinth/notes/cs/cs2100/mips_control_path
 next: /labyrinth/notes/cs/cs2100/standard_forms
 
 ---

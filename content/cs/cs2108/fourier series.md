@@ -26,7 +26,7 @@ Strength
 
 $$
 \begin{align*}
-X(f_{m}) &= \braket{ sig[n] | \cos(\omega_{m}t) } - j \braket{ sig[n] | \sin(\omega_{m}t) } \\
+X(\omega_{m}) &= \braket{ sig[n] | \cos(\omega_{m}t) } - j \braket{ sig[n] | \sin(\omega_{m}t) } \\
 &= {\color{aqua} \frac{T}{2}(b_{m}-ja_{m}) }
 \end{align*}
 $$
@@ -36,7 +36,7 @@ Magnitude
 - represents the actual amplitude of the frequency
 
 $$
-|X(f_{m})|=\frac{T}{2}\sqrt{ b_{m}^{2}+a_{m}^{2} }
+|X(\omega_{m})|=\frac{T}{2}\sqrt{ b_{m}^{2}+a_{m}^{2} }
 $$
 
 Phase
@@ -49,7 +49,7 @@ $$
 Simplify with [euler's formula](/labyrinth/notes/math/imagine/complex_exponentials#^df8f33)
 $$
 \begin{align*}
-X(f_{m}) &= \braket{ sig[n] | \cos(\omega_{m}t) } - j \braket{ sig[n] | \sin(\omega_{m}t) } \\
+X(\omega_{m}) &= \braket{ sig[n] | \cos(\omega_{m}t) } - j \braket{ sig[n] | \sin(\omega_{m}t) } \\
 &= \int_{0}^{T}(sig[n])\cos(\omega_{m}t) \ dt - j \int_{0}^{T}(sig[n])\sin(\omega_{m}t) \ dt \\
 &= \int_{0}^{T}(sig[n])e^{-j\omega_{m}t} \ dt
 \end{align*}
@@ -58,5 +58,5 @@ $$
 - the expansion of a periodic function into a sum of sine and cosine
 
 $$
-X(f_{k}) = \int_{0}^{T} x(t) \ e^{-j 2\pi f_{k}t} \ dt
+X(\omega) = \int_{0}^{T} x(t) \ e^{-j \omega t} \ dt
 $$

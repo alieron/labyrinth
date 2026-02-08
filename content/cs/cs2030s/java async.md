@@ -5,7 +5,7 @@ tags:
 - lang/java
 complete: true
 prev: /labyrinth/notes/cs/cs2030s/parallelism
-next: /labyrinth/notes/cs/cs2030s/fork_and_join
+next: /labyrinth/notes/cs/cs2030s/java_fork_&_join
 ---
    
 ### Summary

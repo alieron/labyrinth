@@ -4,6 +4,7 @@ tags:
   - cs/low_level
 complete: false
 prev: /labyrinth/notes/cs/cs2106/syscalls
+next: /labyrinth/notes/cs/cs2106/process_scheduling
 
 ---
 ### Concept
@@ -16,6 +17,9 @@ prev: /labyrinth/notes/cs/cs2106/syscalls
 - synchronous, occurs due to program execution
 - program is terminated and exception handler is executed automatically
 #### Interrupts
+
+^716ad3
+
 - external events that interrupt the program execution
 - e.g. timer, mouse movement, keyboard input
 - program is suspended and interrupt handler is executed automatically

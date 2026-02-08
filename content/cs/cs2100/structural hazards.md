@@ -3,7 +3,7 @@ tags:
   - cs2100/chapter11
   - cs/low_level
 complete: true
-prev: /labyrinth/notes/cs/cs2100/MIPS_pipelining
+prev: /labyrinth/notes/cs/cs2100/mips_pipelining
 next: /labyrinth/notes/cs/cs2100/data_hazards
 
 ---

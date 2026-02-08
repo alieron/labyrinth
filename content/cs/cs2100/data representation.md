@@ -5,12 +5,12 @@ tags:
   - cs/low_level
   - lang/c
 complete: true
-prev: /labyrinth/notes/cs/cs2100/C
+prev: /labyrinth/notes/cs/cs2100/c
 next: /labyrinth/notes/cs/cs2100/number_systems
 
 ---
 ### Summary
-Primitive types in [C](/labyrinth/notes/cs/cs2100/C) ^9f8289
+Primitive types in [c](/labyrinth/notes/cs/cs2100/c) ^9f8289
 
 | kind           | type                 | size(bytes) | size(bits) | value range                                 |
 | -------------- | -------------------- | ----------- | ---------- | ------------------------------------------- |

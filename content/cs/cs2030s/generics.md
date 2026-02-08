@@ -4,8 +4,8 @@ tags:
 - cs/oop
 - lang/java
 complete: true
-prev: /labyrinth/notes/cs/cs2030s/exceptions
-next: /labyrinth/notes/cs/cs2030s/wildcards
+prev: /labyrinth/notes/cs/cs2030s/java_exceptions
+next: /labyrinth/notes/cs/cs2030s/java_wildcards
 ---
    
 ### Summary

@@ -5,7 +5,7 @@ tags:
   - lang/c
   - lang/mips
 complete: true
-prev: /labyrinth/notes/cs/cs2100/MIPS
+prev: /labyrinth/notes/cs/cs2100/mips
 next: /labyrinth/notes/cs/cs2100/logical_instructions
 
 ---

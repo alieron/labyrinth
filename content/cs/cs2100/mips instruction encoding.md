@@ -95,7 +95,7 @@ Program counter
 - next we can assume instructions are word aligned, so we can ignore the last two binary places
 
 Encoding registers
-- use the [register numbers](/labyrinth/notes/cs/cs2100/MIPS#^44e5a0)
+- use the [register numbers](/labyrinth/notes/cs/cs2100/mips#^44e5a0)
 ### Application
 Add instruction(R-type)
 ```mips

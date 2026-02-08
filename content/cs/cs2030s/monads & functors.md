@@ -5,8 +5,8 @@ tags:
   - cs/paradigm
   - lang/java
 complete: true
-prev: /labyrinth/notes/cs/cs2030s/functional_interfaces
-next: /labyrinth/notes/cs/cs2030s/streams_II
+prev: /labyrinth/notes/cs/cs2030s/java_functional_interfaces
+next: /labyrinth/notes/cs/cs2030s/java_streams
 ---
    
 ### Summary

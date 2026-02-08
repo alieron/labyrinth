@@ -5,7 +5,7 @@ tags:
 - lang/java
 complete: true
 prev: /labyrinth/notes/cs/cs2030s/LSP
-next: /labyrinth/notes/cs/cs2030s/wrapper_classes
+next: /labyrinth/notes/cs/cs2030s/java_wrapper_classes
 ---
    
 ### Summary

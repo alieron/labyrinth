@@ -230,7 +230,7 @@ Control hazard
 - during branching
 
 Branch decision
-- made during the [MEM stage](/labyrinth/notes/cs/cs2100/MIPS_pipelining#^f8d082)
+- made during the [MEM stage](/labyrinth/notes/cs/cs2100/mips_pipelining#^f8d082)
 - or with early resolution in the ID stage
 
 Reducing branch penalty

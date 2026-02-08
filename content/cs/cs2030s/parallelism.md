@@ -5,7 +5,7 @@ tags:
   - lang/java
 complete: true
 prev: /labyrinth/notes/cs/cs2030s/monads_&_functors
-next: /labyrinth/notes/cs/cs2030s/async
+next: /labyrinth/notes/cs/cs2030s/java_async
 ---
    
 ### Summary
@@ -36,7 +36,7 @@ Stateful
 - the variable might change during the execution of the stream
 - need to ensure that state updates are visible to all parallel subtasks
 
-[Side effects](/labyrinth/notes/cs/cs2030s/functional_interfaces#^cdd19a)
+[Side effects](/labyrinth/notes/cs/cs2030s/java_functional_interfaces#^cdd19a)
 - modifications to non-thread-safe data structures such as `CopyOnWriteArrayList`
 ```java
 List<Integer> list = new ArrayList<>(
@@ -121,7 +121,7 @@ Parallel
 - parallel programs are concurrent
 ![[parallel.png|600]]
 
-Parallel [stream](/labyrinth/notes/cs/cs2030s/streams_II)
+Parallel [stream](/labyrinth/notes/cs/cs2030s/java_streams)
 - operations must not interfere with data in the stream
 - mostly stateless
 - minimal side effects

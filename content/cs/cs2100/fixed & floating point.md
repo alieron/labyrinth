@@ -5,7 +5,7 @@ tags:
   - lang/c
 complete: true
 prev: /labyrinth/notes/cs/cs2100/excess-n
-next: /labyrinth/notes/cs/cs2100/pointers
+next: /labyrinth/notes/cs/cs2100/c_pointers
 
 ---
 ### Summary

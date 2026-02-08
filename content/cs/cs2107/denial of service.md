@@ -4,7 +4,7 @@ tags:
   - cs/security
   - cs/networking
 complete: true
-next: /labyrinth/notes/cs/cs2107/firewall_and_IDS
+next: /labyrinth/notes/cs/cs2107/firewall_&_IDS
 prev: /labyrinth/notes/cs/cs2107/ARP_poisoning
 
 ---

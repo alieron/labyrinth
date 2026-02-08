@@ -1,6 +1,7 @@
 ---
 tags:
   - math/linear_algebra
+  - math/analysis
 complete: false
 ---
 ### Summary
@@ -62,7 +63,7 @@ $$
 &&&V\text{ is an inner product space over field }F \iff \\
 \\
 1) &&& x,y\in V \implies \forall a,b \in F \ ax+by\in V & \text{(Vector Space)} \\
-2) &&& \exists \braket{ \cdot | \cdot } : V\times V\to F 
+2) &&& \exists \braket{ \cdot | \cdot } : V\times V\to F \text{ is a valid inner product}
 \end{align*}
 $$
 

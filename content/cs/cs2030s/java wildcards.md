@@ -5,7 +5,7 @@ tags:
 - lang/java
 complete: true
 prev: /labyrinth/notes/cs/cs2030s/generics
-next: /labyrinth/notes/cs/cs2030s/immutable_classes
+next: /labyrinth/notes/cs/cs2030s/java_immutable_classes
 ---
    
 ### Summary
@@ -53,7 +53,7 @@ $$
 $$
 ![[super.png]]
 ### Concept
-Java generics classes are [invariant](/labyrinth/notes/cs/cs2030s/wrapper_classes#^f8f5bb)
+Java generics classes are [invariant](/labyrinth/notes/cs/cs2030s/java_wrapper_classes#^f8f5bb)
 $$
 \verb|L<A>| \centernot{<:} \verb|L<B>| \quad \text{and} \quad \verb|L<B>| \centernot{<:} \verb|L<A>|
 $$

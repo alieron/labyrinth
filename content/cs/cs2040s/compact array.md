@@ -20,7 +20,7 @@ Compact array
 | `remove(i)`    | shift elements `[i+1,n−1]` left                  | - $O(1)$, remove last element<br>- $O(n)$, remove first element, shift the other elements |
 
 Strengths
-- direct indexing $O(1)$, elements are [contiguous](/labyrinth/notes/cs/cs2100/arrays_in_C)
+- direct indexing $O(1)$, elements are [contiguous](/labyrinth/notes/cs/cs2100/c_arrays)
 - good if the maximum $m$ is known
 
 Limitations

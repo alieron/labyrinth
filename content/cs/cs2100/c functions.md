@@ -4,8 +4,8 @@ tags:
   - cs/low_level
   - lang/c
 complete: true
-prev: /labyrinth/notes/cs/cs2100/pointers
-next: /labyrinth/notes/cs/cs2100/arrays_in_C
+prev: /labyrinth/notes/cs/cs2100/c_pointers
+next: /labyrinth/notes/cs/cs2100/c_arrays
 
 ---
 ### Summary
