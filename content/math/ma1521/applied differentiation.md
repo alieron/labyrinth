@@ -8,7 +8,7 @@ next: /labyrinth/notes/math/ma1521/integration_II
 ---
    
 ### Summary
-Equations of [tangent and normal](/labyrinth/notes/math/ma1301/tangent_and_normal)
+Equations of [tangent & normal](/labyrinth/notes/math/ma1301/tangent_&_normal)
 $$
 \begin{align*}
 for \ m = f'(x_{0}) \\

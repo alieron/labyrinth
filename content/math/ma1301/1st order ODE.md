@@ -1,7 +1,7 @@
 ---
 tags:
-- ma1301/chapter3
-- math/calculus
+  - ma1301/chapter3
+  - math/calculus
 complete: true
 prev: /labyrinth/notes/math/ma1301/volume_of_revolution
 next: /labyrinth/notes/math/ma1301/vectors_in_R³

@@ -47,6 +47,7 @@ $$
 
 Periodic signals
 - fundemental frequency -> defines the frequency at which the combined signal oscillates at
+- repeats forever: sum of periodic functions -> periodic
 
 - base case with 2 frequencies
 $$

@@ -1,7 +1,7 @@
 ---
 tags:
-- ma1301/chapter4
-- math/linear_algebra
+  - ma1301/chapter4
+  - math/linear_algebra
 complete: true
 prev: /labyrinth/notes/math/ma1301/cross_product
 next: /labyrinth/notes/math/ma1301/planes_in_R³

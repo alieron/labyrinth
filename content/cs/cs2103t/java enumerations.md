@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2103t
+  - cs2103t/java
   - cs/oop
   - lang/java
 complete: true

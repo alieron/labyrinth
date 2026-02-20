@@ -14,7 +14,7 @@ prev: /labyrinth/notes/cs/cs2105/DNS
 - interface between processes and [transport layer](/labyrinth/notes/cs/cs2105/transport_layer)
 - process: specified recipient, dest IP + port
 - OS: attach return info, source IP + port(chosen by OS)
-> asking the OS for a socket is a [syscall](/labyrinth/notes/cs/cs2106/syscalls)
+> asking the OS for a socket is a [syscall](/labyrinth/notes/cs/cs2106/unix_syscalls)
 #### Datagram socket
 - [UDP](/labyrinth/notes/cs/cs2105/UDP), less reliable
 - one socket instance many clients can connect

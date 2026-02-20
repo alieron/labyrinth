@@ -22,7 +22,7 @@ int *fptr(int); // function that returns an int
 
 fptr = f; // assignment
 ```
-> the parentheses are necessary due to 
+> the parentheses are necessary due to [operator precedence](/labyrinth/notes/cs/cs2100/c#^b4ee7e)
 
 Functions returning pointers
 ```c

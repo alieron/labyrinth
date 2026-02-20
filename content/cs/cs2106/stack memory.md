@@ -4,7 +4,7 @@ tags:
   - cs/low_level
 complete: false
 prev: /labyrinth/notes/cs/cs2106/processes
-next: /labyrinth/notes/cs/cs2106/syscalls
+next: /labyrinth/notes/cs/cs2106/unix_syscalls
 
 ---
 ### Concept

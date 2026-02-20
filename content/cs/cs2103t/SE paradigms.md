@@ -20,8 +20,8 @@ Has-A
 Can-Do
 - [java class abstraction](/labyrinth/notes/cs/cs2030s/java_class_abstraction)
 - interfaces and abstract methods
-#### Access modifiers
-Class
+#### Java access modifiers
+Classes
 
 | Modifier  | Permissions                        |
 | --------- | ---------------------------------- |

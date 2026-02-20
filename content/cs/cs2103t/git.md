@@ -2,10 +2,10 @@
 tags:
   - cs2103t/rcs
   - cs/software_eng
-  - lang/sh
+  - lang/bash
 complete: false
+next: /labyrinth/notes/cs/cs2103t/IDEs
 prev: /labyrinth/notes/cs/cs2103t/SE_paradigms
-next: /labyrinth/notes/cs/cs2103t/testing
 
 ---
 ### Summary

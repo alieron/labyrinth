@@ -39,7 +39,6 @@ $$
 $$
 > we need both sine and cosine bases since its impossible to isolate a pure sine wave with only cosine
 
-
 Basis for signal space
 $$
 \left\{\begin{array}{c|c} \sin(n\omega_{0}t),\ \cos(n\omega_{0}t) & \forall n \in \mathbb{Z} \end{array}\right\}\text{ is an orthonormal basis}

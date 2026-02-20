@@ -30,7 +30,7 @@ X(\omega_{m}) &= \braket{ sig[n] | \cos(\omega_{m}t) } - j \braket{ sig[n] | \si
 &= {\color{aqua} \frac{T}{2}(b_{m}-ja_{m}) }
 \end{align*}
 $$
-> use $j$ to represent the imaginary number, phycics convention
+> use $j$ to represent the imaginary number, physics convention
 
 Magnitude
 - represents the actual amplitude of the frequency
@@ -54,9 +54,16 @@ X(\omega_{m}) &= \braket{ sig[n] | \cos(\omega_{m}t) } - j \braket{ sig[n] | \si
 &= \int_{0}^{T}(sig[n])e^{-j\omega_{m}t} \ dt
 \end{align*}
 $$
-#### Fourier series
-- the expansion of a periodic function into a sum of sine and cosine
+#### Fourier [series](/labyrinth/notes/math/ma1521/series)
+- the expansion of a **periodic** function into a discrete sum of sine and cosine
+- periodic signal -> discrete frequencies
 
 $$
-X(\omega) = \int_{0}^{T} x(t) \ e^{-j \omega t} \ dt
+\begin{gather*}
+X(\omega) = \int_{0}^{T} x(t) \ e^{-j \omega t} \ dt \\
+\\
+\text{Lowest frequency: } \frac{1}{T} \\
+\text{All frequencies: }\forall n \in \mathbb{Z}, \ \frac{n}{T} & \text{(Discrete frequencies)}
+\end{gather*}
 $$
+> assuming the signal is periodic, this can be used to extract discrete frequencies

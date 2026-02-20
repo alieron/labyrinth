@@ -1,7 +1,7 @@
 ---
 tags:
-- ma1522/chapter3
-- math/linear_algebra
+  - ma1522/chapter3
+  - math/linear_algebra
 complete: true
 prev: /labyrinth/notes/math/ma1522/vectors_in_Rⁿ
 next: /labyrinth/notes/math/ma1522/subspaces

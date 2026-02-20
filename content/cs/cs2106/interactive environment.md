@@ -1,8 +1,10 @@
 ---
 tags:
-  - cs2106/chapter2
+  - cs2106/lect3
+  - cs/low_level
 complete: false
 prev: /labyrinth/notes/cs/cs2106/batch_processing
+next: /labyrinth/notes/cs/cs2106/IPC
 
 ---
 ### Concept
@@ -13,10 +15,9 @@ prev: /labyrinth/notes/cs/cs2106/batch_processing
 | Predictability | - variation in response time                  |
 #### Periodic scheduler
 Timer interrupt
-- [interrupt](/labyrinth/notes/cs/cs2106/exceptions_&_interrupts#^716ad3) that goes off periodically based on hardware clock
+- [interrupt](/labyrinth/notes/cs/cs2106/exceptions_&_interrupts#Interrupts) that goes off periodically based on hardware clock
 - OS ensures timer interrupt cannot be intercepted by other programs
 - invokes scheduler
-
 Interval
 - time between interrupts
 - 1-10ms

@@ -9,13 +9,14 @@ next: /labyrinth/notes/cs/cs2106/exceptions_&_interrupts
 
 ---
 ### Summary
-Syscalls
+POSIX syscalls
 
-| Syscall                  | Description                                                                        |
-| ------------------------ | ---------------------------------------------------------------------------------- |
-| `getpid()`               | returns the pid of the current process                                             |
-| `write(fd, buff, count)` | writes a buffer to a file descriptor                                               |
-| `fork()`                 | duplicates the current process<br>returns `0` in the child and `pid` in the parent |
+| Syscall                  | Description                                                                              |
+| ------------------------ | ---------------------------------------------------------------------------------------- |
+| `getpid()`               | returns the pid of the current process                                                   |
+| `write(fd, buff, count)` | writes a buffer to a file descriptor                                                     |
+| `fork()`                 | duplicates the current process<br>returns `0` in the child and child's pid in the parent |
+| `wait()`                 |                                                                                          |
 ### Concept
 #### System calls
 - API to the OS
@@ -82,7 +83,7 @@ int main()
 \begin{tikzpicture}[thick,level/.style={sibling distance=70mm/#1}]
 \node [vertex] (0){$p_0$}
   child {
-    node [vertex, label={fork=pid}] (1) {$p_0$}
+    node [vertex, label={fork=c\_pid}] (1) {$p_0$}
     child {
       node [vertex] (2) {$p_0$}
       child {

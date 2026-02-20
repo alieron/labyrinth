@@ -8,7 +8,7 @@ next: /labyrinth/notes/cs/cs2100/data_representation
 
 ---
 ### Summary
-#### Operator precedence
+Operator precedence ^b4ee7e
 ```c
 1.  ++(suffix) --(suffix) () [] . ->
 2.  ++(prefix) --(prefix) ! ~ (type)(cast) *(dereference) &(address-of) sizeof

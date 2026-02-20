@@ -3,7 +3,7 @@ tags:
   - cs2108/chapter2
   - math/harmonics
 complete: true
-prev: /labyrinth/notes/cs/cs2108/sound_waves
+prev: /labyrinth/notes/cs/cs2108/time-domain_signals
 next: /labyrinth/notes/cs/cs2108/sinusoid_orthogonality
 
 ---
@@ -33,6 +33,8 @@ $$
 \end{align*}
 $$
 > ignore the [complex conjugate](/labyrinth/notes/math/imagine/complex_numbers#^1337ee), we are only concerned with the real component
+
+
 #### Basis signals
 - any signal can be thought of as a [linear combination](/labyrinth/notes/math/ma1522/linear_combinations) of the basis signals, usually simple sinusoidal
 - choosing a set of [orthogonal](/labyrinth/notes/math/ma1522/orthogonality) bases, allows the separation of component frequencies by projection

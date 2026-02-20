@@ -9,7 +9,7 @@ next: /labyrinth/notes/cs/cs2030s/java_wrapper_classes
 ---
    
 ### Summary
-Abstract classes/methods
+Abstract classes/methods ^b4c4eb
 - "is-a" relationship - Circle is a Shape
 - cannont be instantiated
 - can have both concrete fields and methods, and abstract methods
@@ -29,7 +29,7 @@ class B extends A { // has to implement all the methods declared in the parent
 }
 ```
 
-Interfaces
+Interfaces ^5e21e7
 - "can-do" relationship - Circle can do get area
 - \*-able
 - nothing concrete, except fields

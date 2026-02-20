@@ -1,10 +1,10 @@
 ---
 tags:
-- ma1301/chapter2
-- math/calculus
+  - ma1301/chapter2
+  - math/calculus
 complete: true
 prev: /labyrinth/notes/math/ma1301/differentiation
-next: /labyrinth/notes/math/ma1301/tangent_and_normal
+next: /labyrinth/notes/math/ma1301/tangent_&_normal
 
 ---
 ### Summary
