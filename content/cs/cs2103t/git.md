@@ -290,7 +290,7 @@ Merge between branches
 - squash: changes from the source branch are combined into a single commit
 
 ```bash
-git merge <source_branch> # merge the local branch into the current branch
+git merge <source_branch> # merge the local source branch into the current branch
 
 git merge --no-ff <source_branch> # prevent fast-forward merge, creates merge commit as usual
 

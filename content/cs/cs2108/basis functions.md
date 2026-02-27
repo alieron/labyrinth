@@ -9,7 +9,7 @@ next: /labyrinth/notes/cs/cs2108/sinusoid_orthogonality
 ---
 ### Concept
 #### Signals as vectors
-- signal space is a [hilbert space](/labyrinth/notes/math/abstract_algebra/hilbert_space)
+- signal space is a [hilbert space](/labyrinth/notes/math/higher_dimensions/hilbert_space)
 - a sound can be defined by up to an infinite number of frequencies
 
 $$
@@ -17,7 +17,7 @@ f(t),g(t) \in S \implies \forall a,b \in \mathbb{R},\ af(t)+bg(t) \in S
 $$
 > by definition of a signal as a summation, amplitude is not important
 
-[Inner product](/labyrinth/notes/math/abstract_algebra/inner_product) of signals
+[Inner product](/labyrinth/notes/math/higher_dimensions/inner_product) of signals
 - similarity between two functions
 - behaves like the [dot product](/labyrinth/notes/math/ma1301/dot_product) for discrete functions
 

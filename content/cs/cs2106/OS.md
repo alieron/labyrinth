@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2106/chapter1
+  - cs2106/lect1
   - cs/low_level
 complete: true
 next: /labyrinth/notes/cs/cs2106/processes

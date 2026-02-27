@@ -28,7 +28,7 @@ Defense
 - minimize privileged windows between check and use, which the attacker could use to run the replacement
 - run with least privilege and validate after use if possible
 ### Concept
-Race conditions
+[Race conditions](/labyrinth/notes/cs/cs2106/synchronization#Race_conditions)
 - when multiple [parallel](/labyrinth/notes/cs/cs2030s/parallelism) processes access shared data
 - the order in which they access the shared data can lead to different outcomes
 

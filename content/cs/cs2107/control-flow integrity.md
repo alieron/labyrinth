@@ -163,6 +163,7 @@ Control flow
 \end{tikzpicture}
 \end{document}
 ```
+> simplified for `cs2107`
 
 Calling functions
 - elements pushed onto the stack

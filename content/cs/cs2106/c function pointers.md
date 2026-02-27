@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2106/chapter2
+  - cs2106/lect2
   - cs/low_level
   - cs/functional_programming
   - lang/c

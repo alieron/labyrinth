@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2106/chapter2
+  - cs2106/lect2
   - cs/low_level
   - lang/c
 complete: false
@@ -9,18 +9,20 @@ next: /labyrinth/notes/cs/cs2106/exceptions_&_interrupts
 
 ---
 ### Summary
-POSIX syscalls
+POSIX syscalls available in [c](/labyrinth/notes/cs/cs2100/c)
 
-| Syscall                  | Description                                                                              |
-| ------------------------ | ---------------------------------------------------------------------------------------- |
-| `getpid()`               | returns the pid of the current process                                                   |
-| `write(fd, buff, count)` | writes a buffer to a file descriptor                                                     |
-| `fork()`                 | duplicates the current process<br>returns `0` in the child and child's pid in the parent |
-| `wait()`                 |                                                                                          |
+| Syscall                              | Function                                                                                                             | Purpose |
+| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------- | ------- |
+| `fork()`                             | duplicates the current process<br>returns `0` in the child and child's pid in the parent                             |         |
+| `execl(path, arg...)`<br>exec family | replace the current porcess image with a new one<br>returns `-1` only if error                                       |         |
+| `exit(status)`                       | terminate the current process<br>does not return, passes `status` to the parent process                              |         |
+| `wait(status)`                       | wait for a child process to terminate and stores it's status<br>returns the pid of the child process that terminates |         |
+| `getpid()`                           | returns the pid of the current process                                                                               |         |
+| `write(fd, buff, count)`             | writes a buffer to a file descriptor                                                                                 | IO      |
 ### Concept
 #### System calls
 - API to the OS
-- provides a way of calling services in the kernel
+- calling services in the kernel
 - change to kernel mode
 - UNIX:
 	- POSIX standards
@@ -32,7 +34,7 @@ POSIX syscalls
 Invocation
 - function wraper
 	- library provides a version with the same name and parameters
-	- passes parameters to syscall
+	- passes parameters 1-to-1 to the syscall
 - function adapter
 	- library provides a more user friendly version
 	- handles more complicated setup for the syscall
@@ -40,20 +42,33 @@ Invocation
 ```c
 char msg[] = "Hello world!";
 
-#include <unistd.h>
-write(1, msg, 13); // 1 refers to stdout
+// wrapper
+write(1, msg, 13); // 1 is the fd for stdout
 
-#include <stdio.h>
+// adapter
 printf(msg); // other parameters are handled by the function
 ```
-> note that `printf` makes a syscall since IO is handled by the OS, use `strace` on the binary to see the syscalls
+> use `strace` on the binary to see the syscalls made by adapters
 
 Mechanism
 - user mode: program sets syscall register
 - kernel mode: dispatcher checks the value and calls the corresponding handler
 - user mode: return to program
+#### Process hierachy
+Master process
+- `init` process
+- `pid = 1`
+- spawns all other processes via `fork()` + `exec()`
+
+Zombie processes
+- process that has terminated
+- hold onto process data until `wait()` in the parent
+- parent terminates before child -> `init` becomes parent, `init` calls `wait()`
+- child terminates but parent doesn't call `wait()` -> child remains a zombie
+
+![[zombie.png|500]]
 ### Application
-Forking
+Forking ^52e85c
 ```c
 #include <unistd.h>
 #include <stdio.h>

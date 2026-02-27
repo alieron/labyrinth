@@ -1,11 +1,11 @@
 ---
 tags:
-  - math/analysis
+  - math/topology
 complete: false
 ---
 ### Concept
 #### Hilbert space
-- extension of the [inner product space](/labyrinth/notes/math/abstract_algebra/inner_product#^40f0f2) to infinite terms/dimensions
+- extension of the [inner product space](/labyrinth/notes/math/higher_dimensions/inner_product#^40f0f2) to infinite terms/dimensions
 
 $$
 \begin{align*}

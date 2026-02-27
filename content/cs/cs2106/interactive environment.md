@@ -1,7 +1,7 @@
 ---
 tags:
   - cs2106/lect3
-  - cs/low_level
+  - cs/parallel
 complete: false
 prev: /labyrinth/notes/cs/cs2106/batch_processing
 next: /labyrinth/notes/cs/cs2106/IPC

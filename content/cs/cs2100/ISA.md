@@ -20,7 +20,7 @@ Creating an instruction set
 
 ```tikz
 \usepackage{tikz}
-\usetikzlibrary{positioning,arrows.meta,decorations.pathreplacing}
+\usetikzlibrary{positioning,arrows.meta}
 % definitions for box and pointer diagrams
 \def\boxsize{6mm}
 \tikzset{cell/.style={inner sep=0pt,minimum size=\boxsize, node distance=0em}}
@@ -58,7 +58,7 @@ $$
 
 ```tikz
 \usepackage{tikz}
-\usetikzlibrary{positioning,arrows.meta,decorations.pathreplacing}
+\usetikzlibrary{positioning,arrows.meta}
 % definitions for box and pointer diagrams
 \def\boxsize{6mm}
 \tikzset{cell/.style={inner sep=0pt,minimum size=\boxsize, node distance=0em}}

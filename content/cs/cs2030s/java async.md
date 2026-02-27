@@ -103,7 +103,7 @@ CompletableFuture.<Integer>supplyAsync(() -> null)
 			.join();
 ```
 ### Concept
-Thread
+[Thread](/labyrinth/notes/cs/cs2106/threads)
 - [java.lang.Thread](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Thread.html)
 - encapsulates a function to run in a separate thread
 - parallel streams uses threads from the `ForkJoinPool`

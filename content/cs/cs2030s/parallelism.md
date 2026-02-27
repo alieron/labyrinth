@@ -2,6 +2,7 @@
 tags:
   - cs2030s/chapter11
   - cs/paradigm
+  - cs/parallel
   - lang/java
 complete: true
 prev: /labyrinth/notes/cs/cs2030s/monads_&_functors

@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2106/chapter2
+  - cs2106/lect2
   - cs/low_level
 complete: false
 prev: /labyrinth/notes/cs/cs2106/unix_syscalls
@@ -21,7 +21,6 @@ next: /labyrinth/notes/cs/cs2106/process_scheduling
 - e.g. timer, mouse movement, keyboard input
 - program is suspended and interrupt handler is executed automatically
 > `ctrl + c` to interrupt programs in the terminal
-
 #### Handlers
 1. save register and CPU state
 2. perform handler routine

@@ -3,7 +3,7 @@ tags:
   - cs/lambda_calc
   - math/logic
 complete: true
-prev: /labyrinth/notes/cs/lambda_calculus/λ-calculus
+prev: /labyrinth/notes/cs/lambda_calculus/β-reduction
 next: /labyrinth/notes/cs/lambda_calculus/church_numerals
 
 ---

@@ -1,7 +1,7 @@
 ---
 tags:
-  - cs2106/chapter2
-  - cs/low_level
+  - cs2106/lect2
+  - cs/parallel
 complete: false
 prev: /labyrinth/notes/cs/cs2106/process_scheduling
 next: /labyrinth/notes/cs/cs2106/interactive_environment

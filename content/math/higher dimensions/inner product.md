@@ -1,7 +1,7 @@
 ---
 tags:
   - math/linear_algebra
-  - math/analysis
+  - math/topology
 complete: false
 ---
 ### Summary

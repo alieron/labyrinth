@@ -3,7 +3,7 @@ tags:
   - cs2100/chapter1
   - cs/fundamentals
   - lang/c
-complete: false
+complete: true
 next: /labyrinth/notes/cs/cs2100/data_representation
 
 ---
@@ -37,34 +37,6 @@ Preprocessor directives
 ```
 > note the absence of ';' in the preprocessor directives
 
-Variables
-```c
-int x; // initialization
-x = 2; // declaration
-
-int y = 2; // initialization and declaration
-```
-
-Main function
-```c
-int main(void) {
-	// declaration statements
-	// tells compiler what type of memory is needed for variables etc
-	
-	// executable statements
-	// describe the processing on the memory
-	
-	return 0; // return 0 for successful execution, 1 for exceptions
-}
-```
-
-IO
-```c
-int age;
-printf("What is your age? ");
-scanf("%d", &age); // write value to the address of age
-```
-
 Format specifiers ^0f41a6
 
 | Placeholder | Variable Type   | Function Use                     |
@@ -75,8 +47,8 @@ Format specifiers ^0f41a6
 | %f          | float           | scanf                            |
 | %lf         | double          | scanf                            |
 | %e          | float or double | printf (for scientific notation) |
-- %5d -> integer with width of 5, right justified
-- %8.3f -> real number with width of 8 and 3 decimal places, right justified
+> %5d -> integer with width of 5, right justified
+> %8.3f -> real number with width of 8 and 3 decimal places, right justified
 
 Escape sequences
 
@@ -88,7 +60,7 @@ Escape sequences
 | %%              | Percent        | Display a percent character %                     |
 > see [Learn X in Y minutes: C](https://learnxinyminutes.com/c/) for complete guide to C
 ### Concept
-Compilation
+#### Compilation
 ```bash
 // compiling to executable file
 gcc test.c -o test
@@ -97,10 +69,37 @@ gcc test.c -o test
 gcc -Wall test.c
 ```
 
-von Neumann Architecture
+#### Variables
+```c
+int x; // initialization
+x = 2; // declaration
 
+int y = 2; // initialization and declaration
+```
 
+#### Command line arguments
+- pass in command line arguments
+- `argc` - number of command line args
+- `argv` - array of the argument strings, separated by space
+- `envp` - array of environment variables
 
+```c
+int main (int argc, char *argv[], char *envp[]) {
+	int i;
+	
+	for (i = 0; i < argc; i++) {
+		printf("Arg %d: %s\n",i, argv[i] );
+	}
+	
+	i=0;
+	while(vp[i] != NULL) {
+		printf("Env %d: %s\n", i, vp[i]);
+		i++;
+	}  
+	
+	return 0; 
+}
+```
 ### Application
 Macros
 ```c
