@@ -32,6 +32,6 @@ ICMP/smurf flood
 
 DNS amplification
 - reflection and amplification
-- exploits [DNS](/labyrinth/notes/cs/cs2107/DNS_spoofing#^cc1630)
+- exploits [DNS](/labyrinth/notes/cs/cs2105/DNS)
 - small UDP query to a DNS server results in a larger response for the resolved IP
 - attacker can send a query spoofed with the victim's IP

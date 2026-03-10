@@ -1,7 +1,7 @@
 ---
 tags:
   - cs2108/chapter3
-  - math/harmonics
+  - math/analysis
 complete: false
 prev: /labyrinth/notes/cs/cs2108/sinusoid_orthogonality
 next: /labyrinth/notes/cs/cs2108/fourier_transform

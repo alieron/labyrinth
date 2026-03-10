@@ -27,7 +27,7 @@ Operator precedence ^b4ee7e
 15. ,
 ```
 
-Preprocessor directives
+[Preprocessor](#) directives
 ```c
 // importing header files/libraries
 #include <stdio.h>

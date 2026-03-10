@@ -167,7 +167,8 @@ class B {
 }
 ```
 ### Concept
-Make classes more flexible
+[Generics](/labyrinth/notes/cs/cs2030s/generics)
+- make classes more flexible
 - a framework for compiler type checks(code sharing)
 - parametric polymorphism
 

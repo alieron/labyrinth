@@ -29,10 +29,6 @@ Scheduling algorithms
 Timeslicing
 - OS carries out context switching
 - scheduler needs to run on the CPU
-
-
-
-
 #### Process behaviour
 - CPU activity
 	- computation, calculations

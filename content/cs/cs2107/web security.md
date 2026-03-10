@@ -62,7 +62,7 @@ Browser
 - handles user secrets in [cookies](/labyrinth/notes/cs/cs2107/cookies)
 - support 3rd party addons - expands attack surface
 
-URL
+[URL](/labyrinth/notes/cs/cs2105/HTTP#^337252)
 - Uniform Resource Locator
 
 $$

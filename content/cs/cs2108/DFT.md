@@ -1,7 +1,7 @@
 ---
 tags:
   - cs2108/chapter4
-  - math/harmonics
+  - math/analysis
 complete: false
 prev: /labyrinth/notes/cs/cs2108/fourier_transform
 next: /labyrinth/notes/cs/cs2108/discrete_sampling
@@ -56,7 +56,7 @@ $$
 X[k+N]&=\sum_{n=0}^{N-1} x[n]\ e^{-j 2\pi (k+N)\frac{n}{N}} \\
 &=\sum_{n=0}^{N-1} x[n]\ e^{-j 2\pi k\frac{n}{N}-j 2\pi n} \\
 &=\sum_{n=0}^{N-1} x[n]\ e^{-j 2\pi k\frac{n}{N}} \cdot e^{-j 2\pi n} \\
-&=\sum_{n=0}^{N-1} x[n]\ e^{-j 2\pi k\frac{n}{N}} &&\text{(Euler's Theorem)}\\
+&=\sum_{n=0}^{N-1} x[n]\ e^{-j 2\pi k\frac{n}{N}}\cdot(-1)^{2n}&&\text{(Euler's Theorem)}\\
 &=X[k]
 \end{align*}
 $$

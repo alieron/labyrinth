@@ -5,6 +5,7 @@ tags:
   - lang/c
 complete: false
 prev: /labyrinth/notes/cs/cs2106/semaphores
+next: /labyrinth/notes/cs/cs2106/memory_abstraction
 
 ---
 ### Concept

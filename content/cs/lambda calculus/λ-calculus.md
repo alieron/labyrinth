@@ -29,7 +29,6 @@ $$
 \text{Abstraction:}&&& x \in V \land M \in \Lambda \implies (\lambda x. \ M) \in \Lambda
 \end{align*}
 $$
-
 #### Free and Bound variables
 - application creates a **bound variable**
 - rest within the term are free

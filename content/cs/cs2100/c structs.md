@@ -15,12 +15,37 @@ Struct type
 - acts as a blueprint for the members associated with the type
 
 ```c
-typedef struct {
-	int x;
-	int y;
-	char *label; // label string
-} point; // sizeof(point) = 16
-```
+struct S {
+	int x, y;
+} c;  // combined declaration of struct S and c, a variable of struct S
+
+struct S d; // declaration of d, a variable of struct d
+
+typedef struct S T; // typedef of T as an alias of struct S
+
+struct S a = { 2, 3 }; // using the struct S type
+
+T b = { 4, 5 }; // using the T alias
+
+// combining all under one typedef
+typedef struct S {
+	int x, y;
+} T;
+
+// similarly, reordered
+struct S {
+	int x, y;
+} typedef T;
+
+// shared name
+typedef struct S {
+	int x, y;
+} S;
+
+struct S a = { 2, 3 }; // using the struct S type
+
+S b = { 4, 5 }; // using the S alias
+``````
 
 Struct variable
 - similar to creating an [instance](/labyrinth/notes/cs/cs2030s/java_classes#^29c4ea) of a class
@@ -48,6 +73,24 @@ p5.y = p4.y;
 p5.label = p4.label;
 ```
 ### Concept
+Structural recursion
+- when its own type is used within itself
+
+```c
+typedef struct SLL {
+	int v;
+	struct SLL *next;
+} SLL;
+
+// or with a forward declaration
+typedef struct SLL SLL;
+
+struct SLL {
+	int v;
+	struct SLL *next;
+};
+```
+
 Structs as function parameters
 - [pass-by-value](/labyrinth/notes/cs/cs2100/c_functions#^f29a98)
 - struct is copied into the local variable

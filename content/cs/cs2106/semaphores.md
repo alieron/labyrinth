@@ -34,6 +34,7 @@ sem_post(&mutex);
 | ---------------------------------------------------------------- | ----------------------------------------------------------- |
 | - **blocks** if `S<=0`<br>- `S--`<br>- blocked process is stored | - non-blocking<br>- `S++`<br>- wakes up one blocked process |
 | requesting                                                       | yielding                                                    |
+
 Invariant
 $$
 \verb|S|_{initial} \geq 0 \implies \verb|S|_{current}=\verb|S|_{initial}+\#\verb|signal(S)|-\#\verb|wait(S)|

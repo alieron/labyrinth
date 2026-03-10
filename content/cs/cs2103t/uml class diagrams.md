@@ -6,7 +6,7 @@ tags:
   - lang/java
 complete: false
 next: /labyrinth/notes/cs/cs2103t/uml_object_diagrams
-prev: /labyrinth/notes/cs/cs2103t/developer_testing
+prev: /labyrinth/notes/cs/cs2103t/javadoc
 
 ---
 ### Concept

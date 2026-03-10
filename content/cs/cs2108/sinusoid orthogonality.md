@@ -1,7 +1,7 @@
 ---
 tags:
   - cs2108/chapter2
-  - math/harmonics
+  - math/analysis
 complete: true
 prev: /labyrinth/notes/cs/cs2108/basis_functions
 next: /labyrinth/notes/cs/cs2108/fourier_series

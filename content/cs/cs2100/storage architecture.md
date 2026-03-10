@@ -32,7 +32,7 @@ Common storage architectures
 	- explicit operands
 	- Register-memory architecture
 		- operands in memory and registers
-	- Register-register
+	- Register-register/load-store ^36a992
 		- operands in registers only
 - Memory-memory
 	- operands in memory only

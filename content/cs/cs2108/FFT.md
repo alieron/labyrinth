@@ -1,7 +1,7 @@
 ---
 tags:
   - cs2108/chapter4
-  - math/harmonics
+  - math/analysis
 complete: true
 ---
 ### Concept

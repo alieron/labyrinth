@@ -25,7 +25,7 @@ Attacker's Goals
 Defense
 - DNSSEC - authentication on DNS requests
 ### Concept
-Domain Name System(DNS) ^cc1630
+Domain Name System([DNS](/labyrinth/notes/cs/cs2105/DNS))
 - maps human readable URLs to IP addresses
 - uses [UDP](/labyrinth/notes/cs/cs2107/network_security#^74306d)
 - a 16-bit query ID(QID) is sent alongside the query, if the QID of the response doesn't match, then the client rejects it

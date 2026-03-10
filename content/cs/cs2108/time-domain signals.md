@@ -1,7 +1,7 @@
 ---
 tags:
   - cs2108/chapter1
-  - math/harmonics
+  - math/analysis
 complete: false
 next: /labyrinth/notes/cs/cs2108/basis_functions
 

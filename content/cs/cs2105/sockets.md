@@ -1,24 +1,26 @@
 ---
 tags:
-  - cs2105/chapter3
+  - cs2105/lect3
   - cs/networking
   - lang/python
 complete: false
-next: /labyrinth/notes/cs/cs2105/transport_layer
 prev: /labyrinth/notes/cs/cs2105/DNS
+next: /labyrinth/notes/cs/cs2105/reliable_protocols
 
 ---
+### Summary
+
 ### Concept
 #### Sockets
 - software abstraction provided by the [OS](/labyrinth/notes/cs/cs2106/OS)
-- interface between processes and [transport layer](/labyrinth/notes/cs/cs2105/transport_layer)
+- interface between processes and [transport layer](/labyrinth/notes/cs/cs2105/network_layers#Transport_layer)
 - process: specified recipient, dest IP + port
 - OS: attach return info, source IP + port(chosen by OS)
-> asking the OS for a socket is a [syscall](/labyrinth/notes/cs/cs2106/unix_syscalls)
+> asking the OS for a socket is a [syscall](/labyrinth/notes/cs/cs2106/syscalls)
 #### Datagram socket
 - [UDP](/labyrinth/notes/cs/cs2105/UDP), less reliable
 - one socket instance many clients can connect
-
+<br>
 - server:
 ```python
 import socket
@@ -59,7 +61,7 @@ sock.close()
 - [TCP](/labyrinth/notes/cs/cs2105/TCP), reliable and connection oriented
 - server creates listener scoket
 - new socket instance is created when a client connects
-
+<br>
 - server:
 ```python
 import socket
@@ -122,3 +124,6 @@ while data := client_socket.recv(10):
 # close the socket 
 client_socket.close() 
 ```
+#### Multiplexing
+- allowing multiple electrical signals to be sent using one connection
+- multiple sockets send data through the same transmission channel

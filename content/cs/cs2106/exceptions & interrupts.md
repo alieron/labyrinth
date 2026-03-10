@@ -3,7 +3,7 @@ tags:
   - cs2106/lect2
   - cs/low_level
 complete: false
-prev: /labyrinth/notes/cs/cs2106/unix_syscalls
+prev: /labyrinth/notes/cs/cs2106/syscalls
 next: /labyrinth/notes/cs/cs2106/process_scheduling
 
 ---

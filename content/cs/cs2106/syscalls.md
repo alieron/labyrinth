@@ -9,16 +9,15 @@ next: /labyrinth/notes/cs/cs2106/exceptions_&_interrupts
 
 ---
 ### Summary
-POSIX syscalls available in [c](/labyrinth/notes/cs/cs2100/c)
+POSIX syscalls for spawning processes
 
-| Syscall                              | Function                                                                                                             | Purpose |
-| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------- | ------- |
-| `fork()`                             | duplicates the current process<br>returns `0` in the child and child's pid in the parent                             |         |
-| `execl(path, arg...)`<br>exec family | replace the current porcess image with a new one<br>returns `-1` only if error                                       |         |
-| `exit(status)`                       | terminate the current process<br>does not return, passes `status` to the parent process                              |         |
-| `wait(status)`                       | wait for a child process to terminate and stores it's status<br>returns the pid of the child process that terminates |         |
-| `getpid()`                           | returns the pid of the current process                                                                               |         |
-| `write(fd, buff, count)`             | writes a buffer to a file descriptor                                                                                 | IO      |
+| Syscall               | Include      | Function                                                                                                                   |
+| --------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------- |
+| `fork()`              | `<unistd.h>` | duplicates the current process<br>returns `0` in the child and child's pid in the parent                                   |
+| `execl(path, arg...)` | `<unistd.h>` | replace the current porcess image with a new one<br>returns `-1` only if error                                             |
+| `exit(status)`        | `<unistd.h>` | terminate the current process<br>does not return, passes `status` to the parent process                                    |
+| `wait(status)`        | `<unistd.h>` | wait for **one** child process to terminate and stores it's status<br>returns the pid of the child process that terminates |
+| `getpid()`            | `<unistd.h>` | returns the pid of the current process                                                                                     |
 ### Concept
 #### System calls
 - API to the OS
@@ -70,24 +69,18 @@ Zombie processes
 ### Application
 Forking ^52e85c
 ```c
-#include <unistd.h>
-#include <stdio.h>
+int result;
 
-int main()
-{
-	int result;
-
-	result = fork(); // A
-	if (result==0) 
-		fork(); // B
-	else {
-		fork(); // C
-		fork(); // D
-	}
-
-	printf("Hello\n"); //how many? 6
-	return 0;
+result = fork(); // A
+if (result==0) 
+	fork(); // B
+else {
+	fork(); // C
+	fork(); // D
 }
+
+printf("Hello\n"); //how many? 6
+return 0;
 ```
 ```tikz
 \usepackage{tikz}

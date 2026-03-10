@@ -53,7 +53,7 @@ Memory sizes
 
 Cache types
 
-|                  | [Direct mapped](/labyrinth/notes/cs/cs2100/direct_mapped_cache) | [set associative](/labyrinth/notes/cs/cs2100/set_associative_cache) | [Fully associative](/labyrinth/notes/cs/cs2100/fully_associative_cache) |
+|                  | [Direct mapped](/labyrinth/notes/cs/cs2100/direct_mapped_cache) | [Set associative](/labyrinth/notes/cs/cs2100/set_associative_cache) | [Fully associative](/labyrinth/notes/cs/cs2100/fully_associative_cache) |
 | ---------------- | -------------------------------------- | ------------------------------------------ | ---------------------------------------------- |
 | Block placement  | one block per index                    | n blocks per index                         | any cache block                                |
 | Block search     | check tag at corresponding block       | search tag within set                      | search tag in whole cache                      |

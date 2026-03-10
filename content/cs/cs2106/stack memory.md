@@ -6,7 +6,7 @@ tags:
   - lang/mips
 complete: true
 prev: /labyrinth/notes/cs/cs2106/processes
-next: /labyrinth/notes/cs/cs2106/unix_syscalls
+next: /labyrinth/notes/cs/cs2106/syscalls
 
 ---
 ### Concept

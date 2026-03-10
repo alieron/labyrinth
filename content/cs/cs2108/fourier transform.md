@@ -1,7 +1,7 @@
 ---
 tags:
   - cs2108/chapter4
-  - math/harmonics
+  - math/analysis
 complete: false
 prev: /labyrinth/notes/cs/cs2108/fourier_series
 next: /labyrinth/notes/cs/cs2108/DFT

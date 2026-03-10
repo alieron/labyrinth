@@ -4,7 +4,7 @@ tags:
   - cs/parallel
   - lang/c
 complete: false
-prev: /labyrinth/notes/cs/cs2106/unix_signals
+prev: /labyrinth/notes/cs/cs2106/signals
 next: /labyrinth/notes/cs/cs2106/synchronization
 
 ---
@@ -34,7 +34,7 @@ pthread_join(thread_id, &retval);
 > compile with `-lpthread`
 ### Concept
 Motivation
-- [forking](/labyrinth/notes/cs/cs2106/unix_syscalls#^52e85c) is expensive, need to duplicate memory space and process context
+- [forking](/labyrinth/notes/cs/cs2106/syscalls#^52e85c) is expensive, need to duplicate memory space and process context
 - requires context switching
 - most forks share some memory with parent
 #### Threads
@@ -56,9 +56,8 @@ Motivation
 | Resource sharing | share most memory + resources, no need [IPC](/labyrinth/notes/cs/cs2106/IPC) to pass information around        |
 | Responsiveness   | more threads to be more responsive                                               |
 | Scalability      | can benefit from multiple CPUs                                                   |
-[Syscall](/labyrinth/notes/cs/cs2106/unix_syscalls) concurrency
+[Syscall](/labyrinth/notes/cs/cs2106/syscalls) concurrency
 - some syscalls are not thread safe
-
 #### User thread
 - only in user mode
 - abstraction provided by program/library

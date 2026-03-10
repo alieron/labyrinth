@@ -97,11 +97,11 @@ private void setRefreshInterval(int interval) {
 
 ```java
 public BigInteger modInverse(BigInteger m) {
-  if (m.signum <= 0)
+	if (m.signum <= 0)
     throw new ArithmeticException("Modulus not positive: " + m);
-  ... // Do the computation
-  assert this.multiply(result).mod(m).equals(ONE) : this;
-  return result;
+	... // Do the computation
+	assert this.multiply(result).mod(m).equals(ONE) : this;
+	return result;
 }
 ```
 #### Class Invariants
