@@ -20,6 +20,7 @@ POSIX signals
 | `SIGALRM` | timer expired                     | terminate                    |
 | `SIGCHLD` | child process state change        | ignore by default            |
 | `SIGSEGV` | illegal memory access (seg fault) | terminate, dump core         |
+
 POSIX syscalls for signals
 
 | Syscall                | Include      | Function                                                         |

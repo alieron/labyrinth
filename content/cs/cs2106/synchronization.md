@@ -98,6 +98,7 @@ Lock = 0;
 
 Disabling interrupts
 - prevent the OS from making context switch
+- won't work on multi-core systems
 
 ```c
 int Lock = 0; // shared

@@ -10,6 +10,16 @@ next: /labyrinth/notes/cs/cs2106/synchronization
 ---
 ### Summary
 POSIX threads
+TODO: self detach equal
+
+| Syscall                                    | Include       | Function                                                                              |
+| ------------------------------------------ | ------------- | ------------------------------------------------------------------------------------- |
+| `pthread_create(*id, NULL, function, arg)` | `<pthread.h>` | creates a new thread that starts executing a specified function                       |
+| `pthread_join(id, *retval)`                | `<pthread.h>` | waits for a thread to terminate and optionally retrieves its return value             |
+| `pthread_exit(retval)`                     | `<pthread.h>` | terminates the calling thread and optionally returns a value                          |
+| `pthread_self()`                           | `<pthread.h>` | returns the thread ID of the calling thread                                           |
+| `pthread_detach()`                         | `<pthread.h>` | marks a thread as detached so its resources are automatically released on termination |
+| `pthread_equal()`                          | `<pthread.h>` | compares two thread IDs to determine if they refer to the same thread                 |
 ```c
 #include <pthread.h>
 

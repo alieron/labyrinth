@@ -4,21 +4,32 @@ tags:
   - cs/parallel
 complete: false
 prev: /labyrinth/notes/cs/cs2106/exceptions_&_interrupts
-next: /labyrinth/notes/cs/cs2106/batch_processing
+next: /labyrinth/notes/cs/cs2106/simple_scheduling
 
 ---
 ### Summary
 Scheduling algorithms
 
-| Algorithm                                                            | Preemptive/non-preemptive | Starvation | Optimizes for                           | Remarks         |
-| -------------------------------------------------------------------- | ------------------------- | ---------- | --------------------------------------- | --------------- |
-| [FCFS](/labyrinth/notes/cs/cs2106/batch_processing#First-come_first-served(FCFS))             | non-preemptive            | no         | -                                       |                 |
-| [RR](/labyrinth/notes/cs/cs2106/interactive_environment#Round_robin(RR))                      | preemptive                | no         | reduce wait time                        | preemptive FCFS |
-| [SJF](/labyrinth/notes/cs/cs2106/batch_processing#Shortest_job_first(SJF))                    | non-preemptive            | yes        | minimize average turnaround time        |                 |
-| [SRT](/labyrinth/notes/cs/cs2106/batch_processing#Shortest_remaining_time(SRT))               | preemptive                | yes        | minimize average turnaround time        | preemptive SJF  |
-| [Priority scheduling](/labyrinth/notes/cs/cs2106/interactive_environment#Priority_scheduling) | both                      | yes        | highest priority first                  |                 |
-| [MLFQ](/labyrinth/notes/cs/cs2106/interactive_environment#Multi-level_feedback_queue(MLFQ))   | preemptive                | yes        | balance between response and throughput |                 |
-| [Lottery scheduling](/labyrinth/notes/cs/cs2106/interactive_environment#Lottery_scheduling)   | preemptive                | no         | fair                                    |                 |
+| Algorithm                                                        | Preemptive/non-preemptive     | Starvation      | Optimizes for                           | Remarks         |
+| ---------------------------------------------------------------- | ----------------------------- | --------------- | --------------------------------------- | --------------- |
+| [FCFS](/labyrinth/notes/cs/cs2106/simple_scheduling#First-Come_First-Served(FCFS))        | non-preemptive                | no, FIFO        | -                                       |                 |
+| [RR](/labyrinth/notes/cs/cs2106/simple_scheduling#Round_Robin(RR))                        | preemptive, quanta respecting | no, FIFO        | reduce wait time                        | preemptive FCFS |
+| [SJF](/labyrinth/notes/cs/cs2106/shortest_first_scheduling#Shortest_Job_First(SJF))       | non-preemptive                | yes             | minimize average turnaround time        |                 |
+| [SRT](/labyrinth/notes/cs/cs2106/shortest_first_scheduling#Shortest_Remaining_Time(SRT))  | preemptive, no quanta         | yes             | minimize average turnaround time        | preemptive SJF  |
+| [Priority Scheduling](/labyrinth/notes/cs/cs2106/priority_scheduling#Priority_Scheduling) | both                          | yes             | highest priority first                  |                 |
+| [MLFQ](/labyrinth/notes/cs/cs2106/priority_scheduling#Multi-Level_Feedback_Queue(MLFQ))   | preemptive                    | yes             | balance between response and throughput |                 |
+| [Lottery Scheduling](/labyrinth/notes/cs/cs2106/process_scheduling#Lottery_Scheduling)    | preemptive                    | no, probability | fair                                    |                 |
+
+Scheduling metrics
+
+| Metric          | Description                                                                                                  | Environment      |
+| --------------- | ------------------------------------------------------------------------------------------------------------ | ---------------- |
+| Turnaround time | - total time taken for the job<br>- includes time spent waiting for CPU<br>- `time completed - time arrived` | batch processing |
+| Waiting time    | - time spent waiting instead of working<br>- `turnaround time - working time`                                | batch processing |
+| Throughput      | - number of tasks finished per unit time                                                                     | batch processing |
+| CPU utilization | - percentage of CPU working on the task                                                                      | batch processing |
+| Response time   | - time between request and response by system<br>- `time start - time arrived`                               | interactive      |
+| Predictability  | - variation in response time                                                                                 | interactive      |
 ### Concept
 #### Concurrency
 - multitasked processes
@@ -38,12 +49,12 @@ Timeslicing
 	- IO-bound processes, eg. watching videos
 
 #### Processing environment
-[Batch processing](/labyrinth/notes/cs/cs2106/batch_processing)
+Batch processing
 - no user
 - no interaction
 - no need to be responsive
 
-[Interactive](/labyrinth/notes/cs/cs2106/interactive_environment)
+Interactive
 - with user interaction
 - should be responsive with consistent response time
 
@@ -79,8 +90,14 @@ Non-preemptive
 	- it gives up the CPU voluntarily
 
 Preemptive
-- processes have a fixed time quota
-- can block or give up like non-preemptive
-- if not finished by time quota, another process gets picked up
-
-#### Scheduling algorithms
+- OS can forcibly interrupt the process before its finished
+- time quanta respecting:
+	- processes have a fixed time quota
+	- can block or give up like non-preemptive
+	- if not finished by time quota, another process gets picked up
+- fully disruptive:
+	- even during the time quantum the OS can interrupt
+#### Lottery Scheduling
+- give out "lottery tickets" to processes, more important processes can get more tickets
+- a ticket is chosen randomly, winner is granted the resource
+- responsive - even new processes can participate

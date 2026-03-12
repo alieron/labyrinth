@@ -23,10 +23,11 @@ Communication schemes
 | Direct communication                                        | Indirect communication                                                                         |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | - explicitly name the other party<br>- 1-to-1 communication | - send and receive from a **mailbox**/**port**<br>- mailbox can be shared among many processes |
+
 Primitives
 
 | Blocking primitive                          | Non-blocking primitive                                |
 | ------------------------------------------- | ----------------------------------------------------- |
-| Synchronous                                 | Asynchronous                                          |
+| synchronous                                 | asynchronous                                          |
 | sender is blocked until message is received | sender can resume immediately                         |
 | receiver is blocked until a message arrives | receiver either receives the message or a "not ready" |

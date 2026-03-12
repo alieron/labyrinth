@@ -4,7 +4,7 @@ tags:
   - cs/parallel
   - lang/bash
 complete: false
-prev: /labyrinth/notes/cs/cs2106/interactive_environment
+prev: /labyrinth/notes/cs/cs2106/priority_scheduling
 next: /labyrinth/notes/cs/cs2106/shared_memory
 
 ---
