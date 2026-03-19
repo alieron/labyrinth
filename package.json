@@ -5,7 +5,7 @@
   "scripts": {
     "copy-notes": "npx tsx scripts/copyNotes.ts",
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build --verbose",
     "preview": "astro preview"
   },
   "dependencies": {
