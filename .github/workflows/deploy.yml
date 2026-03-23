@@ -18,24 +18,27 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Check content
         run: |
           ls -R content
 
       - name: Install, build, and upload your site
-        uses: withastro/action@v4
+        uses: withastro/action@v6
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
+      # to be updated
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
