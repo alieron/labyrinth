@@ -1,7 +1,9 @@
 ---
-prev: "[simple scheduling](/labyrinth/notes/cs/cs2106/simple_scheduling)"
-tags: []
+tags:
+  - cs2106/chapter3
+  - cs/parallel
 complete: false
+prev: /labyrinth/notes/cs/cs2106/simple_scheduling
 next: /labyrinth/notes/cs/cs2106/priority_scheduling
 
 ---

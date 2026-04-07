@@ -127,4 +127,4 @@ for (; n > 0; n--)
 
 pw.close();
 ```
-> make use of [BufferedReader](/labyrinth/notes/cs/cs2040s/java_standard_library#^fecb85) and [PrintWriter](/labyrinth/notes/cs/cs2040s/java_standard_library#^6d9f10) for faster IO
+> make use of [BufferedReader](/labyrinth/notes/cs/cs2040s/standard_implementations#^fecb85) and [PrintWriter](/labyrinth/notes/cs/cs2040s/standard_implementations#^6d9f10) for faster IO

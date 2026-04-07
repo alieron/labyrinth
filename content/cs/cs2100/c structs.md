@@ -48,7 +48,7 @@ S b = { 4, 5 }; // using the S alias
 ``````
 
 Struct variable
-- similar to creating an [instance](/labyrinth/notes/cs/cs2030s/java_classes#^29c4ea) of a class
+- similar to creating an [instance](/labyrinth/notes/cs/cs2030s/classes#^29c4ea) of a class
 
 ```c
 // declaration

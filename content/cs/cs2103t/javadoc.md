@@ -4,7 +4,7 @@ tags:
   - cs/software_eng
 complete: false
 prev: /labyrinth/notes/cs/cs2103t/testing
-next: /labyrinth/notes/cs/cs2103t/uml_class_diagrams
+next: /labyrinth/notes/cs/cs2103t/class_diagrams
 
 ---
 ### Concept

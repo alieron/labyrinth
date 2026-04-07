@@ -1,9 +1,10 @@
 ---
 tags:
   - cs2108/chapter4
-  - math/harmonics
+  - math/analysis
 complete: false
 prev: /labyrinth/notes/cs/cs2108/DFT
+next: /labyrinth/notes/cs/cs2108/2D_fourier_transform
 
 ---
 ### Concept
@@ -35,5 +36,13 @@ f_{N+1} &= \frac{N+1}{N}\cdot f_{s} \\
 \end{align*}
 $$
 > this is why the frequency domain is also periodic
+
+$$
+\begin{align*}
+f_{N-1} &= \frac{N-1}{N}\cdot f_{s} \\
+&= \frac{N}{N}\cdot f_{s}-\frac{1}{N}\cdot f_{s} \\
+&= f_{s} - f_{1}
+\end{align*}
+$$
 
 Nyquist-Shannon sampling theorem

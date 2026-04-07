@@ -4,7 +4,7 @@ tags:
   - cs/software_eng
   - lang/uml
 complete: false
-prev: /labyrinth/notes/cs/cs2103t/java_assertions
+prev: /labyrinth/notes/cs/cs2103t/assertions
 next: /labyrinth/notes/cs/cs2103t/architecture_diagrams
 
 ---
@@ -16,7 +16,7 @@ next: /labyrinth/notes/cs/cs2103t/architecture_diagrams
 Entities
 - actors and components involved in the interaction
 - lifeline: represents the life of the *instance*
-> follow the naming convention for [object diagrams](/labyrinth/notes/cs/cs2103t/uml_object_diagrams) without underlining
+> follow the naming convention for [object diagrams](/labyrinth/notes/cs/cs2103t/object_diagrams) without underlining
 
 Function calls
 - function call: solid arrow

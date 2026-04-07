@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2106/lect4
+  - cs2106/chapter4
   - cs/parallel
 complete: false
 prev: /labyrinth/notes/cs/cs2106/pipes

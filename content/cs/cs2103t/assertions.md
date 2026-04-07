@@ -5,7 +5,7 @@ tags:
   - lang/java
 complete: true
 prev: /labyrinth/notes/cs/cs2103t/refactoring
-next: /labyrinth/notes/cs/cs2103t/uml_sequence_diagrams
+next: /labyrinth/notes/cs/cs2103t/sequence_diagrams
 
 ---
 ### Concept

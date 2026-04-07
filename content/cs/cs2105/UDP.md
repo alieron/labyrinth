@@ -22,7 +22,7 @@ prev: /labyrinth/notes/cs/cs2105/pipelined_protocols
 |      Port       |      Port       | 
 +--------+--------+--------+--------+ 
 |                 |                 | 
-|     Length      |    Checksum     | 
+|  Data Length    |    Checksum     | 
 +--------+--------+--------+--------+ 
 |                                     
 |          data octets ...            

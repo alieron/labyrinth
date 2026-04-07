@@ -8,7 +8,7 @@ prev: /labyrinth/notes/cs/cs2100/control_hazards
 
 ---
 ### Summary
-Locality
+Locality ^f20615
 - temporal locality
 	- data tends to be referenced again soon
 	- ie. counter for loops
@@ -16,7 +16,7 @@ Locality
 	- nearby data tends to be referenced soon
 	- ie. items in arrays
 
-Average access time
+Average access time ^affa8d
 - hit -> when data is found in cache
 - miss -> when data is not found in cache, need to look in memory
 

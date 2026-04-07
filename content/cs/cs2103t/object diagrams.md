@@ -4,14 +4,14 @@ tags:
   - cs/software_eng
   - lang/uml
 complete: false
-prev: /labyrinth/notes/cs/cs2103t/uml_class_diagrams
+prev: /labyrinth/notes/cs/cs2103t/class_diagrams
 next: /labyrinth/notes/cs/cs2103t/javafx
 
 ---
 ### Concept
 #### Object diagrams
 - captures object structures at a given point in time
-- instantiation of [class diagrams](/labyrinth/notes/cs/cs2103t/uml_class_diagrams)
+- instantiation of [class diagrams](/labyrinth/notes/cs/cs2103t/class_diagrams)
 - class diagrams set the constraints for the object diagrams
 - see [plantuml/object-diagram](https://plantuml.com/object-diagram)
 
@@ -33,3 +33,5 @@ object c1:Course {
 "c1:Course" --> "s2:Student"
 @enduml
 ```
+
+no dependendies in object diagram

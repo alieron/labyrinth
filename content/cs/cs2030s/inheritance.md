@@ -4,7 +4,7 @@ tags:
 - cs/oop
 - lang/java
 complete: true
-prev: /labyrinth/notes/cs/cs2030s/java_classes
+prev: /labyrinth/notes/cs/cs2030s/classes
 next: /labyrinth/notes/cs/cs2030s/polymorphism
 ---
    
@@ -77,7 +77,7 @@ Type casting ^1f8d90
 - succeeds at compile-time when the CTT of the variable is related to type its being cast to
 - succeeds at run-time when the RTT of the variable is a subtype of the type its being cast to
 ### Application
-Run-time errors when type casting, see [casting to interfaces](/labyrinth/notes/cs/cs2030s/java_class_abstraction#^db9022)
+Run-time errors when type casting, see [casting to interfaces](/labyrinth/notes/cs/cs2030s/class_abstraction#^db9022)
 ```java
 interface A { }
 abstract class B implements A { }

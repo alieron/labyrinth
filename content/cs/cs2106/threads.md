@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2106/lect5
+  - cs2106/chapter5
   - cs/parallel
   - lang/c
 complete: false

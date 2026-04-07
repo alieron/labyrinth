@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2106/lect2
+  - cs2106/chapter2
   - cs/low_level
 complete: true
 prev: /labyrinth/notes/cs/cs2106/OS
@@ -18,7 +18,7 @@ Process contexts ^73664d
 - dynamic abstraction for a executing programs
 - stores information required to describe the running program
 
-Memory regions
+Memory regions ^dc8bb0
 
 | Region                  | Contents                                                                                      |
 | ----------------------- | --------------------------------------------------------------------------------------------- |

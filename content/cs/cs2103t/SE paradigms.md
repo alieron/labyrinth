@@ -18,7 +18,7 @@ Has-A
 - ownership
 
 Can-Do
-- [java class abstraction](/labyrinth/notes/cs/cs2030s/java_class_abstraction)
+- [class abstraction](/labyrinth/notes/cs/cs2030s/class_abstraction)
 - interfaces and abstract methods
 #### Java access modifiers
 Classes

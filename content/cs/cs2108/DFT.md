@@ -60,6 +60,11 @@ X[k+N]&=\sum_{n=0}^{N-1} x[n]\ e^{-j 2\pi (k+N)\frac{n}{N}} \\
 &=X[k]
 \end{align*}
 $$
+
+Symmetry about 0
+- complex conjugate
+- 
+
 #### Inverse DFT
 - frequency-doamin -> time-domain
 

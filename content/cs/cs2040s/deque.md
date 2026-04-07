@@ -187,4 +187,4 @@ pw.println(sj.toString());
 
 pw.close();
 ```
-> use [StringJoiner](/labyrinth/notes/cs/cs2040s/java_standard_library#^35facb) to handle the joining of strings separated by a delimter
+> use [StringJoiner](/labyrinth/notes/cs/cs2040s/standard_implementations#^35facb) to handle the joining of strings separated by a delimter

@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2106/lect7
+  - cs2106/chapter7
   - cs/low_level
 complete: false
 prev: /labyrinth/notes/cs/cs2106/synchronization_problems

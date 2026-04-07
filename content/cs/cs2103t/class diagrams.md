@@ -5,7 +5,7 @@ tags:
   - lang/uml
   - lang/java
 complete: false
-next: /labyrinth/notes/cs/cs2103t/uml_object_diagrams
+next: /labyrinth/notes/cs/cs2103t/object_diagrams
 prev: /labyrinth/notes/cs/cs2103t/javadoc
 
 ---
@@ -40,8 +40,8 @@ class Example {
 > there is no default visibility, unlike the [java access modifiers](/labyrinth/notes/cs/cs2103t/SE_paradigms#Access_modifiers) so leaving it blank means that the visibilty is *unspecified*, in general, absence means unspecified
 
 Classifiers
-- italics or with `{abstract}`: indicates an [abstract class](/labyrinth/notes/cs/cs2030s/java_class_abstraction#^b4c4eb)
-- `<<interface>>`: indicates an [interface](/labyrinth/notes/cs/cs2030s/java_class_abstraction#^5e21e7)
+- italics or with `{abstract}`: indicates an [abstract class](/labyrinth/notes/cs/cs2030s/class_abstraction#^b4c4eb)
+- `<<interface>>`: indicates an [interface](/labyrinth/notes/cs/cs2030s/class_abstraction#^5e21e7)
 - `<<enumerations>>`: indicates an [enum](/labyrinth/notes/cs/cs2103t/java_enumerations)
 
 ```plantuml
@@ -233,3 +233,6 @@ Association class
 - not possible in plantuml
 
 ![[association_class.png|300]]
+
+#### OODMs
+TODO

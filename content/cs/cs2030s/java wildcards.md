@@ -5,7 +5,7 @@ tags:
 - lang/java
 complete: true
 prev: /labyrinth/notes/cs/cs2030s/generics
-next: /labyrinth/notes/cs/cs2030s/java_immutable_classes
+next: /labyrinth/notes/cs/cs2030s/immutable_classes
 ---
    
 ### Summary

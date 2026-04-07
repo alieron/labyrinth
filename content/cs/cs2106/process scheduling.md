@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2106/lect2
+  - cs2106/chapter3
   - cs/parallel
 complete: false
 prev: /labyrinth/notes/cs/cs2106/exceptions_&_interrupts
@@ -10,15 +10,15 @@ next: /labyrinth/notes/cs/cs2106/simple_scheduling
 ### Summary
 Scheduling algorithms
 
-| Algorithm                                                        | Preemptive/non-preemptive     | Starvation      | Optimizes for                           | Remarks         |
-| ---------------------------------------------------------------- | ----------------------------- | --------------- | --------------------------------------- | --------------- |
-| [FCFS](/labyrinth/notes/cs/cs2106/simple_scheduling#First-Come_First-Served(FCFS))        | non-preemptive                | no, FIFO        | -                                       |                 |
-| [RR](/labyrinth/notes/cs/cs2106/simple_scheduling#Round_Robin(RR))                        | preemptive, quanta respecting | no, FIFO        | reduce wait time                        | preemptive FCFS |
-| [SJF](/labyrinth/notes/cs/cs2106/shortest_first_scheduling#Shortest_Job_First(SJF))       | non-preemptive                | yes             | minimize average turnaround time        |                 |
-| [SRT](/labyrinth/notes/cs/cs2106/shortest_first_scheduling#Shortest_Remaining_Time(SRT))  | preemptive, no quanta         | yes             | minimize average turnaround time        | preemptive SJF  |
-| [Priority Scheduling](/labyrinth/notes/cs/cs2106/priority_scheduling#Priority_Scheduling) | both                          | yes             | highest priority first                  |                 |
-| [MLFQ](/labyrinth/notes/cs/cs2106/priority_scheduling#Multi-Level_Feedback_Queue(MLFQ))   | preemptive                    | yes             | balance between response and throughput |                 |
-| [Lottery Scheduling](/labyrinth/notes/cs/cs2106/process_scheduling#Lottery_Scheduling)    | preemptive                    | no, probability | fair                                    |                 |
+| Algorithm                                                        | Preemptive/non-preemptive     | Starvation        | Optimizes for                           | Remarks         |
+| ---------------------------------------------------------------- | ----------------------------- | ----------------- | --------------------------------------- | --------------- |
+| [FCFS](/labyrinth/notes/cs/cs2106/simple_scheduling#First-Come_First-Served(FCFS))        | non-preemptive                | no, FIFO          | -                                       |                 |
+| [RR](/labyrinth/notes/cs/cs2106/simple_scheduling#Round_Robin(RR))                        | preemptive, quanta respecting | no, FIFO          | reduce wait time                        | preemptive FCFS |
+| [SJF](/labyrinth/notes/cs/cs2106/shortest_first_scheduling#Shortest_Job_First(SJF))       | non-preemptive                | yes, long jobs    | minimize average turnaround time        |                 |
+| [SRT](/labyrinth/notes/cs/cs2106/shortest_first_scheduling#Shortest_Remaining_Time(SRT))  | preemptive, no quanta         | yes, long jobs    | minimize average turnaround time        | preemptive SJF  |
+| [Priority Scheduling](/labyrinth/notes/cs/cs2106/priority_scheduling#Priority_Scheduling) | both                          | yes, low priority | highest priority first                  |                 |
+| [MLFQ](/labyrinth/notes/cs/cs2106/priority_scheduling#Multi-Level_Feedback_Queue(MLFQ))   | preemptive                    | yes, low priority | balance between response and throughput |                 |
+| [Lottery Scheduling](/labyrinth/notes/cs/cs2106/process_scheduling#Lottery_Scheduling)    | preemptive                    | no, probability   | fair                                    |                 |
 
 Scheduling metrics
 
@@ -30,6 +30,18 @@ Scheduling metrics
 | CPU utilization | - percentage of CPU working on the task                                                                      | batch processing |
 | Response time   | - time between request and response by system<br>- `time start - time arrived`                               | interactive      |
 | Predictability  | - variation in response time                                                                                 | interactive      |
+
+Scheduling optimisation
+
+| Scheduling Algorithm | CPU Utilization | Throughput | Response Time    | Turnaround Time    | Wait Time        | Notes                                                             |
+| -------------------- | --------------- | ---------- | ---------------- | ------------------ | ---------------- | ----------------------------------------------------------------- |
+| FCFS                 | ✓               | ~          | ✗                | ✗                  | ✓, bounded wait  | suffers from **convoy effect** (short jobs wait behind long ones) |
+| RR                   | ~, big quantum  | ~          | ✗                | ~                  | ✓, small quantum | fairness via time quantum, bounded wait time                      |
+| SJF                  | ✓               | ✓          | ~                | ✓, optimal average | ✗                | **starvation of long jobs**                                       |
+| SRT                  | ✓               | ✓          | ~                | ✓                  | ✗                | good responsiveness but starvation possible                       |
+| Priority Scheduling  | ~, big quantum  | ✓          | ✓, high priority | ~                  | ✓                | **low-priority processes may starve**                             |
+| MLFQ                 | ~, big quantum  | ✓          | ✓, IO bound      | ✓, CPU bound       | ✓                | approximates SJF while preventing starvation                      |
+| Lottery Scheduling   | ~, big quantum  | ~          | ~                | ~                  | ✓                | probabilistic fairness                                            |
 ### Concept
 #### Concurrency
 - multitasked processes

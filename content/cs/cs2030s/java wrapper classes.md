@@ -4,7 +4,7 @@ tags:
 - cs/oop
 - lang/java
 complete: true
-prev: /labyrinth/notes/cs/cs2030s/java_class_abstraction
+prev: /labyrinth/notes/cs/cs2030s/class_abstraction
 next: /labyrinth/notes/cs/cs2030s/java_exceptions
 ---
    

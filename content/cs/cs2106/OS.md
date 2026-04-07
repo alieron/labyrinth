@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2106/lect1
+  - cs2106/chapter1
   - cs/low_level
 complete: true
 next: /labyrinth/notes/cs/cs2106/processes
@@ -41,7 +41,7 @@ Control
 
 **Microkernel**
 - OS only provides minimal services
-	- inter-process communication(IPC), address space management and thread management
+	- inter-process communication(IPC), address space management, interrupt handler and thread management
 - higher level programs need to use IPC to communicate
 - more robust and better protection for the kernel but lower performance
 

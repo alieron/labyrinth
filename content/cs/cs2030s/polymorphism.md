@@ -40,7 +40,7 @@ Overriding
 - `@Override` pre-processor statement allows javac to check that the function actually overrides something
 
 Overloading
-- multiple functions with the same name but different [method signatures](/labyrinth/notes/cs/cs2030s/java_classes#^4e342d)
+- multiple functions with the same name but different [method signatures](/labyrinth/notes/cs/cs2030s/classes#^4e342d)
 - when invoked the most specific implementation is used
 
 Overriding allows for run-time polymorphism 

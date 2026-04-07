@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2106/lect3
+  - cs2106/chapter3
   - cs/parallel
 complete: false
 next: /labyrinth/notes/cs/cs2106/IPC

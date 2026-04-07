@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2106/lect4
+  - cs2106/chapter4
   - cs/low_level
   - lang/bash
 complete: false

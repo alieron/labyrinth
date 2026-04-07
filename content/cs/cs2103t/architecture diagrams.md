@@ -3,7 +3,7 @@ tags:
   - cs2103t/design
   - cs/software_eng
 complete: true
-prev: /labyrinth/notes/cs/cs2103t/uml_sequence_diagrams
+prev: /labyrinth/notes/cs/cs2103t/sequence_diagrams
 next: /labyrinth/notes/cs/cs2103t/logging
 
 ---

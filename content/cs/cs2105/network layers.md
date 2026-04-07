@@ -28,7 +28,7 @@ Protocol layers
 #### Application layer
 - application to application
 - protocols used by internet applications running on hosts
-- [HTTP](/labyrinth/notes/cs/cs2105/HTTP), [DNS](/labyrinth/notes/cs/cs2105/DNS), FTP, SMTP
+- [HTTP](/labyrinth/notes/cs/cs2105/HTTP), [DNS](/labyrinth/notes/cs/cs2105/DNS), [DHCP](/labyrinth/notes/cs/cs2105/DHCP), FTP, SMTP
 
 | Architecture      | Desc                                                                                                 |
 | ----------------- | ---------------------------------------------------------------------------------------------------- |
@@ -53,11 +53,19 @@ Requirements
 > ususally, routers are in the network layer
 #### Network layer
 - host to host
+- routers
 - best-effort and unreliable
-- [DHCP](/labyrinth/notes/cs/cs2105/DHCP)
+- control plane(application layer protocols): 
+	- [RIP](/labyrinth/notes/cs/cs2105/RIP), BGP
+- data plane:
+	- [IP](/labyrinth/notes/cs/cs2105/IP), [ICMP](/labyrinth/notes/cs/cs2105/ICMP)
 
 
-
+#### Link layer
+- communication between **adjacent nodes** only
+- switch
+- implemented in network interface cards(NIC) in hardware, integrated closely with the physical layer
+- 
 
 
 

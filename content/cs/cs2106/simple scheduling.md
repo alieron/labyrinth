@@ -1,6 +1,6 @@
 ---
 tags:
-  - cs2106/lect2
+  - cs2106/chapter3
   - cs/parallel
 complete: false
 prev: /labyrinth/notes/cs/cs2106/process_scheduling
@@ -26,6 +26,7 @@ Shortcomings
 
 Response time
 - response time guarantee
+- bounded wait time != faster response time
 
 $$
 \begin{gather*}

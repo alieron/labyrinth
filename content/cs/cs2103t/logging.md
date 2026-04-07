@@ -5,6 +5,7 @@ tags:
   - lang/java
 complete: true
 prev: /labyrinth/notes/cs/cs2103t/architecture_diagrams
+next: /labyrinth/notes/cs/cs2103t/activity_diagrams
 
 ---
 ### Concept
