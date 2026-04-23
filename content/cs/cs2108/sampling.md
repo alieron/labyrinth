@@ -4,7 +4,7 @@ tags:
   - math/analysis
 complete: false
 prev: /labyrinth/notes/cs/cs2108/impulse_train
-next: /labyrinth/notes/cs/cs2108/discrete_cosine_transform
+next: /labyrinth/notes/cs/cs2108/DCT
 
 ---
 ### Concept

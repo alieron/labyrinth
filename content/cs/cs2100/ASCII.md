@@ -27,4 +27,4 @@ ASCII table
 | 1101    | CR  | GS  | -   | =   | M   | ]   | m   | }   |
 | 1110    | SO  | RS  | .   | >   | N   | ^   | n   | ~   |
 | 1111    | SI  | US  | /   | ?   | O   | _   | o   | DEL |
-> 7 bits with 1 parity bit for error checking
+> 7 bits with 1 [parity](/labyrinth/notes/cs/cs2105/parity) bit for error checking

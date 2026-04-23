@@ -43,9 +43,9 @@ $$
 | F   | T   | ==T==        |
 | F   | F   | F            |
 
-Addition [modulo](/labyrinth/notes/math/abstract_algebra/modulo) 2
+Addition/subtraction [modulo](/labyrinth/notes/math/abstract_algebra/modulo) 2
 $$
-a \oplus b = (a + b) \mod 2
+a \oplus b = (a + b) \mod 2 = (a + b) \mod 2
 $$
 
 Exclusive-NOR(XNOR)

@@ -2,10 +2,10 @@
 tags:
   - cs2108/chapter8
   - math/analysis
-complete: false
+complete: true
 ---
-### Concept
-Even functions
+### Summary
+Even functions ^938d30
 - function that is symmetric about the y-axis
 
 $$
@@ -16,5 +16,9 @@ Odd function
 - function that is antisymmetric about the y-axis
 
 $$
-f(x) = -f(-x)
+\begin{align*}
+f(x) &= -f(-x) \\
+\\
+f(-x) &= -f(x)
+\end{align*}
 $$

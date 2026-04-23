@@ -8,6 +8,7 @@ prev: /labyrinth/notes/cs/cs2107/channel_security
 next: /labyrinth/notes/cs/cs2107/renegotiation_attack
 
 ---
+Related to: [secure communication](/labyrinth/notes/cs/cs2105/secure_communication)
 ### Summary
 Layered security
 - application layer -> SSH, HTTPS

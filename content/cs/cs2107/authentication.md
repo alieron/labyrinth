@@ -26,5 +26,5 @@ Data-origin
     - replay attacks (attacker resends valid but old messages)
 - **techniques:**
     - cryptographic signatures (asymmetric)
-    - message authentication codes (MAC, symmetric)
+    - message authentication codes (MAC, symmetric) ^29278f
     - sequence numbers/timestamps to prevent replay

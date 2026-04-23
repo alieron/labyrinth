@@ -93,7 +93,6 @@ $$
 E(m)||H(E(m))
 $$
 - hash-then-encrypt
--
 
 $$
 E(H(m))

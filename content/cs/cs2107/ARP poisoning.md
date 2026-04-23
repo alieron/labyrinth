@@ -30,7 +30,7 @@ Defense
 - port security - fixed MAC addresses for each switch port
 - prevent untrusted devices from joining the network, eg. WPA2
 ### Concept
-Address Resolution Protocol([ARP](/labyrinth/notes/cs/cs2105/LAN#Address_Resolution_Protocol(ARP)))
+Address Resolution Protocol([ARP](/labyrinth/notes/cs/cs2105/ethernet#Address_Resolution_Protocol(ARP)))
 - resolves an IP address to a MAC address
 - occurs in the [data link layer](/labyrinth/notes/cs/cs2107/network_security#^456a7e)
 - a device might know the IP of the next hop, but needs the MAC to tell the switch where to send it

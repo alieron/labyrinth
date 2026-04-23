@@ -10,12 +10,60 @@ next: /labyrinth/notes/cs/cs2105/HTTP
 ### Summary
 Building the packet
 
-| Layer             | Packet format                          | Needs                         |
-| ----------------- | -------------------------------------- | ----------------------------- |
-| application layer | message                                | the data itself               |
-| transport layer   | segment -> src & dest ports \| message | which port/process to send to |
-| network layer     | datagram -> src & dest ip \| segment   | which host to send to         |
+| Layer             | Packet format                                      | Needs                         |
+| ----------------- | -------------------------------------------------- | ----------------------------- |
+| application layer | message                                            | the data itself               |
+| transport layer   | segment -> src & dest ports \| message             | which port/process to send to |
+| network layer     | datagram -> src & dest ip \| segment               | which host to send to         |
+| link layer        | frame -> src & dest MAC \| datagram \| error check | which device to send to       |
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\begin{document}
+\begin{tikzpicture}[every node/.style={minimum width=0.8cm, minimum height=0.8cm}]
+	\node[text width=3cm,align=right] (application) {Application Layer};
+	\node[text width=3cm,align=right,below=of application] (transport) {Transport Layer};
+	\node[text width=3cm,align=right,below=of transport] (network) {Network Layer};
+	\node[text width=3cm,align=right,below=of network] (link) {Link Layer};
+  
+  \node[right=9.5 of application, draw, minimum width=2cm] (msg) {message};
+  
+  \node[right=6.5 of transport, draw, minimum width=3cm] (th) {segment header};
+  \node[right=0cm of th, draw, minimum width=2cm] (m) {message};
+  
+  \node[right=3.5 of network, draw, minimum width=3cm] (nh) {datagram header};
+  \node[right=0cm of nh, draw, minimum width=5cm] (t) {segment};
+  
+  \node[right=of link, draw, minimum width=2.5cm] (lh) {frame header};
+  \node[right=0cm of lh, draw, minimum width=8cm] (d) {datagram};
+  \node[right=0cm of d, draw, minimum width=2.5cm] (lt) {frame trailer};
+  
+	\draw (msg.south west) -- (m.north west);
+	\draw (msg.south east) -- (m.north east); 
+	 
+	\draw (th.south west) -- (t.north west);
+	\draw (m.south east) -- (t.north east); 
+	 
+	\draw (nh.south west) -- (d.north west);
+	\draw (t.south east) -- (d.north east);
+  
+\end{tikzpicture}
+\end{document}
+```
 > each successive layer builds upon the packet
+
+Tables at each layer
+
+| Device           | Layer           | Table Name                        | Stores                                          | Purpose                               |
+| ---------------- | --------------- | --------------------------------- | ----------------------------------------------- | ------------------------------------- |
+| Host (OS / apps) | **Application** | Application state / session table | App-specific data (sessions, requests, cookies) | Track application-level interactions  |
+| Host (OS kernel) | **Transport**   | **Socket / connection table**     | (IP, port, protocol) <-> process                | Deliver data to correct application   |
+| Router / Host    | **Network**     | **Routing table**                 | Network prefix -> next hop                      | Decide where to send packets          |
+| NAT Router       | **Network**     | **NAT translation table**         | (private IP, port) <-> (public IP, port)        | Map internal <-> external connections |
+| Host / Router    | **Link**        | **ARP table (ARP cache)**         | IP -> MAC address                               | Resolve next-hop MAC address          |
+| Switch           | **Link**        | **MAC (forwarding) table**        | MAC address -> interface                        | Forward frames within LAN             |
+
 ### Concept
 #### Protocols
 - **format and order** of messages exchanged
@@ -28,7 +76,7 @@ Protocol layers
 #### Application layer
 - application to application
 - protocols used by internet applications running on hosts
-- [HTTP](/labyrinth/notes/cs/cs2105/HTTP), [DNS](/labyrinth/notes/cs/cs2105/DNS), [DHCP](/labyrinth/notes/cs/cs2105/DHCP), FTP, SMTP
+- [HTTP](/labyrinth/notes/cs/cs2105/HTTP), [DNS](/labyrinth/notes/cs/cs2105/DNS), FTP, SMTP
 
 | Architecture      | Desc                                                                                                 |
 | ----------------- | ---------------------------------------------------------------------------------------------------- |
@@ -53,85 +101,24 @@ Requirements
 > ususally, routers are in the network layer
 #### Network layer
 - host to host
-- routers
+- routers - forwards packets between networks
 - best-effort and unreliable
+	- no guarantees for:
+		- successful datagram delivery
+		- timing/order of delivery
+		- bandwidth provided
+	- pros:
+		- simple mechanism - wide adoption
+		- sufficient provisioning of bandwidth - good enough most of the time
+		- distributed services - multiple providers
 - control plane(application layer protocols): 
-	- [RIP](/labyrinth/notes/cs/cs2105/RIP), BGP
+	- [DHCP](/labyrinth/notes/cs/cs2105/DHCP), [RIP](/labyrinth/notes/cs/cs2105/RIP), BGP
 - data plane:
 	- [IP](/labyrinth/notes/cs/cs2105/IP), [ICMP](/labyrinth/notes/cs/cs2105/ICMP)
 
 
 #### Link layer
 - communication between **adjacent nodes** only
-- switch
+- switch - smart forwarding
 - implemented in network interface cards(NIC) in hardware, integrated closely with the physical layer
-- 
-
-
-
-```tikz
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta,positioning,calc}
-\begin{document}
-\def\dprop{0.5cm}
-
-% Host timeline (vertical line representing a host)
-% #1 = x position
-% #2 = name
-% #3 = label text
-\newcommand{\host}[3]{
-  \draw[thick] (#1,0) -- (#1,-10) node[pos=0,above] {\textbf{#3}};
-  \coordinate (#2) at (#1,0);
-}
-
-% Diagonal arrow going down-right
-% #1 = source
-% #2 = destination 
-% #3 = label
-% #4 = vertical offset from start
-\newcommand{\trans}[4]{
-  \draw[->, thick] 
-    ([yshift=#4]#1) -- ([yshift=#4-\dprop]#2)
-    node[midway,above,sloped,font=\small] {#3};
-}
-
-% Time marker (horizontal dashed line with label)
-% #1 = y position
-% #2 = label text
-% #3 = x start position
-% #4 = x end position
-\newcommand{\timemarker}[4]{
-  \draw[densely dotted] (#3,#1) -- (#4,#1);
-  \node[left,font=\small] at (#3,#1) {#2};
-}
-
-\begin{tikzpicture}
-
-% Define hosts
-\host{0}{client}{Client}
-\host{6}{server}{Server}
-
-% Data packets (client to server)
-\trans{client}{server}{Seq=1000, Len=500}{-1cm}
-\trans{client}{server}{Seq=1500, Len=500}{-2.5cm}
-\trans{client}{server}{Seq=2000, Len=500}{-4cm}
-
-% ACK packets (server to client)
-\trans{server}{client}{ACK=1500}{-2cm}
-\trans{server}{client}{ACK=2000}{-3.5cm}
-\trans{server}{client}{ACK=2500}{-5cm}
-
-% Time markers
-\timemarker{-1}{t0}{-1}{7}
-\timemarker{-3}{t1}{-1}{7}
-\timemarker{-5}{t2}{-1}{7}
-
-% Additional annotation (optional)
-\node[font=\small,text=gray] at (3,-6.5) {Round-trip time};
-\draw[<->,gray] (0,-6) -- (6,-6);
-
-\end{tikzpicture}
-\end{document}
-```
-### Extra
-Tikz template for protocol diagrams
+- [ARP](#)

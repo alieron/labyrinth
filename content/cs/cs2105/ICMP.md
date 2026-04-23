@@ -25,3 +25,17 @@ next: /labyrinth/notes/cs/cs2105/multiple_access_links
 Route tracing
 - send small ICMP packets with incrementing TTL
 - each hop may respond with TTL expired
+- uses `echo request` and `echo reply`
+
+```
+0                   1                   2                   3
+0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|     Type      |     Code      |          Checksum             |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|           Identifier          |        Sequence Number        |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|     Data ...
++-+-+-+-+-
+```
+> with [NAT](/labyrinth/notes/cs/cs2105/NAT) the identifier is used to store the port number

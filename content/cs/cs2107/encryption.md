@@ -24,7 +24,7 @@ Kerchoff's principle
 Security through obscurity
 - hide the design of the system to achieve security
 ### Concept
-Symmetric-key encryption
+Symmetric-key encryption ^c38796
 ```tikz
 \usepackage{tikz}  
 \usetikzlibrary{positioning}
