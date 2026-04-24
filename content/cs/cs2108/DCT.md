@@ -26,7 +26,7 @@ $$
 - like the [DFT](/labyrinth/notes/cs/cs2108/DFT)'s periodic assumption, but requiring symmetric extensions 
 - different variations of tiling
 
-![[DCT_types.png|500]]
+![[dct_types.png|500]]
 > usually DCT-2 is used for compression
 
 Even symmetry

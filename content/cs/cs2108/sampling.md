@@ -3,8 +3,8 @@ tags:
   - cs2108/chapter7
   - math/analysis
 complete: false
-prev: /labyrinth/notes/cs/cs2108/impulse_train
 next: /labyrinth/notes/cs/cs2108/DCT
+prev: /labyrinth/notes/cs/cs2108/continuous_convolution
 
 ---
 ### Concept

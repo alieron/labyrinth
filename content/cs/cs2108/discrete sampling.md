@@ -3,8 +3,8 @@ tags:
   - cs2108/chapter4
   - math/analysis
 complete: false
-prev: /labyrinth/notes/cs/cs2108/DFT
 next: /labyrinth/notes/cs/cs2108/2D_fourier_transform
+prev: /labyrinth/notes/cs/cs2108/impulse_train
 
 ---
 ### Concept

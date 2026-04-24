@@ -25,3 +25,18 @@ $$
 $$
 f(t) = \frac{1}{2\pi}\int_{-\infty}^{\infty} F(\omega)\ e^{j\omega t} \ d\omega
 $$
+
+### Application
+CTFT of rectangular function
+- [sinc function](/labyrinth/notes/cs/cs2108/sinc_function)
+
+$$
+\begin{gather*}
+rect(t)=\begin{cases}
+1 & -0.5\leq t\leq 0.5 \\
+0 & \text{otherwise}
+\end{cases} \\
+\\
+\mathcal{F}(rect(t)) =X(\omega)=\text{sinc}\left( \frac{\omega}{2\pi} \right)
+\end{gather*}
+$$

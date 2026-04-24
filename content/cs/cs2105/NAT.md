@@ -31,3 +31,8 @@ NAT router
 - modifications to packets:
 	- IP - recompute [IP datagram](/labyrinth/notes/cs/cs2105/IP#IPv4_datagram) header checksum
 	- port - recompute transport layer checksum
+
+NAT translation table
+```
+| Public IP & New Port | Private IP & Internal Port |
+```

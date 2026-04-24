@@ -81,7 +81,70 @@ Switch table
 - link layer protocol, needs to access both MAC and IP addresses
 - done by network layer devices
 
+ARP query
+1. send ARP query with broadcast address as dest MAC
+2. switch forwards to all interfaces
+3. target host will reply, with its MAC as the src MAC
+4. switch forwards to querying host
+5. querying host updates ARP table
+
 ARP table
 ```
 | IP Address | MAC Address | TTL |
+```
+
+### Application
+Switch table
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\begin{document}
+\tikzstyle{vertex}=[draw,circle,minimum size=18pt,inner sep=0pt]
+\newcommand\uwedge[4][]{
+  \draw (#2) to node[auto,pos=0.2] {#4} (#3);
+}
+
+\begin{tikzpicture}[thick,node distance=2]
+\node[draw,minimum size=0.8cm] (s) {};
+\draw (s.north west) -- (s.south east);
+\draw (s.south west) -- (s.north east);
+
+\node[vertex,above=of s] (a) {A};
+\node[vertex,right=of s] (b) {B};
+\node[vertex,below=of s] (c) {C};
+\node[vertex,left=of s] (d) {D};
+
+\uwedge{s}{a}{1};
+\uwedge{s}{b}{2};
+\uwedge{s}{c}{3};
+\uwedge{s}{d}{4};
+
+\end{tikzpicture}
+\end{document}
+```
+
+- B sends frame to D
+```
+Frame sent to: 1, 3, 4
+
+Host | Interface
+B    | 2
+```
+
+- D replies to B
+```
+Frame sent to: 3
+
+Host | Interface
+B    | 2
+D    | 4
+```
+
+- D sends frame to A
+```
+Frame sent to: 1, 2, 3
+
+Host | Interface
+B    | 2
+D    | 4
 ```
