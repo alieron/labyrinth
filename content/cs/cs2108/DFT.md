@@ -13,7 +13,7 @@ $$
 \begin{align*}
 \text{DFT:} &&& X[k]=\sum_{n=0}^{N-1} x[n]\ e^{-j 2\pi k\frac{n}{N}} \\
 \\
-\text{Inverse DFT:} &&& x[n] = \frac{1}{N}\sum_{k=0}^{N-1} X[k] \ e ^{-j 2\pi k\frac{n}{N}}
+\text{Inverse DFT:} &&& x[n] = \frac{1}{N}\sum_{k=0}^{N-1} X[k] \ e ^{j 2\pi k\frac{n}{N}}
 \end{align*}
 $$
 
@@ -120,7 +120,7 @@ Symmetry about 0
 - frequency-doamin -> time-domain
 
 $$
-x[n] = \frac{1}{N}\sum_{k=0}^{N-1} X[k] \ e ^{-j 2\pi k\frac{n}{N}}
+x[n] = \frac{1}{N}\sum_{k=0}^{N-1} X[k] \ e ^{j 2\pi k\frac{n}{N}}
 $$
 > scaling is kept as convention
 

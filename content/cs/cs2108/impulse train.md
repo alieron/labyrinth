@@ -4,7 +4,7 @@ tags:
   - math/analysis
 complete: false
 prev: /labyrinth/notes/cs/cs2108/DFT
-next: /labyrinth/notes/cs/cs2108/discrete_sampling
+next: /labyrinth/notes/cs/cs2108/frequency_bins
 
 ---
 ### Summary
@@ -21,6 +21,12 @@ $$
 \end{align*}
 $$
 
+CTFT of impulse train ^3a14f5
+- impulse train <-> impulse train
+
+$$
+s(t) = \sum_{n=-\infty}^{\infty} \delta(t - nT_{s}) \xleftrightarrow{\text{CTFT}} S(\omega) = \omega_{0}\sum_{k=-\infty}^{\infty} \delta(\omega - k \omega_{0}), \ \omega_{0}=\frac{2\pi}{T_{s}}
+$$
 ### Concept
 #### Single impulse
 - [kronecker delta](/labyrinth/notes/math/abstract_algebra/kronecker_delta)
@@ -42,10 +48,10 @@ $$
 $$
 
 #### Train of impulses
-- impulse every period $T$
+- periodic - impulse every period $T$
 
 $$
-\sum_{m=-\infty}^{\infty} \delta[n + Tm] = \begin{cases}
+\sum_{m=-\infty}^{\infty} \delta[n + mT] = \begin{cases}
 1 & \text{if }n=0,\pm T, \pm2T, \dots \\
 0 & \text{otherwise}
 \end{cases}
@@ -123,15 +129,40 @@ $$
 
 $$
 \begin{align*}
-\text{let }y[n] &= \sin \left(2\pi k_{0}\frac{n}{N}\right)\\
+\text{let }x[n] &= \sin \left(2\pi k_{0}\frac{n}{N}\right)\\
 &=\frac{1}{2j}\left(e^{j 2\pi k_{0}\frac{n}{N}}-e^{-j 2\pi k_{0}\frac{n}{N}}\right)\\
 \\
-Y[k] &= \frac{N}{2j}(\delta[k-k_{0}]-\delta[k+k_{0}]) \\
+X[k] &= \frac{N}{2j}(\delta[k-k_{0}]-\delta[k+k_{0}]) \\
 &= \frac{N}{2j}(\delta[k-k_{0}]-\delta[k+k_{0}]) \cdot j^{2}\cdot -1\\
 &= \frac{-jN}{2}(\delta[k-k_{0}]-\delta[k+k_{0}])\\
 &= \frac{-jN}{2}\delta[k-k_{0}]+\frac{jN}{2}\delta[k+k_{0}]\\
 \end{align*}
 $$
 ![[dft_pair_sine.png|300]]
-
 > reflects the [even & odd](/labyrinth/notes/cs/cs2108/even_&_odd_functions) nature of cosine and sine
+
+[CTFT](/labyrinth/notes/cs/cs2108/fourier_transform#Continuous_time_fourier_transform(CTFT)) of impulse train
+TODO
+$$
+\begin{align*}
+\text{let }x(t) &= \sum_{m=-\infty}^{\infty} \delta(t-mT)\\
+\\
+X(\omega) &= \int_{-\infty}^{\infty}\left(\sum_{m=-\infty}^{\infty} \delta(t-mT)\right)  \ e^{-j \omega t} \ dt \\
+&= \sum_{m=-\infty}^{\infty}\int_{-\infty}^{\infty} \delta(t-mT)  \ e^{-j \omega t} \ dt && \text{(Sifting property)} \\
+&= \sum_{m=-\infty}^{\infty}e^{-j \omega mT} \ dt \\
+\end{align*}
+$$
+> there is one more step that i dont yet understand
+### Extra
+TODO
+Impulse train
+$$
+\begin{gather*}
+\text{let }x[n] = \sum_{m=-\infty}^{\infty} \delta[n-mT]\\
+\\
+\begin{aligned}
+X[k] &= \sum_{n=0}^{N-1} \left(\sum_{m=-\infty}^{\infty} \delta[n-mT]\right)e^{-j 2\pi k\frac{n}{N}} \\
+&=  \sum_{m=-\infty}^{\infty} \sum_{n=0}^{N-1} \delta[n-mT] e^{-j 2\pi k\frac{n}{N}} \\
+\end{aligned}\\
+\end{gather*}
+$$

@@ -8,10 +8,12 @@ next: /labyrinth/notes/cs/cs2108/sampling
 
 ---
 ### Concept
+#### Continuous convolution
 
 $$
 (f*g)(t) = \int_{-\infty}^{\infty} f(\tau)g(t-\tau) \ d\tau
 $$
+
 #### Convolution theorem
 $$
 \begin{align*}
@@ -35,7 +37,7 @@ Y(\omega)&= H(\omega) X(\omega) \\
 \end{align*}
 $$
 
-- convolution in one domain <-> multiplication of [fourier transform](/labyrinth/notes/cs/cs2108/fourier_transform) in the other
+- convolution in one domain <-> multiplication in the other
 
 $$
 \begin{align*}
