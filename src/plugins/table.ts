@@ -13,6 +13,7 @@ export function rehypeMdTable() {
           'border-collapse',
           'w-fit',
           'my-2',
+          'whitespace-pre',
         ];
 
         // Wrap with overflow div
