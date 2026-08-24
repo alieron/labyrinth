@@ -1,13 +1,13 @@
 ---
 tags:
-- cs1101s/chapter1
-- cs/functional_programming
-- cs/fundamentals
-- lang/js
+  - cs1101s/chapter1
+  - cs/functional_programming
+  - cs/fundamentals
+  - lang/js
 complete: true
 prev: /labyrinth/notes/cs/cs1101s/substitution_model
 next: /labyrinth/notes/cs/cs1101s/orders_of_growth
-
+succ: "[dynamic programming](/labyrinth/notes/cs/competitive/dynamic_programming)"
 ---
 ### Concept
 Functions that calls itself
@@ -93,7 +93,7 @@ function fib(n) {
 ```
 > time grows exponentially, proportionately with the size of the tree
 
-[Tree](/labyrinth/notes/cs/recursion_tree) for fib(n) has F(n+1) leaves, where:
+[Tree](/labyrinth/notes/cs/competitive/dynamic_programming) for fib(n) has F(n+1) leaves, where:
 $$
 \begin{align}
 F(n) = \lfloor\frac{\phi^n}{\sqrt{5}}+\frac{1}{2}\rfloor \ , \quad \phi = \frac{1+\sqrt{5}}{2} 

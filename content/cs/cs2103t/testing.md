@@ -3,8 +3,8 @@ tags:
   - cs2103t/qa
   - cs/software_eng
 complete: true
-next: /labyrinth/notes/cs/cs2103t/javadoc
-prev: /labyrinth/notes/cs/cs2103t/IDEs
+next: /labyrinth/notes/cs/cs2103t/documentation
+prev: /labyrinth/notes/cs/cs2103t/IDE
 
 ---
 ### Concept
@@ -120,14 +120,13 @@ Test driver
 #### Test Coverage
 - metric for the extent of the code covered by tests
 
-
 | Type                         | Description                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **method coverage**          | - based on functions executed e.g., testing executed 90 out of 100 functions                                                                                                                                                                                                                                                                                                                                   |
 | **statement coverage**       | - based on the number of lines of code executed e.g., testing executed 23k out of 25k LOC                                                                                                                                                                                                                                                                                                                      |
 | **decision/branch coverage** | - based on the decision points exercised e.g., an `if` statement evaluated to both `true` and `false` with separate test cases during testing is considered 'covered'                                                                                                                                                                                                                                          |
 | **condition coverage**       | - each boolean sub-expression of a decision point is evaluated to both true and false at least once<br>- condition coverage is not the same as the decision coverage                                                                                                                                                                                                                                           |
-| **path coverage**            | - measures coverage in terms of possible paths through a given part of the code executed<br>- 100% path coverage means all possible paths have been executed<br>- a commonly used notation for path analysis is called the _Control Flow Graph (CFG)_.                                                                                                                                                         |
+| **path coverage**            | - measures coverage in terms of possible paths through a given part of the code executed<br>- 100% path coverage means all possible paths have been executed<br>- loops may create alot of potential paths<br>- a commonly used notation for path analysis is called the _Control Flow Graph (CFG)_                                                                                                            |
 | **entry/exit coverage**      | - measures coverage in terms of possible _calls to_ and _exits_ from the operations in the SUT<br>- _Entry points_ refer to all places from which the method is called from the rest of the code i.e., all places where the control is handed over to the method in concern<br>- _Exit points_ refer to points at which the control is returned to the caller e.g., return statements, throwing of exceptions. |
 
 Decision vs Condition Coverage

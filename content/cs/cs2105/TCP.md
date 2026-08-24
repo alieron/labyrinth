@@ -2,7 +2,7 @@
 tags:
   - cs2105/lect5
   - cs/networking
-complete: false
+complete: true
 prev: /labyrinth/notes/cs/cs2105/UDP
 next: /labyrinth/notes/cs/cs2105/IP
 

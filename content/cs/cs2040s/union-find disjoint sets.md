@@ -1,12 +1,13 @@
 ---
 tags:
+  - cs/competitive
   - cs2040s/chapter3
   - cs/abstract_data_types
   - lang/java
 complete: true
 prev: /labyrinth/notes/cs/cs2040s/hash_table
 next: /labyrinth/notes/cs/cs2040s/BST
-
+succ: "[DSU rollback](/labyrinth/notes/cs/competitive/DSU_rollback)"
 ---
 ### Summary
 Union-find disjoint sets(UFDS)
@@ -605,4 +606,4 @@ class unionfind_ds {
       System.out.printf("findSet(%d) = %d, sizeOfSet(%d) = %d\n", i, UF.findSet(i), i, UF.sizeOfSet(i));
   }
 }
-``` 
+```

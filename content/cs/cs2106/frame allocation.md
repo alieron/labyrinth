@@ -7,32 +7,42 @@ prev: /labyrinth/notes/cs/cs2106/page_replacement
 next: /labyrinth/notes/cs/cs2106/file_system
 
 ---
+### Summary
+Local and global replacement
+
+| Method                 | Core Idea                         | Advantages                                                       | Disadvantages                                                                  |
+| ---------------------- | --------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| **local replacement**  | replace with page in saem process | - frames allocated to process is constant<br>- stable performace | - insufficient allocation -> hinder process                                    |
+| **global replacement** | replace any page                  | - self-adjustment between processes                              | - malicious processes can affect others<br>- different allocation between runs |
+
+
 ### Concept
-- how to allocated phycical memory frames among processes
+- how to allocated phycical memory frames across processes
 - simple approaches:
 	- equal allocation
 	- proportional allocation - by the size of the process in relation to all the processes
 
-[Page replacement](/labyrinth/notes/cs/cs2106/page_replacement) across processes
-- local replacement
-	- select victim page within the same process, using the process's page table
-	- pros:
-		- frames allocated to a process remain constant -> stable performance between runs
-	- cons:
-		- less flexible, if insufficient frames are allocated -> process will be hindered
-- global replacement
-	- victim page can be chosen across all physical frames
-	- pros:
-		- self-adjustment, processes that need more can get more
-	- cons:
-		- malicious processes can get more frames
-		- inconsistent frame allocation across runs
+Local replacement ^2b35f3
+- select victim page within the same process, using the process's page table
+- pros:
+	- frames allocated to a process remain constant -> stable performance between runs
+- cons:
+	- less flexible, if insufficient frames are allocated -> process will be hindered
+
+Global replacement
+- [page replacement](/labyrinth/notes/cs/cs2106/page_replacement) across processes
+- victim page can be chosen across all physical frames
+- pros:
+	- self-adjustment, processes that need more can get more
+- cons:
+	- malicious processes can get more frames
+	- inconsistent frame allocation across runs
 
 [Thrasing](/labyrinth/notes/cs/cs2106/virtual_memory#^1696b8) with frame allocation
 - IO needed to bring data from secondary storage into RAM
 - with global replacement
 	- thrashing process can steal pages from other processes
-	- causing other processes to thrash also, cascading thrashing
+	- causing other processes to thrash also, **cascading thrashing**
 - with local replacement
 	- limited to one process
 	- but that process can block the IO
@@ -45,6 +55,7 @@ next: /labyrinth/notes/cs/cs2106/file_system
 $$
 W(t, \Delta)
 $$
+> $\Delta$ represents back in time, we only have past info
 
 - working set window -> time interval
 - if $\Delta$ is too small, may miss pages in currently locality

@@ -5,7 +5,7 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1301/telescoping_series
 next: /labyrinth/notes/math/ma1301/cartesian_differentiation
-
+succ: "[differentiation II](/labyrinth/notes/math/ma1521/differentiation_II)"
 ---
 ### Summary
 Basic rules, or in [Lagrange notation](/labyrinth/notes/math/math_fundementals/derivative_notation#^753b98) ^87dfa9

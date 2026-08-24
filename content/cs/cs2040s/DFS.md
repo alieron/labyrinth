@@ -1,5 +1,6 @@
 ---
 tags:
+  - cs/competitive
   - cs2040s/chapter4
   - cs/algorithms
   - lang/java

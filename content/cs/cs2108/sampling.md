@@ -4,13 +4,13 @@ tags:
   - math/analysis
 complete: false
 next: /labyrinth/notes/cs/cs2108/DCT
-prev: /labyrinth/notes/cs/cs2108/continuous_convolution
+prev: /labyrinth/notes/cs/cs2108/2D_convolution
 
 ---
 ### Concept
 #### Convolution with impulse
 - in frequency domain
-- shift
+- shift to impulse's position
 
 $$
 \begin{align*}
@@ -35,7 +35,7 @@ $$
 
 
 Sampling in time domain
-- due to [convolution theorem](/labyrinth/notes/cs/cs2108/continuous_convolution#Convolution_theorem)
+- due to [convolution theorem](/labyrinth/notes/cs/cs2108/2D_convolution#Convolution_theorem)
 - using the [CTFT of impulse train](/labyrinth/notes/cs/cs2108/impulse_train#^3a14f5)
 
 $$

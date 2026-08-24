@@ -1,5 +1,6 @@
 ---
 tags:
+  - cs/competitive
   - cs2040s/chapter3
   - cs/data_structures
   - lang/java

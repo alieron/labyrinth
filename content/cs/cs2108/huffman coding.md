@@ -84,7 +84,7 @@ node[midway,right=5pt]{N2/6};
 \end{tikzpicture}
 \end{document}
 ```
-> huffman trees defer from [prefix trees](#) since only the leaf nodes 
+> huffman trees defer from [prefix trees](/labyrinth/notes/cs/competitive/trie) since only the leaf nodes 
 
 - dictionary
 $$

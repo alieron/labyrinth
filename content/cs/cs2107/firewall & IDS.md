@@ -6,7 +6,7 @@ tags:
 complete: false
 prev: /labyrinth/notes/cs/cs2107/denial_of_service
 next: /labyrinth/notes/cs/cs2107/VPN
-
+succ: "[network isolation](/labyrinth/notes/cs/cs2105/network_isolation)"
 ---
 ### Summary
 Firewalls

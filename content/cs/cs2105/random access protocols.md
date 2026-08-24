@@ -2,7 +2,7 @@
 tags:
   - cs2105/lect8
   - cs/networking
-complete: false
+complete: true
 prev: /labyrinth/notes/cs/cs2105/multiple_access_links
 next: /labyrinth/notes/cs/cs2105/taking_turns_protocols
 

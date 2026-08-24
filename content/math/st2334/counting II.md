@@ -5,9 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/st2334/events
 next: /labyrinth/notes/math/st2334/probability
-
+pred: "[counting](/labyrinth/notes/math/cs1231s/counting)"
 ---
-Succeeds: [counting](/labyrinth/notes/math/cs1231s/counting)
 ### Summary
 Counting methods
 ![[counting_methods.png|800]]

@@ -4,6 +4,7 @@ tags:
 - cs/data_structures
 - lang/js
 complete: true
+succ: "[BST](/labyrinth/notes/cs/cs2040s/BST)"
 ---
 ### Concept
 A tree of data type T is either:

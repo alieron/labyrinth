@@ -1,14 +1,14 @@
 ---
 tags:
+  - cs/competitive
   - cs2040s/chapter3
   - cs/abstract_data_types
   - lang/java
 complete: false
 prev: /labyrinth/notes/cs/cs2040s/balanced_BST
 next: /labyrinth/notes/cs/cs2040s/graph_traversal
-
+pred: "[graphs](/labyrinth/notes/math/cs1231s/graphs)"
 ---
-Succeeds: [graphs](/labyrinth/notes/math/cs1231s/graphs)
 ### Summary
 Adjacency matrix - [compact array](/labyrinth/notes/cs/cs2040s/compact_array) ^ad263b
 - $O(V^2)$ space
@@ -148,7 +148,7 @@ $$
 Sparse
 - when the number of edges is closer to $V$ than to $V^2$
 
-Directed acyclic graph(DAG)
+Directed acyclic graph(DAG) ^0d292d
 - directed
 - no cycles
 

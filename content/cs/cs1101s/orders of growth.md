@@ -7,7 +7,7 @@ tags:
 complete: true
 prev: /labyrinth/notes/cs/cs1101s/recursion
 next: /labyrinth/notes/cs/cs1101s/higher_order_functions
-
+succ: "[asymptotics](/labyrinth/notes/cs/cs2040s/asymptotics)"
 ---
 ### Summary
 Adding orders of growth

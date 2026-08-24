@@ -5,7 +5,7 @@ tags:
   - lang/java
 complete: false
 prev: /labyrinth/notes/cs/cs2103t/SE_principles
-next: /labyrinth/notes/cs/cs2103t/test_case_design
+next: /labyrinth/notes/cs/cs2103t/defensive_programming
 
 ---
 ### Summary
@@ -14,6 +14,7 @@ next: /labyrinth/notes/cs/cs2103t/test_case_design
 | Singleton                   | Creational    | Ensure a class has only one instance and provide global access to it | A single shared instance is controlled via a static access method                      | Controlled access, saves resources                  | Hard to test, global state can lead to tight coupling         |
 | Abstraction-Occurrence      | Structural    | Separate different instances of a concept from a single abstraction  | One abstract object represents shared data, while occurrences represent specific cases | Reduces duplication, improves consistency           | Can add complexity, harder to understand initially            |
 | Facade                      | Structural    | Provide a simplified interface to a complex subsystem                | A wrapper class hides complexity and exposes a unified interface                       | Easier to use, reduces dependencies                 | Can become a “god object” if overused                         |
+| Command                     | Behavioral    |                                                                      |                                                                                        |                                                     |                                                               |
 | MVC (Model-View-Controller) | Architectural | Separate application into Model, View, and Controller components     | Model = data, View = UI, Controller = logic handling input/output                      | Clear separation of concerns, easier maintenance    | Can be overkill for small apps, added complexity              |
 | Observer                    | Behavioral    | Define a one-to-many dependency so observers update automatically    | Subject notifies all registered observers when its state changes                       | Decouples components, supports event-driven systems | Can cause performance issues or unexpected updates if misused |
 
@@ -94,6 +95,7 @@ class Logic {
 - **solution** - general `Command` class that can be executed without knowledge of its type
 
 ![[command_pattern.png|400]]
+> related to the [Dependency Inversion Principle](/labyrinth/notes/cs/cs2103t/SE_principles#Dependency_Inversion_Principle(DIP))
 
 #### Model View Controller(MVC) pattern
 - **context** - applications support storage/retrieval of into, display of info and changing the stored information based on inputs
@@ -109,7 +111,7 @@ class Logic {
 
 #### Observer pattern
 - **context** - objects may be interested in observing another object for changes
-- **problem** - the observed object doesn't want to be coupled to objects observing it, ie. the observed object shouldn't have to call `Observer.update()` for each observer
+- **problem** - the observed object doesn't want to be coupled to objects observing it, ie. the observed object shouldn't have to update each observer in their specific ways
 - **solution** - couple to an observer interface, observable object is only dependant on the interface and not each observer
 
 ![[observer_pattern.png|400]]

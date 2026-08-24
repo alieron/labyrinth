@@ -2,7 +2,7 @@
 tags:
   - cs2105/lect7
   - cs/networking
-complete: false
+complete: true
 prev: /labyrinth/notes/cs/cs2105/distance_vector_routing
 next: /labyrinth/notes/cs/cs2105/ICMP
 

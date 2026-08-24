@@ -4,8 +4,8 @@ tags:
   - cs/security
 complete: true
 ---
-### Summary
-Diffie-Hellman key exchange
+### Concept
+#### Diffie-Hellman key exchange
 - enables [forward secrecy](/labyrinth/notes/cs/cs2107/channel_security#^1e9c6e), since it doesn't involve any long-term key
 
 ```tikz
@@ -41,8 +41,28 @@ $$
 \text{Server:} & k = x^b = (g^a)^b \mod p
 \end{array}
 $$
+> $g$ and $p$ must be primes to create a complete [group](#)
 
 Computational Diffie-Hellman assumption
+- [modular exponentiation](#) is difficult to reverse
+
 $$
-k = g^{ab} \mod p \qquad \text{is computationally infeasible to find}
+k = g^{ab} \mod p \qquad \text{is computationally infeasible to find }ab
+$$
+> [discrete logarithm](#) problem
+#### Shared secret
+- from asymmetric information
+
+$$
+\begin{gather*}
+A = g^a \mod p\\
+B = g^b \mod p \\
+\\
+\begin{aligned}
+\mathrm{DH}(a, B) &= \mathrm{DH}(b, A)\\
+\\
+B^a &= A^b \mod p \\
+(g^b)^a &= (g^a)^b \mod p
+\end{aligned}
+\end{gather*}
 $$

@@ -1,14 +1,14 @@
 ---
 tags:
+  - cs/competitive
   - cs2040s/chapter3
   - cs/data_structures
   - lang/java
 complete: true
 prev: /labyrinth/notes/cs/cs2040s/union-find_disjoint_sets
 next: /labyrinth/notes/cs/cs2040s/balanced_BST
-
+pred: "[trees](/labyrinth/notes/cs/cs1101s/trees)"
 ---
-Succeeds: [trees](/labyrinth/notes/cs/cs1101s/trees)
 ### Summary
 Binary search tree(BST)
 - implements [table](/labyrinth/notes/cs/cs2040s/table)

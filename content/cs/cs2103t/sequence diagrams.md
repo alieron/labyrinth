@@ -5,7 +5,7 @@ tags:
   - lang/uml
 complete: false
 prev: /labyrinth/notes/cs/cs2103t/assertions
-next: /labyrinth/notes/cs/cs2103t/architecture_diagrams
+next: /labyrinth/notes/cs/cs2103t/logging
 
 ---
 ### Concept

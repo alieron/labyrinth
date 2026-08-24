@@ -5,7 +5,7 @@ tags:
 complete: true
 prev: /labyrinth/notes/math/ma1301/volume_of_revolution
 next: /labyrinth/notes/math/ma1301/vectors_in_R³
-
+succ: "[1st order ODE II](/labyrinth/notes/math/ma1521/1st_order_ODE_II)"
 ---
 ### Summary
 Equations containing $\frac{dy}{dx}$ and $x$ and/or $y$, solve using [integration](/labyrinth/notes/math/ma1301/integration)

@@ -7,7 +7,7 @@ tags:
 complete: true
 prev: /labyrinth/notes/cs/cs1101s/tombstone_diagram
 next: /labyrinth/notes/cs/cs1101s/memoization
-
+succ: "[java streams](/labyrinth/notes/cs/cs2030s/java_streams)"
 ---
 ### Concept
 A stream is either:

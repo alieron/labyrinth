@@ -18,7 +18,7 @@ $$
 |e^{i\theta}| = \sqrt{ \cos ^{2}\theta + \sin ^{2}\theta } = 1
 $$
 
-Sine and cosine as complext exponentials ^83fa5e
+Sine and cosine as complex exponentials ^83fa5e
 $$
 \begin{align*}
 \cos x &= \frac{e^{ix}-e^{-ix}}{2i} \\

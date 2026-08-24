@@ -1,12 +1,14 @@
 ---
 tags:
+  - cs/competitive
   - cs2040s/chapter3
   - cs/data_structures
   - lang/java
 complete: true
 prev: /labyrinth/notes/cs/cs2040s/priority_queue
 next: /labyrinth/notes/cs/cs2040s/table
-
+pred: "[priority queue](/labyrinth/notes/cs/cs2040s/priority_queue)"
+succ: "[~fibonacci heap](#)"
 ---
 ### Summary
 Binary heap

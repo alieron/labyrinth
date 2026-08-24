@@ -5,7 +5,7 @@ tags:
   - lang/uml
 complete: false
 prev: /labyrinth/notes/cs/cs2103t/class_diagrams
-next: /labyrinth/notes/cs/cs2103t/javafx
+next: /labyrinth/notes/cs/cs2103t/code_quality
 
 ---
 ### Concept

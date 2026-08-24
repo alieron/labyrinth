@@ -6,7 +6,7 @@ tags:
   - lang/java
 complete: false
 next: /labyrinth/notes/cs/cs2103t/object_diagrams
-prev: /labyrinth/notes/cs/cs2103t/javadoc
+prev: /labyrinth/notes/cs/cs2103t/modeling
 
 ---
 ### Concept
@@ -37,7 +37,7 @@ class Example {
 }
 @enduml
 ```
-> there is no default visibility, unlike the [java access modifiers](/labyrinth/notes/cs/cs2103t/SE_paradigms#Access_modifiers) so leaving it blank means that the visibilty is *unspecified*, in general, absence means unspecified
+> there is no default visibility, unlike the [java access modifiers](/labyrinth/notes/cs/cs2103t/SDLC_process_models#Access_modifiers) so leaving it blank means that the visibilty is *unspecified*, in general, absence means unspecified
 
 Classifiers
 - italics or with `{abstract}`: indicates an [abstract class](/labyrinth/notes/cs/cs2030s/class_abstraction#^b4c4eb)
@@ -234,5 +234,10 @@ Association class
 
 ![[association_class.png|300]]
 
-#### OODMs
-TODO
+#### Conceptual Class Diagrams
+- omit methods and navigability
+- exclued solution-specific classes, used in the solution but not in the problem
+
+Domain modeling
+- modeling the problem domain
+- how things actually work in the real world

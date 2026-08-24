@@ -109,7 +109,7 @@ $$
 \trans{switch}{client}{$r_1$}{-8.2cm}
 
 % Time markers
-\timemarker{-1cm}{}{0}{5}
+\timemarker{-1cm}{}{-0.5}{5.5}
 
 \draw [decorate,decoration={brace,amplitude=4pt}]
       (5,-1) -- (5,-1.8) node [midway,right,xshift=.1cm,font=\small] {$d_{prop}$};
@@ -120,10 +120,10 @@ $$
 \draw [decorate,decoration={brace,amplitude=4pt}]
       (10,-5) -- (10,-6) node [midway,right,xshift=.1cm,font=\small] {Server Action};
 
-\node[font=\small,text=gray] at (2.5,-5.5) {End-to-End Delay};
-\timemarker{-5cm}{}{0}{10}
-\node[font=\small,text=gray] at (2.5,-10.5) {Round Trip Time};
-\timemarker{-10cm}{}{0}{10}
+\node[font=\small,text=gray] at (-2,-5) {End-to-End Delay};
+\timemarker{-5cm}{}{-0.5}{10.5}
+\node[font=\small,text=gray] at (-2,-9) {Round Trip Time};
+\timemarker{-9cm}{}{-0.5}{10.5}
 
 \end{tikzpicture}
 \end{document}

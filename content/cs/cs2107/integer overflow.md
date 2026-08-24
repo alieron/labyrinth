@@ -5,8 +5,8 @@ tags:
   - cs/pwn
   - lang/c
 complete: false
-prev: /labyrinth/notes/cs/cs2107/buffer_overflow
 next: /labyrinth/notes/cs/cs2107/script_injection
+prev: /labyrinth/notes/cs/cs2107/buffer_overflow
 
 ---
 ### Summary

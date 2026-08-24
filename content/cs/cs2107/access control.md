@@ -61,7 +61,7 @@ $$
 $$
 > $\verb|s|$ denotes the ability to execute as owner
 ### Extra
-Access permisions for `ls` and `sudo` binaries
+Access permisions for `ls` and `sudo` binaries ^5cf9bb
 ```bash
 -rwxr-xr-x 1 root root     158480 Sep 25 19:39 ls
 ...

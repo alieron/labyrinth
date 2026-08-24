@@ -7,9 +7,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/cs/cs2100/c_functions
 next: /labyrinth/notes/cs/cs2100/c_strings
-
+pred: "[arrays](/labyrinth/notes/cs/cs1101s/arrays)"
 ---
-Succeeds: [arrays](/labyrinth/notes/cs/cs1101s/arrays)
 ### Summary
 Array
 - fixed size

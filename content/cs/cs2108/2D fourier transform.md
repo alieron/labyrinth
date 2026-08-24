@@ -4,7 +4,7 @@ tags:
   - math/analysis
 complete: false
 prev: /labyrinth/notes/cs/cs2108/frequency_bins
-next: /labyrinth/notes/cs/cs2108/discrete_convolution
+next: /labyrinth/notes/cs/cs2108/convolution
 
 ---
 ### Summary

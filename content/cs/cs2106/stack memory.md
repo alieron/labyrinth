@@ -117,7 +117,7 @@ int main() {
 \end{document}
 ```
 
-[c](/labyrinth/notes/cs/cs2100/c) to [mips](/labyrinth/notes/cs/cs2100/mips)
+[cs/cs2100/c](/labyrinth/notes/cs/cs2100/c) to [mips](/labyrinth/notes/cs/cs2100/mips)
 - `$t` registers → **caller-saved**
 - `$s` registers → **callee-saved**
 - `$a` registers → caller-saved

@@ -5,6 +5,9 @@ tags:
 - cs/fundamentals
 - lang/js
 complete: true
+succ:
+  - "[prefix sums](/labyrinth/notes/cs/competitive/prefix_sums)"
+  - "[c arrays](/labyrinth/notes/cs/cs2100/c_arrays)"
 ---
 ### Concept
 An array is a sequence of elements

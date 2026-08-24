@@ -1,14 +1,14 @@
 ---
 tags:
+  - cs/competitive
   - cs2040s/chapter1
   - cs/fundamentals
   - cs/algorithms
 complete: false
 prev: /labyrinth/notes/cs/cs2040s/compact_array
 next: /labyrinth/notes/cs/cs2040s/sorting_II
-
+pred: "[orders of growth](/labyrinth/notes/cs/cs1101s/orders_of_growth)"
 ---
-Succeeds: [orders of growth](/labyrinth/notes/cs/cs1101s/orders_of_growth)
 ### Summary
 
 ### Concept

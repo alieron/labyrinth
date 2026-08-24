@@ -3,6 +3,7 @@ tags:
 - cs1231s/chapter4
 - math/graph_theory
 complete: false
+succ: "[graph DS](/labyrinth/notes/cs/cs2040s/graph_DS)"
 prev: /labyrinth/notes/math/cs1231s/permutations_&_combinations
 next: /labyrinth/notes/math/cs1231s/tree_graphs
 ---
@@ -26,4 +27,3 @@ $$
 $$
 
 ### Extra
-

@@ -4,12 +4,12 @@ tags:
   - cs/functional_programming
   - lang/java
 complete: true
+pred: "[streams](/labyrinth/notes/cs/cs1101s/streams)"
 prev: /labyrinth/notes/cs/cs2030s/monads_&_functors
 next: /labyrinth/notes/cs/cs2030s/parallelism
 ---
    
 
-Succeeds: [streams](/labyrinth/notes/cs/cs1101s/streams)
 ### Summary
 Terminal -> triggers the evaluation
 Intermediate -> returns another `Stream`

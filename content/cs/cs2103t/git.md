@@ -4,8 +4,8 @@ tags:
   - cs/software_eng
   - lang/bash
 complete: false
-next: /labyrinth/notes/cs/cs2103t/IDEs
-prev: /labyrinth/notes/cs/cs2103t/SE_paradigms
+next: /labyrinth/notes/cs/cs2103t/IDE
+prev: /labyrinth/notes/cs/cs2103t/SDLC_process_models
 
 ---
 ### Summary

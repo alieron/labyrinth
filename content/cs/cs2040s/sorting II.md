@@ -6,9 +6,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/cs/cs2040s/asymptotics
 next: /labyrinth/notes/cs/cs2040s/bubble_sort
-
+pred: "[sorting](/labyrinth/notes/cs/cs1101s/sorting)"
 ---
-Succeeds: [sorting](/labyrinth/notes/cs/cs1101s/sorting)
 ### Summary
 Sorting algorithms
 

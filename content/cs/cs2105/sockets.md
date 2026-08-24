@@ -3,7 +3,7 @@ tags:
   - cs2105/lect3
   - cs/networking
   - lang/python
-complete: false
+complete: true
 prev: /labyrinth/notes/cs/cs2105/DNS
 next: /labyrinth/notes/cs/cs2105/reliable_protocols
 

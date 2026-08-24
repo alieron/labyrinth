@@ -2,7 +2,7 @@
 tags:
   - cs2105/lect9
   - cs/networking
-complete: false
+complete: true
 prev: /labyrinth/notes/cs/cs2105/channel_partitioning_protocols
 next: /labyrinth/notes/cs/cs2105/secure_communication
 

@@ -2,7 +2,7 @@
 prev: "[reliable protocols](/labyrinth/notes/cs/cs2105/reliable_protocols)"
 tags:
   - cs2105/lect4
-complete: false
+complete: true
 next: /labyrinth/notes/cs/cs2105/UDP
 
 ---

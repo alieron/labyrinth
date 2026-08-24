@@ -40,7 +40,7 @@ $$
 Pre-multiplication with transpose is symmetric ^9318d6
 $$
 \begin{gather*}
-\forall \mathbf{A} \ \mathbf{A}^T\mathbf{A}\text{ is symmetric} \\
+\forall \mathbf{A}, \ \mathbf{A}^T\mathbf{A}\text{ is symmetric} \\
 \\
 \begin{aligned}
 (\mathbf{A}^T\mathbf{A})^T & = \mathbf{A}^T(\mathbf{A}^T)^T \\

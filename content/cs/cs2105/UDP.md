@@ -2,7 +2,7 @@
 tags:
   - cs2105/lect5
   - cs/networking
-complete: false
+complete: true
 next: /labyrinth/notes/cs/cs2105/TCP
 prev: /labyrinth/notes/cs/cs2105/pipelined_protocols
 
@@ -29,7 +29,7 @@ prev: /labyrinth/notes/cs/cs2105/pipelined_protocols
 +---------------- ...
 ```
 
-UDP Checksum
+UDP checksum
 - wrap around carry -> 1s complement(flip all bits) == checksum
 - detect single bit flips
 - compute checksum over the packet(in 16-bit chunks), check if checksum values match

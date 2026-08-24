@@ -2,7 +2,7 @@
 tags:
   - cs2105/lect2
   - cs/web
-complete: false
+complete: true
 prev: /labyrinth/notes/cs/cs2105/HTTP
 next: /labyrinth/notes/cs/cs2105/sockets
 

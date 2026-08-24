@@ -3,7 +3,7 @@ tags:
   - cs2105/lect7
   - cs/networking
   - cs/algorithms
-complete: false
+complete: true
 next: /labyrinth/notes/cs/cs2105/RIP
 prev: /labyrinth/notes/cs/cs2105/DHCP
 

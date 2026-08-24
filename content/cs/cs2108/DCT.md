@@ -71,7 +71,7 @@ Steps
 
 4. the coefficients are divided by the values in the quantization table and rounded
 	- usually lowers the high frequencies until they are mostly 0
-5. [RLE](/labyrinth/notes/cs/cs2108/RLE) and [huffman coding](/labyrinth/notes/cs/cs2108/huffman_coding) used to further compress the data
+5. [run length encoding](/labyrinth/notes/cs/cs2108/run_length_encoding) and [huffman coding](/labyrinth/notes/cs/cs2108/huffman_coding) used to further compress the data
 	- having many consecutive 0s is good for RLE
 
 Frequency values

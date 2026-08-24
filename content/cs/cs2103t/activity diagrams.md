@@ -4,7 +4,7 @@ tags:
   - cs/software_eng
 complete: false
 next: /labyrinth/notes/cs/cs2103t/SE_principles
-prev: /labyrinth/notes/cs/cs2103t/design_fundamentals
+prev: /labyrinth/notes/cs/cs2103t/project_management
 
 ---
 ### Concept

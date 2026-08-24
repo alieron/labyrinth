@@ -5,9 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/cs/cs2100/mips_control_path
 next: /labyrinth/notes/cs/cs2100/standard_forms
-
+pred: "[propositions](/labyrinth/notes/math/cs1231s/propositions)"
 ---
-Succeeds:  [propositions](/labyrinth/notes/math/cs1231s/propositions)
 ### Summary
 Laws of boolean algebra
 $$

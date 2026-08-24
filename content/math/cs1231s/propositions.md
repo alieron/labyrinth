@@ -3,6 +3,9 @@ tags:
 - cs1231s/chapter1
 - math/logic
 complete: true
+succ:
+  - "[boolean algebra](/labyrinth/notes/cs/cs2100/boolean_algebra)"
+  - "[logic circuits](/labyrinth/notes/cs/cs2100/logic_circuits)"
 prev: /labyrinth/notes/math/cs1231s/mathematical_terminology
 next: /labyrinth/notes/math/cs1231s/conditionals
 ---

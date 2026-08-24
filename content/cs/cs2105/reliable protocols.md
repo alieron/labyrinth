@@ -2,7 +2,7 @@
 tags:
   - cs2105/lect4
   - cs/networking
-complete: false
+complete: true
 prev: /labyrinth/notes/cs/cs2105/sockets
 next: /labyrinth/notes/cs/cs2105/pipelined_protocols
 

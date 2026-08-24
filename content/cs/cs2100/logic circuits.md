@@ -5,9 +5,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/cs/cs2100/standard_forms
 next: /labyrinth/notes/cs/cs2100/karnaugh_map
-
+pred: "[propositions](/labyrinth/notes/math/cs1231s/propositions)"
 ---
-Succeeds: [propositions](/labyrinth/notes/math/cs1231s/propositions)
 ### Summary
 Logic gates
 

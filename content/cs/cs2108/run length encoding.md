@@ -5,7 +5,7 @@ tags:
 complete: true
 ---
 ### Summary
-Run Length Encoding(RLE)
+Run length encoding
 - encode the number of times a byte occurs instead of all the occurances
 
 ```

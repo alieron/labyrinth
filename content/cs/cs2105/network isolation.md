@@ -5,9 +5,8 @@ tags:
   - cs/security
 complete: true
 prev: /labyrinth/notes/cs/cs2105/secure_communication
-
+pred: "[firewall & IDS](/labyrinth/notes/cs/cs2107/firewall_&_IDS)"
 ---
-Succeeds: [firewall & IDS](/labyrinth/notes/cs/cs2107/firewall_&_IDS)
 ### Concept
 #### Firewall
 - gateway to the internet

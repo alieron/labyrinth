@@ -13,7 +13,7 @@ $$
 \begin{align*}
 \text{Impulse}\leftrightarrow \text{Constant:}&&&\delta[n]\xleftrightarrow{\text{DFT}}1\\
 \\
-\text{Constant}\leftrightarrow \text{Impulse:}&&&1\xleftrightarrow{\text{DFT}}N\delta[n]\\
+\text{Constant}\leftrightarrow \text{Impulse:}&&&1\xleftrightarrow{\text{DFT}}N\delta[k]\\
 \\
 \text{Signal}\leftrightarrow \text{Shifted Impulse:}&&&e^{j 2\pi k_{0}\frac{n}{N}}\xleftrightarrow{\text{DFT}}N\delta[k-k_{0}]\\
 \\

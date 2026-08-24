@@ -3,12 +3,12 @@ tags:
 - ma1521/chapter4
 - math/calculus
 complete: false
+pred: "[integration](/labyrinth/notes/math/ma1301/integration)"
 prev: /labyrinth/notes/math/ma1521/applied_differentiation
 next: /labyrinth/notes/math/ma1521/improper_integrals
 ---
    
 
-Succeeds: [integration](/labyrinth/notes/math/ma1301/integration)
 ### Summary
 Trigonometric substitution
 $$

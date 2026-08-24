@@ -3,6 +3,7 @@ tags:
 - cs1231s
 - math/set_theory
 complete: true
+succ: "[regular expressions](#)"
 ---
 ### Summary
 Alphabet ^23aab2

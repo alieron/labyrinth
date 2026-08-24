@@ -5,7 +5,7 @@ tags:
 complete: true
 prev: /labyrinth/notes/cs/cs1101s/searching
 next: /labyrinth/notes/cs/cs1101s/mutable_data
-
+succ: "[sorting II](/labyrinth/notes/cs/cs2040s/sorting_II)"
 ---
 ### Summary
 $$

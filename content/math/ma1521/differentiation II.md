@@ -3,12 +3,12 @@ tags:
 - ma1521/chapter2
 - math/calculus
 complete: true
+pred: "[differentiation](/labyrinth/notes/math/ma1301/differentiation)"
 prev: /labyrinth/notes/math/ma1521/limits_at_∞
 next: /labyrinth/notes/math/ma1521/applied_differentiation
 ---
    
 
-Succeeds: [differentiation](/labyrinth/notes/math/ma1301/differentiation)
 ### Summary
 Derivative of inverse formula
 $$

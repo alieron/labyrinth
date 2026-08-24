@@ -2,11 +2,13 @@
 tags:
   - cs2103t/qa
   - cs/software_eng
-complete: false
-prev: /labyrinth/notes/cs/cs2103t/design_patterns
+complete: true
+prev: /labyrinth/notes/cs/cs2103t/defensive_programming
+next: /labyrinth/notes/cs/cs2103t/architecture_styles
 
 ---
 ### Concept
+#### Test cases
 - exhaustive testing might require massive/infinite number ot test cases
 - each test case adds to the cost of testing
 - need to design test cases to make the best use of resources

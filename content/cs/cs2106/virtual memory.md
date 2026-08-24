@@ -2,7 +2,7 @@
 tags:
   - cs2106/chapter9
   - cs/low_level
-complete: false
+complete: true
 prev: /labyrinth/notes/cs/cs2106/segmentation_+_paging
 next: /labyrinth/notes/cs/cs2106/page_table_structures
 
@@ -19,11 +19,13 @@ next: /labyrinth/notes/cs/cs2106/page_table_structures
 - triggers the **OS** to bring the page into physical memory
 
 Thrasing ^1696b8
-- if memory access results in page faults most of the time
+- if memory access results in page faults **most of the time**
 - accessing secondary storage is very slow, so this can slow down the system
 
 [Locality](/labyrinth/notes/cs/cs2100/cache#^f20615)
 - larger page size -> exploit spatial locality
+- amortized page loading -> exploit temporal locality
+
 #### Demand paging
 - process starts with no **memory resident pages**
 - pages are only allocated when there is a page fault

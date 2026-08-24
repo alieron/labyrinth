@@ -4,8 +4,8 @@ tags:
   - cs/software_eng
   - lang/java
 complete: true
-prev: /labyrinth/notes/cs/cs2103t/architecture_diagrams
-next: /labyrinth/notes/cs/cs2103t/design_fundamentals
+next: /labyrinth/notes/cs/cs2103t/software_design
+prev: /labyrinth/notes/cs/cs2103t/sequence_diagrams
 
 ---
 ### Concept

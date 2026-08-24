@@ -6,9 +6,8 @@ tags:
 complete: true
 prev: /labyrinth/notes/cs/cs2040s/list
 next: /labyrinth/notes/cs/cs2040s/stack
-
+pred: "[lists](/labyrinth/notes/cs/cs1101s/lists)"
 ---
-Succeeds: [lists](/labyrinth/notes/cs/cs1101s/lists)
 ### Summary
 Singly linked list
 - implements [list](/labyrinth/notes/cs/cs2040s/list)

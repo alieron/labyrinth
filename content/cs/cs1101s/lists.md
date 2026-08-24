@@ -4,6 +4,7 @@ tags:
 - cs/data_structures
 - lang/js
 complete: true
+succ: "[SLL](/labyrinth/notes/cs/cs2040s/SLL)"
 ---
 ### Summary
 Shortcuts

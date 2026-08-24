@@ -2,7 +2,7 @@
 tags:
   - cs2105/lect2
   - cs/networking
-complete: false
+complete: true
 prev: /labyrinth/notes/cs/cs2105/network_delays
 next: /labyrinth/notes/cs/cs2105/HTTP
 
@@ -116,9 +116,8 @@ Requirements
 - data plane:
 	- [IP](/labyrinth/notes/cs/cs2105/IP), [ICMP](/labyrinth/notes/cs/cs2105/ICMP)
 
-
 #### Link layer
 - communication between **adjacent nodes** only
 - switch - smart forwarding
 - implemented in network interface cards(NIC) in hardware, integrated closely with the physical layer
-- [ARP](#)
+- [ARP](/labyrinth/notes/cs/cs2105/ethernet#Address_Resolution_Protocol(ARP))

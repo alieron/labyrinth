@@ -14,7 +14,8 @@ next: /labyrinth/notes/cs/cs2106/shortest_first_scheduling
 Shortcomings
 - average waiting time can be reduced by reordering
 - convoy effect - process are stuck in an order
-#### Time quantum
+
+Time quantum
 - execution pocket given to a process
 - can be constant or variable
 - multiple of the interval

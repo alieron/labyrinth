@@ -2,7 +2,7 @@
 tags:
   - cs2105/lect8
   - cs/error_detection
-complete: false
+complete: true
 ---
 ### Concept
 #### Single-bit parity
