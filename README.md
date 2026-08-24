@@ -4,10 +4,10 @@ Publishing my obsidian notes to the internet.
 
 ### Setup and publish your notes
 
-1. setup npm
+1. setup pnpm
 
 ```bash
-npm i
+pnpm install
 ```
 
 2. creating a symlink to your vault into `vault/`
@@ -36,14 +36,14 @@ directory/**
 4. copy your notes into `contents/` and assets into `public/assets/`
 
 ```bash
-npm run copy-notes
+pnpm copy-notes
 ```
 
 5. (Optional) do a test build and preview, should host the webpage at http://localhost:3000/labyrinth
 
 ```bash
-npm run build
-npm run preview
+pnpm build
+pnpm preview
 ```
 
 6. Modify `.gitignore`
