@@ -2,12 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ gh-pages ]
-    paths:
-      - 'astro.config.ts'
-      - 'content/**'
-      - 'public/assets/**'
-      - 'src/plugins/**'
+    branches: [gh-pages]
   workflow_dispatch:
 
 permissions:
@@ -28,6 +23,8 @@ jobs:
 
       - name: Install, build, and upload your site
         uses: withastro/action@v6
+        with:
+          node-version: 22
 
   deploy:
     needs: build

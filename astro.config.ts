@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import { unified } from '@astrojs/markdown-remark';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 import { BASE } from './src/utils/resolve';
@@ -29,26 +30,28 @@ export default defineConfig({
   integrations: [react(), sitemap()],
   markdown: {
     syntaxHighlight: false,
-    remarkPlugins: [
-      remarkTitle,
-      remarkEmbedImages,
-      remarkSplitParagraphs,
-      remarkHighlight,
-      remarkRemoveComments,
-      remarkMath,
-      remarkCodeBlocks,
-      remarkJumpPoints,
-    ],
-    rehypePlugins: [
-      rehypeTypography,
-      rehypeLinks,
-      rehypeMdTable,
-      rehypeStaticMath,
-      rehypeTikzDiag,
-      rehypeCodeBlocks,
-      rehypeHeadings,
-      rehypeCheckboxes,
-    ]
+    processor: unified({
+      remarkPlugins: [
+        remarkTitle,
+        remarkEmbedImages,
+        remarkSplitParagraphs,
+        remarkHighlight,
+        remarkRemoveComments,
+        remarkMath,
+        remarkCodeBlocks,
+        remarkJumpPoints,
+      ],
+      rehypePlugins: [
+        rehypeTypography,
+        rehypeLinks,
+        rehypeMdTable,
+        rehypeStaticMath,
+        rehypeTikzDiag,
+        rehypeCodeBlocks,
+        rehypeHeadings,
+        rehypeCheckboxes,
+      ],
+    }),
   },
   server: {
     port: 3000
