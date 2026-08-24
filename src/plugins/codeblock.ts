@@ -37,6 +37,8 @@ const highlighter = await createHighlighter({
 const langAlias = {
   'octave': 'matlab',
   'tikz': 'latex', // fallback
+  'plantuml': 'text', // temp
+  'mermaid': 'text' // temp
 }
 
 export function rehypeCodeBlocks() {
