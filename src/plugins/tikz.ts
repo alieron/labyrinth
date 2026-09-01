@@ -36,7 +36,7 @@ export function rehypeTikzDiag() {
 
     for (const { parent, index, newNode: tikzText } of replacements) {
       try {
-            const svg = (await renderTikzToSVG(tikzText)).replaceAll(/("#000"|"black")/g, `"currentColor"`);
+        const svg = (await renderTikzToSVG(tikzText)).replaceAll(/("#000"|"black")/g, `"currentColor"`);
         const tikzHast = fromHtml(svg, { fragment: true });
 
         const diagram = select('svg', tikzHast);
@@ -59,7 +59,7 @@ export function rehypeTikzDiag() {
 
         parent.children[index] = wrapper;
       } catch (err) {
-        console.warn('TikZ render failed:', err);
+        console.warn('TikZ render failed:', err, tikzText);
       }
     }
   };
