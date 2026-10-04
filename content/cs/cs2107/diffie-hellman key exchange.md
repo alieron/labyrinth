@@ -3,6 +3,7 @@ tags:
   - cs2107/chapter4
   - cs/security
 complete: true
+succ: "[diffie-hellman key exchange II](/labyrinth/notes/math/co485/diffie-hellman_key_exchange_II)"
 ---
 ### Concept
 #### Diffie-Hellman key exchange
@@ -43,13 +44,13 @@ $$
 $$
 > $g$ and $p$ must be primes to create a complete [group](#)
 
-Computational Diffie-Hellman assumption
-- [modular exponentiation](#) is difficult to reverse
+#### Computational Diffie-Hellman(CDH) assumption
+- modular exponentiation is difficult to reverse
 
 $$
 k = g^{ab} \mod p \qquad \text{is computationally infeasible to find }ab
 $$
-> [discrete logarithm](#) problem
+> [DLOG](/labyrinth/notes/math/co485/discrete_logarithm) problem
 #### Shared secret
 - from asymmetric information
 

@@ -5,7 +5,7 @@ tags:
   - lang/octave
 complete: true
 prev: /labyrinth/notes/math/ma1522/markov_chains
-next: /labyrinth/notes/math/ma1522/linear_transformation
+next: /labyrinth/notes/math/ma1522/linear_transformations
 
 ---
 ### Summary

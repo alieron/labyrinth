@@ -1,6 +1,5 @@
 ---
 tags:
-  - cs/competitive
   - cs2040s/chapter3
   - cs/abstract_data_types
   - lang/java

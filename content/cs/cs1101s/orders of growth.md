@@ -30,7 +30,7 @@ $$
 ### Concept
 Rough measure of resources(time and space) used by a computational process, with respect to the problem size
 OOG is an abstraction technique, ignoring details that seem to be irrelevant/external to the program
-> [recurrence relations](/labyrinth/notes/cs/cs1101s/recurrence_relations) gives a good way of determining the OOG of recursive functions
+> [simple recurrence relations](/labyrinth/notes/cs/cs1101s/simple_recurrence_relations) gives a good way of determining the OOG of recursive functions
 
 $n$ denotes the size of the problem, and $r(n)$ denotes the resource needed solving the problem of size $n$
 

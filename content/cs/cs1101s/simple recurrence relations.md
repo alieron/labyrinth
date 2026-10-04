@@ -1,11 +1,12 @@
 ---
 tags:
-- cs1101s/chapter1
-- cs/algorithms
-- cs/fundamentals
+  - cs1101s/chapter1
+  - cs/algorithms
+  - cs/fundamentals
 complete: true
+succ: "[recurrence relations](/labyrinth/notes/cs/cs341/recurrence_relations)"
 ---
-### Concept
+### Summary
 Linear
 $$
 \begin{align*}  
@@ -16,6 +17,18 @@ T(n)&=T(n-1)+T(n-1)+O(1)\quad&&\implies O(2^n) \\
 T(n)&=T(n-1)+T(n-2)\quad&&\implies O(\varphi^n) \\
 \end{align*}
 $$
+
+Binary
+$$
+\begin{align*}  
+T(n)&=T\left(\frac{n}{2}\right)+O(1)\quad&&\implies O(\log n) \\  
+T(n)&=T\left(\frac{n}{2}\right)+O(n)\quad&&\implies O(n) \\  
+T(n)&=2T\left(\frac{n}{2}\right)+O(1)\quad&&\implies O(n) \\  
+T(n)&=2T\left(\frac{n}{2}\right)+O(n)\quad&&\implies O(n\log n)  
+\end{align*}
+$$
+### Concept
+Linear
 - deriving via [arithmetic](/labyrinth/notes/math/ma1301/arithmetic_series) progression
 
 $$
@@ -43,14 +56,6 @@ T(n) & = 2T(n-1) + O(1) \\
 $$
 
 Binary
-$$
-\begin{align*}  
-T(n)&=T\left(\frac{n}{2}\right)+O(1)\quad&&\implies O(\log n) \\  
-T(n)&=T\left(\frac{n}{2}\right)+O(n)\quad&&\implies O(n) \\  
-T(n)&=2T\left(\frac{n}{2}\right)+O(1)\quad&&\implies O(n) \\  
-T(n)&=2T\left(\frac{n}{2}\right)+O(n)\quad&&\implies O(n\log n)  
-\end{align*}
-$$
 - deriving via [geometric](/labyrinth/notes/math/ma1301/geometric_series) progression
 
 $$

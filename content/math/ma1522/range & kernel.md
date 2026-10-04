@@ -1,9 +1,9 @@
 ---
 tags:
-- ma1522/chapter7
-- math/linear_algebra
+  - ma1522/chapter7
+  - math/linear_algebra
 complete: false
-prev: /labyrinth/notes/math/ma1522/linear_transformation
+prev: /labyrinth/notes/math/ma1522/linear_transformations
 
 ---
 ### Summary

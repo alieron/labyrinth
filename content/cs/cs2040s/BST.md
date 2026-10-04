@@ -114,7 +114,7 @@ void preOrder(TreeNode node) {
 \end{document}
 ```
 
-Postorder traversal
+Postorder traversal ^9c866c
 - left -> right -> self
 
 ```java

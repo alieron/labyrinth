@@ -1,11 +1,11 @@
 ---
 tags:
-- ma1522/chapter7
-- math/linear_algebra
+  - ma1522/chapter7
+  - math/linear_algebra
 complete: true
 prev: /labyrinth/notes/math/ma1522/SVD
 next: /labyrinth/notes/math/ma1522/range_&_kernel
-
+succ: "[linear transformations II](/labyrinth/notes/math/math235/linear_transformations_II)"
 ---
 ### Summary
 Properties of linear transformations

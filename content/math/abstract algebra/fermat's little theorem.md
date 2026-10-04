@@ -1,11 +1,12 @@
 ---
 tags:
-- math/modular_arithmetic
+  - cs/competitive
+  - math/modular_arithmetic
 complete: false
 ---
    
 ### Summary
-For the [modulo](/labyrinth/notes/math/abstract_algebra/modulo) of a [prime](/labyrinth/notes/math/~ma2202/prime_numbers) $p$
+For the [modular arithmetic](/labyrinth/notes/math/abstract_algebra/modular_arithmetic) of a [prime](/labyrinth/notes/math/~ma2202/prime_numbers) $p$
 $$
 a^p\equiv a \pmod p \iff a^p \mod p = a
 $$
@@ -24,7 +25,7 @@ a^p\equiv a \pmod p \\
 \end{gather*}
 $$
 
-Multiplicative [inverse](/labyrinth/notes/math/abstract_algebra/modulo#^186d73) for prime moduli
+Multiplicative [inverse](/labyrinth/notes/math/abstract_algebra/modular_arithmetic#^186d73) for prime moduli
 $$
 \begin{gather*}
 a^{p-1}\equiv 1 \pmod p \iff a^{p-1} \mod p = 1 \\

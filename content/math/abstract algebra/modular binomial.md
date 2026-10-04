@@ -1,6 +1,7 @@
 ---
 tags:
-- math/modular_arithmetic
+  - cs/competitive
+  - math/modular_arithmetic
 complete: false
 ---
    

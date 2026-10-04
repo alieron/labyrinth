@@ -1,6 +1,5 @@
 ---
 tags:
-  - cs/competitive
   - cs2040s/chapter4
   - cs/algorithms
   - lang/java
@@ -237,6 +236,7 @@ void kahn() {
 	}
 }
 ```
+
 - [6 vertex DAG](https://visualgo.net/en/dfsbfs?create={"vl":{"0":{"x":400,"y":0},"1":{"x":500,"y":100},"2":{"x":500,"y":300},"3":{"x":400,"y":200},"4":{"x":300,"y":300},"5":{"x":300,"y":100}},"el":{"0":{"u":0,"v":1},"1":{"u":5,"v":0},"2":{"u":3,"v":1},"3":{"u":3,"v":2},"4":{"u":3,"v":4},"5":{"u":4,"v":2}}}&directed=1&action=topobfs): `kahn()`
 
 ```tikz

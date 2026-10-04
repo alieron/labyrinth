@@ -25,7 +25,7 @@ $$
 $$
 > pairwise disjont -> for every subset, compared to every other subset, they do not intersect
 
-Equivalence classes
+Equivalence classes ^b30a18
 - a subset of the equivalence relation
 
 $$
@@ -177,4 +177,4 @@ $$
 \end{tikzpicture}
 \end{document}
 ```
-> $R_{4}$ is a [congruence modulo](/labyrinth/notes/math/abstract_algebra/modulo#^3013a5) 4 relation
+> $R_{4}$ is a [congruence modulo](/labyrinth/notes/math/abstract_algebra/modular_arithmetic#^3013a5) 4 relation

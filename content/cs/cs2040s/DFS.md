@@ -8,7 +8,7 @@ tags:
 complete: true
 next: /labyrinth/notes/cs/cs2040s/BFS
 prev: /labyrinth/notes/cs/cs2040s/graph_traversal
-
+succ: "[DFS II](/labyrinth/notes/cs/cs341/DFS_II)"
 ---
 ### Summary
 Depth first search(DFS)

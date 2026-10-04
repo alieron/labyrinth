@@ -18,7 +18,7 @@ $$
 $$
 
 DFT properties
-- [linear transformation](/labyrinth/notes/math/ma1522/linear_transformation)
+- [linear transformations](/labyrinth/notes/math/ma1522/linear_transformations)
 - periodic
 - shift theorem
 

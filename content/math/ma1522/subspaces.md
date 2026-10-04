@@ -1,11 +1,11 @@
 ---
 tags:
-- ma1522/chapter3
-- math/linear_algebra
+  - ma1522/chapter3
+  - math/linear_algebra
 complete: true
 prev: /labyrinth/notes/math/ma1522/linear_combinations
 next: /labyrinth/notes/math/ma1522/linear_independence
-
+succ: "[subspaces II](/labyrinth/notes/math/math235/subspaces_II)"
 ---
 ### Summary
 Properties of a subspace
@@ -55,7 +55,7 @@ $$
 V\text{ is a subspace}\iff \exists S=\{ \mathbf{u}_{1},\mathbf{u}_{2},\dots,\mathbf{u}_{k} \}  \ V=\operatorname{span}(S)
 $$
 
-Affine spaces
+Affine spaces ^69292f
 - similar to [relation between homogeneous and non-homogeneous systems](/labyrinth/notes/math/ma1522/matrix_equations#^e53cfd)
 - its displacement is the particular solution 
 

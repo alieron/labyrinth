@@ -7,7 +7,7 @@ tags:
 complete: true
 prev: /labyrinth/notes/cs/cs2040s/DFS
 next: /labyrinth/notes/cs/cs2040s/topological_sort
-
+succ: "[BFS II](/labyrinth/notes/cs/cs341/BFS_II)"
 ---
 ### Summary
 Breadth first search(BFS)
@@ -87,7 +87,7 @@ _    | [ 0 ]
 1    | [ 2, 3 ]      // 0 was already visited
 2    | [ 3, 4 ]      // 0 was already visited
 3    | [ 4 ]         // 1, 2 were already visited
-4    | [ ]
+4    | [ ]           // 3 was already visited
 ```
 
 BFS on disconnected graphs
