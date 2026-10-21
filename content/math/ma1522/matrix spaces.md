@@ -59,7 +59,7 @@ Basis of row space
 - nonzero rows in rref
 - since, two row equivalent matrices have the same rowspace
 
-Column space
+Column space ^24ceb3
 $$
 \operatorname{Col}(\mathbf{A})\subseteq \mathbb{R}^n=\text{span}\left\{ \begin{pmatrix}a_{11}\\a_{21}\\\vdots\\a_{n1}\end{pmatrix},\begin{pmatrix}a_{12}\\a_{22}\\\vdots\\a_{n2}\end{pmatrix},...,\begin{pmatrix}a_{1m}\\a_{2m}\\\vdots\\a_{nm}\end{pmatrix}\right\}
 $$

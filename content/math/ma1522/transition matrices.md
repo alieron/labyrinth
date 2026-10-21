@@ -1,11 +1,11 @@
 ---
 tags:
-- ma1522/chapter3
-- math/linear_algebra
+  - ma1522/chapter3
+  - math/linear_algebra
 complete: true
 prev: /labyrinth/notes/math/ma1522/basis_vectors
 next: /labyrinth/notes/math/ma1522/dimensions
-
+succ: "[change of coordinates](/labyrinth/notes/math/math235/change_of_coordinates)"
 ---
 ### Summary
 Algorithm to find transition matrix

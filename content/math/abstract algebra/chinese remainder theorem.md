@@ -1,6 +1,7 @@
 ---
 tags:
-- math/number_theory
+  - cs/competitive
+  - math/number_theory
 complete: false
 ---
    
@@ -21,4 +22,4 @@ $$
 
 $$
 
-[modulo](/labyrinth/notes/math/abstract_algebra/modulo)
+[modular arithmetic](/labyrinth/notes/math/abstract_algebra/modular_arithmetic)

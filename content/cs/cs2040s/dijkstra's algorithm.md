@@ -133,7 +133,7 @@ Algorithm
 void dijkstra(int s) { // O(V log V + E log V) = O((V+E) log V)
 	dist.set(s, 0);
 	
-	TreeSet<int[]> pq = new TreeSet<>(Comparator.comparingInt(x -> x[1])); // balanced BST, bineary heap works as well
+	TreeSet<int[]> pq = new TreeSet<>(Comparator.comparingInt(x -> x[1])); // balanced BST, binary heap works as well
 	for (int u = 0; u < V; ++u) // enqueue all verticies -> O(V log V)
 		pq.add(new int[] { u, dist.get(u) }); // add [ v, d ] -> O(log V)
 

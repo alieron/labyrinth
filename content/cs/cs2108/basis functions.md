@@ -17,7 +17,7 @@ f(t),g(t) \in S \implies \forall a,b \in \mathbb{R},\ af(t)+bg(t) \in S
 $$
 > by definition of a signal as a summation, amplitude is not important
 
-[Inner product](/labyrinth/notes/math/math235/inner_product) of signals
+[Inner product](/labyrinth/notes/math/math235/inner_product) of signals ^a3bbc8
 - similarity between two functions
 - behaves like the [dot product](/labyrinth/notes/math/ma1301/dot_product) for discrete functions
 

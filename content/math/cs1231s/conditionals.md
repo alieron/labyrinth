@@ -136,3 +136,12 @@ $$
 & \equiv {\sim p} \leftrightarrow q && \text{(Definition of}\leftrightarrow\text{)}
 \end{align*}
 $$
+
+"Flipping" a biconditional
+$$
+\begin{align*}
+p \leftrightarrow  q & \equiv {(p\to q)\land(q\to p)} & \quad & \text{(Definition of}\leftrightarrow\text{)} \\
+&\equiv {({\sim q}\to {\sim p})\land({\sim p}\to {\sim q})} & \quad & \text{(Contrapositive)} \\
+&\equiv {\sim p} \leftrightarrow {\sim q} & \quad & \text{(Definition of}\leftrightarrow\text{)}
+\end{align*}
+$$

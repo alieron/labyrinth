@@ -10,7 +10,7 @@ $$
 \lambda(p) = p-1
 $$
 ### Concept
-Improvement of [euler's totient](/labyrinth/notes/math/abstract_algebra/euler's_totient)
+Improvement of [euler's totient](/labyrinth/notes/math/co485/euler's_totient)
 $$
 \begin{gather*}
 \lambda(n)=m, m \in \mathbb{Z}_{+} \ is \ the \ smallest \ number \ \ \mathrm{s.t.}\\

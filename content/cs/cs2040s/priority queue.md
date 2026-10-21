@@ -9,7 +9,7 @@ prev: /labyrinth/notes/cs/cs2040s/deque
 next: /labyrinth/notes/cs/cs2040s/binary_heap
 succ:
   - "[binary heap](/labyrinth/notes/cs/cs2040s/binary_heap)"
-  - "[~fibonacci heap](#)"
+  - "[fibonacci heap](/labyrinth/notes/cs/~data_structures/fibonacci_heap)"
 ---
 ### Summary
 Priority queue

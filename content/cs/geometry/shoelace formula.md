@@ -3,7 +3,6 @@ tags:
   - cs/competitive
   - cs/geometry
   - math/geometry
-  - to_review
 complete: false
 prev: /labyrinth/notes/cs/geometry/polygons
 next: /labyrinth/notes/cs/geometry/winding_number_algorithm

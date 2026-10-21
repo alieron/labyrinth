@@ -189,7 +189,7 @@ $$
 &\therefore \left(\frac ap\right)\equiv a^{\frac{(p-1)}{2}}\pmod p
 \end{align*}
 $$
-> there is an $O(\log^2n)$ algorithm to compute the legendre symbol using the [law of quadratic reciprocity](/labyrinth/notes/math/co485/quadratic_residue#Law_of_quadratic_reciprocity), but its out of scope for `co485`
+> there is an $O(\log^2n)$ algorithm to compute the legendre symbol using the [law of quadratic reciprocity](/labyrinth/notes/math/co485/quadratic_residues#Law_of_quadratic_reciprocity), but its out of scope for `co485`
 
 #### Existence of roots
 - we can find a $k$th root by finding $k^{-1} \bmod{p-1}$

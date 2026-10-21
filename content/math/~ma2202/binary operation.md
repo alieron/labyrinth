@@ -1,159 +1,74 @@
 ---
 tags:
-  - math/algebra
+  - math/group_theory
+  - to_review
 complete: false
 next: /labyrinth/notes/math/~ma2202/groups
 
 ---
 ### Summary
-Properties
-$$
-\begin{align*}
-\text{Associative:} &&& \forall a,b,c \in G, \ (a*b)*c=a*(b*c) \\
-\\
-\text{Commutative/Abelian:} &&& \forall a,b \in G, \ a*b=b*a
-\end{align*}
-$$
-
-Common binary operations
-$$
-\begin{array}{cl}
-+: \mathbb{R}\times \mathbb{R} \to \mathbb{R} & +(a,b)=a+b\\
--: \mathbb{R}\times \mathbb{R} \to \mathbb{R} & -(a,b)=a-b\\
-\times : \mathbb{R}\times \mathbb{R} \to \mathbb{R} & \times (a,b)=a\times b
-\end{array}
-$$
-> division is not a binary operation in $\mathbb{R}$ since division by 0 is undefined
-
-Multiplication set
-- makes division a binary operation
-
-$$
-\begin{gather*}
-\mathbb{R}^\times  = \mathbb{R}\setminus \{ 0 \} \\
-\\
-\times : \mathbb{R}\times \mathbb{R} \to \mathbb{R} & \times (a,b)=a\times b\\
-\div : \mathbb{R}\div \mathbb{R} \to \mathbb{R} & \div (a,b)=a\div b
-\end{gather*}
-$$
-> but addition and subtraction are no longer binary operations, since $0\not\in \mathbb{R}^\times$
-### Concept
 Binary operation
-- binary function that maps any two elements in a set to another element in the same set
-- implies a closure of the set under the operator
-
 $$
 \begin{gather*}
-*:G\times G\to G \\
-\\
-\forall x,y\in G, \ *(x,y) = x*y \in G &\text{(Closure)}
+*\colon S\times S\to S
 \end{gather*}
 $$
 
-Multiplication table
-- only possible for finite sets
-- symmetry along the diagonal -> **abelian**
-
+Structural laws
 $$
-\begin{array}{c|cccc}
-x*y & y=a & b & c  \\
-\hline x=a & a*a & a*b & a*c \\
-b & b*a & b*b & b*c \\
-c & c*a & c*b & c*c
-\end{array}
+\begin{gather*}
+\text{Associative: }(a*b)*c=a*(b*c) \\
+\text{Commutative: }a*b=b*a
+\end{gather*}
 $$
 
-Identities
-- neutral element
-- operated alongside another element, the element is returned
+### Concept
+#### Binary operation
+- aka dyadic operation
+- combines two elements of a [set](/labyrinth/notes/math/cs1231s/sets) and returns another element of that set
+
+$$
+*\colon S\times S\to S
+$$
+
+Properties
+- that a binary operation can have
 
 $$
 \begin{align*}
-\text{Left Identity:} &&& \forall a \in G, \ e*a=a\\
+1) && \text{Commutativity:} &&& a * b = b * a \\
 \\
-\text{Right Identity:} &&& \forall a \in G, \ a*e=a\\
+2) && \text{Associativity:} &&& (a*b)*c = a*(b*c) \\
 \\
-\text{Identity:}&&& \forall a \in G,\ e*a=a*e=a
+3) && \text{Identity:} &&& a * e = a = e* a \\
+\\
+4) && \text{Inverse:} &&& a ^{-1} * a = e = a * a ^{-1}
 \end{align*}
 $$
+
+#### Closure, domain and finite operations
+- closure is encoded in the codomain $S$
+- distinguish total operations from partial operations as [functions](/labyrinth/notes/math/cs1231s/function_relations)
+- check whether changing the carrier set repairs a failed closure property
+- a Cayley table specifies a finite binary operation
+- closure and commutativity are visible directly in the table
+- associativity requires global triple constraints or a structural representation
+
 ### Application
-Multiplication table
+Checking closure
+- is subtraction a binary operation on $\mathbb N_0$ or $\mathbb Z$?
+
 $$
 \begin{gather*}
-G = \{ 0,1,2 \} \\
-a\star b = a \\
+0,1\in\mathbb N_0,\qquad 0-1=-1\notin\mathbb N_0 \\
+\therefore \text{subtraction is not a binary operation on }\mathbb N_0 \\
 \\
-(G, \star) \\
-\\
-\begin{array}{c|cccc}
-\star & 0 & 1 & 2  \\
-\hline 0 & 0 & 0 & 0 \\
-1 & 1 & 1 & 1 \\
-2 & 2 & 2 & 2
-\end{array} \\
-\\
-\forall a,b\in G,\ a\star b=a\\
-\therefore b\text{ is a right identity}\\
-\\
-\text{every element is a Right Identity}
+a,b\in\mathbb Z\implies a-b\in\mathbb Z \\
+\therefore \text{subtraction is a binary operation on }\mathbb Z
 \end{gather*}
 $$
 
-Associative but not abelian
-$$
-\begin{gather*}
-&*:\mathbb{R}\times \mathbb{R}\to \mathbb{R}\\
-&\forall a,b \in \mathbb{R},\ a*b = b \\
-\\
-\text{Associative:} & (a*b)*c=a*c=c\\
-& a*(b*c) = a*c=c \\
-& \therefore\text{associative} \\
-\\
-\text{Abelian:} & a*b = b\\
-&b*a = a \\
-&\therefore\text{not abelian}
-\end{gather*}
-$$
-
-Abelian but not associative
-$$
-\begin{gather*}
-&*:\mathbb{R}\times \mathbb{R}\to \mathbb{R}\\
-&\forall a,b \in \mathbb{R},\ a*b = \frac{a+b}{2} \\
-\\
-\text{Associative:} & (a*b)*c=\frac{\frac{a+b}{2}+c}{2}\\
-& a*(b*c) = \frac{a+\frac{b+c}{2}}{2} \\
-& \therefore\text{not associative} \\
-\\
-\text{Abelian:} & a*b = \frac{a+b}{2}\\
-&b*a = \frac{b+a}{2} \\
-&\therefore\text{abelian}
-\end{gather*}
-$$
-
-Identity
-$$
-\begin{gather*}
-(\mathbb{R},+) \\
-\\
-0+a=a+0=a \\
-e=0 & \text{(Identity)}\\
-\\
-(\mathbb{R},-) \\
-\\
-0-a=-a\neq a \\
-a-0 = a\\
-e=0 & \text{(Right Identity)}\\
-\\
-(\mathbb{R}^\times , \times )\\
-\\
-1\times a=a\times 1=a\\
-e=1&\text{(Identity)}\\
-\\
-(\mathbb{R}^\times, \div )\\
-\\
-1\div a = \frac{1}{a} \neq a\\
-a\div1 = \frac{a}{1}=a\\
-e=1&\text{(Right Identity)}
-\end{gather*}
-$$
+### Sources
+- [Dummit and Foote Abstract Algebra](https://www.wiley.com/en-us/Abstract+Algebra%2C+3rd+Edition-p-9780471433347)
+- [Judson Abstract Algebra](http://abstract.ups.edu/aata/)
+- [Encyclopedia of Mathematics binary operation](https://encyclopediaofmath.org/wiki/Binary_operation)

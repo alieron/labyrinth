@@ -1,7 +1,7 @@
 ---
 tags:
-- ma1522/chapter3
-- math/linear_algebra
+  - ma1522/chapter3
+  - math/linear_algebra
 complete: false
 prev: /labyrinth/notes/math/ma1522/linear_independence
 next: /labyrinth/notes/math/ma1522/transition_matrices

@@ -8,7 +8,7 @@ complete: true
 prev: /labyrinth/notes/cs/cs2040s/priority_queue
 next: /labyrinth/notes/cs/cs2040s/table
 pred: "[priority queue](/labyrinth/notes/cs/cs2040s/priority_queue)"
-succ: "[~fibonacci heap](#)"
+succ: "[fibonacci heap](/labyrinth/notes/cs/~data_structures/fibonacci_heap)"
 ---
 ### Summary
 Binary heap

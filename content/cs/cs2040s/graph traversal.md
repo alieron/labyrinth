@@ -102,7 +102,7 @@ Cut vertex/bridges
 
 Strongly connected components
 - subgraph where there is a two-way path between every vertex
-- [SCC](#)
+- [SCC](/labyrinth/notes/cs/cs341/SCC)
 - useful for solving [2-SAT](#)
 > out of syllabus for `cs2040s`
 ### Extra

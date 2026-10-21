@@ -63,9 +63,9 @@ $$
 #### [Range and kernel](/labyrinth/notes/math/ma1522/range_&_kernel)
 $$
 \begin{gather*}
-\operatorname{range}(L) = \{L(\vec{x}) \in W : \vec{x} \in V\} \\
+\operatorname{Range}(L) = \{L(\vec{x}) \in W : \vec{x} \in V\} \\
 \\
-\operatorname{ker}(L) = \{\vec{x} \in V : L(\vec{x}) = \vec{0}\}
+\operatorname{Ker}(L) = \{\vec{x} \in V : L(\vec{x}) = \vec{0}\}
 \end{gather*}
 $$
 > range is the output space of the linear transform, kernel is the space of vectors that got squished to 0
@@ -78,7 +78,7 @@ $$
 Dimension decrease means non zero nullity
 $$
 \begin{align*}
-& \text{Claim: } \text{for }L:V \to U,\quad \operatorname{dim}(U) < \operatorname{dim}(V) \implies \operatorname{ker}(L)\neq \{ \vec{0} \} \\
+& \text{Claim: } \text{for }L:V \to U,\quad \operatorname{dim}(U) < \operatorname{dim}(V) \implies \operatorname{Ker}(L)\neq \{ \vec{0} \} \\
 \\
 & \text{Suppose } \operatorname{dim}(U) < \operatorname{dim}(V) \\
 \\
@@ -89,11 +89,32 @@ $$
 &> 0
 \end{aligned}\\
 \\
-&\therefore \operatorname{nullity}(L) >0 \implies \operatorname{ker}(L)\neq \{ \vec{0} \} \\
+&\therefore \operatorname{nullity}(L) >0 \implies \operatorname{Ker}(L)\neq \{ \vec{0} \} \\
 \\
 && \square
 \end{align*}
 $$
+
+#### Matrix representation
+$$
+\begin{gather*}
+T(\vec{x}) = A\vec{x} \\
+T(x_{1}, x_{2}, \dots, x_{n})=(a_{11}x_{1} +a_{12}x_{2}+\dots a_{1n}x_{n},\;a_{21}x_{1} +a_{22}x_{2}+\dots a_{2n}x_{n},\;a_{n1}x_{1} +a_{n2}x_{2}+\dots a_{nn}x_{n})\\
+\\
+T({\color{green} x_{1}},{\color{cyan} x_{2}},\dots,{\color{red} x_{n}}) = \begin{bmatrix}
+{\color{green} a_{11}} & {\color{cyan} a_{12}} & \dots & {\color{red} a_{1n}} \\
+{\color{green} a_{21}} & {\color{cyan} a_{22}} & \dots & {\color{red} a_{2n}} \\
+\vdots & \vdots & \ddots & \vdots \\
+{\color{green} a_{n_{1}}} & {\color{cyan} a_{n_{2}}} & \dots & {\color{red} a_{nn}}
+\end{bmatrix}\begin{bmatrix}
+{\color{green} x_{1}} \\
+{\color{cyan} x_{2}} \\
+\vdots \\
+{\color{red} x_{n}}
+\end{bmatrix}
+\end{gather*}
+$$
+
 ### Application
 The evaluation map is a linear map
 - polynomial evaluated at a certain value
@@ -195,3 +216,61 @@ L: M_{n}(\mathbb{C}) \to \mathbb{C} \quad L(A) = a_{11} + a_{nn} \\
 \operatorname{nullity}(L)= n^{2}-1
 \end{gather*}
 $$
+
+Kernel and range
+$$
+\begin{gather*}
+T: \mathbb{R}^{3} \to \mathbb{R}^{3} \\
+T(x,y,z)=(x+2y+z,\;2x+4y+3z,\;3x+6y+4z)\\
+\\
+T({\color{green} x},{\color{cyan} y},{\color{red} z}) = \begin{bmatrix}
+{\color{green} 1} & {\color{cyan} 2} & {\color{red} 1} \\
+{\color{green} 2} & {\color{cyan} 4} & {\color{red} 3} \\
+{\color{green} 3} & {\color{cyan} 6} & {\color{red} 4}
+\end{bmatrix}\begin{bmatrix}
+{\color{green} x} \\
+{\color{cyan} y} \\
+{\color{red} z}
+\end{bmatrix} \\
+\\
+\begin{bmatrix}
+1 & 2 & 1 \\
+2 & 4 & 3 \\
+3 & 6 & 4
+\end{bmatrix} \xrightarrow{ RREF } \begin{bmatrix}
+1 & 2 & 0 \\
+0 & 0 & 1 \\
+0 & 0 & 0
+\end{bmatrix} \\
+\\
+\begin{aligned}
+x+ 2y &= 0 \\
+z &= 0
+\end{aligned} \\
+\\
+\text{Set }y = t\text{ for the free variable} \\
+\\
+x= - 2t \\
+\\
+\begin{bmatrix}x\\y\\z\end{bmatrix}
+=
+\begin{bmatrix}-2t\\t\\0\end{bmatrix}
+=t\begin{bmatrix}-2\\1\\0\end{bmatrix}\\
+\\
+\operatorname{Ker}(T)=\operatorname{span}\left\{
+\begin{bmatrix}-2\\1\\0\end{bmatrix}
+\right\} \\
+\\
+\\
+\text{Using the pivot coloumns} \\
+\\
+\operatorname{Range}(T)=
+\operatorname{span}\left\{
+\begin{bmatrix}1\\2\\3\end{bmatrix},
+\begin{bmatrix}1\\3\\4\end{bmatrix}
+\right\}
+\end{gather*}
+$$
+
+![[Pasted image 20261005231152.png]]
+Compositon of linear transforms

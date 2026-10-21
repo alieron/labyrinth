@@ -26,6 +26,40 @@ f\in O(g)\text{ and }f\in\Omega(g)
 \end{gather*}
 $$
 
+Useful limits
+$$
+\begin{gather*}
+\frac{1}{n} \to 0, \quad \frac{1}{n^{k}} \to 0 \qquad (k>0) \\
+\\
+\frac{\log n}{n^k}\to 0,\quad \frac{(\log n)^a}{n^k}\to 0 \qquad (a>1) \\
+\\
+\frac{n^k}{a^n} \to 0 \\
+\\
+\frac{a^n}{n!} \to 0
+\end{gather*}
+$$
+
+Standard growth hierachy
+$$
+1
+\ll
+\log n
+\ll
+(\log n)^k
+\ll
+n^\varepsilon
+\ll
+n
+\ll
+n^k
+\ll
+a^n
+\ll
+n!
+\ll
+n^n \qquad (k>1,\varepsilon>0,a>1)
+$$
+
 ### Concept
 #### Big-$O$
 - $f$ grows no faster than $g$
@@ -115,16 +149,64 @@ $$
 \begin{gather*}
 f(n) = n ^{300} \log n, \quad g(n) = n (\log n)^{300} \\
 \\
+\begin{aligned}
+\lim_{ x \to \infty } \frac{n ^{300} \log n}{n (\log n)^{300}} &= \lim_{ x \to \infty } \frac{n ^{299}}{ (\log n)^{299}} \\
+&= \lim_{ x \to \infty } \left( \frac{n}{ \log n} \right) ^{299}\\
+&\to\infty
+\end{aligned} \\
+\\
+f \in \omega(g) \\
+\\
+\\
 f(n) = \sum_{i=1}^{n} \log i , \quad g(n) = n \log n \\
+\\
+\begin{aligned}
+\sum_{i=1}^{n} \log i &\leq \sum_{i=1}^{n} \log n \\
+&\leq n\log n \\
+&\geq \frac{n}{2}\log \frac{n}{2}
+\end{aligned}\\
+\\
+f \in \Theta(g) \\
+\\
 \\
 f(n) = 2^n, \quad g(n) = n ! \\
 \\
+\begin{aligned}
+\lim_{ x \to \infty } \frac{2^n}{n!} &= \lim_{ x \to \infty } \frac{\log 2^n}{\log n!}  \\
+&= \lim_{ x \to \infty } \frac{n\log 2}{\log n!} < \lim_{ x \to \infty } \frac{n\log 2}{n\log n}\\
+&\to 0
+\end{aligned} \\
+\\
+f \in o(g) \\
+\\
+\\
 f(n) = n ^{\log n}, \quad g(n) = (\log n)^n \\
+\\
+\begin{aligned}
+\lim_{ x \to \infty } \frac{n ^{\log n}}{(\log n)^n} &= \lim_{ x \to \infty } \frac{\log n \log n }{n\log \log n}   \\
+&\to 0
+\end{aligned} \\
+\\
+f \in o(g) \\
+\\
 \\
 f(n) = 3^n, \quad g(n) = 3 ^{2n} \\
 \\
-f(n) = 2^{n^{0.1}}, \quad g(n) = (\log n) ^{\log n} 
+\begin{aligned}
+\lim_{ x \to \infty } \frac{3^n}{3 ^{2n}} &= \lim_{ x \to \infty } 3^{-n} \\
+&\to 0
+\end{aligned} \\
+\\
+f \in o(g) \\
+\\
+\\
+f(n) = 2^{n^{0.1}}, \quad g(n) = (\log n) ^{\log n} \\
+\\
+\begin{aligned}
+\lim_{ x \to \infty } \frac{2^{n^{0.1}}}{(\log n) ^{\log n}} &= \lim_{ x \to \infty }  \frac{n^{0.1}\log 2}{(\log n) \log(\log n)} \\
+&\to \infty
+\end{aligned} \\
+\\
+f \in \omega(g)
 \end{gather*}
 $$
-
-### Extra

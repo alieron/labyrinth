@@ -7,7 +7,7 @@ tags:
 complete: false
 next: /labyrinth/notes/cs/cs2040s/bellman-ford_algorithm
 prev: /labyrinth/notes/cs/cs2040s/topological_sort
-
+succ: "[SSSP II](/labyrinth/notes/cs/cs341/SSSP_II)"
 ---
 ### Summary
 SSSP algorithms

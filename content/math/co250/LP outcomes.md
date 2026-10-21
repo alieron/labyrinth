@@ -55,6 +55,7 @@ $$
 
 Proving optimality
 #### Unbounded
+
 $$
 \begin{align*}
 &\text{maximization problem is unbounded}\iff \forall M,\quad \exists \text{ a feasible solution with objective value greater than }M \\

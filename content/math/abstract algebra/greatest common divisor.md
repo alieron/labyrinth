@@ -85,26 +85,6 @@ $$
 \gcd(a,b)=1\iff\exists x,y\in\mathbb Z:\ ax+by=1
 $$
 
-- Derive invertibility of $a$ modulo $b$ from Bezout coefficients
-- Compare pairwise coprime and jointly coprime collections
-- Research consequences for the [chinese remainder theorem](/labyrinth/notes/math/co485/chinese_remainder_theorem)
-
-#### Generalizations
-- Define gcds up to units in integral domains
-- Compare Bezout domains, principal ideal domains, and unique factorization domains
-- Extend to polynomial gcds and subresultant methods
-
-#### Open questions
-- Which gcd algorithms minimize bit complexity for huge integers
-- How do approximate gcd problems arise with noisy data
-- When does a multivariate polynomial gcd remain computationally tractable
-
-### Links
-- [prime numbers](/labyrinth/notes/math/~ma2202/prime_numbers)
-- [euclidean algorithm](#)
-- [chinese remainder theorem](/labyrinth/notes/math/co485/chinese_remainder_theorem)
-- [GNFS](#)
-
 ### Sources
 - [Euclidean algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm)
 - [Niven Zuckerman Montgomery](https://www.wiley.com/en-us/An+Introduction+to+the+Theory+of+Numbers%2C+5th+Edition-p-9780471625469)

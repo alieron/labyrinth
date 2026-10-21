@@ -41,4 +41,4 @@ $$
 \end{gather*}
 $$
 
-[modulo](/labyrinth/notes/math/abstract_algebra/modulo)[prime numbers](/labyrinth/notes/math/~ma2202/prime_numbers)[euler's totient](/labyrinth/notes/math/abstract_algebra/euler's_totient)[modular binomial](/labyrinth/notes/math/abstract_algebra/modular_binomial)
+[modular arithmetic](/labyrinth/notes/math/abstract_algebra/modular_arithmetic)[prime numbers](/labyrinth/notes/math/~ma2202/prime_numbers)[euler's totient](/labyrinth/notes/math/co485/euler's_totient)[modular binomial](/labyrinth/notes/math/abstract_algebra/modular_binomial)
