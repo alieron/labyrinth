@@ -4,7 +4,7 @@ tags:
   - math/abstract_algebra
   - to_review
 complete: false
-next: /labyrinth/notes/math/co485/elliptic_curve_groups
+next: /labyrinth/notes/math/co485/elliptic_curves
 prev: /labyrinth/notes/math/co485/index_calculus
 
 ---

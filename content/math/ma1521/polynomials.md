@@ -16,3 +16,10 @@ Rational functions ^e957d2
 $$
 \frac{p(x)}{q(x)}, \ where \ p(x) \ and \ q(x) \ are \ polynomials
 $$
+
+Monic polynomials
+- leading coefficient is 1
+
+$$
+p(x) = a_{n}x^n+a_{n-1}x^{n-1}+\dots+a_{1}x+a_{0}, \ a_{n} = 1
+$$

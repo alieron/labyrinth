@@ -63,7 +63,7 @@ Essential properties of group $G$
 5. messages must be embedded into $G$
 	- or a KEM/DEM construction should avoid direct embedding
 
-> only [multiplicative modular group](/labyrinth/notes/math/co485/multiplicative_modular_group) and [elliptic curve groups](/labyrinth/notes/math/co485/elliptic_curve_groups) work
+> only [multiplicative modular group](/labyrinth/notes/math/co485/multiplicative_modular_group) and [elliptic curves](/labyrinth/notes/math/co485/elliptic_curves) work
 
 #### Discrete Log (Definition 2.3.6)
 

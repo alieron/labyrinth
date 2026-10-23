@@ -97,7 +97,7 @@ $$
 - Compare deterministic and randomized nonresidue selection
 
 #### Applications
-- Point decompression for [elliptic curves](/labyrinth/notes/math/abstract_algebra/elliptic_curves)
+- Point decompression for [elliptic curves(to delete)](/labyrinth/notes/math/abstract_algebra/elliptic_curves(to_delete))
 - Solving quadratic congruences in computational number theory
 - Residue checks in cryptographic protocols
 

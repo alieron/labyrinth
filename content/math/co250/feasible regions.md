@@ -313,10 +313,10 @@ f(\bar{x})&= (\bar{x},b-A\bar{x}) \\
 &= (\lambda x_{1} + (1-\lambda)x_{2} , \lambda (b-Ax_{1}) + (1-\lambda)(b-Ax_{2}) ) \\
 &= \lambda(x_{1},b-Ax_{1}) + (1-\lambda)(x_{2},b-Ax_{2}) \\
 &= \lambda f(x_{1}) + (1-\lambda)f(x_{2})
+\end{aligned}
 \end{aligned} \\
 \\
 &\therefore f(\bar{x})\in Q\text{ is not extreme}
-\end{aligned}
 \end{aligned} \\
 \\
 &(\impliedby) \ \begin{aligned}[t]
@@ -339,10 +339,10 @@ s_{2} &= b - Ax_{2}
 &\implies (x_{1},s_{1}) = (x_{2},s_{2})
 \end{aligned} \\
 \\
-&\text{Contradiction} \\
+&\text{Contradiction}
+\end{aligned} \\
 \\
 &\therefore \bar{x}\in P \text{ is not extreme}
-\end{aligned}
 \end{aligned} \\
 \\
 &\therefore x\text{ is extreme}\iff f(x)\text{ is extreme} \\

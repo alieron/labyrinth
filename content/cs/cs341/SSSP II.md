@@ -6,6 +6,8 @@ tags:
 complete: false
 prev: /labyrinth/notes/cs/cs341/greedy_scheduling
 pred: "[SSSP](/labyrinth/notes/cs/cs2040s/SSSP)"
+next: /labyrinth/notes/cs/cs341/MST_II
+
 ---
 ### Concept
 #### BFS for SSSP

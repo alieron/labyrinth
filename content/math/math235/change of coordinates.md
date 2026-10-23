@@ -44,6 +44,29 @@ c_1\\ \vdots\\ c_n
 \end{gather*}
 $$
 
+Coordinate map is a linear map
+$$
+\begin{align*}
+&\text{Claim: }[\vec{x} + t \vec{y}]_{\mathcal{B}} = [\vec{x}]_{\mathcal{B}} + t[\vec{y}]_{\mathcal{B}} \\
+\\
+&\text{Suppose }\vec{x} = c_{1}b_{1} + \dots c_{2}b_{2}, \ \vec{y} = d_{1}b_{1}+\dots+d_{n} b_{n} \\
+\\
+& [\vec{x} + t \vec{y}]_{\mathcal{B}} = \begin{bmatrix}
+c_{1}+td_{1} \\
+\vdots \\
+c_{n} +td_{n} 
+\end{bmatrix} = \begin{bmatrix}
+c_{1} \\
+\vdots \\
+c_{n}
+\end{bmatrix} + t\begin{bmatrix}
+d_{1} \\
+\vdots \\
+d_{n}
+\end{bmatrix} = [\vec{x}]_{\mathcal{B}} + t[\vec{y}]_{\mathcal{B}}
+\end{align*}
+$$
+
 #### Change of coordinate matrix
 - change from basis $\mathcal{B}$
 - think of linear transforms as a map between 
