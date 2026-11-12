@@ -215,7 +215,7 @@ $$
 - DFS finds the first path to any visitable node
 - correctness is only garunteed when there is only 1 path to any node
 
-[Dynamic Programming](/labyrinth/notes/cs/competitive/dynamic_programming)
+[Dynamic Programming](/labyrinth/notes/cs/cs341/dynamic_programming)
 - given a DAG
 - topological sort + one pass Bellman-Ford
 ### Application

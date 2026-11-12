@@ -78,14 +78,16 @@ a^{\phi(n)}\equiv1\pmod n \iff \gcd(a, n) = 1
 $$
 > the GCD definition comes from the [theorem 2.1.1](/labyrinth/notes/math/co485/multiplicative_modular_group#^531ac2)
 
-Order of an element (Definition 2.3.1)
+Order of an element
+- (Definition 2.3.1)
 - smallest number of exponentiations to return to the identity element
 
 $$
 \text{for }a \in G,\quad \operatorname{ord}(a) \text{ is the smallest }t>0\text{ such that }a^t = e
 $$
 
-Order and size of the group (Lemma 2.3.2)
+Order and size of the group
+- (Lemma 2.3.2)
 - powers repeat every order-many steps, and that cycle length divides the group size
 - generalized for any [group](/labyrinth/notes/math/~ma2202/groups), but applicable to $G = \mathbb{Z}_{n}^*$ and $|G| = \phi(n)$ 
 
@@ -186,7 +188,8 @@ a^{|G|} = 1 & \iff t\mid |G| && \text{(Claim 1 \& 2)}
 $$
 > the order of an element 
 
-Generators (Definition 2.3.3)
+Generators
+- (Definition 2.3.3)
 - aka *primitive roots* for $G = \mathbb{Z}_{n}^8$
 - every element in $G$ can be expressed as an exponentiation of the generator
 
@@ -198,7 +201,9 @@ G = \{ g^0, g^1, g^2, \dots, g^{|G| -1} \}
 \end{gather*}
 $$
 
-Some residues modulo a prime are generators (Theorem 2.3.4)
+Some residues modulo a prime are generators
+- (Theorem 2.3.4)
+
 $$
 \begin{align*}
 & \text{Claim: } p\text{ is prime}\implies \mathbb{Z}_{p}^*\text{ has a generator, specifically, }\phi(p-1)\text{ generators}\\

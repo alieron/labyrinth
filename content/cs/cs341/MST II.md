@@ -6,8 +6,29 @@ tags:
 complete: false
 prev: /labyrinth/notes/cs/cs341/SSSP_II
 pred: "[MST](/labyrinth/notes/cs/cs2040s/MST)"
+next: /labyrinth/notes/cs/cs341/dynamic_programming
+
 ---
 ### Concept
+#### Cut property
+$$
+\begin{gather*}
+\text{for MST }T \subseteq G \\
+\\
+ 
+\end{gather*}
+$$
+
+fix G a set $S\subseteq V$
+if $F\subseteq E$ is a set of edges in some MST of G and $F\cap\delta(S)\neq \varnothing$, then the edge $e \in \delta(S)$ with minimal cost is in a MST of G that includes $F+e$
+
+let T be MST of G that includes F
+- if e = uv in T => good
+- if e = uv not inn T
+	- consider T+e, there is a cycle with e
+	- take T' = T+e-f
+	- T' is a spanning tree and cost(T') <= cost(T)
+	- $f \in \delta(S) \implies f\not\in F \implies T' \supseteq F+e$
 
 #### MST
 
@@ -57,20 +78,22 @@ for every G and every non-trivial partition (S, V-S) of V, if e has minimum cost
 same exchange argument
 
 
-Cut property
-fix G a set $S\subseteq V$
-if $F\subseteq E$ is a set of edges in some MST of G and $F\cap\delta(S)\neq \varnothing$, then the edge $e \in \delta(S)$ with minimal cost is in a MST of G that includes $F+e$
-
-let T be MST of G that includes F
-- if e = uv in T => good
-- if e = uv not inn T
-	- consider T+e, there is a cycle with e
-	- take T' = T+e-f
-	- T' is a spanning tree and cost(T') <= cost(T)
-	- $f \in \delta(S) \implies f\not\in F \implies T' \supseteq F+e$
 
 #### [Prim's algorithm](/labyrinth/notes/cs/cs2040s/prim's_algorithm)
 
 
 #### [Kruskal's algorithm](/labyrinth/notes/cs/cs2040s/kruskal's_algorithm)
 
+```
+Kruskal(G,w)
+	sort edges by increasing weight
+	UFDS(|V|)
+	T = empty array
+	
+	for edge {u,v} in sorted order:
+		if Find(u) != Find(v):
+			add {u,v} to T
+			Union(u,v)
+	
+	return T
+```

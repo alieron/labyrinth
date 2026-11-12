@@ -88,7 +88,7 @@ $$
 For $\max\{c^Tx:Ax=b,x\ge0\}$:
 - infeasibility is certified by $y^TA\ge0$ and $y^Tb<0$; Farkas' lemma says such $y$ exists whenever the system is infeasible;
 - unboundedness is certified by feasible $\bar x$ and a ray $r\ge0$ with $Ar=0$ and $c^Tr>0$, since $\bar x+tr$ is feasible and improves forever;
-- optimality is certified by a feasible point attaining a valid objective bound, later supplied systematically by [weak and strong duality](/labyrinth/notes/math/co250/weak_and_strong_duality).
+- optimality is certified by a feasible point attaining a valid objective bound, later supplied systematically by [strong duality](/labyrinth/notes/math/co250/strong_duality).
 
 
 ### Application

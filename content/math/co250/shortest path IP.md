@@ -5,7 +5,7 @@ tags:
 complete: false
 prev: /labyrinth/notes/math/co250/integer_programs
 next: /labyrinth/notes/math/co250/nonlinear_programs
-
+succ: "[shortest path duality](/labyrinth/notes/math/co250/shortest_path_duality)"
 ---
 ### Concept
 A graph $G=(V,E)$ has vertices and edges; $\delta(v)$ denotes edges incident to $v$. A path has distinct vertices, while a walk may repeat them. With edge costs $c_e$, path or matching cost is $\sum_{e}c_e$ over selected edges.
@@ -171,16 +171,131 @@ $$
 - full IP
 
 $$
-\begin{align*}
-\text{min}&\sum_{e\in E} c_{e}x_{e} \\
-\\
-\text{such that}& \sum_{e\in\delta(S)}x_e\ge1
-\end{align*}
+\begin{array}{rl}
+\min && \sum\bigl(c_ex_e:e\in E\bigr) \\
+\text{s.t.} && \sum\bigl(x_e \,:\, e \in \delta(U)\bigr) \geq 1 \quad\quad (U\subseteq V, s\in U, t\notin U) \\
+&& x \geq \mathbb{0}, \quad x \text{ integer}
+\end{array}
 $$
-$$\min\sum_{e\in E}c_ex_e$$
-$$\text{s.t. }\sum_{e\in\delta(S)}x_e\ge1\quad(s\in S,t\notin S),\qquad x\in\mathbb Z_+^E.$$
+> each s,t-cut gives an additional constraint
+
 For positive costs, an optimum contains a shortest path and no costly surplus is needed. This cut formulation later yields the dual in [shortest path duality](/labyrinth/notes/math/co250/shortest_path_duality).
 
 
 ### Application
+Shortest path example ^155c51
+- [cont.](/labyrinth/notes/math/co250/shortest_path_duality#^b6846b)
 
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\tikzstyle{vertex}=[draw,circle,minimum size=18pt,inner sep=0pt]
+\newcommand\uwedge[4][]{
+  \draw[#1] (#2) to node[auto] {#4} (#3);
+}
+\begin{document}
+\begin{tikzpicture}[thick]
+
+\node[vertex] (a) {a};
+\node[vertex,below right=of a] (t) {t};
+\node[vertex,below left=of a] (s) {s};
+\node[vertex,below right=of s] (b) {b};
+
+\uwedge[green]{s}{a}{3};
+\uwedge{b}{s}{4};
+\uwedge{a}{b}{1};
+\uwedge[green]{a}{t}{2};
+\uwedge{t}{b}{2};
+
+\end{tikzpicture}
+\end{document}
+```
+$$
+\begin{array}{rl}
+\min & (3,4,1,2,2)x \\[4pt]
+& \hspace{20pt} \\
+\text{s.t.} &
+\begin{array}{@{}l@{\quad}c@{\;}l}
+  &
+  \begin{array}{ccccc}
+    sa & sb & ab & at & bt
+  \end{array}
+  & \\[-3pt]
+  \begin{array}{l}
+    \{s\}\\
+    \{s,a\}\\
+    \{s,b\}\\
+    \{s,a,b\}
+  \end{array}
+  &
+  \left(
+  \begin{array}{ccccc}
+    1 & 1 & 0 & 0 & 0\\
+    \cellcolor{pink!65}0 &
+    \cellcolor{pink!65}1 &
+    \cellcolor{pink!65}1 &
+    \cellcolor{pink!65}1 &
+    \cellcolor{pink!65}0\\
+    1 & 0 & 1 & 0 & 1\\
+    0 & 0 & 0 & 1 & 1
+  \end{array}
+  \right)
+  & x \ge \mathbb{1}
+\end{array} \\[10pt]
+& x \ge \mathbb{0},\quad x\text{ integer}
+\end{array}
+$$
+
+All s,t-cuts of a graph
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,backgrounds}
+\tikzstyle{vertex}=[draw,circle,minimum size=18pt,inner sep=0pt]
+\newcommand\uwedge[4][]{
+  \draw[#1] (#2) to node[auto] {#4} (#3);
+}
+\begin{document}
+\begin{tikzpicture}[thick,on grid,node distance=2cm and 2cm]
+
+\node[vertex] (a) {a};
+\node[vertex,below right=of a] (t) {t};
+\node[vertex,right=of a] (b) {b};
+\node[vertex,below left=of a] (s) {s};
+\node[vertex,right=of s] (c) {c};
+\node[vertex,below=of c] (d) {d};
+
+\uwedge{s}{a}{2};
+\uwedge{s}{c}{1};
+\uwedge{s}{d}{3};
+\uwedge{a}{b}{1};
+\uwedge{c}{b}{2};
+\uwedge{c}{d}{1};
+\uwedge{d}{t}{2};
+\uwedge{c}{t}{4};
+\uwedge{b}{t}{4};
+
+\end{tikzpicture}
+\end{document}
+```
+$$
+\begin{array}{|c|c|}
+\hline U & \delta(U) \\
+\hline \{s\} & \{sa,sc,sd\} \\
+\hline \{s,a\} & \{sc,sd,ab\} \\
+\hline \{s,b\} & \{sa,sc,sd,ab,bc,bt\} \\
+\hline \{s,c\} & \{sa,sd,bc,cd,ct\} \\
+\hline \{s,d\} & \{sa,sc,cd,dt\} \\
+\hline \{s,a,b\} & \{sc,sd,bc,bt\} \\
+\hline \{s,a,c\} & \{sd,ab,bc,cd,ct\} \\
+\hline \{s,a,d\} & \{sc,ab,cd,dt\} \\
+\hline \{s,b,c\} & \{sa,sd,ab,cd,ct,bt\} \\
+\hline \{s,b,d\} & \{sa,sc,ab,bc,cd,dt,bt\} \\
+\hline \{s,c,d\} & \{sa,bc,ct,dt\} \\
+\hline \{s,a,b,c\} & \{sd,cd,ct,bt\} \\
+\hline \{s,a,b,d\} & \{sc,bc,cd,dt,bt\} \\
+\hline \{s,a,c,d\} & \{ab,bc,ct,dt\} \\
+\hline \{s,b,c,d\} & \{sa,ab,bt,ct,dt\} \\
+\hline \{s,a,b,c,d\} & \{bt,ct,dt\} \\
+\hline
+\end{array}
+$$

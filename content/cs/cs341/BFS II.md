@@ -36,6 +36,28 @@ BFS for shortest path
 - the distance to elements added to the queue is non decreasing as more vertices are added
 
 
+#### Connected components
+
+```
+Components(G):
+	for each vertex v in G:
+		comp[v] = 0
+		
+	c = 0
+	for each vertex s in G:
+		if comp[s] == 0:
+			c = c + 1
+			comp[s] = c // vertex s is in component number c
+			visited = Reachable(G,s)
+			for each vertex v in visited:
+				comp[v] = c // assign all reachable verticies to component number c
+				
+	return (comp, c)
+```
+
+Time complexity
+$O(n+m)$
+
 Bipartite graph
 - odd length cycles?
 - redraw the BFS tree in a BST form
@@ -43,6 +65,8 @@ Bipartite graph
 $$
 \text{bipartite}\iff \text{no odd cycle}
 $$
+
+
 
 #### BFS tree
 - cannot have non-tree edges cross multiple levels

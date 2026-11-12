@@ -5,4 +5,20 @@ tags:
 complete: false
 ---
 ### Concept
-Complex conjugate ^1337ee
+#### Complex conjugate
+- reflected across the real axis
+- flip the imaginary component
+
+$$
+\forall z = a + bi, \qquad \overline{z} = a - bi
+$$
+
+Properties
+TODO
+$$
+\begin{gather*}
+\overline{\overline{z}} = z \\
+\\
+
+\end{gather*}
+$$

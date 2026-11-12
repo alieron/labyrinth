@@ -115,6 +115,14 @@ T({\color{green} x_{1}},{\color{cyan} x_{2}},\dots,{\color{red} x_{n}}) = \begin
 \end{gather*}
 $$
 
+#### Linear operator
+- maps from a vector space to itself
+
+$$
+T: V \to W \\
+\\
+T \text{ is a linear operator} \iff V=W
+$$
 ### Application
 The evaluation map is a linear map
 - polynomial evaluated at a certain value
@@ -150,7 +158,7 @@ $$
 $$
 > notice this kinda means that a field is a vector space too
 
-Trace is a linear map
+[Trace](/labyrinth/notes/math/math235/trace) is a linear map
 $$
 \begin{gather*}
 \operatorname{tr}: M_{n \times n}(\mathbb{F}) \to \mathbb{F} \\
@@ -272,5 +280,31 @@ x= - 2t \\
 \end{gather*}
 $$
 
+Standard matrix of differentation
+$$
+\begin{gather*}
+T:\mathcal P_2\to\mathcal P_1\\
+T(p(x))=p'(x) \\
+\\
+\text{standard bases:} \\
+B = (1,x,x^{2}) \qquad C = (1,x) \\
+\\
+\begin{aligned}[t]
+[T] &= \begin{bmatrix}
+[T(1)]_{C} & [T(x)]_{C} & [T(x^{2})]_{C}
+\end{bmatrix} \\
+&= \begin{bmatrix}
+[0]_{C} & [1]_{C} & [2x]_{C}
+\end{bmatrix} \\
+&= \begin{bmatrix}
+0 & 1 & 0 \\
+0 & 0 & 2
+\end{bmatrix}
+\end{aligned}
+\end{gather*}
+$$
+
 ![[Pasted image 20261005231152.png]]
 Compositon of linear transforms
+
+

@@ -6,7 +6,7 @@ tags:
 complete: false
 next: /labyrinth/notes/cs/cs2040s/kruskal's_algorithm
 prev: /labyrinth/notes/cs/cs2040s/dijkstra's_algorithm
-
+succ: "[MST II](/labyrinth/notes/cs/cs341/MST_II)"
 ---
 ### Summary
 MST algorithms

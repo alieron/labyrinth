@@ -4,7 +4,7 @@ tags:
   - math/optimization
 complete: false
 prev: /labyrinth/notes/math/co250/linear_programs
-next: /labyrinth/notes/math/co250/graph_optimization_models
+next: /labyrinth/notes/math/co250/shortest_path_IP
 
 ---
 ### Concept

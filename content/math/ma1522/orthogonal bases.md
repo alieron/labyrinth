@@ -1,11 +1,11 @@
 ---
 tags:
-- ma1522/chapter5
-- math/linear_algebra
+  - ma1522/chapter5
+  - math/linear_algebra
 complete: true
 prev: /labyrinth/notes/math/ma1522/orthogonality
 next: /labyrinth/notes/math/ma1522/orthogonal_projection
-
+succ: "[orthogonal bases II](/labyrinth/notes/math/math235/orthogonal_bases_II)"
 ---
 ### Summary
 Relative coordinates to an orthogonal basis ^ffe6f8

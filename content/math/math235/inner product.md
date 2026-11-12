@@ -6,53 +6,21 @@ tags:
   - to_review
 complete: false
 prev: /labyrinth/notes/math/math235/diagonalization_II
-pred: "[orthogonality](/labyrinth/notes/math/ma1522/orthogonality)"
-next: /labyrinth/notes/math/math235/adjoint
+pred: "[dot product](/labyrinth/notes/math/ma1301/dot_product)"
+next: /labyrinth/notes/math/math235/orthogonality_II
 
 ---
 ### Summary
-- An inner product equips a vector space with length, angle, and orthogonality
-- Its induced norm supports projection and approximation
+Standard inner product on $\mathbb{C}^n$
+- requires the [complex conjugate](/labyrinth/notes/math/imagine/complex_numbers#Complex_conjugate)
 
 $$
-\|x\|=\sqrt{\langle x,x\rangle}
+\begin{gather*}
+\vec{v}, \vec{w} \in \mathbb{C}^n \\
+\\
+\left\langle \vec{v}, \vec{w} \right\rangle = v_{1} \overline{w_{1}} + \dots + v_{n}\overline{w_{n}}
+\end{gather*}
 $$
-
-### Concept
-#### Inner product
-- generalization of the [dot product](/labyrinth/notes/math/ma1301/dot_product) across vector spaces
-
-$$
-\langle \phantom v,\phantom i \rangle : V\times V \to \mathbb{F}
-$$
-
-Axioms
-- Specify which argument is linear under the chosen convention
-- Require conjugate symmetry and positive definiteness over complex spaces
-- Compare bilinear forms, sesquilinear forms, and semi-inner products
-
-#### Geometry
-- Orthogonality means $\langle x,y\rangle=0$
-- Projection is the closest point in a one-dimensional subspace
-- Extend to orthogonal complements and closed subspaces
-
-$$
-\operatorname{proj}_u v=\frac{\langle v,u\rangle}{\langle u,u\rangle}u
-$$
-
-#### Cauchy-Schwarz
-- Investigate equality conditions and consequences for angle definitions
-- Derive triangle inequality for the induced norm
-
-$$
-|\langle x,y\rangle|\le\|x\|\|y\|
-$$
-
-#### Orthonormal systems
-- Compare Gram-Schmidt, QR factorization, and numerical loss of orthogonality
-- Study Bessel inequality and Parseval equality
-- Connect Fourier coefficients to projections in [hilbert space](/labyrinth/notes/math/higher_dimensions/hilbert_space)
-
 
 Standard inner product on $\mathcal{P}_{n}(\mathbb{R})$
 - similar to the [inner product on signals](/labyrinth/notes/cs/cs2108/basis_functions#^a3bbc8)
@@ -65,19 +33,148 @@ p,q \in \mathcal{P}_{n}(\mathbb{R}) \\
 \end{gather*}
 $$
 
-Standard inner product on $M_{m\times n}(\mathbb{R})$
+Standard inner product on $M_{m\times n}(\mathbb{C})$
 - Fronbenius inner product
 
 $$
 \begin{gather*}
-A,B \in M_{m\times n}(\mathbb{R}) \\
+A,B \in M_{m\times n}(\mathbb{C}) \\
 \\
 \begin{aligned}
-\langle A, B \rangle &= \operatorname{tr}(B^TA)\\
+\langle A, B \rangle &= \operatorname{tr}(\overline{B^T}A)\\
 &= \sum_{i=1}^m \sum_{j=1}^n a_{ij} b_{ij}.
 \end{aligned}
 \end{gather*}
 $$
+
+### Concept
+#### Inner product
+- generalization of the [dot product](/labyrinth/notes/math/ma1301/dot_product) across vector spaces
+
+$$
+\langle \phantom v,\phantom i \rangle : V\times V \to \mathbb{F}
+$$
+
+Axioms
+$$
+\begin{align*}
+1) && \text{Conjugate Symmetry:} &&& \left\langle \vec{v},\vec{w} \right\rangle = \overline{\left\langle \vec{w},\vec{v} \right\rangle} \\
+\\
+2) && \text{Linearity in first arg:} &&& \left\langle \alpha \vec{v} + \vec{u}, \vec{w} \right\rangle = \alpha\left\langle \vec{v},\vec{w} \right\rangle + \left\langle \vec{u},\vec{w} \right\rangle\\
+\\
+3) && \text{Positive Definiteness:} &&& \begin{aligned}[t]
+&\left\langle \vec{v},\vec{v} \right\rangle \geq 0 \\
+&\left\langle \vec{v},\vec{v} \right\rangle = 0 \iff \vec{v} = \vec{0}
+\end{aligned}
+\end{align*}
+$$
+
+### Application
+All vectors are orthogonal to the zero vector
+$$
+\begin{align*}
+&\text{Claim: }\left\langle \vec{0}, \vec{v} \right\rangle = \left\langle \vec{v}, \vec{0} \right\rangle=0 \\
+\\
+& \text{Claim 1: }  \left\langle \vec{0}, \vec{v} \right\rangle = 0 \\
+\\
+& \quad\begin{aligned}[t]
+\left\langle \vec{0}, \vec{v} \right\rangle &= \left\langle 0 \cdot \vec{0}, \vec{v} \right\rangle \\
+&= 0 \left\langle  \vec{0}, \vec{v} \right\rangle && \text{(Linearity)} \\
+&= 0
+\end{aligned} \\
+\\
+& \text{Claim 2: }  \left\langle \vec{v}, \vec{0} \right\rangle = 0 \\
+\\
+& \quad\begin{aligned}[t]
+\left\langle \vec{v}, \vec{0} \right\rangle &= \overline{\left\langle \vec{0}, \vec{v} \right\rangle} && \text{(Conjugate Symmetry)}\\
+&= \overline{0} \\
+&= 0
+\end{aligned}
+\end{align*}
+$$
+
+Linearity(with conjugation) in second argument
+$$
+\begin{align*}
+&\text{Claim: }\left\langle \vec{w}, \alpha \vec{v} + \vec{u} \right\rangle = \overline{\alpha}\left\langle \vec{w},\vec{v} \right\rangle + \left\langle \vec{w},\vec{u} \right\rangle \\
+\\
+& \quad \begin{aligned}
+\left\langle \vec{w}, \alpha \vec{v} + \vec{u} \right\rangle &= \overline{\left\langle \alpha \vec{v} + \vec{u}, \vec{w} \right\rangle} && \text{(Conjugate Symmetry)} \\
+&= \overline{\alpha\left\langle \vec{v}, \vec{w} \right\rangle + \left\langle \vec{u}, \vec{w} \right\rangle} && \text{(Linearity)} \\
+&= \overline{\alpha} \overline{\left\langle \vec{v}, \vec{w} \right\rangle} + \overline{\left\langle \vec{u}, \vec{w} \right\rangle} \\
+&= \overline{\alpha}\left\langle \vec{w},\vec{v} \right\rangle + \left\langle \vec{w},\vec{u} \right\rangle && \text{(Conjugate Symmetry)}
+\end{aligned}
+\end{align*}
+$$
+
+Shortcut for inner products in $M_{2}(\mathbb{R})$
+TODO
+
+Linear transform involving inner product
+$$
+\begin{gather*}
+T: M_{2}(\mathbb{R}) \to M_{2}(\mathbb{R}) \\
+\\
+A = \begin{bmatrix}
+1 & 1 \\
+1 & 1
+\end{bmatrix} \\
+T(B) = \left\langle B,A \right\rangle A \\
+\\
+\text{generalise: }B = \begin{bmatrix}
+a & b \\
+c & d
+\end{bmatrix} \\
+\\
+\left\langle B,A \right\rangle = \operatorname{tr}(A^T B) = a+b+c+d \\
+\\
+\therefore T\left(\begin{bmatrix}
+a & b \\
+c & d
+\end{bmatrix}\right) = (a+b+c+d) \begin{bmatrix}
+1 & 1 \\
+1 & 1
+\end{bmatrix} \\
+\\
+\\
+\text{Kernel:} \\
+\\
+\begin{aligned}
+T(B) = 0 &\implies a+b+c+d = 0 \\
+&\implies a = -b-c-d
+\end{aligned} \\
+\\
+\begin{aligned}
+B &= \begin{bmatrix}
+-b-c-d & b \\
+c & d
+\end{bmatrix} \\
+&= b\begin{bmatrix}
+-1 & 1 \\
+0 & 0
+\end{bmatrix} + c \begin{bmatrix}
+-1 & 0 \\
+1 & 0
+\end{bmatrix} + d \begin{bmatrix}
+-1 & 0 \\
+0 & 1
+\end{bmatrix}
+\end{aligned} \\
+\\
+\operatorname{Ker}(T) = \operatorname{span}\left\{
+\begin{bmatrix}
+-1 & 1 \\
+0 & 0
+\end{bmatrix}, \begin{bmatrix}
+-1 & 0 \\
+1 & 0
+\end{bmatrix}, \begin{bmatrix}
+-1 & 0 \\
+0 & 1
+\end{bmatrix}\right\}
+\end{gather*}
+$$
+
 
 ### Sources
 - [Inner product space](https://en.wikipedia.org/wiki/Inner_product_space)

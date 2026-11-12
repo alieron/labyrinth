@@ -40,8 +40,11 @@ x_{B} = b - tA_{k} \\
 $$
 
 $$
-\begin{alignedat}{5} & \max \ && z=c_N^{T}x_N+\bar{z} \\ &\text{s.t. } \ & \\ &&& x_B+A_Nx_N=b \\ &&& x\geq \mathbb{0}
-\end{alignedat}
+\begin{array}{rl} 
+\max \ && z=c_N^{T}x_N+\bar{z} \\ 
+\text{s.t. } && x_B+A_Nx_N=b \\ 
+&& x\geq \mathbb{0}
+\end{array}
 $$
 
 For a feasible basis in canonical form, simplex moves between BFSs.
@@ -61,6 +64,115 @@ Bland's rule
 - prevent cycling in the simplex algorithm
 - ensures termination
 - choose the smallest element to enter and leave the basis
+
+#### Simplex tableau
+$$
+\begin{gather*}
+\begin{array}{rl}
+\max &  z=c^{T}x
+\text{s.t.} & 
+ & Ax=b \\
+ & x\geq0
+\end{array} \\
+\\
+\text{The initial tableau}\\
+z-c^{T}x=0\\
+Ax=b \\
+\\
+T=
+\left[
+\begin{array}{c|c|c}
+1 & -c^{T} & 0 \\ \hline
+0 & A & b
+\end{array}
+\right] \\
+\\
+\\
+\text{1. Obtain a feasible basis:}
+Choose a basis $B$ such that
+$A_{B}^{-1}b\geq0$.
+If no feasible basis is known, use Phase I.
+Reduce the tableau to canonical form:
+\[
+T=
+\left[
+\begin{array}{c|c|c}
+1 & -\bar{c}^{T} & z_0 \\ \hline
+0 & \bar{A} & \bar{b}
+\end{array}
+\right],
+\]
+where
+\[
+\bar{A}=A_{B}^{-1}A,
+\qquad
+\bar{b}=A_{B}^{-1}b,
+\qquad
+\bar{c}^{T}
+=c^{T}-c_{B}^{T}A_{B}^{-1}A,
+\qquad
+z_0=c_{B}^{T}A_{B}^{-1}b.
+\]
+The basic columns form an identity matrix, and their
+objective-row entries are zero.
+
+\medskip
+\textbf{2. Check optimality.}
+If every variable coefficient in the objective row is nonnegative,
+equivalently $\bar{c}\leq0$, stop:
+\[
+\mathbf{x}_{B}=\bar{b},
+\qquad
+\mathbf{x}_{N}=0,
+\qquad
+z^{*}=z_0.
+\]
+
+\medskip
+\textbf{3. Choose an entering variable.}
+Choose a column $j$ with a negative objective-row entry:
+\[
+-\bar{c}_j<0
+\qquad\Longleftrightarrow\qquad
+\bar{c}_j>0.
+\]
+
+\medskip
+\textbf{4. Choose a leaving variable (ratio test).}
+If $\bar{a}_{ij}\leq 0$ for every constraint row $i$,
+the LP is unbounded above.
+Otherwise, choose a row $r$ attaining
+\[
+\theta
+=
+\min_{i:\,\bar{a}_{ij}>0}
+\frac{\bar{b}_i}{\bar{a}_{ij}}.
+\]
+The basic variable in row $r$ leaves the basis.
+
+\medskip
+\textbf{5. Pivot.}
+Let $R_0$ denote the objective row and
+$R_1,\ldots,R_m$ the constraint rows.
+With pivot $p=\bar{a}_{rj}>0$, perform
+\[
+R_r\leftarrow \frac{1}{p}R_r,
+\qquad
+R_i\leftarrow R_i-T_{ij}R_r
+\quad
+\text{for every }i\in\{0,\ldots,m\}\setminus\{r\}.
+\]
+Here $T_{ij}$ is the current entry in row $i$, column $j$.
+Replace the leaving variable by $x_j$ in the basis,
+then return to Step 2.
+
+\medskip
+\textbf{Anti-cycling (Bland's rule).}
+Choose the eligible entering variable with smallest index.
+Among tied minimum ratios, choose the leaving basic variable
+with smallest index.
+\end{gather*}
+$$
 
 #### Finding a feasible solution
 - the [simplex algorithm](/labyrinth/notes/math/co250/simplex_algorithm#Simplex_algorithm) finds the optimal solution given a feasible solution
@@ -99,7 +211,7 @@ z > 0 &\implies \text{the original problem has no solutions}
 \end{gather*}
 $$
 > we want to minimize the effect that the auxiliary variables have on the problem
-> note, the auxiliary problem is not in [SEF](/labyrinth/notes/math/co250/standard_equality_form), we have to convert it to SEF and then to [canonical form](/labyrinth/notes/math/co250/canonical_form)
+> note: the auxiliary problem is not in [SEF](/labyrinth/notes/math/co250/standard_equality_form), we have to convert it to SEF and then to [canonical form](/labyrinth/notes/math/co250/canonical_form)
 
 Non-zero auxiliary variables implies infeasibility
 $$
@@ -504,6 +616,70 @@ x_{1}' & x_{2}' & x_{3}' & 0 & 0
 \end{aligned}
 \end{gather*}
 $$
+
+Simplex tableau
+$$
+\begin{gather*}
+\begin{array}{rl}
+\text{max} & z = 30x_{1}+40x_{2} \\
+\text{s.t.} &  \\
+& 2x_{1}+x_{2} \leq 10 \\
+ & x_{1}+x_{2}\leq 7 \\
+ & x_{1}+2x_{2} \leq 12 \\
+ & x_{1},x_{2}\geq 0
+\end{array} \\
+\\
+\begin{aligned}
+& z -30x_{1} - 40x_{2} = 0 \\
+& 2x_{1}+ x_{2} +s_{1} = 10 \\
+& x_{1}+x_{2} +s_{2} = 7 \\
+& x_{1}+2x_{2} + s_{3} = 12
+\end{aligned}\\
+\\
+\\
+\text{1. initial tableau:} \\
+\\
+\begin{array}{cccccc|c}
+x_{1} & x_{2} & s_{1} & s_{2} & s_{3} & z & \text{RHS} \\ 
+\hline
+2 & 1 & 1 & 0 & 0 & 0 & 10 \\
+1 & 1 & 0 & 1 & 0 & 0 & 7 \\
+1 & 2 & 0 & 0 & 1 & 0 & 12 \\
+\hline
+-30 & -40 & 0 & 0 & 0 & 1 & 0
+\end{array} \\
+\\
+\\
+\text{2. first iteration, smallest value in z row} \\
+\\
+\begin{array}{cccccc|c}
+x_{1} & x_{2} & s_{1} & s_{2} & s_{3} & z & \text{RHS} \\ 
+\hline
+2 & {\color{red} 1} & 1 & 0 & 0 & 0 & 10 \\
+1 & {\color{red} 1} & 0 & 1 & 0 & 0 & 7 \\
+1 & {\color{red} 2} & 0 & 0 & 1 & 0 & 12 \\
+\hline
+-30 & {\color{red} -40} & 0 & 0 & 0 & 1 & 0
+\end{array} \\
+\\
+\min\left( \frac{10}{1}, \frac{7}{1}, \frac{12}{2} \right) = 6 \\
+\\
+\\
+\text{3. make that column a pivot column} \\
+\\
+\begin{array}{cccccc|c}
+x_{1} & x_{2} & s_{1} & s_{2} & s_{3} & z & \text{RHS} \\ 
+\hline
+\frac{3}{2} & 0 & 1 & 0 & - \frac{1}{2} & 0 & 4 \\
+\frac{1}{2} & 0 & 0 & 1 & -\frac{1}{2} & 0 & 1 \\
+\frac{1}{2} & {\color{blue} 1} & 0 & 0 & \frac{1}{2} & 0 & 6 \\
+\hline
+-10 & 0 & 0 & 0 & 20 & 1 & 240
+\end{array} \\
+\end{gather*}
+$$
+
+
 ### Extra
 Octave function to solve an LP using two-phase simplex
 ```octave

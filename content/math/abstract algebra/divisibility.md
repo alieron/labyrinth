@@ -43,6 +43,7 @@ $$
 
 Useful properties
 - transitivity
+
 $$
 \begin{align*}
 & \text{Claim: } {a \mid b} \land {b\mid c} \implies a \mid c \\
@@ -60,6 +61,7 @@ c &= (ak)l \\
 $$
 
 - multiplication
+
 $$
 \begin{align*}
 & \text{Claim: } a\mid b \implies ca\mid cb \\
@@ -77,6 +79,7 @@ cb &= c(ak) \\
 $$
 
 - linearity
+
 $$
 \begin{align*}
 & \text{Claim: } {a\mid b} \land {a \mid c} \implies \forall x,y \in \mathbb{Z}, \ a \mid (bx+cy)\\

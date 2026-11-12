@@ -6,7 +6,7 @@ tags:
   - math/higher_dimensions
 complete: false
 prev: /labyrinth/notes/math/co250/simplex_algorithm
-next: /labyrinth/notes/math/co250/shortest_path_duality
+next: /labyrinth/notes/math/co250/weak_duality
 
 ---
 ### Summary
@@ -194,7 +194,7 @@ $$
 &\text{Suppose not, that }\bar{x}\text{ is not extreme but }\operatorname{rank}(\bar{A}) = n \\
 \\
 &\text{then }\begin{aligned}[t]
-&\bar{x}\text{ is properly contained in a line segment with enpoints }x_{1},x_{2} \in P \\
+&\bar{x}\text{ is properly contained in a line segment with endpoints }x_{1},x_{2} \in P \\
 \\
 &\text{so }\bar{x} \neq x_{1},x_{2}\text{ and }0<\lambda<1,\ \bar{x} = \lambda x_{1} + (1-\lambda)x_{2} \\
 \\

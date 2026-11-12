@@ -1,7 +1,12 @@
 ---
 tags:
+  - cs341/chapter2
   - cs/algorithms
+  - cs/graph_algorithms
 complete: false
+prev: /labyrinth/notes/cs/cs341/topological_sort_II
+next: /labyrinth/notes/cs/cs341/greedy_scheduling
+
 ---
 ### Summary
 SCC algorithms
@@ -15,6 +20,31 @@ SCC related problems
 - [~2-SAT](#)
 
 ### Concept
+#### Strong connectivity
+$$
+G\text{ is strongly connected if }\forall u,v \in G,\quad u\rightsquigarrow v\text{ and }v\rightsquigarrow u
+$$
+
+```
+StronglyConnected(G):
+    choose any vertex s
+    F = Reachable(G, s)
+    B = Reachable(reverse(G), s)
+	
+    return every vertex is marked in both F and B
+```
+
+==>
+by definition
+
+<== for any u,v inn G 
+u~>s~>v and v~>s~>u
+
+so u~>v and v~>u
+
+
+
+
 Strongly connected components
 - subgraphs in which every vertex is reachable from every other vertex 
 - 6 vertex graph
@@ -78,17 +108,12 @@ Strongly connected components
 \end{tikzpicture}
 \end{document}
 ```
+
+
 #### Definition
 - Research mutual reachability as an [equivalence relation](/labyrinth/notes/math/cs1231s/equivalence_relations)
 - Distinguish strongly connected sets from maximal SCCs
 - Check treatment of isolated vertices and self-loops
-
-#### Strong connectivity
-$$
-u \leadsto v \quad\land\quad v \leadsto u
-$$
-- Verify reflexivity, symmetry, and transitivity
-- Explain why the equivalence classes are exactly the SCCs
 
 
 
@@ -101,7 +126,7 @@ can two SCCs share a vertex?
 can DAGs have SCCs?
 - no
 
-#### Condensation graph
+#### Component graph
 - is a DAG
 - proof? by contradiction
 - for every directe graph G, the component graph of G is a DAG
@@ -115,13 +140,42 @@ can DAGs have SCCs?
 largest finish time by DFS always gives a vertex in a source component
 take the reversal of G?
 
-SCC partition
+#### SCC partition by [DFS finish times](/labyrinth/notes/cs/cs341/DFS_II#Start_and_Finish_times_1d70f3)
 - run DFS on G^r to get finish times
 - while G != 0
 	- v <- vertex with largest finish time
 	- C <- DFS(v)
 	- G <- G / C
 
+component finish time
+$$
+\begin{gather*}
+F(C)=\max_{v\in C}\ \text{finish}[v] \\
+\\
+C \to D \implies F(C) > F(D)
+\end{gather*}
+$$
+
+Kosaraju
+```
+SCC(G):
+	run full DFS on G
+	order = vertices in decreasing finish time
+
+	R = reverse(G)
+	comp[v] = UNASSIGNED for every v
+	label = 0
+
+	for s in order:
+		if comp[s] == UNASSIGNED:
+			label = label + 1
+			DFS from s in R:
+				visit only UNASSIGNED vertices
+				assign label to every visited vertex
+
+	return comp
+```
+> the DFS finish time is what gives us the post-order behaviour
 #### Algorithms
 - Compare two-pass [kosaraju's algorithm](#) with one-pass [tarjan's algorithm](#)
 - Both run in $O(V+E)$ with adjacency lists

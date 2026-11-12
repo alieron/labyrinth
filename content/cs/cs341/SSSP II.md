@@ -5,9 +5,9 @@ tags:
   - cs/graph_algorithms
 complete: false
 prev: /labyrinth/notes/cs/cs341/greedy_scheduling
-pred: "[SSSP](/labyrinth/notes/cs/cs2040s/SSSP)"
 next: /labyrinth/notes/cs/cs341/MST_II
-
+pred: "[SSSP](/labyrinth/notes/cs/cs2040s/SSSP)"
+succ: "[graph DP](/labyrinth/notes/cs/cs341/graph_DP)"
 ---
 ### Concept
 #### BFS for SSSP
@@ -15,6 +15,27 @@ next: /labyrinth/notes/cs/cs341/MST_II
 
 
 #### [Dijkstra's algorithm](/labyrinth/notes/cs/cs2040s/dijkstra's_algorithm)
+
+```
+Dijkstra(G, w, s):
+    for each vertex v in G:
+        d[v] = +∞
+        parent[v] = ⊥
+        count[v] = 0
+    d[s] = 0
+    count[s] = 1
+    Q = priority queue containing each v with key d[v]
+    while Q is not empty:
+        u = ExtractMin(Q) 
+        if d[u] = +∞:
+            break
+        for each v in Adj[u]:
+            if v in Q and d[u] + w(u, v) < d[v]:
+                d[v] = d[u] + w(u, v)
+                parent[v] = u 
+                DecreaseKey(Q, v, d[v])
+    return (d, parent) 
+```
 
 min heap dijkstra vs array dijkstra
 

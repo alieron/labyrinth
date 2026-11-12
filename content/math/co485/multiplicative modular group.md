@@ -42,7 +42,8 @@ Extended euclidean algorithm(EEA)
 \end{algorithm}
 ```
 
-Coprimality and multiplicative inverse (Theorem 2.1.1) ^531ac2
+Coprimality and multiplicative inverse ^531ac2
+- (Theorem 2.1.1)
 - a residue has a multiplicative inverse only if its [coprime](/labyrinth/notes/math/abstract_algebra/greatest_common_divisor#Coprimality) to the modulus
 - requires the EEA
 

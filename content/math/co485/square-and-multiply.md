@@ -2,7 +2,6 @@
 tags:
   - co485/chapter1
   - math/number_theory
-  - to_review
 complete: false
 next: /labyrinth/notes/math/co485/multiplicative_modular_group
 prev: /labyrinth/notes/math/co485/diffie-hellman_key_exchange_II

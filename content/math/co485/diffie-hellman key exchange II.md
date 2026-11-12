@@ -65,7 +65,8 @@ Essential properties of group $G$
 
 > only [multiplicative modular group](/labyrinth/notes/math/co485/multiplicative_modular_group) and [elliptic curves](/labyrinth/notes/math/co485/elliptic_curves) work
 
-#### Discrete Log (Definition 2.3.6)
+#### Discrete Log
+- (Definition 2.3.6)
 
 $$
 \text{For generator }g\in \mathbb{Z}_{p}^*, \ \operatorname{DLOG}_g(h)\text{ is the unique }x \in \mathbb{Z}_{p-1}\text{ such that }h = g^x

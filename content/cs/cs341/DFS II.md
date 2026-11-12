@@ -6,7 +6,7 @@ tags:
 complete: false
 prev: /labyrinth/notes/cs/cs341/BFS_II
 pred: "[DFS](/labyrinth/notes/cs/cs2040s/DFS)"
-next: /labyrinth/notes/cs/cs341/directed_graph_algorithms
+next: /labyrinth/notes/cs/cs341/directed_reachability
 
 ---
 ### Concept

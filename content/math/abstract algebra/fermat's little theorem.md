@@ -4,7 +4,6 @@ tags:
   - math/modular_arithmetic
 complete: false
 ---
-   
 ### Summary
 For the [modular arithmetic](/labyrinth/notes/math/abstract_algebra/modular_arithmetic) of a [prime](/labyrinth/notes/math/~ma2202/prime_numbers) $p$
 $$

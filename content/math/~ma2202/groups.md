@@ -46,7 +46,7 @@ Axioms
 $$
 \begin{align*}
 %1) && \text{Commutativity:} &&& \forall a,b \in G, \quad a * b = b * a \\
-\\
+%\\
 1) && \text{Associativity:} &&& \forall a,b,c \in G, \quad (a*b)*c = a*(b*c) \\
 \\
 2) && \text{Identity:} &&& \exists e \in G, \quad \forall a \in G, \ a * e = a = e* a \\

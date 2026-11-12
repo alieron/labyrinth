@@ -1,11 +1,11 @@
 ---
 tags:
-- ma1301/chapter4
-- math/linear_algebra
+  - ma1301/chapter4
+  - math/linear_algebra
 complete: true
 prev: /labyrinth/notes/math/ma1301/unit_vectors
 next: /labyrinth/notes/math/ma1301/cross_product
-
+succ: "[inner product](/labyrinth/notes/math/math235/inner_product)"
 ---
 ### Summary
 Properties of dot products

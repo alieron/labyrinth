@@ -573,17 +573,26 @@ x_{r} = m^{2} - x_{p}-x_{q}
 \end{gather*}
 $$
 
-
-To derive $x_3$, substitute the line $y=y_1+\lambda(x-x_1)$ into the curve. The resulting monic cubic has roots $x_1,x_2,x_3$. Comparing its $x^2$ coefficient with
+Runtime of group operation
+- based on the [arithmetic operations](/labyrinth/notes/math/co485/arithmetic_operations)
 
 $$
-(x-x_1)(x-x_2)(x-x_3)
+\begin{gather*}
+\text{for }E(\mathbb{F}_{p}) \\
+\\
+\begin{array}{rl}
+\text{Subtraction:} & O(\log p) \\
+\text{Square/Multiplication:} & O(\log ^{2} p) \\
+\text{Division:} & O(\log ^{2}p) \\
+\\
+\text{Point Addition:} & O(\log ^{2}p)
+\end{array}
+\end{gather*}
 $$
 
-gives $x_1+x_2+x_3=\lambda^2$ and hence the formula above.
-
-### Application
-Compute $nP$ with [square-and-multiply](/labyrinth/notes/math/co485/square-and-multiply), replacing multiplication by point addition. This yields $O(\log n)$ additions and doublings. See the broader prerequisite note [elliptic curves(to delete)](/labyrinth/notes/math/abstract_algebra/elliptic_curves(to_delete)) and [elliptic curve cryptography](/labyrinth/notes/math/abstract_algebra/elliptic_curve_cryptography).
+Double-and-add
+- calculate "exponentiation" in the elliptic curve group, $nP$
+- same principle as [square-and-multiply](/labyrinth/notes/math/co485/square-and-multiply), $O(\log ^{3}n)$
 
 ### Sources
 - [Silverman and Tate Rational Points](https://link.springer.com/book/10.1007/978-1-4757-4252-7)

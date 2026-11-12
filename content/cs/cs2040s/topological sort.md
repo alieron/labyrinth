@@ -6,7 +6,7 @@ tags:
 complete: true
 prev: /labyrinth/notes/cs/cs2040s/BFS
 next: /labyrinth/notes/cs/cs2040s/SSSP
-
+succ: "[topological sort II](/labyrinth/notes/cs/cs341/topological_sort_II)"
 ---
 ### Summary
 Special cases
@@ -161,7 +161,7 @@ void dfs_sort() {
 
 ```tikz
 \usepackage{tikz}
-\usetikzlibrary{arrows.meta,positioning}
+\usetikzlibrary{arrows.meta,positioning,backgrounds}
 \tikzstyle{vertex}=[draw,circle,minimum size=18pt,inner sep=0pt]
 
 \begin{document}
@@ -205,7 +205,6 @@ Kahn's algorithm
 1. compute in-degrees of all vertices
 2. modified [BFS](/labyrinth/notes/cs/cs2040s/BFS) such that only verticies with no incoming edges(in-degree = 0) are enqueued
 3. the vertex is also "deleted" after being dequeued
-- if there is a cycle -> one of the iterations will reach a case where there are no nodes with in-degree = 0, quiet failure
 
 ```java
 int[] indegree = new int[V];
@@ -236,6 +235,7 @@ void kahn() {
 	}
 }
 ```
+> quiet failure: if there is a cycle -> one of the iterations will reach a case where there are no nodes with in-degree = 0
 
 - [6 vertex DAG](https://visualgo.net/en/dfsbfs?create={"vl":{"0":{"x":400,"y":0},"1":{"x":500,"y":100},"2":{"x":500,"y":300},"3":{"x":400,"y":200},"4":{"x":300,"y":300},"5":{"x":300,"y":100}},"el":{"0":{"u":0,"v":1},"1":{"u":5,"v":0},"2":{"u":3,"v":1},"3":{"u":3,"v":2},"4":{"u":3,"v":4},"5":{"u":4,"v":2}}}&directed=1&action=topobfs): `kahn()`
 

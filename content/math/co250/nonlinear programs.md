@@ -3,7 +3,7 @@ tags:
   - co250/chapter1
   - math/optimization
 complete: false
-prev: /labyrinth/notes/math/co250/graph_optimization_models
+prev: /labyrinth/notes/math/co250/shortest_path_IP
 next: /labyrinth/notes/math/co250/LP_outcomes
 
 ---
